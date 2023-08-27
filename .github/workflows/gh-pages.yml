@@ -48,7 +48,8 @@ jobs:
 
       - name: Generate pages
         run: |
-          ./code-maven.rs/target/debug/code-maven --pages rust.code-maven.com/pages/ --outdir _site
+          cd code-maven.rs
+          ./target/debug/code-maven --pages ../rust.code-maven.com/pages/ --outdir ../_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
