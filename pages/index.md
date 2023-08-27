@@ -5,7 +5,7 @@ timestamp: 2023-08-27T13:30:01
 
 Welcome to the Code Maven web site about the Rust programming language!
 
-Both the [source of the content]()
+Both the [source of the content](https://github.com/szabgab/rust.code-maven.com/)
 and the source of the code [generating the site](https://github.com/szabgab/code-maven.rs) can be accessed.
 
 The first aricle is about printing [Hello World](/hello-world).
