@@ -1,5 +1,7 @@
-=title Rust on Code Maven
-=timestamp 2023-08-27T13:30:01
+---
+title: Rust on Code Maven
+timestamp: 2023-08-27T13:30:01
+---
 
 Welcome to the Code Maven web site about the Rust programming language!
 
