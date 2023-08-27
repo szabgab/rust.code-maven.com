@@ -48,8 +48,6 @@ jobs:
 
       - name: Generate pages
         run: |
-          pwd
-          ls -l
           ./code-maven.rs/target/debug/code-maven --pages rust.code-maven.com/pages/ --outdir _site
 
       - name: Upload artifact
