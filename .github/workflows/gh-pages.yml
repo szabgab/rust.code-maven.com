@@ -21,15 +21,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout site source
         uses: actions/checkout@v3
+        with:
+          repository: 'szabgab/rust.code-maven.com'
+          path: rust.code-maven.com
+
+      - name: Checkout processor
+        uses: actions/checkout@v3
+        with:
+          repository: 'szabgab/code-maven.rs'
+          path: code-maven.rs
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./pages/
-          destination: ./_site
+
+      - name: Build
+        run: |
+          cd code-maven.rs
+          cargo build --verbose
+
+      - name: Run tests
+        run: |
+          cd code-maven.rs
+          cargo test --verbose
+
+      - name: Generate pages
+        run: |
+          ./code-maven.rs/target/debug/code-maven --pages pages/
+          cargo test --verbose
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
