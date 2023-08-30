@@ -1,6 +1,9 @@
 ---
 title: Compiling and running rust without Cargo - a shell script
 timestamp: 2023-08-30T14:30:01
+tags:
+    - rustc
+    - Bash
 ---
 
 In the [Hello World](/hello-world) article we first saw an example compiling some Rust code using `rustc` and then running the resulting binary manually.

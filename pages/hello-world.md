@@ -4,6 +4,11 @@ timestamp: 2023-08-27T14:30:01
 todo:
     - How to install Rust.
     - Using the cmd on Windows.
+tags:
+    - cargo
+    - rustc
+    - println!
+    - fn
 ---
 
 I think it is a requirement in every programming language and every technology one learns to create, the "Hello World" example, so we should also start with that.

@@ -1,6 +1,8 @@
 ---
 title: Rust error message to fix a typo
 timestamp: 2023-08-30T11:52:01
+tags:
+    - rustc
 ---
 
 Here is one thing for which I like Rust.
