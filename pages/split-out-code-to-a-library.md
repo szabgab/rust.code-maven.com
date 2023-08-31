@@ -1,12 +1,14 @@
 ---
 title: How to refer to code that was split out to a library in Rust?
 timestamp: 2023-08-31T16:30:01
-description:
+description: How to make sure the code of a crate does not need to be changed when the crate is renamed.
 tags:
     - cargo
     - pub
     - crate
     - mod
+todo:
+    - What happens if we have such crate that uses the real name of the crate, but the user uses an alias when importing?
 ---
 
 When you create a crate that needs to be executable, you use `cargo new NAME` that will automatically create a file called `src/main.rs` with a single `main` function.
