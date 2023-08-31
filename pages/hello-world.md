@@ -1,6 +1,7 @@
 ---
 title: Hello World - Hello Rust
 timestamp: 2023-08-27T14:30:01
+descripton: Two ways to create, compile, and run your first Rust program printing Hellow World! to the screen.
 todo:
     - How to install Rust.
     - Using the cmd on Windows.
