@@ -38,3 +38,8 @@ red
 blue
 ```
 
+## More about enums
+
+Read the [defining enums](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html) part of the Rust book, see the [Enums](https://doc.rust-lang.org/rust-by-example/custom_types/enum.html) part of the Rust by example, or read the documentatin on [enum](https://doc.rust-lang.org/stable/std/keyword.enum.html).
+
+
