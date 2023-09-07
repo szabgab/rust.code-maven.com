@@ -37,6 +37,17 @@ I personally use [Visual Studio Code](https://code.visualstudio.com/docs/languag
 
 I also use [vim](https://www.vim.org/) a lot. There is a [vim plugin for Rust](https://github.com/rust-lang/rust.vim) you can configure.
 
+## cargo fix
+
+Not only will the compile complain, but you can even ask it to fix your code. Run
+
+```
+cargo fix
+```
+
+and rust will try to fix all the things it was complaining about. You can then look at the changes and learn from them.
+
+
 ## Looking at the results manually
 
 This is not a tool, but I felt I should mention it so we can appreciate it. When you are learning a human language (e.g. Spanish or English) and you write down a sentence, you need another human to check it grammatically and give you feedback if it was a correct and meaningful sentence. There is a growing number of tools that will help you with this in human languages, but with programming it is given. The compile will tell you if your code is grammatically correct and you can always look at the result to verify that the results are what you expected.
@@ -93,6 +104,11 @@ cargo clippy --fix
 ## Rust user forum
 
 There are quite a few channels where you can discuss Rust on various levels. Some are for the people who develop the compiler, some for people who develop crates and others for people who just write Rust. Though I like to thing about them as future Crate developers and future contributors to the rust compiler, but for now, let's just call them Rust users. For example there is the [Rust User forum](https://users.rust-lang.org/). Once you sign up you can create a "New topic" and put the "code review" category on it. Then paste your code with some explanation and ask for feedback. Within some time you will get some very nice comments. I tried it a few times and in each case within a few hours my code was improved and I learned a lot of new things.
+
+## ChatGPT
+
+I am really not sure how good it is. I tried one of the examples for which I got a really nice improvement in the Rust user forum, but ChatGPT could only do minor improvements and I am not even sure if one of those wasn't making my code worse. Maybe if I had access to version 4 it would be much better, I don't know.
+
 
 ## Help others
 
