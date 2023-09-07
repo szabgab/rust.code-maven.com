@@ -4,9 +4,16 @@ timestamp: 2023-09-07T07:30:01
 description:
 tags:
     - rustc
+    - cargo
+    - clippt
+    - rustfmt
+    - fmt
+    - fix
     - vim
-todo:
-    - TODO
+    - VS Code
+    - IDE
+    - Rustlings
+    - Exercism
 ---
 
 One of the most important tools for learning anything is the feedback loop. If you don't get feedback about your work, about your performance it almost impossible to improve.
@@ -104,6 +111,15 @@ cargo clippy --fix
 ## Rust user forum
 
 There are quite a few channels where you can discuss Rust on various levels. Some are for the people who develop the compiler, some for people who develop crates and others for people who just write Rust. Though I like to thing about them as future Crate developers and future contributors to the rust compiler, but for now, let's just call them Rust users. For example there is the [Rust User forum](https://users.rust-lang.org/). Once you sign up you can create a "New topic" and put the "code review" category on it. Then paste your code with some explanation and ask for feedback. Within some time you will get some very nice comments. I tried it a few times and in each case within a few hours my code was improved and I learned a lot of new things.
+
+## Code Review by a co-worker
+
+If you have co-workers who already know Rust you might be able to ask them for code-review. Even people who are learning Rust the same time as you do could help. Both of you could do the same exercise separately and then swap the solutions and see how the other solved the same problem.
+
+## Pair programming - pair learning
+
+Pair programming really shortens the feedback loop you can get from another human being. It is an excellent way to program and it is an excellent way to learn new things. However it might need some getting used-to it. Don't expect it to work flawlessly right from the beginning. You will have to get used to working with someone and you will have to get used to each partner separately as well. But it is worth it.
+
 
 ## ChatGPT
 
