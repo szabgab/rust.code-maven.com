@@ -49,3 +49,20 @@ As you can see the `name` field does not have to be the same as the name of the 
 
 In target/debug/ you will see the two executables called `one_exe` and `two`.
 
+## Cargo build to build all of them at once
+
+If you run
+
+```
+cargo build
+```
+
+of maybe
+
+```
+cargo build --release
+```
+
+all the executables will be built at once.
+
+
