@@ -25,7 +25,7 @@ The back-slash `\` is called the escape character in Rust, just as it is in prob
 
 In the 4th example we can see the use of [raw string literal](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals)
 
-We start the string with `r#"` and terminate it with `"#`. (We could have used any number of the pound-characters there (`#`) between 1-255 we only need to make sure the numbers are matching on both sides of the string.
+We start the string with `r#"` and terminate it with `"#`. We could have used any number of the pound-characters there (`#`) between 1-255 we only need to make sure the numbers are matching on both sides of the string. You can see this in the 5th example.
 
 Now that we changed the end-of-string from a single `"` to a series of characters, we can freely use the double-quote `"` inside the string.
 
@@ -40,6 +40,7 @@ This is especially valuable as we need to add more and more of these double-quot
 ```
 Hello, Foo Bar, how are you?
 Hello, 'Foo Bar', how are you?
+Hello, "Foo Bar", how are you?
 Hello, "Foo Bar", how are you?
 Hello, "Foo Bar", how are you?
 ```
