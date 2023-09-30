@@ -40,6 +40,8 @@ In some languages converting a string to a number is called casting, in Rust it 
 
 Feel free to use this example, enable/disable parts of the code to see the various solutions for error handling.
 
+In the first part of the example we [expect and accept a value on the command line](/expect-one-command-line-parameter). See the explanation in that other article.
+
 ## Parse
 
 The `parse` method needs to know what numerical type it is supposed to create. There are two ways to accomplish this. In one way we define the type of the variable that we are assigning to, in this case we used `i16`.
