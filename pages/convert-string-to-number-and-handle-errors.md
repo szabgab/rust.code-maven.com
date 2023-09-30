@@ -1,6 +1,6 @@
 ---
 title: Convert a string to number and handle possible errors
-timestamp: 2023-08-30T14:30:01
+timestamp: 2023-09-30T14:30:01
 description: A relatively simple task of checking if a string can be converted to a number and then converting it. Several ways to handle errors.
 tags:
     - parse
