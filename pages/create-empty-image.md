@@ -13,6 +13,7 @@ This is the result:
 
 ![](examples/crate-empty-image/empty.png)
 
+Yes, this is just a black square.
 
 ```
 cargo new crate-empty-image
