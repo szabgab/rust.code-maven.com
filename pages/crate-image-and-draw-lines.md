@@ -8,7 +8,7 @@ tags:
 
 In this example we continue the cration of simple images using the [image](https://crates.io/crates/image) Rust crate.
 
-With this code we created two small images and drew two lines:
+We started with an [empty image](/create-empty-image) and now with this code we created two small images and drew two lines:
 
 ![veritcal green line](examples/crate-image-draw-line/green_vertical_line.png)
 
