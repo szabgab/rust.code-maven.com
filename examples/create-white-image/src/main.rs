@@ -1,4 +1,4 @@
-use image::{RgbImage, ImageBuffer};
+use image::{ImageBuffer, RgbImage};
 
 fn main() {
     white_image();
@@ -17,6 +17,15 @@ fn white_image() {
         for y in 0..height {
             *img.get_pixel_mut(x, y) = image::Rgb([red, green, blue]);
         }
+    }
+
+    for x in 0..width {
+        *img.get_pixel_mut(x, 0) = image::Rgb([0, 0, 0]);
+        *img.get_pixel_mut(x, height - 1) = image::Rgb([0, 0, 0]);
+    }
+    for y in 0..height {
+        *img.get_pixel_mut(0, y) = image::Rgb([0, 0, 0]);
+        *img.get_pixel_mut(width - 1, y) = image::Rgb([0, 0, 0]);
     }
 
     img.save("white.png").unwrap();
