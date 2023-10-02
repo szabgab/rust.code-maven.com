@@ -1,5 +1,5 @@
 [package]
-name = "crate-empty-image"
+name = "create-empty-image"
 version = "0.1.0"
 edition = "2021"
 

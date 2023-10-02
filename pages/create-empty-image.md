@@ -11,23 +11,23 @@ In this example we create an empty image using the [image](https://crates.io/cra
 
 This is the result:
 
-![](examples/crate-empty-image/empty.png)
+![](examples/create-empty-image/empty.png)
 
 Yes, this is just a black square.
 
 ```
-cargo new crate-empty-image
-cd crate-empty-image
+cargo new create-empty-image
+cd create-empty-image
 cargo add image
 ```
 
 Results in the following file:
 
-![](examples/crate-empty-image/Cargo.toml)
+![](examples/create-empty-image/Cargo.toml)
 
 Then we add the code:
 
-![](examples/crate-empty-image/src/main.rs)
+![](examples/create-empty-image/src/main.rs)
 
 and run
 
