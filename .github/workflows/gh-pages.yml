@@ -51,6 +51,27 @@ jobs:
           cd code-maven.rs
           ./target/debug/code-maven --root ../rust.code-maven.com/ --pages ../rust.code-maven.com/pages/ --outdir ../_site
 
+      - name: Checkout slides
+        uses: actions/checkout@v3
+        with:
+          repository: 'szabgab/slide'
+          path: slides
+
+      - name: Checkout slides processor
+        uses: actions/checkout@v3
+        with:
+          repository: 'szabgab/slider-py'
+          path: slider-py
+
+      - name: Generate slides
+        run: |
+          python -V
+          cd slider-py
+          pip install -r requirements.txt -c constraints.txt
+          cd ../slides
+          ./generate_slides.py rust
+          mv html ../_site/slides
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
