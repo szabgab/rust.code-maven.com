@@ -69,7 +69,7 @@ jobs:
           cd slider-py
           pip install -r requirements.txt -c constraints.txt
           cd ../slides
-          ./generate_slides.py rust
+          ./generate_slides.py --hostname https://rust.code-maven.com rust
           mv html ../_site/slides
 
       - name: Upload artifact
