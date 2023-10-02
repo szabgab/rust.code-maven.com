@@ -1,7 +1,7 @@
 ---
-title: Create image with text written on it
+title: Create image with text written on it using Rust
 timestamp: 2023-10-02T11:30:01
-description:
+description: In many cases it is not enought to be able to draw nice images. We would also want to write some text on the image.
 tags:
     - image
 todo:
