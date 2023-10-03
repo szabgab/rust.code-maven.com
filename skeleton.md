@@ -1,6 +1,6 @@
 ---
 title: Title
-timestamp: 2023-08-27T14:30:01
+timestamp: 2023-10-03T14:30:01
 description:
 tags:
     - Rust
