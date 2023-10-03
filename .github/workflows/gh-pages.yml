@@ -49,7 +49,7 @@ jobs:
       - name: Generate pages
         run: |
           cd code-maven.rs
-          ./target/debug/code-maven --root ../rust.code-maven.com/ --pages ../rust.code-maven.com/pages/ --outdir ../_site
+          cargo run -- --root ../rust.code-maven.com/ --pages ../rust.code-maven.com/pages/ --outdir ../_site
 
       - name: Checkout slides
         uses: actions/checkout@v3
