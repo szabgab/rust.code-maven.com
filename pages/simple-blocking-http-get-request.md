@@ -17,7 +17,7 @@ todo:
 The [reqwest](https://crates.io/crates/reqwest) crate provides functions for both asynchronous and blocking http requests.
 Although in most cases you'd probably want to use the asynch calls, using the blocking calls is simpler, so we start with that.
 
-This is what we add to the `Cargot.toml`
+This is what we add to the `Cargo.toml`
 
 ![](examples/simple-blocking-http-get-request/Cargo.toml)
 
