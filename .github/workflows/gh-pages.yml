@@ -23,9 +23,6 @@ jobs:
     steps:
       - name: Checkout site source
         uses: actions/checkout@v3
-        with:
-          repository: 'szabgab/rust.code-maven.com'
-          path: rust.code-maven.com
 
       - name: Checkout processor
         uses: actions/checkout@v3
@@ -49,7 +46,7 @@ jobs:
       - name: Generate pages
         run: |
           cd code-maven.rs
-          cargo run -- --root ../rust.code-maven.com/ --pages ../rust.code-maven.com/pages/ --outdir ../_site
+          cargo run -- --root ../ --pages ../pages/ --outdir ../_site
 
       - name: Checkout slides
         uses: actions/checkout@v3
