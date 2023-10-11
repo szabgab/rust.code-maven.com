@@ -1,0 +1,12 @@
+navbar:
+  start:
+    - path: /
+      title: Home
+    - path: /tags/
+      title: Tags
+  end:
+    - path: /archive
+      title: Archive
+    - path: /about
+      title: About
+
