@@ -4,6 +4,8 @@ navbar:
       title: Home
     - path: /tags/
       title: Tags
+    - path: /slides/
+      title: Slides
   end:
     - path: /archive
       title: Archive
