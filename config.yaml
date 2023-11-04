@@ -1,4 +1,12 @@
 url: https://rust.code-maven.com
+repo: https://github.com/szabgab/rust.code-maven.com
+branch: main
+tags:
+  title: Tags
+  description: Articles about Rust with tags
+archive:
+  title: Archive
+  description: List of all the articles about the Rust programming language
 navbar:
   start:
     - path: /
