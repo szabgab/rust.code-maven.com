@@ -1,6 +1,7 @@
 url: https://rust.code-maven.com
 repo: https://github.com/szabgab/rust.code-maven.com
 branch: main
+site_name: Rust programming language
 tags:
   title: Tags
   description: Articles about Rust with tags
