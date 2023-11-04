@@ -16,4 +16,3 @@ I hope you can already enjoy the content and encourage me to improve the site an
 Both the [source of the content](https://github.com/szabgab/rust.code-maven.com/) and the source of the code [generating the site](https://github.com/szabgab/code-maven.rs) can be accessed. So if you have any requests for additinal content or features for the web site you will know where to submit those requests.
 
 
-If you'd like to get notification when I add new content to the site [register here](https://groups.google.com/g/rust-maven/).
