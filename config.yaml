@@ -3,7 +3,7 @@ repo: https://github.com/szabgab/rust.code-maven.com
 branch: main
 site_name: Rust programming language
 link_to_source: true
-footer: If you'd like to get notification when I add new content to the site [register here](https://groups.google.com/g/rust-maven/).
+footer: If you'd like to get notification when I add new content to the site [register here](/subscribe).
 tags:
   title: Tags
   description: Articles about Rust with tags
