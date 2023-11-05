@@ -18,6 +18,8 @@ navbar:
       title: Tags
     - path: /slides/
       title: Slides
+    - path: /subscribe
+      title: Subscribe
   end:
     - path: /archive
       title: Archive
