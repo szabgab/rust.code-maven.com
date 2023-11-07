@@ -4,7 +4,7 @@ timestamp: 2023-11-07T12:30:01
 description:
 tags:
     - include_str!
-    - &str
+    - "&str"
 ---
 
 One of the first things we see in Rust that we can create a variable with some fixed, hard-coded string.
