@@ -26,7 +26,7 @@ jobs:
 
       - name: Download processor
         run: |
-          wget https://github.szabgab.com/code-maven.rs/code-maven-web
+          wget https://ssg.code-maven.com/code-maven-web
           chmod +x code-maven-web
 
       - name: Setup Pages
