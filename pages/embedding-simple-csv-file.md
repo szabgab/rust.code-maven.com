@@ -41,3 +41,7 @@ Though I thought the change in the compiled size would be around the size of the
 I commented out the code that the "rs" extension and compiled the code. The resulting file size was 4,677,496.
 Then I emptied the CSV file and compiled the code again. This time I got a file of 4,670,952.
 So the difference is 6,544 bytes. Still only 0.2% of the total file size but way more than the 36 bytes I expected. I'll have to investigate this.
+
+This is especially strange as there was no size difference in the [embedding simple string](/embedding-text-file) case.
+
+
