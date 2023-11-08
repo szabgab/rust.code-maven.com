@@ -1,5 +1,5 @@
 ---
-title: Embedding string, embedding text file
+title: Embedding string, embedding text file in Rust
 timestamp: 2023-11-07T12:30:01
 description:
 tags:

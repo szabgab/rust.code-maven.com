@@ -1,5 +1,5 @@
 ---
-title: Embed list of values
+title: Embed list of values in Rust application
 timestamp: 2023-11-07T17:15:01
 description: Make it easy for non-progammers to edit a list of values and then embed it in the program for easy distribution.
 tags:
