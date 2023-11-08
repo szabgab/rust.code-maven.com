@@ -2,3 +2,4 @@
 *.bak
 target/
 _site/
+config.txt
