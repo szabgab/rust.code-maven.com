@@ -24,24 +24,17 @@ jobs:
       - name: Checkout site source
         uses: actions/checkout@v3
 
-      - name: Checkout processor
-        uses: actions/checkout@v3
-        with:
-          repository: 'szabgab/code-maven.rs'
-          path: code-maven.rs
+      - name: Download processor
+        run: |
+          wget https://github.szabgab.com/code-maven.rs/code-maven-web
+          chmod +x code-maven-web
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Build
-        run: |
-          cd code-maven.rs
-          cargo build --verbose --release
-
       - name: Generate pages
         run: |
-          cd code-maven.rs
-          ./target/release/code-maven-web --root ../ --outdir ../_site
+          ./code-maven-web --root . --outdir _site
 
       - name: Checkout slides
         uses: actions/checkout@v3
