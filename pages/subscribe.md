@@ -10,3 +10,5 @@ In order to subscribe send an email to **gabor@szabgab.com** with the subject: "
 
 I would like to know a bit about my readers, so I'd appreciate if you also included a few lines about yourself and why are you interested in my newsletter.
 
+Also, please note, instead of using some system I maintain the subscriptions manually, so it might take a few hours till I add you to the list and respond to your email.
+
