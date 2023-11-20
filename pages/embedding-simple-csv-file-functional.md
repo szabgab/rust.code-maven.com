@@ -13,7 +13,7 @@ tags:
 
 In an earlier article I described how to [embed a simple CSV file in the code](/embedding-simple-csv-file).
 
-I got some suggestions to improve the code from Marcus Bosten. So let's see those.
+I got some suggestions to improve the code from [Marcus Bosten](https://www.linkedin.com/in/marcus-bosten-ba51a26a/). So let's see those.
 
 To remind you the idea was to embed a simple CSV file in the code and then read it into a HashMap.
 

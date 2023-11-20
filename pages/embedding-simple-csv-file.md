@@ -17,6 +17,7 @@ Now we need to embed a simple CSV file that looks like this:
 
 It is actually part of the code-base running the Rust Maven web site that maps file extensions to format types.
 
+
 We need to read in this file and store as a HashMap so we'll be able to easily get the format type from a file extension.
 
 In the case of the [list of values](/embed-list-of-values) I wrote that storing the original text file in the memory would be a waste
@@ -44,4 +45,9 @@ So the difference is 6,544 bytes. Still only 0.2% of the total file size but way
 
 This is especially strange as there was no size difference in the [embedding simple string](/embedding-text-file) case.
 
+## Improved version
+
+After publishing this I got some suggestion, based on those I created an improved version
+with more functional programming elements which is probably way better than this solution.
+Check out the [Embedding simple CSV file and processing in a functional way](/embedding-simple-csv-file-functional).
 
