@@ -9,7 +9,7 @@ tags:
 ---
 
 
-As I was trying to figure out how to get the minimum and maximum value from a vector I bumped into
+As I was trying to figure out how to get the [minimum and maximum value from a vector](/minimum-and-maximum-element-of-vector) I bumped into
 the [min](https://doc.rust-lang.org/std/cmp/fn.min.html) and [max](https://doc.rust-lang.org/std/cmp/fn.max.html)
 functions that work on two values and can tell use which is the smaller and which is the bigger value.
 
