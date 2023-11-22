@@ -1,6 +1,6 @@
 ---
 title: Which value is smaller? Which is bigger? minimum and maximum in Rust
-timestamp: 2023-11-22T10:30:01
+timestamp: 2023-11-22T10:40:01
 description: Compare two numbers or two strings and tell us which is bigger and which is smaller.
 tags:
     - min
