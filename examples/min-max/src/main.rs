@@ -6,8 +6,7 @@ fn main() {
 
     let max = std::cmp::max(x, y);
     println!("max: {}", max);
-    // https://doc.rust-lang.org/std/cmp/fn.max.html
-    //
+
     let x = "hello".to_string();
     let y = "world".to_string();
 
