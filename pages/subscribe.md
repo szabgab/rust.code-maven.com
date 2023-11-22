@@ -1,7 +1,7 @@
 ---
-title: Subscribe
+title: Subscribe to the Rust Maven newsletter
 timestamp: 2023-10-10T14:30:01
-description: Get notified when I add more entries
+description: Get notified when I add more entries or when I release new versions of the Rust-related projects.
 ---
 
 I have a newsletter to notify you when I publish a new entry. This newsletter also includes exclusive content only available to the subscribers.
