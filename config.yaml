@@ -22,7 +22,7 @@ navbar:
     - path: /slides/
       title: Slides
     - path: /subscribe
-      title: Subscribe
+      title: Newsletter
   end:
     - path: /archive
       title: Archive
