@@ -17,7 +17,8 @@ It is very early stages, but you are welcome to give it a try.
 
 I [wrote about it](https://site-checker.code-maven.com/starting-the-project).
 
-For this project I need to [parse HTML](https://rust.code-maven.com/slides/rust/parse-html.html).
+For this project I need to [parse HTML](https://rust.code-maven.com/slides/rust/parse-html.html) and also to
+[get the length of a string in the Liquid template system](https://rust.code-maven.com/slides/rust/liquid-length-size.html).
 
 
 Earlier I wrote a number of examples [using SQLite](https://rust.code-maven.com/slides/rust/sqlite.html) in Rust.
