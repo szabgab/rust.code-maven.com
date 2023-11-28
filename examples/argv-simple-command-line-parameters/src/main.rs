@@ -4,11 +4,6 @@ fn main() {
     println!("{:?}", argv);
     println!("Number of elements on the command line {}", argv.len());
 
-    if argv.len() < 2 {
-        eprintln!("Usage: {} value", argv[0]);
-        std::process::exit(1);
-    }
-
     println!();
     for param in &argv[1..argv.len()] {
         println!("{}", param);
