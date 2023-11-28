@@ -54,6 +54,7 @@ fn main() {
     let field = "year";
     let value = data.get(field).unwrap().as_u64().unwrap();
     println!("{}={}", field, value);
+    assert_eq!(value, 2023);
     println!();
 
     let field = "height";
@@ -61,6 +62,7 @@ fn main() {
         Some(val) => val.as_f64().unwrap(),
         None => return,
     };
+    assert_eq!(value, 6.1);
     println!("height={}", value);
 
     println!();
@@ -85,3 +87,4 @@ fn main() {
         );
     }
 }
+

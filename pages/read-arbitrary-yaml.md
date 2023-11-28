@@ -3,9 +3,16 @@ title: Read arbitrary YAML files in Rust
 timestamp: 2023-11-28T14:30:01
 description: Read a YAML files without knowing up-front its structure?
 tags:
-    - Rust
+    - YAML
+    - serde
+    - serde_yaml
+    - as_str
+    - as_u64
+    - as_f64
+    - as_sequence
+    - get
 todo:
-    - TODO
+    - show defining a 
 ---
 
 When we need to read a YAML file in Rust ideally we would define a struct that maps the fields of the YAML file.
@@ -86,6 +93,20 @@ an [Option](https://doc.rust-lang.org/std/option/enum.Option.html) and thus we c
 disregarding the possibility that the `get` call can return `None` or we can use `match` to handle the `None` as well.
 In this code we used both strategies in different cases. Primarily to show how they can be done.
 
+In some cases you will see `println!` statements to show the values, in some cases there are also `assert_eq!` statement
+to show you what are the expected values.
+
+Besides knowing the name of the field you'd like to fetch you also need to know the type of the field and then you need
+to use one of the conversion methods of the [Value](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html) enum.
+
+In the code you can see examples for [as_str](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html#method.as_str)
+[as_u64](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html#method.as_u64), and
+[as_f64](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html#method.as_f64)
+to fetch the primitive values.
+
+You can also see the [as_sequence](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html#method.as_sequence) to access
+a sequence of values.
+
 
 ## The output
 
@@ -121,3 +142,13 @@ child: Mapping {"name": String("Beta"), "birthdate": Number(2022)}
 name: Beta
 birthdate: 2022
 ```
+
+## Conclusion
+
+It might be a bit cumbersome to access the values this way, but it needs less start-up work of
+creating the struct mapping the YAML file.
+
+If you have a YAML file with a data structure that differs from this and you'd like me to add such
+and example, let me know by opening an issue via the link below.
+
+
