@@ -1,0 +1,5 @@
+- name: Foo
+- name: Bar
+  year: 2023
+  married: true
+

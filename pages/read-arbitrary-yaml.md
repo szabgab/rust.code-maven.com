@@ -9,10 +9,13 @@ tags:
     - as_str
     - as_u64
     - as_f64
+    - as_bool
     - as_sequence
     - get
+    - assert_eq!
+    - assert!
 todo:
-    - show defining a 
+    - show defining a struct
 ---
 
 When we need to read a YAML file in Rust ideally we would define a struct that maps the fields of the YAML file.
@@ -142,6 +145,21 @@ child: Mapping {"name": String("Beta"), "birthdate": Number(2022)}
 name: Beta
 birthdate: 2022
 ```
+
+## Read YAML file containing sequence
+
+In some cases the YAML file is not a mapping, but a sequence at its root as in this example:
+
+![](examples/read-yaml-sequence/data.yaml)
+
+We can use the same method here as well. In this case we even see how we can access the first `data[0]`,
+the second `data[1]`, and any other element in the sequence based on its location. We also see a field that
+contains a boolean value and we use the `as_bool` function to conver it to a real `bool`.
+We use `assert_eq!` to compare strings and numbers to expected values and we use `assert!` to check if a boolean
+value is indeed `true`.
+
+![](examples/read-yaml-sequence/src/main.rs)
+
 
 ## Conclusion
 
