@@ -64,7 +64,13 @@ Then we open the file using [std::File::open](https://doc.rust-lang.org/std/fs/s
 [serde_yaml::from_reader](https://docs.rs/serde_yaml/latest/serde_yaml/fn.from_reader.html) to read the YAML file and convert to an internal data structure.
 
 This data structure, assigned to the `data` variable name, is of type [serde_yaml::Value](https://docs.rs/serde_yaml/latest/serde_yaml/enum.Value.html).
+
+```rust
+let data: serde_yaml::Value =
+```
+
 We printed it out using the first `println!` statement.
+
 
 ```
 Mapping {
