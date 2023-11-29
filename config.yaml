@@ -7,6 +7,8 @@ footer: If you'd like to get notification when I add new content to the site [re
 tags:
   title: Tags
   description: Articles about Rust with tags
+google_analytics: G-F3V82JBHQE
+
 from:
   name: Gabor Szabo
   email: gabor@szabgab.com
