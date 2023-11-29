@@ -19,10 +19,10 @@ todo:
 ---
 
 When we need to read a YAML file in Rust ideally we would define a struct that maps the fields of the YAML file.
-That would help with data validation and later with the handling of the data. However we can't always do that
+That would help with data validation and later with the handling of the data. However, we can't always do that
 and often we might just want to read in the YAML file and think about the specific definition later.
 
-In this examples we'll see how to do this.
+In this example we'll see how to do this.
 
 We are using [serde_yaml](https://crates.io/crates/serde_yaml) for this:
 
@@ -32,7 +32,7 @@ We have two YAML files.
 
 ## Invalid YAML format
 
-One of them has invalid YAML format.
+One of them has invalid YAML format, just to show what happens when the YAML parsing fails.
 
 ![](examples/read-arbitrary-yaml/broken.yaml)
 
@@ -47,7 +47,7 @@ There was an error parsing the YAML file did not find expected key at line 2 col
 
 ## Valid YAML file
 
-We also have a good YAMl file:
+We also have a good YAML file with some fields an values.
 
 ![](examples/read-arbitrary-yaml/data.yaml)
 
