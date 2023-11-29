@@ -10,7 +10,7 @@ The first article, published on Aug 27, 2023, is about printing [Hello World](/h
 
 I hope you will enjoy the content and encourage me to improve the site and write more articles.
 
-You might think that this site has some relation to the **Java Maven**, but I'll have to disappoint you. The word maven is just an (almost) ordinary word in English.
+You might think that this site has some relation to the Java Maven, but I'll have to disappoint you. The word maven is just an (almost) ordinary word in English.
 It actually came from Hebrew word meaning "understand" via Yiddish to American English and it basically means "someone who understand things and likes to explain them".
 
 Or at least that's how I use it.
