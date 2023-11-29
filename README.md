@@ -1,3 +1,3 @@
-# https://rust.code-maven.com/
+# [Rust Maven](https://rust.code-maven.com/)
 
 
