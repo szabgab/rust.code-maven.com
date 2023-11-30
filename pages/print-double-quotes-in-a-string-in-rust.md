@@ -7,6 +7,10 @@ tags:
     - "#"
     - \
     - escape
+    - double quotes
+    - backslash
+    - hashtag
+    - number sign
 ---
 
 We can include basically any character in a string in Rust, but we cannot include a double-quote (**"**) as that marks the end
