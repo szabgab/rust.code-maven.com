@@ -4,7 +4,7 @@ timestamp: 2023-11-30T09:30:01
 description: There are a number of function-like calls in Rust that end by an exclamation mark. What are those?
 tags:
     - exclamation mark
-    - !
+    - "!"
     - macro
 todo:
     - Examples writing macros
