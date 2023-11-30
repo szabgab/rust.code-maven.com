@@ -6,7 +6,8 @@ description: Welcome to the Rust Maven, the site that will help you programming 
 
 Welcome to the Rust Maven web site about, well, the Rust programming language!
 
-The first article, published on Aug 27, 2023, is about printing [Hello World](/hello-world). You can find all the other articles in the [archive](/archive).
+The first article, published on Aug 27, 2023, is about printing [Hello World](/hello-world). You can find all the other articles in the [archive](/archive) or you can look at the [tags](/tags).
+The site also includes the [slides](/slides/rust/) of my [Rust training courses](/training-course).
 
 I hope you will enjoy the content and encourage me to improve the site and write more articles.
 
