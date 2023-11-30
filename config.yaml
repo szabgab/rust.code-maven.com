@@ -21,7 +21,7 @@ navbar:
       title: Home
     - path: /tags/
       title: Tags
-    - path: /slides/
+    - path: /slides/rust/
       title: Slides
     - path: /subscribe
       title: Newsletter
