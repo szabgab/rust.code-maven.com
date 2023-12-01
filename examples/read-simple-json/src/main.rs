@@ -1,6 +1,6 @@
 use std::fs::File;
-
 use serde::Deserialize;
+
 #[derive(Deserialize, Debug)]
 struct Person {
     fname: String,
@@ -10,10 +10,9 @@ struct Person {
 fn main() {
     let filename = get_filename();
 
-    let data = match File::open(&filename) {
+    let data: Person = match File::open(&filename) {
         Ok(file) => {
-             let data: Person = serde_json::from_reader(&file).expect("JSON parsing error");
-             data
+             serde_json::from_reader(&file).expect("JSON parsing error")
         },
         Err(error) => {
             eprintln!("Error opening file {}: {}", filename, error);
