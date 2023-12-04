@@ -12,10 +12,10 @@ tags:
 ---
 
 [Loco](https://loco.rs/) is called the one-person framework for Rust for side-projects and startups. I saw it mentioned in
-on of the local Rust groups, so I thought I give it a try. I am using **loco-cli 0.1.3**. By the time you are reading this,
+on of the local Rust groups, so I thought I would give it a try. I am using **loco-cli 0.1.3**. By the time you are reading this,
 there might be newer versions with other features.
 
-The tour on the web site shows and applications using Postgres, but I don't have it installed, so I will try the simpler version
+The tour on the web site shows applications using Postgres, but I don't have it installed, so I will try the simpler version
 that does not need a database.
 
 Before we get started let me mention also that in the [GitHub repository](https://github.com/loco-rs/loco) of the project there is a
@@ -47,8 +47,8 @@ This will ask for the name of the project (defaulting to myapp) and then it will
 
 This will also ask for the type of the project offering you two choices:
 
-* Saas app (with DB and user auth)
-* Stateless service (minimal, no db)
+* SaaS app (with DB and user auth)
+* Stateless service (minimal, no DB)
 
 For simplicity I went with the default name and picked the second choice that does not need a database.
 
