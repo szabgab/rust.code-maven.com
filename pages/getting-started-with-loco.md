@@ -334,5 +334,31 @@ date: Sun, 03 Dec 2023 13:10:57 GMT
 Hello <b>Loco</b>
 ```
 
+## Autoreload
+
+When developing a web application it is quite annoying if you have to keep stopping the application with Ctrl-C and restarting it manually.
+Luckily, as pointed out by [Elad Kaplan](https://github.com/kaplanelad) the lead developer of Loco, one can use [cargo-watch](https://crates.io/crates/cargo-watch):
+
+
+Install it:
+
+```
+cargo install cargo-watch
+```
+
+Run the development server this way:
+
+```
+cargo-watch -x check  -s 'cargo loco start'
+```
+
+Due to the compilation time of Rust each restart still takes a few second, but at least I don't have to do it manually.
+
+## Conclusion
+
+This is a promising web framework, we'll see if it catches on.
+
+Oh, and it took a while and a picture shared by the authors, to realize that the name "Loco" refers to locomotive (as in train, rails...) and not crazy in Spanish...
+
 
 
