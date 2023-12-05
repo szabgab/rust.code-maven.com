@@ -8,7 +8,8 @@ I have a newsletter to notify you when I publish a new entry. This newsletter al
 
 In order to subscribe send an email to **gabor@szabgab.com** with the subject: "**Subscribe to Rust Maven**".
 
-I would like to know a bit about my readers, so I'd appreciate if you also included a few lines about yourself and why are you interested in my newsletter.
+I would like to know a bit about my readers, so I'd appreciate if you also included a few lines about yourself, what
+is level of Rust and why are you interested in my newsletter. Links to your GitHub/GitLab accounts and your LinkedIn account would be great.
 
 Also, please note, instead of using some system I maintain the subscriptions manually, so it might take a few hours till I add you to the list and respond to your email.
 
