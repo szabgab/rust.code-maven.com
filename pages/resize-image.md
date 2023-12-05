@@ -11,8 +11,9 @@ tags:
     - resize
     - save
     - match
+    - "!"
 todo:
-    - TODO
+    - exclamation mark
 ---
 
 
@@ -72,6 +73,51 @@ The aspect ratio of the original images is calculated by `img.height() / img.wid
 Then we use the [resize](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.resize) method to do the actual work.
 
 Finally [save](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.save) will save the new image in format appropriate to the file extension we gave to it.
+
+## Resize image with error checking
+
+In the previous solution I did not have any error checking. In several places I used `unwrap`. One of the improvements suggested was to add some input validation and error checking.
+I did not want to make the original solution even more complex, so I created a separate one that contains error handling.
+This code also allows the user to provide only 3 parameters and use `FilterType::Nearest` as the default.
+
+![](examples/resize-image-with-error-checking/src/main.rs)
+
+In most cases the change was simple replacing the `unwrap` call by the use of the `match`. One case, however was particularly interesting.
+
+In the `get_args` function we have this code:
+
+```rust
+    let width: u32 = match args[3].parse() {
+        Ok(value) => value,
+        Err(err) => {
+            eprintln!(
+                "Invalid parameter for width: '{}'. It must be an integer",
+                err
+            );
+            usage(&args[0])
+        }
+    };
+```
+
+Here we expect both arms of the `match` to return `u32`, but the `Err` arm calls a function that does always exits and thus it should not return anything.
+At first I declared it this way, but Rust complained that the `Err` arm returns `()` and not the expected `u32`.
+
+```rust
+fn usage(name: &str) {
+    eprintln!("Usage: {} INFILE OUTFILE WIDTH FILTER", name);
+    std::process::exit(1);
+}
+```
+
+The solution I found was adding an exclamation mark where we would have declared the return values:
+
+```rust
+fn usage(name: &str) -> ! {
+    eprintln!("Usage: {} INFILE OUTFILE WIDTH FILTER", name);
+    std::process::exit(1);
+}
+```
+
 
 ## Conclusion
 
