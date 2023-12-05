@@ -3,7 +3,7 @@
 fn main() {
     let (infile, outfile, x, y, width, height) = get_args();
 
-    let mut img = image::open(infile).unwrap();
+    let img = image::open(infile).unwrap();
     println!("Original width={}, height={}", img.width(), img.height());
 
     println!(
@@ -11,7 +11,7 @@ fn main() {
         x, y, width, height
     );
 
-    let cropped = img.crop(x, y, width, height);
+    let cropped = img.crop_imm(x, y, width, height);
     cropped.save(outfile).unwrap();
 }
 

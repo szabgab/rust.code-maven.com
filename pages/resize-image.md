@@ -73,4 +73,9 @@ Then we use the [resize](https://docs.rs/image/latest/image/enum.DynamicImage.ht
 
 Finally [save](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.save) will save the new image in format appropriate to the file extension we gave to it.
 
+## Conclusion
+
+It is quite easy to resize an image. Let's see what else can we do easily.
+
+For example we can [crop and image](/crop-image).
 

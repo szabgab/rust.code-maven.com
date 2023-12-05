@@ -8,6 +8,7 @@ tags:
     - height
     - width
     - crop
+    - crop_imm
     - save
 ---
 
@@ -56,12 +57,23 @@ and has a width and hight as provided on the command line. So if we have an imag
 
 ## About the code
 
-We have a function called `get_args` that will get the argments from the command line and would print a usage-message if the user has not supplied
+We have a function called `get_args` that will get the arguments from the command line and would print a usage-message if the user has not supplied
 the correct number of arguments.
 
 
 ![](examples/crop-image/src/main.rs)
 
 The [image::open](https://docs.rs/image/latest/image/fn.open.html) function will read the image into memory,
-[crop](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.crop) will return a cropped version of the image.
+[crop_imm](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.crop_imm) will return a cropped version of the image.
+That is "crop immutable". There is also a function called [crop](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.crop),
+but that required the `img` to be **mutable**.
+
+The [save](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.save) method will save the new image in format appropriate to the file extension we gave to it.
+
+
+
+## Conclusion
+
+It is quite easy to crop an image. Let's see what else can we do easily.
+
 
