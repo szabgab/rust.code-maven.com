@@ -20,7 +20,12 @@ fn get_args() -> (String, String, u32, FilterType) {
         eprintln!("Usage: {} INFILE OUTFILE WIDTH FILTER", args[0]);
         std::process::exit(1);
     }
-    (args[1].to_owned(), args[2].to_owned(), args[3].parse().unwrap(), get_filer_type(&args[4]))
+    (
+        args[1].to_owned(),
+        args[2].to_owned(),
+        args[3].parse().unwrap(),
+        get_filer_type(&args[4]),
+    )
 }
 
 fn get_filer_type(name: &str) -> FilterType {
