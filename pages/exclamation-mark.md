@@ -1,40 +1,49 @@
 ---
 title: Exclamation mark in Rust !
-timestamp: 2023-11-30T09:30:01
-description: There are a number of function-like calls in Rust that end by an exclamation mark. What are those?
+timestamp: 2023-12-06T01:30:01
+description: There are a number of places where exclamation marks are used in Rust
 tags:
     - exclamation mark
     - "!"
     - macro
+    - not
 todo:
-    - Examples writing macros
+    - "! as not"
 ---
 
-As you read Rust code you will see many function calls that have an exclamation mark `!` at the end.
-
-Some of the most common ones are:
-
-* [print!](https://doc.rust-lang.org/std/macro.print.html)
-* [println!](https://doc.rust-lang.org/std/macro.println.html)
-* [vec!](https://doc.rust-lang.org/std/macro.vec.html)
-* [todo!](https://doc.rust-lang.org/std/macro.todo.html)
-* [include_str!](https://doc.rust-lang.org/std/macro.include_str.html)
-* [include_bytes!](https://doc.rust-lang.org/std/macro.include_bytes.html)
-* [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
-* [matches!](https://doc.rust-lang.org/std/macro.matches.html)
-
-In reality, these are called [macros](https://doc.rust-lang.org/reference/macros.html).
-They are replaced by more Rust code at compile time.
-
-There are a number of [macros in the standard library](https://doc.rust-lang.org/std/#macros)
-and there are many [crates sharing additional macros](https://crates.io/keywords/macro).
-
-Macros can be useful to eliminate duplicate code that for some reason we cannot, or do not want to put in a function.
-
-They can also include Rust code that would be executed during the compilation of the code.
+There are a number of places where we can see exclamation marks `!` in Rust.
 
 
-* [The Little book of Rust Macros](https://veykril.github.io/tlborm/)
-* [Macros tutorial](https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples/)
+## Never type
+
+As the designated return type of a function:
+
+```rust
+fn foo() -> ! {
+    ...
+}
+```
+
+[Diverging Functions - functions that never return](/diverging-functions)
 
 
+## Macros
+
+
+At the end of "function" names:
+
+```rust
+println!("Hello World");
+```
+
+[Functions that end with an exclamation mark !](/functions-that-end-with-exclamation-mark)
+
+## not
+
+In boolean expressions
+
+```rust
+if ! var.is_empty() {
+   ...
+}
+```

@@ -11,7 +11,6 @@ tags:
     - resize
     - save
     - match
-    - "!"
 todo:
     - exclamation mark
 ---
