@@ -99,7 +99,7 @@ In the `get_args` function we have this code:
     };
 ```
 
-Here we expect both arms of the `match` to return `u32`, but the `Err` arm calls a function that does always exits and thus it should not return anything.
+Here we expect both arms of the `match` to return `u32`, but the `Err` arm calls a function that always exits and thus it should not return anything.
 At first I declared it this way, but Rust complained that the `Err` arm returns `()` and not the expected `u32`.
 
 ```rust
@@ -118,6 +118,7 @@ fn usage(name: &str) -> ! {
 }
 ```
 
+Apparently functions that never return are called [Diverging functions](/diverging-functions).
 
 ## Conclusion
 
