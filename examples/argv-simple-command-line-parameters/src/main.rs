@@ -11,6 +11,7 @@ fn main() {
     println!();
 
     if argv.len() < 3 {
+        println!("Usage: {} FIRST SECOND", argv[0]);
         std::process::exit(1);
     }
 

@@ -6,6 +6,9 @@ tags:
     - CLI
     - args
     - ARGV
+    - count
+    - nth
+    - next
 todo:
     - clap
 ---
@@ -53,4 +56,22 @@ banana
 First: apple
 Second: banana
 ```
+
+## Alternative without a vector
+
+I am not sure if this is a "better" solution, or in what way would this be a better solution,
+but I've seen this used in a number of examples.
+
+
+![](examples/argv-command-line-parameters-with-count/src/main.rs)
+
+Here we use various features of the fact that `args()` returns an iterator.
+We can use the `count()` method to get the number of elements,
+we can use the `nth()` method to get the nth element and we can use
+the `next()` method to get, surprise, surprise, the next element.
+
+The `nth()` method uses 0-based index and thus `nth(1)` is in reality the 2nd element the iterator returns.
+
+I'd probably use `nth(0) to get the first element of the iterator, but [clippy](https://doc.rust-lang.org/nightly/clippy/)
+suggested I try `next()` instead so that's what I have in the example.
 
