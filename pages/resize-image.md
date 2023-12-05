@@ -1,0 +1,75 @@
+---
+title: Resize image using Rust
+timestamp: 2023-12-05T10:55:01
+description: It is very easy to resize an image in Rust, we just need to decide on the sampling filter and the new size.
+tags:
+    - image
+    - FilterType
+    - open
+    - height
+    - width
+    - resize
+    - save
+todo:
+    - TODO
+---
+
+
+## Create the crate
+
+For this example we create a crate called `resize-image` and then add [image](https://crates.io/crates/image) as a dependency.
+
+```
+cargo new resize-image
+cd resize-image
+cargo add image
+```
+
+Or manually update `Cargo.toml`:
+
+```
+[dependencies]
+image = "0.24"
+```
+
+## How to use this crate?
+
+We run the command like this:
+
+```
+cargo run ~/Pictures/locust_5.jpg resized.png 400 nearest
+```
+
+* The 1st parameter is the path to the original file.
+* The 2nd parameter is the path to the new file. As you can see, the file extension does not have to be the same. The code will automatically recognize the file format based on the file extension.
+* The 3rd parameter is the new `width` of the image. The new `hight` will be calculated based on this and the aspect ratio of the original file.
+* The 4th and last parameter is the [FilterType](https://docs.rs/image/latest/image/imageops/enum.FilterType.html) In the code I've created a mapping from a string to the actual type in that `enum`.
+
+We need to provide this last parameter in order to tell the `resize` method how to do its magic. From the [sample image](https://docs.rs/image/latest/image/imageops/enum.FilterType.html)
+I can see that the "nearest" method is 10-30 times faster than the others, but it also creates the worse image.
+
+## The code
+
+The `src/main.rs` file then looks like this:
+
+![](examples/resize-image/src/main.rs)
+
+We have two functions, the `get_args` function will look at the command line and return the 4 parameters. The first two will be simple strings.
+The 3rd one is converted to a `u32` (unsigned integer with 32 bits). The 4th parameter is expected to be a string that is then converted
+to a [FilterType](https://docs.rs/image/latest/image/imageops/enum.FilterType.html) the pattern matching implemented in the `get_filer_type` function.
+
+The [image::open](https://docs.rs/image/latest/image/fn.open.html) function reads the content of the image file in the memory. It return
+[ImageResult](https://docs.rs/image/latest/image/error/type.ImageResult.html) structure with a [DynamicImage](https://docs.rs/image/latest/image/enum.DynamicImage.html)
+in it.
+
+This has a [width](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.width) and a [height](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.height)
+method, both returning `u32` values.
+
+
+The aspect ratio of the original images is calculated by `img.height() / img.width()`.
+
+Then we use the [resize](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.resize) method to do the actual work.
+
+Finally [save](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.save) will save the new image in format appropriate to the file extension we gave to it.
+
+
