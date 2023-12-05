@@ -8,7 +8,7 @@ fn main() {
 
     let height = width * img.height() / img.width();
 
-    println!("Scaled: width={}, height={}", width, height);
+    println!("Resizing to: width={}, height={}", width, height);
 
     let scaled = img.resize(width, height, filter);
     scaled.save(outfile).unwrap();
