@@ -1,5 +1,3 @@
-// [crop](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.crop)
-
 fn main() {
     let (infile, outfile, x, y, width, height) = get_args();
 
