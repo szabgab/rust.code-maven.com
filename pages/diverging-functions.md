@@ -20,7 +20,7 @@ fn say_hi(name: &str) {
 }
 ```
 
-However there are function that never return. For example because they call the [panic!](https://doc.rust-lang.org/std/macro.panic.html) macro
+However, there are function that never return. For example because they call the [panic!](https://doc.rust-lang.org/std/macro.panic.html) macro
 or the [std::process::exit](https://doc.rust-lang.org/std/process/fn.exit.html) function.
 
 For these the recommendation is to add an exclamation mark `!` as the designated return type.
@@ -38,6 +38,10 @@ fn say_hi_an_panic(name: &str) -> ! {
 When would we need to use this?
 
 This is a simplified version of the code I used in the [resize image with error handling](/resize-image) example.
+
+We are expecting a number on the command line that can be represented using a 32-bit unsigned integer.
+We would like to provide a **usage** if the user did not supply anything or if the value could not converted to a `u32`.
+
 
 ![](examples/invalid-parameter/src/main.rs)
 
