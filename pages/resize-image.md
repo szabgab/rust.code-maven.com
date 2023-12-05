@@ -57,7 +57,7 @@ The `src/main.rs` file then looks like this:
 
 We have two functions, the `get_args` function will look at the command line and return the 4 parameters. The first two will be simple strings.
 The 3rd one is converted to a `u32` (unsigned integer with 32 bits). The 4th parameter is expected to be a string that is then converted
-to a [FilterType](https://docs.rs/image/latest/image/imageops/enum.FilterType.html) the pattern matching implemented in the `get_filer_type` function.
+to a [FilterType](https://docs.rs/image/latest/image/imageops/enum.FilterType.html) the pattern matching implemented in the `get_filter_type` function.
 
 The [image::open](https://docs.rs/image/latest/image/fn.open.html) function reads the content of the image file in the memory. It return
 [ImageResult](https://docs.rs/image/latest/image/error/type.ImageResult.html) structure with a [DynamicImage](https://docs.rs/image/latest/image/enum.DynamicImage.html)

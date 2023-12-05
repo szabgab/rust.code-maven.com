@@ -24,11 +24,11 @@ fn get_args() -> (String, String, u32, FilterType) {
         args[1].to_owned(),
         args[2].to_owned(),
         args[3].parse().unwrap(),
-        get_filer_type(&args[4]),
+        get_filter_type(&args[4]),
     )
 }
 
-fn get_filer_type(name: &str) -> FilterType {
+fn get_filter_type(name: &str) -> FilterType {
     match name {
         "nearest" => FilterType::Nearest,
         "triangle" => FilterType::Triangle,
