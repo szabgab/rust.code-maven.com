@@ -4,6 +4,7 @@ timestamp: 2023-08-30T11:52:01
 description: Error messages can be annoying, but this one is a really nice recommendation of the Rust compiler to fix a typo.
 tags:
     - rustc
+    - error code
 ---
 
 Here is one thing for which I like Rust.
