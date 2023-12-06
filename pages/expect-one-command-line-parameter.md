@@ -12,6 +12,8 @@ tags:
     - STDERR
     - cli
     - to_owned
+    - parse
+    - match
 todo:
     - articles about clap
 ---
@@ -72,4 +74,11 @@ That's the whole thing.
 
 ![](examples/one-command-line-string/src/main.rs)
 
+We call [to_owned](https://doc.rust-lang.org/std/borrow/trait.ToOwned.html), we could also call [to_string](https://doc.rust-lang.org/std/string/trait.ToString.html)
+to return a [String](https://doc.rust-lang.org/std/string/struct.String.html).
+
+
+## Function to accept one command line parameter as a number
+
+![](examples/one-command-line-number/src/main.rs)
 
