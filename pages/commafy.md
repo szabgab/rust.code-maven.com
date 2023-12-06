@@ -1,6 +1,6 @@
 ---
 title: Commafy - add a comma after every 3 digits
-timestamp: 2023-12-06T17:10:01
+timestamp: 2023-12-06T18:30:01
 description:
 tags:
     - commafy
@@ -42,7 +42,7 @@ Integer: Into<i128> + Copy + std::fmt::Debug + std::fmt::Display
 ```
 
 This means that the newly created `Integer` type:
-* Must be convertable to `i128` without loss. Basically every integer type and unsigned-integer type fulfills this, except `u128`.
+* Must be convertible to `i128` without loss. Basically every integer type and unsigned-integer type fulfills this, except `u128`.
 * Has to have the [Copy trait](https://doc.rust-lang.org/std/marker/trait.Copy.html).
 * Has the [Debug trait](https://doc.rust-lang.org/std/fmt/trait.Debug.html).
 * And the [Display trait](https://doc.rust-lang.org/std/fmt/trait.Display.html).
@@ -68,7 +68,7 @@ It would be hard to add a comma after every 3 character from the right side (the
 then reverse the characters using the [rev](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.rev) method.
 
 
-Then using [map](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map) we go over each charcter and add
+Then using [map](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map) we go over each character and add
 a comma (`,`) after each 3rd character. Actually, we add a comma **in-front** the character whose index is 1 modulo 3 (`ix % 3 == 1`).
 This way we can make sure that we convert `123456` to `123,456` and not to `,123,456`.
 
@@ -77,14 +77,13 @@ The we call [collect](https://doc.rust-lang.org/std/iter/trait.Iterator.html#met
 
 The result is a string with all the commas.
 
-
 The prefix is the `-` for the negative numbers. It is really nice of Rust that `if` returns the expression in it.
 
 ```
 let prefix = if number.into() < 0 { "-" } else { "" };
 ```
 
-finally we 
+Finally we need to reverse the string again to get in the correct direction.
 
 ```
 format!("{}{}", prefix, num.chars().rev().collect::<String>())
