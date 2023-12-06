@@ -8,7 +8,7 @@ tags:
     - macro
     - not
 todo:
-    - "! as not"
+    - "!="
 ---
 
 There are a number of places where we can see exclamation marks `!` in Rust.
@@ -38,12 +38,27 @@ println!("Hello World");
 
 [Functions that end with an exclamation mark !](/functions-that-end-with-exclamation-mark)
 
-## not
+## Boolean not
 
-In boolean expressions
+In boolean expressions:
 
 ```rust
 if ! var.is_empty() {
    ...
 }
 ```
+
+[Boolean not !](/boolean-not)
+
+
+## Not equal !=
+
+Comparing values for lack of equality:
+
+```rust
+if answer != 42 {
+    ...
+}
+```
+
+
