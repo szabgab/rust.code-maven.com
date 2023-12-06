@@ -25,6 +25,8 @@ navbar:
       title: Slides
     - path: /subscribe
       title: Newsletter
+    - path: /training-course
+      title: Training
   end:
     - path: /archive
       title: Archive
