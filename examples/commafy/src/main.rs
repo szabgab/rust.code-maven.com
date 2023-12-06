@@ -9,7 +9,7 @@ fn commafy<Integer: Into<i128> + Copy + std::fmt::Debug + std::fmt::Display>(
 ) -> String {
     let num = number.into().abs();
 
-    let num = format!("{num}");
+    let num = num.to_string();
 
     let mut ix = 0;
 
