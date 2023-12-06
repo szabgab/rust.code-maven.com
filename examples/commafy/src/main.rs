@@ -4,31 +4,52 @@ fn main() {
     println!("commafied: {}", commafy(number));
 }
 
+// fn commafy<Integer: Into<i128> + Copy + std::fmt::Debug + std::fmt::Display>(
+//     number: Integer,
+// ) -> String {
+//     let num = number.into().abs();
+
+//     let num = num.to_string();
+
+//     let mut ix = 0;
+
+//     let num = num
+//         .chars()
+//         .rev()
+//         .map(|chr| {
+//             ix += 1;
+//             if ix % 3 == 1 && ix > 1 {
+//                 format!(",{chr}")
+//             } else {
+//                 format!("{chr}")
+//             }
+//         })
+//         .collect::<String>();
+
+//     let prefix = if number.into() < 0 { "-" } else { "" };
+
+//     format!("{}{}", prefix, num.chars().rev().collect::<String>())
+// }
+
 fn commafy<Integer: Into<i128> + Copy + std::fmt::Debug + std::fmt::Display>(
     number: Integer,
 ) -> String {
-    let num = number.into().abs();
-
-    let num = num.to_string();
-
-    let mut ix = 0;
-
-    let num = num
-        .chars()
-        .rev()
-        .map(|chr| {
-            ix += 1;
-            if ix % 3 == 1 && ix > 1 {
-                format!(",{chr}")
-            } else {
-                format!("{chr}")
-            }
-        })
-        .collect::<String>();
-
     let prefix = if number.into() < 0 { "-" } else { "" };
-
-    format!("{}{}", prefix, num.chars().rev().collect::<String>())
+    format!(
+        "{}{}",
+        prefix,
+        number
+            .into()
+            .abs()
+            .to_string()
+            .as_bytes()
+            .rchunks(3)
+            .rev()
+            .map(std::str::from_utf8)
+            .collect::<Result<Vec<&str>, _>>()
+            .unwrap()
+            .join(",")
+    )
 }
 
 fn get_command_line_number() -> i32 {
@@ -50,13 +71,12 @@ fn get_command_line_number() -> i32 {
     value
 }
 
-
 #[test]
 fn test_commafy() {
-
     assert_eq!(commafy(0), "0");
     assert_eq!(commafy(23), "23");
     assert_eq!(commafy(123), "123");
+    assert_eq!(commafy(-123), "-123");
     assert_eq!(commafy(1234), "1,234");
     assert_eq!(commafy(-23), "-23");
     assert_eq!(commafy(-1234), "-1,234");
