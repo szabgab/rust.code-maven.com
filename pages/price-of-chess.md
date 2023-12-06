@@ -6,6 +6,7 @@ tags:
     - u128
     - pow
     - commafy
+    - chess
 ---
 
 Back when I was a kid [my father](https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Szab%C3%B3_(chess_player)) told me the anecdote

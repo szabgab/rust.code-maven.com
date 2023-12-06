@@ -11,6 +11,7 @@ tags:
     - eprintln!
     - STDERR
     - cli
+    - to_owned
 todo:
     - articles about clap
 ---
@@ -65,4 +66,10 @@ Then we call [std::process::exit](https://doc.rust-lang.org/std/process/fn.exit.
 If the length was 2 then we don't enter this block and we assign the value from `&argv[1]` to a variable name that we can use later.
 
 That's the whole thing.
+
+## Function to accept one command line parameter as a string
+
+
+![](examples/one-command-line-string/src/main.rs)
+
 
