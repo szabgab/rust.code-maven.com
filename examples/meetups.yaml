@@ -10,4 +10,41 @@
   url: https://www.meetup.com/dallasrust/
   members: 729
   location: Dallas, TX, USA
+- name: Charlottesville Rust Meetup
+  url: https://www.meetup.com/charlottesville-rust-meetup/
+  members: 348
+  location: Charlottesville, VA, USA
+- name: Rust Nuremberg
+  url: https://www.meetup.com/rust-noris/
+  members: 458
+  location: Nürnberg, Germany
+- name: Rust Munich
+  url: https://www.meetup.com/rust-munich/
+  members: 1326
+  location: München, Germany
+- name: Rust DV
+  url: https://www.meetup.com/rustdc/
+  members: 832
+  location: Washington, DC, USA
+- name: Vancouver Rust
+  url: https://www.meetup.com/vancouver-rust/
+  members: 1176
+  location: Vancouver, BC, Canada
+- name: Tokyo Rust Meetup
+  url: https://www.meetup.com/tokyo-rust-meetup/
+  members: 648
+  location: Tokyo, Japan
+- name: Rust Delhi
+  url: https://www.meetup.com/rustdelhi/
+  members: 489
+  location: Delhi, India
+- name: Rust Cologne
+  url: https://www.meetup.com/rustcologne/
+  members: 706
+  location: Köln, Germany
+- name: Rust Aarhus
+  url: https://www.meetup.com/rust-aarhus/
+  members: 229
+  location: Aarhus, Denmark
+
 
