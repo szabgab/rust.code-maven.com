@@ -1,0 +1,13 @@
+- name: Indy Rust
+  url: https://www.meetup.com/indyrs/
+  members: 315
+  location: Indianapolis, IN, USA
+- name: Rust and C++ Cardiff
+  url: https://www.meetup.com/rust-and-c-plus-plus-in-cardiff/
+  members: 802
+  location: Cardiff, X5, United Kingdom
+- name: Dallas Rust User Meetup
+  url: https://www.meetup.com/dallasrust/
+  members: 729
+  location: Dallas, TX, USA
+
