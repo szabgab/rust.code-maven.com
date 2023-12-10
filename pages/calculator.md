@@ -114,4 +114,8 @@ git add README.md Cargo.lock
 git commit -m "add README"
 ```
 
+## Add hard-coded calculation
+
+
+![](/images/hard-coded-calc.png)
 
