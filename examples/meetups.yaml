@@ -82,3 +82,71 @@
   url: https://www.meetup.com/deep-dish-rust/
   members: 98
   location: Chicago, IL, USA
+- name: Utah Rust
+  url: https://www.meetup.com/utah-rust/
+  members: 511
+  location: Lehi, UT, USA
+- name: Mountain View  Rust Meetup
+  url: https://www.meetup.com/mv-rust-meetup/
+  members: 159
+  location: Mountain View, CA, USA
+- name: Boston Rust Meetup
+  url: https://www.meetup.com/bostonrust/
+  members: 1049
+  location: Boston, MA, USA
+- name: San Francisco Rust Study Group
+  url: https://www.meetup.com/san-francisco-rust-study-group/
+  members: 383
+  location: San Francisco, CA, USA
+- name: Rust ATX
+  url: https://www.meetup.com/rust-atx/
+  members: 538
+  location: Austin, TX, USA
+- name: Rust Perth Meetup Group
+  url: https://www.meetup.com/perth-rust-meetup-group/
+  members: 71
+  location: Perth, Australia
+- name: Rust Dublin
+  url: https://www.meetup.com/rust-dublin/
+  members: 1026
+  location: Dublin, Ireland
+- name: Rust Circle Kampala
+  url: https://www.eventbrite.com/o/rust-circle-kampala-65249289033
+  members: 32
+  location: Online
+- name: Buffalo Rust Meetup
+  url: https://www.meetup.com/buffalo-rust-meetup/
+  members: 368
+  location: Buffalo, NY, USA
+- name: Belgium Rust user group
+  url: https://www.meetup.com/belgium-rust-user-group/
+  members: 174
+  location: Brussels, Belgium
+- name: Copenhagen Rust Community
+  url: https://www.meetup.com/copenhagen-rust-community/
+  members: 501
+  location: Copenhagen, Denmark
+- name: Rust Vienna
+  url: https://www.meetup.com/rust-vienna/
+  members: 429
+  location: Vienna, Austria
+- name: Rust Zurich
+  url: https://www.meetup.com/rust-zurich/
+  members: 958
+  location: Zürich, Schweiz
+- name: Canberra Rust User Group
+  url: https://www.meetup.com/rust-canberra/
+  members: 61
+  location: Canberra, Australia
+- name: Rust AKL
+  url: https://www.meetup.com/rust-akl/
+  members: 562
+  location: Auckland, New Zealand
+- name: Pasadena Thursday Go / Rust
+  url: https://www.meetup.com/thursday-go/
+  members: 94
+  location: Pasadena, CA, USA
+- name: Rust Bern
+  url: https://www.meetup.com/rust-bern/
+  members: 149
+  location: Bern, Switzerland
