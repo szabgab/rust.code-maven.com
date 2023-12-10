@@ -46,5 +46,39 @@
   url: https://www.meetup.com/rust-aarhus/
   members: 229
   location: Aarhus, Denmark
-
-
+- name: Rust Lille
+  url: https://www.meetup.com/meetup-group-zgphbyet/
+  members: 223
+  location: Lille, France
+- name: Rust London User Group
+  url: https://www.meetup.com/rust-london-user-group/
+  members: 3031
+  location: London, 17, United Kingdom
+- name: Rust - Modern Systems Programming in Leipzig
+  url: https://www.meetup.com/rust-modern-systems-programming-in-leipzig/
+  members: 83
+  location: Leipzig, Germany
+- name: Rust Basel
+  url: https://www.meetup.com/rust-basel/
+  members: 184
+  location: Basel, Switzerland
+- name: Seattle Rust User Group
+  url: https://www.meetup.com/seattle-rust-user-group/
+  members: 1603
+  location: Seattle, WA, USA
+- name: Minneapolis Rust Meetup
+  url: https://www.meetup.com/minneapolis-rust-meetup/
+  members: 386
+  location: Minneapolis, MN, USA
+- name: Cap Hill Rust Coding/Hacking/Learning
+  url: https://www.meetup.com/cap-hill-rust/
+  members: 129
+  location: Seattle, WA, USA
+- name: Rust NYC
+  url: https://www.meetup.com/rust-nyc/
+  members: 2768
+  location: New York, NY, USA
+- name: Deep Dish Rust
+  url: https://www.meetup.com/deep-dish-rust/
+  members: 98
+  location: Chicago, IL, USA
