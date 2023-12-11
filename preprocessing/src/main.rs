@@ -23,7 +23,7 @@ fn main() {
     let mut text = String::from(
         r#"
 ---
-title: Meetups
+title: Rust Meetup and user group
 timestamp: 2023-12-11T08:30:01
 description: There are many Rust user groups around the world. Here is the full list with location and the number of members.
 tags:
