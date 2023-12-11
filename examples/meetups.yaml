@@ -322,3 +322,43 @@
   url: https://www.meetup.com/Rust-Uruguay/
   members: 384
   location: Montevideo, Uruguay
+- name: Desert Rust
+  url: https://www.meetup.com/Desert-Rustaceans/
+  members: 289
+  location: Phoenix, AZ, USA
+- name: Rust Bay Area
+  url: https://www.meetup.com/Rust-Bay-Area/
+  members: 2916
+  location: San Francisco, CA, USA
+- name: Rust Los Angeles
+  url: https://www.meetup.com/Rust-Los-Angeles/
+  members: 511
+  location: Los Angeles, CA, USA
+- name: San Diego Rust
+  url: https://www.meetup.com/San-Diego-Rust/
+  members: 442
+  location: San Diego, CA, USA
+- name: Rust Denver
+  url: https://www.meetup.com/Rust-Boulder-Denver/
+  members: 850
+  location: Denver, CO, USA
+- name: Rust DC
+  url: https://www.meetup.com/RustDC/
+  members: 832
+  location: Washington, DC, USA
+- name: Rust Atlanta
+  url: https://www.meetup.com/Rust-ATL/
+  members: 327
+  location: Atlanta, GA, USA
+- name: Chicago Rust Meetup
+  url: https://www.meetup.com/Chicago-Rust-Meetup/
+  members: 418
+  location: Chicago, IL, USA
+- name: Columbus Rust Society
+  url: https://www.meetup.com/columbus-rs/
+  members: 558
+  location: Columbus, OH, USA
+- name: PDXRust
+  url: https://www.meetup.com/PDXRust/
+  members: 708
+  location: Portland, OR, USA
