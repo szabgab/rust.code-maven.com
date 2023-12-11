@@ -1,5 +1,5 @@
 ---
-title: Simple web application using Tiny HTTP
+title: Getting start with Tiny HTTP building a web application in Rust
 timestamp: 2023-11-11T18:15:01
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
@@ -8,7 +8,7 @@ tags:
 
 [tiny_http](https://crates.io/crates/tiny_http) is, well, a tiny http server.
 
-In this article we'll see a couple of basic examples using it.\
+In this article we'll see a couple of basic examples using it.
 
 ## Hello World
 
@@ -60,14 +60,30 @@ You might notice it identifies itself as `tiny-http (Rust)` and that the `Conten
 
 ## Hello World as HTML
 
-Stop the server by pressing `Crtl-C`, then change the respons text from "Hello World!" to
+Stop the server by pressing `Crtl-C`, then change the respons text from
+
+```
+"Hello World!"
+```
+
+to
+
+```html
+"<h1>Hello World</h1>"
+```
+
+restart the server by running `cargo run` again and reload the page in your browser.
+Instead of showing the text
+
+```
+Hello World!
+```
+
+in large letters it will also show the HTML tags:
 
 ```html
 <h1>Hello World</h1>
 ```
-
-restart the server by running `cargo run` again and reload the page in your browser.
-Instead of showing the text "Hello World!" in large letter it will also show the HTML tags: "<h1>Hello World</h1>"
 
 We'll have to change the `Content-type` if we want to tell the browser to display the content as HTML.
 
@@ -95,7 +111,6 @@ Running `curl -i` reveals tha the `Content-type` in the header was changed to `t
 HTML tags.
 
 ```
-
 $ curl -i http://127.0.0.1:5000/
 
 HTTP/1.1 200 OK
