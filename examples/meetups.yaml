@@ -182,3 +182,23 @@
   url: https://www.meetup.com/de-DE/rust-linz/
   members: 1129
   location: Linz, Österreich
+- name: Rust Brisbane
+  url: https://www.meetup.com/Rust-Brisbane/
+  members: 399
+  location: Brisbane, Australia
+- name: Rust Melbourne
+  url: https://www.meetup.com/Rust-Melbourne/
+  members: 968
+  location: Melbourne, Australia
+- name: Rust Sydney
+  url: https://www.meetup.com/Rust-Sydney/
+  members: 806
+  location: Sydney, Australia
+- name: Rust Rio
+  url: https://www.meetup.com/Rust-Rio/
+  members: 103
+  location: Rio de Janeiro, Brazil
+- name: Rust São Paulo Meetup
+  url: https://www.meetup.com/Rust-Sao-Paulo-Meetup/
+  members: 1104
+  location: São Paulo, Brazil
