@@ -56,7 +56,11 @@ jobs:
           python -V
           cd slider-py
           pip install -r requirements.txt -c constraints.txt
-          cd ../slides
+          cd ..
+          cp -r slides/templates slides/
+          cp -r slides/static    slides/
+          cp slides/generate_slides.py slides/
+          cd slides
           ./generate_slides.py --hostname https://rust.code-maven.com rust
           mv html ../_site/slides
 
