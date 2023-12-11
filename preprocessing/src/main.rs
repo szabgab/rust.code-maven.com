@@ -9,6 +9,10 @@ struct Group {
 }
 
 fn main() {
+    meetups();
+}
+
+fn meetups() {
     let filename = std::path::Path::new("../examples/meetups.yaml");
     let yaml_string = std::fs::read_to_string(filename).unwrap();
     let mut groups: Vec<Group> = match serde_yaml::from_str(&yaml_string) {
@@ -34,17 +38,21 @@ I wanted to know the relative sizes of the various Rust-specific Meetup groups s
 If you are interested which one is meeting in the next month or so check out [This week in Rust](https://this-week-in-rust.org/).
 They send out an up-to-date list every week.
 
-| name | members | location |
-| ---- | ------- | -------- |
+| # | name | members | location |
+| - | ---- | ------- | -------- |
 "#,
     );
 
     groups.sort_by(|a, b| b.members.cmp(&a.members));
-    for group in groups {
+    for (ix, group) in groups.iter().enumerate() {
         text.push_str(
             format!(
-                "| [{}]({}) | {} | {} |\n",
-                group.name, group.url, group.members, group.location
+                "| {} | [{}]({}) | {} | {} |\n",
+                ix + 1,
+                group.name,
+                group.url,
+                group.members,
+                group.location
             )
             .as_str(),
         );
