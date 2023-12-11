@@ -1,4 +1,3 @@
-
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
@@ -21,7 +20,8 @@ fn main() {
     };
     //println!("{:?}", data);
 
-    let mut text = String::from(r"#
+    let mut text = String::from(
+        r#"
 ---
 title: Meetups
 timestamp: 2023-12-11T08:30:01
@@ -34,21 +34,25 @@ I wanted to know the relative sizes of the various Rust-specific Meetup groups s
 
 | name | members | location |
 | ---- | ------- | -------- |
-#");
+"#,
+    );
     for group in groups {
-        text.push_str(format!("| [{}]({}) | {} | {} |\n", group.name, group.url, group.members, group.location).as_str());
+        text.push_str(
+            format!(
+                "| [{}]({}) | {} | {} |\n",
+                group.name, group.url, group.members, group.location
+            )
+            .as_str(),
+        );
     }
 
-    text.push_str(r"#
-    
-For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the `examples/meetups.yaml file`.
-#");
+    text.push_str(r#"
 
+For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the `examples/meetups.yaml file`.
+"#);
 
     let filename = "../pages/meetups.md";
     if let Err(err) = std::fs::write(filename, text) {
         eprintln!("Could not write the file '{filename}': {err}");
     }
-
 }
-
