@@ -23,7 +23,7 @@ fn main() {
     let mut text = String::from(
         r#"
 ---
-title: Rust Meetup and user group
+title: Rust Meetup and user groups
 timestamp: 2023-12-11T08:30:01
 description: There are many Rust user groups around the world. Here is the full list with location and the number of members.
 tags:
@@ -31,6 +31,8 @@ tags:
 ---
 
 I wanted to know the relative sizes of the various Rust-specific Meetup groups so I collected them into a YAML file and then generated this page.
+If you are interested which one is meeting in the next month or so check out [This week in Rust](https://this-week-in-rust.org/).
+They send out an up-to-date list every week.
 
 | name | members | location |
 | ---- | ------- | -------- |
