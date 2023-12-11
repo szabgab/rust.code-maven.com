@@ -32,6 +32,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
+      - name: Check the slides
+        run: |
+          cd slides/rust
+          ./check.sh
+
       - name: Generate pages
         run: |
           cd preprocessing
