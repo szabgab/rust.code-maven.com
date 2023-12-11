@@ -226,4 +226,32 @@
   url: https://www.meetup.com/Finland-Rust-Meetup/
   members: 536
   location: Helsinki, Finland
+- name: Rust Hack & Learn Karlruhe
+  url: https://www.meetup.com/Rust-Hack-Learn-Karlsruhe/
+  members: 157
+  location: Karlsruhe, Germany
+- name: Rust Language Hyderabad
+  url: https://www.meetup.com/Rust-Hyderabad/
+  members: 959
+  location: Hyderabad, India
+- name: Rust India
+  url: https://www.meetup.com/rustox/
+  members: 2631
+  location: Bangalore, India
+- name: Rust Chennai
+  url: https://www.meetup.com/mad-rs/
+  members: 1189
+  location: Chennai, India
+- name: Rust Indonesia
+  url: https://github.com/rustid/meetup
+  members: 0
+  location: Indonesia
+- name: Rust Nederland
+  url: https://www.meetup.com/rust-nederland/
+  members: 1488
+  location: Amsterdam, Netherlands
+- name: Chengdu
+  url: https://github.com/RPG-Alex/rust-chengdu
+  members: 0
+  location: Chengdu, China
 
