@@ -11,7 +11,7 @@ struct Group {
 fn main() {
     let filename = std::path::Path::new("../examples/meetups.yaml");
     let yaml_string = std::fs::read_to_string(filename).unwrap();
-    let groups: Vec<Group> = match serde_yaml::from_str(&yaml_string) {
+    let mut groups: Vec<Group> = match serde_yaml::from_str(&yaml_string) {
         Ok(value) => value,
         Err(err) => {
             eprintln!("{}", err);
@@ -36,6 +36,8 @@ I wanted to know the relative sizes of the various Rust-specific Meetup groups s
 | ---- | ------- | -------- |
 "#,
     );
+
+    groups.sort_by(|a, b| b.members.cmp(&a.members));
     for group in groups {
         text.push_str(
             format!(
