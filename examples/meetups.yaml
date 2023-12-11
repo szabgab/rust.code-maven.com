@@ -170,4 +170,11 @@
   url: https://www.meetup.com/rust-wurzburg-meetup-group/
   members: 36
   location: Würzburg, Germany
-
+- name: Rust Meetup Hamburg
+  url: https://www.meetup.com/Rust-Meetup-Hamburg/
+  members: 604
+  location: Hamburg, Germany
+- name: Rust Rhein-Main
+  url: https://www.meetup.com/rust-rhein-main/
+  members: 220
+  location: Darmstadt, Germany
