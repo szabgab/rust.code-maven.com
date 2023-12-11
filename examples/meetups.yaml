@@ -202,3 +202,28 @@
   url: https://www.meetup.com/Rust-Sao-Paulo-Meetup/
   members: 1104
   location: São Paulo, Brazil
+- name: Ottawa Rust Language Meetup
+  url: https://www.meetup.com/Ottawa-Rust-Language-Meetup/
+  members: 127
+  location: Ottawa, ON, Canada
+- name: Rust Toronto
+  url: https://www.meetup.com/Rust-Toronto/
+  members: 620
+  location: Toronto, ON, Canada
+- name: Rust Prague
+  url: https://www.meetup.com/rust-prague/
+  members: 168
+  location: Prague, Czech Republic
+- name: Rust Paris
+  url: https://www.meetup.com/Rust-Paris/
+  members: 1505
+  location: Paris, France
+- name: Montpellier Rust Meetup
+  url: https://www.meetup.com/Montpellier-Rust-Meetup/
+  members: 310
+  location: Montpellier, France
+- name: Finland Rust-lang Group
+  url: https://www.meetup.com/Finland-Rust-Meetup/
+  members: 536
+  location: Helsinki, Finland
+
