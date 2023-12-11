@@ -30,7 +30,7 @@ tags:
     - Meetup
 ---
 
-I wanted to know the relative sizes of the various Rust-specific Meetup groups so I collected them into a YAML file. Maybe I should generate a page.
+I wanted to know the relative sizes of the various Rust-specific Meetup groups so I collected them into a YAML file and then generated this page.
 
 | name | members | location |
 | ---- | ------- | -------- |
@@ -48,7 +48,9 @@ I wanted to know the relative sizes of the various Rust-specific Meetup groups s
 
     text.push_str(r#"
 
-For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the `examples/meetups.yaml file`.
+For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
+
+![](examples/meetups.yaml)
 "#);
 
     let filename = "../pages/meetups.md";
