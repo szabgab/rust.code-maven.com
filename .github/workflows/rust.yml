@@ -1,0 +1,19 @@
+name: Check Rust slides
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site source
+        uses: actions/checkout@v3
+
+      - name: Check the slides
+        run: |
+          cd slides/rust
+          ./check.sh
+
