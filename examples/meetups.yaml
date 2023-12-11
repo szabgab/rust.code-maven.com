@@ -354,3 +354,8 @@
   url: https://www.meetup.com/PDXRust/
   members: 708
   location: Portland, OR, USA
+- name: Rust Taiwan Community
+  url:  https://github.com/rust-tw/meetup
+  members: 61
+  location: Taipei, Taiwan
+  
