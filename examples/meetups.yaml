@@ -254,4 +254,71 @@
   url: https://github.com/RPG-Alex/rust-chengdu
   members: 0
   location: Chengdu, China
-
+- name: Rust Language Milano
+  url: https://www.meetup.com/Rust-lang-Milano/
+  members: 608
+  location: Milano, MI, Italy
+- name: Rust Roma
+  url: https://www.meetup.com/it-IT/Rust-Roma/
+  members: 403
+  location: Roma, RM, Italia
+- name: Rust Lang Comunidad Mexico
+  url: https://www.meetup.com/rustlangmx/
+  members: 103
+  location: Guadalajara, Mexico
+- name: Rust MX
+  url: https://www.meetup.com/Rust-MX/
+  members: 811
+  location: México City, Mexico
+- name: Rust Vilnius
+  url: https://www.meetup.com/Rust-in-Vilnius/
+  members: 233
+  location: Vilnius, Lithuania
+- name: Rust Nederland
+  url: https://www.meetup.com/Rust-Amsterdam/
+  members: 1488
+  location: Amsterdam, Netherlands
+- name: RustSchool Rotterdam
+  url: https://www.meetup.com/RustSchool-Rotterdam/
+  members: 105
+  location: Rotterdam, Netherlands
+- name: Rust Wellington
+  url: https://www.meetup.com/Wellington-Rust-Meetup/
+  members: 294
+  location: Wellington, New Zealand
+- name: Rust Oslo
+  url: https://www.meetup.com/Rust-Oslo/
+  members: 771
+  location: Oslo, Norway
+- name: Rust Warsaw
+  url: https://www.meetup.com/Rust-Warsaw/
+  members: 527
+  location: Warsaw, Poland
+- name: Rust Moscow
+  url: https://www.meetup.com/Rust-%D0%B2-%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5/
+  members: 1532
+  location: Moscow, Russia
+- name: MadRust
+  url: https://www.meetup.com/MadRust/
+  members:  490
+  location: Madrid, Spain
+- name: Rust Seoul
+  url: https://www.meetup.com/Rust-Seoul/
+  members: 70
+  location: Seoul, South Korea
+- name: Rust Sthlm
+  url: https://www.meetup.com/ruststhlm/
+  members: 669
+  location: Stockholm, Sweden
+- name: Rust Belfast Meetup
+  url: https://www.meetup.com/Rust-Belfast-Meetup/
+  members: 121
+  location: Belfast, R3, United Kingdom
+- name: Cambridge Rust meetup
+  url: https://www.meetup.com/Cambridge-Rust-Meetup/
+  members: 327
+  location: Cambridge, C3, United Kingdom
+- name: Rust Meetup Uruguay
+  url: https://www.meetup.com/Rust-Uruguay/
+  members: 384
+  location: Montevideo, Uruguay
