@@ -1,6 +1,6 @@
 ---
 title: Simple web application using Tiny HTTP
-timestamp: 2023-12-11T18:15:01
+timestamp: 2023-11-11T18:15:01
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
     - tiny_http
@@ -60,7 +60,12 @@ You might notice it identifies itself as `tiny-http (Rust)` and that the `Conten
 
 ## Hello World as HTML
 
-Stop the server by pressing `Crtl-C`, then change the respons text from "Hello World!" to "<h1>Hello World</h1>",
+Stop the server by pressing `Crtl-C`, then change the respons text from "Hello World!" to
+
+```html
+<h1>Hello World</h1>
+```
+
 restart the server by running `cargo run` again and reload the page in your browser.
 Instead of showing the text "Hello World!" in large letter it will also show the HTML tags: "<h1>Hello World</h1>"
 
