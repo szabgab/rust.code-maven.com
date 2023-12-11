@@ -34,6 +34,9 @@ jobs:
 
       - name: Generate pages
         run: |
+          cd preprocessing
+          cargo run
+          cd ..
           ./code-maven-web --root . --outdir _site
 
       - name: Checkout slides
