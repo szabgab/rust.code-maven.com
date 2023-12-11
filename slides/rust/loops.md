@@ -44,7 +44,7 @@ Two loop controls
 ![](examples/loops/for-loop/out.out)
 
 
-## Iterate over vector both index and value (enumerate)
+## Iterate over both index and value of a vector (enumerate)
 {id: iterate-over-vector-index-value}
 {i: for}
 {i: iter}
