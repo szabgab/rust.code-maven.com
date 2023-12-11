@@ -41,6 +41,9 @@ They send out an up-to-date list every week.
 If you find a group near-by where you live or where you work, join them. If none of them are near-by, don't worry, there are quite a few that have
 online meetings you can join from any place.
 
+Another measurement could be frequency of events and the number of attendees at the events, but it that's much harder to collect so I stayed with
+the number of members on 2023.12.11.
+
 | # | name | members | location |
 | - | ---- | ------- | -------- |
 "#,
