@@ -158,4 +158,16 @@
   url: https://www.meetup.com/vilnius-rust-go-meetup-group/
   members: 96
   location: Vilnius, Lithuania
+- name: Rust Berlin
+  url: https://www.meetup.com/rust-berlin/
+  members: 2559
+  location: Berlin, Germany
+- name: Rust-Saar
+  url: https://www.meetup.com/Rust-Saar/
+  members: 412
+  location: Saarbrücken, Germany
+- name: Rust Würzburg Meetup Group
+  url: https://www.meetup.com/rust-wurzburg-meetup-group/
+  members: 36
+  location: Würzburg, Germany
 
