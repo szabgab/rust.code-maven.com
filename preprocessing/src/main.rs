@@ -38,6 +38,9 @@ I wanted to know the relative sizes of the various Rust-specific Meetup groups s
 If you are interested which one is meeting in the next month or so check out [This week in Rust](https://this-week-in-rust.org/).
 They send out an up-to-date list every week.
 
+If you find a group near-by where you live or where you work, join them. If none of them are near-by, don't worry, there are quite a few that have
+online meetings you can join from any place.
+
 | # | name | members | location |
 | - | ---- | ------- | -------- |
 "#,
