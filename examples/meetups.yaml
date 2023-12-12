@@ -366,4 +366,16 @@
   url: https://www.meetup.com/bcnrust/
   members: 569
   location: Barcelona, Spain
+- name: Rust Argentina
+  url: https://www.meetup.com/rust-argentina/
+  members: 942
+  location: Buenos Aires, Argentina
+- name: Rust Medellin
+  url: https://www.meetup.com/rust-medellin/
+  members: 172
+  location: Medellin, Colombia
+- name: Rust MX
+  url: https://www.meetup.com/rust-mx/
+  members: 811
+  location: Mexico City, Mexico
 
