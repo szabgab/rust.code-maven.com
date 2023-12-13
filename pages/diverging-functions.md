@@ -110,6 +110,8 @@ Unfortunately the [explanation of E0308](https://doc.rust-lang.org/error_codes/E
 
 Luckily the [Rust users forum](https://users.rust-lang.org/) already had an answer: [Function calling other that exits, and branch type mismatch](https://users.rust-lang.org/t/function-calling-other-that-exits-and-branch-type-mismatch/11111) and the [Rust by Example](https://doc.rust-lang.org/rust-by-example/) had an example for [Diverging functions](https://doc.rust-lang.org/rust-by-example/fn/diverging.html).
 
+In type theory this idea is called [bottom type](https://en.wikipedia.org/wiki/Bottom_type).
+
 ## Conclusion
 
 As I spent quite some time till I found this solution I though I should explain it. It helps me remember and maybe it will help a few other people avoid this problem or solve it faster.
