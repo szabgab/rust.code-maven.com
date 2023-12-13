@@ -114,7 +114,7 @@
 
 
 ## Split string create hash
-{id: spplit-string-create-hash}
+{id: split-string-create-hash}
 {i: split_whitespace}
 {i: collect}
 {i: insert}
