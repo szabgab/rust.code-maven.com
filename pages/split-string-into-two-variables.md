@@ -1,5 +1,5 @@
 ---
-title: Split string into two variables
+title: Split a string into two variables
 timestamp: 2023-12-13T09:40:01
 description: Splitting a string into parts is easy. Making sure it had the correct number of parts makes the code longer.
 tags:
