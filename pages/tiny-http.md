@@ -11,7 +11,6 @@ todo:
     - send back the content of a file (html / image)
     - Set Status code to 404, 301, to 500
     - show the request type GET/POST/HEADER/etc.
-    - process the GET parameters
     - process the POST parameters
 ---
 
@@ -19,7 +18,9 @@ todo:
 
 In this series of articles we are going to see how to use it to build a simple web application.
 
-* [Hello World](/tiny-http-hello-world)
+* [Hello World](/tiny-http-hello-world) - set Content-type to `text/html`.
+* [Echo using GET request](/tiny-http-echo-get) - parse the QUERY_STRING.
+
 
 In this article we'll see a couple of basic examples using it.
 
