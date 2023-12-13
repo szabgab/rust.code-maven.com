@@ -1,5 +1,5 @@
 ---
-title: "http_tiny: Echo using GET request"
+title: "Tiny HTTP: Echo using GET request"
 timestamp: 2023-12-13T17:10:01
 description: A simple GET request, parsing the parameters, returning the text back
 tags:
@@ -12,7 +12,7 @@ todo:
     - can we improve the get_url_parameters function?
 ---
 
-Part of the [http_tiny](/http-tiny) series.
+Part of the [Tiny HTTP](/tiny-http) series.
 
 This is a very simple application. When we visit the web site we see a single box where we can type in some text and a button.
 
