@@ -1,17 +1,11 @@
 fn main() {
-    for text in [
-        "Foo:Bar:42",
-        "Foo:Bar:",
-        "Foo:Bar:42:garbage",
-        "Foo:Bar",
-    ] {
+    for text in ["Foo:Bar:42", "Foo:Bar:", "Foo:Bar:42:garbage", "Foo:Bar"] {
         println!("str: {text}");
         splitn_and_collect(text);
-        splitn_collect_iter(text);
+        splitn_itertools(text);
         splitn_and_next(text);
     }
 }
-
 
 // The call to `next` will panic! if there are not enough parts
 fn splitn_and_next(text: &str) {
@@ -27,7 +21,6 @@ fn splitn_and_next(text: &str) {
     println!();
 }
 
-
 fn splitn_and_collect(text: &str) {
     let parts = text.splitn(3, ':').collect::<Vec<&str>>();
     if parts.len() != 3 {
@@ -42,8 +35,7 @@ fn splitn_and_collect(text: &str) {
     println!();
 }
 
-
-fn splitn_collect_iter(text: &str) {
+fn splitn_itertools(text: &str) {
     use itertools::Itertools;
     let parts = text.splitn(3, ':').collect::<Vec<&str>>();
     if parts.len() != 3 {
@@ -55,11 +47,6 @@ fn splitn_collect_iter(text: &str) {
         println!("fname: {fname}");
         println!("lname: {lname}");
         println!("value: {value}");
-    
     }
     println!();
 }
-
-
-
-
