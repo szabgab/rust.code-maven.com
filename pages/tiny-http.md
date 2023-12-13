@@ -1,6 +1,6 @@
 ---
 title: Getting start with Tiny HTTP building a web application in Rust
-timestamp: 2023-11-13T15:30:01
+timestamp: 2023-12-13T15:30:01
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
     - tiny_http
@@ -19,7 +19,7 @@ todo:
 
 In this series of articles we are going to see how to use it to build a simple web application.
 
-* [Hello World]()
+* [Hello World](/tiny-http-hello-world)
 
 In this article we'll see a couple of basic examples using it.
 
