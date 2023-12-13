@@ -3,7 +3,7 @@ title: "Tiny HTTP: Echo using GET request"
 timestamp: 2023-12-13T17:10:01
 description: A simple GET request, parsing the parameters, returning the text back
 tags:
-    - http_tiny
+    - tiny_http
     - GET
     - url
     - query_pairs
