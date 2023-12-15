@@ -1,5 +1,5 @@
 ---
-title: Getting start with Tiny HTTP building a web application in Rust
+title: Getting started with Tiny HTTP building a web application in Rust
 timestamp: 2023-12-13T15:30:01
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
