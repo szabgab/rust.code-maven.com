@@ -6,8 +6,6 @@ tags:
     - tiny_http
     - web
 todo:
-    - add keywords to tags
-    - show the time
     - process path, create "routes"
     - send back the content of a file (html / image)
     - Set Status code to 404, 301, to 500
@@ -20,6 +18,7 @@ todo:
 In this series of articles we are going to see how to use it to build a simple web application.
 
 * [Hello World](/tiny-http-hello-world) - set Content-type to `text/html`.
+* [Generate dynamic response, show the current time](/tiny-http-show-current-time).
 * [Echo using GET request](/tiny-http-echo-get) - parse the QUERY_STRING.
 
 
