@@ -4,6 +4,7 @@ timestamp: 2023-12-13T15:30:01
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
     - tiny_http
+    - web
 todo:
     - add keywords to tags
     - show the time

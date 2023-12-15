@@ -4,6 +4,7 @@ timestamp: 2023-12-13T15:30:02
 description: First example with Tiny HTTP showing the text Hello World, setting the content-type
 tags:
     - tiny_http
+    - web
 ---
 
 See the whole series about [tiny_http](/tiny-http)

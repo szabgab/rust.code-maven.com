@@ -8,6 +8,7 @@ tags:
     - url
     - query_pairs
     - parse
+    - web
 todo:
     - can we improve the get_url_parameters function?
 ---
