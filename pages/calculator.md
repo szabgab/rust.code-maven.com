@@ -1,5 +1,5 @@
 ---
-title: Building a command line calculator in Rust (draft)
+title: Building a command line calculator in Rust
 timestamp: 2023-11-08T14:30:01
 description: A short tutorial on writing a command line calculator in Rust.
 tags:
@@ -41,9 +41,9 @@ and files, but it will skip the hidden folder and files. This does not show, but
 
 These are the files that were created:
 
-![](calc1/.gitignore)
-![](calc1/Cargo.toml)
-![](calc1/src/main.rs)
+![](examples/calc1/.gitignore)
+![](examples/calc1/Cargo.toml)
+![](examples/calc1/src/main.rs)
 
 * The `src/main.rs` is a skeleton program.
 * The `Cargo.toml` holds the meta-data of the program.
@@ -59,7 +59,7 @@ cd calc
 We can now add this to the git repository.
 
 ```
-git add .gitignore Cargo.toml calc1/src/main.rs
+git add .gitignore Cargo.toml src/main.rs
 git commit -m init
 ```
 
@@ -101,7 +101,7 @@ if we wanted, but we don't need to do that as `cargo run` already did that for u
 If is not really critical, but I'd recommend you create a `README.md` file in the root of the project that will describe the project.
 I've added this:
 
-![](calc1/README.md)
+![](examples/calc1/README.md)
 
 We can now commit the new files.
 
