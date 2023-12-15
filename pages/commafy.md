@@ -89,4 +89,5 @@ Finally we need to reverse the string again to get in the correct direction.
 format!("{}{}", prefix, num.chars().rev().collect::<String>())
 ```
 
+* [as_bytes](https://doc.rust-lang.org/std/string/struct.String.html#method.as_bytes)
 
