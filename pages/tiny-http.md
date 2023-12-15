@@ -20,6 +20,7 @@ In this series of articles we are going to see how to use it to build a simple w
 * [Hello World](/tiny-http-hello-world) - set Content-type to `text/html`.
 * [Generate dynamic response, show the current time](/tiny-http-show-current-time).
 * [Echo using GET request](/tiny-http-echo-get) - parse the QUERY_STRING.
+* [Path based routing](/tiny-http-path-based-routing).
 
 
 In this article we'll see a couple of basic examples using it.
