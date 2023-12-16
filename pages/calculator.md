@@ -118,5 +118,5 @@ git commit -m "add README"
 ## Add hard-coded calculation
 
 
-![](/images/hard-coded-calc.png)
+![](images/hard-coded-calc.png)
 
