@@ -17,3 +17,4 @@ how to get started with it, how to implement various common tasks, and how to de
 ![](examples/rouille/hello-world/Cargo.toml)
 ![](examples/rouille/hello-world/src/main.rs)
 
+## Hello World (html)
