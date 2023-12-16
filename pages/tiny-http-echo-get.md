@@ -18,11 +18,11 @@ Part of the [Tiny HTTP](/tiny-http) series.
 
 This is a very simple application. When we visit the web site we see a single box where we can type in some text and a button.
 
-![](/images/tiny-http-echo-get-before.png)
+![](images/tiny-http-echo-get-before.png)
 
 When we click the button the server show the same box and button and it also shows **You typed** and the text we typed in.
 
-![](/images/tiny-http-echo-get-response.png)
+![](images/tiny-http-echo-get-response.png)
 
 This already shows a full round-trip processing of HTTP request and response.
 
