@@ -1,6 +1,7 @@
 ---
 title: About the Rust Maven
 timestamp: 2023-08-30T08:30:01
+published: true
 description: The Rust Maven tries to help you with fully implemented examples in the Rust programming language and explanations that work out of the box.
 ---
 

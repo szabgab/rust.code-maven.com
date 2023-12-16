@@ -1,6 +1,7 @@
 ---
 title: How to get the smallest and biggest values from a vector in Rust?
 timestamp: 2023-11-22T14:10:01
+published: true
 description: Every iterator has a min and a max method that return None if the vector was empty.
 tags:
     - min

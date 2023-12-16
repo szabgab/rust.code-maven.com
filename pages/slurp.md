@@ -1,6 +1,7 @@
 ---
 title: "Slurp: read content of a text file into a string"
 timestamp: 2023-11-22T10:30:01
+published: true
 description: Read the content of a file into memory in one short function call.
 tags:
     - slurp

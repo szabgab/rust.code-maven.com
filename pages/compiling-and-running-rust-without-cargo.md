@@ -1,6 +1,7 @@
 ---
 title: Compiling and running rust without Cargo - a shell script
 timestamp: 2023-08-30T14:30:01
+published: true
 description: When you just want to experiment with some Rust code it might be easier to use this wrapper around rustc than to create a new crate.
 tags:
     - rustc

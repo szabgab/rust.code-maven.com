@@ -1,6 +1,7 @@
 ---
 title: Open Source Rust projects
 timestamp: 2023-11-29T23:30:01
+published: true
 description: The Open Source Rust projects developed by the author of Code Maven.
 tags:
     - Rust Digger

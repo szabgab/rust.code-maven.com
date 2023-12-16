@@ -1,6 +1,7 @@
 ---
 title: Enumerate and match in Rust
 timestamp: 2023-08-31T12:50:01
+published: true
 description: Create an enum (enumerate) in Rust to be able to identify distinct values from a set of values.
 todo:
     - Extend this article

@@ -1,6 +1,7 @@
 ---
 title: Read arbitrary JSON without much preparation
 timestamp: 2023-11-30T15:00:01
+published: true
 description: A simple way to get started using data that arrives in JSON format.
 tags:
     - serde_json

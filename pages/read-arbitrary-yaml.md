@@ -1,6 +1,7 @@
 ---
 title: Read arbitrary YAML files in Rust
 timestamp: 2023-11-28T14:30:01
+published: true
 description: Read a YAML files without knowing up-front its structure?
 tags:
     - YAML

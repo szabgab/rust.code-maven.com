@@ -1,6 +1,7 @@
 ---
 title: Split a string into several individual variables
 timestamp: 2023-12-13T11:30:01
+published: true
 description: We can split a string into the exact number of parts we would like to have.
 tags:
     - itertools

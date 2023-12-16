@@ -1,6 +1,7 @@
 ---
 title: Create image for social networks
 timestamp: 2023-12-05T11:00:01
+published: true
 description: The Open Graph pro
 tags:
     - Open Graph

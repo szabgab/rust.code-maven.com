@@ -1,6 +1,7 @@
 ---
 title: Hello World with Tiny HTTP
 timestamp: 2023-12-13T15:30:02
+published: true
 description: First example with Tiny HTTP showing the text Hello World, setting the content-type
 tags:
     - tiny_http

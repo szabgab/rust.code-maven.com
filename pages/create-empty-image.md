@@ -1,6 +1,7 @@
 ---
 title: Create empty image with the image crate of Rust
 timestamp: 2023-10-01T17:30:01
+published: true
 description:
 tags:
     - image

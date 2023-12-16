@@ -1,6 +1,7 @@
 ---
 title: Raise a number to a power in Rust
 timestamp: 2023-10-03T07:15:01
+published: true
 description: Raise a number to a power
 tags:
     - pow

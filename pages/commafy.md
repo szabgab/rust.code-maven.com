@@ -1,6 +1,7 @@
 ---
 title: Commafy - add a comma after every 3 digits
 timestamp: 2023-12-06T18:30:01
+published: true
 description: "A number like this: 1234567890 is quite unreadable 1,234,567,890 is much better."
 tags:
     - commafy

@@ -1,6 +1,7 @@
 ---
 title: Compiler Error codes in Rust
 timestamp: 2023-12-06T16:30:01
+published: true
 description: Rust provides detailed explanations and suggestions for compiler errors, but sometimes further examples can help.
 tags:
     - error code

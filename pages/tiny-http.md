@@ -1,19 +1,22 @@
 ---
 title: Getting started with Tiny HTTP building a web application in Rust
 timestamp: 2023-12-13T15:30:01
+published: true
 description: tiny_http is a very simple, dear to say tiny web server
 tags:
     - tiny_http
     - web
 todo:
-    - process path, create "routes"
+    - process path, create flexible routes e.g. /users/<username>
     - send back the content of a file (html / image)
     - Set Status code to 404, 301, to 500
     - show the request type GET/POST/HEADER/etc.
     - process the POST parameters
+    - return JSON
+    - return HTML content from template
 ---
 
-[tiny_http](https://crates.io/crates/tiny_http) is, well, a tiny http server.
+[tiny_http](https://crates.io/crates/tiny_http) is, well, a tiny crate to create web applications.
 
 In this series of articles we are going to see how to use it to build a simple web application.
 

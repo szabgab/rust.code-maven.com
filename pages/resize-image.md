@@ -1,6 +1,7 @@
 ---
 title: Resize image using Rust
 timestamp: 2023-12-05T10:55:01
+published: true
 description: It is very easy to resize an image in Rust, we just need to decide on the sampling filter and the new size.
 tags:
     - image

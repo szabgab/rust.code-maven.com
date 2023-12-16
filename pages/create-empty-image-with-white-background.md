@@ -1,6 +1,7 @@
 ---
 title: Create empty image with white background and black borders using Rust
 timestamp: 2023-10-02T10:00:01
+published: true
 description: The default background is black. We can set the background to any color. This case we set it to white.
 tags:
     - image

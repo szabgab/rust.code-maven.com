@@ -1,6 +1,7 @@
 ---
 title: "Boolean not !"
 timestamp: 2023-12-06T07:00:01
+published: true
 description:
 tags:
     - "!"

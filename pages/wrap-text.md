@@ -1,6 +1,7 @@
 ---
 title: Wrap text in Rust
 timestamp: 2023-11-23T01:30:01
+published: true
 description: When you have a long text that you'd like to spread on several shorter rows.
 tags:
     - textwrap

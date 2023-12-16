@@ -1,6 +1,7 @@
 ---
 title: Exclamation mark in Rust !
 timestamp: 2023-12-06T01:30:01
+published: true
 description: There are a number of places where exclamation marks are used in Rust
 tags:
     - exclamation mark

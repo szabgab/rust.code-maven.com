@@ -1,6 +1,7 @@
 ---
 title: Create QR code using Rust
 timestamp: 2023-10-02T08:30:01
+published: true
 description:
 tags:
     - image

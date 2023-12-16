@@ -1,6 +1,7 @@
 ---
 title: Minimum and maximum values of Rust numeric types
 timestamp: 2023-10-03T07:00:01
+published: true
 description: To avoid overflowing or underflowing the numeric types one can check against the minimum and maximum possible values.
 tags:
     - MIN

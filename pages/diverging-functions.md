@@ -1,6 +1,7 @@
 ---
 title: Diverging Functions - functions that never return
 timestamp: 2023-12-06T00:30:01
+published: true
 description: There are some rare functions that never return, eg. they call exit() or panic!
 tags:
     - exit

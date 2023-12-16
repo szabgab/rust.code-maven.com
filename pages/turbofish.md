@@ -1,6 +1,7 @@
 ---
 title: Turbofish ::<>
 timestamp: 2023-12-13T11:45:01
+published: true
 description: Turbofish is the name of the syntax that allows us to define a type in the function call.
 tags:
     - Turbofish

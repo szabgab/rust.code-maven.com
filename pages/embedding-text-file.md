@@ -1,6 +1,7 @@
 ---
 title: Embedding string, embedding text file in Rust
 timestamp: 2023-11-07T12:30:01
+published: true
 description:
 tags:
     - include_str!

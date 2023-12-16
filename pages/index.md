@@ -1,6 +1,7 @@
 ---
 title: Rust Maven
 timestamp: 2023-08-27T13:30:01
+published: true
 description: Welcome to the Rust Maven, the site that will help you programming in Rust.
 ---
 

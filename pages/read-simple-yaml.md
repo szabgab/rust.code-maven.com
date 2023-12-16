@@ -1,6 +1,7 @@
 ---
 title: Read a simple YAML file into a struct
 timestamp: 2023-11-28T20:30:01
+published: true
 description: You can define a struct that represents the fields of a YAML file to get automatic data conversion.
 tags:
     - YAML
