@@ -29,6 +29,7 @@ fn meetups() {
 ---
 title: Rust Meetup and user groups
 timestamp: 2023-12-11T08:30:01
+published: true
 description: There are many Rust user groups around the world. Here is the full list with location and the number of members.
 tags:
     - Meetup
