@@ -1,5 +1,5 @@
 ---
-title: Set default values while deserializing YAML
+title: Set default values while deserializing YAML in Rust
 timestamp: 2023-12-18T15:15:01
 published: true
 description: Some YAML files might be missing some value. In some cases we might want to set default values in the deserialized struct.
@@ -81,6 +81,21 @@ fn get_default_married() -> bool {
 ![](examples/yaml-default-values/src/main.rs)
 
 In this example we have a function called `get_filename` that gets the name of the file from the command line.
+
+
+## A problem - what if we have a typo?
+
+What if this is the YAML file
+
+![](examples/yaml-default-values/typo.yaml)
+
+Have you noticed the typo I made in one of the fields? I typed in "maried" instead of "married", but I could have mixed up the field called "color" and typed in "colour",
+if there indeed was such a field.
+
+The current code will happily disregard the field with the typo and use the default value for the "married" field.
+
+That's not ideal.
+
 
 ## Dependencies
 
