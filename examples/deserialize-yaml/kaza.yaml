@@ -1,0 +1,36 @@
+grammar: NA
+orijen: Jeneral
+
+versions:
+  - ladino: kaza
+    rashi: קאזה
+
+    gender: feminine
+    number: singular
+
+    translations:
+        inglez:
+          - house
+          - home
+        fransez: maison
+        ebreo: בית
+        portugez: casa
+        kasteyano: casa
+        turko: ev
+
+  - ladino: kazas
+
+    gender: feminine
+    number: plural
+
+    translations:
+        inglez:
+          - houses
+          - homes
+        fransez: ''
+        ebreo: בתים
+        portugez: casas
+        kasteyano: casas
+        turko: evler
+
+
