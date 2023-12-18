@@ -21,3 +21,4 @@ This is a collection of articles on dealing with YAML in the Rust programming la
 * [Read arbitrary YAML files in Rust ](/read-arbitrary-yaml) without the need to know the whole structure of the file.
 * [Read a simple, flat YAML file into a struct](/read-simple-yaml)
 * [Set default values while deserializing YAML](/default-values-deserializing-yaml)
+* [Deserializing YAML - deny unknown fields](/yaml-deny-unknown-fields) `deny_unknown_fields`
