@@ -6,6 +6,13 @@ description: First example with Tiny HTTP showing the text Hello World, setting 
 tags:
     - tiny_http
     - web
+    - Server
+    - http
+    - incoming_requests
+    - Response
+    - HeaderField
+    - Header
+    - AsciiString
 ---
 
 See the whole series about [tiny_http](/tiny-http)

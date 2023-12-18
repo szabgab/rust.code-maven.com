@@ -5,11 +5,11 @@ published: true
 description: A simple GET request, parsing the parameters, returning the text back
 tags:
     - tiny_http
+    - web
     - GET
     - url
     - query_pairs
     - parse
-    - web
 todo:
     - can we improve the get_url_parameters function?
 ---
