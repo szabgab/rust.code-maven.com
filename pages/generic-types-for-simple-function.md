@@ -17,7 +17,7 @@ todo:
 
 ## Simple example of the max function
 
-We start with a  simple function that returns the bigger of two values. Basically what the [max function](/min-max) does.
+We start with a  simple function that returns the bigger of two values. Basically we are re-implementing the [max function](/min-max) as an example.
 
 ```rust
 fn main() {
@@ -208,7 +208,7 @@ fn bigger<Bla: std::cmp::PartialOrd>(a: Bla, b: Bla) -> Bla {
 This means that the function will accept any type that implements the [std::cmp::PartialOrd](https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html).
 
 
-That makes sense. In the function we use the greater-than operator which is implement on each type in the ParialOrd trait, so our function cannot
+That makes sense. In the function we use the greater-than operator which is implement on each type in the [PartialOrd](https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html) trait, so our function cannot
 operate on any type that does not have this trait.
 
 
