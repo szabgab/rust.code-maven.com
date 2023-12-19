@@ -160,7 +160,7 @@ fn bigger<T>(a: T, b: T) -> T {
 To emphasize the name `T` is just the name commonly used in Rust 🦀, you could use any name there. This would work exactly the same way:
 
 ```rust
-fn bigger<Bla: std::cmp::PartialOrd>(a: Bla, b: Bla) -> Bla {
+fn bigger<Bla>(a: Bla, b: Bla) -> Bla {
 ```
 
 and it would make a lot more sense to me 😁.
@@ -199,10 +199,21 @@ trait to the definition of the type. So now we have this line:
 fn bigger<T: std::cmp::PartialOrd>(a: T, b: T) -> T {
 ```
 
+or using `Bla` as the name of the type:
+
+```rust
+fn bigger<Bla: std::cmp::PartialOrd>(a: Bla, b: Bla) -> Bla {
+```
+
 This means that the function will accept any type that implements the [std::cmp::PartialOrd](https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html).
+
 
 That makes sense. In the function we use the greater-than operator which is implement on each type in the ParialOrd trait, so our function cannot
 operate on any type that does not have this trait.
+
+
+Basically in the angle brackets we declare an arbitrary  type name `T` that can be replaced by any type that has the `PartialOrd` trait.
+Then we use this type `T` to declare the function accepting two variables of this type and returning a value of the same type.
 
 The code now looks like this:
 
@@ -212,6 +223,8 @@ The code now looks like this:
 ## Conclusion
 
 Generics are fun and there is a lot more to learn about them.
+
+
 
 
 
