@@ -19,9 +19,18 @@ fn main() {
     let y: f32 = 42.0;
     println!("f32: {}", bigger(x, y));
 
-    let x = 25.0;
-    let y = 42.0;
+    let x = 25.0; // defaults to f64
+    let y = 42.0; // defaults to f64
     println!("f64: {}", bigger(x, y));
+
+    let x = "hello";
+    let y = "world";
+    println!("str: {}", bigger(x, y));
+
+    let x = 'h';
+    let y = 'w';
+    println!("char: {}", bigger(x, y));
+
 }
 
 fn bigger<T: std::cmp::PartialOrd>(a: T, b: T) -> T {
