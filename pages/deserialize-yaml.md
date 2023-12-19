@@ -1,0 +1,27 @@
+---
+title: Deserialize complex YAML file in Rust
+timestamp: 2023-12-18T14:30:01
+published: false
+description:
+tags:
+    - Rust
+todo:
+    - TODO
+---
+
+We already saw how to [read and deserialize a simple YAML file in Rust](/read-simple-yaml) and we saw a number of other
+aricles about [YAML in Rust](/yaml). This time we are going to see a rather complex YAML file.
+It is copied from the [Kantoniko](https://kantoniko.com/) project which is a Ladino dictionary.
+
+This file represents the word `kaza` with its tanslations to a number of languages.
+
+![](examples/deserialize-yaml/kaza.yaml)
+
+## Dependencies in Cargo.toml
+
+![](examples/deserialize-yaml/Cargo.toml)
+
+
+
+![](examples/deserialize-yaml/src/main.rs)
+
