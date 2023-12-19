@@ -23,6 +23,6 @@ Here you can see the MIN and MAX values of most of the numeric types of Rust:
 
 ![](examples/min-max-values/src/main.rs)
 
-![](examples/min-max-values/src/out.txt)
+![](examples/min-max-values/out.txt)
 
 
