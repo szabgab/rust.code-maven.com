@@ -1,8 +1,8 @@
 ---
 title: Generic types for function parameters in Rust
-timestamp: 2023-10-03T14:30:01
-published: false
-description:
+timestamp: 2023-12-19T09:43:01
+published: true
+description: Generics allow us to create functions that can work on more than a single fixed type of value.
 tags:
     - T
     - PartialOrd
@@ -11,6 +11,7 @@ tags:
     - error code
 todo:
     - Can I limit the generic type to let's say i8 and i16 ? Do we even need such a thing?
+    - spearate page explainaing what does T mean
 ---
 
 
