@@ -9,6 +9,8 @@ fn main() {
     let server_str = format!("{}:{}", host, port);
 
     let server = Server::http(&server_str).expect("Failed to start demo server.");
+    println!("Visit http://{}", server_str);
+
 
     for request in server.incoming_requests() {
         let path = if let Some((path, _)) = request.url().split_once('?') {
@@ -46,7 +48,7 @@ fn default(_request: &tiny_http::Request) -> (String, u32) {
 
 fn root_page(_request: &tiny_http::Request) -> (String, u32) {
     (
-        String::from(r#"Welcome! Try <a href="/hello">this</a> page."#),
+        String::from(r#"Welcome! Try <a href="/hello">this</a> page.  This is a <a href="/other">broken link</a>"#),
         200,
     )
 }

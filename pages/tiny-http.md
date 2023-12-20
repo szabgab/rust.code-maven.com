@@ -9,7 +9,7 @@ tags:
 todo:
     - process path, create flexible routes e.g. /users/<username>
     - send back the content of a file (html / image)
-    - Set Status code to 404, 301, to 500
+    - Set Status code to 301, to 500
     - show the request type GET/POST/HEADER/etc.
     - process the POST parameters
     - return JSON
@@ -24,4 +24,4 @@ In this series of articles we are going to see how to use it to build a simple w
 * [Generate dynamic response, show the current time](/tiny-http-show-current-time).  `chrono`, `UTC`, `Local`, `date`, `time`, `HTML`
 * [Echo using GET request](/tiny-http-echo-get) - parse the `QUERY_STRING.`, `GET`, `url`, `query_pairs`, `parse`
 * [Path based routing](/tiny-http-path-based-routing). `path`, `match`
-
+* [Setting status to 404 page not found](/tiny-http-404-page-not-found). `with_status_code`, `with_header`, `path`.
