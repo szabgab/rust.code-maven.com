@@ -25,3 +25,4 @@ In this series of articles we are going to see how to use it to build a simple w
 * [Echo using GET request](/tiny-http-echo-get) - parse the `QUERY_STRING.`, `GET`, `url`, `query_pairs`, `parse`
 * [Path based routing](/tiny-http-path-based-routing). `path`, `match`
 * [Setting status to 404 page not found](/tiny-http-404-page-not-found). `with_status_code`, `with_header`, `path`.
+* [Tiny HTTP redirect URL](/tiny-http-redirect). `with_header`, `Header`, `HeaderField`, `Request`, `Response`.
