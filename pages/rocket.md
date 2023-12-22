@@ -22,4 +22,5 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 
 
 * [Hello World! with Rocket](/rocket-hello-world)
+* [Hello World with tests in separate file](/rocket-hello-world-separating-tests)
 * ...
