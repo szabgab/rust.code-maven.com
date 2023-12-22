@@ -20,6 +20,8 @@ todo:
 tutorial, but for me, to undertand it I needed my own, stand-alone examples. On this page you'll find the list of examples. You can get the full source
 code of each one of them from [Rust Maven GitHub repo](https://github.com/szabgab/rust.code-maven.com/) or by following the links above the files.
 
+[Rocket on Crates](https://crates.io/crates/rocket).
+
 
 * [Hello World! with Rocket](/rocket-hello-world)
 * [Hello World with tests in separate file](/rocket-hello-world-separating-tests)

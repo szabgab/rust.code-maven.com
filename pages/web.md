@@ -16,11 +16,11 @@ This is basically a placeholder page where I am going to collect the various web
 
 * **[Tiny HTTP](/tiny-http)** is a very low-level library. I've used it for the [Rustatic](https://rustatic.code-maven.com/) project, and you can also experiement with it, but you'll probably find better alternatives.
 * **[Rouille](/rouille)** is a web micro-framework.
-* **[Loco](/getting-started-with-loco)** (as in Locomotive) [Loco](https://loco.rs/)
+* **[Loco](/loco)** (as in Locomotive)
+* **[Rocket](/rocket)**
 
 * [axum](https://crates.io/crates/axum)
 * [actix](https://crates.io/crates/actix-web) - [Actix](https://actix.rs/)
-* [Rocket](https://crates.io/crates/rocket) - [Rocket](https://rocket.rs/)
 * [Tungstenite](https://crates.io/crates/tungstenite) - Lightweight stream-based WebSocket implementation.
 * [warp](https://crates.io/crates/warp)
 * [Gotham](https://crates.io/crates/gotham) - [Gotham](https://gotham.rs/)
