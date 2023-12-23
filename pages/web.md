@@ -24,7 +24,12 @@ This is basically a placeholder page where I am going to collect the various web
 * [Tungstenite](https://crates.io/crates/tungstenite) - Lightweight stream-based WebSocket implementation.
 * [warp](https://crates.io/crates/warp)
 * [Gotham](https://crates.io/crates/gotham) - [Gotham](https://gotham.rs/)
-
+* [salvo](https://crates.io/crates/salvo) - [Salvo](https://salvo.rs/)
+* [picoserve](https://crates.io/crates/picoserve) - An async no_std HTTP server suitable for bare-metal environments.
+* [ntex](https://crates.io/crates/ntex) Framework for composable network services.
+* [poem](https://crates.io/crates/poem)
+* [viz](https://crates.io/crates/viz) - [viz](https://viz.rs/)
+* [dioxus](https://crates.io/crates/dioxus) - [Dioxus](https://dioxuslabs.com/)
 
 ## Frontend web tools
 
@@ -40,6 +45,22 @@ This is basically a placeholder page where I am going to collect the various web
 
 * **[liquid](/slides/rust/liquid)** - I liked this, I could understand how to use it, though there were some issues.
 * **[Handlebars](/slides/rust/handlebars)** - I found it too complex for my understanding.
+* [askama](https://crates.io/crates/askama) - like Python jinja
+
+* [maud](https://crates.io/crates/maud)  [maud](https://maud.lambda.xyz/) Compile-time HTML templates. A macro for writing HTML.
+
+## Other
+
+* [htmx](https://crates.io/crates/htmx) See also [htmx](https://htmx.org/)
+* [routerify](https://crates.io/crates/routerify)
+* [okapi](https://crates.io/crates/okapi)
+
+
+## Projects
+
+* [axum-tutorial](https://github.com/GeauxEric/axum-tutorial) and educational project serving static files. [video](https://www.youtube.com/watch?v=WR0N9rfNC-Y) explaining it.
+* [Rustatic - Rust statci server](https://rustatic.code-maven.com/) serving static files using Tiny HTTP
+
 
 ## Source
 
@@ -47,3 +68,9 @@ Some of the above were collected from these posts, but they have more informatio
 
 * [Exploring the top Rust web frameworks](https://blog.logrocket.com/top-rust-web-frameworks/) lists several other options with some level of analyzis of them.
 * [Rust web framework comparison](https://github.com/flosse/rust-web-framework-comparison)
+
+* I asked on Reddit [Which web framework do you use in Rust?](https://www.reddit.com/r/rust/comments/18ogwtl/which_web_framework_do_you_use_in_rust/).
+The answers were all over the place, though I think axum and actix got the most comments. I've added the frameworks mentioned on Reddit to this page.
+If something is still missing, send a Pull-Request!
+
+
