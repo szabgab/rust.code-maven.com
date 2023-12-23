@@ -6,7 +6,7 @@ description:
 tags:
     - rustc
     - cargo
-    - clippt
+    - clippy
     - rustfmt
     - fmt
     - fix
