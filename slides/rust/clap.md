@@ -5,6 +5,8 @@
 {id: clap-example}
 {i: CLI}
 
+* [clap](https://crates.io/crates/clap)
+
 ![](examples/clap/clap-example/Cargo.toml)
 ![](examples/clap/clap-example/src/main.rs)
 
