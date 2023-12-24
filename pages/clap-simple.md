@@ -10,8 +10,7 @@ tags:
     - struct
 ---
 
-A minimal example of using [clap](https://crates.io/crates/clap) to handle command line parameters.
-
+A minimal example of using [clap](/clap) to handle command line parameters.
 
 ## Create crate
 
@@ -124,6 +123,13 @@ Then we call the [parse](https://docs.rs/clap/latest/clap/trait.Parser.html#meth
 ```rust
     let args = Cli::parse();
 ```
+
+Once we have this we can access the `args.host` attribute of the struct for which the value was received from the command line.
+
+
+
+## Usage and Help
+
 
 Clap automatically added the Usage message and the `--help` flag.
 
