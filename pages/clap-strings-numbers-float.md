@@ -87,7 +87,7 @@ Options:
 We can take a look at the exit code:
 
 ```
-$ echo $>
+$ echo $?
 
 2
 ```
