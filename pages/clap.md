@@ -9,6 +9,7 @@ tags:
 todo:
     - subcommand the same way we need for the code-maven-web and code-maven-sendgrid that have different options
     - mutually exclusive parameters?
+    - help text
     - positional argument
     - optional values
     - acception more than one values
