@@ -9,15 +9,19 @@ todo:
     - experiment with each one of them
 ---
 
-This is basically a placeholder page where I am going to collect the various web-related tools in Rust that I have reviewed. (in **bold**).
+A collection of various web frameworks and other web-related tools in Rust.  The ones I have started to review are in **bold**.
 
+Based on the replies to the question I asked on Reddit: [Which web framework do you use in Rust?](https://www.reddit.com/r/rust/comments/18ogwtl/which_web_framework_do_you_use_in_rust/)
+I can say that most of these were mentioned, but I think axum and actix got the most comments.
+
+I will keep updating this page as I find more Crates that are strongly related to web development. You can suggest more thing in issues or Pull-Request!
 
 ## Backend Web frameworks
 
 * **[Tiny HTTP](/tiny-http)** is a very low-level library. I've used it for the [Rustatic](https://rustatic.code-maven.com/) project, and you can also experiement with it, but you'll probably find better alternatives.
 * **[Rouille](/rouille)** is a web micro-framework.
-* **[Loco](/loco)** (as in Locomotive)
-* **[Rocket](/rocket)**
+* **[Loco](/loco)** as in Locomotive is a Rails-inspired framework.
+* **[Rocket](/rocket)** is a bit like Pyhton Flask, or Perl Dancer.
 
 * [axum](https://crates.io/crates/axum)
 * [actix](https://crates.io/crates/actix-web) - [Actix](https://actix.rs/)
@@ -68,9 +72,5 @@ Some of the above were collected from these posts, but they have more informatio
 
 * [Exploring the top Rust web frameworks](https://blog.logrocket.com/top-rust-web-frameworks/) lists several other options with some level of analyzis of them.
 * [Rust web framework comparison](https://github.com/flosse/rust-web-framework-comparison)
-
-* I asked on Reddit [Which web framework do you use in Rust?](https://www.reddit.com/r/rust/comments/18ogwtl/which_web_framework_do_you_use_in_rust/).
-The answers were all over the place, though I think axum and actix got the most comments. I've added the frameworks mentioned on Reddit to this page.
-If something is still missing, send a Pull-Request!
 
 
