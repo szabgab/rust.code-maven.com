@@ -1,5 +1,5 @@
 ---
-title: Clap - accept string, integer, floating point numbers, booleans, and more
+title: Clap - accept string, integer, floating point numbers, booleans, and more on the command line
 timestamp: 2023-12-25T13:30:01
 published: true
 description: We can define the expected type for each parameter and Clap will convert the values to the appropriate types.

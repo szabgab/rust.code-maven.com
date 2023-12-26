@@ -19,4 +19,4 @@ todo:
 
 * [Getting started with Clap a single required parameter](/clap-simple)
 * [Clap - show version number of the command line application in Rust](/clap-show-version-number)
-* [Clap - accept string, integer, floating point numbers, booleans, and more](/clap-strings-numbers-float)
+* [Clap - accept string, integer, floating point numbers, booleans, and more on the command line](/clap-strings-numbers-float)
