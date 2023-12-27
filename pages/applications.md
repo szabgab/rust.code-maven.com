@@ -20,13 +20,18 @@ and as time permits I'll try to look at them and write post about them.
 * [Gyroflow](https://gyroflow.xyz/) (QML via qmetaobject-rs)
 * [Makepad](https://makepad.nl/) See  the [Makepad Studio](https://makepad.dev/)
 * [Lapce](https://lapce.dev/) Lightning-fast and Powerful Code Editor  (Floem)
-* [OctaSine](https://www.octasine.com/) (Iced)
-* [Psst](https://github.com/jpochyla/psst) (Druid)
-* [Rerun](https://www.rerun.io/) (egui)
-* [Sniffnet](https://sniffnet.net/) (Iced)
+* [OctaSine](https://www.octasine.com/) written using [Iced](https://iced.rs/)
+* [Psst](https://github.com/jpochyla/psst) written in [Druid](https://linebender.org/druid/)
+* [Rerun](https://www.rerun.io/) written in [egui](https://www.egui.rs/)
+* [Sniffnet](https://sniffnet.net/) written using [Iced](https://iced.rs/)
 * [Spacedrive](https://www.spacedrive.com/) (Tauri)
 * [Loopers](https://github.com/mwylde/loopers) is a graphical live looper.
 * [Helix text editor](https://helix-editor.com/)
+* [Perspective](https://perspective.finos.org/) written in [Yew](https://yew.rs/).
+
+## Terminal UI applications
+
+* Showcasing [terminal UI apps](https://ratatui.rs/showcase/apps/) and a longer list of [Awesome applications](https://github.com/ratatui-org/awesome-ratatui#-apps) using [Ratatui](https://ratatui.rs/).
 
 
 ## Command Line Tools
@@ -44,5 +49,7 @@ and as time permits I'll try to look at them and write post about them.
 
 
 The [Awesome Rust](https://github.com/rust-unofficial/awesome-rust) is a huge list of projects, some of them are applications. That would be a good source.
+
+There is also the [Awesome Alternatives in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust).
 
 Several of these were collected via [this Reddit thread](https://www.reddit.com/r/rust/comments/18rumat/open_source_enduser_applications_written_in_rust/)
