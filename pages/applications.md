@@ -14,19 +14,31 @@ However, our real goal is to create applications, or end-user applications that 
 One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll try to collect a few
 and as time permits I'll try to look at them and write post about them.
 
+## GUI Applications
+
+* [AppFlowy](https://appflowy.io/) (Flutter via custom ffi bridge, according to the Redditor)
+* [Gyroflow](https://gyroflow.xyz/) (QML via qmetaobject-rs)
+* [Makepad](https://makepad.nl/) See  the [Makepad Studio](https://makepad.dev/)
+* [Lapce](https://lapce.dev/) Lightning-fast and Powerful Code Editor  (Floem)
+* [OctaSine](https://www.octasine.com/) (Iced)
+* [Psst](https://github.com/jpochyla/psst) (Druid)
+* [Rerun](https://www.rerun.io/) (egui)
+* [Sniffnet](https://sniffnet.net/) (Iced)
+* [Spacedrive](https://www.spacedrive.com/) (Tauri)
+* [Loopers](https://github.com/mwylde/loopers) is a graphical live looper.
+* [Helix text editor](https://helix-editor.com/)
+
+
+## Command Line Tools
 
 * [mdBook](https://rust-lang.github.io/mdBook/) is a command line tool to create books with Markdown.
 * [Zola](https://www.getzola.org/) one-stop static site engine.
 * [Cobalt](https://cobalt-org.github.io/) A static-site generator that works for you.
 
-* [Lapce](https://lapce.dev/) Lightning-fast and Powerful Code Editor
-
-
-* [Loopers](https://github.com/mwylde/loopers) is a graphical live looper.
-* [Helix text editor](https://helix-editor.com/)
-
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
+
+## Other
 
 * [Moonfire NVR](https://github.com/scottlamb/moonfire-nvr) is an open-source security camera network video recorder. I personally don't have a lot of experience with hardware projects but I would like to get involved in some.
 
