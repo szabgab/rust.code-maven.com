@@ -9,7 +9,6 @@ tags:
 todo:
     - subcommand the same way we need for the code-maven-web and code-maven-sendgrid that have different options
     - mutually exclusive parameters?
-    - help text
     - positional argument
     - optional values
     - accepting more than one values
@@ -23,3 +22,6 @@ todo:
 * [Clap - default values for CLI command line parameters in Rust](/clap-default-values) - `default_value`, `default_value_t`
 * [Clap - short command line parameters](/clap-short) - `short`
 * [Clap - Add help text for each command line parameter in Rust](/clap-help-text) - `help`
+* [Clap - positional command line arguments in Rust](/clap-positional-arguments) - `required`, `default_value`
+
+Documentation of the [derive interface](https://docs.rs/clap/latest/clap/_derive/).
