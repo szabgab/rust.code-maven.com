@@ -28,6 +28,8 @@ and as time permits I'll try to look at them and write post about them.
 * [Loopers](https://github.com/mwylde/loopers) is a graphical live looper.
 * [Helix text editor](https://helix-editor.com/)
 * [Perspective](https://perspective.finos.org/) written in [Yew](https://yew.rs/).
+* [FontFinder](https://github.com/mmstick/fontfinder) GTK application for browsing and installing fonts from Google's font archive.
+* [ruffle](https://ruffle.rs/) is a Flash Player emulator built in the Rust programming language.
 
 ## Terminal UI applications
 
