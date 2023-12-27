@@ -5,6 +5,13 @@ published: true
 description: In many cases it is not enought to be able to draw nice images. We would also want to write some text on the image.
 tags:
     - image
+    - draw_text_mut
+    - text_size
+    - Font
+    - Scale
+    - Rgb
+    - RgbImage
+    - get_pixel_mut
 todo:
     - include the font at run-time?
 ---

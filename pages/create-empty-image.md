@@ -2,10 +2,13 @@
 title: Create empty image with the image crate of Rust
 timestamp: 2023-10-01T17:30:01
 published: true
-description:
+description: Using the image crate of Rustlang it is very simple to create an image and save it in any format you like.
 tags:
     - image
     - empty
+    - RgbImage
+    - ImageBuffer
+    - save
 ---
 
 In this example we create an empty image using the [image](https://crates.io/crates/image) crate of Rust.

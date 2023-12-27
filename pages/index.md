@@ -13,10 +13,31 @@ The site also includes the [slides](/slides/rust/) of my [Rust training courses]
 I hope you will enjoy the content and encourage me to improve the site and write more articles.
 
 You might think that this site has some relation to the Java Maven, but I'll have to disappoint you. The word maven is just an (almost) ordinary word in English.
-It actually came from Hebrew word meaning "understand" via Yiddish to American English and it basically means "someone who understand things and likes to explain them".
+It actually came from Hebrew word meaning "understands" via Yiddish to American English and it basically means "someone who understands things and likes to explain them".
 
 Or at least that's how I use it.
 
+## Topics
+
+There are a number of article series on the site
+
+* [Clap](/clap) Command Line Argument Parser for Rust.
+* [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
+* [YAML](/yaml) - Dealing with YAML files in Rust.
+* [Image](/image) - Creating and changing images in Rust.
+
+
+## Short series
+
+That I've already started, but there are only 1-2 articles
+
+* [Rocket](/rocket) - web development framework for Rust.
+* [Loco](/loco) - web development framework for Rust.
+
+
+
+
+## Source
 
 Both the [source of the content](https://github.com/szabgab/rust.code-maven.com/) and the source of the code [generating the site](https://github.com/szabgab/code-maven.rs) can be accessed. So if you have any requests for additional content or features for the web site you will know where to submit those requests.
 
