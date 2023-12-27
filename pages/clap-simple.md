@@ -92,6 +92,10 @@ Try this, for example:
 ./target/debug/simple-example  --help
 ```
 
+## Providing more detailed help message
+
+In another article you can see how to [provide additional text for the help message of each parameter](/clap-help-text) separately by adding the `help` argument.
+
 ## Passing the required parameter
 
 ```

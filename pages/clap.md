@@ -12,7 +12,7 @@ todo:
     - help text
     - positional argument
     - optional values
-    - acception more than one values
+    - accepting more than one values
 ---
 
 [Clap](https://crates.io/crates/clap) is a simple to use, efficient, and full-featured Command Line Argument Parser for Rust.
@@ -22,3 +22,4 @@ todo:
 * [Clap - accept string, integer, floating point numbers, booleans, and more on the command line](/clap-strings-numbers-float) - `String`, `i32`, `f32`, `bool`, `PathBuf`
 * [Clap - default values for CLI command line parameters in Rust](/clap-default-values) - `default_value`, `default_value_t`
 * [Clap - short command line parameters](/clap-short) - `short`
+* [Clap - Add help text for each command line parameter in Rust](/clap-help-text) - `help`
