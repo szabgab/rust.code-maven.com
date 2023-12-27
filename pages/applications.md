@@ -9,10 +9,10 @@ tags:
 
 If someone wants to learn how to create a Rust library it is very easy to find [Crates](https://crates.io/) and see how other people do things.
 
-However, our real goal is to create applications, or end-user applications that server other people as well. People who most likely are not Rust programmers.
+However, our real goal is to create applications, or end-user applications that serve other people as well. People who most likely are not Rust programmers.
 
-One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll try to collect a few
-and as time permits I'll try to look at them and write post about them.
+One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll collect a few
+and as time permits I'll take a look at them and write articles about them.
 
 ## GUI Applications
 
