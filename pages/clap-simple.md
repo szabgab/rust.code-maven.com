@@ -8,6 +8,9 @@ tags:
     - cli
     - derive
     - struct
+    - arg
+    - long
+    - help
 ---
 
 A minimal example of using [clap](/clap) to handle command line parameters.
