@@ -16,15 +16,15 @@ and as time permits I'll take a look at them and write articles about them.
 
 ## GUI Applications
 
-* [AppFlowy](https://appflowy.io/) (Flutter via custom ffi bridge, according to the Redditor)
-* [Gyroflow](https://gyroflow.xyz/) (QML via qmetaobject-rs)
-* [Makepad](https://makepad.nl/) See  the [Makepad Studio](https://makepad.dev/)
-* [Lapce](https://lapce.dev/) Lightning-fast and Powerful Code Editor  (Floem)
-* [OctaSine](https://www.octasine.com/) written using [Iced](https://iced.rs/)
-* [Psst](https://github.com/jpochyla/psst) written in [Druid](https://linebender.org/druid/)
-* [Rerun](https://www.rerun.io/) written in [egui](https://www.egui.rs/)
-* [Sniffnet](https://sniffnet.net/) written using [Iced](https://iced.rs/)
-* [Spacedrive](https://www.spacedrive.com/) (Tauri)
+* [AppFlowy](https://appflowy.io/) - Flutter via custom ffi bridge, according to the Redditor.
+* [Gyroflow](https://gyroflow.xyz/) - QML via [qmetaobject-rs](https://crates.io/crates/qmetaobject).
+* [Makepad](https://makepad.nl/) - See the [Makepad Studio](https://makepad.dev/)
+* [Lapce](https://lapce.dev/) - Lightning-fast and Powerful Code Editor  [Floem](https://github.com/lapce/floem), a native Rust UI library with fine-grained reactivity.
+* [OctaSine](https://www.octasine.com/) written using [Iced](https://iced.rs/).
+* [Psst](https://github.com/jpochyla/psst) written in [Druid](https://linebender.org/druid/).
+* [Rerun](https://www.rerun.io/) written in [egui](https://www.egui.rs/).
+* [Sniffnet](https://sniffnet.net/) written using [Iced](https://iced.rs/).
+* [Spacedrive](https://www.spacedrive.com/) using [Tauri](https://tauri.app/) to build an optimized, secure, and frontend-independent application for multi-platform deployment.
 * [Loopers](https://github.com/mwylde/loopers) is a graphical live looper.
 * [Helix text editor](https://helix-editor.com/)
 * [Perspective](https://perspective.finos.org/) written in [Yew](https://yew.rs/).
