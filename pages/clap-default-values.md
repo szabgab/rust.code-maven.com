@@ -82,6 +82,7 @@ Options:
   -V, --version        Print version
 ```
 
-It is unclear to me why do we not see `[default: false]` for the `--debug` flag. I did not find any information about this in the docs so I [opened an issue](https://github.com/clap-rs/clap/issues/5270).
+It is unclear to me why do we not see `[default: false]` for the `--debug` flag. As explained in this [issue](https://github.com/clap-rs/clap/issues/5270), flags
+don't have a user-facing meaning (false/true) so showing the default would be meaningless.
 
 

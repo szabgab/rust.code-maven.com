@@ -53,8 +53,7 @@ In addition to the solution suggested in this message we can also set the short 
 host: String,
 ```
 
-
-I opened an [issue](https://github.com/clap-rs/clap/issues/5271) suggesting the extension of the panic message with this idea.
+As explained in this [issue](https://github.com/clap-rs/clap/issues/5271) there is no plan to include this suggestion in the panic message.
 
 
 ## Dependencies
