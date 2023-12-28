@@ -32,7 +32,7 @@ These all use the **Turbofish** syntax **::<>**.
 
 ## When is it used?
 
-In some cases Rust can deduct the type of the variable automatically, in other cases we explicitly have to say what is the type
+In some cases Rust can deduce the type of the variable automatically, in other cases we explicitly have to say what is the type
 of a value and of a variable.
 
 For example when we want to convert a string to a number and call `parse` on the string, it has to know what kind of number are we expecting.
@@ -89,7 +89,7 @@ and can work according to that. Some functions even go further and know if we ar
 
 It is called **context** in Perl and in most cases it is rather implicit making it a bit difficult to get used to.
 
-In Rust the closest you might get to be implicit is when you use `_` as part of the type-definition, but even then Rust can deduct the expected type at compile time,
+In Rust the closest you might get to be implicit is when you use `_` as part of the type-definition, but even then Rust can deduce the expected type at compile time,
 and if you use the [Rust analyzer](https://rust-analyzer.github.io/) in your editor or IDE then it can show you the type even earlier, at "edit-time".
 
 ## Origin
