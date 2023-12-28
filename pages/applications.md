@@ -35,6 +35,8 @@ and as time permits I'll take a look at them and write articles about them.
 
 * [RustDesk](https://rustdesk.com/) is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. The open source alternative to TeamViewer.
 
+* [KaspaNG](https://aspectron.com/en/projects/kaspa-ng.html) desktop p2p node and crypto web wallet. Runs as a native and web app.
+
 ## Terminal UI applications
 
 * Showcasing [terminal UI apps](https://ratatui.rs/showcase/apps/) and a longer list of [Awesome applications](https://github.com/ratatui-org/awesome-ratatui#-apps) using [Ratatui](https://ratatui.rs/).
@@ -85,6 +87,8 @@ There are a number of projects hosted as subdomains of [CLI.rs](https://cli.rs/)
 ## Other
 
 * [Brainease](https://brainease.cli.rs/) is a scripting language that has many similar concepts with brainf-ck, sharing some principal concepts, like memory and instructions.
+
+
 
 * [Moonfire NVR](https://github.com/scottlamb/moonfire-nvr) is an open-source security camera network video recorder. I personally don't have a lot of experience with hardware projects but I would like to get involved in some.
 
