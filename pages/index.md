@@ -19,21 +19,16 @@ Or at least that's how I use it.
 
 ## Topics
 
-There are a number of article series on the site
+There are a number of series of articles on the site in the following topics:
 
 * [Clap](/clap) Command Line Argument Parser for Rust.
-* [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
+* [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [Image](/image) - Creating and changing images in Rust.
-
-
-## Short series
-
-That I've already started, but there are only 1-2 articles
-
-* [Rocket](/rocket) - web development framework for Rust.
-* [Loco](/loco) - web development framework for Rust.
-
+* [Web development](/web)
+    * [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
+    * [Rocket](/rocket) - web development framework for Rust.
+    * [Loco](/loco) - web development framework for Rust.
 
 
 

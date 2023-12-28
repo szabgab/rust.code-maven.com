@@ -5,6 +5,8 @@ published: true
 description: A simple way to get started using data that arrives in JSON format.
 tags:
     - serde_json
+    - from_reader
+    - Value
     - JSON
     - as_str
     - unwrap
