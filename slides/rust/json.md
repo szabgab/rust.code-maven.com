@@ -3,13 +3,24 @@
 
 ## JSON serialize examples
 {id: json-serialize-examples}
-{i: json}
+{i: JSON}
+{i: json!}
+{i: serde_json}
+{i: chrono}
+
+* [serde_json](https://crates.io/crates/serde_json)
+* [chrono](https://crates.io/crates/chrono)
 
 ![](examples/json/json-serialize/Cargo.toml)
 ![](examples/json/json-serialize/src/main.rs)
 
 ## JSON serialize struct
 {id: json-serialize-struct}
+{i: serde}
+{i: serde_json}
+
+* [serde_](https://crates.io/crates/serde)
+* [serde_json](https://crates.io/crates/serde_json)
 
 ![](examples/json/json-serialize-struct/Cargo.toml)
 ![](examples/json/json-serialize-struct/src/main.rs)
