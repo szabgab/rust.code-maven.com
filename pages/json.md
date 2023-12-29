@@ -15,3 +15,4 @@ series of articles we'll see how to use them to work with JSON in Rust.
 
 * [Read arbitrary JSON without much preparation](/read-arbitrary-json) - `serde_json::Value`, `serde_json::from_reader`.
 * [Read simple JSON and deserialize into a struct](/read-simple-json) - `serde::Deserialize`, `serde_json::from_reader`.
+* [Serialize and deserialize HashMap to JSON in Rust](/serialize-hash-to-json)
