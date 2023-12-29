@@ -1,5 +1,5 @@
 ---
-title: home-dir in Rust
+title: home_dir, the home directory of the current user in Rust
 timestamp: 2023-12-28T18:35:01
 published: true
 description: Accessing the home_dir of the current user from Rust is easy, we just need a crate.
