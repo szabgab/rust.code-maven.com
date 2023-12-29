@@ -1,5 +1,5 @@
 ---
-title: Command line counter with plain text file storage
+title: Command line counter with plain text file storage in Rust
 timestamp: 2023-12-28T18:30:01
 published: true
 description: Every time we run this program on the command line it gives a number one higher than previously.
