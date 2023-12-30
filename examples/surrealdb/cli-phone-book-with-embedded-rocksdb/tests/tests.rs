@@ -55,7 +55,7 @@ fn test_phonebook() {
     //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
     assert_eq!(
         std::str::from_utf8(&result.stdout).unwrap(),
-        "foo: 123\nbar: 456\n"
+        "bar: 456\nfoo: 123\n"
     );
     assert_eq!(std::str::from_utf8(&result.stderr).unwrap(), "");
     assert_eq!(result.status, ExitStatus::from_raw(0));
