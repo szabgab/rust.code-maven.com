@@ -30,6 +30,17 @@ fn test_phonebook() {
     assert_eq!(result.status, ExitStatus::from_raw(0));
 
     let result = Command::new("cargo")
+        .args(["run", "-q", "add", "foo", "789"])
+        .output()
+        .expect("command failed to start");
+
+    assert_eq!(std::str::from_utf8(&result.stdout).unwrap(), "");
+    assert!(std::str::from_utf8(&result.stderr).unwrap().contains(
+        "Could not add entry Database index `entry_email` already contains 'foo', with record"
+    ));
+    assert_eq!(result.status, ExitStatus::from_raw(2 * 256));
+
+    let result = Command::new("cargo")
         .args(["run", "-q", "show", "foo"])
         .output()
         .expect("command failed to start");

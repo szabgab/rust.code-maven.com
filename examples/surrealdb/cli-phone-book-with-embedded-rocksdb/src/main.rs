@@ -24,19 +24,31 @@ async fn main() -> surrealdb::Result<()> {
 
     db.use_ns("test").use_db("test").await?;
 
+    // Maybe do this only when we create the database
+    let _response = db
+        .query("DEFINE INDEX entry_email ON TABLE entry COLUMNS name UNIQUE")
+        .await?;
+
     if args.len() == 4 {
         let command = &args[1];
         if command == "add" {
             let name = &args[2];
             let phone = &args[3];
 
-            let _response = db
+            let response = db
                 .query("CREATE entry SET  name=$name, phone=$phone")
                 .bind(("name", name))
                 .bind(("phone", phone))
                 .await?;
+            //println!("{:?}", response);
 
-            return Ok(());
+            match response.check() {
+                Ok(_) => return Ok(()),
+                Err(err) => {
+                    eprintln!("Could not add entry {}", err);
+                    std::process::exit(2);
+                }
+            };
         }
     }
 
