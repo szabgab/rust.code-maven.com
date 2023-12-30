@@ -53,7 +53,29 @@ fn test_phonebook() {
         .expect("command failed to start");
 
     //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
-    assert_eq!(std::str::from_utf8(&result.stdout).unwrap(), "foo: 123\nbar: 456\n");
+    assert_eq!(
+        std::str::from_utf8(&result.stdout).unwrap(),
+        "foo: 123\nbar: 456\n"
+    );
+    assert_eq!(std::str::from_utf8(&result.stderr).unwrap(), "");
+    assert_eq!(result.status, ExitStatus::from_raw(0));
+
+    let result = Command::new("cargo")
+        .args(["run", "-q", "delete", "foo"])
+        .output()
+        .expect("command failed to start");
+
+    assert_eq!(std::str::from_utf8(&result.stdout).unwrap(), "");
+    assert_eq!(std::str::from_utf8(&result.stderr).unwrap(), "");
+    assert_eq!(result.status, ExitStatus::from_raw(0));
+
+    let result = Command::new("cargo")
+        .args(["run", "-q", "list"])
+        .output()
+        .expect("command failed to start");
+
+    //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
+    assert_eq!(std::str::from_utf8(&result.stdout).unwrap(), "bar: 456\n");
     assert_eq!(std::str::from_utf8(&result.stderr).unwrap(), "");
     assert_eq!(result.status, ExitStatus::from_raw(0));
 
