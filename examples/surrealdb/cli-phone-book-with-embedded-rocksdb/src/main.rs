@@ -1,21 +1,19 @@
-use surrealdb::Surreal;
+use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::RocksDb;
 use surrealdb::sql::Thing;
-use serde::{Deserialize, Serialize};
-
+use surrealdb::Surreal;
 
 #[derive(Debug, Deserialize, Serialize)]
 struct Entry {
-     name: String,
-     phone: String,
+    name: String,
+    phone: String,
 }
 
 #[derive(Debug, Deserialize)]
 struct Record {
-     #[allow(dead_code)]
-     id: Thing,
+    #[allow(dead_code)]
+    id: Thing,
 }
-
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
@@ -25,27 +23,29 @@ async fn main() -> surrealdb::Result<()> {
         Ok(val) => std::path::PathBuf::from(val),
         Err(_) => {
             let current_dir = std::env::current_dir().unwrap();
-            current_dir.join("temp.db")        
+            current_dir.join("phonebook.db")
         }
     };
-    
+
     let db = Surreal::new::<RocksDb>(database_folder).await?;
+
     db.use_ns("test").use_db("test").await?;
 
     if args.len() == 4 {
-        let command = &args[1];    
+        let command = &args[1];
         if command == "add" {
             let name = &args[2];
             let phone = &args[3];
-    
-            let created: Vec<Record> = db
-            .create("entry")
-            .content(Entry {
-                name: name.to_owned(),
-                phone: phone.to_owned(),
-            })
-            .await?;
-            dbg!(created);
+
+            let _created: Vec<Record> = db
+                .create("entry")
+                .content(Entry {
+                    name: name.to_owned(),
+                    phone: phone.to_owned(),
+                })
+                .await?;
+            //dbg!(created);
+
             return Ok(());
         }
     }
@@ -55,7 +55,6 @@ async fn main() -> surrealdb::Result<()> {
         if command == "list" {
             //let entries: Vec<Record> = db.select("entry").await?;
             //dbg!(entries);
-
 
             let mut entries = db
                 .query("SELECT name, phone FROM type::table($table)")
@@ -107,9 +106,10 @@ async fn main() -> surrealdb::Result<()> {
             //dbg!(response);
 
             return Ok(());
-        }        
+        }
     }
 
     eprintln!("Usage: {} add name value", args[0]);
-    Ok(())
+    std::process::exit(1);
+    //Ok(())
 }

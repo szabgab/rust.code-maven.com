@@ -14,3 +14,4 @@ slides/html/
 slides/static
 slides/templates
 
+examples/surrealdb/cli-phone-book-with-embedded-rocksdb/phonebook.db/
