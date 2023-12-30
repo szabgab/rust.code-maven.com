@@ -5,7 +5,7 @@ published: true
 description: Testing a CLI - Command Line Interface or command line application by running it as an external program.
 tags:
     - CLI
-    - test
+    - tests
     - Command
     - ExitStatus
     - STDOUT
