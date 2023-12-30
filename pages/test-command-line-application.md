@@ -4,6 +4,8 @@ timestamp: 2023-12-30T10:30:01
 published: true
 description: Testing a CLI - Command Line Interface or command line application by running it as an external program.
 tags:
+    - CLI
+    - test
     - Command
     - ExitStatus
     - STDOUT
