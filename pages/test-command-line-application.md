@@ -120,6 +120,26 @@ However as this is what we have here, let's see how do we test this?
 * The STDERR would be some long message. We could copy the error message we received the first time and set it as the exact expectation for further runs of the test, but it would be a bit fragile. Especially as it includes the row and column number of the location of the panic!. Moving the code around, even just adding an empty row at the top of the file would break the test. So instead of exact match we check if the string `InvalidDigit` appears in the error message.
 * After running the code for the first time with this input I checked the exit code and that's how I set the expectation to be 25856.
 
+## How do we run the tests?
+
+```
+$ cargo test -q
+```
+
+And the output is:
+
+```
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 3 tests
+...
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+```
+
+
 ## Regression tests
 
 Let me emphasize the interesting part of the 3rd test case as similar things happen often.
