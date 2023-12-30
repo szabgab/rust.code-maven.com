@@ -21,8 +21,15 @@ struct Record {
 async fn main() -> surrealdb::Result<()> {
     let args = std::env::args().collect::<Vec<String>>();
 
-    let current_dir = std::env::current_dir().unwrap();
-    let db = Surreal::new::<RocksDb>(current_dir.join("temp.db")).await?;
+    let database_folder = match std::env::var("DATABASE_PATH") {
+        Ok(val) => std::path::PathBuf::from(val),
+        Err(_) => {
+            let current_dir = std::env::current_dir().unwrap();
+            current_dir.join("temp.db")        
+        }
+    };
+    
+    let db = Surreal::new::<RocksDb>(database_folder).await?;
     db.use_ns("test").use_db("test").await?;
 
     if args.len() == 4 {
