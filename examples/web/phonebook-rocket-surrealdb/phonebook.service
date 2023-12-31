@@ -1,0 +1,15 @@
+[Unit]
+Description=Phonebook Service
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/home/gabor/rust/phonebook-rocket-surrealdb
+Restart=always
+WorkingDirectory=/tmp
+Nice=19
+LimitNOFILE=16384
+
+[Install]
+WantedBy=multi-user.target
