@@ -13,6 +13,7 @@ tags:
     - print!
     - println!
     - lines
+    - Write
 ---
 
 Python has the **input** function, other languages have a **prompt** function. This is how we get some input from the user in Rust.
@@ -27,7 +28,7 @@ we use here `print!` that will not add a newline to the output.
 Becuase of that just calling `print!` is not enough.
 
 By default the Standard Output (STDOUT) channel is buffered. The buffer is flushed when we print a newline, but because in this case we don't print a newline
-we'll need to call `flush` ourselves. This is why we needed
+we'll need to call `flush` ourselves. This is why we needed the [std::io::Write](https://doc.rust-lang.org/std/io/trait.Write.html) trait:
 
 ```rust
 use std::io::Write;
