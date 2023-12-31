@@ -43,6 +43,7 @@ and as time permits I'll take a look at them and write articles about them.
 
 * [Fish](https://fishshell.com/) is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family. It is [almost done rewriting in Rust.](https://github.com/fish-shell/fish-shell/discussions/10123).
 
+* [Starship](https://starship.rs/) Cross-Shell prompt.
 
 
 ## Command Line Tools
