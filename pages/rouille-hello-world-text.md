@@ -1,5 +1,5 @@
 ---
-title: "Rouille: Hello World in text/plain"
+title: "Rust Rouille: Hello World in text/plain"
 timestamp: 2024-01-01T14:30:02
 published: true
 description: The most simple web application using Rouille showing some plain text message but also returning 404 Not Found when necessary.
@@ -13,8 +13,6 @@ tags:
     - text/plain
     - 404 Not Found
     - empty_404
-todo:
-    - TODO
 ---
 
 Part of the series about the [Rouille](/rouille) micro-web framework in Rust.
@@ -23,8 +21,8 @@ Part of the series about the [Rouille](/rouille) micro-web framework in Rust.
 ## Create a new crate
 
 ```
-cargo new hello-world
-cd hello-world
+cargo new hello-world-text
+cd hello-world-text
 ```
 
 ## Dependencies
@@ -40,7 +38,7 @@ Add Rouille as a dependency to the `Cargo.toml` file:
 
 * We call [rouille::start_server](https://docs.rs/rouille/latest/rouille/fn.start_server.html) providing it the hostname and port number. Giving "localhost" or "127.0.0.1" will ensure that the web server won't be accessible from outside of your computer. This is a good idea during development.
 
-* The [router!](https://docs.rs/rouille/latest/rouille/macro.router.html) macro helps us defign the routes.
+* The [router!](https://docs.rs/rouille/latest/rouille/macro.router.html) macro helps us define the routes.
 
 * `(GET) (/) => {}`  is the mapping that say what to do when an HTTP GET request arrives to the root (`/`) path on the server.
 
@@ -80,7 +78,7 @@ Content-Length: 11
 Hello <b>world!</b>
 ```
 
-Here we can see clearly the `Content-Type` being `text/plain`. That's the reason the browser shows us the text and does not try to interprete it as HTML.
+Here we can see clearly the `Content-Type` being `text/plain`. That's the reason the browser shows us the text and does not try to interpret it as HTML.
 
 ## 404 Not found
 
