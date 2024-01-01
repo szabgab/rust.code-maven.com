@@ -7,12 +7,11 @@ tags:
     - applications
 ---
 
-If someone wants to learn how to create a Rust library it is very easy to find [Crates](https://crates.io/) and see how other people do things.
+If you want to learn how to create a Rust library it is very easy to find [Crates](https://crates.io/) and see how other people do things.
 
-However, our real goal is to create applications, or end-user applications that serve other people as well. People who most likely are not Rust programmers.
+However, if your goal is to create applications, or end-user applications that serve other people as well, eople who most likely are not Rust programmers then it is better to look at similar applications.
 
-One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll collect a few
-and as time permits I'll take a look at them and write articles about them.
+One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll collect a few and as time permits I'll take a look at them and write articles about them.
 
 
 ## Web Applications
@@ -103,4 +102,5 @@ The [Awesome Rust](https://github.com/rust-unofficial/awesome-rust) is a huge li
 
 There is also the [Awesome Alternatives in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust).
 
-Several of these were collected via [this Reddit thread](https://www.reddit.com/r/rust/comments/18rumat/open_source_enduser_applications_written_in_rust/)
+Several of these were collected from [this Reddit thread](https://www.reddit.com/r/rust/comments/18rumat/open_source_enduser_applications_written_in_rust/).
+
