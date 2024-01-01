@@ -14,6 +14,11 @@ However, our real goal is to create applications, or end-user applications that 
 One of the best ways to learn how to write end-user applications in Rust is looking at such applications. So on this page I'll collect a few
 and as time permits I'll take a look at them and write articles about them.
 
+
+## Web Applications
+
+* [DcaPal](https://dcapal.com/) is a free, open-source, no-registration online tool, written in Rust, for retail DIY investors: it helps you keep your investment portfolios well-balanced according to your target allocation by suggesting how to split your monthly budget across your assets. All the portfolio optimization math is written in Rust and compiled to WASM via wasm-pack/wasm-bindgen and runs directly in the browser, for maximum privacy. The backend web service is also written in Rust (Axum)
+
 ## GUI Applications
 
 * [AppFlowy](https://appflowy.io/) - Flutter via custom ffi bridge, according to the Redditor.
