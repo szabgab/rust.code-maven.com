@@ -10,7 +10,6 @@ tags:
     - router!
     - GET
     - html
-    - text/html
     - 404 Not Found
     - with_status_code
 ---

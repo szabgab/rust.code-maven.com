@@ -10,7 +10,6 @@ tags:
     - router!
     - GET
     - text
-    - text/plain
     - 404 Not Found
     - empty_404
 ---
