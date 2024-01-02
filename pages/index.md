@@ -21,7 +21,7 @@ Or at least that's how I use it.
 
 There are a number of series of articles on the site in the following topics:
 
-* [Clap](/clap) Command Line Argument Parser for Rust.
+* [CLI - Clap](/clap) Command Line Argument Parser for Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [Image](/image) - Creating and changing images in Rust.
@@ -29,6 +29,7 @@ There are a number of series of articles on the site in the following topics:
     * [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
     * [Rocket](/rocket) - web development framework for Rust.
     * [Loco](/loco) - web development framework for Rust.
+    * [Rouille](/rouille) - simple web development framework.
 
 
 
