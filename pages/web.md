@@ -50,6 +50,7 @@ I will keep updating this page as I find more Crates that are strongly related t
 * **[liquid](/slides/rust/liquid)** - I liked this, I could understand how to use it, though there were some issues.
 * **[Handlebars](/slides/rust/handlebars)** - I found it too complex for my understanding.
 * [askama](https://crates.io/crates/askama) - like Python jinja
+* [Tera](https://crates.io/crates/tera) used with [Rocket](/rocket)
 
 * [maud](https://crates.io/crates/maud)  [maud](https://maud.lambda.xyz/) Compile-time HTML templates. A macro for writing HTML.
 
