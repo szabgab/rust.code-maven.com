@@ -65,3 +65,5 @@ An alternative would be the use of the `lines` iterator and getting the first el
 std::io::stdin().lines().next().unwrap().unwrap()
 ```
 
+![](examples/prompts/src/main.rs)
+

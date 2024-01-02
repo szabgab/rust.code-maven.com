@@ -5,14 +5,10 @@ fn main() {
     println!("Your name is '{}'", name);
 }
 
+
 fn prompt(text: &str) -> String {
     print!("{} ", text);
     std::io::stdout().flush().expect("Oups");
 
-    let mut response = String::new();
-    std::io::stdin()
-        .read_line(&mut response)
-        .expect("Faild to get input");
-
-    response.trim_end().to_string()
+    std::io::stdin().lines().next().unwrap().unwrap()
 }
