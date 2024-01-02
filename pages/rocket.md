@@ -23,6 +23,7 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 [Rocket on Crates](https://crates.io/crates/rocket).
 
 
-* [Hello World! with Rocket](/rocket-hello-world)
+* [Hello World! with Rocket](/rocket-hello-world) `text/plain`
 * [Hello World with tests in separate file](/rocket-hello-world-separating-tests)
+* [Hello World! in HTML](/rocket-hello-world-html) `RawHtml`, `text/html`, `headers`, `get_one`.
 * ...
