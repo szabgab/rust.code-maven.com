@@ -1,0 +1,5 @@
+<h1>Echo</h1>
+<form method="POST" action="/echo">
+<input name="text">
+<input type="submit" value="Echo">
+</form>
