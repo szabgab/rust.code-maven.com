@@ -386,3 +386,15 @@
   url: https://www.meetup.com/rust-girona/
   members: 19
   location: Girona, Spain
+- name: Rust KW
+  url: https://www.meetup.com/Rust-KW/
+  members: 309
+  location: Kitchener, ON, Canada
+- name: Rust Halifax
+  url: https://www.meetup.com/rust-tell-halifax/
+  members: 42
+  location: Halifax, NS, Canada
+- name: Rust Montréal
+  url: https://www.meetup.com/Rust-Montreal/
+  members: 236
+  location: Montréal, QC, Canada
