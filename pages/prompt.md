@@ -9,7 +9,7 @@ tags:
     - STDOUT
     - flush
     - read_line
-    - trimp_end
+    - trim_end
     - print!
     - println!
     - lines
