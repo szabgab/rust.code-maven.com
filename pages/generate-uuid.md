@@ -51,3 +51,9 @@ cargo run -q
 
 uuid v4: 54993b26-ccd5-4fa3-9174-0f0c90cada27
 ```
+
+## Conclusion
+
+I did not have much to show here beyond what the README already shows, but I think I'll have a few more additions later as I implement [email address validation](/email-address-validation)
+for the [Meet-OS](https://meet-os.com/) project.
+
