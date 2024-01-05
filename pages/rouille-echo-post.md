@@ -1,5 +1,5 @@
 ---
-title: "Rouille: Handle HTML form - echo with POST"
+title: Rouille - Handle HTML form - echo with POST
 timestamp: 2024-01-02T09:30:01
 published: true
 description: Handling forms submitted as HTTP POST requests is one of the most important ways to accept input from the user.

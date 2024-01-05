@@ -1,5 +1,5 @@
 ---
-title: "Rust Rouille: Hello World in text/plain"
+title: Rouille - Hello World in text/plain
 timestamp: 2024-01-01T14:30:02
 published: true
 description: The most simple web application using Rouille showing some plain text message but also returning 404 Not Found when necessary.
