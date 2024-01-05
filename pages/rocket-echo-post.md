@@ -29,7 +29,7 @@ We are using Tera templates. We need two. One for the front-page showing and HTM
 
 ![](examples/rocket/echo-post/templates/index.html.tera)
 
-The other one is for the page where we'll echo back the text the user sent.
+The other one is for the page where we'll echo back the text the user sent. It has a single placeholder for a field called `text`.
 
 ![](examples/rocket/echo-post/templates/echo.html.tera)
 
@@ -77,7 +77,65 @@ fn echo(input: Form<InputText<'_>>) -> Template {
 }
 ```
 
-This route will handle any 
+This route will handle any POST request sent to the `/echo` path. The fields that the client sends in are going to be deserialized into
+an `InputText` struct. Because that struct has a field called `text` the client is expected to send in a form with a field called `text`.
+The value of the field can be any text. The struct is then passed in as the variable `input`.
+
+Then we take the `input.text` field and send it to the template to fill the field `text` via the `context!`.
+
+## How to run it?
+
+```
+cargo run
+```
+
+Then we can visit http://localhost:8000/ where we'll see the initial page. It has two forms on it. One hase a text field and a submit button.
+The other only a submit button. The latter is so we can see what happens if a client send a POST request without the required `text` field:
+
+![](images/post-echo-rocket.png)
+
+If we fill the textbox with "Hello World!" and click on the submit button we get back the following content: "You typed in **Hello World!**"
+
+If we click on the "back" button of the browser and submit the "Bad form" we get a page with the following text:
+
+```
+422: Unprocessable Entity
+
+The request was well-formed but was unable to be followed due to semantic errors.
+```
+
+## Verify using curl
+
+We can open another terminal and if we have `curl` installed we can check the site:
+
+The main page:
+
+```
+$ curl -i http://localhost:8000
+
+HTTP/1.1 200 OK
+content-type: text/html; charset=utf-8
+server: Rocket
+x-content-type-options: nosniff
+permissions-policy: interest-cohort=()
+x-frame-options: SAMEORIGIN
+content-length: 236
+date: Fri, 05 Jan 2024 08:18:58 GMT
+
+<h1>Echo</h1>
+<form method="POST" action="/echo">
+<input name="text">
+<input type="submit" value="Echo">
+</form>
+
+
+<h1>Bad form</h1>
+Missing the text field.
+<form method="POST" action="/echo">
+<input type="submit" value="Echo">
+</form>
+```
+
 
 
 
@@ -86,3 +144,5 @@ This route will handle any
 ## How to test a POST request in Rocket?
 
 ![](examples/rocket/echo-post/src/tests.rs)
+
+
