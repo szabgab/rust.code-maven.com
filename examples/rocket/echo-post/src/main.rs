@@ -16,7 +16,7 @@ fn index() -> Template {
 
 #[post("/echo", data = "<input>")]
 fn echo(input: Form<InputText<'_>>) -> Template {
-    println!("index stdout {:?}", input.text);
+    println!("text: {:?}", input.text);
 
     Template::render(
         "echo",

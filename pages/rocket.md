@@ -27,4 +27,5 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Hello World with tests in separate file](/rocket-hello-world-separating-tests) - `test`
 * [Hello World! in HTML](/rocket-hello-world-html) - `RawHtml`, `text/html`, `headers`, `get_one`.
 * [Hello World with Tera Templates](/rocket-hello-world-tera-template) - `rocket_dyn_templates`, `Template`, `context!`, `render`, `attach`, `fairing`
-* ...
+* [Echo using HTTP POST - form handling](/rocket-echo-post) - `POST`, `Form`, `Template`, `header`, `body`, `ContentType::Form`, `Status::UnprocessableEntity`, `422`
+

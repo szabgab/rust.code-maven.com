@@ -7,6 +7,13 @@ tags:
     - Rocket
     - web
     - POST
+    - Form
+    - Template
+    - header
+    - body
+    - ContentType::Form
+    - Status::UnprocessableEntity
+    - 422
 ---
 
 Part of the series about the [Rocket web framework](/rocket).
@@ -136,13 +143,118 @@ Missing the text field.
 </form>
 ```
 
+Sending a POST-request with the text field and the server returns the text we saw on the web page:
+
+```
+$ curl -X POST -d "text=Hello World!" -i http://localhost:8000/echo
+
+HTTP/1.1 200 OK
+content-type: text/html; charset=utf-8
+server: Rocket
+x-content-type-options: nosniff
+permissions-policy: interest-cohort=()
+x-frame-options: SAMEORIGIN
+content-length: 32
+date: Fri, 05 Jan 2024 08:22:43 GMT
+
+You typed in <b>Hello World!</b>
+```
+
+
+Submitting the form without the `text` field gives us a 415 HTTP error.
+
+```
+$ curl -X POST -i http://localhost:8000/echo
+
+HTTP/1.1 415 Unsupported Media Type
+content-type: text/html; charset=utf-8
+server: Rocket
+x-content-type-options: nosniff
+permissions-policy: interest-cohort=()
+x-frame-options: SAMEORIGIN
+content-length: 501
+date: Fri, 05 Jan 2024 08:21:22 GMT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>415 Unsupported Media Type</title>
+</head>
+<body align="center">
+    <div role="main" align="center">
+        <h1>415: Unsupported Media Type</h1>
+        <p>The request entity has a media type which the server or resource does not support.</p>
+        <hr />
+    </div>
+    <div role="contentinfo" align="center">
+        <small>Rocket</small>
+    </div>
+</body>
+</html>
+```
 
 
 
+
+Sending a GET request to the `/echo` path will result in a 404 Not Found error. This is not surprising. We have only defined the POST method for the `/echo` path.
+
+
+```
+$ curl -i http://localhost:8000/echo
+
+HTTP/1.1 404 Not Found
+content-type: text/html; charset=utf-8
+server: Rocket
+x-content-type-options: nosniff
+permissions-policy: interest-cohort=()
+x-frame-options: SAMEORIGIN
+content-length: 435
+date: Fri, 05 Jan 2024 08:19:53 GMT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>404 Not Found</title>
+</head>
+<body align="center">
+    <div role="main" align="center">
+        <h1>404: Not Found</h1>
+        <p>The requested resource could not be found.</p>
+        <hr />
+    </div>
+    <div role="contentinfo" align="center">
+        <small>Rocket</small>
+    </div>
+</body>
+</html>
+```
 
 
 ## How to test a POST request in Rocket?
 
+Using `curl` is a good way to manually check what the code does, but it is better to have tests that can be execute automatically.
+
+Here are 3 test functions.
+
+The first one checks the main page. It does not check if the returned HTML has some exact content.
+That's usually, especially in real applications where the UI changes frequently, is not feasible. We only check if certain elements
+appear in the HTML that was returned by the server.
+
+The second function submits a `post` request. It needs the `header` to be set to `ContentType::Form` and we pass the valuse in the `body`.
+Here we tested if the returned HTML is exactly as expected, though in a real application we would probably only test if the expected
+text is part of the HTML.
+
+Finally we have a test where we send in a POST request but leave out the `body` so there won't be a `text` field.
+
+We verify that the status was set to [Status::UnprocessableEntity](https://api.rocket.rs/v0.5/rocket/http/struct.Status.html#associatedconstant.UnprocessableEntity).
+I find it important to have test cases for these automatically generated responses, to protect ourselves from any unplanned changes to the way these cases
+are handled.
+
 ![](examples/rocket/echo-post/src/tests.rs)
+
 
 
