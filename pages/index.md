@@ -25,6 +25,7 @@ There are a number of series of articles on the site in the following topics:
 * [YAML](/yaml) - Dealing with YAML files in Rust.
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [Image](/image) - Creating and changing images in Rust.
+* [Testing](/testing) - Various forms of functional and non-functional tests in Rust.
 * [Web development](/web)
     * [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
     * [Rocket](/rocket) - web development framework for Rust.
@@ -32,6 +33,8 @@ There are a number of series of articles on the site in the following topics:
     * [Rouille](/rouille) - simple web development framework.
 
 
+* [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
+* [Community](/meetups)
 
 ## Source
 
