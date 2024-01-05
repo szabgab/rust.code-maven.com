@@ -21,7 +21,8 @@ Or at least that's how I use it.
 
 There are a number of series of articles on the site in the following topics:
 
-* [CLI - Clap](/clap) Command Line Argument Parser for Rust.
+* [CLI](/cli) - Command Line Interface
+    * [Clap](/clap) Command Line Argument Parser for Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [Image](/image) - Creating and changing images in Rust.
