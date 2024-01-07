@@ -158,5 +158,9 @@ There is also [add_with_overflow](https://doc.rust-lang.org/std/intrinsics/fn.ad
 
 ## Conclusion
 
+One needs to think hard what **should** happen when a variable holding an integer is changed to an unsupported value and then there are several ways to handle them.
+
+I have not checked what is the runtime impact of using either of the above solutions.
+
 
 
