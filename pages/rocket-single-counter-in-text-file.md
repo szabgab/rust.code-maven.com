@@ -8,6 +8,9 @@ tags:
     - web
     - get
     - testing
+    - env
+    - env::set_var
+    - env::var
 ---
 
 This [counter example](https://code-maven.com/counter) is part of the [Rocket](/rocket) series.
