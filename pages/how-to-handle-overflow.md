@@ -1,5 +1,5 @@
 ---
-title: 3 ways to handle number overflow or underflow
+title: 3 ways to handle number overflow or underflow in Rust
 timestamp: 2024-01-07T19:50:01
 published: true
 description: One needs to decide what to do if a number is about to outgrow the current variable type - overflow or underflow.
