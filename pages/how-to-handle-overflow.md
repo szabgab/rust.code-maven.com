@@ -8,6 +8,7 @@ tags:
     - underflow
     - saturating_add
     - checked_add
+    - overflow_add
     - unchecked_add
     - add_with_overflow
 ---
