@@ -143,6 +143,57 @@ Too much!
 count: 255
 ```
 
+## overflow_add
+
+[overflow_add](https://doc.rust-lang.org/std/primitive.i8.html#method.overflowing_add) is another strange way to handle the situation. I am not sure when would I use this.
+
+It returns a tuple, the first element being the incremented number, the second element beeing a `bool` indicating if there was an overflow.
+
+```rust
+let mut count: u8 = 254;
+println!("count: {}", count);
+for _ in 1..=3 {
+    let (new_count, overflow) = count.overflowing_add(1);
+    count = new_count;
+    println!("count: {:3} {}", count, overflow);
+}
+```
+
+The result:
+
+```
+$ cargo run -q
+
+count: 254
+count: 255 false
+count:   0 true
+count:   1 false
+```
+
+
+I could also totally desregard the second value:
+
+```rust
+let mut count: u8 = 254;
+println!("count: {}", count);
+for _ in 1..=3 {
+    (count, _) = count.overflowing_add(1);
+    println!("count: {}", count);
+}
+```
+
+The result:
+
+```
+$ cargo run -q
+
+count: 254
+count: 255
+count:   0
+count:   1
+```
+
+
 ## Unchecked add
 
 There is also an [unchecked_add](https://doc.rust-lang.org/std/primitive.u8.html?search=Some#method.unchecked_add), but it is experimental so I won't try it now.
