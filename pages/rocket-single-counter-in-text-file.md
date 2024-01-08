@@ -6,6 +6,8 @@ description: An example to count the number of visits. Part of the counter examp
 tags:
     - Rocket
     - web
+    - get
+    - testing
 ---
 
 This [counter example](https://code-maven.com/counter) is part of the [Rocket](/rocket) series.
@@ -38,3 +40,12 @@ We send two `get` requests to see the counter increasing.
 
 ![](examples/rocket/single-counter-in-text-file/src/tests.rs)
 
+## Error handling - unwrap
+
+In this example I did not deal much with error handling and called `unwrap` in many places. This was done to be able to focus on a working example without the extra code
+to deal with the - in this case - unlikely events. If you are interested in improving the error handling check out the article about [unwrap](/unwrap).
+
+## No atomic file operation
+
+Anothe issue with this solution is that the read and write operations on the file are not atomic. In a more real-world situation we would need to make sure that two requests can't
+update the counter at the same time.
