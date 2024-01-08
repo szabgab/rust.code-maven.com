@@ -8,7 +8,10 @@ fn index(cookies: &CookieJar<'_>) -> String {
     let counter: u32 = match cookies.get("counter") {
         Some(cookie) => match cookie.value().parse() {
             Ok(val) => val,
-            Err(_) => 0,
+            Err(_) => {
+                eprintln!("Invalid value {} for the 'counter' cookie.", cookie.value());
+                0
+            },
         },
         None => 0,
     };
