@@ -17,5 +17,4 @@ todo:
 ![](examples/rocket/multi-counter-using-secure-cookies/Cargo.toml)
 ![](examples/rocket/multi-counter-using-secure-cookies/src/main.rs)
 ![](examples/rocket/multi-counter-using-secure-cookies/src/tests.rs)
-![](https://rocket.rs/v0.5/guide/requests/#secret-key)
-
+![](examples/rocket/multi-counter-using-secure-cookies/Rocket.toml)
