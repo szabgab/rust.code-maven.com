@@ -1,5 +1,5 @@
 ---
-title: How to handle number overflow or underflow?
+title: 3 ways to handle number overflow or underflow
 timestamp: 2024-01-07T19:50:01
 published: true
 description: One needs to decide what to do if a number is about to outgrow the current variable type - overflow or underflow.
@@ -156,11 +156,15 @@ There is also [add_with_overflow](https://doc.rust-lang.org/std/intrinsics/fn.ad
 
 ![](examples/overflow/src/main.rs)
 
+## The 20-year-old bug in binary search caused by overflow
+
+John Corbett pointed at the  "Implementation Issues" section of [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm) where it is discussed that
+an overflow bug has existed in most of the implementations of the Binary search for way too many years. Very interesting discussion.
+
 ## Conclusion
 
 One needs to think hard what **should** happen when a variable holding an integer is changed to an unsupported value and then there are several ways to handle them.
 
 I have not checked what is the runtime impact of using either of the above solutions.
-
 
 
