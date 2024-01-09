@@ -12,6 +12,11 @@ todo:
     - move to a separate file
 ---
 
+I wanted to see how to add a new trait to strings. I thought reversing would be a simple way to demonstrate this. Apparently, the implementation of the string revere I used
+will fail on certain Unicode strings. So there is a crate called [unicode_reverse](https://crates.io/crates/unicode_reverse) for the real solution, if you need that.
+
+This article primarily is for demonstrating how to add the trait.
+
 We would like to have a function that can reverse a string and then we would like to turn it into a method. First we would like to have
 
 ```rust
