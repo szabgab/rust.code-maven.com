@@ -13,9 +13,7 @@ fn reverse_string(text: &str) -> String {
 }
 
 trait Reverse {
-    fn reverse(&self) -> String {
-        "".to_string()
-    }
+    fn reverse(&self) -> String;
 }
 
 impl Reverse for str {
