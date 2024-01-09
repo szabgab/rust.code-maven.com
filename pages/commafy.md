@@ -8,6 +8,7 @@ tags:
     - assert_eq!
     - into
     - abs
+    - thousands
 todo:
     - release as a crate
     - use this crate in the liquid commafy example
@@ -91,4 +92,10 @@ format!("{}{}", prefix, num.chars().rev().collect::<String>())
 ```
 
 * [as_bytes](https://doc.rust-lang.org/std/string/struct.String.html#method.as_bytes)
+
+
+## The thousands crate
+
+After implementing this someone pointed me to the [thousands crate](https://crates.io/crates/thousands) that does this already.
+
 
