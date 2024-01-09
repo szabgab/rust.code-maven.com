@@ -95,9 +95,7 @@ This is the base implementation of the `reverse` method. It defines the signatur
 
 ```rust
 trait Reverse {
-    fn reverse(&self) -> String {
-        "".to_string()
-    }
+    fn reverse(&self) -> String;
 }
 ```
 
