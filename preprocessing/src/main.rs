@@ -1,4 +1,5 @@
 use serde::Deserialize;
+use thousands::Separable;
 
 #[derive(Debug, Deserialize)]
 struct Group {
@@ -24,7 +25,8 @@ fn meetups() {
     };
     //println!("{:?}", data);
 
-    let mut text = String::from(
+    let total = groups.iter().map(|grp| grp.members).sum::<u32>();
+    let mut text = format!(
         r#"
 ---
 title: Rust Meetup and user groups
@@ -45,9 +47,11 @@ online meetings you can join from any place.
 Another measurement could be frequency of events and the number of attendees at the events, but it that's much harder to collect so I stayed with
 the number of members on 2023.12.11.
 
+Total number of members: {} (the same person might be member of several groups.)
+
 | # | name | members | location |
 | - | ---- | ------- | -------- |
-"#,
+"#, total.separate_with_commas()
     );
 
     groups.sort_by(|a, b| b.members.cmp(&a.members));
