@@ -65,6 +65,8 @@
 {i: rev}
 {i: collect}
 
+This is a simple, and apparently partially incorrect solution. There is a crate called [unicode_reverse](https://crates.io/crates/unicode_reverse) for doing it right.
+
 ![](examples/strings/reverse/src/main.rs)
 ![](examples/strings/reverse/out.out)
 
