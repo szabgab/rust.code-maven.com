@@ -1,7 +1,8 @@
 fn main() {
     let text = "Hello, world!";
     println!("{}", text);
-    // println!("{}", text.reverse()); // no method named `reverse` found for reference `&str` in the current scope
+    // println!("{}", text.reverse());
+    // no method named `reverse` found for reference `&str` in the current scope
 
     println!("{}", reverse_string(text));
     println!("{}", text.reverse());
