@@ -17,8 +17,14 @@ async fn main() -> surrealdb::Result<()> {
     add_to(&db).await?;
     list_all(&db).await?;
     println!("-------------");
+
     update(&db).await?;
     list_all(&db).await?;
+    println!("-------------");
+
+    delete(&db).await?;
+    list_all(&db).await?;
+    println!("-------------");
 
     Ok(())
 }
@@ -73,6 +79,25 @@ async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
         Ok(_) => Ok(()),
         Err(err) => {
             eprintln!("Could not add entry {}", err);
+            std::process::exit(2);
+            //return surrealdb::Result(err);
+            //return Err("message");
+        }
+    }
+}
+
+async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
+    let name = "Jane";
+
+    let response = db
+        .query("DELETE entry WHERE name=$name")
+        .bind(("name", name))
+        .await?;
+
+    match response.check() {
+        Ok(_) => Ok(()),
+        Err(err) => {
+            eprintln!("Could not delete entry {}", err);
             std::process::exit(2);
             //return surrealdb::Result(err);
             //return Err("message");
