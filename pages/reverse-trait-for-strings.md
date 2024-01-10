@@ -127,4 +127,9 @@ fn main() {
 ![](examples/reverse-trait-for-strings/src/main.rs)
 
 
+## Making the trait reusable
+
+It is nice to create a trait for the crate we are working on, but it would be even better if we could make it reusable so other people on our team, in our company, or around the world could use it.
+The solution is to create a [crate providing the trait](/reverse-trait-for-strings-in-a-crate).
+
 
