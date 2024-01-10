@@ -54,3 +54,7 @@ I left that code in as comment to show you that you can also provide a full path
 
 I know we have not done much yet, but I like to celebrate even small steps.
 
+If you need an in-memory database with slight modifications this can be converted to one.
+See [Setting up an in-memory SurrealDB database in Rust](/surrealdb-embedded-with-in-memory-database).
+
+
