@@ -16,6 +16,9 @@ async fn main() -> surrealdb::Result<()> {
 
     add_to(&db).await?;
     list_all(&db).await?;
+    println!("-------------");
+    update(&db).await?;
+    list_all(&db).await?;
 
     Ok(())
 }
@@ -36,8 +39,7 @@ async fn add_to(db: &Surreal<Db>) -> surrealdb::Result<()> {
                 eprintln!("Could not add entry {}", err);
                 std::process::exit(2);
                 //return surrealdb::Result(err);
-                //Err("message")
-                //Ok(())
+                //return Err("message");
             }
         };
     }
@@ -55,4 +57,25 @@ async fn list_all(db: &Surreal<Db>) -> surrealdb::Result<()> {
     }
 
     Ok(())
+}
+
+async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
+    let name = "Jane";
+    let phone = "55555555";
+
+    let response = db
+        .query("UPDATE entry SET phone=$phone WHERE name=$name")
+        .bind(("name", name))
+        .bind(("phone", phone))
+        .await?;
+
+    match response.check() {
+        Ok(_) => Ok(()),
+        Err(err) => {
+            eprintln!("Could not add entry {}", err);
+            std::process::exit(2);
+            //return surrealdb::Result(err);
+            //return Err("message");
+        }
+    }
 }
