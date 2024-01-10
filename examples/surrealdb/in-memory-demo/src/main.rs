@@ -14,7 +14,13 @@ async fn main() -> surrealdb::Result<()> {
 
     db.use_ns("test_ns").use_db("test_db").await?;
 
-    add_to(&db).await?;
+    let _response = db
+        .query("DEFINE INDEX entry_email ON TABLE entry COLUMNS name UNIQUE")
+        .await?;
+
+    let data = vec![("Joe", "123"), ("Jane", "456"), ("Jil", "789")];
+
+    add_to(&db, data).await?;
     list_all(&db).await?;
     println!("-------------");
 
@@ -26,12 +32,15 @@ async fn main() -> surrealdb::Result<()> {
     list_all(&db).await?;
     println!("-------------");
 
+    add_to(&db, vec![("Joe", "7777777")]).await?;
+    println!("this does not happen");
+    list_all(&db).await?;
+    println!("-------------");
+
     Ok(())
 }
 
-async fn add_to(db: &Surreal<Db>) -> surrealdb::Result<()> {
-    let data = vec![("Joe", "123"), ("Jane", "456"), ("Jil", "789")];
-
+async fn add_to(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<()> {
     for (name, phone) in data {
         let response = db
             .query("CREATE entry SET  name=$name, phone=$phone")
@@ -42,10 +51,8 @@ async fn add_to(db: &Surreal<Db>) -> surrealdb::Result<()> {
         match response.check() {
             Ok(_) => {}
             Err(err) => {
-                eprintln!("Could not add entry {}", err);
-                std::process::exit(2);
-                //return surrealdb::Result(err);
-                //return Err("message");
+                eprintln!("Could not add entry: '{}'", err);
+                return Err(err);
             }
         };
     }
@@ -79,12 +86,11 @@ async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
         Ok(_) => Ok(()),
         Err(err) => {
             eprintln!("Could not add entry {}", err);
-            std::process::exit(2);
-            //return surrealdb::Result(err);
-            //return Err("message");
+            Err(err)
         }
     }
 }
+
 
 async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let name = "Jane";
@@ -98,9 +104,8 @@ async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
         Ok(_) => Ok(()),
         Err(err) => {
             eprintln!("Could not delete entry {}", err);
-            std::process::exit(2);
-            //return surrealdb::Result(err);
-            //return Err("message");
+            Err(err)
         }
     }
 }
+
