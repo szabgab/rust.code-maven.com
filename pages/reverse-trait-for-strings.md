@@ -9,7 +9,7 @@ tags:
     - self
     - impl
 todo:
-    - move to a separate file
+    - implement reverse for numbers as well, just to show generics
 ---
 
 I wanted to see how to add a new trait to strings. I thought reversing would be a simple way to demonstrate this. Apparently, the implementation of the string revere I used
