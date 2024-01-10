@@ -9,7 +9,7 @@ fn index(cookies: &CookieJar<'_>) -> String {
         Some(cookie) => match cookie.value().parse() {
             Ok(val) => val,
             Err(_) => {
-                eprintln!("Invalid value {} for the 'counter' cookie.", cookie.value());
+                eprintln!("Invalid value '{}' for the 'counter' cookie.", cookie.value());
                 0
             },
         },
