@@ -1,6 +1,6 @@
 ---
 title: SurrealDB
-timestamp: 2024-01-01T14:30:01
+timestamp: 2024-01-10T10:25:01
 published: false
 description: SurrealDB is feature-rich database written in Rust.
 tags:
@@ -16,5 +16,8 @@ I've started to explore it and this page is going to be used as a starting point
 You might also want to consult the [Awesome SurrealDB](https://github.com/surrealdb/awesome-surreal) a curated list of SurrealDB resources, tools, utilities, and applications.
 
 
-* [Simple command line phonebook with SurrealDB using SQL](/cli-simple-phonebook-with-surrealdb-using-sql)
+* [Setting up embedded SurrealDB with RocksDB backend in Rust](/surrealdb-embedded-with-rocksdb)
 
+<!--
+* [Simple command line phonebook with SurrealDB using SQL](/cli-simple-phonebook-with-surrealdb-using-sql)
+-->
