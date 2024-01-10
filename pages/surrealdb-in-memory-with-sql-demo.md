@@ -186,7 +186,7 @@ async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
 ```
 
 
-## The full code code
+## The full source code
 
 ![](examples/surrealdb/in-memory-demo/src/main.rs)
 
