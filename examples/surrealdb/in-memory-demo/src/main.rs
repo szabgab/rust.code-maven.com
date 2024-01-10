@@ -21,23 +21,27 @@ async fn main() -> surrealdb::Result<()> {
 }
 
 async fn add_to(db: &Surreal<Db>) -> surrealdb::Result<()> {
-    let data = ("Foo", "12345");
+    let data = vec![("Joe", "123"), ("Jane", "456"), ("Jil", "789")];
 
-    let (name, phone) = data;
+    for (name, phone) in data {
+        let response = db
+            .query("CREATE entry SET  name=$name, phone=$phone")
+            .bind(("name", name))
+            .bind(("phone", phone))
+            .await?;
 
-    let response = db
-        .query("CREATE entry SET  name=$name, phone=$phone")
-        .bind(("name", name))
-        .bind(("phone", phone))
-        .await?;
-
-    match response.check() {
-        Ok(_) => return Ok(()),
-        Err(err) => {
-            eprintln!("Could not add entry {}", err);
-            std::process::exit(2);
-        }
-    };
+        match response.check() {
+            Ok(_) => {}
+            Err(err) => {
+                eprintln!("Could not add entry {}", err);
+                std::process::exit(2);
+                //return surrealdb::Result(err);
+                //Err("message")
+                //Ok(())
+            }
+        };
+    }
+    Ok(())
 }
 
 async fn list_all(db: &Surreal<Db>) -> surrealdb::Result<()> {
