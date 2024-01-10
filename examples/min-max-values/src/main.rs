@@ -15,6 +15,10 @@ fn main() {
     println!("i16::MAX {}", i16::MAX);
     println!();
 
+    println!("u32::MIN {}", u32::MIN);
+    println!("u32::MAX {}", u32::MAX);
+    println!();
+
     println!("u64::MIN {}", u64::MIN);
     println!("u64::MAX {}", u64::MAX);
     println!();
