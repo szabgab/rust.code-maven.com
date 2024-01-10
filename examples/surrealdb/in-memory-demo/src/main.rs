@@ -1,5 +1,12 @@
+use serde::Deserialize;
 use surrealdb::engine::local::{Db, Mem};
 use surrealdb::Surreal;
+
+#[derive(Debug, Deserialize)]
+struct Entry {
+    name: String,
+    phone: String,
+}
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
@@ -7,12 +14,13 @@ async fn main() -> surrealdb::Result<()> {
 
     db.use_ns("test_ns").use_db("test_db").await?;
 
-    add_to(db).await?;
+    add_to(&db).await?;
+    list_all(&db).await?;
 
     Ok(())
 }
 
-async fn add_to(db: Surreal<Db>) -> surrealdb::Result<()> {
+async fn add_to(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let data = ("Foo", "12345");
 
     let (name, phone) = data;
@@ -30,4 +38,17 @@ async fn add_to(db: Surreal<Db>) -> surrealdb::Result<()> {
             std::process::exit(2);
         }
     };
+}
+
+async fn list_all(db: &Surreal<Db>) -> surrealdb::Result<()> {
+    let mut entries = db
+        .query("SELECT name, phone FROM type::table($table) ORDER BY name ASC")
+        .bind(("table", "entry"))
+        .await?;
+    let entries: Vec<Entry> = entries.take(0)?;
+    for entry in entries {
+        println!("{}: {}", entry.name, entry.phone);
+    }
+
+    Ok(())
 }
