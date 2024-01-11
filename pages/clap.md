@@ -23,5 +23,6 @@ todo:
 * [Clap - short command line parameters](/clap-short) - `short`
 * [Clap - Add help text for each command line parameter in Rust](/clap-help-text) - `help`
 * [Clap - positional command line arguments in Rust](/clap-positional-arguments) - `required`, `default_value`
+* [Clap - subcommands](/clap-subcommand) - `Subcommand`
 
 Documentation of the [derive interface](https://docs.rs/clap/latest/clap/_derive/).
