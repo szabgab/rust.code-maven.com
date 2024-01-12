@@ -1,8 +1,8 @@
 name: Check Rust slides
 on:
   push:
-    branches: ["main"]
-    path: ['slides/**']
+    path:
+      - slides/**
   workflow_dispatch:
 
 # Running these checks on GitHub Actions takes 10 minutes. It is a waste of time if the files have not changed.
