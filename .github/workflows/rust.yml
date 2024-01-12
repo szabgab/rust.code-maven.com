@@ -14,6 +14,11 @@ jobs:
 
       - name: Check the slides
         run: |
-          cd slides/rust
-          ./check.sh
-
+          # Running these checks on GitHub Actions takes 10 minutes. It is a waste of time if the files have not changed.
+          # Probably the best would be to check since the previous push but for now this is easier
+          # Only run these tests if the slides have changed recently (even 10 seems to be too much)
+          if [ "" != "$(git diff HEAD~10 slides/)" ];
+          then
+            cd slides/rust
+            ./check.sh
+          fi
