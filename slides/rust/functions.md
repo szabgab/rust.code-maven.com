@@ -6,8 +6,8 @@
 {i: fn}
 {i: main}
 
-* There are two types of crates: Libraries and executables. The latter can also contain libraries.
-* For executable crates we must have a file called `src/main.rs` and it must have a function called `main`
+* There are two types of crates: libraries and executables. The latter can also contain libraries.
+* For executable crates we must have a file called `src/main.rs` and it must have a function called `main`.
 * This is the most basic definition of a `main` function. It does nothing.
 
 ![](examples/functions/main/src/main.rs)
@@ -18,6 +18,7 @@
 
 * We can declare functions with other names using the `fn` keyword.
 * The relative location of the functions does not matter. There is no need to defined headers.
+* We can call the functions by writing their name followed by a pair of parenthesis.
 
 ![](examples/functions/hello-world/src/main.rs)
 
@@ -33,6 +34,17 @@
 
 ![](examples/functions/hello-foo/src/main.rs)
 ![](examples/functions/hello-foo/out.out)
+
+
+## Rust functions return the unit by default
+{id: rust-function-return-nothing-by-default}
+
+* By default function return nothing, more precisely they return `()`  the empty tuple which is called the `unit`.
+* We need the `#[allow(clippy::let_unit_value, clippy::unit_cmp)]` in the example to make Clippy, the Rust linter accept this code.
+
+![](examples/functions/return-nothing/src/main.rs)
+![](examples/functions/return-nothing/out.out)
+
 
 ## Rust function return value (integer i32)
 {id: rust-function-return-value}
