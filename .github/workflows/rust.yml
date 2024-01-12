@@ -1,7 +1,7 @@
 name: Check Rust slides
 on:
   push:
-    path:
+    paths:
       - slides/**
   workflow_dispatch:
 
