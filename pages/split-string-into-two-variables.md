@@ -9,8 +9,6 @@ tags:
     - collect
     - turbofish
     - Some
-todo:
-    - article with the title turbofish ::<>
 ---
 
 We have a string that has two parts separated by a character. e.g. a colon like this: **"localhost:5000"**. How can we assign the two parts to two separate variables?
@@ -35,7 +33,7 @@ So if the input is `localhost:5000:garbage` then the `port` will contain `5000:g
 
 The solutions somehow need to handle the cases when the original string has more than one separators (`:`) and when it has none.
 
-In the first solution, called `with_split`, we split the string into parts at the delimiter (`:`) using `split`, `collect` with turbofish. We check if we got exactly two values,
+In the first solution, called `with_split`, we split the string into parts at the delimiter (`:`) using `split`, `collect` with [turbofish](/turbofish). We check if we got exactly two values,
 
 In the second solution, called `short_with_split_once_and_some`, we use the `split_once` method. This means that if we have more than one `:` then the second variable will contain the rest of the string.
 In this solution we did not deal with the problem.
