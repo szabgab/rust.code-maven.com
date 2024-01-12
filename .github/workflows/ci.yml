@@ -26,8 +26,8 @@ jobs:
 
       - name: Download processor
         run: |
-          wget https://ssg.code-maven.com/code-maven-web
-          chmod +x code-maven-web
+          wget https://ssg.code-maven.com/code-maven
+          chmod +x code-maven
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -37,7 +37,7 @@ jobs:
           cd preprocessing
           cargo run
           cd ..
-          ./code-maven-web --root . --outdir _site
+          ./code-maven web --outdir _site
 
       - name: Checkout slides
         uses: actions/checkout@v3
