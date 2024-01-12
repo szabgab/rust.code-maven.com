@@ -7,11 +7,22 @@ It now also includes all the slides in the `slides` folder.
 
 Feel free to use any of the examples under the MIT OR Apache-2.0 license.
 
+## Generate the site
+
+Download `code-maven` from https://ssg.code-maven.com/
+
+Run
+
+```
+code-maven web
+```
+
+It will generate the site in the `_site` folder.
+
 
 ## In order to generate the slides
 
-* Clone slides
-* Cloone slider-py
+* Clone slider-py
 
 ```
 ln -s ../slider-py
