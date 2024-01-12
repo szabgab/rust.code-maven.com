@@ -1,11 +1,12 @@
 fn main() {
     let mut row: (&str, i32, f32);
 
+    // row.0 = "Blue";
+    // partially assigned binding `row` isn't fully initialized
+
     row = ("Purple", 300, 3.45);
     println!("{:?}", row);
 
-    row.0 = "Green";
-    row.1 = 99;
-
+    row = ("Green", 99, 4.1);
     println!("{:?}", row);
 }
