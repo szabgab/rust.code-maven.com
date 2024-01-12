@@ -15,7 +15,7 @@ Part of the series about the [Rocket web framework](/rocket).
 
 ## Dependencies
 
-![](examples/rocket/hello-world-html/Cargo.tmpl)
+![](examples/rocket/hello-world-html/Cargo.toml)
 
 
 ## Code
