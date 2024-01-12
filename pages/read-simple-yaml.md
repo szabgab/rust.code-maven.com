@@ -8,8 +8,6 @@ tags:
     - struct
     - serde
     - Deserialize
-todo:
-    - TODO
 ---
 
 In an earlier article we saw how to [read an arbitrary YAML file](/read-arbitrary-yaml) and then access the individual fields.

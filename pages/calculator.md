@@ -5,8 +5,6 @@ published: false
 description: A short tutorial on writing a command line calculator in Rust.
 tags:
     - Rust
-todo:
-    - TODO
 ---
 
 In this article we'll go through the creation of a calculator in Rust that can be used on the command line.

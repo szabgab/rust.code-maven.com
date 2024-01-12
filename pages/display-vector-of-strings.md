@@ -9,8 +9,6 @@ tags:
     - struct
     - Display
     - error code
-todo:
-    - TODO
 ---
 
 ## The problem

@@ -7,8 +7,6 @@ tags:
     - training
     - course
     - learn
-todo:
-    - TODO
 ---
 
 [Gábor Szabó](https://szabgab.com/) who is the author of the Rust Maven web site teaches the Rust programming language.
@@ -23,7 +21,7 @@ The beginner course includes the basic topics of programming in Rust
 * Functions.
 * Ownership.
 * Enums and Pattern Matching (case/switch).
-* Structs and 
+* Structs
 * Cargo.
 * Crating crates.
 * Creating command line applications.

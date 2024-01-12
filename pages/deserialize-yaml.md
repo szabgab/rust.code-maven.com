@@ -5,8 +5,6 @@ published: false
 description:
 tags:
     - Rust
-todo:
-    - TODO
 ---
 
 We already saw how to [read and deserialize a simple YAML file in Rust](/read-simple-yaml) and we saw a number of other

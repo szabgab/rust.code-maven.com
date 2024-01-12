@@ -5,8 +5,6 @@ published: true
 description: JSON is used everywhere so being able to serialized and deserialize JSON is very important in Rustlang as well.
 tags:
     - JSON
-todo:
-    - TODO
 ---
 
 [JSON](https://www.json.org/) is used everywhere so being able to serialized and deserialize JSON is very important in Rust as well.

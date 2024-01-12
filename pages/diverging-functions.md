@@ -10,8 +10,6 @@ tags:
     - never
     - exclamation mark
     - error code
-todo:
-    - TODO
 ---
 
 If we don't say what a function returns, it is expected to return `()`:
