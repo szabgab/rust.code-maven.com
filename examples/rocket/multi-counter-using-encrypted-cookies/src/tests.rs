@@ -18,7 +18,6 @@ fn test_without_cookie() {
     assert_eq!(response.into_string(), Some("Counter: 1".into()));
 }
 
-
 #[test]
 fn test_with_cookie() {
     let client = Client::tracked(super::rocket()).unwrap();
@@ -29,16 +28,17 @@ fn test_with_cookie() {
     assert_eq!(response.into_string(), Some("Counter: 42".into()));
 }
 
-
 #[test]
 fn test_with_bad_cookie() {
     let client = Client::tracked(super::rocket()).unwrap();
-    let response = client.get("/").private_cookie(("counter", "bla")).dispatch();
+    let response = client
+        .get("/")
+        .private_cookie(("counter", "bla"))
+        .dispatch();
 
     assert_eq!(response.status(), Status::Ok);
     assert_eq!(response.into_string(), Some("Counter: 1".into()));
 }
-
 
 // I was expecting this too to work, but it does not, I get back "Counter 1" for the second request as well.
 // #[test]
