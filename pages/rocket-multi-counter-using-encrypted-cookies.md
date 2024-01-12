@@ -18,7 +18,7 @@ In an earlier example we saw how to create a [counter using cookies](/rocket-mul
 
 We saw that the user can pretend to have any number in the counter by using `curl` or some other client where it is easy to send in any cookie.
 
-This is another [counter examples](https://code-maven.com/counter) where we'll use encrypted [private cookies](https://rocket.rs/v0.5/guide/requests/#private-cookies).
+This is another one of the [counter examples](https://code-maven.com/counter) where we'll use encrypted [private cookies](https://rocket.rs/v0.5/guide/requests/#private-cookies).
 
 There are only a few changes from the free-text cookie version.
 
