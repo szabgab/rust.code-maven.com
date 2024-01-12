@@ -738,7 +738,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "multi-counter-using-secure-cookies"
+name = "multi-counter-using-encrypted-cookies"
 version = "0.1.0"
 dependencies = [
  "rocket",
