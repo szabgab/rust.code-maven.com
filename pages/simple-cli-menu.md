@@ -81,6 +81,10 @@ We also had to `clone` the string that we return to disconnect it from the vecto
 
 ![](examples/infinite-cli-menu/src/main.rs)
 
+The list of colors:
+
+![](examples/infinite-cli-menu/colors.txt)
+
 
 ## Hard-coded colors - return an `Option`
 
