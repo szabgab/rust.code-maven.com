@@ -18,12 +18,12 @@ I need that in order to demonstrate how to deal with a vector of values I read f
 
 There are two options. Either create a vector and call `to_string` manually on each one of the elements, or uses an iterator and call `to_string` on each one of them.
 
-## Create a vector of str:  Vec<&str>
+## Create a vector of str: `Vec<&str>`
 ```
 let colors = vec!["blue", "red", "green", "yellow"];
 ```
 
-## Create a vector of String: Vec<String> using to_string on each on of them
+## Create a vector of String: `Vec<String>` using `to_string` on each on of them
 
 ```rust
 let colors = vec![
