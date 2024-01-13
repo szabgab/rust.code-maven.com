@@ -9,7 +9,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut length)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let length:f32 = length
         .trim()
@@ -20,7 +20,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut width)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let width:f32 = width
         .trim()

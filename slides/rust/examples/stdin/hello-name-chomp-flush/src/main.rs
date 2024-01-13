@@ -8,7 +8,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut name)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
     name = name.trim_end().to_string();
 
     println!("Hello {}, how are you?", name);

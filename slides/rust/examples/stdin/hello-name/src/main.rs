@@ -6,7 +6,7 @@ fn main() {
     println!("Please type in your name:");
     io::stdin()
         .read_line(&mut name)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     println!("Hello {}, how are you?", name);
 }

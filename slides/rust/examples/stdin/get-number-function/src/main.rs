@@ -13,7 +13,7 @@ fn get_number() -> i32 {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut number)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let number:i32 = number
         .trim()

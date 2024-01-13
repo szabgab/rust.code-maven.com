@@ -9,7 +9,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut age)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
     let age: f32 = age.trim().parse().unwrap_or_else(|_| panic!("Could not convert '{age}' to floating point number"));
 
     let mut country = String::new();
@@ -17,7 +17,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut country)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
     let country = country.trim();
 
     let age_limit = HashMap::from([

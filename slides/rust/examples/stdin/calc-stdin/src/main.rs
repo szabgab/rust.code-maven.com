@@ -10,7 +10,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut var_a)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let var_a:f64 = var_a
         .trim()
@@ -21,14 +21,14 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut op)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
     op = op.trim().to_string();
 
     print!("b: ");
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut var_b)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let var_b:f64 = var_b
         .trim()

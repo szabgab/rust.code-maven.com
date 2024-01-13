@@ -8,7 +8,7 @@ fn main() {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut height)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let height:i32 = height
         .trim()

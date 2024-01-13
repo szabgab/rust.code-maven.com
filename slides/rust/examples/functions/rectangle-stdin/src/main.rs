@@ -14,7 +14,7 @@ fn get_number(name: &str) -> f32 {
     io::stdout().flush().expect("Oups");
     io::stdin()
         .read_line(&mut number)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     let number:f32 = number
         .trim()
