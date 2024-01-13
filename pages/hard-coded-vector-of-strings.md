@@ -6,7 +6,7 @@ description: Sometimes, especially for examples, I need a vector of hard coded v
 tags:
     - vec!
     - String
-    - &str
+    - "&str"
     - into_iter
     - map
     - collect
