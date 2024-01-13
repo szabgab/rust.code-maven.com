@@ -21,7 +21,7 @@ fn menu(values: &Vec<String>) -> Option<String> {
         let mut response = String::new();
         std::io::stdin()
             .read_line(&mut response)
-            .expect("Faild to get input");
+            .expect("Failed to get input");
 
         match response.trim_end().parse::<usize>() {
             Ok(idx) => {

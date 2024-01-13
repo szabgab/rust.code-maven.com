@@ -12,7 +12,7 @@ fn prompt(text: &str) -> String {
     let mut response = String::new();
     std::io::stdin()
         .read_line(&mut response)
-        .expect("Faild to get input");
+        .expect("Failed to get input");
 
     response.trim_end().to_string()
 }

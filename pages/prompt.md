@@ -52,7 +52,7 @@ The reading in from the STDIN is done by these lines:
 let mut response = String::new();
 std::io::stdin()
     .read_line(&mut response)
-    .expect("Faild to get input");
+    .expect("Failed to get input");
 ```
 
 Finally we remove the trailing newline that was added when user pressed ENTER.
