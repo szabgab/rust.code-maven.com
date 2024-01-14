@@ -5,20 +5,45 @@
 {id: create-simple-struct}
 {i: struct}
 
+* A simple `struct` will have one or more fields. Each field has a name and a type.
+* We can then create an instance of the struct with actual values.
+* We can use the dot-notation to access the values of the fields.
+* We cannot change the values unless we declare the struct as mutable using the `mut` keyword.
+
 ![](examples/struct/point/src/main.rs)
 ![](examples/struct/point/out.out)
 
 ## Change attributes of a mutable struct
 {id: mutable-struct}
+{i: mut}
+
+* Using the `mut` keyword we can defined a `struct` to be mutable.
 
 ![](examples/struct/mutable-point/src/main.rs)
 ![](examples/struct/mutable-point/out.out)
 
-## Struct method to modify fields
-{id: struct-method-to-modify-fields}
+## Implement a method for a struct
+{id: struct-method}
+{i: impl}
+{i: self}
+
+* We can add methods to a `struct` using the `impl` keyword (we implement the method).
+* The first parameter of every method must be the variable name `self` that will represent the current instance.
+* We can have either `self` or `&self`. The latter will borrwo the instance and this it will allow us to call two methods (or the same method twice).
+* If we used `self` the instance would be moved on the first method call.
 
 ![](examples/struct/point-with-method/src/main.rs)
 ![](examples/struct/point-with-method/out.out)
+
+
+## Struct method to modify fields
+{id: struct-method-to-modify-fields}
+{i: impl}
+
+* We can add methods to a `struct` using the `impl` keyword (we implement the method).
+
+![](examples/struct/point-with-mutable-method/src/main.rs)
+![](examples/struct/point-with-mutable-method/out.out)
 
 ## Struct inheritance
 {id: struct-inheritance}
