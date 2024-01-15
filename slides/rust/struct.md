@@ -76,12 +76,14 @@ A `Cricle` is built from a `Point` and a radius.
 {i: struct}
 {i: type}
 
-![](examples/struct/polygon/src/main.rs)
-![](examples/struct/polygon/out.out)
+![](examples/struct/polygon-type/src/main.rs)
+![](examples/struct/polygon-type/out.out)
 
 ## Struct with vector of structs - Polygon
 {id: struct-with-vector}
 
+![](examples/struct/polygon-struct/src/main.rs)
+![](examples/struct/polygon-struct/out.out)
 
 ## Struct duplicate
 {id: struct-duplicate}
