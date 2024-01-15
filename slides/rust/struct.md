@@ -26,11 +26,12 @@
 {id: struct-method}
 {i: impl}
 {i: self}
+{i: &self}
 
 * We can add methods to a `struct` using the `impl` keyword (we implement the method).
 * The first parameter of every method must be the variable name `self` that will represent the current instance.
-* We can have either `self` or `&self`. The latter will borrwo the instance and this it will allow us to call two methods (or the same method twice).
-* If we used `self` the instance would be moved on the first method call.
+* We can have either `self` or `&self`. The latter will borrow the instance and it will allow us to call two methods (or the same method twice as in our example).
+* If we used only `self` the instance would be moved on the first method call. Rarely used.
 
 ![](examples/struct/point-with-method/src/main.rs)
 ![](examples/struct/point-with-method/out.out)
@@ -39,8 +40,11 @@
 ## Struct method to modify fields
 {id: struct-method-to-modify-fields}
 {i: impl}
+{i: mut}
+{i: &mut}
 
-* We can add methods to a `struct` using the `impl` keyword (we implement the method).
+* We can add methods to a `struct` using the `impl` keyword (we implement the method) that will modify the struct.
+* For this we need to write `&mut self` in the method and the struct instance must be also mutable.
 
 ![](examples/struct/point-with-mutable-method/src/main.rs)
 ![](examples/struct/point-with-mutable-method/out.out)
@@ -49,12 +53,35 @@
 {id: struct-inheritance}
 
 * There is no inheritance among structs similar to classes in other languages. However, there is composition.
+* In other words, attributes of a struct can be both primitive types and other structs.
 
-## Struct composition
+## Struct composition: Circle
 {id: struct-composition}
+
+A `Cricle` is built from a `Point` and a radius.
 
 ![](examples/struct/circle-compose/src/main.rs)
 ![](examples/struct/circle-compose/out.out)
+
+## Struct composition: Line
+{id: struct-composition-line}
+
+* Not much difference, a `Line` is composed of two `Point` structs.
+
+![](examples/struct/line-compose/src/main.rs)
+![](examples/struct/line-compose/out.out)
+
+## Struct and type alias - Polygon
+{id: struct-and-type-alias}
+{i: struct}
+{i: type}
+
+![](examples/struct/polygon/src/main.rs)
+![](examples/struct/polygon/out.out)
+
+## Struct with vector of structs - Polygon
+{id: struct-with-vector}
+
 
 ## Struct duplicate
 {id: struct-duplicate}
