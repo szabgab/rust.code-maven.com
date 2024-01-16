@@ -34,6 +34,38 @@
 ![](examples/numbers/rounding-float/src/main.rs)
 ![](examples/numbers/rounding-float/out.out)
 
+## Exponent - power
+{id: exponent-power}
+{i: pow}
+
+* We can use the [pow](https://doc.rust-lang.org/std/primitive.i32.html#method.pow) method to get the exponent of a number, but Rust needs to know the exact type of that number.
+* It can be set explicitly or implicitly as in the case of the function returning an `i16` number.
+
+* We have to be careful as `pow` can overflow.
+
+![](examples/numbers/exponent/src/main.rs)
+
+## Exponent protecting  agains overflow - checked_pow
+{i: checked_pow}
+
+* As many other mathematical operations, calling `pow` can also create a number that does not fit in the expected type.
+
+
+## Square root (sqrt)
+{id: square-root}
+{i: sqrt}
+{i: as}
+{i: f64}
+
+* Calling the `sqrt` method needs to know the underlying type.
+* It suggests `i32`, but in fact integers don't have `sqrt` implemented, only floats.
+* We can convert (cast) an integer to a floating point using the [as](https://doc.rust-lang.org/std/keyword.as.html) keyword.
+
+![](examples/numbers/sqrt/src/main.rs)
+
+
+
+
 ## Floating point imprecision
 {id: floating-point-imprecision}
 
@@ -112,6 +144,5 @@
 
 ![](examples/numbers/infinite-floating-point-number/src/main.rs)
 ![](examples/numbers/infinite-floating-point-number/out.out)
-
 
 

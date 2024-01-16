@@ -57,8 +57,11 @@
 
 ## Struct composition: Circle
 {id: struct-composition}
+{i: struct}
+{i: impl}
 
-A `Cricle` is built from a `Point` and a radius.
+* A `Cricle` is built from a `Point` and a radius.
+* We can implement (using `impl`) methods on both the `Point` and the `Circle` struct.
 
 ![](examples/struct/circle-compose/src/main.rs)
 ![](examples/struct/circle-compose/out.out)
@@ -66,7 +69,7 @@ A `Cricle` is built from a `Point` and a radius.
 ## Struct composition: Line
 {id: struct-composition-line}
 
-* Not much difference, a `Line` is composed of two `Point` structs.
+* Not much difference from the `Circle`. A `Line` is composed of two `Point` structs.
 
 ![](examples/struct/line-compose/src/main.rs)
 ![](examples/struct/line-compose/out.out)
