@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::engine::local::RocksDb;
+use surrealdb::engine::local::{Db, RocksDb};
 use surrealdb::Surreal;
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -36,35 +36,8 @@ async fn main() -> surrealdb::Result<()> {
     }
 
     if 2 == args.len() {
-        let name = &args[1];
-        let mut count = 0;
-
-        let mut entries = db
-            .query("SELECT name, count FROM counter WHERE name = $name")
-            .bind(("name", name))
-            .await?;
-        let entries: Vec<Entry> = entries.take(0)?;
-        // fetching the firs (and hopefully only) entry
-        if let Some(entry) = entries.into_iter().next() {
-            count = entry.count;
-        }
-
-        count += 1;
-        println!("{}", count);
-
-        let response = db
-            .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count=$count")
-            .bind(("name", name))
-            .bind(("count", count))
-            .await?;
-
-        match response.check() {
-            Ok(_) => return Ok(()),
-            Err(err) => {
-                eprintln!("Could not add entry {}", err);
-                std::process::exit(2);
-            }
-        };
+        increment(&db, &args[1]).await?;
+        return Ok(());
     }
 
     println!("Listing counters");
@@ -78,4 +51,35 @@ async fn main() -> surrealdb::Result<()> {
     }
 
     Ok(())
+}
+
+async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
+    let mut count = 0;
+
+    let mut entries = db
+        .query("SELECT name, count FROM counter WHERE name = $name")
+        .bind(("name", name))
+        .await?;
+    let entries: Vec<Entry> = entries.take(0)?;
+    // fetching the first (and hopefully only) entry
+    if let Some(entry) = entries.into_iter().next() {
+        count = entry.count;
+    }
+
+    count += 1;
+    println!("{}", count);
+
+    let response = db
+        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count=$count")
+        .bind(("name", name))
+        .bind(("count", count))
+        .await?;
+
+    match response.check() {
+        Ok(_) => Ok(()),
+        Err(err) => {
+            eprintln!("Could not add entry {}", err);
+            std::process::exit(2);
+        }
+    }
 }
