@@ -1,11 +1,16 @@
 ---
-title: Multi counter with embedded SurrealDB database
+title: Multi-counter with embedded SurrealDB database
 timestamp: 2024-01-16T14:40:01
 published: true
 description: Simple demo of a command-line application using SurrealDB to store several counters.
 tags:
     - SurrealDB
     - CLI
+    - DEFINE
+    - SELECT
+    - INSERT
+    - INDEX
+    - DUPLICATE
 ---
 
 Another one of my [counter examples](https://code-maven.com/counter). This one works on the command line and counts how many times we ran the program with different command line parameter:
@@ -30,7 +35,7 @@ foo 4
 bar 2
 ````
 
-The data will be stored in a [SurrealDB](/surrealdb) database. To make the setup easier we won't run a separate database, but we'll use the databas embedded in our code.
+The data will be stored in a [SurrealDB](/surrealdb) database. To make the setup easier we won't run a separate database, but we'll use the database embedded in our code.
 
 
 ## Dependencies in Cargo.toml
@@ -52,14 +57,14 @@ let args = std::env::args().collect::<Vec<String>>();
 
 ### Getting the path to the database
 
-We check the `DATABASE_PATH` enviroment variabl and use that if it is available. This will be used by the tests to be able to use
+We check the `DATABASE_PATH` environment variable and use that if it is available. This will be used by the tests to be able to use
 a database in a temporary folder.
 
 If that variable is not available then we are going to create the database in the `db` folder in the current directory.
 
 I did not use the plain `db` because of a [bug](https://github.com/surrealdb/docs.surrealdb.com/issues/185) that was fixed recently.
 
-I also used [unwrap](/unwrap) disregarding the possibiliy that we don't have a current working directory. For a more robust solution
+I also used [unwrap](/unwrap) disregarding the possibility that we don't have a current working directory. For a more robust solution
 you might want to deal with that as well.
 
 ```rust
@@ -74,7 +79,7 @@ let database_folder = match std::env::var("DATABASE_PATH") {
 
 ### Connect to the database on the filesystem
 
-Then we connect to the databse folder via the `RocksDb` driver.
+Then we connect to the database folder via the `RocksDb` driver.
 
 ```rust
 let db = Surreal::new::<RocksDb>(database_folder).await?;
@@ -112,7 +117,7 @@ if 2 < args.len() {
 
 ### Increment the counter
 
-I guess this is the heart of the progam where we fetch the current value of the counter using a `SELECT` statement and then
+I guess this is the heart of the program where we fetch the current value of the counter using a `SELECT` statement and then
 update the value in the database. We use `INSERT` here as it can either `CREATE` a new record or `UPDATE` and existing one.
 
 ```rust
@@ -148,6 +153,26 @@ if 2 == args.len() {
 }
 ```
 
+However there is an issue with this implementation. If this application is execute in parallel there is a chance that two process read from the database at the same time and write back the incremented
+value. If let's say they both read that "foo" was had 3 then they will both increment it to 4. Thereby we would undercount. I think I could solve this with transactions, but I asked this in the Discord
+channel of SurrealDB and they might have better suggestions. I'll update the solution once I get a reply.
+
+
+### Listing all the counters
+
+The last part of the code deal with the case when we don't supply any parameter. It will fetch all the counters and print the name of the counter and the current count.
+
+```rust
+println!("Listing counters");
+println!("----------------");
+let mut entries = db
+    .query("SELECT name, count FROM counter ORDER BY count DESC")
+    .await?;
+let entries: Vec<Entry> = entries.take(0)?;
+for entry in entries {
+    println!("{}: {}", entry.name, entry.count);
+}
+```
 
 
 ## The full code
@@ -157,5 +182,11 @@ if 2 == args.len() {
 
 ## The tests
 
+In the test we run the command line application as an external executable and then compare the result that was printed to the Standard Output with the expected values.
+
 ![](examples/surrealdb/cli-multi-counter/tests/tests.rs)
+
+## Conclusion
+
+This looks quite similar to plain SQL. We have at least one improvement to make in the code.
 

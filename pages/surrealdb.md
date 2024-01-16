@@ -19,6 +19,7 @@ You might also want to consult the [Awesome SurrealDB](https://github.com/surrea
 * [Setting up embedded SurrealDB with RocksDB backend in Rust](/surrealdb-embedded-with-rocksdb)
 * [Setting up an in-memory SurrealDB database in Rust](/surrealdb-embedded-with-in-memory-database)
 * [SurrealDB in-memory with SQL demo in Rust](/surrealdb-in-memory-with-sql-demo)
+* [Multi-counter with embedded SurrealDB database](/surrealdb-cli-multi-counter)
 
 <!--
 * [Simple command line phonebook with SurrealDB using SQL](/cli-simple-phonebook-with-surrealdb-using-sql)

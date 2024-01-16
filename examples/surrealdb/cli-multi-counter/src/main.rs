@@ -44,6 +44,7 @@ async fn main() -> surrealdb::Result<()> {
             .bind(("name", name))
             .await?;
         let entries: Vec<Entry> = entries.take(0)?;
+        // fetching the firs (and hopefully only) entry
         if let Some(entry) = entries.into_iter().next() {
             count = entry.count;
         }
