@@ -75,7 +75,6 @@
 ![](examples/vectors/mutable-vector-of-strings/src/main.rs)
 ![](examples/vectors/mutable-vector-of-strings/out.out)
 
-
 ## Count words using two vectors
 {id: count-words-using-two-vectors}
 
@@ -84,8 +83,20 @@
 * One vector will hold the list of distinct words.
 * The second vector will hold the count for each word.
 
-
 ![](examples/vectors/count-words/src/main.rs)
+![](examples/vectors/count-words/out.out)
+
+
+## Stack and the capacity of a vector
+{id: stack-and-the capacity}
+{i: push}
+{i: pop}
+{i: len}
+{i: capacity}
+
+![](examples/stack/src/main.rs)
+![](examples/stack/out.out)
+
 
 ## Vector extend (combining two vectors)
 {id: vector-extend}
