@@ -88,11 +88,17 @@
 
 
 ## Stack and the capacity of a vector
-{id: stack-and-the capacity}
+{id: stack-and-the-capacity-of-a-vector}
 {i: push}
 {i: pop}
 {i: len}
 {i: capacity}
+
+A little example showing how a vector growth its length (`len`) and `capacity` as we `push` more and more values on it.
+
+Then how it reduces the length but keeps the allocated `capacity` as we `pop` out elements.
+
+Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ![](examples/stack/src/main.rs)
 ![](examples/stack/out.out)
