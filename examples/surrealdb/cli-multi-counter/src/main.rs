@@ -34,7 +34,7 @@ async fn main() -> surrealdb::Result<()> {
         eprintln!("       {}          to list all the counters", args[0]);
         std::process::exit(1);
     }
-    
+
     if 2 == args.len() {
         let name = &args[1];
         let mut count = 0;

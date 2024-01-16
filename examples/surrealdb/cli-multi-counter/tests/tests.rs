@@ -34,14 +34,15 @@ fn test_counter() {
 }
 
 fn check(name: &str, expected_stdout: &str) {
-
     let result = Command::new("cargo")
         .args(["run", "-q", name])
         .output()
         .expect("command failed to start");
 
-    assert_eq!(std::str::from_utf8(&result.stdout).unwrap(), expected_stdout);
+    assert_eq!(
+        std::str::from_utf8(&result.stdout).unwrap(),
+        expected_stdout
+    );
     assert_eq!(std::str::from_utf8(&result.stderr).unwrap(), "");
     assert_eq!(result.status, ExitStatus::from_raw(0));
 }
-
