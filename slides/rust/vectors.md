@@ -6,32 +6,53 @@
 {i: vec!}
 {i: len}
 
-* [Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
+* A [Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html) vector is a series of values of the same type.
+* We can initialize a vector using the [vec!](https://doc.rust-lang.org/std/macro.vec.html) macro.
+* We can get the length of the vector using the [len](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.len) method.
+* We cannot print a vector with the simle `{}` placeholder because [Display](https://doc.rust-lang.org/std/fmt/trait.Display.html) is not implemented for it.
+* However we can use the `{:?}` or the `{:#?}` placeholders.
+* By default vectors are immutable.
 
 ![](examples/vectors/numbers/src/main.rs)
 ![](examples/vectors/numbers/out.out)
 
 ## Iterate over elements of vector using for-loop
 {id: iterate-over-element-of-vector}
+{i: for}
+{i: in}
+
+* We can iterate over the elements of a vector using the `for .. in ..` loop construct.
 
 ![](examples/vectors/numbers-iterate/src/main.rs)
 
 ## Mutable vector of numbers, append (push) values
 {id: mutable-numbers-vector}
+{i: mut}
 {i: push}
 {i: append}
+
+* We can make a vector mutable by using the `mut` keyword.
+* We can **append** an element to the end of the vector using the `push` method.
 
 ![](examples/vectors/mutable-numbers-vector/src/main.rs)
 
 ## Mutable empty vector for numbers (push)
 {id: mutable-empty-vector-for-numbers}
 {i: push}
+{i: mut}
+{i: vec!}
+
+* We can also create a mutable empty vector without even declaring the types of the values.
+* When we `push` the first value that's how Rust will know what is the type of the elements of the vector.
+* Trying to push values of other types would then generate a compilation error.
 
 ![](examples/vectors/mutable-empty-vector-for-integers/src/main.rs)
 ![](examples/vectors/mutable-empty-vector-for-integers/out.out)
 
 ## Mutable empty vector for strings
 {id: mutable-empty-vector-for-strings}
+
+* This is the same example as before, but this time we push a string first.
 
 ![](examples/vectors/mutable-empty-vector-for-strings/src/main.rs)
 ![](examples/vectors/mutable-empty-vector-for-strings/out.out)
@@ -41,9 +62,12 @@
 {i: vec!}
 {i: push}
 
+* We can also declare the type of the values in the vector. It might make the code more readable.
+* And it might eliminate the need to explicitely tell a `parse` method the target value type.
+* In this case Rust will see the `parse` method and because the result is pushed onto a vector of `i32` numbers it will know that `i32` is the type of the **number** variable.
+
 ![](examples/vectors/vector-with-type/src/main.rs)
 ![](examples/vectors/vector-with-type/out.out)
-
 
 ## Mutable vector of strings
 {id: mutable-vector-of-strings}
@@ -52,10 +76,14 @@
 ![](examples/vectors/mutable-vector-of-strings/out.out)
 
 
-## Count words
-{id: count-words}
+## Count words using two vectors
+{id: count-words-using-two-vectors}
 
-* Given a string that consists of words and white-spaces, count how many times each word appears?
+* Given a string that consists of words and white-spaces, count how many times each word appears!
+* In this solution we use two vectors. A much better solution would be to use `HashMap`, but in this example I wanted to show the solution with two vectors.
+* One vector will hold the list of distinct words.
+* The second vector will hold the count for each word.
+
 
 ![](examples/vectors/count-words/src/main.rs)
 

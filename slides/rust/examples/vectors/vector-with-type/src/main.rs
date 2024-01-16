@@ -1,13 +1,18 @@
 fn main() {
-    let mut names:Vec<&str> = vec![];
-    println!("{:?}", names);
+    let mut numbers:Vec<i32> = vec![];
+    println!("{:?}", numbers);
 
-    //names.push(23);  // error
+    let input = "42";
 
-    names.push("hello");
-    println!("{:?}", names);
+    // names.push(input);
+    // mismatched types
 
-    for name in names {
-        println!("{}", name);
+    let number = input.parse().unwrap();
+    numbers.push(number);
+
+    println!("{:?}", numbers);
+
+    for num in numbers {
+        println!("{}", num);
     }
 }
