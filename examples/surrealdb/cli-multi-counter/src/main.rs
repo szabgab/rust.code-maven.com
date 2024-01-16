@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::{Db, RocksDb};
 use surrealdb::Surreal;
 
+
 #[derive(Debug, Deserialize, Serialize)]
 struct Entry {
     name: String,
@@ -36,7 +37,8 @@ async fn main() -> surrealdb::Result<()> {
     }
 
     if 2 == args.len() {
-        increment(&db, &args[1]).await?;
+        // increment_first(&db, &args[1]).await?;
+        increment_second(&db, &args[1]).await?;
         return Ok(());
     }
 
@@ -53,7 +55,8 @@ async fn main() -> surrealdb::Result<()> {
     Ok(())
 }
 
-async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
+#[allow(dead_code)]
+async fn increment_first(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
     let mut count = 0;
 
     let mut entries = db
@@ -77,6 +80,45 @@ async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
 
     match response.check() {
         Ok(_) => Ok(()),
+        Err(err) => {
+            eprintln!("Could not add entry {}", err);
+            std::process::exit(2);
+        }
+    }
+}
+
+
+#[allow(dead_code)]
+async fn increment_second(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
+    let response = db
+        .query("CREATE counter SET name = $name,  count = $count")
+        .bind(("name", name))
+        .bind(("count", 1))
+        .await?;
+
+    match response.check() {
+        Ok(_) => {
+            println!("1");
+            return Ok(());
+        }
+        Err(_) => {},
+    }
+
+    let response = db
+        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count += 1")
+        .bind(("name", name))
+        .await?;
+
+    match response.check() {
+        Ok(mut entries) => {
+            let entries: Vec<Entry> = entries.take(0)?;
+            // fetching the first (and hopefully only) entry
+            if let Some(entry) = entries.into_iter().next() {
+                println!("{}", entry.count);
+            }
+
+            Ok(())
+        },
         Err(err) => {
             eprintln!("Could not add entry {}", err);
             std::process::exit(2);
