@@ -34,6 +34,13 @@
 ![](examples/numbers/rounding-float/src/main.rs)
 ![](examples/numbers/rounding-float/out.out)
 
+## Floating point imprecision
+{id: floating-point-imprecision}
+
+![](examples/numbers/floating-point-imprecision/src/main.rs)
+![](examples/numbers/floating-point-imprecision/out.out)
+
+
 ## Exponent - power
 {id: exponent-power}
 {i: pow}
@@ -45,11 +52,18 @@
 
 ![](examples/numbers/exponent/src/main.rs)
 
-## Exponent protecting  agains overflow - checked_pow
+## Exponent protecting  agains overflow - checked_pow, saturating_pow
+{id: exponent-with-overflow-protection}
 {i: checked_pow}
+{i: saturating_pow}
 
-* As many other mathematical operations, calling `pow` can also create a number that does not fit in the expected type.
+* As many other mathematical operations, calling `pow` can also create a number that does not fit in the expected type and then the code would `panic!`.
+* We can use the [checked_pow](https://doc.rust-lang.org/std/primitive.i32.html#method.checked_pow) that returns an [Option](https://doc.rust-lang.org/std/option/enum.Option.html)
+* It contains the computed value, if successful or `None` if there was an overflow.
 
+![](examples/numbers/checked-pow/src/main.rs)
+
+* An alternative way is to use [saturating_pow](https://doc.rust-lang.org/std/primitive.i32.html#method.saturating_pow).
 
 ## Square root (sqrt)
 {id: square-root}
@@ -63,14 +77,14 @@
 
 ![](examples/numbers/sqrt/src/main.rs)
 
+## Square root of integer numbers
+{id: square-root-of-integers}
+{i: isqrt}
+{i: integer_sqrt}
 
+* There is a method called [isqrt](https://doc.rust-lang.org/std/primitive.i32.html#method.isqrt), but it is experimental.
+* There is a crate called [integer-sqrt](https://crates.io/crates/integer-sqrt)
 
-
-## Floating point imprecision
-{id: floating-point-imprecision}
-
-![](examples/numbers/floating-point-imprecision/src/main.rs)
-![](examples/numbers/floating-point-imprecision/out.out)
 
 ## Compare integers
 {id: compare-integers}
