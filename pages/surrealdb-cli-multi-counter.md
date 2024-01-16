@@ -13,7 +13,7 @@ tags:
     - DUPLICATE
 ---
 
-Another one of my [counter examples](https://code-maven.com/counter). This one works on the command line and counts how many times we ran the program with different command line parameter:
+Another one of my [counter examples](https://code-maven.com/counter) part of the [SurrealDB](/surrealdb) series. This one works on the command line and counts how many times we ran the program with different command line parameter:
 
 It works like this:
 
