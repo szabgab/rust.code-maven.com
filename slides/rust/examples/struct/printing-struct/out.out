@@ -1,1 +1,4 @@
-(elephant, huge, 100)
+elephant
+huge
+100
+name: elephant, size: huge, weight: 100

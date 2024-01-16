@@ -1,1 +1,5 @@
-[examples/struct/debugging_struct.rs:18] a = Animal { name: elephant, size: huge, weight: 100 }
+elephant
+huge
+100
+Animal { name: elephant, size: huge, weight: 100 }
+[src/main.rs:23] eli = Animal { name: elephant, size: huge, weight: 100 }

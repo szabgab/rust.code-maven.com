@@ -62,6 +62,7 @@
 
 * A `Cricle` is built from a `Point` and a radius.
 * We can implement (using `impl`) methods on both the `Point` and the `Circle` struct.
+* The `Circle` struct does **not** have a `mv` method.
 
 ![](examples/struct/circle-compose/src/main.rs)
 ![](examples/struct/circle-compose/out.out)
@@ -79,11 +80,19 @@
 {i: struct}
 {i: type}
 
+* The simplest way to represent a polygon (a series of points) is a vector of `Point` instances.
+* We can even give it a name using the [type](https://doc.rust-lang.org/std/keyword.type.html) keyword.
+* Despite its name it does **not** create a new type, just an alias.
+* That's why we cannot use `impl` to add a method.
+
 ![](examples/struct/polygon-type/src/main.rs)
 ![](examples/struct/polygon-type/out.out)
 
 ## Struct with vector of structs - Polygon
 {id: struct-with-vector}
+
+* We can create a `struct` that has a single attribute which is a vector of `Point` instances.
+* We can then use `impl` to implement a function.
 
 ![](examples/struct/polygon-struct/src/main.rs)
 ![](examples/struct/polygon-struct/out.out)
@@ -91,16 +100,45 @@
 ## Struct duplicate
 {id: struct-duplicate}
 
+* This seems to be an old example showing that if we don't compose one struct from another then we have to implement everything in both cases.
+* In this case the `Circle` struct has its own x and y attribute and its own `mv` method.
+
 ![](examples/struct/circle-duplicate/src/main.rs)
 ![](examples/struct/circle-duplicate/out.out)
 
 ## Printing struct fails
 {id: printing-struct-fails}
 
+* We can print the values of the individual attributes of a struct, but we cannot print the whole struct.
+
 ![](examples/struct/printing-struct-fails/src/main.rs)
 
-## Print struct (Point)
+## Print struct
 {id: print-struct}
+
+![](examples/struct/printing-struct/src/main.rs)
+![](examples/struct/printing-struct/out.out)
+
+## Debug struct
+{id: debug-struct}
+
+![](examples/struct/debugging-struct/src/main.rs)
+![](examples/struct/debugging-struct/out.out)
+
+## Derive Debug for struct
+{id: derive-debug-for-struct}
+{i: derive}
+{i: Debug}
+
+* We don't need to implement the `fmt` method of the `Debug` trait ourselves. We can `derive` it:
+
+![](examples/struct/debug-struct/src/main.rs)
+
+![](examples/struct/debug-struct/out.out)
+
+
+## Print struct (Point)
+{id: print-struct-point}
 {i: std::fmt::Display}
 {i: Display}
 
@@ -108,24 +146,12 @@
 ![](examples/struct/print-point/out.out)
 
 ## Debug struct (Point)
-{id: debug-struct}
+{id: debug-struct-point}
 {i: std::fmt::Debug}
 {i: Debug}
 
 ![](examples/struct/debug-point/src/main.rs)
 ![](examples/struct/debug-point/out.out)
-
-## Print complex struct
-{id: print-complex-struct}
-
-![](examples/struct/printing-struct/src/main.rs)
-![](examples/struct/printing-struct/out.out)
-
-## Debug complex struct
-{id: debug-complex-struct}
-
-![](examples/struct/debugging-struct/src/main.rs)
-![](examples/struct/debugging-struct/out.out)
 
 ## Struct with vector and optional value
 {id: struct-with-vector-and-optional-value}

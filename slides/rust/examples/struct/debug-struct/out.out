@@ -1,0 +1,9 @@
+elephant
+huge
+100
+Animal { name: "elephant", size: "huge", weight: 100 }
+[src/main.rs:16] eli = Animal {
+    name: "elephant",
+    size: "huge",
+    weight: 100,
+}

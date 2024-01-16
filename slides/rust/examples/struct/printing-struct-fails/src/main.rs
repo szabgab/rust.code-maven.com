@@ -1,4 +1,3 @@
-#[allow(dead_code)]
 struct Animal<'a> {
     name: &'a str,
     size: &'a str,
@@ -6,10 +5,13 @@ struct Animal<'a> {
 }
 
 fn main() {
-    #[allow(unused_variables)]
-    let a = Animal {name: "elephant", size: "huge", weight: 100};
-    //println!("{}", a);   // `Animal<'_>` doesn't implement `std::fmt::Display`
-    // println!("{:?}", a); // `Animal<'_>` doesn't implement `Debug`
-    // dbg!(a);             // `Animal<'_>` doesn't implement `Debug`
+    let eli = Animal {name: "elephant", size: "huge", weight: 100};
+    println!("{}", eli.name);
+    println!("{}", eli.size);
+    println!("{}", eli.weight);
+
+    // println!("{}", eli);   // `Animal<'_>` doesn't implement `std::fmt::Display`
+    // println!("{:?}", eli); // `Animal<'_>` doesn't implement `Debug`
+    // dbg!(eli);             // `Animal<'_>` doesn't implement `Debug`
 }
 

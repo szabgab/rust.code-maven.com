@@ -13,9 +13,14 @@ impl std::fmt::Debug for Animal<'_> {
 }
 
 fn main() {
-    let a = Animal {name: "elephant", size: "huge", weight: 100};
-    println!("{:?}", a);
-    dbg!(a);
+    let eli = Animal {name: "elephant", size: "huge", weight: 100};
+    println!("{}", eli.name);
+    println!("{}", eli.size);
+    println!("{}", eli.weight);
+
+
+    println!("{:?}", eli);
+    dbg!(eli);
 }
 
 
