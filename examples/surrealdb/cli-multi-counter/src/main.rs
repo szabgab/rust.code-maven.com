@@ -33,7 +33,9 @@ async fn main() -> surrealdb::Result<()> {
         eprintln!("Usage: {} NAME     to count NAME", args[0]);
         eprintln!("       {}          to list all the counters", args[0]);
         std::process::exit(1);
-    } else if 2 == args.len() {
+    }
+    
+    if 2 == args.len() {
         let name = &args[1];
         let mut count = 0;
 
@@ -62,17 +64,16 @@ async fn main() -> surrealdb::Result<()> {
                 std::process::exit(2);
             }
         };
-    
-    } else {
-        println!("Listing counters");
-        println!("----------------");
-        let mut entries = db
-            .query("SELECT name, count FROM counter ORDER BY count DESC")
-            .await?;
-        let entries: Vec<Entry> = entries.take(0)?;
-        for entry in entries {
-            println!("{}: {}", entry.name, entry.count);
-        }
+    }
+
+    println!("Listing counters");
+    println!("----------------");
+    let mut entries = db
+        .query("SELECT name, count FROM counter ORDER BY count DESC")
+        .await?;
+    let entries: Vec<Entry> = entries.take(0)?;
+    for entry in entries {
+        println!("{}: {}", entry.name, entry.count);
     }
 
     Ok(())
