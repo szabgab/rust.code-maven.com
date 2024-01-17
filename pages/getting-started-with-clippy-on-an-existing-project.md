@@ -1,6 +1,7 @@
 ---
 title: Getting started with Clippy on an existing project
 timestamp: 2024-01-17T17:30:01
+author: szabgab
 published: true
 description: Clippy can provide a lot of valuable improvements for your code, but it is hard to add it to an existing project.
 tags:
