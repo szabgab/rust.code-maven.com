@@ -9,6 +9,11 @@ tags:
   description: Articles about Rust with tags
 google_analytics: G-F3V82JBHQE
 
+authors:
+  - name: Gabor Szabo
+    nickname: szabgab
+    picture: szabgab.png
+
 from:
   name: Gabor Szabo
   email: gabor@szabgab.com
