@@ -37,8 +37,7 @@ async fn main() -> surrealdb::Result<()> {
     }
 
     if 2 == args.len() {
-        // increment_first(&db, &args[1]).await?;
-        increment_second(&db, &args[1]).await?;
+        increment(&db, &args[1]).await?;
         return Ok(());
     }
 
@@ -55,58 +54,11 @@ async fn main() -> surrealdb::Result<()> {
     Ok(())
 }
 
-#[allow(dead_code)]
-async fn increment_first(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
-    let mut count = 0;
-
-    let mut entries = db
-        .query("SELECT name, count FROM counter WHERE name = $name")
-        .bind(("name", name))
-        .await?;
-    let entries: Vec<Entry> = entries.take(0)?;
-    // fetching the first (and hopefully only) entry
-    if let Some(entry) = entries.into_iter().next() {
-        count = entry.count;
-    }
-
-    count += 1;
-    println!("{}", count);
-
+async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
     let response = db
-        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count=$count")
-        .bind(("name", name))
-        .bind(("count", count))
-        .await?;
-
-    match response.check() {
-        Ok(_) => Ok(()),
-        Err(err) => {
-            eprintln!("Could not add entry {}", err);
-            std::process::exit(2);
-        }
-    }
-}
-
-
-#[allow(dead_code)]
-async fn increment_second(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
-    let response = db
-        .query("CREATE counter SET name = $name,  count = $count")
+        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count += 1;")
         .bind(("name", name))
         .bind(("count", 1))
-        .await?;
-
-    match response.check() {
-        Ok(_) => {
-            println!("1");
-            return Ok(());
-        }
-        Err(_) => {},
-    }
-
-    let response = db
-        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count += 1")
-        .bind(("name", name))
         .await?;
 
     match response.check() {
@@ -118,7 +70,7 @@ async fn increment_second(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()>
             }
 
             Ok(())
-        },
+        }
         Err(err) => {
             eprintln!("Could not add entry {}", err);
             std::process::exit(2);

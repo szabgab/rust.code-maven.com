@@ -117,46 +117,43 @@ if 2 < args.len() {
 
 ### Increment the counter
 
-I guess this is the heart of the program where we fetch the current value of the counter using a `SELECT` statement and then
-update the value in the database. We use `INSERT` here as it can either `CREATE` a new record or `UPDATE` and existing one.
+I guess this is the heart of the program where we fetch the current value of the counter using an `INSERT` statement that
+will either `CREATE` a new record or `UPDATE` and existing one. This will only work because we have defined the `INDEX` to be `UNIQUE`.
+
+Thanks to Beryl on the SurrealDB Discord server for a much shorter and better solution than the one I wrote originally.
 
 ```rust
 if 2 == args.len() {
-    let name = &args[1];
-    let mut count = 0;
+    increment(&db, &args[1]).await?;
+    return Ok(());
+}
+```
 
-    let mut entries = db
-        .query("SELECT name, count FROM counter WHERE name = $name")
-        .bind(("name", name))
-        .await?;
-    let entries: Vec<Entry> = entries.take(0)?;
-    if let Some(entry) = entries.into_iter().next() {
-        count = entry.count;
-    }
-
-    count += 1;
-    println!("{}", count);
-
+```rust
+async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
     let response = db
-        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count=$count")
+        .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count += 1;")
         .bind(("name", name))
-        .bind(("count", count))
+        .bind(("count", 1))
         .await?;
 
     match response.check() {
-        Ok(_) => return Ok(()),
+        Ok(mut entries) => {
+            let entries: Vec<Entry> = entries.take(0)?;
+            // fetching the first (and hopefully only) entry
+            if let Some(entry) = entries.into_iter().next() {
+                println!("{}", entry.count);
+            }
+
+            Ok(())
+        }
         Err(err) => {
             eprintln!("Could not add entry {}", err);
             std::process::exit(2);
         }
-    };
+    }
 }
 ```
-
-However there is an issue with this implementation. If this application is execute in parallel there is a chance that two process read from the database at the same time and write back the incremented
-value. If let's say they both read that "foo" was had 3 then they will both increment it to 4. Thereby we would undercount. I think I could solve this with transactions, but I asked this in the Discord
-channel of SurrealDB and they might have better suggestions. I'll update the solution once I get a reply.
-
 
 ### Listing all the counters
 
