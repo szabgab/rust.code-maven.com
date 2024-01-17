@@ -1,6 +1,7 @@
 ---
 title: Image - a crate to generate and manipulate images in Rust
 timestamp: 2023-12-27T13:00:01
+author: szabgab
 published: true
 description: Create new images, change existing images in Rust
 tags:

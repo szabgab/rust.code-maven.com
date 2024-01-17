@@ -1,6 +1,7 @@
 ---
 title: Getting started with Loco, the one-person web framework for Rust
 timestamp: 2023-12-03T17:30:01
+author: szabgab
 published: true
 description: Loco is a Rails-like web framework in the making. Let's try it.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Subscribe to the Rust Maven newsletter
 timestamp: 2023-10-10T14:30:01
+author: szabgab
 published: true
 description: Get notified when I add more entries or when I release new versions of the Rust-related projects.
 ---

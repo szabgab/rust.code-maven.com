@@ -1,6 +1,7 @@
 ---
 title: Expect one command line parameter in Rust
 timestamp: 2023-09-29T14:30:01
+author: szabgab
 published: true
 description: A common patter in many command line application so expect and acept a single command line parameter, often the name of a file.
 tags:

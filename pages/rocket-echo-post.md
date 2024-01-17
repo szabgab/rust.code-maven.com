@@ -1,6 +1,7 @@
 ---
 title: Rocket - echo using HTTP POST - form handling
 timestamp: 2024-01-02T20:30:01
+author: szabgab
 published: true
 description: Allowing the user to submit forms and handling them properly is the core of web application development.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Simple CLI menu in the terminal (color selector)
 timestamp: 2024-01-13T20:30:01
+author: szabgab
 published: true
 description: Several ways to show a menu on the command line and accept input from the user.
 tags:

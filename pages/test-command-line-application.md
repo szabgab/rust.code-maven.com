@@ -1,6 +1,7 @@
 ---
 title: Test command line application written in Rust
 timestamp: 2023-12-30T10:30:01
+author: szabgab
 published: true
 description: Testing a CLI - Command Line Interface or command line application by running it as an external program.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Simple blocking HTTP GET request in Rust
 timestamp: 2023-10-03T17:30:01
+author: szabgab
 published: true
 description:
 tags:

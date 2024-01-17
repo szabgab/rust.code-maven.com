@@ -1,6 +1,7 @@
 ---
 title: Crop image using Rust
 timestamp: 2023-12-05T16:30:01
+author: szabgab
 published: true
 description: Cropping is the act of cutting out a part of an image while keeping the quality of the left-over image.
 tags:

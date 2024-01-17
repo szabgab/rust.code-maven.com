@@ -1,6 +1,7 @@
 ---
 title: CLI - Command Line Interface in Rust
 timestamp: 2024-01-05T08:30:01
+author: szabgab
 published: true
 description: Command Line Applications or just tools that run on the command line.
 tags:

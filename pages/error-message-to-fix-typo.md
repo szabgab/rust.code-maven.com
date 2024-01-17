@@ -1,6 +1,7 @@
 ---
 title: Rust error message to fix a typo
 timestamp: 2023-08-30T11:52:01
+author: szabgab
 published: true
 description: Error messages can be annoying, but this one is a really nice recommendation of the Rust compiler to fix a typo.
 tags:

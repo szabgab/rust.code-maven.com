@@ -1,6 +1,7 @@
 ---
 title: Rouille - Hello World in text/html
 timestamp: 2024-01-01T15:10:02
+author: szabgab
 published: true
 description:
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Add the Display trait to a vector of strings in Rust
 timestamp: 2023-12-21T09:50:01
+author: szabgab
 published: true
 description: How to implement a trait for a built-in type or for a type-alias for a built-in type?
 tags:

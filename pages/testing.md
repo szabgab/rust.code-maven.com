@@ -1,6 +1,7 @@
 ---
 title: Testing in Rust
 timestamp: 2024-01-05T07:50:01
+author: szabgab
 published: true
 description: Writing unit, integration, acceptance, regression, performance, etc. tests in Rust.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Boolean not !"
 timestamp: 2023-12-06T07:00:01
+author: szabgab
 published: true
 description:
 tags:

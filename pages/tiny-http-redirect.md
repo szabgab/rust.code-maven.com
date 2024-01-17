@@ -1,6 +1,7 @@
 ---
 title: Tiny HTTP redirect URL
 timestamp: 2023-12-21T11:30:01
+author: szabgab
 published: true
 description: HTTP Redirecting a page to another URL.
 tags:

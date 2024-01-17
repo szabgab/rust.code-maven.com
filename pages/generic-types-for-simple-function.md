@@ -1,6 +1,7 @@
 ---
 title: Generic types for function parameters in Rust 🦀
 timestamp: 2023-12-19T09:43:01
+author: szabgab
 published: true
 description: Generics allow us to create functions that can work on more than a single fixed type of value.
 tags:

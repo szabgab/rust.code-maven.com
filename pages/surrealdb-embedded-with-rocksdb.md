@@ -1,6 +1,7 @@
 ---
 title: Setting up embedded SurrealDB with RocksDB backend in Rust
 timestamp: 2024-01-10T10:30:01
+author: szabgab
 published: true
 description: A simple example just to show the basics of setting up and embedded SurrealDB database in Rust
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Tiny HTTP - path based routing
 timestamp: 2023-12-15T12:30:01
+author: szabgab
 published: true
 description: Path based routing is the idea that each path in a URL is mapped to a function and that function handles the request.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Embedding simple CSV file in Rust application
 timestamp: 2023-11-08T06:30:01
+author: szabgab
 published: true
 description:
 tags:

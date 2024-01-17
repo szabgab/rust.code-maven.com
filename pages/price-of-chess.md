@@ -1,6 +1,7 @@
 ---
 title: The price of Chess is 18446744073709551615 grains of rice
 timestamp: 2023-11-22T11:00:01
+author: szabgab
 published: true
 description:
 tags:

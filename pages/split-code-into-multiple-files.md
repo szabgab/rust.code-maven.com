@@ -1,6 +1,7 @@
 ---
 title: Split code into multiple Rust files
 timestamp: 2024-01-11T16:50:01
+author: szabgab
 published: true
 description: In order to better organize our code we might want to split it into multiple files.
 tags:

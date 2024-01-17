@@ -1,6 +1,7 @@
 ---
 title: "Rocket: Hello World with tests in separate file"
 timestamp: 2023-12-22T16:40:01
+author: szabgab
 published: true
 description: It is better to put the tests in separate files.
 tags:

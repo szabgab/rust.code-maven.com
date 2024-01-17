@@ -1,6 +1,7 @@
 ---
 title: Setting up an in-memory SurrealDB database in Rust
 timestamp: 2024-01-10T11:30:01
+author: szabgab
 published: true
 description: Before getting started on any bigger demo, this example shows how to set up and in-memory Surreal Database in Rust.
 tags:

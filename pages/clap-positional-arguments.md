@@ -1,6 +1,7 @@
 ---
 title: Clap - positional command line arguments in Rust
 timestamp: 2023-12-27T12:46:01
+author: szabgab
 published: true
 description: Positional command line arguments do not have a named prefix starting with a dash.
 tags:

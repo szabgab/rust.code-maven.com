@@ -1,6 +1,7 @@
 ---
 title: The feedback loop for learning Rust
 timestamp: 2023-09-07T07:30:01
+author: szabgab
 published: true
 description:
 tags:

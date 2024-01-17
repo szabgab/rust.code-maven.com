@@ -1,6 +1,7 @@
 ---
 title: Command line multi-counter with storage in JSON file
 timestamp: 2023-12-29T14:45:01
+author: szabgab
 published: true
 description: A command-line program that can maintain several counters in a JSON  file.
 tags:

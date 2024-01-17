@@ -1,6 +1,7 @@
 ---
 title: Open Source Applications written in Rust
 timestamp: 2023-12-26T18:30:01
+author: szabgab
 published: true
 description: One of the best ways to learn how to write end-user applications in Rust is looking at such applications.
 tags:

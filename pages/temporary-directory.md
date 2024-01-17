@@ -1,6 +1,7 @@
 ---
 title: Temporary directory in Rust
 timestamp: 2023-12-30T19:20:01
+author: szabgab
 published: true
 description: Temporary directory
 tags:

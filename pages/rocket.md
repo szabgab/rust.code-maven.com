@@ -1,6 +1,7 @@
 ---
 title: Rocket - web development with Rust
 timestamp: 2023-12-22T12:30:01
+author: szabgab
 published: true
 description: Examples with the Rocket web framework for Rustlang
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Serialize and deserialize HashMap to JSON in Rust
 timestamp: 2023-12-29T09:30:01
+author: szabgab
 published: true
 description: Serialize a HashMap to JSON and deserialize JSON to a HashMap in Rust using serde_json.
 tags:

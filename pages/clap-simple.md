@@ -1,6 +1,7 @@
 ---
 title: Clap - getting started accepting command line parameters in Rust
 timestamp: 2023-12-23T12:00:01
+author: szabgab
 published: true
 description: The simplest example using Clap to accept command line parameters in Rust.
 tags:

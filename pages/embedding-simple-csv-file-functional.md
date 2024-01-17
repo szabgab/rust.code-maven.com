@@ -1,6 +1,7 @@
 ---
 title: Embedding simple CSV file and processing in a functional way
 timestamp: 2023-11-19T14:30:01
+author: szabgab
 published: true
 description: A much nicer way to process a simple CSV file embedded in the code.
 tags:

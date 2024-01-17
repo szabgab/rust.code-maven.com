@@ -1,6 +1,7 @@
 ---
 title: Deserialize complex YAML file in Rust
 timestamp: 2023-12-18T14:30:01
+author: szabgab
 published: false
 description:
 tags:

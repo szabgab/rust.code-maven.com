@@ -1,6 +1,7 @@
 ---
 title: Clap - default values for CLI command line parameters in Rust
 timestamp: 2023-12-27T08:35:01
+author: szabgab
 published: true
 description: Command line parameters are usually optional and have default values. This is how it is done in Rust using Clap.
 tags:

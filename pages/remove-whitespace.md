@@ -1,6 +1,7 @@
 ---
 title: "Remove whitespace: trim, strip in Rust"
 timestamp: 2024-01-03T20:20:01
+author: szabgab
 published: true
 description: Rust has functions to remove spaces, newlines, tabs from the left and the right end of a string.
 tags:

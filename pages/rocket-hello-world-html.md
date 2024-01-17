@@ -1,6 +1,7 @@
 ---
 title: Rocket - Hello World returning HTML
 timestamp: 2024-01-02T16:25:01
+author: szabgab
 published: true
 description: Set the content-type to text/html
 tags:

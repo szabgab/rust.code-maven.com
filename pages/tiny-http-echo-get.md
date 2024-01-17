@@ -1,6 +1,7 @@
 ---
 title: "Tiny HTTP: Echo using GET request"
 timestamp: 2023-12-13T17:10:01
+author: szabgab
 published: true
 description: A simple GET request, parsing the parameters, returning the text back
 tags:

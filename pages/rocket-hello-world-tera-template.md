@@ -1,6 +1,7 @@
 ---
 title: Rocket Hello World with Tera Templates
 timestamp: 2024-01-02T19:20:01
+author: szabgab
 published: true
 description: The Rocket web framework has integration with the Tera template system
 tags:

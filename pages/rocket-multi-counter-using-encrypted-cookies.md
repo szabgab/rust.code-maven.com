@@ -1,6 +1,7 @@
 ---
 title: Rocket - multi counter using encrypted cookies
 timestamp: 2024-01-12T18:00:01
+author: szabgab
 published: true
 description: Using the secret_key and encrypted (private) cookies in this simple counter example.
 tags:

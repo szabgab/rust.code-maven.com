@@ -1,6 +1,7 @@
 ---
 title: Rust Compilation size and embedded string
 timestamp: 2023-11-10T04:30:01
+author: szabgab
 published: true
 description: The embedded string and the size of the Rust are not linear, but we can reduce the size by more than 90%.
 tags:

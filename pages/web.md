@@ -1,6 +1,7 @@
 ---
 title: Web development in Rust
 timestamp: 2023-12-20T11:00:01
+author: szabgab
 published: true
 description: Web application development tools and frameworks in Rust
 tags:

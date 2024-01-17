@@ -1,6 +1,7 @@
 ---
 title: Multi-counter with embedded SurrealDB database
 timestamp: 2024-01-16T14:40:01
+author: szabgab
 published: true
 description: Simple demo of a command-line application using SurrealDB to store several counters.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Tiny HTTP: generate dynamic response, show the current time ⏰"
 timestamp: 2023-12-15T08:30:01
+author: szabgab
 published: true
 description: Returning the same static content every time the user visits is boring. Generating dynamic content is a bit more interesting.
 tags:

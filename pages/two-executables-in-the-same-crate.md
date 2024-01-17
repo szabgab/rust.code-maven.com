@@ -1,6 +1,7 @@
 ---
 title: Two or more executables in the same Rust crate
 timestamp: 2023-09-12T12:30:01
+author: szabgab
 published: true
 description:
 tags:

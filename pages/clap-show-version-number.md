@@ -1,6 +1,7 @@
 ---
 title: Clap - show version number of the command line application in Rust
 timestamp: 2023-12-25T12:30:01
+author: szabgab
 published: true
 description: It is quite easy with clap to include the version number of the command-line tool.
 tags:

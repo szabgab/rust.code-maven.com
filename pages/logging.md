@@ -1,6 +1,7 @@
 ---
 title: Getting started with logging in Rust
 timestamp: 2023-12-04T11:30:01
+author: szabgab
 published: true
 description: Mastering logging can help you save a lot of time both during development and later when there are problems in production.
 tags:

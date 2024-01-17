@@ -1,6 +1,7 @@
 ---
 title: Rocket - multi-counter using cookies
 timestamp: 2024-01-10T09:10:01
+author: szabgab
 published: true
 description: Showing how to create a view-counter based on a cookie that will count the number of visits of that specific browser.
 tags:

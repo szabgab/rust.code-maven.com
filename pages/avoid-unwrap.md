@@ -1,6 +1,7 @@
 ---
 title: Avoid unwrap
 timestamp: 2024-01-09T08:40:01
+author: szabgab
 published: true
 description: unwrap can be useful, but if you want to make sure your code does not have it, then  you can ask Clippy to help.
 tags:

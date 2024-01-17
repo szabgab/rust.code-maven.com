@@ -1,6 +1,7 @@
 ---
 title: JSON and Rust
 timestamp: 2023-12-28T08:30:01
+author: szabgab
 published: true
 description: JSON is used everywhere so being able to serialized and deserialize JSON is very important in Rustlang as well.
 tags:

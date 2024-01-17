@@ -1,6 +1,7 @@
 ---
 title: Deserializing YAML - deny unknown fields
 timestamp: 2023-12-18T16:00:01
+author: szabgab
 published: true
 description: If we have default values or fields are optional then we might never catch if there is a typo in one of the fields.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Create and image and draw a line in Rust
 timestamp: 2023-10-01T19:30:01
+author: szabgab
 published: true
 description:
 tags:

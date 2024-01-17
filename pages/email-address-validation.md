@@ -1,6 +1,7 @@
 ---
 title: Email address validation in Rust
 timestamp: 2024-01-04T06:30:01
+author: szabgab
 published: true
 description: When accepting and email address in a registration from it is recommended to validate that it is in the correct format and it belongs to the person who typed it in.
 tags:

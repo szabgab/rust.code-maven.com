@@ -1,6 +1,7 @@
 ---
 title: Prompt - read input from Standard Input (STDIN) in Rust
 timestamp: 2023-12-31T18:20:01
+author: szabgab
 published: true
 description: Python has the input function, other languages have a prompt function. This is how we get some input from the user in Rust.
 tags:

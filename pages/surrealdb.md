@@ -1,6 +1,7 @@
 ---
 title: SurrealDB
 timestamp: 2024-01-10T10:25:01
+author: szabgab
 published: true
 description: SurrealDB is feature-rich database written in Rust.
 tags:

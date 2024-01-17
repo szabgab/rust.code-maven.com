@@ -1,6 +1,7 @@
 ---
 title: Default arguments for functions in Rust using macros
 timestamp: 2023-12-19T17:00:01
+author: szabgab
 published: true
 description: Rust does not allow the declaration of default values to function parameters, but we can create macros for that.
 tags:

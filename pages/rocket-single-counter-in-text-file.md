@@ -1,6 +1,7 @@
 ---
 title: Rocket - Single counter in a plain text file
 timestamp: 2024-01-05T13:40:01
+author: szabgab
 published: true
 description: An example to count the number of visits. Part of the counter example series.
 tags:

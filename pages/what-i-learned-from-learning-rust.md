@@ -1,6 +1,7 @@
 ---
 title: What I learned From Learning Rust
 timestamp: 2023-09-12T10:30:01
+author: szabgab
 published: true
 description: A few links I used as the background in my presentation.
 tags:

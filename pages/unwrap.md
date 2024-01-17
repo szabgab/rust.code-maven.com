@@ -1,6 +1,7 @@
 ---
 title: unwrap, one way to handle errors in Rust
 timestamp: 2024-01-08T15:50:01
+author: szabgab
 published: true
 description: unwrap is sweeping the error under the carpet untill the garbage burts.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Clap - Add help text for each command line parameter in Rust
 timestamp: 2023-12-27T10:32:01
+author: szabgab
 published: true
 description: Extend the help message with detailed explanation for each parameter.
 tags:

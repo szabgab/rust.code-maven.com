@@ -1,6 +1,7 @@
 ---
 title: Print double quotes in a string in Rust (")
 timestamp: 2023-09-29T13:30:01
+author: szabgab
 published: true
 description:
 tags:

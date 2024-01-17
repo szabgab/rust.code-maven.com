@@ -1,6 +1,7 @@
 ---
 title: Clap - subcommands for command line applications in Rust
 timestamp: 2024-01-11T11:11:01
+author: szabgab
 published: true
 description: Clap allows the creation of subcommands where each subcommand can have its own separate set of parameters.
 tags:

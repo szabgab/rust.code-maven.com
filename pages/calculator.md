@@ -1,6 +1,7 @@
 ---
 title: Building a command line calculator in Rust
 timestamp: 2023-11-08T14:30:01
+author: szabgab
 published: false
 description: A short tutorial on writing a command line calculator in Rust.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Read simple JSON and deserialize into a struct
 timestamp: 2023-12-01T11:30:01
+author: szabgab
 published: true
 description: Deserializing a JSON string is not too hard especially if the JSON is simple and if we don't need all the fields.
 tags:

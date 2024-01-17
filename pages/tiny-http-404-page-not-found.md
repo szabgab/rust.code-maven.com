@@ -1,6 +1,7 @@
 ---
 title: Tiny HTTP - Setting status to 404 page not found
 timestamp: 2023-12-20T10:22:01
+author: szabgab
 published: true
 description: It is not enough to display the text page not found, one also has to set the HTTP status code returned by the server to 404.
 tags:

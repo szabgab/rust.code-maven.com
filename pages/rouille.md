@@ -1,6 +1,7 @@
 ---
 title: Rouille a web micro-framework in Rust
 timestamp: 2024-01-01T14:30:01
+author: szabgab
 published: true
 description: A tutorial on using Rouille to create web application in the Rust programming language.
 tags:

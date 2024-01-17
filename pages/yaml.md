@@ -1,6 +1,7 @@
 ---
 title: YAML and Rust
 timestamp: 2023-12-18T15:30:01
+author: szabgab
 published: true
 description: YAML is a file format often used as a configuration file. Most of the programming languages have a way to deserialize YAML into some internal data structure. So does Rust via serde.
 tags:

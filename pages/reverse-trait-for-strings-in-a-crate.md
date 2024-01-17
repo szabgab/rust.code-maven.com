@@ -1,6 +1,7 @@
 ---
 title: Implement the reverse trait for strings in a reusable crate
 timestamp: 2024-01-09T20:40:01
+author: szabgab
 published: true
 description: If we would like to make the trait we created usable by others as well we can make it reusable by putting it in a stand-alone crate.
 tags:

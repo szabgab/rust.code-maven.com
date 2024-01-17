@@ -1,6 +1,7 @@
 ---
 title: ARGV - command line parameters for simple CLI program
 timestamp: 2023-11-28T12:30:01
+author: szabgab
 published: true
 description:
 tags:

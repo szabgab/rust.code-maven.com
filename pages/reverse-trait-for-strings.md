@@ -1,6 +1,7 @@
 ---
 title: Implement the reverse trait for strings
 timestamp: 2024-01-09T19:10:01
+author: szabgab
 published: true
 description: We can extend the functionality of types with additional methods using traits.
 tags:

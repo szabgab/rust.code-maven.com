@@ -1,6 +1,7 @@
 ---
 title: Clap - short command line parameters
 timestamp: 2023-12-27T10:15:01
+author: szabgab
 published: true
 description: Short command line flags make it easier to type in commonly used parameters.
 tags:

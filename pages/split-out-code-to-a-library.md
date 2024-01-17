@@ -1,6 +1,7 @@
 ---
 title: How to refer to code that was split out to a library in Rust?
 timestamp: 2023-08-31T16:30:01
+author: szabgab
 published: true
 description: How to make sure the code of a crate does not need to be changed when the crate is renamed.
 tags:

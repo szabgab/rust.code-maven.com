@@ -1,6 +1,7 @@
 ---
 title: Clap - Command Line Argument Parser for Rust
 timestamp: 2023-12-24T08:30:01
+author: szabgab
 published: true
 description: Clap is a simple to use, efficient, and full-featured Command Line Argument Parser for Rustlang.
 tags:

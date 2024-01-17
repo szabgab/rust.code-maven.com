@@ -1,6 +1,7 @@
 ---
 title: Set default values while deserializing YAML in Rust
 timestamp: 2023-12-18T15:15:01
+author: szabgab
 published: true
 description: Some YAML files might be missing some value. In some cases we might want to set default values in the deserialized struct.
 tags:

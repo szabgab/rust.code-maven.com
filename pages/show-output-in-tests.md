@@ -1,6 +1,7 @@
 ---
 title: Show standard output and standard error in tests in Rust
 timestamp: 2023-12-30T18:30:01
+author: szabgab
 published: true
 description: Sometimes we would like to include print statements in the tests in Rust. How can we see them?
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Functions that end with an exclamation mark in Rust !
 timestamp: 2023-11-30T09:30:01
+author: szabgab
 published: true
 description: There are a number of function-like calls in Rust that end by an exclamation mark. What are those?
 tags:

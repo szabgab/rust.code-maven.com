@@ -1,6 +1,7 @@
 ---
 title: "Rocket: Web-based Hello World! with tests"
 timestamp: 2023-12-22T12:31:01
+author: szabgab
 published: true
 description: The most simple Hello World web aplication in Rust with embedded tests.
 tags:

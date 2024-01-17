@@ -1,6 +1,7 @@
 ---
 title: SurrealDB in-memory with SQL demo in Rust
 timestamp: 2024-01-10T18:30:01
+author: szabgab
 published: true
 description: In-memory databases can be used for easier data analysis and also for showing example without the need to think about the disk.
 tags:

@@ -1,6 +1,7 @@
 ---
 title: Hard-coded vector of Strings in Rust
 timestamp: 2024-01-13T18:50:01
+author: szabgab
 published: true
 description: Sometimes, especially for examples, I need a vector of hard coded values that resemble values I read from a file. So String types.
 tags:

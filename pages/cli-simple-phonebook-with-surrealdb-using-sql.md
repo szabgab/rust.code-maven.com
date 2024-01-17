@@ -1,6 +1,7 @@
 ---
 title: Simple command line phonebook with SurrealDB using SQL
 timestamp: 2023-12-30T21:30:01
+author: szabgab
 published: false
 description:
 tags:

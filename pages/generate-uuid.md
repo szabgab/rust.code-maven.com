@@ -1,6 +1,7 @@
 ---
 title: Generate uuid, a Universally unique identifier in Rust
 timestamp: 2024-01-04T09:20:01
+author: szabgab
 published: true
 description: It is very simple to generate a UUID in Rust, but there are a lot more option than I expected.
 tags:
