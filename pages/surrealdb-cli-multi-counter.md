@@ -121,7 +121,7 @@ if 2 < args.len() {
 I guess this is the heart of the program where we fetch the current value of the counter using an `INSERT` statement that
 will either `CREATE` a new record or `UPDATE` and existing one. This will only work because we have defined the `INDEX` to be `UNIQUE`.
 
-Thanks to Beryl on the SurrealDB Discord server for a much shorter and better solution than the one I wrote originally.
+Thanks to Beryl on the [SurrealDB Discord server](https://surrealdb.com/community) for a much shorter and better solution than the one I wrote originally.
 
 ```rust
 if 2 == args.len() {
