@@ -88,6 +88,8 @@ There are a number of projects hosted as subdomains of [CLI.rs](https://cli.rs/)
 * [Trippy](https://trippy.cli.rs/) combines the functionality of traceroute and ping and is designed to assist with the analysis of networking issues.
 * [whereiam](http://whereiam.cli.rs/) An Implementation of pwd.
 
+* [jwt-ui](https://github.com/jwt-rs/jwt-ui) - A Terminal UI for decoding/encoding JSON Web Tokens.
+
 
 ## Other
 
