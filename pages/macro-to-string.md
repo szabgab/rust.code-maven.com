@@ -1,6 +1,7 @@
 ---
 title: Macro to_string
 timestamp: 2024-01-17T09:30:01
+author: szabgab
 published: true
 description: Sometimes I get tired typing in to_string, especially in test cases so I wrote this macro.
 tags:
