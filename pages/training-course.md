@@ -1,7 +1,6 @@
 ---
 title: Rust training courses
 timestamp: 2023-11-30T10:10:01
-author: szabgab
 published: true
 description: Gabor Szabo, the author of the Rust Maven site provides Rust training courses.
 tags:
