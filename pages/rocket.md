@@ -32,3 +32,4 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Single counter in a plain text file](/rocket-single-counter-in-text-file).
 * [Multi-counter using cookies](/rocket-multi-counter-using-cookies) - `CookieJar`, `add`, `get`.
 * [Multi counter using encrypted cookies](/rocket-multi-counter-using-encrypted-cookies) - `add_private`, `get_private`, `secret_key`,`Rocket.toml`, `private_cookie`.
+* [Liniting issues with Rocket](/rocket-linting) - Clippy
