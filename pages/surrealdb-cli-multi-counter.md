@@ -6,6 +6,7 @@ published: true
 description: Simple demo of a command-line application using SurrealDB to store several counters.
 tags:
     - SurrealDB
+    - RocksDB
     - CLI
     - DEFINE
     - SELECT
