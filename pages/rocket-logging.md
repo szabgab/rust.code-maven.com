@@ -45,7 +45,7 @@ We can run the application with `cargo run` and then when visit the web site at 
 ![](images/rocket-logging.png)
 
 
-But oh, we only see the info, warn, and error messages.
+But oh, we only see the info, warn, and error messages. We don't see the **debug** message.
 
 
 ## Configuring the log level
@@ -53,7 +53,7 @@ But oh, we only see the info, warn, and error messages.
 
 Rocket allows us to [configure](https://rocket.rs/v0.5/guide/configuration/) many things in the `Rocket.toml` file.
 
-So I created it and added an entry to change the default "normal" level to "debug".
+So I created it and added an entry to change the default **normal** level to **debug**.
 
 ![](examples/rocket/logging/Rocket.toml)
 
