@@ -34,6 +34,7 @@ There are a number of series of articles on the site in the following topics:
     * [Rouille](/rouille) - simple web development framework.
 * Databases
     * [SurrealDB](/surrealdb)
+* Linting with [Clippy](/tags/clippy)
 
 
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
