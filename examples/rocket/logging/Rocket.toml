@@ -1,0 +1,3 @@
+[debug]
+#log_level = "normal"
+log_level = "debug"
