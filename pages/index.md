@@ -32,7 +32,8 @@ There are a number of series of articles on the site in the following topics:
     * [Rocket](/rocket) - web development framework for Rust.
     * [Loco](/loco) - web development framework for Rust.
     * [Rouille](/rouille) - simple web development framework.
-* [SurrealDB](/surrealdb)
+* Databases
+    * [SurrealDB](/surrealdb)
 
 
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
