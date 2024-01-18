@@ -13,7 +13,7 @@ The site also includes the [slides](/slides/rust/) of my [Rust training courses]
 I hope you will enjoy the content and encourage me to improve the site and write more articles.
 
 You might think that this site has some relation to the Java Maven, but I'll have to disappoint you. The word maven is just an (almost) ordinary word in English.
-It actually came from Hebrew word meaning "understands" via Yiddish to American English and it basically means "someone who understands things and likes to explain them".
+It actually came from the Hebrew word מבין meaning "understands" via Yiddish to American English and it basically means "someone who understands things and likes to explain them".
 
 Or at least that's how I use it.
 
@@ -32,6 +32,7 @@ There are a number of series of articles on the site in the following topics:
     * [Rocket](/rocket) - web development framework for Rust.
     * [Loco](/loco) - web development framework for Rust.
     * [Rouille](/rouille) - simple web development framework.
+* [SurrealDB](/surrealdb)
 
 
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.

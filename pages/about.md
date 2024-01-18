@@ -22,10 +22,10 @@ Seeing the name **Maven** people often think that is has something to do with th
 
 When I first encountered the word I thought it would fit me well. It did not sound as pretentious as calling myself an "expert" and it was connected to my roots.
 
-Originally I created a web site called [Perl Maven](https://perlmaven.com/) that focused exclusively on the Perl programming language.
+Originally, in 2005, I created a web site called [Perl Maven](https://perlmaven.com/) that focused exclusively on the **Perl** programming language.
 It became quite popular. It is the 3rd most visited Perl-related web-site, after the site hosting the documentation of the language and that of all the 3rd party libraries. It is running on a Perl-based web application.
 
-Then, when I wanted to write about other programming languages as well I created the [Code Maven](https://code-maven.com/) that runs on the same code-base and covers way too many topics.
+Then, when in 2015 I wanted to write about other programming languages as well I created the [Code Maven](https://code-maven.com/) that runs on the same code-base and covers way too many topics.
 
-Since I have started to write about Rust I decided to have a fresh start. The content is hosted on a separate sub-domain and the code behind the site is being written from scratch in Rust. The [source code](https://github.com/szabgab/code-maven.rs) is available. This of course means that many of the features that already existed in the old system are still missing, but in time I'll implement the ones I need.
+In August 2023 when I started to write about **Rust** I decided to have a fresh start. The content is hosted on a separate sub-domain and the code behind the site is being written from scratch in Rust. The [source code](https://github.com/szabgab/code-maven.rs) is available. This of course means that many of the features that already existed in the old system are still missing, but in time I'll implement the ones I need.
 
