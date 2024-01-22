@@ -1,0 +1,5 @@
+[debug]
+custom_a = "Hello World!"
+
+[release]
+log_level = "normal"
