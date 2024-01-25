@@ -1,8 +1,8 @@
 ---
-title: Set the User-Agent in a HTTP request using Rust rewest
-timestamp: 2024-01-03T14:30:01
+title: Set the User-Agent in a HTTP request using Rust reqwest
+timestamp: 2024-01-25T13:40:01
 author: szabgab
-published: false
+published: true
 description:
 tags:
     - User Agent

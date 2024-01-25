@@ -35,6 +35,7 @@ There are a number of series of articles on the site in the following topics:
 * Databases
     * [SurrealDB](/surrealdb)
 * Linting with [Clippy](/tags/clippy)
+* [reqwest](/reqwest) HTTP client for Rust.
 
 
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
