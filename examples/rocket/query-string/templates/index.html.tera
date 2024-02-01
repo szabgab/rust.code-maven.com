@@ -1,0 +1,8 @@
+<h1>Show</h1>
+<form method="GET" action="/show">
+<input name="shape" type="radio" value="square"> square
+<input name="shape" type="radio" value="circle"> circle
+<input name="shape" type="radio" value="triangle"> triangle
+<input name="color" type="text">
+<input type="submit" value="Show">
+</form>
