@@ -1,9 +1,9 @@
 ---
 title: Rocket - process Query String of a GET request
-timestamp: 2024-01-03T14:30:01
+timestamp: 2024-02-01T14:30:01
 author: szabgab
 published: true
-description:
+description: How to handle parameters received on the URL of a GET request.
 tags:
     - Rocket
     - web
