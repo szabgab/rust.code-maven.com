@@ -1,0 +1,4 @@
+Try  
+Deep: <a href="/deep/42">number</a> or <a href="/deep/hello">string</a><br>
+Early return with match: <a href="/early-match/42">number</a> or <a href="/early-match/hello">string</a><br>
+Early return map_err: <a href="/early-map/42">number</a> or <a href="/early-map/hello">string</a><br>
