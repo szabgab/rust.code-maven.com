@@ -25,12 +25,19 @@ fn main() {
     println!();
 
     let absolute_pathes = path
-    .read_dir()
-    .unwrap()
-    .map(|de| de.unwrap().path().canonicalize().unwrap().as_os_str().to_str().unwrap().to_owned())
-    .collect::<Vec<String>>();
+        .read_dir()
+        .unwrap()
+        .map(|de| {
+            de.unwrap()
+                .path()
+                .canonicalize()
+                .unwrap()
+                .as_os_str()
+                .to_str()
+                .unwrap()
+                .to_owned()
+        })
+        .collect::<Vec<String>>();
 
     println!("{:?}", absolute_pathes);
-    
- 
 }
