@@ -88,3 +88,10 @@ dotless         None
 
 ![](examples/path/basename/src/main.rs)
 
+## List content of a directory - listdir
+{id: list-content-of-a-directory}
+{i: read_dir}
+{i: file_name}
+
+![](examples/path/list-dir/src/main.rs)
+
