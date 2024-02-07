@@ -88,10 +88,21 @@ dotless         None
 
 ![](examples/path/basename/src/main.rs)
 
+## Relative and absolute path
+{id: relative-and-absolute-path}
+{i: canonicalize}
+
+![](examples/path/full-path/src/main.rs)
+
+
 ## List content of a directory - listdir
 {id: list-content-of-a-directory}
 {i: read_dir}
 {i: file_name}
+{i: canonicalize}
 
 ![](examples/path/list-dir/src/main.rs)
+
+![](examples/path/list-dir/out.out)
+
 

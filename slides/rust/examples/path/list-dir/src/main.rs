@@ -6,11 +6,31 @@ fn main() {
     }
     let path = std::path::PathBuf::from(&args[1]);
 
-    let content = path
+    let filenames = path
         .read_dir()
         .unwrap()
         .map(|de| de.unwrap().file_name().to_str().unwrap().to_owned())
         .collect::<Vec<String>>();
 
-    println!("{:?}", content);
+    println!("{:?}", filenames);
+    println!();
+
+    let relative_pathes = path
+        .read_dir()
+        .unwrap()
+        .map(|de| de.unwrap().path().as_os_str().to_str().unwrap().to_owned())
+        .collect::<Vec<String>>();
+
+    println!("{:?}", relative_pathes);
+    println!();
+
+    let absolute_pathes = path
+    .read_dir()
+    .unwrap()
+    .map(|de| de.unwrap().path().canonicalize().unwrap().as_os_str().to_str().unwrap().to_owned())
+    .collect::<Vec<String>>();
+
+    println!("{:?}", absolute_pathes);
+    
+ 
 }
