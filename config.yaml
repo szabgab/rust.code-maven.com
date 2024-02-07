@@ -2,6 +2,7 @@ url: https://rust.code-maven.com
 repo: https://github.com/szabgab/rust.code-maven.com
 branch: main
 site_name: Rust programming language
+author_name: Gábor Szabó
 link_to_source: true
 footer: Get extra content and notifications in the [Rust Maven newsletter](/subscribe)!.
 tags:
