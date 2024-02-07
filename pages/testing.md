@@ -5,8 +5,8 @@ author: szabgab
 published: true
 description: Writing unit, integration, acceptance, regression, performance, etc. tests in Rust.
 tags:
-    - tests
     - testing
+    - tests
 ---
 
 Writing unit-, integration-, etc. tests should be an integral part of the development work, but in my experience in many organizations it is more like an afterthought. Sometimes relegated to a separate team or separate department.

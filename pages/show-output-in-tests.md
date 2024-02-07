@@ -5,7 +5,7 @@ author: szabgab
 published: true
 description: Sometimes we would like to include print statements in the tests in Rust. How can we see them?
 tags:
-    - tests
+    - testing
     - STDOUT
     - STDERR
     - --show-output

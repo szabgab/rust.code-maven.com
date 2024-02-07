@@ -7,7 +7,7 @@ description: It is better to put the tests in separate files.
 tags:
     - Rocker
     - web
-    - tests
+    - testing
 ---
 
 Part of the series about the [Rocket web framework](/rocket).
