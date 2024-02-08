@@ -107,8 +107,9 @@ The first part of this whole output is the cull configurations this corresponds 
 
 ```
 profile is debug: true
-home "Hello World!"
-home "some default"
+custom_a "some default"
+custom_b "some default"
+custom_in_default "some other default"
 ------
 default: Config {
     profile: Profile(
