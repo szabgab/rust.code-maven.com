@@ -19,10 +19,9 @@ todo:
 The [Rocket web framework](/rocket) configuration system allows you to override the default values and provide additional keys and values in the `Rocket.toml` file located in the root directory
 of the project.
 
-There is a whole page about [Rocket configuration](https://rocket.rs/v0.5/guide/configuration/), but to tell the truth I could not fully understand it. So maybe what I am showing here is, well
-suboptimal.
+There is a whole page about [Rocket configuration](https://rocket.rs/v0.5/guide/configuration/), At first I could not fully understand it, but I got [help](https://github.com/rwf2/Rocket/discussions/2709).
 
-In this example we'll see how we can access the configuration values in the routes.
+In this example we'll see how we can access custom configuration values in the routes.
 
 ## Dependencies
 
@@ -37,7 +36,6 @@ In this example we'll see how we can access the configuration values in the rout
 
 In this example we use the [logging facility of Rocket](/rocket-logging) we have already seen.
 
-
 Get the `profile` field of the configuration. This will be `debug` when we run `cargo run` (or cargo test) and it should be `release` when we run `cargo run --release` or `cargo test --release`.
 We compare it to the `debug` string, so this should print `true` in debug mode and `false` in release mode. This is how we can check in a given field contains a specific value we are expecting.
 
@@ -47,7 +45,78 @@ rocket::info!("profile is debug: {:?}", rocket::Config::default().profile == "de
 
 ## Custom configuration fields
 
-Beside the configuration fields that Rocket defined we can add our own fields to `Rocket.toml` and we can access them in the routes:
+Besides the configuration fields that Rocket defined we can add our own fields to `Rocket.toml` and we can access them in the routes.
+
+In the main route you will see the recommended way. I also included a route called `/bad` where I show the "brilliant", but apparently not too good solution I had in the original version of this post.
+
+
+## The recommended way
+
+1. Creat a `struct` that defines the fields we are expecting with the types of the fields and optionally add default values to each field.
+2. Make the `struct` Deserialize-able using `serde`.
+
+
+We have this, the name of the struct does not matter.
+
+```rust
+use serde::Deserialize;
+
+#[derive(Deserialize)]
+struct MyConfig {
+    #[serde(default = "get_default_custom_in_default_section")]
+    custom_in_default: String,
+
+    #[serde(default = "get_default_custom_a")]
+    custom_a: String,
+
+    #[serde(default = "get_default_custom_b")]
+    custom_b: String,
+}
+
+fn get_default_custom_in_default_section() -> String {
+    String::from("some other default")
+}
+
+fn get_default_custom_a() -> String {
+    String::from("some default for a")
+}
+
+fn get_default_custom_b() -> String {
+    String::from("some default for b")
+}
+```
+
+
+3. Tell Rocket to include the AdHoc configuration by attaching it:
+
+
+```rust
+#[launch]
+fn rocket() -> _ {
+    rocket::build()
+        .mount("/", routes![index, bad, defaults])
+        .attach(AdHoc::config::<MyConfig>())
+}
+```
+
+4. In the routes where we would like to access the configurations add it to the list of parameters:
+
+```rust
+#[get("/")]
+fn index(config: &State<MyConfig>) -> &'static str {
+```
+
+5. In the route access it via the function parameter
+
+
+```rust
+rocket::info!("custom_a {:?}", config.custom_a);
+```
+
+
+## A bad implementation
+
+Now look a the route handline the `/bad` path:
 
 In the first example we define the type on the variable (and hence we really need a variable here). We also used `unwrap_or` to set a default value in case the field
 is not in `Rocket.toml`. There are several other [unwrap-like methods](/unwrap-or) for other ways to handle this situation.
@@ -87,6 +156,7 @@ cargo run --release
 
 and as we access `http://localhost:8000/` we can see the log messages on the console where we executed the `cargo run ...` command.
 
+We can then also access   `http://localhost:8000/bad` to see the results provided by the "bad" implementation and `http://localhost:8000/defaults` to see the defaults or Rocket.
 
 ## Running the test seeing the logs
 
@@ -107,10 +177,16 @@ The first part of this whole output is the cull configurations this corresponds 
 
 ```
 profile is debug: true
-custom_a "some default"
-custom_b "some default"
-custom_in_default "some other default"
-------
+custom_a "Hello World!"
+custom_b "some default for b"
+custom_in_default "hi"
+```
+
+The `/defaults` route will print this to the console.
+
+
+
+```
 default: Config {
     profile: Profile(
         Uncased {
