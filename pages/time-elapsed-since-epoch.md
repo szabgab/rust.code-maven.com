@@ -1,6 +1,6 @@
 ---
 title: Get the time elapsed since the epoch using only std
-timestamp: 2024-02-10T10:30:01
+timestamp: 2024-02-10T10:40:01
 author: szabgab
 published: true
 description: Get the nanoseconds elapsed since January 1, 1970, the beginning of the (UNIX) world.
