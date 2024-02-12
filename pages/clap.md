@@ -26,5 +26,6 @@ todo:
 * [Clap - positional command line arguments in Rust](/clap-positional-arguments) - `required`, `default_value`
 * [Clap - subcommands](/clap-subcommand) - `Subcommand`
 * [Clap - Showing the description in the help using the about command](/clap-about-the-application) - `about`, `description`.
+* [How to include sha1 from git in the version report using derive interface of Clap?](/clap-include-sha1-from-git-in-the-version-report-using-derive-interface-of-clap) - `version`, `about`, `help`.
 
 Documentation of the [derive interface](https://docs.rs/clap/latest/clap/_derive/).
