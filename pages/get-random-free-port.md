@@ -1,9 +1,9 @@
 ---
 title: Get random free port in Rust
-timestamp: 2024-02-02T11:10:01
+timestamp: 2024-02-12T11:10:01
 author: szabgab
-published: false
-description:
+published: true
+description: When wanting to run a server for testing we will want to find a port that is not in use.
 tags:
     - TcpListener
     - bind
