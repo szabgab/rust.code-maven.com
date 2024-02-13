@@ -1,7 +1,6 @@
 use regex::{Captures, Regex};
 
 fn main() {
-
     // replace every sequnce of letters by x (but not the digits)
     let text = String::from("abc123def");
     let re = Regex::new(r"[A-Za-z]+").unwrap();
@@ -38,10 +37,7 @@ fn main() {
     let text = String::from("abc123def");
     let re = Regex::new(r"(\d)").unwrap();
     let result = re.replace_all(&text, |caps: &Captures| {
-        format!(
-            "{}",
-            2 * caps.get(1).unwrap().as_str().parse::<u8>().unwrap()
-        )
+        format!("{}", 2 * caps[1].parse::<u8>().unwrap())
     });
     println!("{result}"); // abc246def
 }
@@ -49,8 +45,5 @@ fn main() {
 fn double(caps: &Captures) -> String {
     //String::new()
     //format!("{}", 2 * caps.get(1).unwrap().as_str().parse::<u8>().unwrap())
-    format!(
-        "{}",
-        2 * caps.get(1).unwrap().as_str().parse::<u8>().unwrap()
-    )
+    format!("{}", 2 * caps[1].parse::<u8>().unwrap())
 }
