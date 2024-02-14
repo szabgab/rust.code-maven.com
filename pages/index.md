@@ -41,6 +41,10 @@ There are a number of series of articles on the site in the following topics:
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
 * [Community](/meetups)
 
+## The most recent articles
+
+{% latest limit=5 %}
+
 ## Source
 
 Both the [source of the content](https://github.com/szabgab/rust.code-maven.com/) and the source of the code [generating the site](https://github.com/szabgab/code-maven.rs) can be accessed. So if you have any requests for additional content or features for the web site you will know where to submit those requests.
