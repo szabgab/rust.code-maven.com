@@ -16,6 +16,7 @@ authors:
     picture: szabgab.png
 
 show_related: true
+related_pages_title: Related Pages
 
 from:
   name: Gabor Szabo
