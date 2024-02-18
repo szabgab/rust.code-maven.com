@@ -55,6 +55,11 @@
 
 ## Parse string to datetime
 {id: parse-string-to-datetime}
+{i: chrono}
+{i: parse}
+{i: parse_from_str}
+{i: naive_utc}
+{i: with_ymd_and_hms}
 
 ![](examples/chrono/chrono-parse-date-string/Cargo.toml)
 ![](examples/chrono/chrono-parse-date-string/src/main.rs)
