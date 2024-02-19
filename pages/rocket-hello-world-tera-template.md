@@ -26,19 +26,19 @@ For this to work, we'll need  the [rocket_dyn_templates](https://crates.io/crate
 
 This is how `Cargo.toml` looks like:
 
-![](examples/rocket/hello-world-tera-template/Cargo.toml)
+{% include file="examples/rocket/hello-world-tera-template/Cargo.toml" %}
 
 ## Template
 
 The template itself has to be placed in the `templates` folder of our crate and it needs to have the `.html.tera` extension.
 In this example we use some minimal HTML and a single template variable that we want to substitute. We need that double curly braces around it.
 
-![](examples/rocket/hello-world-tera-template/templates/index.html.tera)
+{% include file="examples/rocket/hello-world-tera-template/templates/index.html.tera" %}
 
 
 ## The code
 
-![](examples/rocket/hello-world-tera-template/src/main.rs)
+{% include file="examples/rocket/hello-world-tera-template/src/main.rs" %}
 
 So what are the interesting parts here?
 
@@ -82,7 +82,7 @@ There is nothing new in the test compared to the previous cases. We only changed
 We still verify that the `Content-Type` is `text/html`.
 
 
-![](examples/rocket/hello-world-tera-template/src/tests.rs)
+{% include file="examples/rocket/hello-world-tera-template/src/tests.rs" %}
 
 ```
 cargo test

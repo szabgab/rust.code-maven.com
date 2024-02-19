@@ -68,8 +68,8 @@ Where 302 means "temporary redirect".
 
 ## full source code
 
-![](examples/tiny-http/redirect/Cargo.toml)
+{% include file="examples/tiny-http/redirect/Cargo.toml" %}
 
-![](examples/tiny-http/redirect/src/main.rs)
+{% include file="examples/tiny-http/redirect/src/main.rs" %}
 
 

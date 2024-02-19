@@ -15,10 +15,10 @@ todo:
 
 ## Dependencies
 
-![](examples/regex-replace-text-by-text/Cargo.toml)
+{% include file="examples/regex-replace-text-by-text/Cargo.toml" %}
 
 
 ## Full code
 
-![](examples/regex-replace-text-by-text/src/main.rs)
+{% include file="examples/regex-replace-text-by-text/src/main.rs" %}
 

@@ -22,7 +22,7 @@ For this we are going to use the [chrono](https://crates.io/crates/chrono) crate
 
 First let's see the dependencies in the `Cargo.toml` file:
 
-![](examples/tiny-http/show-time/Cargo.toml)
+{% include file="examples/tiny-http/show-time/Cargo.toml" %}
 
 
 ## The new code
@@ -43,7 +43,7 @@ let html = format!("<table><tr><td>UTC: </td><td>{}</td></tr><tr><td>Localtime: 
 
 ## The Full source code
 
-![](examples/tiny-http/show-time/src/main.rs)
+{% include file="examples/tiny-http/show-time/src/main.rs" %}
 
 
 

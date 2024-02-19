@@ -29,11 +29,11 @@ cd hello-world-text
 
 Add Rouille as a dependency to the `Cargo.toml` file:
 
-![](examples/rouille/hello-world-text/Cargo.toml)
+{% include file="examples/rouille/hello-world-text/Cargo.toml" %}
 
 ## The code
 
-![](examples/rouille/hello-world-text/src/main.rs)
+{% include file="examples/rouille/hello-world-text/src/main.rs" %}
 
 
 * We call [rouille::start_server](https://docs.rs/rouille/latest/rouille/fn.start_server.html) providing it the hostname and port number. Giving "localhost" or "127.0.0.1" will ensure that the web server won't be accessible from outside of your computer. This is a good idea during development.

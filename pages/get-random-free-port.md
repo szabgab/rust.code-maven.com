@@ -13,6 +13,6 @@ todo:
     - show example using it
 ---
 
-![](examples/get-random-free-port/src/main.rs)
+{% include file="examples/get-random-free-port/src/main.rs" %}
 
 This is being used in the tests of the [meet-os](https://github.com/szabgab/meetings.rs) project.

@@ -21,12 +21,12 @@ host: String,
 
 ## Dependencies in the Cargo.toml file
 
-![](examples/clap/help-text/Cargo.toml)
+{% include file="examples/clap/help-text/Cargo.toml" %}
 
 
 ## The full example
 
-![](examples/clap/help-text/src/main.rs)
+{% include file="examples/clap/help-text/src/main.rs" %}
 
 ## Showing the help
 

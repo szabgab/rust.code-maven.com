@@ -60,12 +60,12 @@ cargo add clap --features derive
 
 The `Cargo.toml` looks like this:
 
-![](examples/clap/show-version/Cargo.toml)
+{% include file="examples/clap/show-version/Cargo.toml" %}
 
 
 ## Full Code
 
-![](examples/clap/show-version/src/main.rs)
+{% include file="examples/clap/show-version/src/main.rs" %}
 
 ```
 cargo run -- --version

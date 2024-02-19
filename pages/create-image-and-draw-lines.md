@@ -16,6 +16,6 @@ We started with an [empty image](/create-empty-image) and now with this code we 
 
 ![horizontal red line](examples/create-image-draw-line/red_horizontal_line.png)
 
-![](examples/create-image-draw-line/src/main.rs)
+{% include file="examples/create-image-draw-line/src/main.rs" %}
 
 

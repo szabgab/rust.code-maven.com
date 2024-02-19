@@ -20,7 +20,7 @@ At compile time we usually cannot know if the vector, in which we are looking fo
 If it is empty then calling `min` or `max` will return `None` wrapped in an `Option`. We can either check the return value using
 `match` or we can prevent the call by checking the `len` of the vector.
 
-![](examples/min-max-vector/src/main.rs)
+{% include file="examples/min-max-vector/src/main.rs" %}
 
 
 ```

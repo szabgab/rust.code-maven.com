@@ -38,12 +38,12 @@ and the output:
 
 ## The dependencies
 
-![](examples/simple-blocking-http-reqwest-sending-cookie/Cargo.toml)
+{% include file="examples/simple-blocking-http-reqwest-sending-cookie/Cargo.toml" %}
 
 
 ## The code
 
-![](examples/simple-blocking-http-reqwest-sending-cookie/src/main.rs)
+{% include file="examples/simple-blocking-http-reqwest-sending-cookie/src/main.rs" %}
 
 ## The output
 

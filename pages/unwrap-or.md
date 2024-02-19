@@ -88,7 +88,7 @@ In our example it is 12.
 ## The full example
 
 
-![](examples/unwrap-or/src/main.rs)
+{% include file="examples/unwrap-or/src/main.rs" %}
 
 ## Conclusion
 

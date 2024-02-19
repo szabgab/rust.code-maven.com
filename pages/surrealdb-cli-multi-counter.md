@@ -44,7 +44,7 @@ The data will be stored in a [SurrealDB](/surrealdb) database. To make the setup
 
 SurrealDB can use various storage backends, we are going to us [RocksDB](https://rocksdb.org/).
 
-![](examples/surrealdb/cli-multi-counter/Cargo.toml)
+{% include file="examples/surrealdb/cli-multi-counter/Cargo.toml" %}
 
 ## The code
 
@@ -176,14 +176,14 @@ for entry in entries {
 
 ## The full code
 
-![](examples/surrealdb/cli-multi-counter/src/main.rs)
+{% include file="examples/surrealdb/cli-multi-counter/src/main.rs" %}
 
 
 ## The tests
 
 In the test we run the command line application as an external executable and then compare the result that was printed to the Standard Output with the expected values.
 
-![](examples/surrealdb/cli-multi-counter/tests/tests.rs)
+{% include file="examples/surrealdb/cli-multi-counter/tests/tests.rs" %}
 
 ## Conclusion
 

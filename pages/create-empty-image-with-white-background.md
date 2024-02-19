@@ -16,7 +16,7 @@ more loops to set the borders of the image to black.
 
 ## The source code
 
-![](examples/create-white-image/src/main.rs)
+{% include file="examples/create-white-image/src/main.rs" %}
 
 ## The result
 
@@ -25,5 +25,5 @@ more loops to set the borders of the image to black.
 
 ## The setup
 
-![](examples/create-white-image/Cargo.toml)
+{% include file="examples/create-white-image/Cargo.toml" %}
 

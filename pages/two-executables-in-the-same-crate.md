@@ -25,14 +25,14 @@ I've removed the `src/main.rs` to make the others "symmetric", so we will do the
 
 Instead of that I've added two simple files. Both of them have a `main` function.
 
-![](examples/two-executables/src/one.rs)
+{% include file="examples/two-executables/src/one.rs" %}
 
-![](examples/two-executables/src/two.rs)
+{% include file="examples/two-executables/src/two.rs" %}
 
 Then I've added a `bin` section for each one of the binaries
 
 
-![](examples/two-executables/Cargo.toml)
+{% include file="examples/two-executables/Cargo.toml" %}
 
 
 This way I can run them a

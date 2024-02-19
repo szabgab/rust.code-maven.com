@@ -55,7 +55,7 @@ I can see that the "nearest" method is 10-30 times faster than the others, but i
 
 The `src/main.rs` file then looks like this:
 
-![](examples/resize-image/src/main.rs)
+{% include file="examples/resize-image/src/main.rs" %}
 
 We have two functions, the `get_args` function will look at the command line and return the 4 parameters. The first two will be simple strings.
 The 3rd one is converted to a `u32` (unsigned integer with 32 bits). The 4th parameter is expected to be a string that is then converted
@@ -81,7 +81,7 @@ In the previous solution I did not have any error checking. In several places I 
 I did not want to make the original solution even more complex, so I created a separate one that contains error handling.
 This code also allows the user to provide only 3 parameters and use `FilterType::Nearest` as the default.
 
-![](examples/resize-image-with-error-checking/src/main.rs)
+{% include file="examples/resize-image-with-error-checking/src/main.rs" %}
 
 In most cases the change was simple replacing the `unwrap` call by the use of the `match`. One case, however was particularly interesting.
 

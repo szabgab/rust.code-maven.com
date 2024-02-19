@@ -207,7 +207,7 @@ There is also [add_with_overflow](https://doc.rust-lang.org/std/intrinsics/fn.ad
 
 ## All the source code:
 
-![](examples/overflow/src/main.rs)
+{% include file="examples/overflow/src/main.rs" %}
 
 ## The 20-year-old bug in binary search caused by overflow
 

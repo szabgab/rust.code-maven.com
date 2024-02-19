@@ -177,7 +177,7 @@ I don't think I like this.
 
 ## The full example
 
-![](examples/display-vector-of-strings/src/main.rs)
+{% include file="examples/display-vector-of-strings/src/main.rs" %}
 
 
 ## Conclusion

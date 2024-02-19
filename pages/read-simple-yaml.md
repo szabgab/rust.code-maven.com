@@ -17,18 +17,18 @@ A more time consuming, but more robust way is to define a `struct` mapping all t
 
 For all of them we'll need both [serde_yaml](https://crates.io/crates/serde_yaml) and [serde](https://crates.io/crates/serde) as you can see in the `Cargo.toml` file:
 
-![](examples/read-simple-yaml/Cargo.toml)
+{% include file="examples/read-simple-yaml/Cargo.toml" %}
 
 
 ## Data
 
 Let's see this simple YAML file:
 
-![](examples/read-simple-yaml/data.yaml)
+{% include file="examples/read-simple-yaml/data.yaml" %}
 
 ## The code
 
-![](examples/read-simple-yaml/src/main.rs)
+{% include file="examples/read-simple-yaml/src/main.rs" %}
 
 Before getting to the `main` function we define a `struct` with the fields of the YAML file and the type of values the YAML file has.
 We add the [Deserialize](https://docs.rs/serde/latest/serde/trait.Deserialize.html) **trait** to it.
@@ -69,7 +69,7 @@ What happens if there are extra fields in the YAML file that were not declared i
 
 In this file there is an extra field called `address` that was not defined in the struct.
 
-![](examples/read-simple-yaml/more.yaml)
+{% include file="examples/read-simple-yaml/more.yaml" %}
 
 By default the YAML parser of Serde will ignore these extra fields.
 This is great as it allows us start using the struct even before we manage to map out all the fields.

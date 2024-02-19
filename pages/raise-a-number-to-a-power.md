@@ -12,5 +12,5 @@ We need to explicitely define the type of the base. We can do it by the type ann
 
 Then we use the `pow` function.
 
-![](examples/raise-to-power/src/main.rs)
+{% include file="examples/raise-to-power/src/main.rs" %}
 

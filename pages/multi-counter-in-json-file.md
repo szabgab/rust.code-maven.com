@@ -41,12 +41,12 @@ bar 1
 
 For the JSON serialization and deserialization we'll use [serde_json](https://crates.io/crates/serde_json).
 
-![](examples/multi-counter-in-json-file/Cargo.toml)
+{% include file="examples/multi-counter-in-json-file/Cargo.toml" %}
 
 
 ## The full code
 
-![](examples/multi-counter-in-json-file/src/main.rs)
+{% include file="examples/multi-counter-in-json-file/src/main.rs" %}
 
 ## Explanation
 

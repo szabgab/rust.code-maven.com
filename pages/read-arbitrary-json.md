@@ -26,15 +26,15 @@ use the hand-picked values from the data.
 In order to do this we'll use [serde_json](https://docs.rs/serde_json/latest/serde_json/) as you can see in the `Cargo.toml`
 file:
 
-![](examples/read-arbitrary-json/Cargo.toml)
+{% include file="examples/read-arbitrary-json/Cargo.toml" %}
 
 This is the data file we use. It does not have any real meaning, it just contains all kinds of data types.
 
-![](examples/read-arbitrary-json/data.json)
+{% include file="examples/read-arbitrary-json/data.json" %}
 
 ## The code:
 
-![](examples/read-arbitrary-json/src/main.rs)
+{% include file="examples/read-arbitrary-json/src/main.rs" %}
 
 
 The program expects the name of the JSON file on the command line. We have a function called `get_filename` that will

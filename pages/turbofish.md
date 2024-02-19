@@ -80,7 +80,7 @@ let parts = text.split(',').collect::<Vec<_>>();
 ## Full example
 
 
-![](examples/turbofish/src/main.rs)
+{% include file="examples/turbofish/src/main.rs" %}
 
 ## Note
 

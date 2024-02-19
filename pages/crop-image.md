@@ -63,7 +63,7 @@ We have a function called `get_args` that will get the arguments from the comman
 the correct number of arguments.
 
 
-![](examples/crop-image/src/main.rs)
+{% include file="examples/crop-image/src/main.rs" %}
 
 The [image::open](https://docs.rs/image/latest/image/fn.open.html) function will read the image into memory,
 [crop_imm](https://docs.rs/image/latest/image/enum.DynamicImage.html#method.crop_imm) will return a cropped version of the image.

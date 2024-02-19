@@ -30,10 +30,10 @@ cargo add tiny_http
 
 This will update the `Cargo.toml` file to something like this:
 
-![](examples/tiny-http/hello-world/Cargo.toml)
+{% include file="examples/tiny-http/hello-world/Cargo.toml" %}
 
 
-![](examples/tiny-http/hello-world/src/main.rs)
+{% include file="examples/tiny-http/hello-world/src/main.rs" %}
 
 * First we need to create a "server" by calling `Server::http`. I've added a call to `expect` at the end that will `panic!` if we operation is not successful. For example if the port is already in use.
 * Then we go into an infinite look waiting for clients (browsers) to access the server: `for request in server.incoming_requests() {`.
@@ -97,10 +97,10 @@ We'll have to change the `Content-type` if we want to tell the browser to displa
 
 For this I had to first add another crate called [ascii](https://crates.io/crates/ascii)
 
-![](examples/tiny-http/hello-world-as-html/Cargo.toml)
+{% include file="examples/tiny-http/hello-world-as-html/Cargo.toml" %}
 
 
-![](examples/tiny-http/hello-world-as-html/src/main.rs)
+{% include file="examples/tiny-http/hello-world-as-html/src/main.rs" %}
 
 We had to add a few `use`-statements, create a header:
 

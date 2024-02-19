@@ -23,12 +23,12 @@ Instead we store the counter a **cookie in the browser**. This means that each b
 
 For this example to work we only need the Rocket crate:
 
-![](examples/rocket/multi-counter-using-cookies/Cargo.toml)
+{% include file="examples/rocket/multi-counter-using-cookies/Cargo.toml" %}
 
 
 ## The code
 
-![](examples/rocket/multi-counter-using-cookies/src/main.rs)
+{% include file="examples/rocket/multi-counter-using-cookies/src/main.rs" %}
 
 
 We use the [rocket::http::CookieJar](https://api.rocket.rs/v0.5/rocket/http/struct.CookieJar.html).
@@ -179,7 +179,7 @@ We also print a warning on the console, so if you look at the terminal where you
 
 ## The tests
 
-![](examples/rocket/multi-counter-using-cookies/src/tests.rs)
+{% include file="examples/rocket/multi-counter-using-cookies/src/tests.rs" %}
 
 In the first test-case we send a request without a cookie and check that we received the cookie as expected. It is a field in the `headers`.
 We also check that the content of the page (`response.into_string()`) is what we expected.

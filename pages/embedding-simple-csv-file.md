@@ -15,7 +15,7 @@ use preprocessing to [embed a list of values](/embed-list-of-values).
 
 Now we need to embed a simple CSV file that looks like this:
 
-![](examples/embedded-simple-csv-file/data/languages.csv)
+{% include file="examples/embedded-simple-csv-file/data/languages.csv" %}
 
 It is actually part of the code-base running the Rust Maven web site that maps file extensions to format types.
 
@@ -32,7 +32,7 @@ size of the compiled code. For example in our sample crate the result of `cargo 
 In this case we take a different approach and embed the file as it is.
 For this we use the [include_str!](https://doc.rust-lang.org/std/macro.include_str.html) macro.
 
-![](examples/embedded-simple-csv-file/src/main.rs)
+{% include file="examples/embedded-simple-csv-file/src/main.rs" %}
 
 We can now use `cargo build --release`, we can move the resulting executable anywhere, it will already have the CSV file baked
 into the code so we won't need to distribute it separately.

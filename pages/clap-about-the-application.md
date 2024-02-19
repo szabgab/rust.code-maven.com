@@ -25,11 +25,11 @@ In `Cargo.toml` we need to depend on `clap` and we need to include the `derive` 
 
 We also included a field called `description` in the `Cargo.toml` file.
 
-![](examples/clap/about/Cargo.toml)
+{% include file="examples/clap/about/Cargo.toml" %}
 
 We add the **about** `command` to the `struct`:
 
-![](examples/clap/about/src/main.rs)
+{% include file="examples/clap/about/src/main.rs" %}
 
 Getting help:
 
@@ -57,11 +57,11 @@ $ ./target/release/about --help
 
 Although we added the `description` field to `Cargo.toml` in this example we are not going to use it.
 
-![](examples/clap/about-expression/Cargo.toml)
+{% include file="examples/clap/about-expression/Cargo.toml" %}
 
 We add the **about** `command` to the `struct` and we added some text after it.
 
-![](examples/clap/about-expression/src/main.rs)
+{% include file="examples/clap/about-expression/src/main.rs" %}
 
 Getting help:
 
@@ -83,7 +83,7 @@ In this example we will see how to generate the **about** text displayed by the 
 
 The dependency is the same as before:
 
-![](examples/clap/about-generated-expression/Cargo.toml)
+{% include file="examples/clap/about-generated-expression/Cargo.toml" %}
 
 As the text is generated at run-time I wanted to include something that will change on every run, so the about text includes the
 [time elapsed since the epcoh](/time-elapsed-since-epoch) using only the standard library.
@@ -92,7 +92,7 @@ As the text is generated at run-time I wanted to include something that will cha
 In the **about** command we include a call to the function that will generate the text. The function itself can of course have any name,
 it needs to return a `String`.
 
-![](examples/clap/about-generated-expression/src/main.rs)
+{% include file="examples/clap/about-generated-expression/src/main.rs" %}
 
 If we build a release version and then we run the command with the `--help` flag multiple times, we'll see the time at the top of the response changes.
 

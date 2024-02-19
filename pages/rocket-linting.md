@@ -15,9 +15,9 @@ Recently I started to use Clippy extensively and also applied it to my [Rocket](
 On this page I am going to collected the linting issues I've encountered and hope to also provide answers.
 
 
-![](examples/rocket/lint/Cargo.toml)
+{% include file="examples/rocket/lint/Cargo.toml" %}
 
-![](examples/rocket/lint/src/main.rs)
+{% include file="examples/rocket/lint/src/main.rs" %}
 
 
 ```

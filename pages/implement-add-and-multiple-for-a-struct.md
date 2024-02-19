@@ -187,7 +187,7 @@ impl Mul<Vector> for i32 {
 
 ## Full example
 
-![](examples/2d-vectors/src/main.rs)
+{% include file="examples/2d-vectors/src/main.rs" %}
 
 ## Output
 

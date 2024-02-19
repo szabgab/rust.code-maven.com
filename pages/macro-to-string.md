@@ -12,7 +12,7 @@ tags:
 
 Sometimes I get tired typing in `to_string`, especially in test cases so I wrote this macro.
 
-![](examples/macro-to-string/src/main.rs)
+{% include file="examples/macro-to-string/src/main.rs" %}
 
 I am a bit ambivalent as I don't like one-letter variables or functions name, but I want this to be short.
 

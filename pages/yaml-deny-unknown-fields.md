@@ -38,7 +38,7 @@ In this `struct` we expect two fields, `name` is required, but if there is no `m
 
 This works well when the YAML file has all the fields:
 
-![](examples/yaml-deny-unknown-fields/all.yaml)
+{% include file="examples/yaml-deny-unknown-fields/all.yaml" %}
 
 ```
 name: Foo Bar
@@ -47,7 +47,7 @@ married: true
 
 or when the `married` field is missing:
 
-![](examples/yaml-deny-unknown-fields/missing.yaml)
+{% include file="examples/yaml-deny-unknown-fields/missing.yaml" %}
 
 ```
 name: Foo Bar
@@ -56,7 +56,7 @@ married: false
 
 However if there is a typo and we have `maried` instead of `married`:
 
-![](examples/yaml-deny-unknown-fields/typo.yaml)
+{% include file="examples/yaml-deny-unknown-fields/typo.yaml" %}
 
 Then without the `deny_unknown_fields` we get:
 
@@ -73,11 +73,11 @@ Could not parse YAML file: unknown field `maried`, expected `name` or `married` 
 
 ## Full example
 
-![](examples/yaml-deny-unknown-fields/src/main.rs)
+{% include file="examples/yaml-deny-unknown-fields/src/main.rs" %}
 
 ## Dependencies in Cargo.toml
 
-![](examples/yaml-deny-unknown-fields/Cargo.toml)
+{% include file="examples/yaml-deny-unknown-fields/Cargo.toml" %}
 
 ## A potential problem
 

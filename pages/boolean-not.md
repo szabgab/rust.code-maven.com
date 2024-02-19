@@ -18,7 +18,7 @@ There are several cases when we might want to negate the value of a boolean expr
 Two are shown here, let me know if you think about more distinct cases I should include here.
 
 
-![](examples/boolean-not/src/main.rs)
+{% include file="examples/boolean-not/src/main.rs" %}
 
 
 ## Negate a boolean value

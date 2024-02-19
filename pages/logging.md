@@ -109,9 +109,9 @@ on the page about the [log](https://crates.io/crates/log) crate.
 
 ## The code with log only
 
-![](examples/log-demo/Cargo.toml)
+{% include file="examples/log-demo/Cargo.toml" %}
 
-![](examples/log-demo/src/main.rs)
+{% include file="examples/log-demo/src/main.rs" %}
 
 
 ## Simple logger
@@ -287,9 +287,9 @@ How to implement something similar with [clap](https://crates.io/crates/clap) is
 
 ## The code with several cases
 
-![](examples/simple-log-demo/Cargo.toml)
+{% include file="examples/simple-log-demo/Cargo.toml" %}
 
-![](examples/simple-log-demo/src/main.rs)
+{% include file="examples/simple-log-demo/src/main.rs" %}
 
 ## Conclusion
 

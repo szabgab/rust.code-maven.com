@@ -125,7 +125,7 @@ fn main() {
 
 ## The full source code
 
-![](examples/reverse-trait-for-strings/src/main.rs)
+{% include file="examples/reverse-trait-for-strings/src/main.rs" %}
 
 
 ## Making the trait reusable

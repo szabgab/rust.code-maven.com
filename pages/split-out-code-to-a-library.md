@@ -17,7 +17,7 @@ When you create a crate that needs to be executable, you use `cargo new NAME` th
 
 In this file I created a new function called `hello_in_main_rs` and called it from the `main` function. Creating function in the main.rs file and calling it is the most simple.
 
-![](examples/split-out-code-to-a-library/src/main.rs)
+{% include file="examples/split-out-code-to-a-library/src/main.rs" %}
 
 
 ## lib.rs
@@ -25,7 +25,7 @@ In this file I created a new function called `hello_in_main_rs` and called it fr
 In crates that are libraries the default is to have file called `src/lib.rs` so we can try to create that and a function called `hello_in_lib_rs` in it.
 In order to make it accessible from outside of the `lib.rs` file we also need to use the `pub` prefix in-front of the function declaration.
 
-![](examples/split-out-code-to-a-library/src/lib.rs)
+{% include file="examples/split-out-code-to-a-library/src/lib.rs" %}
 
 Now comes the tricky part. How can we access this function?
 
@@ -33,7 +33,7 @@ The recommended way is to use the name of the crate.
 
 In this example I used the name `split-out-code-to-a-library`. That became the name of the folder `cargo` created and it was also included in the `Cargo.toml` file:
 
-![](examples/split-out-code-to-a-library/Cargo.toml)
+{% include file="examples/split-out-code-to-a-library/Cargo.toml" %}
 
 Those dashes between the words made sense when I created the crate, but we can't use them inside the code. So instead of that we use the same name, but we replace the dashes by underscores. So can call the function this way: `split_out_code_to_a_library::hello_in_lib_rs();` from the `main.rs` file.
 
@@ -47,7 +47,7 @@ On the other hand if we would like to let other crates to use our functions then
 
 So what happens if we create another file called `other.rs` with a function called `hello_in_other_rs` in it? How can we call it from `main.rs`?
 
-![](examples/split-out-code-to-a-library/src/other.rs)
+{% include file="examples/split-out-code-to-a-library/src/other.rs" %}
 
 For this we needed 3 things. In the `other.rs` we had to use the `pub` prefix. (That stand for public and not "place to drink beer".)
 

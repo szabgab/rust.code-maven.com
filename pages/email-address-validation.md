@@ -36,11 +36,11 @@ As I can see from the README of the crate the main suggested usage is to be part
 
 ## Dependencies
 
-![](examples/validate-email/Cargo.toml)
+{% include file="examples/validate-email/Cargo.toml" %}
 
 ## Code
 
-![](examples/validate-email/src/main.rs)
+{% include file="examples/validate-email/src/main.rs" %}
 
 The whole thing is calling the `validator::validate_email` function, passing a string to it an receiving a boolean `true` or `false`.
 

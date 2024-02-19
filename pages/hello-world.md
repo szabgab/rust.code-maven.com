@@ -31,7 +31,7 @@ In the most cases, in most projects you'll use the second approach, but seeing t
 Create a file called `hello.rs` (The actual name does not matter. The `rs` extension is not required either, but it is quite useful to stick to the standard.)
 I've created it in the `examples` folder.
 
-![](examples/hello.rs)
+{% include file="examples/hello.rs" %}
 
 Then run the compiler:
 
@@ -65,11 +65,11 @@ $ tree
 
 The Cargo.toml is a configuration file that we disregard for now.
 
-![](examples/hello-rust/Cargo.toml)
+{% include file="examples/hello-rust/Cargo.toml" %}
 
 The `main.rs` is a default skeleton of a program that prints, surprise!, "Hello, World!". You'd start every Rust application and Rust library from this skeleton.
 
-![](examples/hello-rust/src/main.rs)
+{% include file="examples/hello-rust/src/main.rs" %}
 
 
 At this point you can change directory (`cd`) into the `hello-rust` folder and run the following command:

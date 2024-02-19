@@ -22,13 +22,13 @@ We can use `println` and `eprintln` in the [Rocket](/rocket)-based code, but it 
 
 Nothing fancy. We use Rocket.
 
-![](examples/rocket/logging/Cargo.toml)
+{% include file="examples/rocket/logging/Cargo.toml" %}
 
 ## The code
 
 This is just a plain [Hello World!](/rocket-hello-world) application with Rocket. I did not even include the tests.
 
-![](examples/rocket/logging/src/main.rs)
+{% include file="examples/rocket/logging/src/main.rs" %}
 
 There are 4 macros we can use right from the `rocket` namespace:
 
@@ -55,7 +55,7 @@ Rocket allows us to [configure](https://rocket.rs/v0.5/guide/configuration/) man
 
 So I created it and added an entry to change the default **normal** level to **debug**.
 
-![](examples/rocket/logging/Rocket.toml)
+{% include file="examples/rocket/logging/Rocket.toml" %}
 
 Restarted the application and visited the web-site again.
 

@@ -33,14 +33,14 @@ There are only a few changes from the free-text cookie version.
 
 ## Dependencies in Cargo.toml
 
-![](examples/rocket/multi-counter-using-encrypted-cookies/Cargo.toml)
+{% include file="examples/rocket/multi-counter-using-encrypted-cookies/Cargo.toml" %}
 
 We added the `secrets` feature
 
 
 ## Secret_key in Rocket.toml
 
-![](examples/rocket/multi-counter-using-encrypted-cookies/Rocket.toml)
+{% include file="examples/rocket/multi-counter-using-encrypted-cookies/Rocket.toml" %}
 
 In this example we provide a `secret_key` for both the `debug` and the `release` mode.
 
@@ -54,7 +54,7 @@ The secret key can be generated, or one can just type in random characters.
 
 ## The code
 
-![](examples/rocket/multi-counter-using-encrypted-cookies/src/main.rs)
+{% include file="examples/rocket/multi-counter-using-encrypted-cookies/src/main.rs" %}
 
 Here the difference is that we use `get_private` instead of `get` and `add_private` instead of `add`.
 
@@ -125,7 +125,7 @@ getting "Counter: 1" as the application will keep disregarding the value.
 
 ## Testing with Rust
 
-![](examples/rocket/multi-counter-using-encrypted-cookies/src/tests.rs)
+{% include file="examples/rocket/multi-counter-using-encrypted-cookies/src/tests.rs" %}
 
 At first I extracted the encrypted cookie string from the cookie and sent that back to the server, but that was not recognized as a correctly
 encrypted cookie. I am not sure why.

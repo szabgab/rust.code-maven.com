@@ -10,7 +10,7 @@ tags:
     - home_dir
 ---
 
-![](examples/hello.rs)
+{% include file="examples/hello.rs" %}
 
 ## Create a crate
 
@@ -33,12 +33,12 @@ cargo add directories
 
 This will update the `Cargo.toml` file:
 
-![](examples/home-dir/Cargo.toml)
+{% include file="examples/home-dir/Cargo.toml" %}
 
 
 ## Source code
 
-![](examples/home-dir/src/main.rs)
+{% include file="examples/home-dir/src/main.rs" %}
 
 
 ## Running it:

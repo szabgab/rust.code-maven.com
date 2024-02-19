@@ -69,7 +69,7 @@ match std::io::stdin().read_line(&mut response) {
 
 ## Hard-coded colors - keep asking till we get a valid answer
 
-![](examples/infinite-cli-menu-with-hard-coded-values/src/main.rs)
+{% include file="examples/infinite-cli-menu-with-hard-coded-values/src/main.rs" %}
 
 
 ## Read colors from file - keep asking till we get a valid answer
@@ -80,11 +80,11 @@ and we also set the returned value to be a `String`.
 We also had to `clone` the string that we return to disconnect it from the vector that was passed to us.
 
 
-![](examples/infinite-cli-menu/src/main.rs)
+{% include file="examples/infinite-cli-menu/src/main.rs" %}
 
 The list of colors:
 
-![](examples/infinite-cli-menu/colors.txt)
+{% include file="examples/infinite-cli-menu/colors.txt" %}
 
 
 ## Hard-coded colors - return an `Option`
@@ -95,7 +95,7 @@ and if it was not a whole number or was not in the expected range then we return
 In this version we already pass a vector of `String` value, but it is built up from a vector of hard-coded `&str` values.
 This is "being prepared for the case when we are going to read from a file, but not actually doing it.
 
-![](examples/cli-menu-returning-option/src/main.rs)
+{% include file="examples/cli-menu-returning-option/src/main.rs" %}
 
 ## Conclusion
 

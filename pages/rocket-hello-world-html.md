@@ -16,12 +16,12 @@ Part of the series about the [Rocket web framework](/rocket).
 
 ## Dependencies
 
-![](examples/rocket/hello-world-html/Cargo.toml)
+{% include file="examples/rocket/hello-world-html/Cargo.toml" %}
 
 
 ## Code
 
-![](examples/rocket/hello-world-html/src/main.rs)
+{% include file="examples/rocket/hello-world-html/src/main.rs" %}
 
 The key is that the route function is defined to return `content::RawHtml<&'static str>`
 and then we call `content::RawHtml` to return the HTML.
@@ -37,7 +37,7 @@ We can verify it in our test using the `response.headers().get_one("Content-Type
 cargo test
 ```
 
-![](examples/rocket/hello-world-html/src/tests.rs)
+{% include file="examples/rocket/hello-world-html/src/tests.rs" %}
 
 
 ## Running

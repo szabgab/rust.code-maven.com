@@ -28,7 +28,7 @@ There used to be a `trim_left` and `trim_right` but they were replaced by the `t
 These will remove spaces, tabs, new-lines from the beginnin or the end of the string.
 
 
-![](examples/trim/src/main.rs)
+{% include file="examples/trim/src/main.rs" %}
 
 
 The result:

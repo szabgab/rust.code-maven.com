@@ -14,12 +14,12 @@ Before getting started on any bigger demo, this example shows how to set up and 
 
 ## Dependencies
 
-![](examples/surrealdb/in-memory-setup/Cargo.toml)
+{% include file="examples/surrealdb/in-memory-setup/Cargo.toml" %}
 
 
 ## The code
 
-![](examples/surrealdb/in-memory-setup/src/main.rs)
+{% include file="examples/surrealdb/in-memory-setup/src/main.rs" %}
 
 
 ## Conclusion

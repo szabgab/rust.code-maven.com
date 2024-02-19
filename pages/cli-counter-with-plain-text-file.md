@@ -41,7 +41,7 @@ Then we increment the counter.
 
 Save it to the disk and print it.
 
-![](examples/counter-text-file/src/main.rs)
+{% include file="examples/counter-text-file/src/main.rs" %}
 
 One of the big issues of this program, besides not handling errors, is that the "counter.txt" file is relative to the current working directory of when the code is executed.
 This is fine as long as we run it with `cargo run`, but if we create a binary and distribute it, it would be probably better if the "counter.txt" file was in a fixed place
@@ -69,7 +69,7 @@ cargo add directories
 
 This will add a line to the `Cargo.toml` file listing this dependency.
 
-![](examples/counter-text-file-in-homedir/Cargo.toml)
+{% include file="examples/counter-text-file-in-homedir/Cargo.toml" %}
 
 Then we replace the code declaring the path with these two lines:
 
@@ -98,5 +98,5 @@ Then I can run `~/work/counter-text-file-in-homedir` and the counter will work. 
 
 ## Full example
 
-![](examples/counter-text-file-in-homedir/src/main.rs)
+{% include file="examples/counter-text-file-in-homedir/src/main.rs" %}
 

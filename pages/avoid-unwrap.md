@@ -23,14 +23,14 @@ Luckily [Clippy](https://github.com/rust-lang/rust-clippy) can help us.
 
 ## Some simple code that uses unwrap
 
-![](examples/avoid-unwrap/src/main.rs)
+{% include file="examples/avoid-unwrap/src/main.rs" %}
 
 This code works.
 
 
 ## Configure clippy to avoid unwrap
 
-![](examples/avoid-unwrap/Cargo.toml)
+{% include file="examples/avoid-unwrap/Cargo.toml" %}
 
 By adding 2 lines to the `Cargo.toml` file we can tell Clippy to report an error when `unwrap` is encountered in the code.
 

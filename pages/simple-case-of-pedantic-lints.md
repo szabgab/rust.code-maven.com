@@ -17,7 +17,7 @@ As a starter you would just run `cargo clippy` in the folder of your crate, but 
 
 The following code has two issues that the `clippy::pedantic` set of rules will flag:
 
-![](examples/uninlined-format-args/src/main.rs)
+{% include file="examples/uninlined-format-args/src/main.rs" %}
 
 ## Clippy with command line flags
 
@@ -132,6 +132,6 @@ I will write about this in a separate article.
 
 ## The full `Cargo.toml` file
 
-![](examples/uninlined-format-args/Cargo.toml)
+{% include file="examples/uninlined-format-args/Cargo.toml" %}
 
 

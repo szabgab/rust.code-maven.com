@@ -52,7 +52,7 @@ In this example we'll see how to handle the fixed pathes (the first 3). Handling
 
 ## Full example
 
-![](examples/tiny-http/path-based-routing/src/main.rs)
+{% include file="examples/tiny-http/path-based-routing/src/main.rs" %}
 
 ## Explanation
 

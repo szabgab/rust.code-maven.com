@@ -43,7 +43,7 @@ The 3rd solution, called `with_split_once_and_some`, is the same as the previous
 
 The 4th solution, called `with_split_once_and_unwrap`, will `panic!` if there are more than one colons `:`.
 
-![](examples/split-string-into-two-variables/src/main.rs)
+{% include file="examples/split-string-into-two-variables/src/main.rs" %}
 
 ## Conclusion
 

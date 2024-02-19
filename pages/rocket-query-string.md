@@ -16,11 +16,11 @@ todo:
 Part of the [Rocket](/rocket) series.
 
 
-![](examples/rocket/query-string/Cargo.toml)
-![](examples/rocket/query-string/src/main.rs)
-![](examples/rocket/query-string/src/tests.rs)
-![](examples/rocket/query-string/templates/index.html.tera)
-![](examples/rocket/query-string/templates/show.html.tera)
+{% include file="examples/rocket/query-string/Cargo.toml" %}
+{% include file="examples/rocket/query-string/src/main.rs" %}
+{% include file="examples/rocket/query-string/src/tests.rs" %}
+{% include file="examples/rocket/query-string/templates/index.html.tera" %}
+{% include file="examples/rocket/query-string/templates/show.html.tera" %}
 
 ## TODO
 

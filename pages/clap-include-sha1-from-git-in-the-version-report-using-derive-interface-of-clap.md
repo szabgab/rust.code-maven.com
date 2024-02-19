@@ -20,19 +20,19 @@ In this example we'll see how to integrate it with the derive interface of [Clap
 
 ## Dependencies
 
-![](examples/clap/show-build-details/Cargo.toml)
+{% include file="examples/clap/show-build-details/Cargo.toml" %}
 
 
 ## The build program
 
 This will run when we build the binary.
 
-![](examples/clap/show-build-details/build.rs)
+{% include file="examples/clap/show-build-details/build.rs" %}
 
 
 ## The full code
 
-![](examples/clap/show-build-details/src/main.rs)
+{% include file="examples/clap/show-build-details/src/main.rs" %}
 
 
 ## Usage and explanation

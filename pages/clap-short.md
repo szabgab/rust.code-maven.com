@@ -61,11 +61,11 @@ As explained in this [issue](https://github.com/clap-rs/clap/issues/5271) there 
 
 As in the other [articles about Clap](/clap) I include the content of `Cargo.toml` to make it easier to copy this example.
 
-![](examples/clap/short/Cargo.toml)
+{% include file="examples/clap/short/Cargo.toml" %}
 
 ## The full example
 
-![](examples/clap/short/src/main.rs)
+{% include file="examples/clap/short/src/main.rs" %}
 
 In this example I included the [version command](/clap-show-version-number), `long` parameters, and [default values](/clap-default-values) as well.
 

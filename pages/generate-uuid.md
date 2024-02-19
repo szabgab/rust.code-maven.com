@@ -39,11 +39,11 @@ For now, however I only looked at the basic usage as that was enough for me.
 
 It is not enough to add the uuid crate as dependency, we also need to add one or more features to make the crate usable.
 
-![](examples/generate-uuid/Cargo.toml)
+{% include file="examples/generate-uuid/Cargo.toml" %}
 
 ## The code
 
-![](examples/generate-uuid/src/main.rs)
+{% include file="examples/generate-uuid/src/main.rs" %}
 
 ## running the code
 

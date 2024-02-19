@@ -28,25 +28,25 @@ Very simple, but this is the core of a lot of web applications. If we know this 
 
 There is nothing new here compared to the previous example.
 
-![](examples/rocket/echo-post/Cargo.toml)
+{% include file="examples/rocket/echo-post/Cargo.toml" %}
 
 
 ## The templates
 
 We are using Tera templates. We need two. One for the front-page showing and HTML form:
 
-![](examples/rocket/echo-post/templates/index.html.tera)
+{% include file="examples/rocket/echo-post/templates/index.html.tera" %}
 
 The other one is for the page where we'll echo back the text the user sent. It has a single placeholder for a field called `text`.
 
-![](examples/rocket/echo-post/templates/echo.html.tera)
+{% include file="examples/rocket/echo-post/templates/echo.html.tera" %}
 
 The template files are in the `templates` folder.
 
 
 ## The code
 
-![](examples/rocket/echo-post/src/main.rs)
+{% include file="examples/rocket/echo-post/src/main.rs" %}
 
 We have two routes.
 
@@ -255,7 +255,7 @@ We verify that the status was set to [Status::UnprocessableEntity](https://api.r
 I find it important to have test cases for these automatically generated responses, to protect ourselves from any unplanned changes to the way these cases
 are handled.
 
-![](examples/rocket/echo-post/src/tests.rs)
+{% include file="examples/rocket/echo-post/src/tests.rs" %}
 
 
 

@@ -55,11 +55,11 @@ We are using the following crates:
 * [imageproc](https://crates.io/crates/imageproc)
 * [rusttype](https://crates.io/crates/rusttype)
 
-![](examples/create-image-with-text/Cargo.toml)
+{% include file="examples/create-image-with-text/Cargo.toml" %}
 
 ## Source code
 
-![](examples/create-image-with-text/src/main.rs)
+{% include file="examples/create-image-with-text/src/main.rs" %}
 
 * First we expect and accept two parameters on the command line. The name of the image file and the text we would like to write on the image.
 

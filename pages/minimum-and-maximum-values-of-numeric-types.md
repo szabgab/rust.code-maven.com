@@ -22,8 +22,8 @@ you can always makes some comparison before the computation to the minimum and m
 
 Here you can see the MIN and MAX values of most of the numeric types of Rust:
 
-![](examples/min-max-values/src/main.rs)
+{% include file="examples/min-max-values/src/main.rs" %}
 
-![](examples/min-max-values/out.txt)
+{% include file="examples/min-max-values/out.txt" %}
 
 

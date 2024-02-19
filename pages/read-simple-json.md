@@ -23,7 +23,7 @@ JSON string into this struct.
 
 In this example we start on that journey for a simple JSON File that looks like this:
 
-![](examples/read-simple-json/data.json)
+{% include file="examples/read-simple-json/data.json" %}
 
 
 ## We need both serde and serde_json
@@ -31,12 +31,12 @@ In this example we start on that journey for a simple JSON File that looks like 
 For this we'll need both [serde_json](https://crates.io/crates/serde_json)
 and [serde](https://crates.io/crates/serde) with the derive feature.
 
-![](examples/read-simple-json/Cargo.toml)
+{% include file="examples/read-simple-json/Cargo.toml" %}
 
 
 ## The code
 
-![](examples/read-simple-json/src/main.rs)
+{% include file="examples/read-simple-json/src/main.rs" %}
 
 We need to create a struct to represent the data where we define the expected fields and their type.
 

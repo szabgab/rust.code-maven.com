@@ -21,11 +21,11 @@ Although in most cases you'd probably want to use the asynch calls, using the bl
 
 This is what we add to the `Cargo.toml`
 
-![](examples/simple-blocking-http-get-request/Cargo.toml)
+{% include file="examples/simple-blocking-http-get-request/Cargo.toml" %}
 
 And this is the code:
 
-![](examples/simple-blocking-http-get-request/src/main.rs)
+{% include file="examples/simple-blocking-http-get-request/src/main.rs" %}
 
 This is the output (slightly reformatted to make it easier to read).
 

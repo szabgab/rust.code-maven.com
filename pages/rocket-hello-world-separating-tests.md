@@ -19,7 +19,7 @@ So in this article we see and example how to do it.
 
 ## Dependencies
 
-![](examples/rocket/hello-world-external-test-file/Cargo.toml)
+{% include file="examples/rocket/hello-world-external-test-file/Cargo.toml" %}
 
 These are the same as in the previous version.
 
@@ -37,7 +37,7 @@ The tests from inside the `mod test` were moved to a separate file called `src/t
 
 
 
-![](examples/rocket/hello-world-external-test-file/src/tests.rs)
+{% include file="examples/rocket/hello-world-external-test-file/src/tests.rs" %}
 
 
 ## The code
@@ -45,5 +45,5 @@ The tests from inside the `mod test` were moved to a separate file called `src/t
 The curly braces were also removed so this is the code:
 
 
-![](examples/rocket/hello-world-external-test-file/src/main.rs)
+{% include file="examples/rocket/hello-world-external-test-file/src/main.rs" %}
 

@@ -41,23 +41,23 @@ In order to better organize our code we might want to split it into multiple fil
 
 ## Cargo.toml
 
-![](examples/split-code/Cargo.toml)
+{% include file="examples/split-code/Cargo.toml" %}
 
 
 ## The main.rs
 
-![](examples/split-code/src/main.rs)
+{% include file="examples/split-code/src/main.rs" %}
 
 ## lib.rs
 
-![](examples/split-code/src/lib.rs)
+{% include file="examples/split-code/src/lib.rs" %}
 
 
 ## helper.rs
 
-![](examples/split-code/src/helper.rs)
+{% include file="examples/split-code/src/helper.rs" %}
 
 ## tools.rs
 
-![](examples/split-code/src/tools.rs)
+{% include file="examples/split-code/src/tools.rs" %}
 

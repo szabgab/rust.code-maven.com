@@ -14,13 +14,13 @@ It is copied from the [Kantoniko](https://kantoniko.com/) project which is a Lad
 
 This file represents the word `kaza` with its tanslations to a number of languages.
 
-![](examples/deserialize-yaml/kaza.yaml)
+{% include file="examples/deserialize-yaml/kaza.yaml" %}
 
 ## Dependencies in Cargo.toml
 
-![](examples/deserialize-yaml/Cargo.toml)
+{% include file="examples/deserialize-yaml/Cargo.toml" %}
 
 
 
-![](examples/deserialize-yaml/src/main.rs)
+{% include file="examples/deserialize-yaml/src/main.rs" %}
 

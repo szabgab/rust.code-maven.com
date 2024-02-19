@@ -18,15 +18,15 @@ Another [Rocket](/rocket) example.
 3 ways to handle error handling. I am not sure any of these would be a recommended way, but they are good for experimentation.
 
 
-![](examples/rocket/early-return/Cargo.toml)
+{% include file="examples/rocket/early-return/Cargo.toml" %}
 
-![](examples/rocket/early-return/src/main.rs)
+{% include file="examples/rocket/early-return/src/main.rs" %}
 
-![](examples/rocket/early-return/src/tests.rs)
+{% include file="examples/rocket/early-return/src/tests.rs" %}
 
-![](examples/rocket/early-return/templates/index.html.tera)
+{% include file="examples/rocket/early-return/templates/index.html.tera" %}
 
-![](examples/rocket/early-return/templates/message.html.tera)
+{% include file="examples/rocket/early-return/templates/message.html.tera" %}
 
-![](examples/rocket/early-return/templates/number.html.tera)
+{% include file="examples/rocket/early-return/templates/number.html.tera" %}
 

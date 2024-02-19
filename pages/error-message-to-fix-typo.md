@@ -13,7 +13,7 @@ Here is one thing for which I like Rust.
 
 Recently, as I wrote some code, I made a typo in a variable name:
 
-![](examples/code_with_typo.rs)
+{% include file="examples/code_with_typo.rs" %}
 
 Running the rust compiler on this file `rustc examples/code_with_typo.rs` I got the following error:
 

@@ -33,7 +33,7 @@ rocket = "0.5.0"
 
 to the Cargo.toml file:
 
-![](examples/rocket/hello-world/Cargo.toml)
+{% include file="examples/rocket/hello-world/Cargo.toml" %}
 
 
 ## Setup the use of the macros
@@ -136,5 +136,5 @@ mod test {
 
 ## The full example
 
-![](examples/rocket/hello-world/src/main.rs)
+{% include file="examples/rocket/hello-world/src/main.rs" %}
 

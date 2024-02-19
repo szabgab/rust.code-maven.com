@@ -25,11 +25,11 @@ In this example we'll see how we can access custom configuration values in the r
 
 ## Dependencies
 
-![](examples/rocket/configuration/Cargo.toml)
+{% include file="examples/rocket/configuration/Cargo.toml" %}
 
 ## The Rocket.toml configuration file
 
-![](examples/rocket/configuration/Rocket.toml)
+{% include file="examples/rocket/configuration/Rocket.toml" %}
 
 
 ## Logging the configuration value
@@ -290,6 +290,6 @@ default: Config {
 
 ## The code full code
 
-![](examples/rocket/configuration/src/main.rs)
+{% include file="examples/rocket/configuration/src/main.rs" %}
 
 

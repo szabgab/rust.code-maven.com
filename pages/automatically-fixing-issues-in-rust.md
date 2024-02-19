@@ -19,7 +19,7 @@ Let's see a simple example.
 
 We have this code that we have already used when we discussed [using the clippy::pedantic lints and setting priority](/simple-case-of-pedantic-lints).
 
-![](examples/uninlined-format-args/src/main.rs)
+{% include file="examples/uninlined-format-args/src/main.rs" %}
 
 
 ## Clean

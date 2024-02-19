@@ -13,11 +13,11 @@ tags:
 
 ## Dependencies
 
-![](examples/reqwest-set-user-agent/Cargo.toml)
+{% include file="examples/reqwest-set-user-agent/Cargo.toml" %}
 
 ## The code
 
-![](examples/reqwest-set-user-agent/src/main.rs)
+{% include file="examples/reqwest-set-user-agent/src/main.rs" %}
 
 ## The output
 

@@ -24,7 +24,7 @@ The 3rd solution handles these case and returns a `Result` in case of any error 
 
 ## prompt with read_line
 
-![](examples/prompt/src/main.rs)
+{% include file="examples/prompt/src/main.rs" %}
 
 Our `prompt` function expects a string as a parameter.
 
@@ -71,12 +71,12 @@ An alternative would be the use of the `lines` iterator and getting the first el
 std::io::stdin().lines().next().unwrap().unwrap()
 ```
 
-![](examples/prompt2/src/main.rs)
+{% include file="examples/prompt2/src/main.rs" %}
 
 ## prompt returning Result
 
 
-![](examples/prompt-result/src/main.rs)
+{% include file="examples/prompt-result/src/main.rs" %}
 
 In this solution the `prompt` function returns `Result<String, std::io::Error>`.
 
@@ -96,6 +96,6 @@ For example we can tell Clippy that we want to make sure our code does not use `
 
 We can do that by adding a few lines to the `Cargo.toml` file:
 
-![](examples/prompt-result/Cargo.toml)
+{% include file="examples/prompt-result/Cargo.toml" %}
 
 In this 3rd example `cargo clippy` will run clean, but if we do the same in the other two examples `cargo clippy` will fail.

@@ -218,7 +218,7 @@ Then we use this type `T` to declare the function accepting two variables of thi
 
 The code now looks like this:
 
-![](examples/generic-bigger/src/main.rs)
+{% include file="examples/generic-bigger/src/main.rs" %}
 
 
 ## Conclusion

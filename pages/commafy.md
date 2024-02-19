@@ -21,7 +21,7 @@ A number like this: 1234567890 is quite unreadable 1,234,567,890 is much better.
 Converting a number to this more readable form is sometimes called **commafy**.
 Here is an implementation:
 
-![](examples/commafy/src/main.rs)
+{% include file="examples/commafy/src/main.rs" %}
 
 * We have function called `get_command_line_number` taken from the example [expecting one command line parameter](/expect-one-command-line-parameter).
 * We also have a `main` function to make it easier to try the code on the command line.

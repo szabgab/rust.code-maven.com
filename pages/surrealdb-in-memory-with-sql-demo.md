@@ -24,7 +24,7 @@ and then use the available query language to create reports from the data.
 
 These are the same as we saw in the example [setting up an in-memory database](/surrealdb-embedded-with-in-memory-database).
 
-![](examples/surrealdb/in-memory-demo/Cargo.toml)
+{% include file="examples/surrealdb/in-memory-demo/Cargo.toml" %}
 
 ## Setting up the in-memory Surreal database
 
@@ -189,7 +189,7 @@ async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
 
 ## The full source code
 
-![](examples/surrealdb/in-memory-demo/src/main.rs)
+{% include file="examples/surrealdb/in-memory-demo/src/main.rs" %}
 
 
 ## The output or cargo run

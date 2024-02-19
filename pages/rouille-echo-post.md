@@ -21,11 +21,11 @@ Part of the series about the [Rouille](/rouille) micro-web framework in Rust.
 
 ## Dependencies
 
-![](examples/rouille/echo-post/Cargo.toml)
+{% include file="examples/rouille/echo-post/Cargo.toml" %}
 
 
 ## The code
 
 
-![](examples/rouille/echo-post/src/main.rs)
+{% include file="examples/rouille/echo-post/src/main.rs" %}
 

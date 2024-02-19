@@ -19,7 +19,7 @@ What if the data we would like to maintain is more complex? What if it is a list
 
 What if our data looks like this:
 
-![](examples/crate-build/data/animals.txt)
+{% include file="examples/crate-build/data/animals.txt" %}
 
 We still would like to maintain this data in a separate, code-less file to make it easy for non-programmers to edit without any fear of breaking the code or even seeing code.
 
@@ -39,7 +39,7 @@ in the root of the project.
 
 ## The build script
 
-![](examples/crate-build/build.rs)
+{% include file="examples/crate-build/build.rs" %}
 
 This takes the `animals.txt` file from the `data` folder of the project and converts it into a file called `animals.rs` in the `OUT_DIR`.
 
@@ -62,7 +62,7 @@ The `animals.rs` file looked like this:
 
 ## The embedding
 
-![](examples/crate-build/src/main.rs)
+{% include file="examples/crate-build/src/main.rs" %}
 
 We used the following macros:
 

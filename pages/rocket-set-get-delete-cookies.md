@@ -21,11 +21,11 @@ the rest of the code already see the new value of the cookie and not the one we 
 
 ## Dependencies
 
-![](examples/rocket/set-cookie/Cargo.toml)
+{% include file="examples/rocket/set-cookie/Cargo.toml" %}
 
 ## The code
 
-![](examples/rocket/set-cookie/src/main.rs)
+{% include file="examples/rocket/set-cookie/src/main.rs" %}
 
 ## Explanation
 

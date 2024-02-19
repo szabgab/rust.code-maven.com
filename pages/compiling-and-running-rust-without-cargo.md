@@ -18,7 +18,7 @@ But I am lazy and I have written way too much **perl** and **python** code to be
 
 So I wrote a small **Bash** script that will do the two steps for me.
 
-![](examples/rust.sh)
+{% include file="examples/rust.sh" %}
 
 I'd use it like this:
 
@@ -31,7 +31,7 @@ It will compile the Rust file and call the binary file `myexe`, then it will try
 
 Here is the Hello World program in case you'd like to try it.
 
-![](examples/hello.rs)
+{% include file="examples/hello.rs" %}
 
 ## Conclusion
 

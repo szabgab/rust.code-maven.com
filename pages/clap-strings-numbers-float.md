@@ -36,12 +36,12 @@ In this case the exit-code of the program will be 2.
 
 We have the same dependencies as before, the Clap crate with the `derive` feature.
 
-![](examples/clap/numbers-strings-bool/Cargo.toml)
+{% include file="examples/clap/numbers-strings-bool/Cargo.toml" %}
 
 
 ## Source code
 
-![](examples/clap/numbers-strings-bool/src/main.rs)
+{% include file="examples/clap/numbers-strings-bool/src/main.rs" %}
 
 
 ## Usage:

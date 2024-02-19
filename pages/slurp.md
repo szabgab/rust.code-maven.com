@@ -14,7 +14,7 @@ The whole idea was to make it easy to read the content of a text file into memor
 
 In Rust there is a function called [read_to_string](https://doc.rust-lang.org/std/fs/fn.read_to_string.html) that does this.
 
-![](examples/slurp/src/main.rs)
+{% include file="examples/slurp/src/main.rs" %}
 
 
 It is nice and easy to use, you just have to remember that this will read the whole file into memory which is not going to work well

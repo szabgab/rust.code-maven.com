@@ -17,10 +17,10 @@ It seems that there are so many ways to use SurrealDB that we need that many wor
 
 SurrealDB can be used either as a stand-along database server
 
-![](examples/surrealdb/cli-phone-book-with-embedded-rocksdb/Cargo.toml)
-![](examples/surrealdb/cli-phone-book-with-embedded-rocksdb/src/main.rs)
+{% include file="examples/surrealdb/cli-phone-book-with-embedded-rocksdb/Cargo.toml" %}
+{% include file="examples/surrealdb/cli-phone-book-with-embedded-rocksdb/src/main.rs" %}
 
-![](examples/surrealdb/cli-phone-book-with-embedded-rocksdb/tests/test_empty.rs)
-![](examples/surrealdb/cli-phone-book-with-embedded-rocksdb/tests/tests.rs)
+{% include file="examples/surrealdb/cli-phone-book-with-embedded-rocksdb/tests/test_empty.rs" %}
+{% include file="examples/surrealdb/cli-phone-book-with-embedded-rocksdb/tests/tests.rs" %}
 
 

@@ -30,7 +30,7 @@ then there won't be enough iterations and this code will `panic!`.
 Then we convert it back to an iterator and assign the values to the variables.
 
 
-![](examples/split-string-into-many-variables/src/main.rs)
+{% include file="examples/split-string-into-many-variables/src/main.rs" %}
 
 
 ## Using itertools
@@ -40,5 +40,5 @@ In order to be able to collect the elements from an iterator in a single call we
 To add it to the crate we are working on type `cargo add itertools` or edit the `Cargo.toml` file and add it manually under the `dependencies` section:
 
 
-![](examples/split-string-into-many-variables/Cargo.toml)
+{% include file="examples/split-string-into-many-variables/Cargo.toml" %}
 

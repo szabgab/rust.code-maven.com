@@ -61,6 +61,6 @@ Page not found
 
 ## The full source code
 
-![](examples/tiny-http/page-not-found-404/src/main.rs)
+{% include file="examples/tiny-http/page-not-found-404/src/main.rs" %}
 
 

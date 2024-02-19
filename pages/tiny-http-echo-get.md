@@ -30,11 +30,11 @@ This already shows a full round-trip processing of HTTP request and response.
 
 In order to make this work we had to add the [url](https://crates.io/crates/url) crate so our `Cargo.toml` now looks like this:
 
-![](examples/tiny-http/echo-get/Cargo.toml)
+{% include file="examples/tiny-http/echo-get/Cargo.toml" %}
 
 ## The source code
 
-![](examples/tiny-http/echo-get/src/main.rs)
+{% include file="examples/tiny-http/echo-get/src/main.rs" %}
 
 
 ## The explanation

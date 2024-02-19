@@ -24,13 +24,13 @@ In this article we'll see two crates. One implements the trait, the other uses i
 * We also renamed the file from `src/main.rs` to `src/lib.rs`.
 * Lastly we added some tests. This is not required, but it is a good practice to have tests. (I should have added some tests to the previous article as well, but I was lazy.)
 
-![](examples/reverse-trait-for-strings-public/src/lib.rs)
+{% include file="examples/reverse-trait-for-strings-public/src/lib.rs" %}
 
 ## Add the crate as a dependency
 
 Because the above crate is local only, `Cargo.toml` needs to point to the folder where it is located. (and the full name of the above crate is `reverse-trait-for-strings-public`.
 
-![](examples/reverse-trait-for-strings-use-public/Cargo.toml)
+{% include file="examples/reverse-trait-for-strings-use-public/Cargo.toml" %}
 
 ## Using the trait from the other crate
 
@@ -41,7 +41,7 @@ The only difference is that we have the first line importing the trait:
 use reverse_trait_for_strings_public::Reverse;
 ```
 
-![](examples/reverse-trait-for-strings-use-public/src/main.rs)
+{% include file="examples/reverse-trait-for-strings-use-public/src/main.rs" %}
 
 ## Conclusion
 

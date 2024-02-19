@@ -15,11 +15,11 @@ The [tempdir](https://crates.io/crates/tempdir) crate allows us to create a temp
 
 ## Dependencies
 
-![](examples/temporary-folder/Cargo.toml)
+{% include file="examples/temporary-folder/Cargo.toml" %}
 
 ## Code
 
-![](examples/temporary-folder/src/main.rs)
+{% include file="examples/temporary-folder/src/main.rs" %}
 
 In this example the directory is removed at when the variable goes out of scope.
 

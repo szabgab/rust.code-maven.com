@@ -38,7 +38,7 @@ In some languages converting a string to a number is called casting, in Rust it 
 
 ## Code example
 
-![](examples/convert-string-to-number/src/main.rs)
+{% include file="examples/convert-string-to-number/src/main.rs" %}
 
 Feel free to use this example, enable/disable parts of the code to see the various solutions for error handling.
 

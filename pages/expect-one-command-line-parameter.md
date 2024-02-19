@@ -26,7 +26,7 @@ Sometimes it becomes a larger tool with more command line options, but at first 
 This is a simple example that does not use any external [crates](https://crates.io/) on how to accept a command line parameter and how to report when it is missing or if the user supplied more than one value. Which probably indicates either a misunderstanding or it is just a plain mistake.
 
 
-![](examples/one-command-line-parameter/src/main.rs)
+{% include file="examples/one-command-line-parameter/src/main.rs" %}
 
 
 I started this example by running `cargo new one-command-line-parameter` so the name of the folder is `one-command-line-parameter`.
@@ -74,7 +74,7 @@ That's the whole thing.
 ## Function to accept one command line parameter as a string
 
 
-![](examples/one-command-line-string/src/main.rs)
+{% include file="examples/one-command-line-string/src/main.rs" %}
 
 We call [to_owned](https://doc.rust-lang.org/std/borrow/trait.ToOwned.html), we could also call [to_string](https://doc.rust-lang.org/std/string/trait.ToString.html)
 to return a [String](https://doc.rust-lang.org/std/string/struct.String.html).
@@ -82,5 +82,5 @@ to return a [String](https://doc.rust-lang.org/std/string/struct.String.html).
 
 ## Function to accept one command line parameter as a number
 
-![](examples/one-command-line-number/src/main.rs)
+{% include file="examples/one-command-line-number/src/main.rs" %}
 

@@ -35,12 +35,12 @@ In order to use it we need to add the `derive` feature.
 
 The resulting `Cargo.toml` file will look like this, though by the time you read this the version number will be probably higher.
 
-![](examples/clap/simple-example/Cargo.toml)
+{% include file="examples/clap/simple-example/Cargo.toml" %}
 
 
 ## The Code
 
-![](examples/clap/simple-example/src/main.rs)
+{% include file="examples/clap/simple-example/src/main.rs" %}
 
 ## Usage
 

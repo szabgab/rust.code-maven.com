@@ -34,11 +34,11 @@ Access-Control-Allow-Credentials: true
 
 ## Dependencies
 
-![](examples/reqwest-accept-cookies/Cargo.toml)
+{% include file="examples/reqwest-accept-cookies/Cargo.toml" %}
 
 ## The code
 
-![](examples/reqwest-accept-cookies/src/main.rs)
+{% include file="examples/reqwest-accept-cookies/src/main.rs" %}
 
 ## The output
 

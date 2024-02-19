@@ -20,7 +20,7 @@ For this example I basically followed the README of the crate
 
 ## Dependencies in Cargo.toml
 
-![](examples/use-shadow/Cargo.toml)
+{% include file="examples/use-shadow/Cargo.toml" %}
 
 I've included
 
@@ -32,13 +32,13 @@ in the Cargo.toml, despite the fact that it seems [it is not necessary](https://
 
 ## Build code
 
-![](examples/use-shadow/build.rs)
+{% include file="examples/use-shadow/build.rs" %}
 
 ## Code
 
 In the README of the Crate there are a lot more variables with a lot more details, but I was mainly interested in these:
 
-![](examples/use-shadow/src/main.rs)
+{% include file="examples/use-shadow/src/main.rs" %}
 
 ## Build and run
 

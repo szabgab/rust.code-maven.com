@@ -39,7 +39,7 @@ This is especially valuable as we need to add more and more of these double-quot
 
 ## The code
 
-![](examples/print-quotes/src/main.rs)
+{% include file="examples/print-quotes/src/main.rs" %}
 
 ## The output
 

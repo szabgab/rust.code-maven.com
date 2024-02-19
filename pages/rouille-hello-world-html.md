@@ -19,12 +19,12 @@ Part of the series about the [Rouille](/rouille) micro-web framework in Rust.
 
 ## Dependency
 
-![](examples/rouille/hello-world-html/Cargo.toml)
+{% include file="examples/rouille/hello-world-html/Cargo.toml" %}
 
 
 ## The code
 
-![](examples/rouille/hello-world-html/src/main.rs)
+{% include file="examples/rouille/hello-world-html/src/main.rs" %}
 
 
 ## Running the web application

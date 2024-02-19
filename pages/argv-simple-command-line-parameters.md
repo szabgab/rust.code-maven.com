@@ -44,7 +44,7 @@ We can assign the content of the argv vector to specific variables to make the c
 (Ok, maybe use names that are more descriptive for your purposes than "first" and "second".)
 
 
-![](examples/argv-simple-command-line-parameters/src/main.rs)
+{% include file="examples/argv-simple-command-line-parameters/src/main.rs" %}
 
 ```
 cargo run apple banana
@@ -65,7 +65,7 @@ I am not sure if this is a "better" solution, or in what way would this be a bet
 but I've seen this used in a number of examples.
 
 
-![](examples/argv-command-line-parameters-with-count/src/main.rs)
+{% include file="examples/argv-command-line-parameters-with-count/src/main.rs" %}
 
 Here we use various features of the fact that `args()` returns an iterator.
 We can use the `count()` method to get the number of elements,

@@ -86,7 +86,7 @@ Calling `match_on_option("cat");` will print `Location of cat: 10`. Calling `mat
 
 ## The full code
 
-![](examples/unwrap/src/main.rs)
+{% include file="examples/unwrap/src/main.rs" %}
 
 ## Comments
 

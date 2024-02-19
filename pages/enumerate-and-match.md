@@ -27,7 +27,7 @@ There are two major ways to compare the values. One of them is dircetly using th
 
 The other option is to use a `match` where the "arms" of the match must cover all the possibilities as you can see in the following example:
 
-![](examples/enumerate_and_match.rs)
+{% include file="examples/enumerate_and_match.rs" %}
 
 The output of the above code is:
 

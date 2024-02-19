@@ -29,7 +29,7 @@ cargo add textwrap
 
 This is the code:
 
-![](examples/wrap/src/main.rs)
+{% include file="examples/wrap/src/main.rs" %}
 
 This is the result, pretty-printed using `#` to make it easier to see the new rows:
 

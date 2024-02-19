@@ -31,11 +31,11 @@ cd embedded-rocksdb
 
 These are the dependencies in the `Cargo.toml` file.
 
-![](examples/surrealdb/embedded-rocksdb/Cargo.toml)
+{% include file="examples/surrealdb/embedded-rocksdb/Cargo.toml" %}
 
 ## The code
 
-![](examples/surrealdb/embedded-rocksdb/src/main.rs)
+{% include file="examples/surrealdb/embedded-rocksdb/src/main.rs" %}
 
 
 ## Running the code

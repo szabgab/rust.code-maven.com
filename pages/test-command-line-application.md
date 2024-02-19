@@ -29,7 +29,7 @@ In this article we see a simple example.
 
 For this I created a crate called `test-cli` with the following code:
 
-![](examples/test-cli/src/main.rs)
+{% include file="examples/test-cli/src/main.rs" %}
 
 There is nothing fancy in this.
 
@@ -60,7 +60,7 @@ to get the result which is 42.
 
 In order to test this command line application we created a folder called `tests` and in there a file called `tests.rs` with 3 test functions:
 
-![](examples/test-cli/tests/tests.rs)
+{% include file="examples/test-cli/tests/tests.rs" %}
 
 At first there is this rather complex `use`-statement. I think running `cargo fmt` mad it that way.
 

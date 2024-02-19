@@ -17,7 +17,7 @@ todo:
 
 In this example using only `std`, the standard library we fetch the time elapsed since the epoch (which is 1970 January 1 on Unix/Linux systems).
 
-![](examples/epoch/src/main.rs)
+{% include file="examples/epoch/src/main.rs" %}
 
 
 Running on Linux this is the output:

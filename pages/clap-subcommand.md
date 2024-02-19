@@ -20,7 +20,7 @@ Many common tools work like this. For example `git` or [gh](https://cli.github.c
 
 Nothing fancy here. We use the derive API as in all the other examples, so we need that feature.
 
-![](examples/clap/subcommand/Cargo.toml)
+{% include file="examples/clap/subcommand/Cargo.toml" %}
 
 
 ## Define the common rules for the Parser
@@ -181,7 +181,7 @@ outdir: "/home/gabor/target"
 
 ## The Full Code
 
-![](examples/clap/subcommand/src/main.rs)
+{% include file="examples/clap/subcommand/src/main.rs" %}
 
 ## Conclusion
 

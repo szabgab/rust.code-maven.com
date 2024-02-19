@@ -17,7 +17,7 @@ functions that work on two values and can tell use which is the smaller and whic
 
 In this example you can see them working on integers and on strings.
 
-![](examples/min-max/src/main.rs)
+{% include file="examples/min-max/src/main.rs" %}
 
 
 ```

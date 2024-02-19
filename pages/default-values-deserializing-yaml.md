@@ -26,11 +26,11 @@ struct Person {
 
 If se supply the following YAML file, each field is filled.
 
-![](examples/yaml-default-values/all.yaml)
+{% include file="examples/yaml-default-values/all.yaml" %}
 
 However if we provide the following file:
 
-![](examples/yaml-default-values/nameless.yml)
+{% include file="examples/yaml-default-values/nameless.yml" %}
 
 We will get an error message in the `err` variable:
 
@@ -40,7 +40,7 @@ missing field `name`
 
 We get a similar error if more than one field is missing:
 
-![](examples/yaml-default-values/data.yaml)
+{% include file="examples/yaml-default-values/data.yaml" %}
 
 ## Set the default values
 
@@ -79,7 +79,7 @@ fn get_default_married() -> bool {
 
 ## The full example
 
-![](examples/yaml-default-values/src/main.rs)
+{% include file="examples/yaml-default-values/src/main.rs" %}
 
 In this example we have a function called `get_filename` that gets the name of the file from the command line.
 
@@ -88,7 +88,7 @@ In this example we have a function called `get_filename` that gets the name of t
 
 What if this is the YAML file
 
-![](examples/yaml-default-values/typo.yaml)
+{% include file="examples/yaml-default-values/typo.yaml" %}
 
 Have you noticed the typo I made in one of the fields? I typed in "maried" instead of "married", but I could have mixed up the field called "color" and typed in "colour",
 if there indeed was such a field.
@@ -102,5 +102,5 @@ That's not ideal.
 
 See the `Cargo`.toml` we had:
 
-![](examples/yaml-default-values/Cargo.toml)
+{% include file="examples/yaml-default-values/Cargo.toml" %}
 

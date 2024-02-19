@@ -28,11 +28,11 @@ cargo add image
 
 Results in the following file:
 
-![](examples/create-empty-image/Cargo.toml)
+{% include file="examples/create-empty-image/Cargo.toml" %}
 
 Then we add the code:
 
-![](examples/create-empty-image/src/main.rs)
+{% include file="examples/create-empty-image/src/main.rs" %}
 
 and run
 

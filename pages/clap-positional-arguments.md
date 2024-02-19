@@ -114,11 +114,11 @@ ports: [1000]
 ```
 ## Dependencies in Cargo.toml
 
-![](examples/clap/positional/Cargo.toml)
+{% include file="examples/clap/positional/Cargo.toml" %}
 
 
 ## The full example
 
-![](examples/clap/positional/src/main.rs)
+{% include file="examples/clap/positional/src/main.rs" %}
 
 

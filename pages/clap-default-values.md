@@ -18,12 +18,12 @@ In this example we'll see how to define the default values for string, integer, 
 
 ## The dependencies in Cargo.toml
 
-![](examples/clap/default-values/Cargo.toml)
+{% include file="examples/clap/default-values/Cargo.toml" %}
 
 
 ## The full code
 
-![](examples/clap/default-values/src/main.rs)
+{% include file="examples/clap/default-values/src/main.rs" %}
 
 Each parameter can have a default value using an attribute of the arguments.
 

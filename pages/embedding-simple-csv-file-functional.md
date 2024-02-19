@@ -21,7 +21,7 @@ To remind you the idea was to embed a simple CSV file in the code and then read 
 
 This is how the CSV file looks like:
 
-![](examples/embedded-simple-csv-file-functional/data/languages.csv)
+{% include file="examples/embedded-simple-csv-file-functional/data/languages.csv" %}
 
 This is the new code based on the suggestions from Marcus.
 
@@ -33,6 +33,6 @@ A few notes
 * [split_once](https://doc.rust-lang.org/std/primitive.str.html#method.split_once) is also used to makes sure if there are multiple commas in the string we only split on the first one.
 * This code will panic if there is a non-empty line that has no comma in it. We could also use the `filter` to filter out and disregard those lines.
 
-![](examples/embedded-simple-csv-file-functional/src/main.rs)
+{% include file="examples/embedded-simple-csv-file-functional/src/main.rs" %}
 
 

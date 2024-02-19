@@ -17,7 +17,7 @@ Luckily with a little bit of macro-writing we can imitate it.
 
 Here is the whole example
 
-![](examples/default-arguments/src/main.rs)
+{% include file="examples/default-arguments/src/main.rs" %}
 
 When we run this we get the following output:
 

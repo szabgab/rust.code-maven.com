@@ -41,9 +41,9 @@ and files, but it will skip the hidden folder and files. This does not show, but
 
 These are the files that were created:
 
-![](examples/calc1/.gitignore)
-![](examples/calc1/Cargo.toml)
-![](examples/calc1/src/main.rs)
+{% include file="examples/calc1/.gitignore" %}
+{% include file="examples/calc1/Cargo.toml" %}
+{% include file="examples/calc1/src/main.rs" %}
 
 * The `src/main.rs` is a skeleton program.
 * The `Cargo.toml` holds the meta-data of the program.
@@ -101,7 +101,7 @@ if we wanted, but we don't need to do that as `cargo run` already did that for u
 If is not really critical, but I'd recommend you create a `README.md` file in the root of the project that will describe the project.
 I've added this:
 
-![](examples/calc1/README.md)
+{% include file="examples/calc1/README.md" %}
 
 We can now commit the new files.
 

@@ -35,7 +35,7 @@ I don't remember ever reaching the end.
 
 No with Rust it is easy, I just need to use the **pow** function:
 
-![](examples/price-of-chess/src/main.rs)
+{% include file="examples/price-of-chess/src/main.rs" %}
 
 ```
 price: 18446744073709551615

@@ -48,7 +48,7 @@ Using the [Turbofish](/turbofish) syntax to let `collect` know the type of the i
 
 ## The full code
 
-![](examples/hard-coded-vector-of-strings/src/main.rs)
+{% include file="examples/hard-coded-vector-of-strings/src/main.rs" %}
 
 # The output is the same in each case:
 

@@ -44,7 +44,7 @@ We are expecting a number on the command line that can be represented using a 32
 We would like to provide a **usage** if the user did not supply anything or if the value could not converted to a `u32`.
 
 
-![](examples/invalid-parameter/src/main.rs)
+{% include file="examples/invalid-parameter/src/main.rs" %}
 
 Here we have a `match` that is expected to return a 32-bit unsigned integer, a `u32`.
 However, if the user supplied an invalid argument and we cannot parse and convert the input to a `u32`
@@ -77,7 +77,7 @@ What happens if we factor this out to a separate function?
 
 ## The code with diverging function
 
-![](examples/invalid-parameter-usage/src/main.rs)
+{% include file="examples/invalid-parameter-usage/src/main.rs" %}
 
 Here we need the exclamation mark on the `usage` function.
 

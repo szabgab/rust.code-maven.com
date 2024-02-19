@@ -24,14 +24,14 @@ run our code as an external program as we can also see in the article on [how to
 
 ## Code with inline tests
 
-![](examples/show-output-in-tests/src/main.rs)
+{% include file="examples/show-output-in-tests/src/main.rs" %}
 
 ## External tests
 
 Running the program as a command line application we would probably check that the text printed to the STDOUT and STDERR **by the program**
 is what we expect. Still we have some text printed **by the test** that we would like to see.
 
-![](examples/show-output-in-tests/tests/tests.rs)
+{% include file="examples/show-output-in-tests/tests/tests.rs" %}
 
 ## Regular test output
 

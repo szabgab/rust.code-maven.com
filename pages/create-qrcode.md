@@ -16,11 +16,11 @@ Specifically, the most recent version of [qrcode](https://crates.io/crates/qrcod
 
 So I had to fix the versions in the **Cargo.toml** file:
 
-![](examples/create-qrcode/Cargo.toml)
+{% include file="examples/create-qrcode/Cargo.toml" %}
 
 The code itself does not need to change, but I replaced the content of the QR code with a URL to my web site and saved the file in the same folder where the code is:
 
-![](examples/create-qrcode/src/main.rs)
+{% include file="examples/create-qrcode/src/main.rs" %}
 
 This is the result, go ahead, scan it.
 
@@ -34,4 +34,4 @@ In case you'd like to get alerted when this issue is fixed, the incompability is
 
 In order to allow you to see the exact versions of all the crates that were involved in the creation of this image, I am also including the **Cargo.lock** file:
 
-![](examples/create-qrcode/Cargo.lock)
+{% include file="examples/create-qrcode/Cargo.lock" %}
