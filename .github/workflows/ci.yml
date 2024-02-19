@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download processor
         run: |
@@ -40,13 +40,13 @@ jobs:
           ./code-maven web --outdir _site
 
       - name: Checkout slides
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'szabgab/slides'
           path: all-slides
 
       - name: Checkout slides processor
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'szabgab/slider-py'
           path: slider-py
