@@ -141,7 +141,7 @@ struct Entry {
 
 It looks very similar to an SQL statement.
 
-``rust
+```rust
 async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let name = "Jane";
     let phone = "55555555";

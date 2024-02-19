@@ -85,6 +85,7 @@ struct Cli {
     #[arg(required = true)]
     ports: Vec<u16>,
 }
+```
 
 ## Positional and named arguments
 

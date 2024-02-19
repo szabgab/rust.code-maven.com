@@ -62,6 +62,7 @@ println!("{:#?}", animals);
 
 will yield:
 
+```
 [
     "snake",
     "camel",
