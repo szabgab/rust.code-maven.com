@@ -8,7 +8,6 @@ tags:
     - str
     - String
     - to_owned
-    - &
 todo:
     - TODO
 ---
