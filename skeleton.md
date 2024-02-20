@@ -10,5 +10,4 @@ todo:
     - TODO
 ---
 
-![](examples/hello.rs)
-
+{% include file="examples/hello.rs" %}
