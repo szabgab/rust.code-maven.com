@@ -1,0 +1,15 @@
+name="foo"
+'name'
+'foo'
+---
+anwser=42
+---
+====
+name="foo"
+'name'
+'"foo"'
+---
+anwser=42
+'anwser'
+'42'
+---
