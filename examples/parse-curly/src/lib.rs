@@ -139,14 +139,15 @@ fn parse_curly(text: &str) -> Option<Curly> {
             }
 
             if quote {
+                //println!("in quoted {} of {}", ix, chars.len());
+                if ix >= chars.len() {
+                    eprintln!("Quoted value ended before closing quotes");
+                    break None;
+                }
+
                 if chars[ix] == '"' {
                     ix += 1;
                     break Some(ix - 2);
-                }
-
-                if ix >= chars.len() {
-                    // Value ended before closing quotes
-                    break None;
                 }
             } else {
                 if ix >= chars.len() {
@@ -307,12 +308,12 @@ fn test_15() {
     );
 }
 
-// #[test]
-// fn test_17() {
-//     let res = parse_curly(r#"{%  youtube id="movie"  title="Title %}"#);
-//     println!("{:?}\n", res);
-//     assert(res.is_none())
-// }
+#[test]
+fn test_17() {
+    let res = parse_curly(r#"{%  youtube id="movie"  title="Title %}"#);
+    println!("{:?}\n", res);
+    assert!(res.is_none());
+}
 
 // #[test]
 // fn test_18() {
