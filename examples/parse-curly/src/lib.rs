@@ -151,7 +151,7 @@ fn parse_curly(text: &str) -> Option<Curly> {
                 }
             } else {
                 if ix >= chars.len() {
-                    break None;
+                    break Some(ix - 1);
                 }
 
                 if chars[ix] == ' ' {
@@ -294,7 +294,7 @@ fn test_14() {
 #[test]
 fn test_15() {
     let res = parse_curly(r#"{%  youtube id="movie"  title="Title" answer=42 %}"#);
-    println!("{:?}\n", res);
+    //println!("{:?}\n", res);
     assert_eq!(
         res,
         Some(Curly {
@@ -311,16 +311,25 @@ fn test_15() {
 #[test]
 fn test_17() {
     let res = parse_curly(r#"{%  youtube id="movie"  title="Title %}"#);
-    println!("{:?}\n", res);
+    //println!("{:?}\n", res);
     assert!(res.is_none());
 }
 
-// #[test]
-// fn test_18() {
-//     let res = parse_curly(r#"{%  youtube id="movie"  answer=42%}"#);
-//     println!("{:?}\n", res);
-// good
-// }
+#[test]
+fn test_18() {
+    let res = parse_curly(r#"{%  youtube id="movie"  answer=42%}"#);
+    //println!("{:?}\n", res);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("youtube"),
+            fields: HashMap::from([
+                (String::from("id"), String::from("movie")),
+                (String::from("answer"), String::from("42"))
+            ])
+        })
+    );
+}
 
 // #[test]
 // fn test_19() {
