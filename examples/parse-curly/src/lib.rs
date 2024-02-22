@@ -72,7 +72,7 @@ fn parse_curly(text: &str) -> Option<Curly> {
     loop {
         let start_field = loop {
             if ix < chars.len() {
-                println!("start_key char: {} at {}", chars[ix], ix);
+                println!("start_field char: {} at {}", chars[ix], ix);
             }
 
             if ix >= chars.len() {
@@ -82,8 +82,8 @@ fn parse_curly(text: &str) -> Option<Curly> {
                 if chars[ix].is_ascii_lowercase() {
                     break Some(ix);
                 } else {
-                    println!(
-                        "Invalid character '{}' at {} while looking for start_key",
+                    eprintln!(
+                        "Invalid character '{}' at {} while looking for start_field",
                         chars[ix], ix
                     );
                     break None; // error?
@@ -95,11 +95,11 @@ fn parse_curly(text: &str) -> Option<Curly> {
 
         let end_field = loop {
             if ix < chars.len() {
-                println!("end_key: char: {} at {}", chars[ix], ix);
+                println!("end_field: char: {} at {}", chars[ix], ix);
             }
 
             if ix >= chars.len() {
-                // We started a key but have not ended
+                // We started a field but have not ended
                 break None;
             }
             if chars[ix] == '=' {
@@ -113,7 +113,7 @@ fn parse_curly(text: &str) -> Option<Curly> {
 
         let field = text[2 + start_field..3 + end_field].to_owned();
         println!("field {}-{} '{}'", start_field, end_field, field);
-        crl.fields.insert(field.to_owned(), "hi".to_owned());
+
         ix += 1;
         if ix >= chars.len() {
             break None;
@@ -127,9 +127,38 @@ fn parse_curly(text: &str) -> Option<Curly> {
             break None;
         }
 
-        let start_value = loop {
+        let start_value = ix;
+        ix += 1;
+        if ix >= chars.len() {
             break None;
+        }
+
+        let end_value = loop {
+            if quote {
+                if chars[ix] == '"' {
+                    ix += 1;
+                    break Some(ix - 2);
+                }
+
+                if ix >= chars.len() {
+                    // Value ended before closing quotes
+                    break None;
+                }
+            } else {
+                if ix >= chars.len() {
+                    break None;
+                }
+
+                if !chars[ix].is_ascii_digit() {
+                    break None;
+                }
+            }
+            ix += 1;
         }?;
+
+        let value = text[2 + start_value..3 + end_value].to_owned();
+        println!("value {}-{} '{}'", start_value, end_value, value);
+        crl.fields.insert(field.to_owned(), value.to_owned());
 
         if ix >= chars.len() {
             break Some(crl);
@@ -246,18 +275,18 @@ fn test_13() {
     assert!(res.is_none());
 }
 
-// #[test]
-// fn test_14() {
-//     let res = parse_curly(r#"{%  include   file="example/code.rs" %}"#);
-//     println!("{:?}\n", res);
-//     assert_eq!(
-//         res,
-//         Some(Curly {
-//             name: String::from("include"),
-//             fields: HashMap::from([(String::from("file"), String::from("example/code.rs"))])
-//         })
-//     );
-// }
+#[test]
+fn test_14() {
+    let res = parse_curly(r#"{%  include   file="example/code.rs" %}"#);
+    println!("{:?}\n", res);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("include"),
+            fields: HashMap::from([(String::from("file"), String::from("example/code.rs"))])
+        })
+    );
+}
 
 // #[test]
 // fn test_15() {
@@ -273,6 +302,27 @@ fn test_13() {
 //             ])
 //         })
 //     );
+// }
+
+// #[test]
+// fn test_17() {
+//     let res = parse_curly(r#"{%  youtube id="movie"  title="Title %}"#);
+//     println!("{:?}\n", res);
+//     assert(res.is_none())
+// }
+
+// #[test]
+// fn test_18() {
+//     let res = parse_curly(r#"{%  youtube id="movie"  answer=42%}"#);
+//     println!("{:?}\n", res);
+// good
+// }
+
+// #[test]
+// fn test_19() {
+//     let res = parse_curly(r#"{%  youtube id="movie"  answer=42 %}"#);
+//     println!("{:?}\n", res);
+// good
 // }
 
 // #[test]
