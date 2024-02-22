@@ -152,6 +152,12 @@ fn parse_curly(text: &str) -> Option<Curly> {
                     }
                     break Some(ix - 2);
                 }
+
+                if chars[ix] == '\\' {
+                    if chars[ix + 1] == '"' {
+                        ix += 2;
+                    }
+                }
             } else {
                 if ix >= chars.len() {
                     break None; // require space at the end
@@ -344,19 +350,22 @@ fn test_19() {
     assert!(res.is_none());
 }
 
-// #[test]
-// fn test_90() {
-//     // TODO
-//     let res = parse_curly(r#"{%  youtube title="Title \"quoted\" done" %}"#);
-//     println!("{:?}\n", res);
-//     assert_eq!(
-//         res,
-//         Some(Curly {
-//             name: String::from("youtube"),
-//             fields: HashMap::from([(String::from("title"), String::from("Title \"quoted\" done"))])
-//         })
-//     );
-// }
+#[test]
+fn test_90() {
+    // TODO
+    let res = parse_curly(r#"{%  youtube title="Title \"quoted\" done" %}"#);
+    println!("{:?}\n", res);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("youtube"),
+            fields: HashMap::from([(
+                String::from("title"),
+                String::from("Title \\\"quoted\\\" done")
+            )]) // TODO why do we have an extra pair of backslashes here?
+        })
+    );
+}
 
 // #[test]
 // fn test_91() {
