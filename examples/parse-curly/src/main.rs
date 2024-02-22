@@ -1,4 +1,3 @@
-//use regex::RegexBuilder;
 use std::collections::HashMap;
 
 #[derive(Debug, PartialEq, Eq)]
@@ -17,67 +16,7 @@ impl Default for Curly {
     }
 }
 
-fn main() {
-    let res = parse_curly(r#"{%  qq"rq    %}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%  include    field%}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%  include    field  %}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%  include    field=%}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%  include    field=  %}"#);
-    assert!(res.is_none());
-
-    // let res = parse_curly(r#"{%  include   file="example/code.rs" %}"#);
-    // println!("{:?}\n", res);
-    // assert_eq!(
-    //     res,
-    //     Some(Curly {
-    //         name: String::from("include"),
-    //         fields: HashMap::from([(String::from("file"), String::from("example/code.rs"))])
-    //     })
-    // );
-
-    // let res = parse_curly(r#"{%  youtube id="movie"  title="Title" answer=42 %}"#);
-    // println!("{:?}\n", res);
-    // assert_eq!(
-    //     res,
-    //     Some(Curly {
-    //         name: String::from("youtube"),
-    //         fields: HashMap::from([
-    //             (String::from("id"), String::from("movie")),
-    //             (String::from("title"), String::from("Title"))
-    //         ])
-    //     })
-    // );
-
-    // TODO
-    // let res = parse_curly(r#"{%  youtube title="Title \"quoted\" done" %}"#);
-    // println!("{:?}\n", res);
-    // assert_eq!(
-    //     res,
-    //     Some(Curly {
-    //         name: String::from("youtube"),
-    //         fields: HashMap::from([(String::from("title"), String::from("Title \"quoted\" done"))])
-    //     })
-    // );
-
-    // TODO
-    // let res = parse_curly(r#"{%  youtube title="Title with escaped backslash \\" %}"#);
-    // println!("{:?}\n", res);
-    // assert_eq!(
-    //     res,
-    //     Some(Curly {
-    //         name: String::from("youtube"),
-    //         fields: HashMap::from([(String::from("title"), String::from("Title escaped backslas \\"))])
-    //     })
-    // );
-}
+fn main() {}
 
 fn parse_curly(text: &str) -> Option<Curly> {
     //let mut name = String::new();
@@ -209,31 +148,31 @@ fn parse_curly(text: &str) -> Option<Curly> {
 }
 
 #[test]
-fn test_1() {
+fn test_01() {
     let res = parse_curly(r#"{%}"#);
     assert!(res.is_none());
 }
 
 #[test]
-fn test_2() {
+fn test_02() {
     let res = parse_curly(r#"{%%}"#);
     assert!(res.is_none());
 }
 
 #[test]
-fn test_3() {
+fn test_03() {
     let res = parse_curly(r#"{% %}"#);
     assert!(res.is_none());
 }
 
 #[test]
-fn test_4() {
+fn test_04() {
     let res = parse_curly(r#"{%     %}"#);
     assert!(res.is_none());
 }
 
 #[test]
-fn test_5() {
+fn test_05() {
     let res = parse_curly(r#"{%x%}"#);
     assert_eq!(
         res,
@@ -245,7 +184,7 @@ fn test_5() {
 }
 
 #[test]
-fn test_6() {
+fn test_06() {
     let res = parse_curly(r#"{%  y   %}"#);
     assert_eq!(
         res,
@@ -257,7 +196,7 @@ fn test_6() {
 }
 
 #[test]
-fn test_7() {
+fn test_07() {
     // TODO should this return an error?
     let res = parse_curly(r#"{%  "   %}"#);
     assert!(res.is_none());
@@ -266,7 +205,7 @@ fn test_7() {
 }
 
 #[test]
-fn test_8() {
+fn test_08() {
     let res = parse_curly(r#"{%  qqrq    %}"#);
     println!("{:?}\n", res);
     assert_eq!(
@@ -277,3 +216,93 @@ fn test_8() {
         })
     );
 }
+
+#[test]
+fn test_09() {
+    let res = parse_curly(r#"{%  qq"rq    %}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_10() {
+    let res = parse_curly(r#"{%  include    field%}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_11() {
+    let res = parse_curly(r#"{%  include    field  %}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_12() {
+    let res = parse_curly(r#"{%  include    field=%}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_13() {
+    let res = parse_curly(r#"{%  include    field=  %}"#);
+    assert!(res.is_none());
+}
+
+// #[test]
+// fn test_14() {
+//     let res = parse_curly(r#"{%  include   file="example/code.rs" %}"#);
+//     println!("{:?}\n", res);
+//     assert_eq!(
+//         res,
+//         Some(Curly {
+//             name: String::from("include"),
+//             fields: HashMap::from([(String::from("file"), String::from("example/code.rs"))])
+//         })
+//     );
+// }
+
+// #[test]
+// fn test_15() {
+//     let res = parse_curly(r#"{%  youtube id="movie"  title="Title" answer=42 %}"#);
+//     println!("{:?}\n", res);
+//     assert_eq!(
+//         res,
+//         Some(Curly {
+//             name: String::from("youtube"),
+//             fields: HashMap::from([
+//                 (String::from("id"), String::from("movie")),
+//                 (String::from("title"), String::from("Title"))
+//             ])
+//         })
+//     );
+// }
+
+// #[test]
+// fn test_90() {
+//     // TODO
+//     let res = parse_curly(r#"{%  youtube title="Title \"quoted\" done" %}"#);
+//     println!("{:?}\n", res);
+//     assert_eq!(
+//         res,
+//         Some(Curly {
+//             name: String::from("youtube"),
+//             fields: HashMap::from([(String::from("title"), String::from("Title \"quoted\" done"))])
+//         })
+//     );
+// }
+
+// #[test]
+// fn test_91() {
+//     // TODO
+//     let res = parse_curly(r#"{%  youtube title="Title with escaped backslash \\" %}"#);
+//     println!("{:?}\n", res);
+//     assert_eq!(
+//         res,
+//         Some(Curly {
+//             name: String::from("youtube"),
+//             fields: HashMap::from([(
+//                 String::from("title"),
+//                 String::from("Title escaped backslas \\")
+//             )])
+//         })
+//     );
+// }
