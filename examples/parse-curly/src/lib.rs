@@ -16,8 +16,7 @@ impl Default for Curly {
     }
 }
 
-fn main() {}
-
+#[allow(dead_code)]
 fn parse_curly(text: &str) -> Option<Curly> {
     //let mut name = String::new();
     if !text.starts_with("{%") {
