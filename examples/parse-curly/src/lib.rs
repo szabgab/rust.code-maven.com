@@ -147,6 +147,9 @@ fn parse_curly(text: &str) -> Option<Curly> {
 
                 if chars[ix] == '"' {
                     ix += 1;
+                    if ix >= chars.len() {
+                        break None; // require space after the last quoted value
+                    }
                     break Some(ix - 2);
                 }
             } else {
@@ -334,12 +337,12 @@ fn test_18() {
     // );
 }
 
-// #[test]
-// fn test_19() {
-//     let res = parse_curly(r#"{%  youtube id="movie"  answer=42 %}"#);
-//     println!("{:?}\n", res);
-// good
-// }
+#[test]
+fn test_19() {
+    let res = parse_curly(r#"{%  youtube id="movie"  title="Title"%}"#);
+    println!("{:?}\n", res);
+    assert!(res.is_none());
+}
 
 // #[test]
 // fn test_90() {
