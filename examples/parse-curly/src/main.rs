@@ -1,4 +1,4 @@
-use regex::RegexBuilder;
+//use regex::RegexBuilder;
 use std::collections::HashMap;
 
 #[derive(Debug, PartialEq, Eq)]
@@ -48,6 +48,12 @@ fn main() {
         })
     );
 
+    // TODO should this return an error?
+    let res = parse_curly(r#"{%  "   %}"#);
+    assert!(res.is_none());
+    let res = parse_curly(r#"{%  %   %}"#);
+    assert!(res.is_none());
+
     let res = parse_curly(r#"{%  qqrq    %}"#);
     println!("{:?}\n", res);
     assert_eq!(
@@ -58,7 +64,20 @@ fn main() {
         })
     );
 
-    //println!("{:?}\n", res);
+    let res = parse_curly(r#"{%  qq"rq    %}"#);
+    assert!(res.is_none());
+
+    let res = parse_curly(r#"{%  include    field%}"#);
+    assert!(res.is_none());
+
+    let res = parse_curly(r#"{%  include    field  %}"#);
+    assert!(res.is_none());
+
+    let res = parse_curly(r#"{%  include    field=%}"#);
+    assert!(res.is_none());
+
+    let res = parse_curly(r#"{%  include    field=  %}"#);
+    assert!(res.is_none());
 
     // let res = parse_curly(r#"{%  include   file="example/code.rs" %}"#);
     // println!("{:?}\n", res);
@@ -117,11 +136,12 @@ fn parse_curly(text: &str) -> Option<Curly> {
     if text.len() < 5 {
         return None;
     }
-    println!("text: '{text}'");
-    let chars = text.chars().collect::<Vec<char>>();
 
+    println!("text: '{text}'");
+
+    let chars = text.chars().collect::<Vec<char>>();
     let chars = &chars[2..chars.len() - 2];
-    println!("{:?} {}", chars, chars.len());
+    //println!("{:?} {}", chars, chars.len());
 
     let mut ix = 0;
     let start_name = loop {
@@ -129,11 +149,15 @@ fn parse_curly(text: &str) -> Option<Curly> {
             break None;
         }
         if chars[ix] != ' ' {
-            break Some(ix);
+            if chars[ix].is_ascii_lowercase() {
+                break Some(ix);
+            } else {
+                break None;
+            }
         }
         ix += 1;
     }?;
-    println!("start_name: {start_name:?}");
+    //println!("start_name: {start_name:?}");
 
     let end_name = loop {
         if ix >= chars.len() {
@@ -142,13 +166,80 @@ fn parse_curly(text: &str) -> Option<Curly> {
         if chars[ix] == ' ' {
             break Some(ix - 1);
         }
+        if ! chars[ix].is_ascii_lowercase() {
+            break None;
+        }
         ix += 1;
     }?;
-    println!("end_name: {start_name:?}");
-    let mut res = Curly {
+    //println!("end_name: {start_name:?}");
+    let mut crl = Curly {
         name: text[2 + start_name..3 + end_name].to_owned(),
         ..Curly::default()
     };
+
+    loop {
+        let start_field = loop {
+            if ix < chars.len() {
+                println!("start_key char: {} at {}", chars[ix], ix);
+            }
+
+            if ix >= chars.len() {
+                return Some(crl);
+            }
+            if chars[ix] != ' ' {
+                if chars[ix].is_ascii_lowercase() {
+                    break Some(ix);
+                } else {
+                    println!("Invalid character '{}' at {} while looking for start_key", chars[ix], ix);
+                    break None; // error?
+                }
+            }
+    
+            ix += 1;
+        }?;
+
+        let end_field = loop {
+            if ix < chars.len() {
+                println!("end_key: char: {} at {}", chars[ix], ix);
+            }
+
+            if ix >= chars.len() {
+                // We started a key but have not ended
+                break None;
+            }
+            if chars[ix] == '=' {
+                break Some(ix - 1);
+            }
+            if ! chars[ix].is_ascii_lowercase() {
+                break None;
+            }
+            ix += 1;
+        }?;
+        
+        let field = text[2 + start_field..3 + end_field].to_owned();
+        println!("field {}-{} '{}'", start_field, end_field, field);
+        crl.fields.insert(field.to_owned(), "hi".to_owned());
+        ix += 1;
+        if ix >= chars.len() {
+            break None;
+        }
+
+        let quote = chars[ix] == '"';
+        if quote {
+            ix += 1;
+        }
+        if ix >= chars.len() {
+            break None;
+        }
+
+        let start_value = loop {
+            break None;
+        }?;
+
+        if ix >= chars.len() {
+            break Some(crl);
+        }
+    }
 
     // for (ix, ch) in text.chars().enumerate() {
     //     //println!("{ix}  {ch}");
@@ -159,86 +250,5 @@ fn parse_curly(text: &str) -> Option<Curly> {
     // }
     //    println!("{name}");
 
-    Some(res)
 }
 
-// fn parse_curly(text: &str) -> Option<Curly> {
-//     let base_pattern = r#"
-//         \{%
-//         \s+
-//         ([a-z]+)
-//         \s+
-//         (.*)
-//         %\}
-//         "#;
-//     // ((([a-z]+)="([^"]+)"\s+)*)
-//     let base_re = RegexBuilder::new(base_pattern)
-//         .ignore_whitespace(true)
-//         .build()
-//         .unwrap();
-
-//     let pair_pattern = r#"
-//     ([a-z]+)=(|"([^"]+)")
-//     \s+
-//     (.*)
-//     "#;
-
-//     let pair_re = RegexBuilder::new(pair_pattern)
-//         .ignore_whitespace(true)
-//         .build()
-//         .unwrap();
-
-//     let mut locs = base_re.capture_locations();
-//     match base_re.captures_read(&mut locs, text) {
-//         None => None,
-//         Some(_cap) => {
-//             let loc = locs.get(1).unwrap();
-//             let name = &text[loc.0..loc.1];
-//             println!("name: {name}");
-
-//             let loc = locs.get(2).unwrap();
-//             let mut text = &text[loc.0..loc.1];
-//             println!("text {text}");
-
-//             let mut crl = Curly {
-//                 name: name.to_string(),
-//                 ..Curly::default()
-//             };
-
-//             loop {
-//                 if text.is_empty() {
-//                     break;
-//                 }
-
-//                 let mut locs = pair_re.capture_locations();
-//                 println!("TEXT: {text}");
-//                 match pair_re.captures_read(&mut locs, text) {
-//                     None => break,
-//                     Some(_cap) => {
-//                         let loc = locs.get(1).unwrap();
-//                         let field = &text[loc.0..loc.1];
-//                         println!("field: '{field}'");
-
-//                         let loc = locs.get(2).unwrap();
-//                         let value = &text[loc.0..loc.1];
-//                         println!("value: '{value}'");
-//                         crl.fields.insert(field.to_owned(), value.to_owned());
-
-//                         match locs.get(4) {
-//                             None => {
-//                                 println!("break");
-//                                 break;
-//                             }
-//                             Some(loc) => {
-//                                 text = &text[loc.0..loc.1];
-//                                 println!("new text: {text}");
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-
-//             Some(crl)
-//         }
-//     }
-// }
