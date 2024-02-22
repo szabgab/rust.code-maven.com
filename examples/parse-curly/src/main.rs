@@ -18,52 +18,6 @@ impl Default for Curly {
 }
 
 fn main() {
-    let res = parse_curly(r#"{%}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%%}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{% %}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%     %}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%x%}"#);
-    assert_eq!(
-        res,
-        Some(Curly {
-            name: String::from("x"),
-            fields: HashMap::new()
-        })
-    );
-
-    let res = parse_curly(r#"{%  y   %}"#);
-    assert_eq!(
-        res,
-        Some(Curly {
-            name: String::from("y"),
-            fields: HashMap::new()
-        })
-    );
-
-    // TODO should this return an error?
-    let res = parse_curly(r#"{%  "   %}"#);
-    assert!(res.is_none());
-    let res = parse_curly(r#"{%  %   %}"#);
-    assert!(res.is_none());
-
-    let res = parse_curly(r#"{%  qqrq    %}"#);
-    println!("{:?}\n", res);
-    assert_eq!(
-        res,
-        Some(Curly {
-            name: String::from("qqrq"),
-            ..Curly::default()
-        })
-    );
-
     let res = parse_curly(r#"{%  qq"rq    %}"#);
     assert!(res.is_none());
 
@@ -251,4 +205,78 @@ fn parse_curly(text: &str) -> Option<Curly> {
     //    println!("{name}");
 
 }
+
+#[test]
+fn test_1() {
+    let res = parse_curly(r#"{%}"#);
+    assert!(res.is_none());
+}
+
+
+#[test]
+fn test_2() {
+    let res = parse_curly(r#"{%%}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_3() {
+    let res = parse_curly(r#"{% %}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_4() {
+    let res = parse_curly(r#"{%     %}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_5() {
+    let res = parse_curly(r#"{%x%}"#);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("x"),
+            fields: HashMap::new()
+        })
+    );
+}
+
+
+#[test]
+fn test_6() {
+    let res = parse_curly(r#"{%  y   %}"#);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("y"),
+            fields: HashMap::new()
+        })
+    );
+    
+}
+
+#[test]
+fn test_7() {
+    // TODO should this return an error?
+    let res = parse_curly(r#"{%  "   %}"#);
+    assert!(res.is_none());
+    let res = parse_curly(r#"{%  %   %}"#);
+    assert!(res.is_none());
+}
+
+#[test]
+fn test_8() {
+    let res = parse_curly(r#"{%  qqrq    %}"#);
+    println!("{:?}\n", res);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("qqrq"),
+            ..Curly::default()
+        })
+    );
+}
+
 
