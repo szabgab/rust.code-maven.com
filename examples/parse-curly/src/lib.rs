@@ -151,7 +151,8 @@ fn parse_curly(text: &str) -> Option<Curly> {
                 }
             } else {
                 if ix >= chars.len() {
-                    break Some(ix - 1);
+                    break None; // require space at the end
+                                //break Some(ix - 1); // allow lack of space at the end
                 }
 
                 if chars[ix] == ' ' {
@@ -315,20 +316,22 @@ fn test_17() {
     assert!(res.is_none());
 }
 
+// Let's make sure there is a space between the last value and the closing tag
 #[test]
 fn test_18() {
     let res = parse_curly(r#"{%  youtube id="movie"  answer=42%}"#);
     //println!("{:?}\n", res);
-    assert_eq!(
-        res,
-        Some(Curly {
-            name: String::from("youtube"),
-            fields: HashMap::from([
-                (String::from("id"), String::from("movie")),
-                (String::from("answer"), String::from("42"))
-            ])
-        })
-    );
+    assert!(res.is_none());
+    // assert_eq!(
+    //     res,
+    //     Some(Curly {
+    //         name: String::from("youtube"),
+    //         fields: HashMap::from([
+    //             (String::from("id"), String::from("movie")),
+    //             (String::from("answer"), String::from("42"))
+    //         ])
+    //     })
+    // );
 }
 
 // #[test]
