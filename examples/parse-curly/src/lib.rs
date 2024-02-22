@@ -175,15 +175,6 @@ fn parse_curly(text: &str) -> Option<Curly> {
             break Some(crl);
         }
     }
-
-    // for (ix, ch) in text.chars().enumerate() {
-    //     //println!("{ix}  {ch}");
-    //          start_name = ix;
-    //     }
-    //     // //println!("{ch}");
-    //     // name = format!("{name}{ch}")
-    // }
-    //    println!("{name}");
 }
 
 #[test]
