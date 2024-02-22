@@ -134,6 +134,10 @@ fn parse_curly(text: &str) -> Option<Curly> {
         }
 
         let end_value = loop {
+            if ix < chars.len() {
+                println!("end_value: char: {} at {}", chars[ix], ix);
+            }
+
             if quote {
                 if chars[ix] == '"' {
                     ix += 1;
@@ -149,6 +153,10 @@ fn parse_curly(text: &str) -> Option<Curly> {
                     break None;
                 }
 
+                if chars[ix] == ' ' {
+                    break Some(ix - 1);
+                }
+
                 if !chars[ix].is_ascii_digit() {
                     break None;
                 }
@@ -156,6 +164,9 @@ fn parse_curly(text: &str) -> Option<Curly> {
             ix += 1;
         }?;
 
+        if start_value == end_value {
+            break None;
+        }
         let value = text[2 + start_value..3 + end_value].to_owned();
         println!("value {}-{} '{}'", start_value, end_value, value);
         crl.fields.insert(field.to_owned(), value.to_owned());
@@ -288,21 +299,22 @@ fn test_14() {
     );
 }
 
-// #[test]
-// fn test_15() {
-//     let res = parse_curly(r#"{%  youtube id="movie"  title="Title" answer=42 %}"#);
-//     println!("{:?}\n", res);
-//     assert_eq!(
-//         res,
-//         Some(Curly {
-//             name: String::from("youtube"),
-//             fields: HashMap::from([
-//                 (String::from("id"), String::from("movie")),
-//                 (String::from("title"), String::from("Title"))
-//             ])
-//         })
-//     );
-// }
+#[test]
+fn test_15() {
+    let res = parse_curly(r#"{%  youtube id="movie"  title="Title" answer=42 %}"#);
+    println!("{:?}\n", res);
+    assert_eq!(
+        res,
+        Some(Curly {
+            name: String::from("youtube"),
+            fields: HashMap::from([
+                (String::from("id"), String::from("movie")),
+                (String::from("title"), String::from("Title")),
+                (String::from("answer"), String::from("42"))
+            ])
+        })
+    );
+}
 
 // #[test]
 // fn test_17() {
