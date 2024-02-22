@@ -120,7 +120,7 @@ fn parse_curly(text: &str) -> Option<Curly> {
         if chars[ix] == ' ' {
             break Some(ix - 1);
         }
-        if ! chars[ix].is_ascii_lowercase() {
+        if !chars[ix].is_ascii_lowercase() {
             break None;
         }
         ix += 1;
@@ -144,11 +144,14 @@ fn parse_curly(text: &str) -> Option<Curly> {
                 if chars[ix].is_ascii_lowercase() {
                     break Some(ix);
                 } else {
-                    println!("Invalid character '{}' at {} while looking for start_key", chars[ix], ix);
+                    println!(
+                        "Invalid character '{}' at {} while looking for start_key",
+                        chars[ix], ix
+                    );
                     break None; // error?
                 }
             }
-    
+
             ix += 1;
         }?;
 
@@ -164,12 +167,12 @@ fn parse_curly(text: &str) -> Option<Curly> {
             if chars[ix] == '=' {
                 break Some(ix - 1);
             }
-            if ! chars[ix].is_ascii_lowercase() {
+            if !chars[ix].is_ascii_lowercase() {
                 break None;
             }
             ix += 1;
         }?;
-        
+
         let field = text[2 + start_field..3 + end_field].to_owned();
         println!("field {}-{} '{}'", start_field, end_field, field);
         crl.fields.insert(field.to_owned(), "hi".to_owned());
@@ -203,7 +206,6 @@ fn parse_curly(text: &str) -> Option<Curly> {
     //     // name = format!("{name}{ch}")
     // }
     //    println!("{name}");
-
 }
 
 #[test]
@@ -211,7 +213,6 @@ fn test_1() {
     let res = parse_curly(r#"{%}"#);
     assert!(res.is_none());
 }
-
 
 #[test]
 fn test_2() {
@@ -243,7 +244,6 @@ fn test_5() {
     );
 }
 
-
 #[test]
 fn test_6() {
     let res = parse_curly(r#"{%  y   %}"#);
@@ -254,7 +254,6 @@ fn test_6() {
             fields: HashMap::new()
         })
     );
-    
 }
 
 #[test]
@@ -278,5 +277,3 @@ fn test_8() {
         })
     );
 }
-
-
