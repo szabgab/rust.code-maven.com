@@ -1,20 +1,12 @@
 use std::collections::HashMap;
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Default)]
 #[allow(dead_code)]
 struct Curly {
     name: String,
     fields: HashMap<String, String>,
 }
 
-impl Default for Curly {
-    fn default() -> Self {
-        Self {
-            name: String::new(),
-            fields: HashMap::new(),
-        }
-    }
-}
 
 #[allow(dead_code)]
 fn parse_curly(text: &str) -> Option<Curly> {
