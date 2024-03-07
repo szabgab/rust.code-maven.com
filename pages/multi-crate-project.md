@@ -249,7 +249,36 @@ You can create an alias for that if that makes life easier.
 
 ## Target folder
 
-All the create use the same `target` folder in the root of the project.
+All the creates use the same `target` folder in the root of the project.
 
+We can change the main `Cargo.toml` file to include all the crates in the `crates` folder.
+We can also exclude some.
 
+## Make Cargo.toml more generic
+
+```toml
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[package]
+name = "multi-crate-project"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+```
+
+## Global configuration vs. local configuration
+
+According to the [documentation](https://doc.rust-lang.org/cargo/reference/workspaces.html) some things
+can be configured globally in the main `Cargo.toml` file, but for example I had to add the Clippy lint
+configuration to each one of the `Cargo.toml` files separately.
+
+```toml
+[lints.clippy]
+unwrap_used = "deny"
+```
 
