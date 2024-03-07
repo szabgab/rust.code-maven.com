@@ -7,8 +7,6 @@ description: the basics of creating a project that contains multiple crates in a
 tags:
     - cargo
     - monorepo
-todo:
-    - TODO
 ---
 
 As your project growth at one point your might feel that splitting the code into multiple crates could be a good idea. It might make the
@@ -186,7 +184,27 @@ cargo new second
 cd ..
 ```
 
-This updated the main `Cargo.toml` file again, adding another entry to the list of workspaces:
+The directory tree now looks like this:
+
+```
+.
+├── Cargo.lock
+├── Cargo.toml
+├── crates
+│   ├── first
+│   │   ├── Cargo.toml
+│   │   └── src
+│   │       └── lib.rs
+│   └── second
+│       ├── Cargo.toml
+│       └── src
+│           └── main.rs
+└── src
+    └── main.rs
+```
+
+
+This command updated the main `Cargo.toml` file again, adding another entry to the list of workspaces:
 
 ```toml
 workspace = { members = ["crates/first", "crates/second"] }
@@ -222,19 +240,16 @@ The alias we created earlier works, so we can run all the tests of all the crate
 cargo t
 ```
 
-## running the binary
+## Running the binary
 
 `cargo run` will run the executable of the main crate.
 
 `cargo run --package second` will run the executable of the crate called `second`.
 You can create an alias for that if that makes life easier.
 
+## Target folder
+
+All the create use the same `target` folder in the root of the project.
 
 
 
-
-
-
-
-
-{% include file="examples/hello.rs" %}
