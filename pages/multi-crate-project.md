@@ -282,3 +282,10 @@ configuration to each one of the `Cargo.toml` files separately.
 unwrap_used = "deny"
 ```
 
+## Source code
+
+[source](https://github.com/szabgab/rust.code-maven.com/tree/main/examples/multi-crate-project)
+
+
+
+
