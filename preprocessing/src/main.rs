@@ -76,7 +76,7 @@ For this page even the Markdown file is generated. See the `preprocessing` in th
 ![](examples/meetups.yaml)
 "#);
 
-    let filename = "../pages/meetups.md";
+    let filename = "../pages/user-groups.md";
     if let Err(err) = std::fs::write(filename, text) {
         eprintln!("Could not write the file '{filename}': {err}");
     }
