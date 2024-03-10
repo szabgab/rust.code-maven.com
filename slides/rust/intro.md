@@ -7,6 +7,7 @@
 
 * [Rust the language](https://www.rust-lang.org/)
 * [Rust Documentation](https://doc.rust-lang.org/)
+* [teach-rs](https://github.com/tweedegolf/teach-rs) Free material for Rust courses.
 
 ## Rust Books
 {id: rust-books}
