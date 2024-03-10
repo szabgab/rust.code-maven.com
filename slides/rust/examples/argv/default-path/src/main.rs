@@ -10,7 +10,7 @@ fn main() {
     println!("page: {:?}", page);
 }
 
-fn get_path(args: &Vec<String>) -> std::path::PathBuf {
+fn get_path(args: &[String]) -> std::path::PathBuf {
     if args.len() == 3 {
         return std::path::PathBuf::from(&args[2]);
     }
