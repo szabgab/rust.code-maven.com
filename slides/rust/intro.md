@@ -17,6 +17,8 @@
 * [The Rust book](https://doc.rust-lang.org/book/)
 * [Rust by example](https://doc.rust-lang.org/stable/rust-by-example/)
 
+* [Zero To Production In Rust](https://www.zero2prod.com/)
+
 ## Crates
 {id: crates-io}
 
