@@ -26,6 +26,8 @@ One of the aspects we take in account when picking a language for a project is t
 | [JavaScript](https://github.com/topics/javascript) | 511,622 | 170,000 |
 | [Perl](https://github.com/topics/perl)             |   4,450 |   8,700 |
 | [Ada](https://github.com/topics/ada)               |     706 |      72 |
+| [PHP](https://github.com/topics/php)               | 115,931 |  53,800 |
+| [Java](https://github.com/topics/java)             | 232,184 | 153,000 |
 
 
 The number of projects tagged on GitHub by a language can have some indication on the popularity, but it also has some serious issues.
@@ -39,4 +41,4 @@ Despite this we only see 4.450 tagged as Perl.
 
 * Rust: [Rust digger](https://rust-digger.code-maven.com/) indicates there are a total of 132,501 crates. Out that 100,013 (75.48%) indicate their repository on GitHub. However, on GitHub only 54,558 actually have been tagged as Rust.
 
-* C++: [vcpkg](https://vcpkg.io/en/packages.html) the largers registtry of C++ libraries has only 2,396 libraries while there are 67,312 tagged as C++ on GitHub.
+* C++: [vcpkg](https://vcpkg.io/en/packages.html) the largest registtry of C++ libraries has only 2,396 libraries while there are 67,312 tagged as C++ on GitHub.
