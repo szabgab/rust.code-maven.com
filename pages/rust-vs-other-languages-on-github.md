@@ -4,8 +4,8 @@ timestamp: 2024-03-11T10:30:01
 author: szabgab
 published: true
 description: The number of projects tagged on GitHub by a language can have some indication on the popularity, but it also has some serious issues.
-#tags:
-#    - GitHub
+tags:
+    - GitHub
 todo:
     - automate fetching this data
     - get the number of repos by language as recognized by the language analyzer of GitHub
