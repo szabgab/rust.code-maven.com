@@ -11,6 +11,9 @@ todo:
     - get the number of repos by language as recognized by the language analyzer of GitHub
 ---
 
+One of the aspects we take in account when picking a language for a project is the popularity of the language. It has some indication regarding the availability of programmers and the availability of 3rd party packages. I looked at the number on GitHub topics for some clue.
+
+
 | Language | repositories | followers |
 | -------- | ------------ | --------- |
 | [Rust](https://github.com/topics/rust)             |  54,558 |  38,800 |
@@ -34,6 +37,6 @@ Despite this we only see 4.450 tagged as Perl.
 
 * Python: [PyDigger](https://pydigger.com/stats) indicates that roughtly 63.13% of the packages indicate that they have GitHub repository. [PyPi](https://pypi.org/) reports a total of 522,170. That would mean about 330,000 Python projects on GitHub while 428,000 are tagged as Python.
 
-* Rust: [Rust digger](https://rust-digger.code-maven.com/) indicates there are a total of 132,501 crates. Out that 100,013 (75.48%) indicate their repository on GitHub. However only 54,558 actually have been tagged as Rust.
+* Rust: [Rust digger](https://rust-digger.code-maven.com/) indicates there are a total of 132,501 crates. Out that 100,013 (75.48%) indicate their repository on GitHub. However, on GitHub only 54,558 actually have been tagged as Rust.
 
 * C++: [vcpkg](https://vcpkg.io/en/packages.html) the largers registtry of C++ libraries has only 2,396 libraries while there are 67,312 tagged as C++ on GitHub.
