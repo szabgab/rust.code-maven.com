@@ -11,7 +11,7 @@ tags:
     - f32
     - bool
     - PathBuf
-    - "$?"
+    - '$?'
     - ERROR_LEVEL
 ---
 

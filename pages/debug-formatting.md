@@ -5,8 +5,8 @@ author: szabgab
 published: true
 description: There are various ways to easily format the content of variables to be shown for debuggng purposes.
 tags:
-    - ":?"
-    - ":#?"
+    - ':?'
+    - ':#?'
     - dbg!
     - format!
     - println!
