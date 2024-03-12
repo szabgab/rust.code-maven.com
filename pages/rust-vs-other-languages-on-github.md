@@ -28,7 +28,7 @@ One of the aspects we take in account when picking a language for a project is t
 | [Ada](https://github.com/topics/ada)               |     706 |      72 |
 | [PHP](https://github.com/topics/php)               | 115,931 |  53,800 |
 | [Java](https://github.com/topics/java)             | 232,184 | 153,000 |
-
+| [Kotlin](https://github.com/topics/kotlin)         |  49,809 |  33,500 |
 
 The number of projects tagged on GitHub by a language can have some indication on the popularity, but it also has some serious issues.
 
