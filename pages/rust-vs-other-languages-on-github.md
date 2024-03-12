@@ -17,18 +17,18 @@ One of the aspects we take in account when picking a language for a project is t
 | Language | repositories | followers |
 | -------- | ------------ | --------- |
 | [Rust](https://github.com/topics/rust)             |  54,558 |  38,800 |
-| [C++](https://github.com/topics/cpp)               |  67,312 | 124,000 |
-| [C](https://github.com/topics/c)                   |  61,456 | 110,000 |
-| [Python](https://github.com/topics/python)         | 428,293 | 285,000 |
-| [Golang](https://github.com/topics/golang)         |  91,210 |  61,000 |
-| [Go](https://github.com/topics/golang)             |  58,155 |  61,000 |
-| [Ruby](https://github.com/topics/ruby)             |  34,901 |  21,100 |
-| [JavaScript](https://github.com/topics/javascript) | 511,622 | 170,000 |
-| [Perl](https://github.com/topics/perl)             |   4,450 |   8,700 |
 | [Ada](https://github.com/topics/ada)               |     706 |      72 |
-| [PHP](https://github.com/topics/php)               | 115,931 |  53,800 |
+| [C](https://github.com/topics/c)                   |  61,456 | 110,000 |
+| [C++](https://github.com/topics/cpp)               |  67,312 | 124,000 |
+| [Go](https://github.com/topics/golang)             |  58,155 |  61,000 |
+| [Golang](https://github.com/topics/golang)         |  91,210 |  61,000 |
 | [Java](https://github.com/topics/java)             | 232,184 | 153,000 |
+| [JavaScript](https://github.com/topics/javascript) | 511,622 | 170,000 |
 | [Kotlin](https://github.com/topics/kotlin)         |  49,809 |  33,500 |
+| [Perl](https://github.com/topics/perl)             |   4,450 |   8,700 |
+| [PHP](https://github.com/topics/php)               | 115,931 |  53,800 |
+| [Python](https://github.com/topics/python)         | 428,293 | 285,000 |
+| [Ruby](https://github.com/topics/ruby)             |  34,901 |  21,100 |
 
 The number of projects tagged on GitHub by a language can have some indication on the popularity, but it also has some serious issues.
 
