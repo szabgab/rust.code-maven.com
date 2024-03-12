@@ -1,7 +1,0 @@
-Hello, world! 42 true
-"Hello, world!" 42 true
-
-("text", 42)
-["Aunt Em", "Uncle Henry", "Betsy Bobbin"]
-Person { name: "Mary Jane", birthyear: 1997, addresses: ["home", "work"] }
-
