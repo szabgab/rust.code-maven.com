@@ -3,10 +3,10 @@ title: "Debug formatting using :?, :#?, and dbg!"
 timestamp: 2024-03-12T12:30:01
 author: szabgab
 published: true
-description: 
+description: There are various ways to easily format the content of variables to be shown for debuggng purposes.
 tags:
-    - :?
-    - :#?
+    - ":?"
+    - ":#?"
     - dbg!
     - format!
     - println!
