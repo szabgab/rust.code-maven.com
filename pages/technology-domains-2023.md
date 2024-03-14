@@ -5,12 +5,9 @@ author: szabgab
 published: false
 description:
 tags:
-    - Rust
-todo:
-    - TODO
+    - survey
+    - domains
 ---
-
-{% include file="examples/hello.rs" %}
 
 The [Annual Rust Survey for 2023](https://blog.rust-lang.org/2024/02/19/2023-Rust-Annual-Survey-2023-results.html) has a number of very interesting charts.
 Probably the most interesting for me was the one about the technology domains in which Rust is used.
