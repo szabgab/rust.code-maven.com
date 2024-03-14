@@ -1,5 +1,5 @@
 ---
-title: In which technology domains is Rust used?
+title: In which technology domains is Rust used? - Rust survey 2023
 timestamp: 2024-03-14T16:30:01
 author: szabgab
 published: false
