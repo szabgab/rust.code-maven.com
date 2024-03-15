@@ -233,3 +233,16 @@ This is using the [liquid-filter-reverse-string](https://crates.io/crates/liquid
 
 ![](examples/liquid/liquid-size/src/main.rs)
 
+## Liquid: Embed HTML - escape HTML
+{id: liquid-embed-html-escape-html}
+
+By default liquid inserts values as they are.
+
+This means if a value we use in a template contains any HTML special character, that will be included in the resulting HTML. This can break the HTML and can open your site to HTML injection attack.
+
+We can use the **escape** filter on each field where we would like to avoid this.
+
+![](examples/liquid/embed-html-tags/src/main.rs)
+
+![](examples/liquid/embed-html-tags/out.txt)
+
