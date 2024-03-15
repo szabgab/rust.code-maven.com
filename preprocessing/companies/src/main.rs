@@ -85,7 +85,7 @@ tags:
 
 For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
 
-![](examples/companies.yaml)
+{% include file="examples/companies.yaml" %}
 "#);
 
     let filename = "../../pages/companies.md";

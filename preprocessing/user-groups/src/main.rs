@@ -73,7 +73,8 @@ Total number of members: {} (the same person might be member of several groups.)
 
 For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
 
-![](examples/meetups.yaml)
+{% include file="examples/meetups.yaml" %}
+
 "#);
 
     let filename = "../../pages/user-groups.md";
