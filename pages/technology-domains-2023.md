@@ -1,12 +1,13 @@
 ---
 title: In which technology domains is Rust used? - Rust survey 2023
-timestamp: 2024-03-14T16:30:01
+timestamp: 2024-03-15T11:30:01
 author: szabgab
-published: false
-description:
+published: true
+description: In which domains of technology do you use Rust in? The result of the 2023 Rust survey.
 tags:
     - survey
     - domains
+    - technology
 ---
 
 The [Annual Rust Survey for 2023](https://blog.rust-lang.org/2024/02/19/2023-Rust-Annual-Survey-2023-results.html) has a number of very interesting charts.
