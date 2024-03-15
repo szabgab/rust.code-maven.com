@@ -9,6 +9,7 @@ tags:
     - CARGO_PKG_VERSION
     - env!
     - static
+    - const
 todo:
     - constant functions https://doc.rust-lang.org/std/keyword.const.html
 ---
