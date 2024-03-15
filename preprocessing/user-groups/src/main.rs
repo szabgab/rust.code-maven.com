@@ -14,7 +14,7 @@ fn main() {
 }
 
 fn meetups() {
-    let filename = std::path::Path::new("../examples/meetups.yaml");
+    let filename = std::path::Path::new("../../examples/meetups.yaml");
     let yaml_string = std::fs::read_to_string(filename).unwrap();
     let mut groups: Vec<Group> = match serde_yaml::from_str(&yaml_string) {
         Ok(value) => value,
@@ -76,7 +76,7 @@ For this page even the Markdown file is generated. See the `preprocessing` in th
 ![](examples/meetups.yaml)
 "#);
 
-    let filename = "../pages/user-groups.md";
+    let filename = "../../pages/user-groups.md";
     if let Err(err) = std::fs::write(filename, text) {
         eprintln!("Could not write the file '{filename}': {err}");
     }
