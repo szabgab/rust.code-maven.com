@@ -93,4 +93,8 @@ show-version 1.2.3
 So this **always** uses the name that was defined in `Cargo.toml` unlike the way we printed the **usage message** in
 [ARGV - command line parameters for simple CLI program](/argv-simple-command-line-parameters) where we always print the name of the current executable.
 
+## Notes
+
+Actually you can [embed the version in the binary](/embed-version-number-in-the-code)  without Clap as well.
+
 
