@@ -1,0 +1,29 @@
+- name: Microsoft
+  url: https://www.microsoft.com/
+  addresses:
+    - country: Israel
+      city: Herzliya
+  proofs:
+    - url: https://www.youtube.com/watch?v=Fi--zxTU-8w
+      title: Don't panic! - Our journey to error handling in Rust
+      ptype: youtube
+      language: Hebrew
+      people:
+        - name: Tomer Cohen
+          url: https://www.tomercode.com/
+- name: VSHN
+  url: https://www.vshn.ch/
+  addresses:
+    - country: Switzerland
+      city: Zurich
+  proofs:
+    - url: https://www.youtube.com/watch?v=N7GMHcX-WdA
+      title: Project Syn - reducing configuration rendering runtime from 7.5 min to 1.5 minute.
+      ptype: youtube
+      language: English
+      people:
+        - name: Simon Gerber
+          url: https://simu.github.io/
+
+
+

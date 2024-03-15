@@ -37,6 +37,9 @@ jobs:
           cd preprocessing/user-groups
           cargo run
           cd -
+          cd preprocessing/companies
+          cargo run
+          cd -
           ./code-maven web --outdir _site
 
       - name: Checkout slides
