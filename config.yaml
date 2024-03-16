@@ -24,6 +24,10 @@ from:
 archive:
   title: Archive
   description: List of all the articles about the Rust programming language
+
+atom:
+  max: 20
+
 navbar:
   start:
     - path: /
