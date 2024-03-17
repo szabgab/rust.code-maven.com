@@ -45,7 +45,10 @@ If you find a group near-by where you live or where you work, join them. If none
 online meetings you can join from any place.
 
 Another measurement could be frequency of events and the number of attendees at the events, but it that's much harder to collect so I stayed with
-the number of members on 2023.12.11.
+the number of members.
+
+* On 2023.12.11 there were 99 groups with a total of 59,629 members.
+* On 2024.03.17 tgere were 100 groups with a total of ... members.
 
 Total number of members: {} (the same person might be member of several groups.)
 
