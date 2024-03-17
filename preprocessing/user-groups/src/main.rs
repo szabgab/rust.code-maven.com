@@ -48,7 +48,7 @@ Another measurement could be frequency of events and the number of attendees at 
 the number of members.
 
 * On 2023.12.11 there were 99 groups with a total of 59,629 members.
-* On 2024.03.17 tgere were 100 groups with a total of ... members.
+* On 2024.03.17 there were 113 groups with a total of 65,200 members.
 
 Total number of members: {} (the same person might be member of several groups.)
 
