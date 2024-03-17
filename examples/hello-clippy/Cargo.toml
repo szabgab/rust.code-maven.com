@@ -1,0 +1,24 @@
+[package]
+name = "hello-clippy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[lints.clippy]
+pedantic     = { priority = -1, level = "deny" }
+suspicious   = { priority = -1, level = "deny" }
+complexity   = { priority = -1, level = "deny" }
+perf         = { priority = -1, level = "deny" }
+style        = { priority = -1, level = "deny" }
+restriction  = { priority = -1, level = "deny" }
+cargo        = { priority = -1, level = "deny" }
+
+cargo_common_metadata = "allow"
+blanket_clippy_restriction_lints = "allow"
+print_stdout = "allow"
+missing_docs_in_private_items = "allow"
+
+
