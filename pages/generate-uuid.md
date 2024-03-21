@@ -12,7 +12,7 @@ todo:
 ---
 
 There are many cases when you might want to create a unique identifier. For example when we upload a video to YouTube the video gets an identifier that is unique to YouTube.
-For example [w0VFcVYIfhg](https://www.youtube.com/watch?v=w0VFcVYIfhg).
+For example [w0VFcVYIfhg](https://www.youtube.com/watch?v=UqVgTafRCCU).
 
 If you let people register on your web site you probably save their information in a database and assign a unique number to their information just as you do with any other piece of data,
 but you probably also let them select a username which needs to be **unique** in your system.
