@@ -1,6 +1,13 @@
 macro_rules! prt {
     ($var:expr) => {
-        println!("{:2} {:2} {:p} {:15?} '{}'", $var.len(), $var.capacity(), &$var, $var.as_ptr(), $var);
+        println!(
+            "{:2} {:2} {:p} {:15?} '{}'",
+            $var.len(),
+            $var.capacity(),
+            &$var,
+            $var.as_ptr(),
+            $var
+        );
     };
 }
 fn main() {
@@ -23,4 +30,3 @@ fn main() {
     text.push_str("123456789123143274368741");
     prt!(text);
 }
-
