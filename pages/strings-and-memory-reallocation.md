@@ -1,16 +1,14 @@
 ---
-title: Strings and memort reallocation
+title: Strings and memory (re)allocation
 timestamp: 2024-03-20T22:30:01
 author: szabgab
 published: true
-description:
+description: Let's take a look at the way Rust allocates memory to strings and reallocates it when necessary.
 tags:
     - push
     - push_str
     - as_ptr
     - ":p"
-todo:
-    - TODO
 ---
 
 {% youtube id="UqVgTafRCCU" %}
