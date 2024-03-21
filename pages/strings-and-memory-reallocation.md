@@ -1,5 +1,5 @@
 ---
-title: Strings and memory (re)allocation
+title: Strings and memory (re)allocation (video)
 timestamp: 2024-03-20T22:30:01
 author: szabgab
 published: true
