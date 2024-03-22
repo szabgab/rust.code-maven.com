@@ -92,7 +92,7 @@ any other programming language, but there are various sources we can use to find
                 .as_str(),
             );
             for person in &proof.people {
-                text.push_str(format!("    * [{}]({})", person.name, person.url).as_str());
+                text.push_str(format!("    * [{}]({})\n", person.name, person.url).as_str());
             }
         }
 
