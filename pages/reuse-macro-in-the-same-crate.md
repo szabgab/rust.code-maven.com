@@ -6,7 +6,11 @@ published: true
 description: Create a macro and use it in several places in the same crate.
 tags:
     - macro_rules!
-    -
+    - allow
+    - unused_macros
+    - unused_imports
+    - mod
+    - pub
 todo:
     - move macro to separate crate in the project
     - move macro to separate crate in a different project
@@ -53,7 +57,7 @@ Finally we put the following line at the top of the file.
 
 This is probably only important if you don't want to use all the macros. Probably this is only relevant to me while I am writing examples
 to show Rust. In real-world code you probably would get rid of the macros you don't use or you'd create a separate crate that exports
-macros and then you'd import only the ones you need.
+macros and then you'd import only the ones you need. Note the exlamation mark at the beginning!
 
 The full file:
 
@@ -76,3 +80,4 @@ The full file:
 
 
 See also [this answer](https://stackoverflow.com/questions/26731243/how-do-i-use-a-macro-across-module-files).
+
