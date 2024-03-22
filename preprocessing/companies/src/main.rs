@@ -6,6 +6,8 @@ use serde::Deserialize;
 struct Address {
     country: String,
     //state: String,
+
+    #[serde(default = "get_empty_string")]
     city: String,
 }
 
@@ -37,6 +39,10 @@ struct Company {
 
 fn main() {
     companies();
+}
+
+fn get_empty_string() -> String {
+    String::new()
 }
 
 fn companies() {
