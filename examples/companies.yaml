@@ -8,6 +8,7 @@
       title: Don't panic! - Our journey to error handling in Rust
       ptype: youtube
       language: Hebrew
+      year: 2023
       people:
         - name: Tomer Cohen
           url: https://www.tomercode.com/
@@ -21,6 +22,7 @@
       title: Project Syn - reducing configuration rendering runtime from 7.5 min to 1.5 minute.
       ptype: youtube
       language: English
+      year: 2024
       people:
         - name: Simon Gerber
           url: https://simu.github.io/

@@ -23,6 +23,7 @@ struct Proof {
     title: String,
     ptype: String,
     language: String,
+    year: u16,
     people: Vec<Person>,
 }
 
@@ -51,8 +52,7 @@ fn companies() {
     //println!("{:?}", data);
 
     let mut text = String::from(
-        r#"
----
+        r#"---
 title: Companies using Rust
 timestamp: 2024-03-15T21:30:01
 published: false
@@ -78,9 +78,19 @@ any other programming language, but there are various sources we can use to find
         text.push('\n');
 
         for proof in company.proofs.iter() {
-            text.push_str(format!("* [{}]({})\n", proof.title, proof.url).as_str());
+            text.push_str(
+                format!(
+                    "* [{}]({}) (From {} in {})\n",
+                    proof.title, proof.url, proof.year, proof.language
+                )
+                .as_str(),
+            );
+            for person in &proof.people {
+                text.push_str(format!("    * [{}]({})", person.name, person.url).as_str());
+            }
         }
 
+        text.push('\n');
         text.push('\n');
     }
 
