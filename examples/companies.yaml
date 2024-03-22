@@ -27,5 +27,27 @@
         - name: Simon Gerber
           url: https://simu.github.io/
 
+- name: Dropbox
+  url: https://www.dropbox.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine
+      title: Rewriting the heart of our sync engine
+      ptype: article
+      language: English
+      year: 2020
+      people:
+        - name: Sujay Jayakar
+          url: https://www.linkedin.com/in/sujayakar/
+
+    - url: https://dropbox.tech/application/why-we-built-a-custom-rust-library-for-capture
+      title: Why we built a custom Rust library for Capture
+      ptype: article
+      language: English
+      year: 2021
+      people:
+
+
 
 
