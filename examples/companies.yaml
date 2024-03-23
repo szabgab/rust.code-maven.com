@@ -70,7 +70,7 @@
   proofs:
     - url: https://www.figma.com/blog/rust-in-production-at-figma/
       title: Rust in production at Figma
-      description: Faster code, reduced memory footprint, a lot less CPU usage. Pros: Low memory usage; Awesome performance; Solid toolchain; Friendly error messages. Cons: Lifetimes are confusing (partially solved since then); Errors are hard to debug (several solutions were created since then); Many libraries are still early (libraries are way more mature since then); Asynchronous Rust is difficult (this has improved a lot since then).
+      description: "Faster code, reduced memory footprint, a lot less CPU usage. Pros: Low memory usage; Awesome performance; Solid toolchain; Friendly error messages. Cons: Lifetimes are confusing (partially solved since then); Errors are hard to debug (several solutions were created since then); Many libraries are still early (libraries are way more mature since then); Asynchronous Rust is difficult (this has improved a lot since then)."
       ptype: article
       language: English
       year: 2018
