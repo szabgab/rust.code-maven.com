@@ -48,6 +48,16 @@
       year: 2021
       people:
 
-
-
-
+- name: Coursera
+  url: https://www.coursera.org/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://medium.com/coursera-engineering/rust-docker-in-production-coursera-f7841d88e6ed
+      title: Rust & Docker in production @ Coursera
+      ptype: article
+      language: English
+      year: 2016
+      people:
+        - name: Brennan Saeta
+          url: https://www.linkedin.com/in/brennan-saeta-94a79561/
