@@ -1,6 +1,10 @@
 use serde::Deserialize;
 //use thousands::Separable;
 
+// TODO: separate pages by language
+// TODO: separate pages by country
+// TODO: order by date
+
 #[derive(Debug, Deserialize)]
 #[allow(unused)]
 struct Address {
@@ -25,7 +29,7 @@ struct Proof {
     title: String,
     ptype: String,
     language: String,
-    year: u16,
+    date: String,
     people: Vec<Person>,
     description: Option<String>,
 }
@@ -88,7 +92,7 @@ any other programming language, but there are various sources we can use to find
             text.push_str(
                 format!(
                     "* [{}]({}) (From {} in {})\n",
-                    proof.title, proof.url, proof.year, proof.language
+                    proof.title, proof.url, proof.date, proof.language
                 )
                 .as_str(),
             );
