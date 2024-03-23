@@ -10,7 +10,7 @@
       description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate."
       ptype: youtube
       language: Hebrew
-      date: 2023
+      date: 2023.12.17
       people:
         - name: Tomer Cohen
           url: https://www.tomercode.com/
@@ -18,7 +18,7 @@
       title: Rust at Microsoft
       ptype: youtube
       language: English
-      date: 2020
+      date: 2020.05.19
       people:
         - name: Ryan Levick
           url: https://ryanlevick.com/
@@ -33,7 +33,7 @@
       title: Project Syn - reducing configuration rendering runtime from 7.5 min to 1.5 minute.
       ptype: youtube
       language: English
-      date: 2024
+      date: 2024.03.11
       people:
         - name: Simon Gerber
           url: https://simu.github.io/
@@ -48,7 +48,7 @@
       description: "A deep description of the problem of syncing. The problems with the existing implementation in Python. A discussion of what is needed for a successful rewrite: A rewrite checklist. Replacing 10 years old Python code by Rust."
       ptype: article
       language: English
-      date: 2020
+      date: 2020.03.09
       people:
         - name: Sujay Jayakar
           url: https://www.linkedin.com/in/sujayakar/
@@ -57,7 +57,7 @@
       title: Why we built a custom Rust library for Capture
       ptype: article
       language: English
-      date: 2021
+      date: 2021.09.28
       people:
 
 - name: Coursera
@@ -69,7 +69,7 @@
       title: Rust & Docker in production @ Coursera
       ptype: article
       language: English
-      date: 2016
+      date: 2016.07.07
       people:
         - name: Brennan Saeta
           url: https://www.linkedin.com/in/brennan-saeta-94a79561/
@@ -85,7 +85,7 @@
       description: "Faster code, reduced memory footprint, a lot less CPU usage. Pros: Low memory usage; Awesome performance; Solid toolchain; Friendly error messages. Cons: Lifetimes are confusing (partially solved since then); Errors are hard to debug (several solutions were created since then); Many libraries are still early (libraries are way more mature since then); Asynchronous Rust is difficult (this has improved a lot since then)."
       ptype: article
       language: English
-      date: 2018
+      date: 2018.05.02
       people:
         - name: Evan Wallace
           url: https://www.madebyevan.com/
@@ -112,7 +112,7 @@
       title: Building fast interpreters in Rust
       ptype: article
       language: English
-      date: 2019
+      date: 2019.04.03
       people:
         - name: Ingvar Stepanyan
           url: https://rreverser.com/
@@ -128,7 +128,7 @@
       title: Bringing Rust Home to Meet the Parents
       ptype: youtube
       language: English
-      date: 2019
+      date: 2019.09.16
       people:
         - name: Jeremy Fitzhardinge
           url: https://www.linkedin.com/in/jeremyfitzhardinge/
@@ -136,7 +136,7 @@
       title: A brief history of Rust at Facebook
       ptype: article
       language: English
-      date: 2021
+      date: 2021.02.29
       people:
 
 
