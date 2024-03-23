@@ -61,3 +61,20 @@
       people:
         - name: Brennan Saeta
           url: https://www.linkedin.com/in/brennan-saeta-94a79561/
+
+
+- name: Figma
+  url: https://www.figma.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://www.figma.com/blog/rust-in-production-at-figma/
+      title: Rust in production at Figma
+      ptype: article
+      language: English
+      year: 2018
+      people:
+        - name: Evan Wallace
+          url: https://www.madebyevan.com/
+
+
