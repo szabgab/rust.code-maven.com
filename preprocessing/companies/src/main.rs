@@ -93,7 +93,10 @@ any other programming language, but there are various sources we can use to find
                 .as_str(),
             );
             match &proof.description {
-                Some(description) => text.push_str(description),
+                Some(description) => {
+                    text.push('\n');
+                    text.push_str(description);
+                },
                 None => {},
             };
             for person in &proof.people {
