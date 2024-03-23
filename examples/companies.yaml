@@ -3,6 +3,7 @@
   addresses:
     - country: Israel
       city: Herzliya
+    - country: USA
   proofs:
     - url: https://www.youtube.com/watch?v=Fi--zxTU-8w
       title: Don't panic! - Our journey to error handling in Rust
@@ -13,6 +14,15 @@
       people:
         - name: Tomer Cohen
           url: https://www.tomercode.com/
+    - url: https://www.youtube.com/watch?v=NQBVUjdkLAA
+      title: Rust at Microsoft
+      ptype: youtube
+      language: English
+      year: 2020
+      people:
+        - name: Ryan Levick
+          url: https://ryanlevick.com/
+
 - name: VSHN
   url: https://www.vshn.ch/
   addresses:
@@ -79,5 +89,17 @@
       people:
         - name: Evan Wallace
           url: https://www.madebyevan.com/
+
+- name: npm
+  url: https://www.npmjs.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://www.rust-lang.org/static/pdfs/Rust-npm-Whitepaper.pdf
+      title: Community makes Rust an easy choice for npm
+      ptype: pdf
+      language: English
+      year: 2019
+      people:
 
 
