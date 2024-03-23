@@ -6,6 +6,7 @@
   proofs:
     - url: https://www.youtube.com/watch?v=Fi--zxTU-8w
       title: Don't panic! - Our journey to error handling in Rust
+      description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate."
       ptype: youtube
       language: Hebrew
       year: 2023
@@ -34,6 +35,7 @@
   proofs:
     - url: https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine
       title: Rewriting the heart of our sync engine
+      description: "A deep description of the problem of syncing. The problems with the existing implementation in Python. A discussion of what is needed for a successful rewrite: A rewrite checklist. Replacing 10 years old Python code by Rust."
       ptype: article
       language: English
       year: 2020
