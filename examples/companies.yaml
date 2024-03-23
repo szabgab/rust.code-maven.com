@@ -103,3 +103,41 @@
       people:
 
 
+- name: Cloudflare
+  url: https://www.cloudflare.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://blog.cloudflare.com/building-fast-interpreters-in-rust/
+      title: Building fast interpreters in Rust
+      ptype: article
+      language: English
+      year: 2019
+      people:
+        - name: Ingvar Stepanyan
+          url: https://rreverser.com/
+        - name: Andrew Galloni
+          url: https://www.linkedin.com/in/andrew-galloni-3a40242/
+
+- name: Facebook
+  url: https://www.facebook.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://www.youtube.com/watch?v=kylqq8pEgRs
+      title: Bringing Rust Home to Meet the Parents
+      ptype: youtube
+      language: English
+      year: 2019
+      people:
+        - name: Jeremy Fitzhardinge
+          url: https://www.linkedin.com/in/jeremyfitzhardinge/
+    - url: https://engineering.fb.com/2021/04/29/developer-tools/rust/
+      title: A brief history of Rust at Facebook
+      ptype: article
+      language: English
+      year: 2021
+      people:
+
+
+
