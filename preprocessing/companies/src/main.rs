@@ -10,7 +10,6 @@ use serde::Deserialize;
 struct Address {
     country: String,
     //state: String,
-
     #[serde(default = "get_empty_string")]
     city: String,
 }
@@ -62,22 +61,26 @@ fn companies() {
     };
     //println!("{:?}", data);
 
+    generate_md_file(companies);
+}
+
+fn generate_md_file(companies: Vec<Company>) {
     let mut text = String::from(
         r#"---
-title: Companies using Rust
-timestamp: 2024-03-15T21:30:01
-published: false
-description: Which company uses Rust with evidence
-tags:
+    title: Companies using Rust
+    timestamp: 2024-03-15T21:30:01
+    published: false
+    description: Which company uses Rust with evidence
+    tags:
     - corporate
     - video
     - article
----
-
-When considering using Rust you will probably want to know who else already uses it. It is usually not easy to get companies tell you if they use Rust or for that matter
-any other programming language, but there are various sources we can use to find this information.
-
-"#,
+    ---
+    
+    When considering using Rust you will probably want to know who else already uses it. It is usually not easy to get companies tell you if they use Rust or for that matter
+    any other programming language, but there are various sources we can use to find this information.
+    
+    "#,
     );
 
     for company in companies.iter() {
@@ -100,8 +103,8 @@ any other programming language, but there are various sources we can use to find
                 Some(description) => {
                     text.push('\n');
                     text.push_str(description);
-                },
-                None => {},
+                }
+                None => {}
             };
             for person in &proof.people {
                 text.push_str(format!("    * [{}]({})\n", person.name, person.url).as_str());
@@ -113,11 +116,11 @@ any other programming language, but there are various sources we can use to find
     }
 
     text.push_str(r#"
-
-For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
-
-{% include file="examples/companies.yaml" %}
-"#);
+    
+    For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
+    
+    {% include file="examples/companies.yaml" %}
+    "#);
 
     let filename = "../../pages/companies.md";
     if let Err(err) = std::fs::write(filename, text) {
