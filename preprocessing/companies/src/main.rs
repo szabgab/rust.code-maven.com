@@ -61,10 +61,10 @@ fn companies() {
     };
     //println!("{:?}", data);
 
-    generate_md_file(companies);
+    generate_md_file(&companies);
 }
 
-fn generate_md_file(companies: Vec<Company>) {
+fn generate_md_file(companies: &[Company]) {
     let mut text = String::from(
         r#"---
     title: Companies using Rust
