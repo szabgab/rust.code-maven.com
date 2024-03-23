@@ -27,6 +27,7 @@ struct Proof {
     language: String,
     year: u16,
     people: Vec<Person>,
+    description: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -91,6 +92,10 @@ any other programming language, but there are various sources we can use to find
                 )
                 .as_str(),
             );
+            match &proof.description {
+                Some(description) => text.push_str(description),
+                None => {},
+            };
             for person in &proof.people {
                 text.push_str(format!("    * [{}]({})\n", person.name, person.url).as_str());
             }
