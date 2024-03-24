@@ -203,7 +203,7 @@
   url: https://greenvibe.io/
   addresses:
     - country: Israel
-    - city: Ramat Gan
+      city: Ramat Gan
   proofs:
     - url: https://github.com/orgs/greenvibe-io/repositories?q=lang:rust&type=all
       title: Projects in GitHub
