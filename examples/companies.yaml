@@ -173,7 +173,7 @@
     - country: USA
   proofs:
     - url: https://serokell.io/blog/rust-in-production-1password
-      title: Rust in Production: 1Password
+      title: "Rust in Production: 1Password"
       ptype: article
       language: English
       date: 2021.01.20
