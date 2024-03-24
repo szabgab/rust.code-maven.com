@@ -183,3 +183,19 @@
         - name: Michael Fey
           url: https://mrrooni.com/
 
+- name: Google Android
+  url: https://www.android.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://security.googleblog.com/2021/04/rust-in-android-platform.html
+      title: Rust in the Android platform
+      ptype: article
+      language: English
+      date: 2021.04.06
+      people:
+        - name: Jeff Vander Stoep
+          url: https://www.linkedin.com/in/jeffrey-vander-stoep-8a56629/
+        - name: Stephen Hines
+          url: https://www.linkedin.com/in/stephen-hines-84121924/
+
