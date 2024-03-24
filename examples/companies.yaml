@@ -141,5 +141,45 @@
       date: 2021.02.29
       people:
 
+- name: Amazon AWS
+  url: https://aws.amazon.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://firecracker-microvm.github.io/
+      title: Firecracker - Secure and fast microVMs for serverless computing
+      ptype: project
+      language: English
+      date: 2018
+      people:
 
+- name: Discord
+  url: https://discord.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://discord.com/blog/why-discord-is-switching-from-go-to-rust
+      title: Why Discord is switching from go to Rust
+      ptype: article
+      language: English
+      date: 2020.02.04
+      people:
+        - name: Jesse Howarth
+          url: https://www.linkedin.com/in/jessehowarth/
+
+- name: 1Password
+  url: https://1password.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://serokell.io/blog/rust-in-production-1password
+      title: Rust in Production: 1Password
+      ptype: article
+      language: English
+      date: 2021.01.20
+      people:
+        - name: Gints Dreimanis
+          url: https://www.linkedin.com/in/gints-dreimanis-293868187/
+        - name: Michael Fey
+          url: https://mrrooni.com/
 
