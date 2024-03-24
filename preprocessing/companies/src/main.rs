@@ -103,9 +103,7 @@ fn generate_md_file(companies: &[Company]) {
 
     text.push_str(r#"
     
-    For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
-    
-    {% include file="examples/companies.yaml" %}
+    For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.    
     "#);
 
     let filename = "../../pages/companies.md";
