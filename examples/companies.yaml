@@ -46,6 +46,7 @@
     - url: https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine
       title: Rewriting the heart of our sync engine
       description: "A deep description of the problem of syncing. The problems with the existing implementation in Python. A discussion of what is needed for a successful rewrite: A rewrite checklist. Replacing 10 years old Python code by Rust."
+      from: Python
       ptype: article
       language: English
       date: 2020.03.09
@@ -82,7 +83,8 @@
   proofs:
     - url: https://www.figma.com/blog/rust-in-production-at-figma/
       title: Rust in production at Figma
-      description: "Faster code, reduced memory footprint, a lot less CPU usage. Pros: Low memory usage; Awesome performance; Solid toolchain; Friendly error messages. Cons: Lifetimes are confusing (partially solved since then); Errors are hard to debug (several solutions were created since then); Many libraries are still early (libraries are way more mature since then); Asynchronous Rust is difficult (this has improved a lot since then)."
+      description: "Faster code, reduced memory footprint, a lot less CPU usage. Pros: Low memory usage; Awesome performance; Solid toolchain; Friendly error messages. Cons: Lifetimes are confusing (partially solved since then); Errors are hard to debug (several solutions were created since then); Many libraries are still early (libraries are way more mature since then); Asynchronous Rust is difficult (this has improved a lot since then). Replacing a single process written in TypeScript by Rust. Communication via STDIN and STDOUT."
+      from: TypeScript
       ptype: article
       language: English
       date: 2018.05.02
