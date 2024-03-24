@@ -199,3 +199,17 @@
         - name: Stephen Hines
           url: https://www.linkedin.com/in/stephen-hines-84121924/
 
+- name: GreenVibe
+  url: https://greenvibe.io/
+  addresses:
+    - country: Israel
+    - city: Ramat Gan
+  proofs:
+    - url: https://github.com/orgs/greenvibe-io/repositories?q=lang:rust&type=all
+      title: Projects in GitHub
+      ptype: github
+      language: English
+      date: 2024.02.14
+      people:
+
+
