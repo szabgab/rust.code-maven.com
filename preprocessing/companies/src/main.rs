@@ -5,7 +5,7 @@ use serde::Deserialize;
 // TODO: separate pages by country
 // TODO: order by date
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[allow(unused)]
 struct Address {
     country: String,
@@ -14,14 +14,14 @@ struct Address {
     city: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[allow(unused)]
 struct Person {
     name: String,
     url: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[allow(unused)]
 struct Proof {
     url: String,
@@ -34,7 +34,7 @@ struct Proof {
     from: Option<String>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 struct Company {
     name: String,
     url: String,
@@ -62,7 +62,28 @@ fn companies() {
     };
     //println!("{:?}", data);
 
-    generate_md_file(&companies);
+    //generate_md_file(&companies);
+
+    let split = companies
+        .into_iter()
+        .map(|company| {
+            if company.proofs.len() == 1 {
+                vec![company]
+            } else {
+                company
+                    .proofs
+                    .iter()
+                    .map(|proof| {
+                        let mut comp = company.clone();
+                        comp.proofs = vec![proof.clone()];
+                        comp
+                    })
+                    .collect::<Vec<Company>>()
+            }
+        })
+        .collect::<Vec<Vec<Company>>>()
+        .concat();
+    generate_md_file(&split);
 }
 
 fn generate_md_file(companies: &[Company]) {
