@@ -31,6 +31,7 @@ struct Proof {
     date: String,
     people: Vec<Person>,
     description: Option<String>,
+    from: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
