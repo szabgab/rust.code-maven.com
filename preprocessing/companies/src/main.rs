@@ -87,6 +87,7 @@ fn generate_md_file(companies: &[Company]) {
                 Some(description) => {
                     text.push('\n');
                     text.push_str(description);
+                    text.push('\n');
                 }
                 None => {}
             };
