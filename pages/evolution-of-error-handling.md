@@ -7,7 +7,7 @@ description: How to write a function that will let the errors bubble up the call
 tags:
     - unwrap
     - match
-    - ?
+    - "?"
     - Result
     - Ok
     - Err
