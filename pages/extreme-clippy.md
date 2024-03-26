@@ -18,5 +18,6 @@ In this video you'll see how to take it to the extreme. Turn on every lint and t
 
 {% youtube id="dEkr5c5Kul8" %}
 
+{% include file="examples/extreme-clippy/Cargo.toml" %}
 
 {% include file="examples/extreme-clippy/src/main.rs" %}
