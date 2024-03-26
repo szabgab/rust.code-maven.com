@@ -1,0 +1,26 @@
+[package]
+name = "extreme-clippy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[lints.clippy]
+cargo        = { priority = -1, level = "deny" }
+complexity   = { priority = -1, level = "deny" }
+correctness  = { priority = -1, level = "deny" }
+nursery      = { priority = -1, level = "deny" }
+pedantic     = { priority = -1, level = "deny" }
+perf         = { priority = -1, level = "deny" }
+restriction  = { priority = -1, level = "deny" }
+style        = { priority = -1, level = "deny" }
+suspicious   = { priority = -1, level = "deny" }
+
+
+cargo_common_metadata = "allow"
+missing_docs_in_private_items = "allow"
+blanket_clippy_restriction_lints = "allow" # I like Extreme clippy
+implicit_return = "allow" # This is the more common way in rust
+dbg_macro = "allow"
