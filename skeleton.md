@@ -11,3 +11,6 @@ todo:
 ---
 
 {% include file="examples/hello.rs" %}
+
+{% youtube id="" %}
+
