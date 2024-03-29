@@ -52,14 +52,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
 
 [[package]]
-name = "memory-allocation"
-version = "0.1.0"
-dependencies = [
- "sysinfo",
- "thousands",
-]
-
-[[package]]
 name = "ntapi"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -92,6 +84,14 @@ checksum = "1465873a3dfdaa8ae7cb14b4383657caab0b3e8a0aa9ae8e04b044854c8dfce2"
 dependencies = [
  "crossbeam-deque",
  "crossbeam-utils",
+]
+
+[[package]]
+name = "show-used-and-free-memory"
+version = "0.1.0"
+dependencies = [
+ "sysinfo",
+ "thousands",
 ]
 
 [[package]]

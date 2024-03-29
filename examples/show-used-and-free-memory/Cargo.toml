@@ -1,5 +1,5 @@
 [package]
-name = "memory-allocation"
+name = "show-used-and-free-memory"
 version = "0.1.0"
 edition = "2021"
 
