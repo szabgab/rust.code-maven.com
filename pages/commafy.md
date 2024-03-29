@@ -97,6 +97,7 @@ format!("{}{}", prefix, num.chars().rev().collect::<String>())
 
 ## The thousands crate
 
-After implementing this someone pointed me to the [thousands crate](https://crates.io/crates/thousands) that does this already.
+After implementing this someone pointed me to the [thousands crate](https://crates.io/crates/thousands) that does this already
+and even later I wrote an [example using the thousands crate](/commafy-thousands).
 
 
