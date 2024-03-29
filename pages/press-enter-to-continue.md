@@ -9,6 +9,9 @@ tags:
     - STDIN
 ---
 
+A small function I wanted to use in one of my other examples so I can "hold" the process while switching to another terminal to look at the memory
+usage via `htop`. I ended up using a crate to [show the used and free memory](/show-used-and-free-memory) from inside the example.
+
 {% include file="examples/press-enter-to-continue/src/main.rs" %}
 
 
