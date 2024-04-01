@@ -8,6 +8,7 @@ tags:
     - mut
     - Vec
     - fn
+    - "&mut"
 ---
 
 This is a simplified example showing how we can fill a vector inside a function.
