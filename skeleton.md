@@ -1,6 +1,6 @@
 ---
 title: Title
-timestamp: 2024-02-03T14:30:01
+timestamp: 2024-04-01T14:30:01
 author: szabgab
 published: false
 description:
@@ -10,7 +10,7 @@ todo:
     - TODO
 ---
 
-{% include file="examples/hello.rs" %}
+{% include file="" %}
 
 {% youtube id="" %}
 
