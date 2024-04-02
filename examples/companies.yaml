@@ -7,7 +7,8 @@
   proofs:
     - url: https://www.youtube.com/watch?v=Fi--zxTU-8w
       title: Don't panic! - Our journey to error handling in Rust
-      description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate."
+      description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate. Rewrite part of a C# project in Rust."
+      from: "C#"
       ptype: youtube
       language: Hebrew
       date: 2023.12.17
