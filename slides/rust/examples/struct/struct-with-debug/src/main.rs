@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 
 #[derive(Debug)]
 struct Red(i32);
