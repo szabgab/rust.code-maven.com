@@ -1,6 +1,12 @@
 macro_rules! prt {
     ($var: expr) => {
-        println!("len: {:2} capacity: {:2} {:?} {:?}", $var.len(), $var.capacity(), $var.as_ptr(), $var);
+        println!(
+            "len: {:2} capacity: {:2} {:?} {:?}",
+            $var.len(),
+            $var.capacity(),
+            $var.as_ptr(),
+            $var
+        );
     };
 }
 
