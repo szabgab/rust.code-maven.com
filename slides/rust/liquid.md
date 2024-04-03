@@ -76,6 +76,23 @@ liquid = "0.26.4"
 ![](examples/liquid/liquid-for-loop/src/main.rs)
 ![](examples/liquid/liquid-for-loop/out.txt)
 
+## Liquid vector of tuples
+{id: liquid-vector-of-tuples}
+
+
+![](examples/liquid/liquid-vector-of-tuples/src/main.rs)
+
+![](examples/liquid/liquid-vector-of-tuples/out.txt)
+
+
+## Liquid Hash
+{id: liquid-hash}
+{i: HashMap}
+
+![](examples/liquid/liquid-hashmap/src/main.rs)
+
+![](examples/liquid/liquid-hashmap/out.txt)
+
 ## Liquid for loop with if conditions
 {id: liquid-for-loop-with-if-conditions}
 {i: for}
