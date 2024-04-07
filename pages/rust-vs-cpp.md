@@ -11,8 +11,9 @@ tags:
 ---
 
 Teams using C++ often ask themselves, should we switch to Rust or should we keep using C++.
+Sometimes the also ask me, but I've never written C++ so I would not dare to offer my own thoughts about that.
 
-On this page I am trying to collect some ideas what to take in account when comparing the two languages.
+Instead, on this page I am trying to collect some points one could take in account when comparing the two languages.
 
 There are many articles comparing their technical merits of the two languages,
 I don't think repeating them here would benefit anyone, though I should link to them. So I look at some other metrics. Some might be relevant to you, some not.
