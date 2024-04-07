@@ -79,6 +79,7 @@ Rust has less groups with less members:
 * [Rust](https://github.com/topics/rust) has 54,558 public repositories
 * [C++](https://github.com/topics/cpp) has 67,312
 
+One has to be carefull with these numbers as these are based on manual tagging of repositories by the project owner.
 
 ## 3rd party (Open Source) libraries
 
