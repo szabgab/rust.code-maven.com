@@ -14,6 +14,10 @@ Teams using C++ often ask themselves, should we switch to Rust or should we keep
 
 On this page I am trying to collect some ideas what to take in account when comparing the two languages.
 
+There are many articles comparing thei technical merrits of the two languages,
+I don't think repeating them here would benefit anyone, though I should link to them. So I look at some other metrics. Some might be relevant to you, some not.
+
+
 ## Speed
 
 In general it is said that the run-time speed of the two languages is the same.
