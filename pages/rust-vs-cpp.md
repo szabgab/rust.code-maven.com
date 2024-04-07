@@ -103,4 +103,8 @@ will be shorter and there will be less bugs found after deployment.
 Rust has out-of-the-box enforcement of a lot of things for which C++ requires extra tools. I hear many security issues can be detected by the tools available for C++,
 but those cost money and have a learning curve. The Rust compiler prevents most of those issues entering the code-base in the first place.
 
+## Corporations
+
+* As I understand Microsoft has been switching some projects from C++ to Rust.
+* Linus Torvalds allows only two languages in the Linux kernel. C, the language that was originally used to write it and recently started to accept Rust as well.
 
