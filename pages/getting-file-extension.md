@@ -2,7 +2,7 @@
 title: Getting file extension in Rust using PathBuf
 timestamp: 2024-04-07T09:20:01
 author: szabgab
-published: show
+published: true
 description: How to get the file extension in Rust
 tags:
     - extension
