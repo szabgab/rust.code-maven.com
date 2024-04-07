@@ -14,13 +14,27 @@ Teams using C++ often ask themselves, should we switch to Rust or should we keep
 
 On this page I am trying to collect some ideas what to take in account when comparing the two languages.
 
-There are many articles comparing thei technical merrits of the two languages,
+There are many articles comparing their technical merits of the two languages,
 I don't think repeating them here would benefit anyone, though I should link to them. So I look at some other metrics. Some might be relevant to you, some not.
 
 
 ## Speed
 
 In general it is said that the run-time speed of the two languages is the same.
+
+## Speed of development
+
+This is extremely hard to measure as the level of experience of the programmers has a huge impact on this.
+The anecdotal evidence is that it might take longer to get the Rust code compile, but then there are a lot less bugs which means the over development and QA time
+will be shorter and there will be less bugs found after deployment.
+
+## Maturity of the language and the ecosystem
+
+Clearly C++ has a huge advantage here. It has been around since 1985 (39 years) while Rust only appeared in 2015 (9 years ago).
+Rust progresses much faster than C++ for several reasons. It is still in its "early years". It does not have such a huge baggage that
+requires backward compability and it has a well-designed pas to changes in the language that maintains backward compability while allows the
+progress of the language.
+
 
 ## Number of available programmers
 
@@ -60,7 +74,7 @@ The [2023 StackOverflow survey](https://survey.stackoverflow.co/2023/) showed
 * [r/cpp](https://www.reddit.com/r/cpp/) has 277K  members (138 online)
 * [r/rust](https://www.reddit.com/r/rust/) has 286K  members (364 online)
 
-Obviously the "number online" will fluctuat a lot, but I checked them at the same time.
+Obviously the "number online" will fluctuate a lot, but I checked them at the same time.
 
 There are also other subreddits covering the topics.
 
@@ -83,7 +97,7 @@ Rust has less groups with less members:
 * [Rust](https://github.com/topics/rust) has 54,558 public repositories
 * [C++](https://github.com/topics/cpp) has 67,312
 
-One has to be carefull with these numbers as these are based on manual tagging of repositories by the project owner.
+One has to be careful with these numbers as these are based on manual tagging of repositories by the project owner.
 
 ## 3rd party (Open Source) libraries
 
@@ -94,13 +108,6 @@ Some interesting information related to this topic
 
 * A list of open-source C++ libraries](https://en.cppreference.com/w/cpp/links/libs).
 * [C++ Ecosystem in 2021: 1 in 5 C++ developers are using C++20 and a third of us are not writing any unit tests at all, and other facts](https://blog.jetbrains.com/clion/2021/07/cpp-ecosystem-in-2021/).
-
-## Speed of development
-
-This is extremely hard to measure as the level of experience of the programmers has a huge impact on this.
-The anecdotal evidence is that it might take longer to get the Rust code compile, but then there are a lot less bugs which means the over development and QA time
-will be shorter and there will be less bugs found after deployment.
-
 
 ## Security
 
