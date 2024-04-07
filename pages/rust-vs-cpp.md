@@ -61,6 +61,19 @@ Obviously the "number online" will fluctuat a lot, but I checked them at the sam
 There are also other subreddits covering the topics.
 
 
+## LinkedIn
+
+There are several [groups on LinkedIn dedicated to C++ developers](https://www.linkedin.com/search/results/groups/?keywords=c%2B%2B&origin=SWITCH_SEARCH_VERTICAL&sid=%3A%40*). These seem to be the biggest ones:
+
+* [C++ professionals group](https://www.linkedin.com/groups/86782/) with 57,857 members
+* [C++ Developers Group](https://www.linkedin.com/groups/86998/) with 37,669 members.
+* [C++ Professionals](https://www.linkedin.com/groups/100895/) with 30,209 members.
+
+Rust has less groups with less members:
+
+* [Rust Programming Language](https://www.linkedin.com/groups/4973032/) with 23,229 members.
+* [Rust Developer Community (Rust Lang)](https://www.linkedin.com/groups/12537155/) with 3,651 members.
+
 ## GitHub
 
 * [Rust](https://github.com/topics/rust) has 54,558 public repositories
