@@ -27,7 +27,7 @@ conducted by JetBrains 10% of the developers are likely to adopt Rust, the highe
 
 ## Size of the "community"
 
-Meaning people who are are attending Meetups, conferences. We have a separate entry for questions on StackOverflow, and open source developers.
+Meaning people who are attending Meetups, conferences. There is a separate entry for questions on StackOverflow, and open source developers.
 
 We found [113 Rust user-groups](/user-groups) with a combined 65,200 members. (The same person can be in multiple groups so the actual number is lower. Meetup lists [248 Rust groups](https://www.meetup.com/topics/rust/)
 with a total of 109,982 member, but as far as I can tell for many of those Rust is not the main subject.
@@ -50,6 +50,15 @@ The [2023 StackOverflow survey](https://survey.stackoverflow.co/2023/) showed
 * 22.42% use C++
 * 19.34% use C
 * 13.05% use Rust
+
+## Reddit
+
+* [r/cpp](https://www.reddit.com/r/cpp/) has 277K  members (138 online)
+* [r/rust](https://www.reddit.com/r/rust/) has 286K  members (364 online)
+
+Obviously the "number online" will fluctuat a lot, but I checked them at the same time.
+
+There are also other subreddits covering the topics.
 
 
 ## GitHub
