@@ -118,5 +118,8 @@ but those cost money and have a learning curve. The Rust compiler prevents most 
 ## Corporations
 
 * As I understand Microsoft has been switching some projects from C++ to Rust.
+* Rust teams at Google are twics as productive as teams using C++. See video: [Lars Bergstrom - Beyond Safety and Speed: How Rust Fuels Team Productivity](https://www.youtube.com/watch?v=QrrH2lcl9ew).
+
+
 * Linus Torvalds allows only two languages in the Linux kernel. C, the language that was originally used to write it and recently started to accept Rust as well.
 
