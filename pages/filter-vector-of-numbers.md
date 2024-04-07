@@ -1,5 +1,5 @@
 ---
-title: Filter vector of numbers
+title: Filter vector of numbers in Rust
 timestamp: 2024-03-29T12:14:01
 author: szabgab
 published: true
