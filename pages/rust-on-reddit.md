@@ -6,6 +6,7 @@ published: true
 description: Rust-related Reddit groups..
 tags:
     - Reddit
+    - Stats
 ---
 
 Rust-related SubReddits. Collected on 2024.04.08

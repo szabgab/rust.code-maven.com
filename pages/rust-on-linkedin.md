@@ -6,6 +6,7 @@ published: true
 description: Rust groups on LinkedIn
 tags:
     - LinkedIn
+    - Stats
 ---
 
 Similar to the [Rust user groups](/user-groups) that are listing "groups that meet" on this page we are going to list the Rust groups on LinkedIn.
