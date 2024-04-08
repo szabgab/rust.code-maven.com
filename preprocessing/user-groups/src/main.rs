@@ -35,6 +35,7 @@ published: true
 description: There are many Rust user groups around the world. Here is the full list with location and the number of members.
 tags:
     - Meetup
+    - Stats
 ---
 
 I wanted to know the relative sizes of the various Rust-specific Meetup groups so I collected them into a YAML file and then generated this page.
