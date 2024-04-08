@@ -123,3 +123,7 @@ but those cost money and have a learning curve. The Rust compiler prevents most 
 
 * Linus Torvalds allows only two languages in the Linux kernel. C, the language that was originally used to write it and recently started to accept Rust as well.
 
+## Discussion
+
+There was a long [thread on Reddit](https://www.reddit.com/r/rust/comments/1by3lle/rust_vs_c/) about this. Some of the comments are quite useful.
+
