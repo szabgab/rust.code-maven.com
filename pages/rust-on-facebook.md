@@ -11,7 +11,7 @@ tags:
 
 Data collected on 2024.04.08
 
-* [Rust Developers](https://www.facebook.com/groups/1412062792318164/) - 8.8K members (last post February 17, 2024 and 2 of mys posts are waiting for approval since December 2023)
+* [Rust Developers](https://www.facebook.com/groups/1412062792318164/) - 8.8K members (mostly inactive: last post on February 17, 2024 and 2 of my posts are waiting for approval since December 2023)
 * [**Rust Programming Language**](https://www.facebook.com/groups/872919370237098/) - 3.0K members
 * [Rust-lang.tw](https://www.facebook.com/groups/rust.tw/) - 2.5K members
 * [Programming Rust](https://www.facebook.com/groups/programming.rust/) - 1.9K members
