@@ -9,6 +9,7 @@ tags:
     - MIME
     - Content-Type
     - first
+    - unwrap_or
 ---
 
 One of the first web "applications" I wrote in Rust was the [rustatic](https://rustatic.code-maven.com/) a small program that helps me
@@ -40,4 +41,11 @@ The `first` method will return an [Option](https://doc.rust-lang.org/std/option/
 If the extension is not recognized, or if there is no extension then it will return `None`.
 
 Otherwise it can be stringified to what needs to be the `Content-Type`.
+
+
+In the last example I used `unwrap_or` to set a default `MIME-Type` that simplified my code a lot.
+
+```rust
+mime_guess::from_path("some").first().unwrap_or(mime::TEXT_HTML);
+```
 
