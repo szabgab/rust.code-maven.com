@@ -17,6 +17,8 @@ tags:
     - Ok
     - Err
     - Error
+todo:
+    - See at the bottom of the page
 ---
 
 
@@ -174,4 +176,9 @@ not what is expected. One day I might figure out how to convert these into the e
 
 I'll write about it when it happens.
 
+
+* [Rogério Almeida](https://www.linkedin.com/in/rsalmei/) pointed to the [stabilization PR](https://github.com/rust-lang/rust/issues/48453) relevant to this topic.
+* [nick42d](https://github.com/nick42d/) pointed to [his solution](https://github.com/nick42d/youtui/blob/main/src%2Fmain.rs)
+
+I need to read those...
 
