@@ -1,0 +1,12 @@
+[package]
+name = "read-and-parse-cargo-toml"
+version = "0.1.0"
+edition = "2021"
+rust_version = "1.76"
+rust-version = "1.75"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0.197", features = ["derive"] }
+toml = "0.8.12"

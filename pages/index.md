@@ -23,8 +23,9 @@ There are a number of series of articles on the site in the following topics:
 
 * [CLI](/cli) - Command Line Interface
     * [Clap](/clap) Command Line Argument Parser for Rust.
-* [YAML](/yaml) - Dealing with YAML files in Rust.
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
+* [YAML](/yaml) - Dealing with YAML files in Rust.
+* [TOML](/toml) - Dealing with TOML files in Rust.
 * [Image](/image) - Creating and changing images in Rust.
 * [Testing](/testing) - Various forms of functional and non-functional tests in Rust.
 * [Web development](/web)

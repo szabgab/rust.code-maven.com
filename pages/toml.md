@@ -19,4 +19,4 @@ Every Rust Crate comes with a file called `Cargo.toml` which, surprise, surprise
 
 * [Read rustfmt.toml TOML file](/read-rustfmt-toml). A simple example.
 * [Read and parse the Cargo.toml manifes file of a Rust crate](/read-cargo-toml) using the `cargo_toml` crate.
-
+* [Read and parse Cargo.toml using the toml crate defining our own structs](/read-and-parse-cargo-toml) using the `toml` crate and `serde`.
