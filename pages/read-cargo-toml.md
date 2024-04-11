@@ -6,6 +6,7 @@ published: true
 description: How to read the Cargo.toml file of a Crate?
 tags:
     - Cargo.toml
+    - toml
 todo:
     - TODO
 ---

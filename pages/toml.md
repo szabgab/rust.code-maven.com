@@ -5,7 +5,7 @@ author: szabgab
 published: true
 description:
 tags:
-    - Toml
+    - toml
 todo:
     - Use structs to parse the toml files
 ---
@@ -18,5 +18,5 @@ Every Rust Crate comes with a file called `Cargo.toml` which, surprise, surprise
 
 
 * [Read rustfmt.toml TOML file](/read-rustfmt-toml). A simple example.
-
+* [Read and parse the Cargo.toml manifes file of a Rust crate](/read-cargo-toml) using the `cargo_toml` crate.
 
