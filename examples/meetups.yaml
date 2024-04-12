@@ -262,6 +262,10 @@
   url: https://www.meetup.com/Desert-Rustaceans/
   members: 289
   location: Phoenix, AZ, USA
+- name: Rust Lyon
+  url: https://www.meetup.com/rust-lyon/
+  members: 284
+  location: Lyon, France
 - name: Rust Prague
   url: https://www.meetup.com/rust-prague/
   members: 282
