@@ -200,6 +200,14 @@ first or last
 ![](examples/liquid/liquid-with-struct/out.html)
 
 
+## Liquid with Option in a struct 
+{id: liquid-with-option-struct}
+
+![](examples/liquid/liquid-with-option/Cargo.toml)
+
+![](examples/liquid/liquid-with-option/src/main.rs)
+
+
 ## Liquid filter reverse array
 {id: liquid-filter-reverse-array}
 
