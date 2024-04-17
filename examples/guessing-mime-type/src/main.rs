@@ -5,8 +5,8 @@ fn main() {
     assert_eq!(guess.first(), Some(mime::IMAGE_GIF));
     println!("{}", guess.first().unwrap()); // image/gif
 
-    println!("{}", mime_guess::from_path("some.gif").first().unwrap());  // image/gif
-    println!("{}", mime_guess::from_path("some.js").first().unwrap());  // application/javascript
+    println!("{}", mime_guess::from_path("some.gif").first().unwrap()); // image/gif
+    println!("{}", mime_guess::from_path("some.js").first().unwrap()); // application/javascript
     println!("{}", mime_guess::from_path("some.json").first().unwrap()); // application/json
     println!("{}", mime_guess::from_path("some.yaml").first().unwrap()); // text/x-yaml
     println!("{}", mime_guess::from_path("some.yml").first().unwrap()); // text/x-yaml
@@ -16,4 +16,11 @@ fn main() {
 
     assert!(mime_guess::from_path("some.qqrq").first().is_none());
     assert!(mime_guess::from_path("some").first().is_none());
+
+    println!(
+        "{}",
+        mime_guess::from_path("some")
+            .first()
+            .unwrap_or(mime::TEXT_HTML)
+    ); // text/html
 }
