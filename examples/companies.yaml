@@ -23,6 +23,14 @@
       people:
         - name: Ryan Levick
           url: https://ryanlevick.com/
+    - url: https://www.neowin.net/news/senior-microsoft-exec-says-windows-11-kernel-will-soon-be-booting-with-rust-inside/
+      title: Senior Microsoft exec says Windows 11 kernel will soon be booting with Rust inside
+      ptype: article
+      language: English
+      date: 2023.04.28
+      people:
+        - name: David Weston
+          url: https://www.linkedin.com/in/dwizzzle/
 
 - name: VSHN
   url: https://www.vshn.ch/
@@ -212,5 +220,22 @@
       language: English
       date: 2024.02.14
       people:
+
+- name: Dwello
+  url: https://www.dwelo.com/
+  addresses:
+    - country: USA
+  proofs:
+    - url: https://medium.com/dwelo-r-d/we-rewrote-our-iot-platform-in-rust-and-got-away-with-it-2c8867c61b67
+      title: We Rewrote Our IoT Platform in Rust and Got Away With It
+      ptype: article
+      language: English
+      date: 2019.07.31
+      people:
+        - name: Jeff Hiner
+          url: https://medium.com/@jhiner
+
+
+
 
 
