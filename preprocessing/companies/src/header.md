@@ -12,3 +12,5 @@ tags:
 When considering using Rust you will probably want to know who else already uses it. It is usually not easy to get companies tell you if they use Rust or for that matter
 any other programming language, but there are various sources we can use to find this information.
 
+The [members of the Rust foundation](https://foundation.rust-lang.org/members/) probably use Rust or at least want to make Rust successful.
+
