@@ -51,3 +51,6 @@ and after generating the static pages with the previously described command, run
 rustatic --host localhost --port 5000 --indexfile index.html --nice --path _site/
 ```
 
+## Clean up all the target folders
+
+find -name target | xargs rm -rf
