@@ -6,6 +6,8 @@ published: true
 description:
 tags:
     - image
+    - graphics
+    - draw
 ---
 
 In this example we continue the cration of simple images using the [image](https://crates.io/crates/image) Rust crate.
