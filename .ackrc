@@ -1,2 +1,3 @@
 --ignore-dir=target
 --ignore-dir=_site
+--ignore-file=ext:lock
