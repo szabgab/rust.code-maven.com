@@ -1,6 +1,6 @@
 ---
 title: drop, the destructor of Rust structs
-timestamp: 2024-04-24T24:30:01
+timestamp: 2024-04-24T18:30:01
 author: szabgab
 published: true
 description: We can add a method called drop to each struct and it will be called when the struct is destroyed.
