@@ -19,6 +19,7 @@ todo:
 
 * [Create empty HashMap and insert key-value pairs](/create-empty-hashmap-and-insert-pairs)
 * [Create empty HashMap in Rust without type definition](/create-empty-hashmap-without-type-definition)
+* [Initialize immutable HashMap with data](/initialize-hashmap-with-data)
 
 ## Some more advanced topics aboit HashMap in Rust
 
