@@ -1,7 +1,7 @@
 ---
 title: Companies using Rust
 timestamp: 2024-03-15T21:30:01
-published: false
+published: true
 description: Which company uses Rust with evidence
 tags:
   - corporate
