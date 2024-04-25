@@ -27,6 +27,9 @@ This means that the keys of this HashMap will be of type `String` and the values
 
 The keys can be other things as well, for example we can have a [HashMap with tuples as keys](/hash-where-tuples-are-the-keys).
 
+You might be also wondering why do you need to mention `HashMap` twice in that line. You don't. You can also rely on [rust figuring out the type of the HashMap](/create-empty-hashmap-without-type-definition).
+
+
 ## Declare and initialize an empty but mutable HashMap
 
 However the above declaration is rather useless as we cannot change the content of that variable.
