@@ -3,7 +3,7 @@ title: Initialize immutable HashMap with data
 timestamp: 2024-04-25T11:20:01
 author: szabgab
 published: true
-description:
+description: We can create a HashMap and fill it with values hard-coded in the application.
 tags:
     - HashMap
     - from
