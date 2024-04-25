@@ -7,7 +7,12 @@ description: SurrealDB is feature-rich database written in Rust.
 tags:
     - SurrealDB
 todo:
-    - TODO
+    - How to use foreign key and select data from multiple tables?
+    - Can we have struct that has structs inserted at once into multiple tables?
+    - How to add new column to a table? changing schema.
+    - How to dump data?
+    - How to restore data?
+    - List tables?
 ---
 
 [SurrealDB](https://surrealdb.com/) is feature-rich database written in Rust.
