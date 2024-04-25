@@ -21,6 +21,7 @@ todo:
 * [Create empty HashMap in Rust without type definition](/create-empty-hashmap-without-type-definition).
 * [Initialize immutable HashMap with data](/initialize-hashmap-with-data) - `from`, `keys`, `values`.
 * [Check if key exists in HashMap - if the HashMap contains the key](/check-of-key-exists-in-hashmap) - `contains_key`.
+* [Given a key, get value from a HashMap](/get-value-from-hashmap) - `get`, `Option`, `match`.
 
 ## Some more advanced topics aboit HashMap in Rust
 
