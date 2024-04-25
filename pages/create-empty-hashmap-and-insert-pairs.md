@@ -1,5 +1,5 @@
 ---
-title: Create empty HashMap and insert key-value pairs (hash, dictionary, associative array)
+title: Create empty HashMap and insert key-value pairs
 timestamp: 2024-04-25T09:30:01
 author: szabgab
 published: true
@@ -12,8 +12,7 @@ tags:
     - ":#?"
 ---
 
-[HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html) in Rust is a data-structure holding key-value pairs. Similar to **hash** in Perl and in other languages,
-dictionary in Python, and associative arrays in PHP, just to name a few.
+[HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html) in Rust is a data-structure holding key-value pairs.
 
 ## Declare and initialize empty HashMap
 
