@@ -7,6 +7,7 @@ description: Create a HashMap and make it mutable so we can insert data.
 tags:
     - HashMap
     - mut
+    - new
     - insert
     - ":#?"
 ---
