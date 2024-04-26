@@ -1,5 +1,5 @@
 ---
-title: Set the fileextension in Rust
+title: Set the file extension in Rust
 timestamp: 2024-04-16T12:30:01
 author: szabgab
 published: true
