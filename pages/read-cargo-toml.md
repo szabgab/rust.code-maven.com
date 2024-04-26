@@ -1,5 +1,5 @@
 ---
-title: Read and parse the Cargo.toml manifes file of a Rust crate
+title: Read and parse the Cargo.toml manifest file of a Rust crate
 timestamp: 2024-04-01T13:30:01
 author: szabgab
 published: true
@@ -12,7 +12,7 @@ todo:
 ---
 
 As part of the [Rust Digger](https://rust-digger.code-maven.com/) project I wanted to read the Cargo.toml file that comes with the project.
-At first I tried the [read_manifes](https://docs.rs/cargo/latest/cargo/util/toml/fn.read_manifest.html) method of the
+At first I tried the [read_manifest](https://docs.rs/cargo/latest/cargo/util/toml/fn.read_manifest.html) method of the
 [Cargo](https://crates.io/crates/cargo) crate, but I could not figure out how to use it.
 
 Luckily then I encountered the [cargo_toml](https://crates.io/crates/cargo_toml) crate that provides a much easier way to get started.
