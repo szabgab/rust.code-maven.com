@@ -18,6 +18,7 @@ tags:
 * Get the size of a file
 * Update a file
 * Create a temporary directory
+* Read binary file
 
 
 
