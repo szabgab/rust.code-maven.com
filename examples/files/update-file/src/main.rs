@@ -7,6 +7,7 @@ use std::fs::File;
 use std::io::Read;
 use std::io::Write;
 
+const SIZE: usize = 10;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args = env::args().collect::<Vec<String>>();
@@ -19,12 +20,17 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mut file =  File::options().read(true).write(true).create(true).open(filename)?;
 
+    let mut content = String::new();
+    let mut buffer = [0; SIZE];
+    loop {
+        let size = file.read(&mut buffer)?;
+        println!("Read: {size}");
+        if size < SIZE {
+            break;
+        }
+        content.push_str(&String::from_utf8(buffer[0..size].to_vec())?);
+    }
 
-    let mut buffer = [0; 10];
-    let size = file.read(&mut buffer)?;
-    println!("Read: {size}");
-
-    let content = String::from_utf8(buffer[0..size].to_vec())?;
     println!("old: {content:?}");
 
     file.seek(SeekFrom::Start(0))?;
