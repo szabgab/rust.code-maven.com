@@ -7,7 +7,7 @@ use std::fs::File;
 use std::io::Read;
 use std::io::Write;
 
-use advisory_lock::{AdvisoryFileLock, FileLockMode, FileLockError};
+use advisory_lock::{AdvisoryFileLock, FileLockMode};
 
 fn main() -> Result<(), Box<dyn Error>>  {
     let args = env::args().collect::<Vec<String>>();
@@ -21,7 +21,11 @@ fn main() -> Result<(), Box<dyn Error>>  {
 
     let mut buffer = [0; 1000];
 
-    let mut file =  File::options().read(true).write(true).create(true).open(filename)?;
+    let mut file =  File::options()
+        .read(true)
+        .write(true)
+        .create(true)
+        .open(filename)?;
     file.lock(FileLockMode::Exclusive)?;
 
     let res = file.read(&mut buffer)?;
