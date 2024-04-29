@@ -1,5 +1,5 @@
 ---
-title: Keep you data safe using using advisory lock on your files
+title: Keep you data safe using advisory lock on your files
 timestamp: 2024-04-29T17:30:01
 author: szabgab
 published: true
