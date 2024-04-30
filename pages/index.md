@@ -42,13 +42,14 @@ There are a number of series of articles on the site in the following topics:
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
 * [Community](/meetups)
 
-* Rust features
-    * [Loops](/loops)
-    * [Files](/files)
-    * [Random](/generate-random-numbers)
-    * [Vectors](/vectors)
-    * [HashMaps](/hashmap)
-    * [Functions](/functions)
+## Rust language topics
+
+* [Loops](/loops)
+* [Files](/files)
+* [Random](/generate-random-numbers)
+* [Vectors](/vectors)
+* [HashMaps](/hashmap)
+* [Functions](/functions)
 
 ## The most recent articles
 
