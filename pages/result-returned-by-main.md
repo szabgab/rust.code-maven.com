@@ -1,5 +1,5 @@
 ---
-title: Result returned by main function in Rust
+title: Result returned by main function in Rust - setting exit code
 timestamp: 2024-04-10T14:30:01
 author: szabgab
 published: true
@@ -17,6 +17,7 @@ tags:
     - Ok
     - Err
     - Error
+    - exit
 todo:
     - See at the bottom of the page
 ---
