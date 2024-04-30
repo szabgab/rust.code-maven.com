@@ -10,7 +10,8 @@ tags:
     - for
     - while
 todo:
-    - TODO
+    - break
+    - continue
 ---
 
 There are 3 different loops in Rust
