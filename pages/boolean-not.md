@@ -33,8 +33,8 @@ if ! string.is_empty() {
 
 ## Toggle
 
-This is a `bool`, a boolean value. If it was `true` then after this operation it will be `false` and if it was `false` then
-after this operation it will be `true`.
+This is a `bool`, a boolean value. If it was [true](https://doc.rust-lang.org/std/keyword.true.html) then after this operation it will be [false](https://doc.rust-lang.org/std/keyword.false.html)
+and if it was `false` then after this operation it will be `true`.
 
 I use such toggle in a game where I have various modes and each one can be turned `on` and `off` separately.
 So each one will have such a variable.
