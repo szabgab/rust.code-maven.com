@@ -68,3 +68,20 @@ let random_number = rand::thread_rng().gen_range(1..=100);
 {% include file="examples/generate-random-numbers/src/main.rs" %}
 
 
+## Running the code
+
+```
+$ cargo run -q
+random_i8: 47
+random_f32: 0.69342864
+random_bool: false
+random_number: 54
+
+$ cargo run -q
+random_i8: 46
+random_f32: 0.063155234
+random_bool: false
+random_number: 31
+```
+
+
