@@ -1,5 +1,5 @@
 ---
-title: An Almost unbounded Fibonacci Iterator
+title: An almost infinite Fibonacci Iterator
 timestamp: 2024-04-30T17:30:01
 author: szabgab
 published: true
