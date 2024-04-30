@@ -1,6 +1,6 @@
 ---
 title: for in loop in Rust
-timestamp: 2024-04-30T1:05:01
+timestamp: 2024-04-30T16:05:01
 author: szabgab
 published: true
 description: Iterating over elements of an iterator can be done using the for-in loop, aka. iterator loop.
