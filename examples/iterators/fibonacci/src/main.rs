@@ -1,12 +1,15 @@
 #[derive(Debug)]
 struct Fibonacci {
-    next_value: u8,
     current: u8,
+    previous: u8,
 }
 
 impl Fibonacci {
     fn new() -> Self {
-        Self { next_value: 1, current: 0 }
+        Self {
+            current: 0,
+            previous: 0,
+        }
     }
 }
 
@@ -14,9 +17,12 @@ impl Iterator for Fibonacci {
     type Item = u8;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if let Some(next_value) = self.current.checked_add(self.next_value) {
-            self.current = self.next_value;
-            self.next_value = next_value;
+        if self.current == 0 {
+            self.current = 1;
+            Some(self.current)
+        } else if let Some(next_value) = self.previous.checked_add(self.current) {
+            self.previous = self.current;
+            self.current = next_value;
             Some(self.current)
         } else {
             None
