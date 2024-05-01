@@ -26,16 +26,16 @@ What should happen when we reach [the maximum value](/minimum-and-maximum-values
 There are number of [ways to handle number overflow](/how-to-handle-overflow). In this implementation I decided I'd like to stop the iteration.
 
 I also used the `u8` value type to store the Fibonacci numbers so it will be easy to demonstrate the overflow as the max value of u8 is 255.
+In a real implementation I'd probably use `u64` or `u128` or maybe a generic numeric type, but I did not want to complicate thie example.
 
-
-In order to implement the iterator we need th struct that will hold the parameters of the iterator. e.g. the current value, or current values, the limit, if there is one.
+In order to implement the iterator we need the struct that will hold the parameters of the iterator. e.g. the current value, or current values, the limit, if there is one.
 In our case we needed two attributes for the last two values of the Fibonacci series and we don't have a limit.
 
 ```rust
 #[derive(Debug)]
 struct Fibonacci {
-    next_value: u8,
     current: u8,
+    previous: u8,
 }
 ```
 
@@ -48,9 +48,13 @@ the function as well.
 ```rust
 impl Fibonacci {
     fn new() -> Self {
-        Self { next_value: 1, current: 0 }
+        Self {
+            current: 0,
+            previous: 0,
+        }
     }
 }
+
 ```
 
 The most important part is to implement the [Iterator](https://doc.rust-lang.org/std/iter/trait.Iterator.html) trait for the struct.
@@ -63,19 +67,24 @@ if the iterator ran out of values. In this example we don't have a user-provided
 the iteration just before the value overflows. So we used the [checked_add](https://doc.rust-lang.org/std/primitive.u8.html#method.checked_add)
 method that returns and `Option` containing either the sum of the two numbers or `None` if there would be an overflow.
 
+We also had to start the `next` method with a special case for when the current value is 0. This made it easier to start returning the first 1 of the Fibonacci series.
+
+
 
 ```rust
 impl Iterator for Fibonacci {
     type Item = u8;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if let Some(next_value) = self.current.checked_add(self.next_value) {
-            self.current = self.next_value;
-            self.next_value = next_value;
-            Some(self.current)
-        } else {
-            None
+        if self.current == 0 {
+            self.current = 1;
+            return Some(self.current);
         }
+
+        let next_value = self.previous.checked_add(self.current)?;
+        self.previous = self.current;
+        self.current = next_value;
+        Some(self.current)
     }
 }
 ```
@@ -131,6 +140,7 @@ $ cargo run -q
 55
 89
 144
+233
 ```
 
 
