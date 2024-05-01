@@ -19,14 +19,13 @@ impl Iterator for Fibonacci {
     fn next(&mut self) -> Option<Self::Item> {
         if self.current == 0 {
             self.current = 1;
-            Some(self.current)
-        } else if let Some(next_value) = self.previous.checked_add(self.current) {
-            self.previous = self.current;
-            self.current = next_value;
-            Some(self.current)
-        } else {
-            None
+            return Some(self.current);
         }
+
+        let next_value = self.previous.checked_add(self.current)?;
+        self.previous = self.current;
+        self.current = next_value;
+        Some(self.current)
     }
 }
 
