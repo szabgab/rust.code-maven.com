@@ -39,3 +39,19 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Get, set (add), delete cookies - pending cookies](/rocket-set-get-delete-cookies) - `get`, `add`, `delete`, `get_pending`, `CookieJar`.
 * [Process Query String of a GET request](/rocket-query-string)
 * [Early return from routes](/rocket-early-return)
+
+
+## Rocket-based Open Source projects
+
+* The [Pastebin tutorial](https://rocket.rs/guide/v0.5/pastebin/#pastebin-tutorial)
+* The list of [showcases](https://rocket.rs/guide/v0.5/faq/#showcase).
+
+
+* [Linked List - A personal knowledge base](https://linkedlist.org/) - [source](https://github.com/wezm/pkb)
+* [Dew Point weather Forecast](https://dewpoint.7bit.org/) - [source](https://github.com/wezm/dewpoint.7bit.org)
+* [Quotes between friends using UI I designed in 2003](https://quotes.randome.net/) - [source](https://github.com/wezm/Quotes)
+* [Tempfiles](https://tempfiles.ninja/) A simple file sharing service that encrypts files at rest and deletes them automatically after 24 hours. - [source](https://github.com/olback/tempfiles-rs)
+
+
+* A lichess clone of SHOBU powered by Rust. (in development) [source](https://github.com/Kapsyloffer/RUSTBU)
+
