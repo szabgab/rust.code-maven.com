@@ -39,6 +39,7 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Get, set (add), delete cookies - pending cookies](/rocket-set-get-delete-cookies) - `get`, `add`, `delete`, `get_pending`, `CookieJar`.
 * [Process Query String of a GET request](/rocket-query-string)
 * [Early return from routes](/rocket-early-return)
+* [404 page with static content](/rocket-404-page-with-static-content) - `404`, `content`, `RawHtml`, `routes!`, `catchers!`, `mount`, `register`, `include_str!`.
 
 
 ## Rocket-based Open Source projects

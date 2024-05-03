@@ -2,7 +2,6 @@
 extern crate rocket;
 
 use rocket::response::content;
-use rocket::response::content::RawHtml;
 
 #[get("/")]
 fn index() -> content::RawHtml<&'static str> {
@@ -10,9 +9,9 @@ fn index() -> content::RawHtml<&'static str> {
 }
 
 #[catch(404)]
-fn not_found() -> RawHtml<&'static str> {
+fn not_found() -> content::RawHtml<&'static str> {
     const BODY: &str = include_str!("templates/404.html");
-    RawHtml(BODY)
+    content::RawHtml(BODY)
 }
 
 #[launch]

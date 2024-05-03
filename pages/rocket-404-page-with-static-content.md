@@ -7,8 +7,13 @@ description:
 tags:
     - Rocket
     - 404
-todo:
-    - TODO
+    - content
+    - RawHtml
+    - routes!
+    - catchers!
+    - mount
+    - register
+    - include_str!
 ---
 
 If the user visits a path on our [Rocket](/rocket)-based site that does not match any of the routes, by default, Rocket will show a very simple page saying **404: Not Found**
@@ -74,5 +79,13 @@ fn rocket() -> _ {
 }
 
 ```
+
+In the tests we can verify that the response status for the main route is [Ok](https://api.rocket.rs/v0.5/rocket/http/struct.Status#associatedconstant.Ok)
+and for an arbitrary other path is [NotFound](https://api.rocket.rs/v0.5/rocket/http/struct.Status#associatedconstant.NotFound).
+
+In the main route we checked that the returned page is exactly as we expect.
+
+In the 404 route we demonstrate how to check that some content is in the returned HTML.
+
 
 
