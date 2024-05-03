@@ -48,7 +48,8 @@ There are a number of series of articles on the site in the following topics:
 * [Files](/files)
 * [Random](/generate-random-numbers)
 * [Vectors](/vectors)
-* [HashMaps](/hashmap)
+* [HashMaps](/hashmap) (hash, dictionary, associative array)
+* [HashSet](/hashset) (set)
 * [Functions](/functions)
 
 ## The most recent articles
