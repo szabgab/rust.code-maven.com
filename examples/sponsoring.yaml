@@ -15,3 +15,24 @@
   website: https://rocket.rs/
   article: https://dev.to/szabgab/sponsoring-the-rust-based-rocket-web-framework-2h39
   organization: true
+
+- name: Tokio
+  github: tokio-rs
+  website: https://tokio.rs/
+  organization: true
+
+- name:  Sean McArthur
+  github: seanmonstar
+  organization: false
+- name: Jacob Pratt
+  github: jhpratt
+  organization: false
+- name: Steven Fackler
+  github: sfackler
+  organization: false
+- name: Vincent Prouillet
+  github: Keats
+  website: https://www.vincentprouillet.com/
+  organization: false
+
+
