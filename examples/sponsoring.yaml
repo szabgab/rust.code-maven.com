@@ -20,6 +20,21 @@
   github: tokio-rs
   website: https://tokio.rs/
   organization: true
+- name: rkyv
+  github: rkyv
+  website: https://rkyv.org/
+  organization: true
+- name: dimforge
+  github: dimforge
+  organization: true
+- name: clap-rs
+  github: clap-rs
+  organization: true
+- name: pest
+  github: pest-parser
+  organization: true
+
+
 
 - name:  Sean McArthur
   github: seanmonstar
@@ -34,5 +49,64 @@
   github: Keats
   website: https://www.vincentprouillet.com/
   organization: false
+- name: Taiki Endo
+  github: taiki-e
+  organization: false
+- name: Lokathor
+  github: Lokathor
+  website: https://lokathor.com/
+  organization: false
+- name: Douman
+  github: DoumanAsh
+  organization: false
+- name: Zeeshan Ali Khan
+  github: zeenix
+  website: http://zee-nix.blogspot.com/
+  organization: false
+- name: Hanno Braun
+  github: hannobraun
+  website: https://hanno.braun-odw.eu/
+  organization: false
+- name: Eliza Weisman
+  github: hawkw
+  website: https://www.elizas.website/
+  organization: false
+- name: Alexander Payne
+  github: myrrlyn
+  website: https://myrrlyn.net/
+  organization: false
+- name: XAMPPRocky
+  github: XAMPPRocky
+  organization: false
+- name: Joshua Barretto
+  github: zesterer
+  website: https://www.jsbarretto.com/blog/
+  organization: false
+- name: Kat Marchán
+  github: zkat
+  organization: false
+- name: Titus
+  github: wooorm
+  website: https://wooorm.com/
+  organization: false
+- name: Kirill Chibisov
+  github: kchibisov
+  organization: false
+- name: Kathryn Long
+  github: starkat99
+  organization: false
+- name: Yosh
+  github: yoshuawuyts
+  website: https://blog.yoshuawuyts.com/
+  organization: false
+- name: daxpedda
+  github: daxpedda
+  organization: false
+- name: Lucy
+  github: Absolucy
+  website: https://absolucy.moe/
+  organization: false
+
+
 
 
