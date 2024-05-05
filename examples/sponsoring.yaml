@@ -1,0 +1,17 @@
+- name: David Tolnay
+  github: dtolnay
+  article: https://dev.to/szabgab/github-sponsor-rust-developer-david-tolnay-53kc
+  organization: false
+- name: Andrew Gallant
+  github: BurntSushi
+  article: https://dev.to/szabgab/github-sponsor-rust-developer-andrew-gallant-burntsushi-31lh
+  organization: false
+- name: Servo
+  github: servo
+  article: https://dev.to/szabgab/github-sponsor-the-servo-rust-project-5b0k
+  organization: true
+- name: Rocket Web Framework
+  github: rwf2
+  website: https://rocket.rs/
+  article: https://dev.to/szabgab/sponsoring-the-rust-based-rocket-web-framework-2h39
+  organization: true
