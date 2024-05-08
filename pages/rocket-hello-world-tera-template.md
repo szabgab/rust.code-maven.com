@@ -20,6 +20,20 @@ Part of the series about the [Rocket web framework](/rocket).
 
 Rocket is integrated with two templating systems. In this article we'll see how to use the [Tera](https://crates.io/crates/tera) templating system.
 
+## Directory layout
+
+```
+$ tree
+.
+├── Cargo.lock
+├── Cargo.toml
+├── src
+│   ├── main.rs
+│   └── tests.rs
+└── templates
+    └── index.html.tera
+```
+
 ## Dependencies
 
 For this to work, we'll need  the [rocket_dyn_templates](https://crates.io/crates/rocket_dyn_templates) crate with the **tera** feature.
