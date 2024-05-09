@@ -1,6 +1,6 @@
 ---
 title: "Rust Rocket: In memory hit counter using state"
-timestamp: 2024-04-25T14:30:01
+timestamp: 2024-05-09T08:30:01
 author: szabgab
 published: true
 description:
