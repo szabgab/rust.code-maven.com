@@ -40,7 +40,7 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Process Query String of a GET request](/rocket-query-string)
 * [Early return from routes](/rocket-early-return)
 * [404 page with static content](/rocket-404-page-with-static-content) - `404`, `content`, `RawHtml`, `routes!`, `catchers!`, `mount`, `register`, `include_str!`.
-
+* [In memory hit counter using state](/rocket-in-memory-hit-counter-state) - `AtomicUsize`, `Ordering`, `State`, `manage`.
 
 ## Rocket-based Open Source projects
 
