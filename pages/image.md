@@ -19,6 +19,7 @@ In this series we use the [image crate](https://crates.io/crates/image) to creat
 * [Create image with text written on it using Rust](/create-image-with-text) - `draw_text_mut`, `text_size`, `Font`, `Scale`, `Rgb`, `RgbImage`, `get_pixel_mut`.
 * [Resize image using Rust](/resize-image) - `resize`, `save`, `width`, `height`, `FilterType`.
 * [Crop image using Rust](/crop-image) - `crop_imm`, `crop`, `save`, `width`, `height`.
+* [Embed image in newly created image](/embed-image)
 
 * [Create QR code using Rust](/create-qrcode) - `qrcode`.
 
