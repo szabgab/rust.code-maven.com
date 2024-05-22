@@ -7,6 +7,8 @@ description: Create a new image, set its background, embed an image.
 tags:
     - image
     - Rgba
+    - RgbaImage
+    - ImageBuffer
 todo:
     - TODO
 ---
