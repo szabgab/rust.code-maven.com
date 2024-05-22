@@ -14,6 +14,9 @@ your time to Rust itself or to the thousands of [Rust Crates](https://crates.io/
 
 You might work at an organization that relies on Rust and the organization might want to support the development of the Rust ecosystem.
 
+If your **product/company** depends on Rust, you can sponsor people here to ensure they keep happily maintaining them.
+
+
 In [this series of articles](https://dev.to/szabgab/github-sponsors-a-series-on-giving-an-receiving-4fmb) I am reviewing how various Open Source developers employ
 the [GitHub Sponsors](https://github.com/sponsors/) system to get funding. Many of the articles are about Rust developers or Rust projects.
 
