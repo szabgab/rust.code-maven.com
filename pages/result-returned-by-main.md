@@ -67,7 +67,7 @@ Instead of making the error a plain string it is probably better to make it a [s
 Returning `Ok` will be the same and will have the same result:
 
 
-'''rust
+```rust
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
@@ -76,7 +76,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 Returning error will be a bit more complex:
 
 
-'''rust
+```rust
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     Err(Box::<dyn std::error::Error>::from("Problem"))
 }
