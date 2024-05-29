@@ -34,8 +34,6 @@ navbar:
       title: Home
     - path: /tags/
       title: Tags
-    - path: /slides/rust/
-      title: Slides
     - path: /subscribe
       title: Newsletter
     - path: /projects
