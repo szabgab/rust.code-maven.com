@@ -1,8 +1,10 @@
-
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let markdown = std::fs::read_to_string("content.md")?;
-    let html = markdown2html(&markdown)?;
-    println!("{html:?}");
+    match markdown2html(&markdown) {
+        Ok(html) => println!("{html}"),
+        Err(err) => return Err(Box::<dyn std::error::Error>::from(format!("{err}"))),
+    }
+
     Ok(())
 }
 
@@ -12,7 +14,6 @@ fn markdown2html(content: &str) -> Result<String, markdown::message::Message> {
         &markdown::Options {
             compile: markdown::CompileOptions {
                 allow_dangerous_html: true,
-                //allow_dangerous_protocol: true,
                 ..markdown::CompileOptions::default()
             },
             ..markdown::Options::gfm()
@@ -21,5 +22,3 @@ fn markdown2html(content: &str) -> Result<String, markdown::message::Message> {
 
     Ok(html)
 }
-
-
