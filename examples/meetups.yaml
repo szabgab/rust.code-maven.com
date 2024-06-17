@@ -1,230 +1,230 @@
 - name: Rust London User Group
   url: https://www.meetup.com/rust-london-user-group/
-  members: 3121
+  members: 3223
   location: London, 17, United Kingdom
 - name: Rust NYC
   url: https://www.meetup.com/rust-nyc/
-  members: 2936
+  members: 3041
   location: New York, NY, USA
 - name: Rust Bay Area
   url: https://www.meetup.com/Rust-Bay-Area/
-  members: 2928
+  members: 2926
   location: San Francisco, CA, USA
-- name: Rust India
-  url: https://www.meetup.com/rustox/
-  members: 2644
-  location: Bangalore, India
 - name: Rust Berlin
   url: https://www.meetup.com/rust-berlin/
-  members: 2733
+  members: 2916
   location: Berlin, Germany
+- name: Rust India
+  url: https://www.meetup.com/rustox/
+  members: 2664
+  location: Bangalore, India
 - name: Seattle Rust User Group
   url: https://www.meetup.com/seattle-rust-user-group/
-  members: 1662
+  members: 1733
   location: Seattle, WA, USA
+- name: Rust Nederland
+  url: https://www.meetup.com/rust-nederland/
+  members: 1550
+  location: Amsterdam, Netherlands
 - name: Rust Moscow
   url: https://www.meetup.com/Rust-%D0%B2-%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5/
-  members: 1526
+  members: 1525
   location: Moscow, Russia
 - name: Rust Paris
   url: https://www.meetup.com/Rust-Paris/
-  members: 1503
+  members: 1507
   location: Paris, France
-- name: Rust Nederland
-  url: https://www.meetup.com/rust-nederland/
-  members: 1511
-  location: Amsterdam, Netherlands
 - name: Rust Munich
   url: https://www.meetup.com/rust-munich/
-  members: 1377
+  members: 1410
   location: München, Germany
 - name: Vancouver Rust
   url: https://www.meetup.com/vancouver-rust/
-  members: 1221
+  members: 1259
   location: Vancouver, BC, Canada
 - name: Rust Chennai
   url: https://www.meetup.com/mad-rs/
-  members: 1191
+  members: 1194
   location: Chennai, India
-- name: Rust Linz
-  url: https://www.meetup.com/de-DE/rust-linz/
-  members: 1167
-  location: Linz, Austria
 - name: Boston Rust Meetup
   url: https://www.meetup.com/bostonrust/
-  members: 1149
+  members: 1193
   location: Boston, MA, USA
+- name: Rust Linz
+  url: https://www.meetup.com/de-DE/rust-linz/
+  members: 1174
+  location: Linz, Austria
 - name: Rust São Paulo Meetup
   url: https://www.meetup.com/Rust-Sao-Paulo-Meetup/
-  members: 1104
+  members: 1108
   location: São Paulo, Brazil
 - name: Rust Language Hyderabad
   url: https://www.meetup.com/Rust-Hyderabad/
-  members: 1070
+  members: 1092
   location: Hyderabad, India
 - name: Rust Dublin
   url: https://www.meetup.com/rust-dublin/
-  members: 1053
+  members: 1079
   location: Dublin, Ireland
 - name: Rust Zurich
   url: https://www.meetup.com/rust-zurich/
-  members: 1021
+  members: 1059
   location: Zürich, Switzerland
 - name: Rust Melbourne
   url: https://www.meetup.com/Rust-Melbourne/
-  members: 1007
+  members: 1053
   location: Melbourne, Australia
-- name: Rust Argentina
-  url: https://www.meetup.com/rust-argentina/
-  members: 970
-  location: Buenos Aires, Argentina
-- name: Rust TLV
-  url: https://www.meetup.com/rust-tlv/
-  members: 947
-  location: Tel Aviv-Yafo, Israel
-- name: Rust and C++ Cardiff
-  url: https://www.meetup.com/rust-and-c-plus-plus-in-cardiff/
-  members: 880
-  location: Cardiff, X5, United Kingdom
-- name: Rust MX
-  url: https://www.meetup.com/Rust-MX/
-  members: 863
-  location: México City, Mexico
-- name: Rust Denver
-  url: https://www.meetup.com/Rust-Boulder-Denver/
-  members: 859
-  location: Denver, CO, USA
 - name: Rust Delhi
   url: https://www.meetup.com/rustdelhi/
-  members: 853
+  members: 1012
   location: Delhi, India
-- name: Rust DC
-  url: https://www.meetup.com/RustDC/
-  members: 851
-  location: Washington, DC, USA
-- name: Rust Sydney
-  url: https://www.meetup.com/Rust-Sydney/
-  members: 838
-  location: Sydney, Australia
+- name: Rust Argentina
+  url: https://www.meetup.com/rust-argentina/
+  members: 995
+  location: Buenos Aires, Argentina
+- name: Rust and C++ Cardiff
+  url: https://www.meetup.com/rust-and-c-plus-plus-in-cardiff/
+  members: 953
+  location: Cardiff, X5, United Kingdom
+- name: Rust TLV
+  url: https://www.meetup.com/rust-tlv/
+  members: 950
+  location: Tel Aviv-Yafo, Israel
 - name: Rust Oslo
   url: https://www.meetup.com/Rust-Oslo/
-  members: 826
+  members: 902
   location: Oslo, Norway
+- name: Rust DC
+  url: https://www.meetup.com/RustDC/
+  members: 893
+  location: Washington, DC, USA
+- name: Rust MX
+  url: https://www.meetup.com/Rust-MX/
+  members: 868
+  location: México City, Mexico
+- name: Rust Sydney
+  url: https://www.meetup.com/Rust-Sydney/
+  members: 865
+  location: Sydney, Australia
+- name: Rust Denver
+  url: https://www.meetup.com/Rust-Boulder-Denver/
+  members: 861
+  location: Denver, CO, USA
 - name: Dallas Rust User Meetup
   url: https://www.meetup.com/dallasrust/
-  members: 774
+  members: 804
   location: Dallas, TX, USA
-- name: Rust Cologne
-  url: https://www.meetup.com/rustcologne/
-  members: 732
-  location: Köln, Germany
 - name: Stockholm Rust
   url: https://www.meetup.com/stockholm-rust/
-  members: 716
+  members: 750
   location: Espoo, Finland
-- name: PDXRust
-  url: https://www.meetup.com/PDXRust/
-  members: 713
-  location: Portland, OR, USA
+- name: Rust Cologne
+  url: https://www.meetup.com/rustcologne/
+  members: 749
+  location: Köln, Germany
 - name: Tokyo Rust Meetup
   url: https://www.meetup.com/tokyo-rust-meetup/
-  members: 699
+  members: 747
   location: Tokyo, Japan
-- name: Rust Sthlm
-  url: https://www.meetup.com/ruststhlm/
-  members: 671
-  location: Stockholm, Sweden
 - name: BcnRust
   url: https://www.meetup.com/bcnrust/
-  members: 665
+  members: 744
   location: Barcelona, Spain
+- name: PDXRust
+  url: https://www.meetup.com/PDXRust/
+  members: 738
+  location: Portland, OR, USA
+- name: Rust Sthlm
+  url: https://www.meetup.com/ruststhlm/
+  members: 673
+  location: Stockholm, Sweden
+- name: Rust Meetup Hamburg
+  url: https://www.meetup.com/Rust-Meetup-Hamburg/
+  members: 668
+  location: Hamburg, Germany
+- name: Copenhagen Rust Community
+  url: https://www.meetup.com/copenhagen-rust-community/
+  members: 654
+  location: Copenhagen, Denmark
+- name: Rust AKL
+  url: https://www.meetup.com/rust-akl/
+  members: 635
+  location: Auckland, New Zealand
 - name: Rust Toronto
   url: https://www.meetup.com/Rust-Toronto/
-  members: 628
+  members: 633
   location: Toronto, ON, Canada
 - name: Rust Language Milano
   url: https://www.meetup.com/Rust-lang-Milano/
-  members: 619
+  members: 626
   location: Milano, MI, Italy
-- name: Rust Meetup Hamburg
-  url: https://www.meetup.com/Rust-Meetup-Hamburg/
-  members: 621
-  location: Hamburg, Germany
-- name: Rust AKL
-  url: https://www.meetup.com/rust-akl/
-  members: 594
-  location: Auckland, New Zealand
-- name: Columbus Rust Society
-  url: https://www.meetup.com/columbus-rs/
-  members: 555
-  location: Columbus, OH, USA
+- name: Rust Nuremberg
+  url: https://www.meetup.com/rust-noris/
+  members: 604
+  location: Nürnberg, Germany
 - name: Finland Rust-lang Group
   url: https://www.meetup.com/Finland-Rust-Meetup/
-  members: 583
+  members: 595
   location: Helsinki, Finland
 - name: Rust ATX
   url: https://www.meetup.com/rust-atx/
-  members: 571
+  members: 592
   location: Austin, TX, USA
+- name: Columbus Rust Society
+  url: https://www.meetup.com/columbus-rs/
+  members: 557
+  location: Columbus, OH, USA
 - name: Rust Warsaw
   url: https://www.meetup.com/Rust-Warsaw/
-  members: 533
+  members: 538
   location: Warsaw, Poland
-- name: Rust Nuremberg
-  url: https://www.meetup.com/rust-noris/
-  members: 529
-  location: Nürnberg, Germany
 - name: Utah Rust
   url: https://www.meetup.com/utah-rust/
-  members: 528
+  members: 537
   location: Lehi, UT, USA
-- name: Rust Los Angeles
-  url: https://www.meetup.com/Rust-Los-Angeles/
-  members: 512
-  location: Los Angeles, CA, USA
-- name: Copenhagen Rust Community
-  url: https://www.meetup.com/copenhagen-rust-community/
-  members: 595
-  location: Copenhagen, Denmark
-- name: MadRust
-  url: https://www.meetup.com/MadRust/
-  members:  496
-  location: Madrid, Spain
 - name: Rust Vienna
   url: https://www.meetup.com/rust-vienna/
-  members: 490
+  members: 522
   location: Vienna, Austria
-- name: San Diego Rust
-  url: https://www.meetup.com/San-Diego-Rust/
-  members: 462
-  location: San Diego, CA, USA
+- name: Rust Los Angeles
+  url: https://www.meetup.com/Rust-Los-Angeles/
+  members: 520
+  location: Los Angeles, CA, USA
+- name: MadRust
+  url: https://www.meetup.com/MadRust/
+  members:  515
+  location: Madrid, Spain
 - name: Minneapolis Rust Meetup
   url: https://www.meetup.com/minneapolis-rust-meetup/
-  members: 432
+  members: 476
   location: Minneapolis, MN, USA
+- name: San Diego Rust
+  url: https://www.meetup.com/San-Diego-Rust/
+  members: 473
+  location: San Diego, CA, USA
+- name: San Francisco Rust Study Group
+  url: https://www.meetup.com/san-francisco-rust-study-group/
+  members: 465
+  location: San Francisco, CA, USA
+- name: Charlottesville Rust Meetup
+  url: https://www.meetup.com/charlottesville-rust-meetup/
+  members: 464
+  location: Charlottesville, VA, USA
 - name: Rust-Saar
   url: https://www.meetup.com/Rust-Saar/
   members: 425
   location: Saarbrücken, Germany
-- name: San Francisco Rust Study Group
-  url: https://www.meetup.com/san-francisco-rust-study-group/
-  members: 424
-  location: San Francisco, CA, USA
-- name: Charlottesville Rust Meetup
-  url: https://www.meetup.com/charlottesville-rust-meetup/
-  members: 423
-  location: Charlottesville, VA, USA
 - name: Chicago Rust Meetup
   url: https://www.meetup.com/Chicago-Rust-Meetup/
-  members: 421
+  members: 425
   location: Chicago, IL, USA
 - name: Rust Brisbane
   url: https://www.meetup.com/Rust-Brisbane/
-  members: 414
+  members: 424
   location: Brisbane, Australia
 - name: Buffalo Rust Meetup
   url: https://www.meetup.com/buffalo-rust-meetup/
-  members: 406
+  members: 421
   location: Buffalo, NY, USA
 - name: Rust Roma
   url: https://www.meetup.com/it-IT/Rust-Roma/
@@ -234,145 +234,157 @@
   url: https://www.meetup.com/Rust-Uruguay/
   members: 389
   location: Montevideo, Uruguay
-- name: Indy Rust
-  url: https://www.meetup.com/indyrs/
-  members: 342
-  location: Indianapolis, IN, USA
 - name: Cambridge Rust meetup
   url: https://www.meetup.com/Cambridge-Rust-Meetup/
-  members: 331
+  members: 369
   location: Cambridge, C3, United Kingdom
+- name: Indy Rust
+  url: https://www.meetup.com/indyrs/
+  members: 352
+  location: Indianapolis, IN, USA
 - name: Rust Atlanta
   url: https://www.meetup.com/Rust-ATL/
-  members: 333
+  members: 335
   location: Atlanta, GA, USA
+- name: Rust Aarhus
+  url: https://www.meetup.com/rust-aarhus/
+  members: 329
+  location: Aarhus, Denmark
+- name: Rust Prague
+  url: https://www.meetup.com/rust-prague/
+  members: 327
+  location: Prague, Czech Republic
 - name: Montpellier Rust Meetup
   url: https://www.meetup.com/Montpellier-Rust-Meetup/
-  members: 311
+  members: 312
   location: Montpellier, France
 - name: Rust KW
   url: https://www.meetup.com/Rust-KW/
   members: 309
   location: Kitchener, ON, Canada
+- name: Rust Lyon
+  url: https://www.meetup.com/rust-lyon/
+  members: 305
+  location: Lyon, France
 - name: Rust Wellington
   url: https://www.meetup.com/Wellington-Rust-Meetup/
-  members: 297
+  members: 298
   location: Wellington, New Zealand
 - name: Desert Rust
   url: https://www.meetup.com/Desert-Rustaceans/
-  members: 289
+  members: 293
   location: Phoenix, AZ, USA
-- name: Rust Lyon
-  url: https://www.meetup.com/rust-lyon/
-  members: 284
-  location: Lyon, France
-- name: Rust Prague
-  url: https://www.meetup.com/rust-prague/
-  members: 282
-  location: Prague, Czech Republic
-- name: Rust Aarhus
-  url: https://www.meetup.com/rust-aarhus/
-  members: 276
-  location: Aarhus, Denmark
 - name: Rust Nigeria
   url: https://www.meetup.com/rust-meetup-group/
-  members: 268
+  members: 290
   location:  Lagos, Nigeria
 - name: Rust Lille
   url: https://www.meetup.com/meetup-group-zgphbyet/
-  members: 262
+  members: 289
   location: Lille, France
-- name: Rust Montréal
-  url: https://www.meetup.com/Rust-Montreal/
-  members: 238
-  location: Montréal, QC, Canada
-- name: Rust Vilnius
-  url: https://www.meetup.com/Rust-in-Vilnius/
-  members: 236
-  location: Vilnius, Lithuania
 - name: Rust Medellin
   url: https://www.meetup.com/rust-medellin/
-  members: 233
+  members: 251
   location: Medellin, Colombia
+- name: Rust Vilnius
+  url: https://www.meetup.com/Rust-in-Vilnius/
+  members: 246
+  location: Vilnius, Lithuania
+- name: Rust Montréal
+  url: https://www.meetup.com/Rust-Montreal/
+  members: 243
+  location: Montréal, QC, Canada
+- name: Rust Basel
+  url: https://www.meetup.com/rust-basel/
+  members: 230
+  location: Basel, Switzerland
 - name: Rust Rhein-Main
   url: https://www.meetup.com/rust-rhein-main/
-  members: 223
+  members: 228
   location: Darmstadt, Germany
 - name: Belgium Rust user group
   url: https://www.meetup.com/belgium-rust-user-group/
-  members: 213
+  members: 216
   location: Brussels, Belgium
-- name: Rust Basel
-  url: https://www.meetup.com/rust-basel/
-  members: 204
-  location: Basel, Switzerland
-- name: impl Zagreb for Rust
-  url: https://www.meetup.com/zagreb-rust-meetup/
-  members: 193
-  location: Zagreb, Croatia
-- name: Cap Hill Rust Coding/Hacking/Learning
-  url: https://www.meetup.com/cap-hill-rust/
-  members: 190
-  location: Seattle, WA, USA
-- name: Oxford Rust Meetup Group
-  url: https://www.meetup.com/oxford-rust-meetup-group/
-  members: 183
-  location: Oxford, K2, United Kingdom
 - name: Mountain View  Rust Meetup
   url: https://www.meetup.com/mv-rust-meetup/
-  members: 182
+  members: 209
   location: Mountain View, CA, USA
-- name: Rust Franken
-  url: https://www.meetup.com/rust-nerf/
-  members: 175
-  location: Erlangen, Germany
-- name: Rust Bern
-  url: https://www.meetup.com/rust-bern/
-  members: 170
-  location: Bern, Switzerland
-- name: Rust Hack & Learn Karlsruhe
-  url: https://www.meetup.com/Rust-Hack-Learn-Karlsruhe/
-  members: 159
-  location: Karlsruhe, Germany
-- name: Deep Dish Rust
-  url: https://www.meetup.com/deep-dish-rust/
-  members: 143
-  location: Chicago, IL, USA
+- name: impl Zagreb for Rust
+  url: https://www.meetup.com/zagreb-rust-meetup/
+  members: 200
+  location: Zagreb, Croatia
+- name: Oxford Rust Meetup Group
+  url: https://www.meetup.com/oxford-rust-meetup-group/
+  members: 197
+  location: Oxford, K2, United Kingdom
+- name: Cap Hill Rust Coding/Hacking/Learning
+  url: https://www.meetup.com/cap-hill-rust/
+  members: 192
+  location: Seattle, WA, USA
 - name: Vilnius Rust and Go Meetup Group
   url: https://www.meetup.com/vilnius-rust-go-meetup-group/
-  members: 143
+  members: 190
   location: Vilnius, Lithuania
 - name: Rust Czech Republic
   url: https://www.meetup.com/rust-czech-republic/
-  members: 142
+  members: 181
   location: Prague, Czech Republic
+- name: Rust Bern
+  url: https://www.meetup.com/rust-bern/
+  members: 179
+  location: Bern, Switzerland
+- name: Rust Franken
+  url: https://www.meetup.com/rust-nerf/
+  members: 177
+  location: Erlangen, Germany
+- name: Deep Dish Rust
+  url: https://www.meetup.com/deep-dish-rust/
+  members: 174
+  location: Chicago, IL, USA
+- name: Rust Hack & Learn Karlsruhe
+  url: https://www.meetup.com/Rust-Hack-Learn-Karlsruhe/
+  members: 160
+  location: Karlsruhe, Germany
+- name: Rust Gdansk
+  url: https://www.meetup.com/rust-gdansk/
+  members: 150
+  location: Gdansk, Poland
+- name: Pasadena Thursday Go / Rust
+  url: https://www.meetup.com/thursday-go/
+  members: 145
+  location: Pasadena, CA, USA
 - name: Ottawa Rust Language Meetup
   url: https://www.meetup.com/Ottawa-Rust-Language-Meetup/
-  members: 137
+  members: 141
   location: Ottawa, ON, Canada
 - name: Rust Belfast Meetup
   url: https://www.meetup.com/Rust-Belfast-Meetup/
-  members: 122
+  members: 125
   location: Belfast, R3, United Kingdom
-- name: Pasadena Thursday Go / Rust
-  url: https://www.meetup.com/thursday-go/
-  members: 121
-  location: Pasadena, CA, USA
 - name: Hack-away with Rust
   url: https://www.meetup.com/hack-away-with-rust/
-  members: 118
+  members: 124
   location: Espoo, Finland
 - name: Rust Colombia
   url: https://www.meetup.com/rust-colombia/
-  members: 113
+  members: 122
   location: Medellín, Colombia
-- name: Rust Gdansk
-  url: https://www.meetup.com/rust-gdansk/
-  members: 110
-  location: Gdansk, Poland
+- name: Rust Trondheim
+  url: https://www.meetup.com/rust-trondheim/
+  members: 108
+  location: Trondheim, Norway
+- name: Rust - Modern Systems Programming in Leipzig
+  url: https://www.meetup.com/rust-modern-systems-programming-in-leipzig/
+  members: 107
+  location: Leipzig, Germany
+- name: Rust Halifax
+  url: https://www.meetup.com/rust-tell-halifax/
+  members: 104
+  location: Halifax, NS, Canada
 - name: RustSchool Rotterdam
   url: https://www.meetup.com/RustSchool-Rotterdam/
-  members: 104
+  members: 103
   location: Rotterdam, Netherlands
 - name: Rust Rio
   url: https://www.meetup.com/Rust-Rio/
@@ -380,35 +392,27 @@
   location: Rio de Janeiro, Brazil
 - name: Rust Lang Comunidad Mexico
   url: https://www.meetup.com/rustlangmx/
-  members: 102
+  members: 103
   location: Guadalajara, Mexico
-- name: Rust - Modern Systems Programming in Leipzig
-  url: https://www.meetup.com/rust-modern-systems-programming-in-leipzig/
-  members: 102
-  location: Leipzig, Germany
 - name: Rust Perth Meetup Group
   url: https://www.meetup.com/perth-rust-meetup-group/
-  members: 97
+  members: 102
   location: Perth, Australia
-- name: Rust Trondheim
-  url: https://www.meetup.com/rust-trondheim/
-  members: 92
-  location: Trondheim, Norway
 - name:  Rust Tbilisi
   url: https://www.meetup.com/tbilisi-rustaceans/
-  members: 84
+  members: 91
   location: Tbilisi, Georgia
-- name: Rust Halifax
-  url: https://www.meetup.com/rust-tell-halifax/
-  members: 81
-  location: Halifax, NS, Canada
+- name: Rust Bordeaux
+  url: https://www.meetup.com/bordeaux-rust/
+  members: 75
+  location: Bordeaux, France
 - name: Rust Seoul
   url: https://www.meetup.com/Rust-Seoul/
   members: 71
   location: Seoul, South Korea
 - name: Canberra Rust User Group
   url: https://www.meetup.com/rust-canberra/
-  members: 69
+  members: 89
   location: Canberra, Australia
 - name: Budapest Rust Meetup Group
   url: https://www.meetup.com/budapest-rust-meetup-group/
@@ -416,36 +420,36 @@
   location: Budapest, Hungary
 - name: Paessler Rust Camp 2024
   url: https://www.meetup.com/paessler-rust-camp-2024/
-  members: 64
+  members: 62
   location: Nürnbert, Germany
 - name: Rust Taiwan Community
   url:  https://github.com/rust-tw/meetup
   members: 61
   location: Taipei, Taiwan
-- name: Rust Bordeaux
-  url: https://www.meetup.com/bordeaux-rust/
-  members: 48
-  location: Bordeaux, France
 - name: Rust Girona
   url: https://www.meetup.com/rust-girona/
-  members: 43
+  members: 53
   location: Girona, Spain
+- name: Spokane
+  url: https://www.meetup.com/spokane-rust/
+  members: 46
+  location: Spokane, WA, USA
 - name: Rust Circle Kampala
   url: https://www.eventbrite.com/o/rust-circle-kampala-65249289033
-  members: 37
+  members: 40
   location: Online
 - name: Rust Würzburg Meetup Group
   url: https://www.meetup.com/rust-wurzburg-meetup-group/
   members: 36
   location: Würzburg, Germany
-- name: Spokane
-  url: https://www.meetup.com/spokane-rust/
-  members: 30
-  location: Spokane, WA, USA
 - name: Calgary Rust
   url: https://www.eventbrite.ca/o/rust-calgary-63449860593
-  members: 26
+  members: 27
   location: Calgary, AB, Canada
+- name: Rust in Israel
+  url: https://www.meetup.com/rust-in-israel/
+  members: 18
+  location: Tel Aviv, Israel
 - name: Rust Indonesia
   url: https://github.com/rustid/meetup
   members: 0
