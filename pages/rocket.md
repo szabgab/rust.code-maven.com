@@ -42,6 +42,10 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [404 page with static content](/rocket-404-page-with-static-content) - `404`, `content`, `RawHtml`, `routes!`, `catchers!`, `mount`, `register`, `include_str!`.
 * [In memory hit counter using state](/rocket-in-memory-hit-counter-state) - `AtomicUsize`, `Ordering`, `State`, `manage`.
 
+## Videos
+
+* [Web development in Rust using Rocket](/web-development-in-rust-using-rocket) an introduction.
+
 ## Rocket-based Open Source projects
 
 * The [Pastebin tutorial](https://rocket.rs/guide/v0.5/pastebin/#pastebin-tutorial)
