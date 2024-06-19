@@ -41,6 +41,8 @@ navbar:
     - path: /training-course
       title: Training
   end:
+    - path: https://t.me/+5P2gCQIWFaBkYmI0
+      title: Telegram
     - path: /archive
       title: Archive
     - path: /about
