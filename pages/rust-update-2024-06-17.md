@@ -47,7 +47,12 @@ For full details, see of [Rust User Groups](/user-groups).
 
 ## Rust on LinkedIn
 
-[Rust Programming Language](https://www.linkedin.com/groups/4973032/) - 23,261 members 24,139
+| group                                                                                                        |  2024.04.08 | 2024.06.17 |change |
+| ------------------------------------------------------------------------------------------------------------ | ----------- | ---------- |------ |
+| [Rust Programming Language](https://www.linkedin.com/groups/4973032/)                                        | 23,261      | 24,139     | 3.7 % |
+| [Rust Developer Community (Rust Lang)](https://www.linkedin.com/groups/12537155/)                            |  3,668      |  4,048     |10.3 % |
+| [Rust Developers](https://www.linkedin.com/groups/6931877/)                                                  |  1,311      |  1,365     | 4.1 % |
+| [Rust (Programming Language)](https://www.linkedin.com/groups/12566531/)                                     |  1,308      |  1,489     |13.8 % |
 
 [Rust on LinkedIn](/rust-on-linkedin)
 
