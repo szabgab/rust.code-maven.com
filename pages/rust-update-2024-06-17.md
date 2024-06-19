@@ -22,7 +22,7 @@ interesting and it will also have a different URL. Then if I remember to update 
 
 So this is the report.
 
-## [Rust User Groups](/user-groups)
+## Rust User Groups
 
 There are mostly Meetup groups, though not all of them.
 
@@ -32,7 +32,18 @@ There are mostly Meetup groups, though not all of them.
 | 2024.03.17 | 113        | 65,200  |  5,571 |
 | 2024.06.17 | 116        | 68,126  |  2,926 |
 
-This is 4.4% growth in 3 month or roughly 20% annually.
+This is 4.4% growth in 3 month or roughly 20% annually. I think that is a very impressiv growth. Using the git commits one could check the changes in the specific groups,
+but it seems that groups that organize events get many new members while others that don't organize event may also loose a few.
+
+The two largest Rust groups are the [Rust London User Group](https://www.meetup.com/rust-london-user-group/) (3,223) and [Rust NYC](https://www.meetup.com/rust-nyc/) (3,041).
+These are also the only groups with more than 3000 members.
+
+The 3rd would be the [Code-Mavens](https://www.meetup.com/code-mavens/) group (2,949) that I use to organize virtual events, however it is not a purely Rust group so
+I did not include it in the list.
+
+The smallest group is [Rust in Israel](https://www.meetup.com/rust-in-israel/) (18 members) that I created on this Sunday. It will grow.
+
+For full details, see of [Rust User Groups](/user-groups).
 
 ## Rust on LinkedIn
 
@@ -49,18 +60,19 @@ This is 4.4% growth in 3 month or roughly 20% annually.
 
 Subredit members
 
-| subredit | 2024.04.08 | 2024.06.19 | change |
-| [/r/rust](https://www.reddit.com/r/rust/)                 | 286K | 297K | +3.8% |
-| [/r/learnrust](https://www.reddit.com/r/learnrust/)       |  25K |  27K |   +8% |
-| [/r/rust_gamedev](https://www.reddit.com/r/rust_gamedev/) |  38K |  38K |       |
+| subredit                                                  | 2024.04.08 | 2024.06.19 | change |
+| --------------------------------------------------------- | ---------- | ---------- | ------ |
+| [/r/rust](https://www.reddit.com/r/rust/)                 | 286K       | 297K       | +3.8%  |
+| [/r/learnrust](https://www.reddit.com/r/learnrust/)       |  25K       |  27K       |   +8%  |
+| [/r/rust_gamedev](https://www.reddit.com/r/rust_gamedev/) |  38K       |  38K       |        |
 
-The scary part is that on the Gamedev both the number of subscriber as the number of people currently only were the same as 2 months ago.
+The scary part is that on the Gamedev both the number of subscribers as the number of people currently online were the same as 2 months ago.
 
 See [Rust on Reddit](/rust-on-reddit)
 
 ## Rust on Telegram
 
-There might be other groups, but I've just created the Rust Maven telegram group so.
+There might be other groups, but I am not aware of them and I've just created the Rust Maven telegram group so let me put it here:
 
 Number of members.
 
@@ -70,9 +82,11 @@ Number of members.
 
 And you are invited to join!
 
+## WhatsApp
+
+Are there any Rust groups on WhatsApp that you would like me to include in my report?
 
 ## The popularity of Rust
-
 
 The [Stack Overflow  survey 2023](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages) indicates that Rust
 is the most admired language by a largegap at 84.66%  (the next is Elixir at 73.13%). That is a lot of people love Rust. On the other hand it is only 6th most desired language
