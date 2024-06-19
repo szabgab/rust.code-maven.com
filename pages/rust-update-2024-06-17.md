@@ -79,7 +79,7 @@ Subredit members
 
 The 3.8% increase in 2 months is roughly 25% annually. Very nice.
 
-The 8% increase in 2 month is, what, 45% a year? I did not compute it, but also there might be some extreme rounding error as we only have the numbers in thousands so the real change is somewhere between 1,000 and 3,000 members.
+The 8% increase in 2 months is, what, 55% a year? I did not compute it, but also there might be some extreme rounding error as we only have the numbers in thousands so the real change is somewhere between 1,000 and 3,000 members.
 
 The scary part is that on the Gamedev both the number of subscribers as the number of people currently online were the same as 2 months ago.
 
