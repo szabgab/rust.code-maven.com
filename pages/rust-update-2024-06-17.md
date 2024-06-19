@@ -1,5 +1,5 @@
 ---
-title: Rust update
+title: Rust update 2024.06
 timestamp: 2024-06-17T20:30:01
 author: szabgab
 published: true
@@ -33,4 +33,13 @@ There are mostly Meetup groups, though not all of them.
 
 [Rust Programming Language](https://www.linkedin.com/groups/4973032/) - 23,261 members 24,139
 
+## [Rust on Facebook](/rust-on-facebook)
+
+
+## [Rust on Reddit](/rust-on-reddit)
+
+
+https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages
+https://pypl.github.io/PYPL.html
+https://www.tiobe.com/tiobe-index/
 
