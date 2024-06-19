@@ -17,3 +17,13 @@ Rust-related SubReddits. Collected on 2024.04.08
 | [/r/learnrust](https://www.reddit.com/r/learnrust/)       |  25K |  25 |
 | [/r/rust_gamedev](https://www.reddit.com/r/rust_gamedev/) |  38K |  11 |
 
+
+Collected on 2024.06.19 at 17:30 UTC.
+
+| subredit | members | online |
+| -------- | ------- | ------ |
+| [/r/rust](https://www.reddit.com/r/rust/)                 | 297K | 242 |
+| [/r/learnrust](https://www.reddit.com/r/learnrust/)       |  27K |  11 |
+| [/r/rust_gamedev](https://www.reddit.com/r/rust_gamedev/) |  38K |  11 |
+
+

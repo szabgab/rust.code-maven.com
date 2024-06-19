@@ -34,15 +34,29 @@ There are mostly Meetup groups, though not all of them.
 
 This is 4.4% growth in 3 month or roughly 20% annually.
 
-## [Rust on LinkedIn](/rust-on-linkedin)
+## Rust on LinkedIn
 
 [Rust Programming Language](https://www.linkedin.com/groups/4973032/) - 23,261 members 24,139
 
-## [Rust on Facebook](/rust-on-facebook)
+[Rust on LinkedIn](/rust-on-linkedin)
+
+## Rust on Facebook
+
+[Rust on Facebook](/rust-on-facebook)
 
 
-## [Rust on Reddit](/rust-on-reddit)
+## Rust on Reddit
 
+Subredit members
+
+| subredit | 2024.04.08 | 2024.06.19 | change |
+| [/r/rust](https://www.reddit.com/r/rust/)                 | 286K | 297K | +3.8% |
+| [/r/learnrust](https://www.reddit.com/r/learnrust/)       |  25K |  27K |   +8% |
+| [/r/rust_gamedev](https://www.reddit.com/r/rust_gamedev/) |  38K |  38K |       |
+
+The scary part is that on the Gamedev both the number of subscriber as the number of people currently only were the same as 2 months ago.
+
+See [Rust on Reddit](/rust-on-reddit)
 
 ## Rust on Telegram
 
