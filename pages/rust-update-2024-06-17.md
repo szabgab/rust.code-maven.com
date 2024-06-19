@@ -9,7 +9,7 @@ tags:
 ---
 
 June 17 is a rather arbitrary date to write this report, but the [Rust user groups](/user-groups) page was updated exactly 3 months ago. As I updated the numbers
-there today I wanted to submit it to [This week in Rust](https://this-week-in-rust.org/), but, rather understandably, they don't like to include the same URL twice.
+there I wanted to submit it to [This week in Rust](https://this-week-in-rust.org/), but, rather understandably, they don't like to include the same URL twice.
 They even have a CI job failing if the same URL is submitted twice.
 
 So I figured instead of submitting that page I could update some of the other data pages I collected and I could write a report about all the changes. That will be probably more
@@ -19,7 +19,9 @@ So this is the report.
 
 ## Rust User Groups
 
-There are mostly Meetup groups, though not all of them.
+There are mostly Meetup groups in [the list](/user-groups), thoug some use different platforms. In some cases the number of members cannot be determined.
+
+Overall:
 
 | date       | no. groups | members | change |
 | ---------- | ---------- | ------- | ------ |
@@ -28,15 +30,15 @@ There are mostly Meetup groups, though not all of them.
 | 2024.06.17 | 116        | 68,126  |  2,926 |
 
 This is 4.4% growth in 3 month or roughly 20% annually. I think that is a very impressiv growth. Using the git commits one could check the changes in the specific groups,
-but it seems that groups that organize events get many new members while others that don't organize event may also loose a few.
+but it seems that groups that organize events get many new members while others that don't organize event may also lose a few.
 
 The two largest Rust groups are the [Rust London User Group](https://www.meetup.com/rust-london-user-group/) (3,223) and [Rust NYC](https://www.meetup.com/rust-nyc/) (3,041).
-These are also the only groups with more than 3000 members.
+These are also the only groups with more than 3,000 members.
 
-The 3rd would be the [Code-Mavens](https://www.meetup.com/code-mavens/) group (2,949) that I use to organize virtual events, however it is not a purely Rust group so
+The 3rd largest group would be the [**Code-Mavens**](https://www.meetup.com/code-mavens/) group with 2,949 member that I use to organize virtual events. However, it is not a purely Rust group so
 I did not include it in the list.
 
-The smallest group is [Rust in Israel](https://www.meetup.com/rust-in-israel/) (18 members) that I created on this Sunday. It will grow.
+The smallest group is [**Rust in Israel**](https://www.meetup.com/rust-in-israel/) (18 members) that I created on this Sunday. It will grow.
 
 For full details, see of [Rust User Groups](/user-groups).
 
@@ -53,6 +55,8 @@ For full details, see of [Rust User Groups](/user-groups).
 
 ## Rust on Facebook
 
+| Group                                                                                | 2024.04.08 | 2024.07.19 | change |
+| ------------------------------------------------------------------------------------ | ---------- | ---------- | ------ |
 | [Rust Developers](https://www.facebook.com/groups/1412062792318164/)                 | 8.8K       | 9.0K       | 2.27%  |
 | [**Rust Programming Language**](https://www.facebook.com/groups/872919370237098/)    | 3.0K       | 3.4K       | 13%    |
 | [Rust-lang.tw](https://www.facebook.com/groups/rust.tw/)                             | 2.5K       | 2.6K       | 4%     |
