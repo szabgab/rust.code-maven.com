@@ -3,15 +3,10 @@ title: Rust social status update 2024.06
 timestamp: 2024-06-17T20:30:01
 author: szabgab
 published: true
-description:
+description: How many member do various Rust social groups have?
 tags:
-    - Rust
-todo:
-    - TODO
+    - popularity
 ---
-
-This post will be ready soon... in time before This week in Rust is published
-
 
 June 17 is a rather arbitrary date to write this report, but the [Rust user groups](/user-groups) page was updated exactly 3 months ago. As I updated the numbers
 there today I wanted to submit it to [This week in Rust](https://this-week-in-rust.org/), but, rather understandably, they don't like to include the same URL twice.
@@ -58,8 +53,15 @@ For full details, see of [Rust User Groups](/user-groups).
 
 ## Rust on Facebook
 
-[Rust on Facebook](/rust-on-facebook)
+| [Rust Developers](https://www.facebook.com/groups/1412062792318164/)                 | 8.8K       | 9.0K       | 2.27%  |
+| [**Rust Programming Language**](https://www.facebook.com/groups/872919370237098/)    | 3.0K       | 3.4K       | 13%    |
+| [Rust-lang.tw](https://www.facebook.com/groups/rust.tw/)                             | 2.5K       | 2.6K       | 4%     |
+| [Programming Rust](https://www.facebook.com/groups/programming.rust/)                | 1.9K       | 2.0K       | 5%     |
+| [Rust Developers Vietnam](https://www.facebook.com/groups/rustdevelopersvietnam/)    | 1.8K       | 2.2K       | 22%    |
 
+The first group listed is inactive, but still people become members.
+
+Full report on [Rust on Facebook](/rust-on-facebook)
 
 ## Rust on Reddit
 
@@ -86,6 +88,8 @@ Number of members.
 | [Rust Maven](https://t.me/+5P2gCQIWFaBkYmI0)  |  0         |
 
 And you are invited to join!
+
+If you know of other groups, let me know so I can list them here.
 
 ## WhatsApp
 
