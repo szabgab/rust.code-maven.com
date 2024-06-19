@@ -84,12 +84,54 @@ Followers
 | account                                                | 2024.01.06 | 2024.06.19 |
 | ------------------------------------------------------ | ---------- | ---------- |
 | [Rustlang](https://twitter.com/rustlang)               | 136.9K     | 143.9K     |
+| [Mara Bos](https://twitter.com/m_ou_se)                | 41.3K      | 43.3K      |
 | [rust_foundation](https://twitter.com/rust_foundation) | 35.6K      | 37.7K      |
 | [ThisWeekInRust](https://twitter.com/ThisWeekInRust)   | 31.9K      | 32.3K      |
 | [RustTrending](https://twitter.com/RustTrending)       | 29.5K      | 32.4K      |
 | [RustConf](https://twitter.com/rustconf)               | 15.3K      | 16.4K      |
+| [rust_analyzer](https://twitter.com/rust_analyzer)     | 13.5K      |  13.5K     |
+| [tokio_rs](https://twitter.com/tokio_rs)               | 11.6K      | 11.8K      |
+| [rustembedded](https://twitter.com/rustembedded)       | 11.2K      | 11.9K      |
+| [RustFest](https://twitter.com/RustFest)               | 7,825      | 7,742      |
+| [SurrealDB](https://twitter.com/SurrealDB)             | 7,498      | 8,345      |
+| [crates.io status](https://twitter.com/cratesiostatus) | 5.039      | 5,543      |
+| [rustjobs_dev](https://twitter.com/rustjobs_dev)       | 4,499      | 5,568      |
 | [RustSecurity](https://twitter.com/RustSecurity)       | 3,964      | 4,611      |
-| [**RustMaven**](https://twitter.com/RustMaven)         | 1          | 48         |
+| [rustlab_conf](https://twitter.com/rustlab_conf)       | 3,816      | 4,163      |
+| [RustDiscussions](https://twitter.com/RustDiscussions) | 2,549      | 3,285      |
+| [RustLondon_](https://twitter.com/RustLondon_)         | 2,522      | 2,699      |
+| [euro_rust](https://twitter.com/euro_rust)             | 2,201      | 2,503      |
+| [RustNationUK](https://twitter.com/RustNationUK)       | 2,157      | 2,738      |
+| [AstraKernel](https://twitter.com/AstraKernel)         | 1,925      | 3,611      |
+| [letsgetrusty](https://twitter.com/letsgetrusty)       | 1,418      | 2,387      |
+| [rustoftheday](https://twitter.com/rustoftheday)       |   482      | 1,513      |
+| [ratatui_rs](https://twitter.com/ratatui_rs)           |    79      |   839      |
+| [**RustMaven**](https://twitter.com/RustMaven)         |     1      | 48         |
+
+
+## Instagram
+
+2023.12.07
+
+| account                                                                           | posts | followers | following |
+| --------------------------------------------------------------------------------- | ----- | --------- | --------- |
+| [rust_programming_language](https://www.instagram.com/rust_programming_language/) | 12    | 2,374     |  16       |
+| [rustlanguage](https://www.instagram.com/rustlanguage/)                           |  7    | 1,223     |   0       |
+| [rustacean.dev](https://www.instagram.com/rustacean.dev/)                         | 14    |   576     |   9       |
+| [rust_language_](https://www.instagram.com/rust_language_/)                       | 19    |   283     | 434       |
+| [rust_lang_](https://www.instagram.com/rust_lang_/)                               |  1    |    75     |   6       |
+| [Rust Maven on Instagram](https://www.instagram.com/rust_maven/)                  |  0    |     3     |   0       |
+
+2024.06.19
+
+| account                                                                           | posts | followers | following |
+| --------------------------------------------------------------------------------- | ----- | --------- | --------- |
+| [rust_programming_language](https://www.instagram.com/rust_programming_language/) | 21    | 2,709     |   5       |
+| [rustlanguage](https://www.instagram.com/rustlanguage/)                           |  7    | 1,245     |   1       |
+| [rustacean.dev](https://www.instagram.com/rustacean.dev/)                         | 14    |   624     |   9       |
+| [rust_language_](https://www.instagram.com/rust_language_/)                       | 19    |   330     | 434       |
+| [rust_lang_](https://www.instagram.com/rust_lang_/)                               |  1    |    93     |   6       |
+| [Rust Maven on Instagram](https://www.instagram.com/rust_maven/)                  | 34    |    64     |   6       |
 
 
 ## Rust on Telegram
