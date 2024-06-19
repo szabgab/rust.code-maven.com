@@ -77,6 +77,21 @@ The scary part is that on the Gamedev both the number of subscribers as the numb
 
 See [Rust on Reddit](/rust-on-reddit)
 
+## X Twitter
+
+Followers
+
+| account                                                | 2024.01.06 | 2024.06.19 |
+| ------------------------------------------------------ | ---------- | ---------- |
+| [Rustlang](https://twitter.com/rustlang)               | 136.9K     | 143.9K     |
+| [rust_foundation](https://twitter.com/rust_foundation) | 35.6K      | 37.7K      |
+| [ThisWeekInRust](https://twitter.com/ThisWeekInRust)   | 31.9K      | 32.3K      |
+| [RustTrending](https://twitter.com/RustTrending)       | 29.5K      | 32.4K      |
+| [RustConf](https://twitter.com/rustconf)               | 15.3K      | 16.4K      |
+| [RustSecurity](https://twitter.com/RustSecurity)       | 3,964      | 4,611      |
+| [**RustMaven**](https://twitter.com/RustMaven)         | 1          | 48         |
+
+
 ## Rust on Telegram
 
 There might be other groups, but I am not aware of them and I've just created the Rust Maven telegram group so let me put it here:
