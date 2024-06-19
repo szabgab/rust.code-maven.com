@@ -1,5 +1,5 @@
 ---
-title: Rust update 2024.06
+title: Rust social status update 2024.06
 timestamp: 2024-06-17T20:30:01
 author: szabgab
 published: true
