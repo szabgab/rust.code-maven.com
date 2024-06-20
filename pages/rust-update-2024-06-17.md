@@ -13,13 +13,13 @@ there I wanted to submit it to [This week in Rust](https://this-week-in-rust.org
 They even have a CI job failing if the same URL is submitted twice.
 
 So I figured instead of submitting that page I could update some of the other data pages I collected and I could write a report about all the changes. That will be probably more
-interesting and it will also have a different URL. Then if I remember to update it later, I could repeate and maybe expand this report a few months from now.
+interesting and it will also have a different URL. Then if I remember to update it later, I could repeat and maybe expand this report a few months from now.
 
 So this is the report.
 
 ## Rust User Groups
 
-There are mostly Meetup groups in [the list](/user-groups), thoug some use different platforms. In some cases the number of members cannot be determined.
+There are mostly Meetup groups in [the list](/user-groups), though some use different platforms. In some cases the number of members cannot be determined.
 
 Overall:
 
@@ -29,7 +29,7 @@ Overall:
 | 2024.03.17 | 113        | 65,200  |  5,571 |
 | 2024.06.17 | 116        | 68,126  |  2,926 |
 
-This is 4.4% growth in 3 month or roughly 20% annually. I think that is a very impressiv growth. Using the git commits one could check the changes in the specific groups,
+This is 4.4% growth in 3 month or roughly 20% annually. I think that is a very impressive growth. Using the git commits one could check the changes in the specific groups,
 but it seems that groups that organize events get many new members while others that don't organize event may also lose a few.
 
 The two largest Rust groups are the [Rust London User Group](https://www.meetup.com/rust-london-user-group/) (3,223) and [Rust NYC](https://www.meetup.com/rust-nyc/) (3,041).
@@ -163,7 +163,7 @@ Are there any Rust groups on WhatsApp that you would like me to include in my re
 ## The popularity of Rust
 
 The [Stack Overflow  survey 2023](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages) indicates that Rust
-is the most admired language by a largegap at 84.66%  (the next is Elixir at 73.13%). That is a lot of people love Rust. On the other hand it is only 6th most desired language
+is the most admired language by a large gap at 84.66%  (the next is Elixir at 73.13%). That is a lot of people love Rust. On the other hand it is only 6th most desired language
 with 30.56%. Ahead of it are SQL and HTML/CSS that are, well, different. Also TypeScript, Python, and JavaScript. As I understand this indicates how many job openings are.
 
 In a nutshell, this seem to indicate that many people will want to use Rust, but the number of open positions are relatively low.
@@ -176,7 +176,7 @@ Indicates that Rust is number 10 with 2.5% share and +0.4% 1-year trend.
 
 Python is number 1 with 29.06% share and 1.4% 1-year trend.
 
-C/C++ (budled together) is number 5 with 6.4%  with -0.0% 1-year trend. (emphasize of being negative 0 :-).
+C/C++ (bundled together) is number 5 with 6.4%  with -0.0% 1-year trend. (emphasize of being negative 0 :-).
 
 
 [TIOBE](https://www.tiobe.com/tiobe-index/)
