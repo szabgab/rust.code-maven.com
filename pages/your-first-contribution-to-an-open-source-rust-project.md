@@ -11,7 +11,7 @@ tags:
 ---
 
 
-{% youtube id="Vf5-DRykoMIa" %}
+{% youtube id="Vf5-DRykoMI" %}
 
 * [Rust Digger](https://rust-digger.code-maven.com/)
     * [Has homepages but no repository](https://rust-digger.code-maven.com/has-homepage-but-no-repo)
