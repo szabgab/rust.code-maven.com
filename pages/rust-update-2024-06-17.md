@@ -92,29 +92,32 @@ Followers
 | account                                                | 2024.01.06 | 2024.06.19 |
 | ------------------------------------------------------ | ---------- | ---------- |
 | [Rustlang](https://twitter.com/rustlang)               | 136.9K     | 143.9K     |
-| [Mara Bos](https://twitter.com/m_ou_se)                | 41.3K      | 43.3K      |
-| [rust_foundation](https://twitter.com/rust_foundation) | 35.6K      | 37.7K      |
-| [ThisWeekInRust](https://twitter.com/ThisWeekInRust)   | 31.9K      | 32.3K      |
-| [RustTrending](https://twitter.com/RustTrending)       | 29.5K      | 32.4K      |
-| [RustConf](https://twitter.com/rustconf)               | 15.3K      | 16.4K      |
+| [Mara Bos](https://twitter.com/m_ou_se)                | 41.3K      |  43.3K     |
+| [rust_foundation](https://twitter.com/rust_foundation) | 35.6K      |  37.7K     |
+| [RustTrending](https://twitter.com/RustTrending)       | 29.5K      |  32.4K     |
+| [ThisWeekInRust](https://twitter.com/ThisWeekInRust)   | 31.9K      |  32.3K     |
+| [RustConf](https://twitter.com/rustconf)               | 15.3K      |  16.4K     |
 | [rust_analyzer](https://twitter.com/rust_analyzer)     | 13.5K      |  13.5K     |
-| [tokio_rs](https://twitter.com/tokio_rs)               | 11.6K      | 11.8K      |
-| [rustembedded](https://twitter.com/rustembedded)       | 11.2K      | 11.9K      |
-| [RustFest](https://twitter.com/RustFest)               | 7,825      | 7,742      |
-| [SurrealDB](https://twitter.com/SurrealDB)             | 7,498      | 8,345      |
-| [crates.io status](https://twitter.com/cratesiostatus) | 5.039      | 5,543      |
-| [rustjobs_dev](https://twitter.com/rustjobs_dev)       | 4,499      | 5,568      |
-| [RustSecurity](https://twitter.com/RustSecurity)       | 3,964      | 4,611      |
-| [rustlab_conf](https://twitter.com/rustlab_conf)       | 3,816      | 4,163      |
-| [RustDiscussions](https://twitter.com/RustDiscussions) | 2,549      | 3,285      |
-| [RustLondon_](https://twitter.com/RustLondon_)         | 2,522      | 2,699      |
-| [euro_rust](https://twitter.com/euro_rust)             | 2,201      | 2,503      |
-| [RustNationUK](https://twitter.com/RustNationUK)       | 2,157      | 2,738      |
-| [AstraKernel](https://twitter.com/AstraKernel)         | 1,925      | 3,611      |
-| [letsgetrusty](https://twitter.com/letsgetrusty)       | 1,418      | 2,387      |
-| [rustoftheday](https://twitter.com/rustoftheday)       |   482      | 1,513      |
-| [ratatui_rs](https://twitter.com/ratatui_rs)           |    79      |   839      |
-| [**RustMaven**](https://twitter.com/RustMaven)         |     1      | 48         |
+| [rustembedded](https://twitter.com/rustembedded)       | 11.2K      |  11.9K     |
+| [tokio_rs](https://twitter.com/tokio_rs)               | 11.6K      |  11.8K     |
+| [SurrealDB](https://twitter.com/SurrealDB)             | 7,498      |  8,345     |
+| [RustFest](https://twitter.com/RustFest)               | 7,825      |  7,742     |
+| [rustjobs_dev](https://twitter.com/rustjobs_dev)       | 4,499      |  5,568     |
+| [crates.io status](https://twitter.com/cratesiostatus) | 5.039      |  5,543     |
+| [RustSecurity](https://twitter.com/RustSecurity)       | 3,964      |  4,611     |
+| [rustlab_conf](https://twitter.com/rustlab_conf)       | 3,816      |  4,163     |
+| [AstraKernel](https://twitter.com/AstraKernel)         | 1,925      |  3,611     |
+| [Orhun Parmaksız](https://twitter.com/orhundev)        |            |  3,336     |
+| [RustDiscussions](https://twitter.com/RustDiscussions) | 2,549      |  3,285     |
+| [RustNationUK](https://twitter.com/RustNationUK)       | 2,157      |  2,738     |
+| [RustLondon_](https://twitter.com/RustLondon_)         | 2,522      |  2,699     |
+| [euro_rust](https://twitter.com/euro_rust)             | 2,201      |  2,503     |
+| [letsgetrusty](https://twitter.com/letsgetrusty)       | 1,418      |  2,387     |
+| [rustoftheday](https://twitter.com/rustoftheday)       |   482      |  1,513     |
+| [ratatui_rs](https://twitter.com/ratatui_rs)           |    79      |    839     |
+| [**RustMaven**](https://twitter.com/RustMaven)         |     1      |     48     |
+
+Orhun Parmaksız is the maintainer of Ratatui.rs
 
 
 ## Instagram
