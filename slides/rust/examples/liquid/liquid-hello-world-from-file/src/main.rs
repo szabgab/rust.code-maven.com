@@ -1,5 +1,5 @@
 fn main() {
-    let filename = String::from("template.txt");
+    let filename = "template.txt";
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()

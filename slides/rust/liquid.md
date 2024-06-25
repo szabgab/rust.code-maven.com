@@ -136,16 +136,6 @@ first or last
 ![](examples/liquid/liquid-filters-order/out.txt)
 
 
-## Liquid
-{id: liquid-todo}
-
-* pass integer, string, bool, vector, tuple, struct
-* Control structures (if, else)
-* Loops (for)
-* Filters
-* Include template
-* Layout template (embed template)
-
 ## Liquid include
 {id: liquid-include}
 {i: include}
@@ -270,4 +260,15 @@ We can use the **escape** filter on each field where we would like to avoid this
 ![](examples/liquid/embed-html-tags/src/main.rs)
 
 ![](examples/liquid/embed-html-tags/out.txt)
+
+## Liquid TODO
+{id: liquid-todo}
+
+* pass integer, string, bool, vector, tuple, struct
+* Control structures (if, else)
+* Loops (for)
+* Filters
+* Include template
+* Layout template (embed template)
+
 

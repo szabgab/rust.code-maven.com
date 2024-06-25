@@ -13,7 +13,11 @@ fn main() {
         .parse(template)
         .unwrap();
 
-    let colors: HashMap<&str, u32> = HashMap::from([("red", 23), ("green", 17), ("blue", 42)]);
+    let colors: HashMap<&str, u32> = HashMap::from([
+        ("red", 23),
+        ("green", 17),
+        ("blue", 42),
+    ]);
     println!("{colors:#?}");
 
     let globals = liquid::object!({
