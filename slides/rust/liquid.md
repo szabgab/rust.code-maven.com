@@ -1,12 +1,21 @@
 # liquid templating
 {id: liquid}
 
+## What is a template engine?
+{id: liquid-what-is-a-template-engine}
+
+* We would like to create several texts (e.g. web pages, content of email, some report) that look exactly the same but will have different data.
+* We design the page, but instead of values we use vairables (or placeholders, if you prefer that word) that look like this: `{{ ttitle }}`.
+* The template engine then can replace those placeholder variables by the appropriate value.
+
+* Besides replacing individual values, a template system usually has more complex syntax as well. Loops, conditionals, includes etc.
+
 ## Install
 {id: install-liquid}
 
-* [liquid crate](https://crates.io/crates/liquid)
+* Based on original [liquid written in Ruby](https://shopify.github.io/liquid/) (published by Shopify)
+* The [liquid crate](https://crates.io/crates/liquid)
 * [documentation](https://docs.rs/liquid/)
-* [Ruby liquid web site](https://shopify.github.io/liquid/)
 
 ```
 cargo add liquid
@@ -19,16 +28,42 @@ This will update the Cargo.toml to include:
 liquid = "0.26.4"
 ```
 
+## Liquid use-cases
+{id: liquid-use-cases}
+
+* The [Virtual events site](https://events.code-maven.com/) - [source](https://github.com/szabgab/virtual-events)
+* The [Rust Maven site](https://rust.code-maven.com/) uses the [Code Maven Static Site Generator](https://ssg.code-maven.com/) - [source](https://github.com/szabgab/code-maven.rs)
+* The [Rust Digger](https://rust-digger.code-maven.com/) - [source](https://github.com/szabgab/rust-digger)
+
 ## Liquid Hello World
 {id: liquid-hello-world}
 {i: parse}
+{i: build}
+{i: object!}
+{i: render}
+
+* Depened on the liquid crate
 
 ![](examples/liquid/liquid-hello-world/Cargo.toml)
+
+* Start with a template that is part of the Rust source code.
+* We use the `parse` and `build` methods to create the template object.
+* We use `unwrap` here which is probably not ideal, but it simlifies the examples.
+* Using the `liquid::object!` macro we create an object from the data we would like to pass to the template.
+* Using the `render` method we combine the data with the template and generate (render) the resuling text.
+
+
 ![](examples/liquid/liquid-hello-world/src/main.rs)
 ![](examples/liquid/liquid-hello-world/out.txt)
 
 ## Liquid Hello World with variable
 {id: liquid-hello-world-with-variable}
+
+* Using the same template as earlier we see how we can reuse the template in 3 different ways:
+
+* The value of "name" is hard-coded in the call to `object!`
+* The value of "name" is hard-coded in a variable as `str`.
+* The value of "name" is a `String` that could come from the outside world (e.g. from a file).
 
 ![](examples/liquid/liquid-hello-world-variables/out.txt)
 ![](examples/liquid/liquid-hello-world-variables/src/main.rs)
@@ -37,9 +72,23 @@ liquid = "0.26.4"
 {id: liquid-hello-world-read-template-from-file}
 {i: parse_file}
 
+* Templates are usually much biggger than what we had in the first example.
+* We usually prefer to keep the templates as an external files.
+* Instead of `parse` we can use `parse_file` to load the template from an external file.
+* This happens at run-time so you will need to create and supply the templates outside of the binary.
+
 ![](examples/liquid/liquid-hello-world-from-file/out.txt)
 ![](examples/liquid/liquid-hello-world-from-file/src/main.rs)
 ![](examples/liquid/liquid-hello-world-from-file/template.txt)
+
+## Liquid Hello World embed template file
+{id: liquid-hello-world-embed-template-file}
+{i: parse}
+
+![](examples/liquid/liquid-hello-world-embedded-file/src/main.rs)
+
+![](examples/liquid/liquid-hello-world-embedded-file/template.txt)
+
 
 ## Liquid flow control: if - else
 {id: liquid-flow-control-if-else}
