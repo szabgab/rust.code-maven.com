@@ -1,6 +1,6 @@
 fn main() {
     let template = "
-       {% for animal in thing.animals %}
+       {% for animal in animals %}
             {% if animal.real %}
                 A real {{animal.name}}
             {% else %}
@@ -10,27 +10,24 @@ fn main() {
     ";
 
     let template = liquid::ParserBuilder::with_stdlib()
-        .build()
-        .unwrap()
+        .build().unwrap()
         .parse(template).unwrap();
 
     let globals = liquid::object!({
-        "thing": {
-            "animals": [
-                {
-                    "name": "mouse",
-                    "real": true,
-                },
-                {
-                    "name": "snake",
-                    "real": true,
-                },
-                {
-                    "name": "oliphant",
-                    "real": false,
-                },
-            ],
-        }
+        "animals": [
+            {
+                "name": "mouse",
+                "real": true,
+            },
+            {
+                "name": "snake",
+                "real": true,
+            },
+            {
+                "name": "oliphant",
+                "real": false,
+            },
+        ],
     });
     let output = template.render(&globals).unwrap();
     println!("{}", output);

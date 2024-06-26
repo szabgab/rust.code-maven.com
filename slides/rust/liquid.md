@@ -75,7 +75,7 @@ liquid = "0.26.4"
 * Templates are usually much biggger than what we had in the first example.
 * We usually prefer to keep the templates as an external files.
 * Instead of `parse` we can use `parse_file` to load the template from an external file.
-* This happens at run-time so you will need to create and supply the templates outside of the binary.
+* This happens at run-time so you will need to supply the templates outside of the binary or the user will need to create the templates.
 
 ![](examples/liquid/liquid-hello-world-from-file/out.txt)
 ![](examples/liquid/liquid-hello-world-from-file/src/main.rs)
@@ -84,6 +84,11 @@ liquid = "0.26.4"
 ## Liquid Hello World embed template file
 {id: liquid-hello-world-embed-template-file}
 {i: parse}
+{i: include_str!}
+
+* If you would like to supply the temlates, probably the easiest is to embed them in the binary.
+* Using `include_str!` we can embed a text-file in the compiled binary of our Rust code.
+* In the source repository we have the templates as external files, but during `build` they are embedded in the code.
 
 ![](examples/liquid/liquid-hello-world-embedded-file/src/main.rs)
 
@@ -96,23 +101,31 @@ liquid = "0.26.4"
 {i: else}
 {i: endif}
 
+* Liquid has simple conditionals: `if` that we end with `endif` and the optional `else`.
+
 ![](examples/liquid/liquid-if-else/src/main.rs)
 ![](examples/liquid/liquid-if-else/out.txt)
 
 ## Liquid flow control: else if written as elsif
 {id: liquid-flow-control-elsif}
+{i: elsif}
 
 ![](examples/liquid/liquid-elsif/src/main.rs)
 ![](examples/liquid/liquid-elsif/out.txt)
 
 ## Liquid flow control: case/when
 {id: liquid-flow-control-case-when}
+{i: case}
+{i: when}
+{i: endcase}
+
+* the `case` statement ends with `endcase`.
 
 ![](examples/liquid/liquid-case-when/src/main.rs)
 ![](examples/liquid/liquid-case-when/out.txt)
 
-## Liquid object
-{id: liquid-object}
+## Liquid passing more complex data
+{id: liquid-passing-more-complex-data}
 
 ![](examples/liquid/liquid-objects/src/main.rs)
 ![](examples/liquid/liquid-objects/out.txt)
@@ -122,21 +135,29 @@ liquid = "0.26.4"
 {i: for}
 {i: endfor}
 
+* We are probably more interested in passing values from variables.
+* In this example we pass a vector of strings.
+
 ![](examples/liquid/liquid-for-loop/src/main.rs)
 ![](examples/liquid/liquid-for-loop/out.txt)
 
 ## Liquid vector of tuples
 {id: liquid-vector-of-tuples}
 
+* Another example passing in a vector, but this time a vector of tuples.
+* We use the square-brackets `[]` and indexes to access the elements of a tuple.
 
 ![](examples/liquid/liquid-vector-of-tuples/src/main.rs)
 
 ![](examples/liquid/liquid-vector-of-tuples/out.txt)
 
 
-## Liquid Hash
+## Liquid HashMap
 {id: liquid-hash}
 {i: HashMap}
+
+* We can pass in a HashMap and inside we can iterate over the key-value pairs as tuples.
+* So here too we use the `[]` with index 0 and 1 to access the key and the value.
 
 ![](examples/liquid/liquid-hashmap/src/main.rs)
 
@@ -152,43 +173,29 @@ liquid = "0.26.4"
 ![](examples/liquid/liquid-loop-and-if/src/main.rs)
 ![](examples/liquid/liquid-loop-and-if/out.txt)
 
+## Liquid with struct
+{id: liquid-with-struct}
+{i: serde}
 
-## Liquid filters on numbers: plus, minus
-{id: liquid-filters-numbers}
-{i: plus}
-{i: minus}
+![](examples/liquid/liquid-with-struct/Cargo.toml)
+![](examples/liquid/liquid-with-struct/src/main.rs)
+![](examples/liquid/liquid-with-struct/out.html)
 
-* Increment or decerement the number by the given number
 
-![](examples/liquid/liquid-filters-numbers/src/main.rs)
-![](examples/liquid/liquid-filters-numbers/out.txt)
+## Liquid with Option in a struct
+{id: liquid-with-option-struct}
+{i: Option}
 
-## Liquid filters on strings: upcase, downcase, capitalize
-{id: liquid-filters-strings}
-{i: upcase}
-{i: downcase}
-{i: capitalize}
+![](examples/liquid/liquid-with-option/Cargo.toml)
 
-![](examples/liquid/liquid-filters-strings/src/main.rs)
-![](examples/liquid/liquid-filters-strings/out.txt)
-
-## Liquid filters: first, last
-{id: liquid-filters-first-last}
-{i: first}
-{i: last}
-
-first or last
-* character in a string
-* element in an array, a vector, or a tuple
-
-![](examples/liquid/liquid-filters-order/src/main.rs)
-![](examples/liquid/liquid-filters-order/out.txt)
+![](examples/liquid/liquid-with-option/src/main.rs)
 
 
 ## Liquid include
 {id: liquid-include}
 {i: include}
 {i: partials}
+{i: read_to_string}
 
 ![](examples/liquid/liquid-include/templates/page.txt)
 ![](examples/liquid/liquid-include/templates/incl/header.txt)
@@ -196,17 +203,6 @@ first or last
 ![](examples/liquid/liquid-include/src/main.rs)
 
 ![](examples/liquid/liquid-include/out.txt)
-
-## Liquid assign to variable in template
-{id: liquid-assign}
-{i: assign}
-
-![](examples/liquid/liquid-assign/src/main.rs)
-
-![](examples/liquid/liquid-assign/templates/page.txt)
-![](examples/liquid/liquid-assign/templates/incl/header.txt)
-
-![](examples/liquid/liquid-assign/out.txt)
 
 ## Liquid include header and footer
 {id: liquid-include-header-and-footer}
@@ -229,22 +225,50 @@ first or last
 ![](examples/liquid/liquid-layout/templates/layout.txt)
 ![](examples/liquid/liquid-layout/templates/page.txt)
 
+## Liquid assign to variable in template
+{id: liquid-assign}
+{i: assign}
 
-## Liquid with struct
-{id: liquid-with-struct}
+![](examples/liquid/liquid-assign/src/main.rs)
+
+![](examples/liquid/liquid-assign/templates/page.txt)
+![](examples/liquid/liquid-assign/templates/incl/header.txt)
+
+![](examples/liquid/liquid-assign/out.txt)
+
+## Liquid filters on strings: upcase, downcase, capitalize
+{id: liquid-filters-strings}
+{i: upcase}
+{i: downcase}
+{i: capitalize}
+
+![](examples/liquid/liquid-filters-strings/src/main.rs)
+![](examples/liquid/liquid-filters-strings/out.txt)
 
 
-![](examples/liquid/liquid-with-struct/Cargo.toml)
-![](examples/liquid/liquid-with-struct/src/main.rs)
-![](examples/liquid/liquid-with-struct/out.html)
+## Liquid filters on numbers: plus, minus
+{id: liquid-filters-numbers}
+{i: plus}
+{i: minus}
 
+* Some filters can have parameters as well.
+* Increment or decerement the number by the given number.
 
-## Liquid with Option in a struct 
-{id: liquid-with-option-struct}
+![](examples/liquid/liquid-filters-numbers/src/main.rs)
+![](examples/liquid/liquid-filters-numbers/out.txt)
 
-![](examples/liquid/liquid-with-option/Cargo.toml)
+## Liquid filters: first, last
+{id: liquid-filters-first-last}
+{i: first}
+{i: last}
 
-![](examples/liquid/liquid-with-option/src/main.rs)
+first or last
+* character in a string
+* element in an array, a vector, or a tuple
+
+![](examples/liquid/liquid-filters-order/src/main.rs)
+![](examples/liquid/liquid-filters-order/out.txt)
+
 
 
 ## Liquid filter reverse array

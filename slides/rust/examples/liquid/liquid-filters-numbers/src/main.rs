@@ -1,7 +1,6 @@
 fn main() {
     let template = liquid::ParserBuilder::with_stdlib()
-        .build()
-        .unwrap()
+        .build().unwrap()
         .parse("
            plain: {{whole}}
            plus 2: {{whole | plus : 2}}

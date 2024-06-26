@@ -10,8 +10,7 @@ struct Car {
 
 fn main() {
     let template = liquid::ParserBuilder::with_stdlib()
-        .build()
-        .unwrap()
+        .build().unwrap()
         .parse("
             Car manufacturer: {{car.manufacturer}}
             {% if car.electric %}

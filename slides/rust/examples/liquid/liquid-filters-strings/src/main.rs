@@ -1,7 +1,6 @@
 fn main() {
     let template = liquid::ParserBuilder::with_stdlib()
-        .build()
-        .unwrap()
+        .build().unwrap()
         .parse("
            plain: {{text}}
            upcase: {{text | upcase}}
