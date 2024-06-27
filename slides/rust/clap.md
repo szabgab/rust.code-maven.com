@@ -34,8 +34,12 @@ cargo add clap --features derive
 
 ## Clap Short arguments
 {id: clap-short-arguments}
+{i: short}
 
-![](examples/clap/single-short-argument/src/main.rs)
+* We can allow to use `-x` short names (defaults to the first letter of the attribute)
+* We can set the letter ourselves.
+
+![](examples/clap/short-arguments/src/main.rs)
 
 ## Clap accepting string, number, bool - default values
 {id: clap-string-number-bool-default}
@@ -43,6 +47,12 @@ cargo add clap --features derive
 {i: default_value_t}
 
 ![](examples/clap/number-string-bool/src/main.rs)
+
+
+## Clap add help to each argument
+{id: clap-add-help-to-each-argument}
+
+![](examples/clap/help-with-arguments/src/main.rs)
 
 
 ## Clap example for CLI
