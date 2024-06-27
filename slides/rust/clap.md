@@ -74,8 +74,8 @@ cargo add clap --features derive
 ## Clap show generated description
 {id: clap-show-generated-description}
 
-![](show-generated-description/Cargo.toml)
-![](show-generated-description/src/main.rs)
+![](examples/clap/show-generated-description/Cargo.toml)
+![](examples/clap/show-generated-description/src/main.rs)
 
 ## Clap validate number range
 {id: clap-validate-number-range}
