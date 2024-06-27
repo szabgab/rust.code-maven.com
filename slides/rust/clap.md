@@ -87,6 +87,15 @@ cargo add clap --features derive
 
 ![](examples/clap/subcommands/src/main.rs)
 
+## Clap mutually exclusive
+{id: clap-mutually-exclusive}
+
+![](examples/clap/mutually-exclusive-or/src/main.rs)
+
+## Clap mutually exclusive with group
+{id: clap-mutually-exclusive-with-group}
+
+![](examples/clap/mutually-exclusive-group/src/main.rs)
 
 ## Clap example for CLI
 {id: clap-example}
