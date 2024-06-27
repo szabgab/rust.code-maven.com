@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "calc-argv"
+name = "rectangle-args"
 version = "0.1.0"

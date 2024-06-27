@@ -4,6 +4,8 @@
 ## Clap - Command Line Argument Parser
 {id: clap-command-line-argument-parser}
 
+* Start by using `std::env::args` [Command line arguments - ARGS](/args)
+
 * [clap](https://crates.io/crates/clap)
 
 ## Clap Single positional argument

@@ -13,7 +13,7 @@
         "use-libraries.md",
         "random.md",
         "stdin.md",
-        "argv.md",
+        "args.md",
         "boolean.md",
         "numbers.md",
         "constants.md",
