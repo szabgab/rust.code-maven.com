@@ -4,9 +4,15 @@
 ## Clap - Command Line Argument Parser
 {id: clap-command-line-argument-parser}
 
-* Start by using `std::env::args` [Command line arguments - ARGS](/args)
+* Start by using `std::env::args`
+* See [Command line arguments - ARGS](args)
 
-* [clap](https://crates.io/crates/clap)
+* [clap](https://crates.io/crates/clap) is the Command Line Argument Parser
+
+* [clap documentation](https://docs.rs/clap/latest/clap/)
+
+* Derive
+* Builder
 
 ## Clap Single positional argument
 {id: clap-single-positional-argument}
@@ -18,12 +24,26 @@ cargo add clap --features derive
 ![](examples/clap/single-positional-argument/Cargo.toml)
 ![](examples/clap/single-positional-argument/src/main.rs)
 
-
 ## Clap Single long argument
 {id: clap-single-long-argument}
+{i: arg}
+{i: long}
 
 ![](examples/clap/single-long-argument/Cargo.toml)
 ![](examples/clap/single-long-argument/src/main.rs)
+
+## Clap Short arguments
+{id: clap-short-arguments}
+
+![](examples/clap/single-short-argument/src/main.rs)
+
+## Clap accepting string, number, bool - default values
+{id: clap-string-number-bool-default}
+{i: default_value}
+{i: default_value_t}
+
+![](examples/clap/number-string-bool/src/main.rs)
+
 
 ## Clap example for CLI
 {id: clap-example}
