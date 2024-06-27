@@ -54,6 +54,24 @@ cargo add clap --features derive
 
 ![](examples/clap/help-with-arguments/src/main.rs)
 
+## Clap Show the description of the crates using the about command
+{id: clap-show-the-description}
+
+![](examples/clap/show-description/Cargo.toml)
+![](examples/clap/show-description/src/main.rs)
+
+## Clap Show the description written in the code
+{id: clap-show-the-description-from-code}
+
+![](examples/clap/show-description-from-code/Cargo.toml)
+![](examples/clap/show-description-from-code/src/main.rs)
+
+
+## Clap subcommands
+{id: clap-subcommands}
+
+![](examples/clap/subcommands/src/main.rs)
+
 
 ## Clap example for CLI
 {id: clap-example}

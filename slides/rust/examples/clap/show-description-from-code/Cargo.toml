@@ -1,0 +1,8 @@
+[package]
+name = "show-description-from-code"
+version = "0.1.0"
+edition = "2021"
+description = "This is the description in Cargo.toml"
+
+[dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
