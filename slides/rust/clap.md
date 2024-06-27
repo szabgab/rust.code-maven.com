@@ -24,6 +24,11 @@ cargo add clap --features derive
 ![](examples/clap/single-positional-argument/Cargo.toml)
 ![](examples/clap/single-positional-argument/src/main.rs)
 
+## Clap Several positional arguments
+{id: clap-several-positional-arguments}
+
+![](examples/clap/several-positional-arguments/src/main.rs)
+
 ## Clap Single long argument
 {id: clap-single-long-argument}
 {i: arg}
@@ -72,6 +77,10 @@ cargo add clap --features derive
 ![](show-generated-description/Cargo.toml)
 ![](show-generated-description/src/main.rs)
 
+## Clap validate number range
+{id: clap-validate-number-range}
+
+![](examples/clap/validate-number-range/src/main.rs)
 
 ## Clap subcommands
 {id: clap-subcommands}
