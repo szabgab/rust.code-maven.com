@@ -13,6 +13,8 @@ todo:
 I wanted to check and report how much memory my process uses. So far I could not find a way to get that informations so I settled the second best thing,
 to report how much memory is used and how much is free in the whole computer.
 
+Update: See [how much memory does my process use](/how-much-memory-does-my-rust-process-use).
+
 ## Dependencies in Cargo.toml
 
 For this I used the [sysinfo](https://crates.io/crates/sysinfo/) crate.
@@ -129,5 +131,4 @@ The `sysinfo` crate can help us understand the size of the used and the free mem
 not conclude much about the memory usage of our current process as other processes will impact the numbers.
 
 We might be able to use this to avoid filling the memory of the computer and thus crashing, but it would be better to have a way to know
-how much memory our current process is using.
-
+[how much memory our current process is using](/how-much-memory-does-my-rust-process-use).
