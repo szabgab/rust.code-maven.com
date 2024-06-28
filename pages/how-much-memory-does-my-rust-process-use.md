@@ -1,6 +1,6 @@
 ---
 title: How much memory does my Rust process use?
-timestamp: 2024-06-28T14:30:01
+timestamp: 2024-06-28T14:44:01
 author: szabgab
 published: true
 description: Can we reliably measure the memory footprint of the current process?
