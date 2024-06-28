@@ -2,7 +2,7 @@
 title: Print colored text to the terminal
 timestamp: 2024-06-28T09:30:01
 author: szabgab
-published: show
+published: true
 description: Using ANSI sequences we can print colored text to the terminal
 tags:
     - colored
