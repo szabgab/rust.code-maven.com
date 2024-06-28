@@ -29,3 +29,5 @@ For detailed explanation check out the article [Getting started with SurrealDB u
 
 {% include file="examples/surrealdb/foreign-key/src/main.rs" %}
 
+{% include file="examples/surrealdb/foreign-key/src/example.rs" %}
+
