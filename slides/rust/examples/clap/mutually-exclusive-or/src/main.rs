@@ -7,9 +7,6 @@ struct Cli {
 
     #[arg(long, group = "action")]
     less: bool,
-
-    #[arg(short, requires = "action")]
-    other: bool,
 }
 
 fn main() {

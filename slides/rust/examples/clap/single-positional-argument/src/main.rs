@@ -7,6 +7,6 @@ struct Cli {
 
 fn main() {
     let args = Cli::parse();
-    println!("{}", args.filename);
+    println!("filename: {}", args.filename);
 }
 
