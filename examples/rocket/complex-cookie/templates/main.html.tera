@@ -1,0 +1,12 @@
+<h1>Cookie Demo</h1>
+<a href="/">home</a>
+Current time: {current_time}<br>
+Saved time: {saved_time}<br>
+Saved Animal: {saved_animal}<br>
+
+
+<form>
+    Animal: <input name="animal"><br>
+    <input type="submit" value="Set Cookie">
+</form>
+
