@@ -23,3 +23,18 @@ Using the [colored](https://crates.io/crates/colored) crate it is super easy to 
 ## Output
 
 ![](images/colored-hello-world.png)
+
+
+## Windows
+
+In the source code of [ruff](https://docs.astral.sh/ruff/) I saw the following lines in the `main` function:
+
+```rust
+    // Enabled ANSI colors on Windows 10.
+    #[cfg(windows)]
+    assert!(colored::control::set_virtual_terminal(true).is_ok());
+```
+
+I only tried this crate on Ubuntu Linux.
+
+
