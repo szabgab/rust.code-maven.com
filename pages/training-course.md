@@ -23,7 +23,7 @@ The beginner course includes the basic topics of programming in Rust
 * Enums and Pattern Matching (case/switch).
 * Structs
 * Cargo.
-* Crating crates.
+* Creating crates.
 * Creating command line applications.
 
 ## Extra modules:
