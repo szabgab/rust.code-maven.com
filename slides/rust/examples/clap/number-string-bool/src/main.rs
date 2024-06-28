@@ -1,7 +1,6 @@
 use clap::Parser;
 
 #[derive(Parser)]
-#[command(version)]
 struct Cli {
     #[arg(long, default_value = "127.0.0.1")]
     host: String,

@@ -59,8 +59,17 @@ cargo add clap --features derive
 
 ![](examples/clap/help-with-arguments/src/main.rs)
 
+## Clap show the version number from Cargo.toml
+{id: clap-show-the-version-number}
+{i: version}
+
+![](examples/clap/show-version-number/src/main.rs)
+
 ## Clap Show the description of the crates using the about command
 {id: clap-show-the-description}
+{i: description}
+{i: about}
+{i: command}
 
 ![](examples/clap/show-description/Cargo.toml)
 ![](examples/clap/show-description/src/main.rs)
