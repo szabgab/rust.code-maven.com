@@ -1,6 +1,6 @@
 ---
 title: Return a struct from a function
-timestamp: 2024-06-28T14:30:01
+timestamp: 2024-06-28T14:30:10
 author: szabgab
 published: false
 description:
