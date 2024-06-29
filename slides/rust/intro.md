@@ -1,6 +1,31 @@
 # Introduction to Rust
 {id: rust-intro}
 
+## Why Rust?
+{id: why-rust}
+
+* Major features of Rust
+* Performance
+    * Rouhly at the speed of C programs
+    * [ruff](https://github.com/astral-sh/ruff)
+    * [speed comparision](https://github.com/niklas-heer/speed-comparison)
+    * [Ranking programming languages by energy efficiency](https://thenewstack.io/which-programming-languages-use-the-least-electricity/)
+* Reliability
+    * type system
+    * memory safety
+    * thread-safety
+* Productivity
+    * Tooling
+    * Documentation
+
+
+* Shift left programming
+
+* Speed and Open Source community
+
+* Corporate support, Linux kernel
+
+* Error handling: exceptions VS return values - returning Result
 
 ## Rust resources
 {id: rust-resources}
@@ -165,19 +190,6 @@ Hello, world!
 It also created a file called `Cargo.lock` and a folder called `target`.
 * `Cargo.lock` is used to fix the versions of all the dependencies of the project. We have none so far.
 * `target` contains the compiled file and all the temporay files that Rust needed for the compilation.
-
-
-## My little Rust runner
-{id: my-little-rust-runner}
-
-* This is especially useful for the slides so I can create individual Rust example files and run them stand alone.
-
-![](rust.sh)
-
-
-```
-./rust.sh examples/intro/hello.rs
-```
 
 
 ## Rust and comments

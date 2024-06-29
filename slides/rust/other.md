@@ -303,4 +303,17 @@ However using the [url](https://crates.io/crates/url) crate might be the best so
 ![](examples/other/fix-url/Cargo.toml)
 ![](examples/other/fix-url/src/main.rs)
 
+## My little Rust runner
+{id: my-little-rust-runner}
+
+* This is especially useful for the slides so I can create individual Rust example files and run them stand alone.
+
+![](rust.sh)
+
+
+```
+./rust.sh examples/intro/hello.rs
+```
+
+
 
