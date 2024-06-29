@@ -5,18 +5,21 @@
 {id: why-rust}
 
 * Major features of Rust
+
 * Performance
-    * Rouhly at the speed of C programs
-    * [ruff](https://github.com/astral-sh/ruff)
-    * [speed comparision](https://github.com/niklas-heer/speed-comparison)
-    * [Ranking programming languages by energy efficiency](https://thenewstack.io/which-programming-languages-use-the-least-electricity/)
+* Roughly at the speed of C programs
+* [ruff](https://github.com/astral-sh/ruff)
+* [speed comparision](https://github.com/niklas-heer/speed-comparison)
+* [Ranking programming languages by energy efficiency](https://thenewstack.io/which-programming-languages-use-the-least-electricity/)
+
 * Reliability
-    * type system
-    * memory safety
-    * thread-safety
+* type system
+* memory safety
+* thread-safety
+
 * Productivity
-    * Tooling
-    * Documentation
+* Tooling
+* Documentation
 
 
 * Shift left programming
