@@ -14,22 +14,24 @@ fn main() {
             thread::sleep(Duration::from_millis(1));
             tx.send(i.to_string()).unwrap();
         }
+
+        //  thread::sleep(Duration::from_millis(1));
         println!("Spawned thread ends");
     });
 
     let received = rx.recv().unwrap();
-    println!("Got: {}", received);
+    println!("Received: {}", received);
 
     // complex way for reveiving
     for _j in 1..=5 {
         let received = rx.recv().unwrap();
-        println!("Got: {}", received);
+        println!("Received: {}", received);
     }
     println!();
 
     // simple code for receiving
     for received in rx {
-        println!("Got: {}", received);
+        println!("Received: {}", received);
     }
     println!();
 

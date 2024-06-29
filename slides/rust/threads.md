@@ -17,7 +17,7 @@
 
 * `spawn` will create a new thread. We can use `thread::current().id()` to get the id of the current thread.
 * `join` in the main thread will block till the other thread stops.
-* We can see "main thread ended" is already printed before the "spwan thread ended", but then the main thread waits.
+* We can see "Loop in main thread ended" is already printed before the "Spawned thread ended", but then the main thread waits.
 
 ![](examples/threads/try-threads/src/main.rs)
 ![](examples/threads/try-threads/out.out)

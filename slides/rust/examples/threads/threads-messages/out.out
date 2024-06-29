@@ -1,15 +1,15 @@
-Got: Hello
-Got: 1
-Got: 2
-Got: 3
-Got: 4
-Got: 5
+Received: Hello
+Received: 1
+Received: 2
+Received: 3
+Received: 4
+Received: 5
 
-Got: 6
-Got: 7
-Got: 8
-Got: 9
+Received: 6
+Received: 7
+Received: 8
+Received: 9
 Spawned thread ends
-Got: 10
+Received: 10
 
 Main thread ends
