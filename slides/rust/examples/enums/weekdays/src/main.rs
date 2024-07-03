@@ -10,6 +10,8 @@ enum Weekday {
     Sunday,
 }
 
+// We need the allow dead_code beacause in this example we did not use all the values that were listed in the enum
+
 fn main() {
     let today = Weekday::Sunday;
     let other_day = Weekday::Monday;
