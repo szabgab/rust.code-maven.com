@@ -8,7 +8,7 @@ enum ColorName {
     Black,
 }
 
-// We need the allow dead_code beacause in this exampl we did not use all the values that were listed in the enum
+// We need the allow dead_code beacause in this example we did not use all the values that were listed in the enum
 
 fn main() {
     let background = ColorName::Black;
