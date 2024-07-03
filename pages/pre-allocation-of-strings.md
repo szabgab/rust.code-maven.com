@@ -1,6 +1,6 @@
 ---
 title: Pre-allocation of memory for a string
-timestamp: 2024-06-28T14:30:01
+timestamp: 2024-07-03T14:30:01
 author: szabgab
 published: false
 description:
