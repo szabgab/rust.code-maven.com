@@ -23,6 +23,13 @@
 ![](examples/enums/colors-partial-equal/src/main.rs)
 ![](examples/enums/colors-partial-equal/out.out)
 
+## Enum with method
+{id: enumeration-with-method}
+{i: enum}
+{i: Debug}
+{impl}
+
+![](examples/enums/enum-with-method/src/main.rs)
 
 ## Enumerate without PartialEq using match
 {id: enumerat-with-match}
@@ -34,7 +41,6 @@
 
 ![](examples/enums/colors-match/src/main.rs)
 ![](examples/enums/colors-match/out.out)
-
 
 ## Struct using enum
 {id: struct-using-enum}
