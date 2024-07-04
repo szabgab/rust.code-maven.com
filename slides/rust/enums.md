@@ -27,9 +27,17 @@
 {id: enumeration-with-method}
 {i: enum}
 {i: Debug}
-{impl}
+{i: impl}
+{i: self}
 
 ![](examples/enums/enum-with-method/src/main.rs)
+
+## Enum with constructor
+{id: enumeration-with-constructor}
+{i: impl}
+{i: Self}
+
+![](examples/enums/enum-with-constructor/src/main.rs)
 
 ## Enumerate without PartialEq using match
 {id: enumerat-with-match}
