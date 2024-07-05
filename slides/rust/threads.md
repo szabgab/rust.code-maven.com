@@ -50,6 +50,7 @@
 ## Testing speed improvements with threads
 {id: threads-speed-improvements}
 
+
 ![](examples/threads/threads-load-test/src/main.rs)
 
 
