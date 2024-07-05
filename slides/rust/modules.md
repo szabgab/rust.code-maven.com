@@ -14,7 +14,15 @@
 * We can defined a module using the `mod` keyword in the `main.rs` file and inside the module we can defined functions, structs, enums etc.
 * However, in order to be able to call the function from the code outside of the module, we need to make the function public using the `pub` keyword.
 
+* We can access the public function in two different ways.
+
 ![](examples/modules/inline-module/src/main.rs)
+
+
+## Two leveles of modules
+{id: modules-two-levels-of-modules}
+
+![](examples/modules/two-levels-of-modules/src/main.rs)
 
 
 ## Try packages
