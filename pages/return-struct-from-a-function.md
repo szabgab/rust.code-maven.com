@@ -15,6 +15,8 @@ todo:
 {% include file="examples/functions/return-struct/data.txt" %}
 {% include file="examples/functions/return-struct/src/main.rs" %}
 
+{% include file="examples/return-struct/src/main.rs" %}
+
 
 
 
