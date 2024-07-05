@@ -38,7 +38,7 @@
         "csv.md",
         "handlebars.md",
         "liquid.md",
-        "packages.md",
+        "modules.md",
         "crates.md",
         "testing.md",
         "threads.md",
