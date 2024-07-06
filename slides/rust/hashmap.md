@@ -198,5 +198,13 @@
 
 ![](examples/hashes/hash-of-vectors/out.out)
 
-TODO: what can be the keys? Strings, numbers, structs?
+## Tuples as keys of HashMap
+{id: tuples-as-keys-of-hashmap}
+
+![](examples/hashes/tuples-as-keys/src/main.rs)
+
+![](examples/hashes/tuples-as-keys/out.out)
+
+
+
 
