@@ -4,38 +4,49 @@
 ## Why Rust?
 {id: why-rust}
 
-* Major features of Rust
+* The main web site of the [Rust the language](https://www.rust-lang.org/) points out 3:
 
 * Performance
-* Roughly at the speed of C programs
-* [ruff](https://github.com/astral-sh/ruff)
+* Reliability
+* Productivity
+
+## Why Rust - Performance
+{id: rust-performance}
+
+* Roughly at the speed of C and C++ programs
+* [ruff](https://github.com/astral-sh/ruff) - A linter for Python
 * [speed comparision](https://github.com/niklas-heer/speed-comparison)
 * [Ranking programming languages by energy efficiency](https://thenewstack.io/which-programming-languages-use-the-least-electricity/)
 
-* Reliability
+
+## Why Rust - Reliability
+{id: rust-reliability}
+
 * type system
 * memory safety
 * thread-safety
 
-* Productivity
+## Why Rust - Productivity
+{id: rust-productivity}
+
 * Tooling
-* Documentation
+* [Documentation](https://doc.rust-lang.org/)
+* 3rd party open source libraries
 
 
-* Shift left programming
+## Major features of Rust
+{id: major-features-of-rust}
+
+* Shift left programming (eliminate bugs earlier in the development process)
 
 * Speed and Open Source community
 
-* Corporate support, Linux kernel
+* [Corporate support](https://foundation.rust-lang.org/members/), Linux kernel
 
 * Error handling: exceptions VS return values - returning Result
+* Eliminate `null` issue.
 
-## Rust resources
-{id: rust-resources}
 
-* [Rust the language](https://www.rust-lang.org/)
-* [Rust Documentation](https://doc.rust-lang.org/)
-* [teach-rs](https://github.com/tweedegolf/teach-rs) Free material for Rust courses.
 
 ## Rust Books
 {id: rust-books}
@@ -44,16 +55,16 @@
 * [Learn Rust](https://www.rust-lang.org/learn)
 * [The Rust book](https://doc.rust-lang.org/book/)
 * [Rust by example](https://doc.rust-lang.org/stable/rust-by-example/)
-
+* [Rust for Rustaceans](https://rust-for-rustaceans.com/)
 * [Zero To Production In Rust](https://www.zero2prod.com/)
 
 ## Crates
 {id: crates-io}
 
-* [Crates.io](https://crates.io/)
-* [Docs.rs](https://docs.rs/)
-* [Lib.rs](https://lib.rs/) - Lightweight, opinionated, curated, unofficial alternative to crates.io
-* [Rust Digger](https://rust-digger.code-maven.com/) - analyzing crates and recommending improvements
+* [Crates.io](https://crates.io/) - the registry of all the crates.
+* [Docs.rs](https://docs.rs/) - the documentation of all the crates.
+* [Lib.rs](https://lib.rs/) - Lightweight, opinionated, curated, unofficial alternative to crates.io.
+* [Rust Digger](https://rust-digger.code-maven.com/) - analyzing crates and recommending improvements.
 
 ## Rust exercises with feedback
 {id: rust-exercises-with-feedback}
@@ -78,6 +89,7 @@
 * [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
 * [Rust Atomics and Locks](https://marabos.nl/atomics/) Low-Level Concurrency in Practice by Mara Bos.
 * [Learning Rust](https://www.youtube.com/channel/UC7OY971Es9P_AcXGYKms87A) by Ian Walker.
+* [teach-rs](https://github.com/tweedegolf/teach-rs) Free material for Rust courses.
 
 
 
@@ -87,6 +99,7 @@
 * [From Perl to Rust](https://oylenshpeegul.gitlab.io/from-perl-to-rust/introduction.html)
 
 * [The Rust book in Hebrew](https://github.com/IttayWeiss/rustbook-heb)
+* [All the languages](https://doc.rust-lang.org/stable/book/appendix-06-translation.html)
 
 ## Articles about Rust
 {id: articles-about-rust}
@@ -97,8 +110,9 @@
 ## What is written in Rust?
 {id: what-is-written-in-rust}
 
-* [Pydentic](https://docs.pydantic.dev/) is now written in Rust.
-* [SurrealDB](https://surrealdb.com/) multi-model database.
+* [Pydentic](https://docs.pydantic.dev/), the data validation library for Python.
+* [ruff](https://github.com/astral-sh/ruff), a linter for Python.
+* [SurrealDB](https://surrealdb.com/), a multi-model database.
 * ...
 
 
