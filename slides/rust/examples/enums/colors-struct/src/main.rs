@@ -16,19 +16,19 @@ struct Color {
 fn main() {
     let background = Color {
         name: ColorName::Black,
-        rgb : "#000000".to_string(),
+        rgb : String::from("#000000"),
     };
     let foreground = Color {
         name: ColorName::White,
-        rgb: "#FFFFFF".to_string(),
+        rgb: String::from("#FFFFFF"),
     };
     let ink = Color {
         name: ColorName::Black,
-        rgb: "#FFFFFF".to_string(),
+        rgb: String::from("#FFFFFF"),
     };
     let frame = Color {
         name: ColorName::Red,
-        rgb: "#FF0000".to_string(),
+        rgb: String::from("#FF0000"),
     };
 
     for color in [background, foreground, ink, frame] {

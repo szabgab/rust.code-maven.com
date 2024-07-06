@@ -9,10 +9,10 @@ enum ColorName {
 
 
 fn main() {
-    let background = ColorName::Black("#000000".to_string());
-    let foreground = ColorName::White("#FFFFFF".to_string());
-    let ink = ColorName::Black("#FFFFFF".to_string());
-    let frame = ColorName::Red("#FF0000".to_string());
+    let background = ColorName::Black(String::from("#000000"));
+    let foreground = ColorName::White(String::from("#FFFFFF"));
+    let ink = ColorName::Black(String::from("#FFFFFF"));
+    let frame = ColorName::Red(String::from("#FF0000"));
 
     for color in [background, foreground, ink, frame] {
         match color {
