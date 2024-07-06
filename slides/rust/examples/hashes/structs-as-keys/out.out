@@ -1,0 +1,1 @@
+{Person { fname: "Steve", lname: "Jobs" }: "Apple", Person { fname: "Bill", lname: "Gates" }: "Microsoft"}

@@ -205,12 +205,25 @@
 
 ![](examples/hashes/integers-as-keys/out.out)
 
-## Tuples as keys of HashMap
-{id: tuples-as-keys-of-hashmap}
+## Tuples as keys of a HashMap
+{id: tuples-as-keys-of-a-hashmap}
 
 ![](examples/hashes/tuples-as-keys/src/main.rs)
 
 ![](examples/hashes/tuples-as-keys/out.out)
 
+## Structs as keys of a HashMap
+{id: structs-as-keys-of-a-hashmap}
+{i: struct}
+{i: derive}
+{i: Debug}
+{i: Hash}
+{i: Eq}
+{i: PartialEq}
 
+* We can also use structs as a keys in a HashMap, but for that we need to add a few traits.
+
+![](examples/hashes/structs-as-keys/src/main.rs)
+
+![](examples/hashes/structs-as-keys/out.out)
 
