@@ -198,13 +198,19 @@
 
 ![](examples/hashes/hash-of-vectors/out.out)
 
+## Integers as keys of a HashMap
+{id: integers-as-keys-of-a-hashmap}
+
+![](examples/hashes/integers-as-keys/src/main.rs)
+
+![](examples/hashes/integers-as-keys/out.out)
+
 ## Tuples as keys of HashMap
 {id: tuples-as-keys-of-hashmap}
 
 ![](examples/hashes/tuples-as-keys/src/main.rs)
 
 ![](examples/hashes/tuples-as-keys/out.out)
-
 
 
 
