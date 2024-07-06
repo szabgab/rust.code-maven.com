@@ -8,7 +8,7 @@ struct Something {
 impl Something {
     pub fn new() -> Something {
         Something {
-            name: "".to_string(),
+            name: String::new(),
             number: 0,
         }
     }
@@ -16,7 +16,7 @@ impl Something {
 
 fn main() {
     let sg = Something {
-        name: "Foo Bar".to_string(),
+        name: String::from("Foo Bar"),
         number: 42,
     };
     dbg!(sg);

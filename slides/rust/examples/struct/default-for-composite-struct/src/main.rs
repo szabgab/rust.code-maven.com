@@ -16,7 +16,7 @@ struct Input {
 impl Something {
     pub fn new() -> Something {
         Something {
-            name: "".to_string(),
+            name: String::new(),
             input: Input::new(),
         }
     }
@@ -25,7 +25,7 @@ impl Something {
 impl Input {
     pub fn new() -> Input {
         Input {
-            name: "".to_string(),
+            name: String::new(),
         }
     }
 }
@@ -34,7 +34,7 @@ impl Input {
 impl Default for Something {
     fn default() -> Something {
         Something {
-            name: "".to_string(),
+            name: String::new(),
             input: Input {
                 ..Input::default()
             },
@@ -45,15 +45,15 @@ impl Default for Something {
 impl Default for Input {
     fn default() -> Input {
         Input {
-            name: "".to_string(),
+            name: String::new(),
         }
     }
 }
 
 fn main() {
     let sg = Something {
-        name: "Foo Bar".to_string(),
-        input: Input { name: "input text".to_string() },
+        name: String::from("Foo Bar"),
+        input: Input { name: String::from("input text") },
     };
     dbg!(sg);
 
@@ -67,7 +67,7 @@ fn main() {
 
 
     let with_name = Something {
-        name: "Hello".to_string(),
+        name: String::from("Hello"),
         ..Something::default()
     };
     dbg!(with_name);

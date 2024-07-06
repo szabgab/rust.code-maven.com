@@ -9,7 +9,7 @@ struct Something {
 impl Default for Something {
     fn default() -> Something {
         Something {
-            name: "".to_string(),
+            name: String::new(),
             number: 0,
         }
     }
@@ -17,7 +17,7 @@ impl Default for Something {
 
 fn main() {
     let sg = Something {
-        name: "Foo Bar".to_string(),
+        name: String::from("Foo Bar"),
         number: 42,
     };
     dbg!(sg);
@@ -28,7 +28,7 @@ fn main() {
     dbg!(empty);
 
     let with_name = Something {
-        name: "Hello".to_string(),
+        name: String::from("Hello"),
         ..Something::default()
     };
     dbg!(with_name);

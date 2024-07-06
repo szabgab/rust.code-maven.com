@@ -22,25 +22,25 @@ impl PartialEq for Person {
 fn main() {
     let a = Person {
         id: 1,
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
         height: 160,
     };
 
     let b = Person {
         id: 1,
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
         height: 180,
     };
 
     let c = Person {
         id: 1,
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
         height: 160,
     };
 
     let x = Person {
         id: 2,
-        name: "Bar".to_string(),
+        name: String::from("Bar"),
         height: 180,
     };
 

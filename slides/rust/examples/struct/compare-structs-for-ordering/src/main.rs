@@ -8,22 +8,22 @@ struct Thing {
 fn main() {
     let a = Thing {
         number: 42,
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
     };
 
     let b = Thing {
         number: 43,
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
     };
 
     let c = Thing {
         number: 42,
-        name: "Bar".to_string(),
+        name: String::from("Bar"),
     };
 
     let d = Thing {
         number: 43,
-        name: "Bar".to_string(),
+        name: String::from("Bar"),
     };
 
     println!("{}", a < b); // becasue 42 < 43

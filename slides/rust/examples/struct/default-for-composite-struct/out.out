@@ -1,0 +1,24 @@
+[src/main.rs:58:5] sg = Something {
+    name: "Foo Bar",
+    input: Input {
+        name: "input text",
+    },
+}
+[src/main.rs:61:5] new = Something {
+    name: "",
+    input: Input {
+        name: "",
+    },
+}
+[src/main.rs:66:5] empty = Something {
+    name: "",
+    input: Input {
+        name: "",
+    },
+}
+[src/main.rs:73:5] with_name = Something {
+    name: "Hello",
+    input: Input {
+        name: "",
+    },
+}

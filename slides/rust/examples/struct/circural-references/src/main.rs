@@ -1,7 +1,7 @@
 fn main() {
-    let mut joe = Person {name: "Joe".to_string(), partner: None};
+    let mut joe = Person {name: String::from("Joe"), partner: None};
     #[allow(unused_mut)]
-    let mut jane = Person {name: "Jane".to_string(), partner: None};
+    let mut jane = Person {name: String::from("Jane"), partner: None};
     dbg!(&joe);
     dbg!(&jane);
     joe.partner = Some(&jane);

@@ -6,17 +6,17 @@ struct Thing {
 
 fn main() {
     let a = Thing {
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
         number: 42,
     };
 
     let b = Thing {
-        name: "Foo".to_string(),
+        name: String::from("Foo"),
         number: 42,
     };
 
     let c = Thing {
-        name: "Foo1".to_string(),
+        name: String::from("Foo1"),
         number: 42,
     };
 
