@@ -1,8 +1,18 @@
-# Hashes in Rust
-{id: hash}
+# HashMap in Rust
+{id: hashmap}
+
+## What is a HashMap?
+{id: what-is-a-hashmap}
+
+* A data structure holding key-value pairs with an O(1) access time.
+
+* Hash (Perl)
+* Map (Java)
+* Dictionary (Python)
+* Associative Array (PHP)
 
 ## Create empty HashMap, insert key-value pairs
-{id: create-emptty-hash}
+{id: create-empty-hash}
 {i: HashMap}
 {i: new}
 {i: insert}
@@ -47,7 +57,7 @@
 {i: get}
 {i: from}
 
-* `get` returns a reference to the value corresponding to the key.
+* `get` returns an `Option` containing the value corresponding to the key, or `None`, if the key does not exist.
 
 ![](examples/hashes/get-value-from-hash/src/main.rs)
 ![](examples/hashes/get-value-from-hash/out.out)
@@ -187,3 +197,6 @@
 ![](examples/hashes/hash-of-vectors/src/main.rs)
 
 ![](examples/hashes/hash-of-vectors/out.out)
+
+TODO: what can be the keys? Strings, numbers, structs?
+

@@ -25,7 +25,7 @@
         "struct.md",
         "arrays.md",
         "vectors.md",
-        "hash.md",
+        "hashmap.md",
         "enums.md",
         "files.md",
         "path.md",

@@ -10,8 +10,8 @@ struct Something {
 
 fn main() {
     let things: Vec<Something> = vec![
-        Something { key1: "one".to_string(), key2: "two".to_string() },
-        Something { key1: "uno".to_string(), key2: "dos".to_string() },
+        Something { key1: String::from("one"), key2: String::from("two") },
+        Something { key1: String::from("uno"), key2: String::from("dos") },
     ];
     dbg!(&things);
 

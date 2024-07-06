@@ -16,7 +16,7 @@ fn main() {
                 let parts: Vec<&str> = parts.collect();
                 // println!("{:?}", parts);
                 //println!("{:?}", parts[0]);
-                data.insert(parts[0].to_string(), parts[1].to_string());
+                data.insert(parts[0].to_owned(), parts[1].to_owned());
             }
         },
         Err(error) => {
