@@ -1,5 +1,5 @@
 fn main() {
-    let text = "  Some text  ".to_string();
+    let text = String::from("  Some text  ");
     println!("original:   '{}'", text);
     println!("trim_end:   '{}'", text.trim_end());
     println!("trim_start: '{}'", text.trim_start());

@@ -1,5 +1,5 @@
 fn main() {
-    let name = "Foo".to_string();
+    let name = String::from("Foo");
     println!("{name}");
     borrow(&name);
     println!("{name}");

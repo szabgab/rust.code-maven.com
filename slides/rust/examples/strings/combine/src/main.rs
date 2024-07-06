@@ -1,6 +1,6 @@
 fn main() {
-    let fname = "Foo".to_string();
-    let lname = "Bar".to_string();
+    let fname = String::from("Foo");
+    let lname = String::from("Bar");
     println!("{fname}");
     println!("{lname}");
 
@@ -13,6 +13,6 @@ fn main() {
 
 fn combine(fname: &str, lname: &str) -> String {
     //format!("{fname} {lname}")
-    fname.to_string() + " " + lname
+    fname.to_owned() + " " + lname
 }
 

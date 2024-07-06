@@ -4,6 +4,6 @@ fn main() {
 }
 
 fn give_ownership() -> String {
-    "Foo".to_string()
+    String::from("Foo")
 }
 

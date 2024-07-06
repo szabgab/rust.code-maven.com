@@ -1,5 +1,5 @@
 fn main() {
-    let name = "Foo".to_string();
+    let name = String::from("Foo");
 
     println!("Hello {name}, how are you?");
     println!("Hello '{name}', how are you?");

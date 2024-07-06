@@ -8,9 +8,9 @@ fn main() {
     println!("{:?}", y.cmp(y));
     println!();
 
-    let x = "abc".to_string();
-    let y = "abd".to_string();
-    let z = "abd".to_string();
+    let x = String::from("abc");
+    let y = String::from("abd");
+    let z = String::from("abd");
     println!("{}", x < y);
     println!("{:?}", x.cmp(&y));
     println!("{}", y == z) ;
