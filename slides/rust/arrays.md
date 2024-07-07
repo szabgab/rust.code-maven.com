@@ -5,6 +5,7 @@
 {id: arrays-in-rust}
 
 * [Array](https://doc.rust-lang.org/std/primitive.array.html)
+* [The Array Type](https://doc.rust-lang.org/book/ch03-02-data-types.html#the-array-type) in the book.
 * An Array in rust has a fixed number of elements.
 * All the elements are of the same type.
 * In mutable arrays we can change the content, but we still cannot add or remove elements.
@@ -45,6 +46,13 @@
 {i: mut}
 
 ![](examples/arrays/numbers-mutable/src/main.rs)
+
+## Creating an array with the same value
+{id: creating-array-with-the-same-value}
+
+![](examples/arrays/numbers/array-of-the-same/src/main.rs)
+
+![](examples/arrays/numbers/array-of-the-same/out.out)
 
 ## Count digits
 {id: count-digits}

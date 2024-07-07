@@ -1,5 +1,5 @@
 fn main() {
-    let numbers: [i32; 3] = [10, 11, 12];
+    let numbers: [i8; 3] = [10, 11, 12];
 
     println!("{:?}", numbers);
     println!("{}", numbers.len());
