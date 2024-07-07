@@ -233,6 +233,8 @@
 
 ![](examples/struct/default-for-composite-struct/src/main.rs)
 
+![](examples/struct/default-for-composite-struct/out.out)
+
 
 ## Compare structs for Equality
 {id: compare-structs-for-equality}
@@ -251,6 +253,7 @@
 * In order for two objects of this type to be equal, all the fields have to be equal.
 
 ![](examples/struct/compare-structs-for-equality/src/main.rs)
+
 ![](examples/struct/compare-structs-for-equality/out.out)
 
 
