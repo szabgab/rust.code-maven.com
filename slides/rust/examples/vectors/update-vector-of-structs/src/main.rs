@@ -4,8 +4,8 @@ struct Course {
 
 fn main() {
     let courses :Vec<Course> = vec![
-        Course { name: "Programming Rust".to_string() },
-        Course { name: "Git".to_string() },
+        Course { name: String::from("Programming Rust") },
+        Course { name: String::from("Git") },
     ];
     for course in &courses {
         println!("{}", course.name);

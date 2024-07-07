@@ -1,9 +1,9 @@
 fn main() {
     let animals: Vec<String> = vec![
-        "elephant".to_string(),
-        "cat".to_string(),
-        "snake".to_string(),
-        "dog".to_string(),
+        String::from("elephant"),
+        String::from("cat"),
+        String::from("snake"),
+        String::from("dog"),
     ];
     dbg!(&animals);
 
