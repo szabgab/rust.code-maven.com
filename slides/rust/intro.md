@@ -209,6 +209,15 @@ It also created a file called `Cargo.lock` and a folder called `target`.
 * `Cargo.lock` is used to fix the versions of all the dependencies of the project. We have none so far.
 * `target` contains the compiled file and all the temporay files that Rust needed for the compilation.
 
+## Use of macros
+{id: use-of-macros}
+
+* In our first example we used the `println!` macro with parentheses: `println!()`
+* We can also use macros with square brackets and curly braces.
+* [Macros - the reference](https://doc.rust-lang.org/reference/macros.html)
+
+![](examples/intro/use-macro/src/main.rs)
+
 
 ## Rust and comments
 {id: rust-comments}
