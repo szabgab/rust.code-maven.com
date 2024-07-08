@@ -29,9 +29,9 @@
 ## Why Rust - Productivity
 {id: rust-productivity}
 
-* Tooling
-* [Documentation](https://doc.rust-lang.org/)
-* 3rd party open source libraries
+* Tooling (IDEs, compilation, package management, dependency management, linter).
+* [Documentation](https://doc.rust-lang.org/).
+* 3rd party open source libraries in the [Crates registry](https://crates.io/).
 
 
 ## Major features of Rust
@@ -58,7 +58,7 @@
 * [Rust for Rustaceans](https://rust-for-rustaceans.com/)
 * [Zero To Production In Rust](https://www.zero2prod.com/)
 
-## Crates
+## Crates (3rd party libraries)
 {id: crates-io}
 
 * [Crates.io](https://crates.io/) - the registry of all the crates.
@@ -108,6 +108,12 @@
 * [Why do Programmers Love Rust?](https://www.youtube.com/watch?v=vBsEF-anSLY) presentation by Dave Rolsky [slides](https://presentations.houseabsolute.com/why-do-programmers-love-rust/) - [source](https://github.com/autarch/presentations/tree/master/why-do-programmers-love-rust)
 * [Why the developers who use Rust love it so much](https://stackoverflow.blog/2020/06/05/why-the-developers-who-use-rust-love-it-so-much/)
 
+## Rust community
+{id: rust-community}
+
+* [Rust User groups](https://rust.code-maven.com/user-groups)
+* [Rust social status](https://rust.code-maven.com/rust-update-2024-06-17)
+
 ## What is written in Rust?
 {id: what-is-written-in-rust}
 
@@ -116,9 +122,13 @@
 * [SurrealDB](https://surrealdb.com/), a multi-model database.
 * ...
 
-
 ## Demo None handling
 {id: demo-none-handling}
+
+![](examples/intro/no-null/src/main.rs)
+
+## Demo None handling with Option
+{id: demo-none-handling-with-option}
 {i: Option}
 {i: match}
 {i: Some}
@@ -149,10 +159,22 @@ rustc --version
 rustc 1.70.0 (90c541806 2023-05-31)
 ```
 
+
+```
+$ rustc -vV
+rustc 1.79.0 (129f3b996 2024-06-10)
+binary: rustc
+commit-hash: 129f3b9964af4d4a709d1383930ade12dfe7c081
+commit-date: 2024-06-10
+host: x86_64-unknown-linux-gnu
+release: 1.79.0
+LLVM version: 18.1.7
+```
+
 ## Editor and IDE
 {id: rust-editor-and-ide}
 
-* Visual Studio Code with the `rust-analyzer` plugin.
+* Visual Studio Code with the `rust-analyzer` plugin. [rust-analyzer](https://rust-analyzer.github.io/) is an implementation of [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) for the Rust.
 * vim
 
 
@@ -164,7 +186,7 @@ rustc 1.70.0 (90c541806 2023-05-31)
 
 * Rust files must have an extension of `.rs`.
 * The main Rust file must have a function called `main`.
-* `println!` is a macro (it looks like function, it generates some Rust code during compilation).
+* `println!` is a [macro](https://doc.rust-lang.org/book/ch19-06-macros.html) (it looks like function, it generates some Rust code during compilation).
 
 ![](examples/intro/hello/src/main.rs)
 
@@ -209,7 +231,7 @@ It also created a file called `Cargo.lock` and a folder called `target`.
 * `Cargo.lock` is used to fix the versions of all the dependencies of the project. We have none so far.
 * `target` contains the compiled file and all the temporay files that Rust needed for the compilation.
 
-## Use of macros
+## Use of macros with parentheses, square brackets, or curly braces
 {id: use-of-macros}
 
 * In our first example we used the `println!` macro with parentheses: `println!()`
@@ -235,9 +257,10 @@ It also created a file called `Cargo.lock` and a folder called `target`.
 {i: let}
 
 ![](examples/intro/hello-foo/src/main.rs)
+
 ![](examples/intro/hello-foo/out.out)
 
-* [format macro](https://doc.rust-lang.org/std/fmt/)
+* [format! macro](https://doc.rust-lang.org/std/fmt/)
 
 ## Interpolation
 {id: string-interpolation}
@@ -245,18 +268,23 @@ It also created a file called `Cargo.lock` and a folder called `target`.
 Since Rust 1.58
 
 ![](examples/intro/interpolation/src/main.rs)
+
 ![](examples/intro/interpolation/out.out)
 
 ## Printing a string
 {id: printing-a-string}
 
 ![](examples/intro/formatting-required/src/main.rs)
+
 ![](examples/intro/formatting-required/out.out)
 
 ## Printing a string fixed
 {id: printing-a-string-fixed}
 
+* With or without interpolation
+
 ![](examples/intro/formatting-required-fixed/src/main.rs)
+
 ![](examples/intro/formatting-required-fixed/out.out)
 
 ## Debugging print
@@ -266,6 +294,7 @@ Since Rust 1.58
 * goes to STDERR
 
 ![](examples/intro/debugging-print/src/main.rs)
+
 ![](examples/intro/debugging-print/out.out)
 
 ## Rust and print
@@ -298,5 +327,7 @@ Since Rust 1.58
 * Try `rustc --version`
 * Create a new project with Cargo.
 * Write a program that prints "Hello World".
-* Add comments.
+* run the program.
+* Add comments to the program and run it again.
+* Extend the program to have your name in a variable and print that too.
 
