@@ -46,11 +46,15 @@
 * Error handling: exceptions VS return values - returning Result
 * Eliminate `null` issue.
 
+## Memory allocation
+{id: memory-allocation}
 
+* Stack
+* Heap
+* In the binary
 
 ## Rust Books
 {id: rust-books}
-
 
 * [Learn Rust](https://www.rust-lang.org/learn)
 * [The Rust book](https://doc.rust-lang.org/book/)

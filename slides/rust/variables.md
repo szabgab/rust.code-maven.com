@@ -57,7 +57,7 @@
 {i: from}
 {i: push_str}
 
-* We can create a really mutable string using the `String::from` function.
+* We can create a really mutable string using the String::from function.
 
 ![](examples/variables/really-mutable-string/src/main.rs)
 ![](examples/variables/really-mutable-string/out.out)

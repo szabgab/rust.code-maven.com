@@ -1,8 +1,8 @@
 fn main() {
     let name = "Foo";
-    println!("{}", name);
+    println!("{name}");
 
     let name = "Bar";
-    println!("{}", name);
+    println!("{name}");
 }
 

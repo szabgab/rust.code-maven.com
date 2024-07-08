@@ -1,8 +1,8 @@
 fn main() {
     let mut text = "Hello World!";
-    println!("{}", text);
+    println!("{text}");
 
     text = "Something else";
-    println!("{}", text);
+    println!("{text}");
 }
 

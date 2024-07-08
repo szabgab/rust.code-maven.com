@@ -1,7 +1,7 @@
 fn main() {
-    let x = 2;
-    println!("{}", x);
+    let num = 2;
+    println!("{num}");
 
-    x = 3;
-    println!("{}", x);
+    num = 3;
+    println!("{num}");
 }

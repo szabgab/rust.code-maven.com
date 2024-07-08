@@ -1,7 +1,7 @@
 fn main() {
-    let mut x = 2;
-    println!("{}", x);
+    let mut num = 2;
+    println!("{num}");
 
-    x = 3;
-    println!("{}", x);
+    num = 3;
+    println!("{num}");
 }

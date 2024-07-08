@@ -1,5 +1,14 @@
+error: expected `;`, found `answer`
+ --> src/main.rs:3:25
+  |
+3 |     println!("{answer}")
+  |                         ^ help: add `;` here
+4 |
+5 |     answer = 42;
+  |     ------ unexpected token
+
 error[E0308]: mismatched types
- --> examples/variables/cannot_change_type.rs:5:14
+ --> src/main.rs:5:14
   |
 2 |     let mut answer = "What is the answer";
   |                      -------------------- expected due to this value
@@ -7,6 +16,5 @@ error[E0308]: mismatched types
 5 |     answer = 42;
   |              ^^ expected `&str`, found integer
 
-error: aborting due to previous error
-
 For more information about this error, try `rustc --explain E0308`.
+error: could not compile `cannot-change-type` (bin "cannot-change-type") due to 2 previous errors
