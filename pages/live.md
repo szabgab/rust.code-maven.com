@@ -13,7 +13,7 @@ tags:
 | When       | event                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------- |
 | 2024.07.11 | [Reading JSON files in Rust](https://www.meetup.com/code-mavens/events/301636580/)                               |
-| 2024.07.16 | [Web development in Rust using Rocket - part 2](https://www.meetup.com/code-mavens/events/301736709/)            |
+| 2024.08.06 | [Web development in Rust using Rocket - part 2](https://www.meetup.com/code-mavens/events/301736709/)            |
 
 ## Past events
 
