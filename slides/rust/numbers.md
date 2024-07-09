@@ -172,15 +172,15 @@
 * By default numbers are stored in i32 whose range is -2147483648..=2147483647
 * We can explicitely put numbers in different types
 
-![](examples/types/number-types/src/main.rs)
+![](examples/numbers/number-types/src/main.rs)
 
-![](examples/types/numbers/src/main.rs)
+![](examples/numbers/numbers/src/main.rs)
 
 
 ## Rust type mismatch in numerical operation
 {id: rust-type-mismatch-in-numerical-operation}
 
-![](examples/types/type-mismatch/src/main.rs)
+![](examples/numbers/type-mismatch/src/main.rs)
 
 * TODO: if we remove the i32 then this works even though, I think, the default is i32
 
@@ -188,7 +188,7 @@
 ## Rust Overflow
 {id: rust-overflow}
 
-![](examples/types/overflow/src/main.rs)
-![](examples/types/overflow/out.out)
+![](examples/numbers/overflow/src/main.rs)
+![](examples/numbers/overflow/out.out)
 
 
