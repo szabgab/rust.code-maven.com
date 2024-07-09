@@ -1,20 +1,27 @@
 # Rust types
 {id: types}
 
-
 ## Rust Types
 {id: rust-types}
 
-* Integers: `i8`, `i16`, `i32`, `i64`, `i128`.
-* Unsigned integers `u8`, `u16`, `u32`, `u64`, `u128`.
+* Integers: `i8`, `i16`, `i32`, `i64`, `i128`. `isize` (on 32 bit machines this 32 bit, on 64 bit machines this is 64 bit).
+* Unsigned integers `u8`, `u16`, `u32`, `u64`, `u128`, `usize`.
 * Floating point: `f32`, `f64`.
 * [minimum and maximum values of numeric types](https://rust.code-maven.com/minimum-and-maximum-values-of-numeric-types)
 * [size of integers in Python](https://python.code-maven.com/size-of-integer-in-python)
 
-* Boolan: `bool`: `true`, `false`.
-* Char: 
+* Boolean: `bool`: (`true`, `false`).
+* Char: `char`
+* String: `str`
 
+* String
+* Array
+* Vector
+* HashMap
+* Struct
+* Enum
 
+* List of Rusts [primitive types](https://doc.rust-lang.org/core/primitive/index.html)
 
 ## Showing type
 {id: showing-type}
@@ -27,40 +34,6 @@
 let x: () = ...
 let readdir: () = std::path::Path::new(".").read_dir().unwrap();
 ```
-
-
-## Rust numerical operations
-{id: rust-numerical-operations}
-
-![](examples/types/numerical-operations/src/main.rs)
-
-## Rust numerical types
-{id: rust-numerical-types}
-{i: i32}
-{i: i64}
-
-* By default numbers are stored in i32 whose range is -2147483648..=2147483647
-* We can explicitely put numbers in different types
-
-![](examples/types/number-types/src/main.rs)
-
-![](examples/types/numbers/src/main.rs)
-
-* List of Rusts [primitive types](https://doc.rust-lang.org/core/primitive/index.html)
-
-## Rust type mismatch in numerical operation
-{id: rust-type-mismatch-in-numerical-operation}
-
-![](examples/types/type-mismatch/src/main.rs)
-
-* TODO: if we remove the i32 then this works even though, I think, the default is i32
-
-
-## Rust Overflow
-{id: rust-overflow}
-
-![](examples/types/overflow/src/main.rs)
-![](examples/types/overflow/out.out)
 
 ## Print type of variable
 {id: print-type-of-variable}
