@@ -1,24 +1,24 @@
 fn main() {
     let x = 23;
     let y = 19;
-    println!("{}", x);
-    println!("{}", y);
+    println!("{x}");
+    println!("{y}");
 
     let add = x + y;
-    println!("add: {}", add);
+    println!("add: {add}");
 
     let multiple = x * y;
-    println!("multiple: {}", multiple);
+    println!("multiple: {multiple}");
 
     let neg = -x;
-    println!("neg: {}", neg);
+    println!("neg: {neg}");
 
     let diff = y - x;
-    println!("diff: {}", diff);
+    println!("diff: {diff}");
 
     let div = x / y;
-    println!("div: {}", div);
+    println!("div: {div}");
 
     let modulus = x % y;
-    println!("mod: {}", modulus);
+    println!("mod: {modulus}");
 }
