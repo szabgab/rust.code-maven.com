@@ -170,4 +170,8 @@ TODO: This is experimental code that needs to be improved
 
 ![](examples/threads/counter-with-messages/src/main.rs)
 
+## Process string slices in parallel
+{id: process-string-slices-in-parallel}
+
+![](examples/strings/process-slices/src/main.rs)
 
