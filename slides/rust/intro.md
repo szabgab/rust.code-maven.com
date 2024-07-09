@@ -324,8 +324,8 @@ Since Rust 1.58
 ![](examples/intro/print/out.out)
 
 
-## Exercise 1
-{id: exercise-1}
+## Exercise: Hello World
+{id: exercise-helo-world}
 
 * Make sure you have Rust installed.
 * Try `rustc --version`

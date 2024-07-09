@@ -1,8 +1,8 @@
 # Command line arguments - ARGS
 {id: args}
 
-## Command line arguments - args
-{id: command-line-arguments}
+## Command line arguments - print all args
+{id: command-line-arguments-print-all-args}
 {i: std::env}
 {i: args}
 {i: Vec}
@@ -48,29 +48,10 @@ cargo run data.csv
 We are working on file 'data.csv'
 ```
 
-## Rust rectangle ARGS
-{id: rectangle-args}
-
-![](examples/args/rectangle-args/src/main.rs)
-
-```
-cargo run
-
-Usage target/debug/rectangle-args length width
-```
-
-```
-cargo run  3 4
-
-
-area: 12
-circumference: 14
-```
-
 ## Exercise: calucaltor args
 {id: exercise-calculator-args}
 
-Implement a calculator for the 4 basic operations (+, -, /, *) in Rust that accepts the parameters on the command line:
+Implement a calculator for the 4 basic operations `(+, -, /, *)` in Rust that accepts the parameters on the command line:
 
 ```
 rustc calc.rs
