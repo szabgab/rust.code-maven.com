@@ -1,0 +1,20 @@
+[
+    Person {
+        fname: "John",
+        lname: "Lennon",
+    },
+    Person {
+        fname: "Paul",
+        lname: "McCartney",
+    },
+]
+[
+    Person {
+        fname: "Jane",
+        lname: "Lennon",
+    },
+    Person {
+        fname: "Paul",
+        lname: "McCartney",
+    },
+]

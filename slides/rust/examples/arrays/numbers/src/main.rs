@@ -3,4 +3,5 @@ fn main() {
 
     println!("{:?}", numbers);
     println!("{}", numbers.len());
+    println!("{}", numbers[0]);
 }
