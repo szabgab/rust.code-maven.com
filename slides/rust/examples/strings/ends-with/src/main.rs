@@ -1,7 +1,7 @@
 fn main() {
-    let names = ["name.txt", "other"];
+    let names = [String::from("name.txt"), String::from("other")];
     for name in names {
-        print!("name: '{}'", name);
+        print!("name: '{name}'");
         if name.ends_with(".txt") {
             print!(" ends with .txt");
         }

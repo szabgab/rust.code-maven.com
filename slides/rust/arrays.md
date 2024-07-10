@@ -96,11 +96,15 @@
 
 * Given a string of numbers, count how many times each digit appears.
 
+```
+let text = "1213 456 78843978523 3224 2421";
+```
 
 ![](examples/arrays/count-digits/out.out)
 
 ## Solution: Count digits
 {id: solution-count-digits}
+
 
 ![](examples/arrays/count-digits/src/main.rs)
 ![](examples/arrays/count-digits/out.out)

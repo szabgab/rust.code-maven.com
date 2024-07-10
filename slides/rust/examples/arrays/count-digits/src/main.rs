@@ -1,6 +1,6 @@
 fn main() {
     let text = "1213 456 78843978523 3224 2421";
-    let mut counter: [i8; 10] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let mut counter = [0i8; 10];
     for ch in text.chars() {
         if ch == ' ' {
             continue;

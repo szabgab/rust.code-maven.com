@@ -1,7 +1,7 @@
 # Strings in Rust
 {id: rust-strings}
 
-## Create string
+## Create a String
 {id: create-string}
 {i: println!}
 {i: String}
@@ -9,11 +9,22 @@
 {i: to_string}
 {i: to_owned}
 
-* The first one is a reference to a string embedded in the program. You can never change this.
-* `String::from` and [to_string](https://doc.rust-lang.org/std/string/trait.ToString.html) trait
+* The first one is a reference to a string embedded in the program. We can only chnage this in the editor. Not while the program is running.
+* `String::from` can create a "real" string from an embedded string. This is also what we get from any input. (STDIN, ARGS, file, network etc.)
+* [to_string](https://doc.rust-lang.org/std/string/trait.ToString.html) is the method to stringify any value. It works here as well, but we can be clearer with `to_owned`.
+* [to_owned](https://doc.rust-lang.org/std/string/trait.ToOwned.html) convert a reference to an owned string. More about ownership later.
 
 ![](examples/strings/create/src/main.rs)
 ![](examples/strings/create/out.out)
+
+## Create empty string and grow it using push and push_str
+{id: create-empty-string}
+{i: String::new}
+{i: push}
+{i: push_str}
+
+![](examples/strings/create-empty-string/src/main.rs)
+![](examples/strings/create-empty-string/out.out)
 
 ## Length of string
 {id: length-of-string}
@@ -23,6 +34,30 @@
 
 ![](examples/strings/length/src/main.rs)
 ![](examples/strings/length/out.out)
+
+
+## Rust - string ends with
+{id: rust-string-ends-with}
+{i: ends_with}
+
+![](examples/strings/ends-with/src/main.rs)
+![](examples/strings/ends-with/out.out)
+
+## Rust - string starts with
+{id: rust-string-starts-with}
+{i: starts_with}
+
+![](examples/strings/starts-with/src/main.rs)
+![](examples/strings/starts-with/out.out)
+
+## To lower, to upper case
+{id: to-lowercase}
+{i: to_lowercase}
+{i: to_uppercase}
+
+![](examples/strings/to-lower-to-upper/src/main.rs)
+![](examples/strings/to-lower-to-upper/out.out)
+
 
 ## Accessing characters in a string
 {id: accessing-characters-in-a-string}
@@ -69,20 +104,6 @@ This is a simple, and apparently partially incorrect solution. There is a crate 
 
 ![](examples/strings/reverse/src/main.rs)
 ![](examples/strings/reverse/out.out)
-
-## Rust - string ends with
-{id: rust-string-ends-with}
-{i: ends_with}
-
-![](examples/strings/ends-with/src/main.rs)
-![](examples/strings/ends-with/out.out)
-
-## Rust - string starts with
-{id: rust-string-starts-with}
-{i: starts_with}
-
-![](examples/strings/starts-with/src/main.rs)
-![](examples/strings/starts-with/out.out)
 
 ## Concatenation str with str
 {id: concatetation-str-with-str}
@@ -223,14 +244,6 @@ This is a simple, and apparently partially incorrect solution. There is a crate 
 {id: slice-and-change-string}
 
 ![](examples/strings/slice-and-change/src/main.rs)
-
-## To lower, to upper case
-{id: to-lowercase}
-{i: to_lowercase}
-{i: to_uppercase}
-
-![](examples/strings/to-lower-to-upper/src/main.rs)
-![](examples/strings/to-lower-to-upper/out.out)
 
 ## Compare strings
 {id: compare-strings}

@@ -1,6 +1,6 @@
 #[allow(clippy::iter_skip_next)]
 fn main() {
-    let text = "The black cat";
+    let text = String::from("The black cat");
 
     println!("{}", text);
     println!("{:?}", text.chars());
