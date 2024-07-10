@@ -16,7 +16,7 @@ fn main() {
             .expect("Failed to read line");
         guess = guess.trim().to_string();
 
-        if guess == "s" {
+        if guess == "c" {
             println!("The secret number is {secret_number}");
             continue;
         }

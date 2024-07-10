@@ -377,4 +377,17 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/deque/src/main.rs)
 ![](examples/vectors/deque/out.out)
 
+## Iterate over both index and value of a vector (enumerate)
+{id: iterate-over-vector-index-value}
+{i: for}
+{i: iter}
+{i: enumerate}
+
+* Instead of getting the index of the current element of Rust, we can either iteratore over the indices or use `enumerate`.
+* First example: iterating over the values.
+* Second example: iterating over the indices and getting the value. This triggers a `needless_range_loop` suggesting the third solution:
+* Third example: Creating an iterator out of the vector and calling `enumerate` on it. This will allow us to iterate over the index-value pairs.
+
+![](examples/loops/enumerate/src/main.rs)
+![](examples/loops/enumerate/out.out)
 

@@ -26,10 +26,17 @@ Two loop controls
 {i: loop}
 {i: break}
 
-* If we cannot have the condition at the top in some languages we write `while true`. In Rust we use `loop`.
+* If we cannot have the condition at the top of the loop, in some languages we write `while true`. In Rust we use `loop`.
 * We better have a condition with a `break` or we create an infinite loop!
 
 ![](examples/loops/loop-loop/src/main.rs)
+
+## break returns value from loop
+{id: break-retursn-value-from-loop}
+{i: loop}
+{i: break}
+
+![](examples/loops/loop-returns/src/main.rs)
 
 ## for loop in Rust
 {id: rust-for-loop}
@@ -43,18 +50,4 @@ Two loop controls
 ![](examples/loops/for-loop/src/main.rs)
 ![](examples/loops/for-loop/out.out)
 
-
-## Iterate over both index and value of a vector (enumerate)
-{id: iterate-over-vector-index-value}
-{i: for}
-{i: iter}
-{i: enumerate}
-
-* Instead of getting the index of the current element of Rust, we can either iteratore over the indices or use `enumerate`.
-* First example: iterating over the values.
-* Second example: iterating over the indices and getting the value. This triggers a `needless_range_loop` suggesting the third solution:
-* Third example: Creating an iterator out of the vector and calling `enumerate` on it. This will allow us to iterate over the index-value pairs.
-
-![](examples/loops/enumerate/src/main.rs)
-![](examples/loops/enumerate/out.out)
 
