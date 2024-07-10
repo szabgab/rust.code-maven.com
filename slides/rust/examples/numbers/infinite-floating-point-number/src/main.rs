@@ -8,6 +8,7 @@ fn main() {
     let what = infinite + negative_infinite;
     println!("{}", what);
 
+    // Integers don't handle infinite
     // let infinite = 1/0;
     // ^^^ attempt to divide `1_i32` by zero
     //println!("{}", infinite);

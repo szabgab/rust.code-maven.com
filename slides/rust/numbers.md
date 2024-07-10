@@ -120,25 +120,35 @@ error: arithmetic operation that can potentially result in unexpected side-effec
 {i: checked_add}
 
 * [checked_add](https://doc.rust-lang.org/core/primitive.i64.html#method.checked_add)
+* Returns and `Option` that, is either the incremented value wrapped in `Some` or `None`.
 
 ![](examples/numbers/handle-overflow-checked-add/src/main.rs)
+
 ![](examples/numbers/handle-overflow-checked-add/out.out)
 
-overflowing_add
+## Handle overflow and underflow - overflowing
+{id: handle-overflow-and-underflow-overflowing}
+{i: overflowing_add}
+
+* [overflowing_add](https://doc.rust-lang.org/core/primitive.i64.html#method.overflowing_add)
+* Returns a tuple: the value (possible after overflow, and a boolean indicating if overflow happened)
+
+![](examples/numbers/handle-overflow-overflowing-add/src/main.rs)
+
+![](examples/numbers/handle-overflow-overflowing-add/out.out)
 
 ## Handle overflow and underflow - carrying
 {id: handle-overflow-and-underflow-carrying}
 {i: carrying_add}
 
-
-* [carrying_add](https://doc.rust-lang.org/core/primitive.i64.html#method.carrying_add)
+* [carrying_add](https://doc.rust-lang.org/core/primitive.i64.html#method.carrying_add) (experimental)
 
 
 ## Handle overflow and underflow - strict
 {id: handle-overflow-and-underflow-strict}
 {i: strict_add}
 
-* [strict_add](https://doc.rust-lang.org/core/primitive.i64.html#method.strict_add)
+* [strict_add](https://doc.rust-lang.org/core/primitive.i64.html#method.strict_add) (experimental)
 
 ## Compare integers
 {id: compare-integers}
@@ -154,6 +164,12 @@ overflowing_add
 ![](examples/numbers/compare-integers/src/main.rs)
 
 ![](examples/numbers/compare-integers/out.out)
+
+
+## Compare integers in and if-statement
+{id: compare-integers-if-statement}
+
+![](examples/numbers/compare-integers-and-action/src/main.rs)
 
 
 ## Exponent - power
@@ -175,11 +191,9 @@ overflowing_add
 * As many other mathematical operations, calling `pow` can also create a number that does not fit in the expected type and then the code would `panic!`.
 * We can use the [checked_pow](https://doc.rust-lang.org/std/primitive.i32.html#method.checked_pow) that returns an [Option](https://doc.rust-lang.org/std/option/enum.Option.html)
 * It contains the computed value, if successful or `None` if there was an overflow.
-
-![](examples/numbers/checked-pow/src/main.rs)
-
 * An alternative way is to use [saturating_pow](https://doc.rust-lang.org/std/primitive.i32.html#method.saturating_pow).
 
+![](examples/numbers/checked-pow/src/main.rs)
 
 
 ## Square root (sqrt)
@@ -207,27 +221,35 @@ overflowing_add
 ![](examples/numbers/sqrt-of-integer/src/main.rs)
 
 
-## rounding float
-{id: rounding-float}
-{i: round}
-{i: f64}
-
-![](examples/numbers/rounding-float/src/main.rs)
-![](examples/numbers/rounding-float/out.out)
-
 ## Floating point imprecision
 {id: floating-point-imprecision}
 
 ![](examples/numbers/floating-point-imprecision/src/main.rs)
 ![](examples/numbers/floating-point-imprecision/out.out)
 
-
 ## Compare floating point numbers
 {id: compare-floating-pount-numbers}
+
+* At first we compare two floating point numbers we created.
+* Then we see that the floating point imprecision leads to lack of equality.
 
 ![](examples/numbers/compare-floats/src/main.rs)
 
 ![](examples/numbers/compare-floats/out.out)
+
+
+## rounding float
+{id: rounding-float}
+{i: round}
+{i: f64}
+
+* The [round](https://doc.rust-lang.org/std/primitive.f64.html#method.round) method of floating point rounds to the nearest integer.
+* So to round to a specific precision we can multiply-round-divide.
+
+
+![](examples/numbers/rounding-float/src/main.rs)
+![](examples/numbers/rounding-float/out.out)
+
 
 ## Compare floating point numbers by rounding
 {id: compare-floating-point-numbers-by-rounding}
@@ -241,10 +263,12 @@ overflowing_add
 {i: TBD}
 {i: approx_eq}
 
-* [ordered-float](https://crates.io/crates/ordered-float)
 * [float-cmp](https://crates.io/crates/float-cmp)
 
+* Where ULP stands for "units of least precision", or "units in the last place".
+
 ![](examples/numbers/compare-floats-approximately/src/main.rs)
+
 ![](examples/numbers/compare-floats-approximately/out.out)
 
 ## NaN - Not a Number
@@ -269,6 +293,7 @@ overflowing_add
 
 * You get `inf` or `-inf` if you devide by 0.0 or -0.0 respectively.
 * Adding  `inf` to `-inf` yields a `NaN`.
+* Integers don't have infinite values.
 
 ![](examples/numbers/infinite-floating-point-number/src/main.rs)
 ![](examples/numbers/infinite-floating-point-number/out.out)
@@ -279,5 +304,10 @@ overflowing_add
 {i: TBD}
 
 * The [num-complex](https://crates.io/crates/num-complex) seems to be the most popular one.
+
+## Exercise: Rectangle ARGS with protection
+{id: exercise-rectangle-args-with-protection}
+
+* Improve the previous solution by handling the overflow of the computation somehow.
 
 

@@ -1,5 +1,5 @@
 fn main() {
-    // let x: i32 = 3;
+    // let x  = 3;
     // println!("{}", x.pow(2));
     // can't call method `pow` on ambiguous numeric type `{integer}`
     // you must specify a type for this binding, like `i32`
@@ -15,9 +15,7 @@ fn main() {
 
     // let y: i8 = 16;
     // println!("{}", y.pow(2));
-    // panic!
-    // attempt to multiply with overflow
-
+    // panic!: attempt to multiply with overflow
 }
 
 fn get_lucky_number() -> i16 {

@@ -235,6 +235,26 @@ It also created a file called `Cargo.lock` and a folder called `target`.
 * `Cargo.lock` is used to fix the versions of all the dependencies of the project. We have none so far.
 * `target` contains the compiled file and all the temporay files that Rust needed for the compilation.
 
+## Cargo build
+{id: cargo-build}
+{i: build}
+{i: target}
+{i: --release}
+
+* Look in the `target` folder.
+
+```
+cargo build
+cargo build --release
+```
+
+## Run in release mode
+{id: cargo-run-release}
+
+```
+cargo run --release
+```
+
 ## Use of macros with parentheses, square brackets, or curly braces
 {id: use-of-macros}
 

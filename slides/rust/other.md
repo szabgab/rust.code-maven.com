@@ -345,5 +345,8 @@ cargo add --path ../add-lib/
 ![](examples/libraries/add-app/src/main.rs)
 
 
+## Ordered floats
+{id: ordered-floats}
+{i: TODO}
 
-
+* [ordered-float](https://crates.io/crates/ordered-float)
