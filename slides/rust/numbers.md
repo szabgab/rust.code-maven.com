@@ -1,17 +1,61 @@
 # Numbers
 {id: numbers}
 
+## Rust numerical types
+{id: rust-numerical-types}
+{i: i8}
+{i: u8}
+{i: i32}
+{i: i64}
 
-## Numerical operations (integers)
+* By default integer numbers are stored in `i32` that has a range of -2147483648..=2147483647.
+* By default floating point numbers are stored in `f64`.
+* We can explicitely put numbers in different types.
+* In Python a small integers takes up 28 bytes. [Size of integers in Python](https://python.code-maven.com/size-of-integer-in-python).
+
+![](examples/numbers/number-types/src/main.rs)
+
+## Numerical operations on integers
 {id: numerical-operations-integers}
+{i: +}
+{i: -}
+{i: *}
+{i: /}
+{i: %}
 
 * The division keeps the type so dividing one integer by another integer will always return an integer.
 
 ![](examples/numbers/calc/src/main.rs)
 ![](examples/numbers/calc/out.out)
 
-## Increment integers
+## Divide integers and get float
+{id: divide-integers-and-get-float}
+{i: as}
+{i: f32}
+
+![](examples/numbers/divide-integers/src/main.rs)
+
+![](examples/numbers/divide-integers/out.out)
+
+## Rust type mismatch in numerical operation
+{id: rust-type-mismatch-in-numerical-operation}
+{i: i32}
+{i: i64}
+
+![](examples/numbers/type-mismatch/src/main.rs)
+
+* If we remove the `i32` then this works even though the default is `i32`.
+* That's because Rust will infere the type of the first variable from the type of the second variable and the operation.
+
+
+## Increment integers - augumented assignment
 {id: increment-integers}
+{i: +=}
+{i: ++}
+{i: --}
+
+* Instead of `x = x + 1` we can use `x += 1` called [augumented assignment](https://en.wikipedia.org/wiki/Augmented_assignment).
+* There are no prefix and postfix [increment and decrement operators](https://en.wikipedia.org/wiki/Increment_and_decrement_operators).
 
 ![](examples/numbers/increment/src/main.rs)
 ![](examples/numbers/increment/out.out)
@@ -22,23 +66,94 @@
 ![](examples/numbers/small-integers-unfit-in-i8/src/main.rs)
 ![](examples/numbers/small-integers-unfit-in-i8/out.out)
 
-## unfit in i8 - run time
+## unfit in i8 - run time - overflow
 {id: unfit-in-i8-run-time}
 
-![](examples/numbers/increment-small-integers/src/main.rs)
-![](examples/numbers/increment-small-integers/out.out)
+![](examples/numbers/overflow/src/main.rs)
 
-## rounding float
-{id: rounding-float}
+```
+cargo run
+```
 
-![](examples/numbers/rounding-float/src/main.rs)
-![](examples/numbers/rounding-float/out.out)
+![](examples/numbers/overflow/out.out)
 
-## Floating point imprecision
-{id: floating-point-imprecision}
+* In debug mode `panic!`
 
-![](examples/numbers/floating-point-imprecision/src/main.rs)
-![](examples/numbers/floating-point-imprecision/out.out)
+
+```
+cargo run --release
+```
+
+![](examples/numbers/overflow/release.out)
+
+
+## How to find code that might overflow / underflow?
+{id: how-to-find-overflow}
+
+* [arithmetic_side_effects](https://rust-lang.github.io/rust-clippy/master/index.html#/arithmetic_side_effects)
+
+```
+cargo clippy -- --deny clippy::arithmetic_side_effects
+```
+
+```
+error: arithmetic operation that can potentially result in unexpected side-effects
+```
+
+
+* See also: [overflow_check_conditional](https://rust-lang.github.io/rust-clippy/master/index.html#/overflow_check_conditional)
+* and [implicit_saturating_add](https://rust-lang.github.io/rust-clippy/master/index.html#/implicit_saturating_add)
+
+
+## Handle overflow and underflow - saturating
+{id: handle-overflow-and-underflow-saturating}
+{i: saturating_add}
+
+* [saturating_add](https://doc.rust-lang.org/std/primitive.i8.html#method.saturating_add)
+
+![](examples/numbers/handle-overflow-saturating/src/main.rs)
+
+![](examples/numbers/handle-overflow-saturating/out.out)
+
+## Handle overflow and underflow - checked
+{id: handle-overflow-and-underflow-checked}
+{i: checked_add}
+
+* [checked_add](https://doc.rust-lang.org/core/primitive.i64.html#method.checked_add)
+
+![](examples/numbers/handle-overflow-checked-add/src/main.rs)
+![](examples/numbers/handle-overflow-checked-add/out.out)
+
+overflowing_add
+
+## Handle overflow and underflow - carrying
+{id: handle-overflow-and-underflow-carrying}
+{i: carrying_add}
+
+
+* [carrying_add](https://doc.rust-lang.org/core/primitive.i64.html#method.carrying_add)
+
+
+## Handle overflow and underflow - strict
+{id: handle-overflow-and-underflow-strict}
+{i: strict_add}
+
+* [strict_add](https://doc.rust-lang.org/core/primitive.i64.html#method.strict_add)
+
+## Compare integers
+{id: compare-integers}
+{i: cmp}
+{i: Less}
+{i: Greater}
+{i: Equal}
+{i: Ordering}
+
+* We can use the regular `<`, `>`, `==` operators to compare any type of integers assuming the two sides are from the same type.
+* The `cmp` method returns a value from the [Ordering](https://doc.rust-lang.org/std/cmp/enum.Ordering.html) enum.
+
+![](examples/numbers/compare-integers/src/main.rs)
+
+![](examples/numbers/compare-integers/out.out)
 
 
 ## Exponent - power
@@ -52,7 +167,7 @@
 
 ![](examples/numbers/exponent/src/main.rs)
 
-## Exponent protecting  agains overflow - checked_pow, saturating_pow
+## Exponent protecting  against overflow - checked_pow, saturating_pow
 {id: exponent-with-overflow-protection}
 {i: checked_pow}
 {i: saturating_pow}
@@ -64,6 +179,8 @@
 ![](examples/numbers/checked-pow/src/main.rs)
 
 * An alternative way is to use [saturating_pow](https://doc.rust-lang.org/std/primitive.i32.html#method.saturating_pow).
+
+
 
 ## Square root (sqrt)
 {id: square-root}
@@ -90,21 +207,19 @@
 ![](examples/numbers/sqrt-of-integer/src/main.rs)
 
 
+## rounding float
+{id: rounding-float}
+{i: round}
+{i: f64}
 
-## Compare integers
-{id: compare-integers}
-{i: cmp}
-{i: Less}
-{i: Greater}
-{i: Equal}
-{i: Ordering}
+![](examples/numbers/rounding-float/src/main.rs)
+![](examples/numbers/rounding-float/out.out)
 
-* We can use the regular `<`, `>`, `==` operators to compare any type of integers assuming the two sides are from the same type.
-* The `cmp` method returns a value from the [Ordering](https://doc.rust-lang.org/std/cmp/enum.Ordering.html) enum.
+## Floating point imprecision
+{id: floating-point-imprecision}
 
-![](examples/numbers/compare-integers/src/main.rs)
-
-![](examples/numbers/compare-integers/out.out)
+![](examples/numbers/floating-point-imprecision/src/main.rs)
+![](examples/numbers/floating-point-imprecision/out.out)
 
 
 ## Compare floating point numbers
@@ -132,12 +247,6 @@
 ![](examples/numbers/compare-floats-approximately/src/main.rs)
 ![](examples/numbers/compare-floats-approximately/out.out)
 
-## Complex numbers
-{id: complex-numbers}
-{i: TBD}
-
-* The [num-complex](https://crates.io/crates/num-complex) seems to be the most popular one.
-
 ## NaN - Not a Number
 {id: not-a-number}
 {i: NaN}
@@ -164,31 +273,11 @@
 ![](examples/numbers/infinite-floating-point-number/src/main.rs)
 ![](examples/numbers/infinite-floating-point-number/out.out)
 
-## Rust numerical types
-{id: rust-numerical-types}
-{i: i32}
-{i: i64}
 
-* By default numbers are stored in i32 whose range is -2147483648..=2147483647
-* We can explicitely put numbers in different types
+## Complex numbers
+{id: complex-numbers}
+{i: TBD}
 
-![](examples/numbers/number-types/src/main.rs)
-
-![](examples/numbers/numbers/src/main.rs)
-
-
-## Rust type mismatch in numerical operation
-{id: rust-type-mismatch-in-numerical-operation}
-
-![](examples/numbers/type-mismatch/src/main.rs)
-
-* TODO: if we remove the i32 then this works even though, I think, the default is i32
-
-
-## Rust Overflow
-{id: rust-overflow}
-
-![](examples/numbers/overflow/src/main.rs)
-![](examples/numbers/overflow/out.out)
+* The [num-complex](https://crates.io/crates/num-complex) seems to be the most popular one.
 
 

@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "increment-small-integers"
+name = "handle-overflow-saturating"
 version = "0.1.0"

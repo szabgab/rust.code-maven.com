@@ -1,11 +1,22 @@
 fn main() {
-    let  x = 300_000_000;
-    // let x = 3000000000;
-    // note: the literal `3000000000` does not fit into the type `i32` whose range is `-2147483648..=2147483647`
-    let y: i64 = 3_000_000_000;
-    println!("{}", x);
-    println!("{}", y);
+    let number = 139871;
+    println!("{number}");
 
-    println!("{}", x+y);
+    let number: i8 = 100;
+    println!("{number}");
+
+    let number: u8 = 255;
+    println!("{number}");
+
+    let number = 300_000_000;
+    println!("{number}");
+
+    let number: i64 = 3_000_000_000;
+    println!("{number}");
+
+    let number = 3.14;
+    println!("{number}");
+
+    let number: f32 = 3.14;
+    println!("{number}");
 }
-
