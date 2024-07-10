@@ -6,7 +6,7 @@ fn main() {
     println!("{:?}", text.chars());
     println!("{:?}", text.chars().nth(4));
     //println!("{:?}", text.chars().skip(4).nth(0));
-    println!("{:?}", text.chars().skip(4).next());
+    println!("{:?}", text.chars().skip(4).next()); // clippy tells us to use `.nth(4)`
     println!("{:?}", text.chars().nth(20));
 
     println!("--------");

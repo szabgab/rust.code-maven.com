@@ -3,7 +3,7 @@ fn main() {
     let str2 = "World";
 
     // let text = str1 + str2; // cannot add `&str` to `&str`
-    let text = str1.to_string() + " " + str2;
+    let text = str1.to_owned() + " " + str2;
     println!("{}", text);
 }
 

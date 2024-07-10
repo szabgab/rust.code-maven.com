@@ -1,6 +1,12 @@
 # Enum
 {id: enum}
 
+## Simple enumeration
+{id: simple-enumeration}
+
+![](examples/enums/weekdays-simple/src/main.rs)
+
+
 ## Enumeration
 {id: enumeration}
 {i: enum}

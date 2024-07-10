@@ -24,6 +24,18 @@
 ![](examples/strings/length/src/main.rs)
 ![](examples/strings/length/out.out)
 
+## Accessing characters in a string
+{id: accessing-characters-in-a-string}
+
+
+```
+text[3]
+```
+
+* Is this the 4th byte or the 4th unicode character?
+* The former would be garbage if we have anything else besides ASCII in the string.
+* The latter would mean accessing elements is not a O(1) operation as we would have to iterate over all the previous characters.
+
 ## Rust - string slices
 {id: rust-string-slices}
 
@@ -33,23 +45,11 @@
 ## Rust - string characters
 {id: rust-string-character}
 {i: chars}
+{i: Some}
+{i: None}
 
 ![](examples/strings/characters/src/main.rs)
 ![](examples/strings/characters/out.out)
-
-## Rust - string ends with
-{id: rust-string-ends-with}
-{i: ends_with}
-
-![](examples/strings/ends-with/src/main.rs)
-![](examples/strings/ends-with/out.out)
-
-## Rust - string starts with
-{id: rust-string-starts-with}
-{i: starts_with}
-
-![](examples/strings/starts-with/src/main.rs)
-![](examples/strings/starts-with/out.out)
 
 ## Iterate over the characters of a string
 {id: iterate-over-characters}
@@ -70,9 +70,24 @@ This is a simple, and apparently partially incorrect solution. There is a crate 
 ![](examples/strings/reverse/src/main.rs)
 ![](examples/strings/reverse/out.out)
 
+## Rust - string ends with
+{id: rust-string-ends-with}
+{i: ends_with}
+
+![](examples/strings/ends-with/src/main.rs)
+![](examples/strings/ends-with/out.out)
+
+## Rust - string starts with
+{id: rust-string-starts-with}
+{i: starts_with}
+
+![](examples/strings/starts-with/src/main.rs)
+![](examples/strings/starts-with/out.out)
 
 ## Concatenation str with str
 {id: concatetation-str-with-str}
+
+* In the example we have two strings hard-coded in the binary of our executable.
 
 ![](examples/strings/concatenation-str-with-str/src/main.rs)
 ![](examples/strings/concatenation-str-with-str/out.out)

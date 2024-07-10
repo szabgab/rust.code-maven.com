@@ -23,6 +23,14 @@
 
 * List of Rusts [primitive types](https://doc.rust-lang.org/core/primitive/index.html)
 
+## Rust infers the type of variables
+{id: infer-the-type-of-variable}
+
+* Infer / deduct the type from the other types of other variables and from the operation on the variable.
+* "guess the type" is probably not a good methaphore as there is no guessing in it.
+
+![](examples/types/infer-type/src/main.rs)
+
 ## Showing type
 {id: showing-type}
 
