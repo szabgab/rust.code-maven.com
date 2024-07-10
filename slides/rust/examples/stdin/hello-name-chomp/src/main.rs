@@ -8,8 +8,8 @@ fn main() {
         .read_line(&mut name)
         .expect("Failed to get input");
 
-    name = name.trim_end().to_string();
+    name = name.trim_end().to_owned();
 
-    println!("Hello {}, how are you?", name);
+    println!("Hello {name}, how are you?");
 }
 

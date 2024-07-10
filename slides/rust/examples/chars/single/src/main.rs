@@ -1,15 +1,15 @@
 fn main() {
     let chars = ['1', 'a', 'א', 'Ω', '😇', '😈'];
     for ch in chars {
-        dbg!(ch);
-        let num = ch as usize;
-        dbg!(num);
+        let usize_num = ch as usize;
+        let u32_num = ch as u32;
 
-        let num = ch as u32;
-        dbg!(num);
+        let back = char::from_u32(u32_num).expect("Could not convert to char");
 
-        let back = char::from_u32(num).expect("Could not convert to char");
-        dbg!(back);
-        dbg!(ch == back);
+        println!(
+            "{ch}\t{usize_num:6} {u32_num:6} {back} \t{} {}",
+            (ch == back),
+            ch.len_utf8()
+        );
     }
 }

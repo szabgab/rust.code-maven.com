@@ -25,19 +25,21 @@ Two problems:
 ## Rust - read STDIN - remove trailing newline (trim, chomp)
 {id: rust-read-stdin-chomp}
 {i: trim_end}
-{i: to_string}
+{i: to_owned}
 
 * [trim_end](https://doc.rust-lang.org/std/string/struct.String.html#method.trim_end) removes trailing whitespace.
-* `to_string` Converts the String to be able to assign to `name` again
+* `to_owned` Converts the `&str` to `String` to be able to assign to the `name` variable again.
 
 ![](examples/stdin/hello-name-chomp/src/main.rs)
 
 ## Rust - flush STDOUT - read STDIN
 {id: rust-flush-stdout-read-stdin-chomp}
 {i: print!}
+{i: Write}
+{i: std::io::Write}
 
 * We use `print!` and not `println!`
-* `use std::io::Write;` adds the `flush`
+* We use the [std::io::Write](https://doc.rust-lang.org/std/io/trait.Write.html) trait that includes the `flush` method.
 
 ![](examples/stdin/hello-name-chomp-flush/src/main.rs)
 
@@ -61,9 +63,14 @@ Two problems:
 ## Exercise: STDIN rectangle
 {id: exercise-stdin-rectangle}
 
-* Ask the use for the length and the width of a rectangle and print the area and the circumference to the screen.
+* Ask the user for the length and the width of a rectangle and print the area and the circumference to the screen.
 
-## Exercis: STDIN calculator
+## Exercise: STDIN circle
+{id: exercise-stdin-circle}
+
+* Ask the user for the radius of a circle and print the area and the circumference to the screen.
+
+## Exercise: STDIN calculator
 {id: exercise-stdin-calculator}
 
 * The program will ask the user for a number, and for an operator(+, -, /, *) and for another number.
