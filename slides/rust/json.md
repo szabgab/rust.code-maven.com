@@ -102,7 +102,38 @@ cargo run ../person.json
 
 ![](examples/json/read-person/out.out)
 
-* TODO: show lists in the JSON file
+## Read JSON with optional fields
+{id: read-json-with-optional-fields}
+{i: TBD}
+
+
+## Alias some fields in JSON (handle dash in JSON kesy)
+{id: alias-some-fields-in-json}
+{i: alias}
+
+![](examples/json/alias-json-fields/data.json)
+
+![](examples/json/alias-json-fields/src/main.rs)
+
+![](examples/json/alias-json-fields/out.out)
+
+## Read JSON to Vector
+{id: read-json-to-vector}
+
+* Sometimes the root of the JSON struct is a list that contains structures of key-value pairs. We can read that into a vector of structs.
+
+![](examples/json/read-json-to-vector/data.json)
+
+![](examples/json/read-json-to-vector/src/main.rs)
+
+![](examples/json/read-json-to-vector/out.out)
+
+## Read lists of JSON structures
+{id: read-list-of-json-structures}
+{i: TBD}
+
+![](examples/json/read-list-of-json/src/main.rs)
+
 
 ## Serialize and deserialize HashMap to JSON in Rust
 {id: serialize-and-deserialize-hashmap-to-json}

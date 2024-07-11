@@ -1,0 +1,10 @@
+[
+    Person {
+        name: "Foo",
+        number: 10,
+    },
+    Person {
+        name: "Bar",
+        number: 20,
+    },
+]

@@ -1,0 +1,4 @@
+Thing {
+    name: "Foo",
+    rust_version: "1.78.1",
+}
