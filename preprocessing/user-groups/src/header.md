@@ -10,7 +10,8 @@ tags:
 
 I wanted to know the relative sizes of the various Rust-specific Meetup groups so I collected them into a YAML file and then generated this page.
 If you are interested which one is meeting in the next month or so check out [This week in Rust](https://this-week-in-rust.org/).
-They send out an up-to-date list every week.
+They send out an up-to-date list every week. If you are interested in virtual events I also maintain a page where you can find
+[Vritual Rust events](https://events.code-maven.com/) that are better suited for your time-zone.
 
 If you find a group near-by where you live or where you work, join them. If none of them are near-by, don't worry, there are quite a few that have
 online meetings you can join from any place.
@@ -20,7 +21,7 @@ the number of members.
 
 * On 2023.12.11 there were 99 groups with a total of 59,629 members.
 * On 2024.03.17 there were 113 groups with a total of 65,200 members.
-* On 2024.06.17 there were 116 groups with a total of 68,126 members.
+* On 2024.06.17 there were 116 groups with a total of 68,126 members. (last manual update)
 
 Total number of members: {} (the same person might be member of several groups.)
 
