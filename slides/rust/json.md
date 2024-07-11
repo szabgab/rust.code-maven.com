@@ -78,16 +78,42 @@ cargo run ../person.json
 ![](examples/json/read-json-from-reader-to-struct/out.out)
 
 
-* TODO: show in both cases how to handle cases when a field is missing or the value is incorrect type (eg. we have  "x": "qqrq")
-* TODO: show in both cases what happens if there are fields in the JSON file that we don't know about in the struct.
-* TODO: show lists in the JSON file
-* TODO: show deeper structure
+## Read JSON avoid extra fields - deny_unknown_fields
+{id: read-json-avoid-extra-fields}
+{i: deny_unknown_fields}
 
+![](examples/json/avoid-extra-fields/src/main.rs)
+
+![](examples/json/avoid-extra-fields/out.out)
+
+## Read JSON handle missing values - set defaults
+{id: read-json-set-default-values}
+{i: default}
+
+![](examples/json/set-default-values/src/main.rs)
+
+![](examples/json/set-default-values/out.out)
+
+
+## Read complex JSON
+{id: read-complex-json}
+
+![](examples/json/read-person/src/main.rs)
+
+![](examples/json/read-person/out.out)
+
+* TODO: show lists in the JSON file
 
 ## Serialize and deserialize HashMap to JSON in Rust
 {id: serialize-and-deserialize-hashmap-to-json}
+{i: json}
+{i: HashMap}
 
+![](examples/json/serialize-hashmap/Cargo.toml)
 
+![](examples/json/serialize-hashmap/src/main.rs)
+
+![](examples/json/serialize-hashmap/out.out)
 
 
 ## JSON serialize examples

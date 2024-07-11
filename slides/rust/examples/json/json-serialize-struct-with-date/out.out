@@ -1,0 +1,10 @@
+Thing {
+    name: "Foo Bar",
+    number: 42,
+    numbers: [
+        23,
+        19,
+    ],
+    now: 2024-07-11T10:19:56.690151283Z,
+}
+{"name":"Foo Bar","number":42,"numbers":[23,19],"now":1720693196}

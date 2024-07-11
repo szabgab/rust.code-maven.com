@@ -22,7 +22,7 @@ fn main() {
         numbers: vec![23, 19],
         now: Utc::now(),
     };
-    dbg!(&thing);
+    println!("{:#?}", &thing);
     let serialized = serde_json::to_string(&thing).unwrap();
     println!("{}", serialized);
 }
