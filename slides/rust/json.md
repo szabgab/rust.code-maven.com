@@ -104,8 +104,14 @@ cargo run ../person.json
 
 ## Read JSON with optional fields
 {id: read-json-with-optional-fields}
-{i: TBD}
+{i: Option}
 
+![](examples/json/read-with-optional-field/just_name.json)
+![](examples/json/read-with-optional-field/married_no_language.json)
+![](examples/json/read-with-optional-field/married_with_python.json)
+![](examples/json/read-with-optional-field/single_with_python.json)
+
+![](examples/json/read-with-optional-field/src/main.rs)
 
 ## Alias some fields in JSON (handle dash in JSON kesy)
 {id: alias-some-fields-in-json}
