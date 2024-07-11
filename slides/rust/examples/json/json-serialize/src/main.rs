@@ -7,7 +7,7 @@ fn main() {
     let numbers = vec![19, 23];
 
     let utc: DateTime<Utc> = Utc::now();
-    println!("{}", utc);
+    //println!("{}", utc);
 
     let json_str = &json!({
         "name": name,
