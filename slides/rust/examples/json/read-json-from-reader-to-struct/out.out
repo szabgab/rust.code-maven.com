@@ -1,0 +1,5 @@
+Person {
+    fname: "Foo",
+    lname: "Bar",
+    married: true,
+}

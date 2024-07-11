@@ -48,23 +48,48 @@ cargo add serde -F derive
 
 ![](examples/json/read-simple-json-to-struct/out.out)
 
+## Read JSON file using from_reader manually
+{id: read-json-file-using-from-reader-manually}
+{i: from_reader}
+
+```
+cargo run ../person.json
+```
+
+![](examples/json/person.json)
+
+![](examples/json/read-json-from-reader-manually/Cargo.toml)
+
+![](examples/json/read-json-from-reader-manually/src/main.rs)
+
+![](examples/json/read-json-from-reader-manually/out.out)
+
+
+## Read JSON file using from_reader to a struct
+{id: read-json-file-using-from-reader-to-a-struct}
+{i: from_reader}
+
+```
+cargo run ../person.json
+```
+
+![](examples/json/read-json-from-reader-to-struct/src/main.rs)
+
+![](examples/json/read-json-from-reader-to-struct/out.out)
+
+
 * TODO: show in both cases how to handle cases when a field is missing or the value is incorrect type (eg. we have  "x": "qqrq")
 * TODO: show in both cases what happens if there are fields in the JSON file that we don't know about in the struct.
 * TODO: show lists in the JSON file
 * TODO: show deeper structure
 
 
-## Read JSON file using from_reader
-{id: read-json-file-using-from-reader}
-{i: from_reader}
+## Serialize and deserialize HashMap to JSON in Rust
+{id: serialize-and-deserialize-hashmap-to-json}
 
-![](examples/json/json-read-from-reader/data.json)
 
-![](examples/json/json-read-from-reader/Cargo.toml)
 
-![](examples/json/json-read-from-reader/src/main.rs)
 
-![](examples/json/json-read-from-reader/out.out)
 ## JSON serialize examples
 {id: json-serialize-examples}
 {i: JSON}
