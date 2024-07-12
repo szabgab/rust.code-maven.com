@@ -186,7 +186,7 @@ cargo run ../person.json
 {i: serde}
 {i: serde_json}
 
-* [serde_](https://crates.io/crates/serde)
+* [serde](https://crates.io/crates/serde)
 * [serde_json](https://crates.io/crates/serde_json)
 
 ![](examples/json/json-serialize-struct/Cargo.toml)

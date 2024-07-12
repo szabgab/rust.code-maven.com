@@ -140,8 +140,27 @@
 
 ![](examples/intro/demo-none-handling/src/main.rs)
 
-
 See original idea on [What is Rust and why is it so popular?](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
+
+## Demo error handling with Result
+{id: demo-error-handling-with-result}
+{i: Result}
+{i: match}
+{i: Ok}
+{i: Err}
+
+![](examples/intro/demo-result/src/main.rs)
+
+![](examples/intro/demo-result/out.out)
+
+
+## Demo error handling with Result and question mark
+{id: demo-error-handling-with-pass-through}
+{i: Result}
+{i: dyn}
+{i: Box}
+
+![](examples/intro/demo-error-handling/src/main.rs)
 
 
 ## Install Rust
