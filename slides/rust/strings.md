@@ -316,4 +316,22 @@ and [is_alphanumeric](https://doc.rust-lang.org/std/primitive.char.html#method.i
 ![](examples/strings/is-alphabetic/src/main.rs)
 ![](examples/strings/is-alphabetic/out.out)
 
+## Exercise: Count digits from string
+{id: exercise-count-digits-from-string}
+
+* Given a string of numbers, count how many times each digit appears.
+
+```
+let text = "1213 456 78843978523 3224 2421";
+```
+
+![](examples/strings/count-digits/out.out)
+
+## Solution: Count digits from string
+{id: solution-count-digits-from-string}
+
+
+![](examples/strings/count-digits/src/main.rs)
+![](examples/strings/count-digits/out.out)
+
 

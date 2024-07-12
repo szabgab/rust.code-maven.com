@@ -94,10 +94,10 @@
 ## Exercise: Count digits
 {id: exercise-count-digits}
 
-* Given a string of numbers, count how many times each digit appears.
+* Given an array of digits, count how many times each digit appears.
 
 ```
-let text = "1213 456 78843978523 3224 2421";
+let digits = [1, 2, 1, 3, 4, 5, 6, 7, 8, 8, 4, 3, 9, 7, 8, 5, 2, 3, 3, 2, 2, 4, 2, 4, 2, 1];
 ```
 
 ![](examples/arrays/count-digits/out.out)
