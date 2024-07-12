@@ -359,3 +359,19 @@ cargo add --path ../add-lib/
 
 ![](examples/other/linked-list-in-struct/out.out)
 
+## Undirected graph
+{id: undirected-graph}
+
+
+* [Seven Bridges of Königsberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
+
+![](examples/other/undirected-graph/src/main.rs)
+
+## Memory leak
+{id: memory-leak}
+
+In this example we try to implement a memory leak as we demonstrate [in Python](https://code-maven.com/slides/python/memory-leak)
+showing how Rust makes us avoid it. So far this code has compilation errors.
+
+![](examples/other/memory-leak/src/main.rs)
+
