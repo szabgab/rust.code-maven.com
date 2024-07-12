@@ -3,6 +3,23 @@ fn main() {
     let content = std::fs::read_to_string(filename).unwrap();
     let data: serde_json::Value = serde_json::from_str(&content).expect("JSON parsing error");
     println!("data: {}", data);
+    println!();
+
+    if data.is_object() {
+        for key in data.as_object().unwrap().keys() {
+            println!("{:#?}", key);
+        }
+    }
+    println!();
+
+    match data.get("text") {
+        None => (),
+        Some(text) => {
+            println!("this is text: {}", text.is_string());
+            println!("this is text: {}", text.is_u64());
+        }
+    }
+    println!();
 
     let text = match data.get("text") {
         Some(val) => val.as_str().unwrap(),
@@ -21,6 +38,5 @@ fn main() {
     };
     println!("y: {y}");
 
-    println!("x+y = {}", x+y);
+    println!("x+y = {}", x + y);
 }
-

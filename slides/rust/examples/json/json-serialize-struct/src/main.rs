@@ -1,4 +1,4 @@
-use serde::{Serialize};
+use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 #[allow(dead_code)]
@@ -10,11 +10,11 @@ struct Thing {
 
 fn main() {
     let thing = Thing {
-        name: "Foo Bar".to_string(),
+        name: String::from("Foo Bar"),
         number: 42,
         numbers: vec![23, 19],
     };
-    dbg!(&thing);
+    println!("{:#?}", &thing);
     let serialized = serde_json::to_string(&thing).unwrap();
-    println!("{}", serialized);
+    println!("{serialized}");
 }

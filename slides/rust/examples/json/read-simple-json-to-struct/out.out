@@ -1,3 +1,5 @@
 data = Point { x: 1, y: 2, text: "Hello World!" }
 3
 Hello World!
+
+other = Point { x: 1, y: 2, text: "Hello World!" }

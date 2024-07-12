@@ -13,11 +13,20 @@ fn main() {
     let filename = get_filename();
 
     let content = std::fs::read_to_string(filename).unwrap();
-    let data = serde_json::from_str::<Person>(&content).expect("JSON parsing error");
-    println!("{:#?}", &data);
-    assert_eq!(data.fname, "Foo");
-    assert_eq!(data.lname, "Bar");
-    assert!(data.married);
+    match serde_json::from_str::<Person>(&content) {
+        Ok(data) => {
+            println!("{:#?}", &data);
+            assert_eq!(data.fname, "Foo");
+            assert_eq!(data.lname, "Bar");
+            assert!(data.married);        
+        },
+        Err(err) => {
+            eprintln!("There was an error: {err}");
+            //std::process::exit(1);
+        }
+    }
+    println!("Still here");
+
 }
 
 

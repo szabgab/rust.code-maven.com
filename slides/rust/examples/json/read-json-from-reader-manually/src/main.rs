@@ -14,7 +14,7 @@ fn main() {
             std::process::exit(1);
         }
     };
-    dbg!(&data);
+    println!("{:#?}", &data);
     assert_eq!(data.get("fname").unwrap().as_str().unwrap(), "Foo");
 
     assert_eq!(data["lname"].as_str().unwrap(), "Bar");
@@ -22,6 +22,7 @@ fn main() {
     assert_eq!(data["year"].as_u64().unwrap(), 1992);
     assert_eq!(data["numbers"].as_array().unwrap().len(), 3);
     assert_eq!(data["numbers"][0].as_u64().unwrap(), 23);
+    assert_eq!(data["married"].as_bool().unwrap(), true); // maybe better to use assert!
     assert_eq!(data["children"].as_array().unwrap().len(), 2);
     assert_eq!(data["children"][0]["name"].as_str().unwrap(), "Alpha");
 }

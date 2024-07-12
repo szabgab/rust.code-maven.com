@@ -1,6 +1,6 @@
-use serde::{Serialize, Deserialize};
+use serde::Deserialize;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Deserialize, Debug)]
 struct Point {
     x: i32,
     y: i32,
@@ -15,5 +15,11 @@ fn main() {
     println!("data = {:?}", data);
     println!("{}", data.x + data.y);
     println!("{}", data.text);
+    println!();
+
+    // Using the Turbofixh syntax
+    let other = serde_json::from_str::<Point>(&content).unwrap();
+    println!("other = {:?}", other);
+
 }
 

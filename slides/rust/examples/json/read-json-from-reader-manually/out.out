@@ -1,5 +1,22 @@
-Hello World!
-3
-data = Point { x: 1, y: 2, text: "Hello World!" }
-3
-Hello World!
+Object {
+    "children": Array [
+        Object {
+            "birthdate": Number(2020),
+            "name": String("Alpha"),
+        },
+        Object {
+            "birthdate": Number(2022),
+            "name": String("Beta"),
+        },
+    ],
+    "fname": String("Foo"),
+    "height": Number(178.2),
+    "lname": String("Bar"),
+    "married": Bool(true),
+    "numbers": Array [
+        Number(23),
+        Number(19),
+        Number(42),
+    ],
+    "year": Number(1992),
+}

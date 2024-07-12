@@ -1,0 +1,9 @@
+Thing {
+    name: "Foo Bar",
+    number: 42,
+    numbers: [
+        23,
+        19,
+    ],
+}
+{"name":"Foo Bar","number":42,"numbers":[23,19]}
