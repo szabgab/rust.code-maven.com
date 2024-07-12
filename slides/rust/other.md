@@ -350,3 +350,12 @@ cargo add --path ../add-lib/
 {i: TODO}
 
 * [ordered-float](https://crates.io/crates/ordered-float)
+
+## Linked list using struct and Box
+{id: linked-list-using-struct}
+{i: Box}
+
+![](examples/other/linked-list-in-struct/src/main.rs)
+
+![](examples/other/linked-list-in-struct/out.out)
+

@@ -1,0 +1,27 @@
+Thing {
+    data: "First",
+    next: None,
+}
+Thing {
+    data: "Second",
+    next: Some(
+        Thing {
+            data: "First",
+            next: None,
+        },
+    ),
+}
+Thing {
+    data: "Third",
+    next: Some(
+        Thing {
+            data: "Second",
+            next: Some(
+                Thing {
+                    data: "First",
+                    next: None,
+                },
+            ),
+        },
+    ),
+}
