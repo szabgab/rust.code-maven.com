@@ -168,6 +168,15 @@ See original idea on [What is Rust and why is it so popular?](https://stackoverf
 ## Install Rust
 {id: rust-installation}
 
+* Linux and macOS
+
+```
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+* [Install](https://www.rust-lang.org/tools/install)
+
+
 See in the [Rust book](https://doc.rust-lang.org/stable/book/ch01-01-installation.html)
 
 ```
