@@ -305,9 +305,39 @@ error: arithmetic operation that can potentially result in unexpected side-effec
 
 * The [num-complex](https://crates.io/crates/num-complex) seems to be the most popular one.
 
+## Functions and test adding numbers
+{id: functions-and-test-adding-numbers}
+
+
+![](examples/numbers/add-numbers/src/main.rs)
+
+```
+cargo run
+```
+
+```
+cargo test
+```
+
+
 ## Exercise: Rectangle ARGS with protection
 {id: exercise-rectangle-args-with-protection}
 
 * Improve the previous solution by handling the overflow of the computation somehow.
+
+
+## Exercise: Rectangle add tests
+{id: exercise-rectangle-add-tests}
+
+* Take the rectangle solution.
+* Move the "business logic" (the computation) to one or more functions.
+* Write tests to verify the functions.
+
+## Exercise: Circle add tests
+{id: exercise-circle-add-tests}
+
+* Take the circle solution.
+* Move the "business logic" (the computation) to one or more functions.
+* Write tests to verify the functions.
 
 
