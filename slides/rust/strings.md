@@ -336,6 +336,17 @@ let text = "1213 456 78843978523 3224 2421";
 
 ![](examples/strings/count-digits/out.out)
 
+
+## Exercise: is it a palindrome?
+{id: exercise-palindrome}
+
+* Given two strings tell me if they are [Palindromes](https://en.wikipedia.org/wiki/Palindrome)?
+
+## Exercise: is it an anagram?
+{id: exercise-anagram}
+
+* Given two strings tell me if they are [Anagrams](https://en.wikipedia.org/wiki/Anagram)?
+
 ## Solution: Count digits from string
 {id: solution-count-digits-from-string}
 

@@ -78,6 +78,7 @@
 * [Rust by example](https://doc.rust-lang.org/stable/rust-by-example/)
 * [Rust for Rustaceans](https://rust-for-rustaceans.com/)
 * [Zero To Production In Rust](https://www.zero2prod.com/)
+* [Rust Atomics and Locks](https://marabos.nl/atomics/) by Mara Bos
 
 
 Publishers
