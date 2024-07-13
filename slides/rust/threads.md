@@ -226,6 +226,26 @@ $ wc intro.md files.md strings.md
 * Count how many times each character appears.
 * Count how many times each word appear.
 
+## Exercise - run several functions on the same text
+{id: exercise-run-several-functions-on-the-same-text}
+{i: TBD}
+
+
+In earlier parts of the course ee have implemented several functions that were searching a text string to find certain characters.
+Now run those functions on a large text file.
+
+Allow the user to set the number of threads we would like to use.
+
+## Solution - count characters, words
+{id: solution-count-characters}
+
+![](examples/threads/count-characters/src/main.rs)
+
+## Solution - run several functions on the same text
+{id: solution-run-several-functions-on-the-same-text}
+
+![](examples/threads/separate-functions/src/main.rs)
+
 TODO: what if there are variables in the main function? Can we read them from the threads? Can we write them?
 TODO: How to share workload? e.g. We would like to create 10,000 files with the sequnce number of the file being botht the content and the filename.
 TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
