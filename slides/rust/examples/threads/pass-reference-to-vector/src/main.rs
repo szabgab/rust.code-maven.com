@@ -1,7 +1,9 @@
 use std::sync::Arc;
 
 fn main() {
-    let animals = Arc::new(Vec::from_iter(["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_string())));
+    let animals = Arc::new(Vec::from_iter(
+        ["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_string()),
+    ));
     println!("{:?}", animals);
     {
         let animals = animals.clone();
@@ -9,7 +11,6 @@ fn main() {
             list_animals(&animals);
         });
         handle.join().unwrap();
-
     }
     println!("{:?}", animals);
 }

@@ -391,3 +391,10 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/loops/enumerate/src/main.rs)
 ![](examples/loops/enumerate/out.out)
 
+## Create vector of strings from array of str using from_iter
+{id: create-vector-of-strings}
+{i: from_iter}
+
+![](examples/vectors/create-from-iter/src/main.rs)
+![](examples/vectors/create-from-iter/out.out)
+

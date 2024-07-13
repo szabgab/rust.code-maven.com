@@ -11,6 +11,8 @@ fn main() {
     //        println!("Second thread {:?}", thread::current().id());
     // });
 
+    // println!("Before join: {:?}", thread::current().id());
+
     // handle.join().unwrap(); 
 
     println!("After ending: {:?}", thread::current().id());

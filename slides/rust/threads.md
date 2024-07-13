@@ -4,8 +4,17 @@
 ## Threads in Rust
 {id: threads-in-rust}
 
-* [Feerless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+* [Feerless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
 * [std::thread](https://doc.rust-lang.org/std/thread/)
+
+
+## Simple thread
+{id: thread-simple}
+{i: thread}
+{i: spawn}
+{i: join}
+
+![](examples/threads/simple/src/main.rs)
 
 ## First example with threads
 {id: threads-first-example}
@@ -51,14 +60,23 @@
 {id: threads-speed-improvements}
 
 
-![](examples/threads/threads-load-test/src/main.rs)
+* A CPU intensive task - computing the Fiboncci numbers up to N 10 times.
+* Once in a single threaded process and once in a multithreaded process with 10 threads.
+
+Results
+
+```
+N    single     multi
+     thread     thread
+40:  7.1 sec vs 1.3 sec
+41: 11.4 sec vs 2.1 sec
+42: 18.1 sec vs 3.3 sec
+```
+
+![](examples/threads/speed-test/src/main.rs)
 
 
-TODO: what if there are variables in the main function? Can we read them from the threads? Can we write them?
-TODO: How to share workload? e.g. We would like to create 10,000 files with the sequnce number of the file being botht the content and the filename.
-TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
-
-## Save many files
+## Save many files (both CPU and IO intensive)
 {id: save-many-files}
 
 * In this example we demonstrate the speed improvement of threading.
@@ -198,4 +216,9 @@ $ wc intro.md files.md strings.md
 *  Given many files (e.g. clone the [Rust-maven](https://github.com/szabgab/rust.code-maven.com/) repository or the [slides](https://github.com/szabgab/slides) repository or the [ladino-dictionary-data](https://github.com/kantoniko/ladino-diksionaryo-data) repo)
 * Count how many times each character appears.
 * Count how many times each word appear.
+
+TODO: what if there are variables in the main function? Can we read them from the threads? Can we write them?
+TODO: How to share workload? e.g. We would like to create 10,000 files with the sequnce number of the file being botht the content and the filename.
+TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
+
 

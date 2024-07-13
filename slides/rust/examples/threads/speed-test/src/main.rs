@@ -5,9 +5,6 @@ use std::env;
 use std::process;
 
 fn main() {
-    // 40:  7.1 sec vs 1.3 sec
-    // 41: 11.4 sec vs 2.1 sec
-    // 42: 18.1 sec vs 3.3 sec
     let args = env::args().collect::<Vec<String>>();
     if args.len() != 3 {
         eprintln!("Usage: {} n [linear|threads]", args[0]);

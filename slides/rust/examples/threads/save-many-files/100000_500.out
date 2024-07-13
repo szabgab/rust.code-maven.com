@@ -1,3 +1,5 @@
+cargo run  -q 100000 500
+
 Elapsed time: 11.111724788s
 Elapsed time for 2 threads: 5.728736066s
 Elapsed time for 3 threads: 3.934323686s

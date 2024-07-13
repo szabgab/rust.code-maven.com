@@ -34,6 +34,20 @@
 * memory safety
 * thread-safety
 
+
+
+* Dangling pointers
+* Data races
+* Buffer overflow
+* Integer overflow
+* Iterator invalidation
+* Accessing invalid addresses in memory
+* Sead-locks
+* memory leaks
+* double-free
+
+
+
 ## Why Rust - Productivity
 {id: rust-productivity}
 
