@@ -38,12 +38,25 @@
 
 ## Capacity of string
 {id: capacity-of-string}
+{i: len}
 {i: capacity}
+{i: macro_rules!}
 
 ![](examples/strings/capacity/src/main.rs)
 
 ![](examples/strings/capacity/out.out)
 
+## Strings and memory allocation
+{id: strings-and-memory-allocation}
+{i: len}
+{i: capacity}
+{i: macro_rules!}
+{i: as_ptr}
+{i: :p}
+
+![](examples/strings/strings-and-memory-reallocation/src/main.rs)
+
+![](examples/strings/strings-and-memory-reallocation/out.out)
 
 ## Rust - string ends with
 {id: rust-string-ends-with}
@@ -356,6 +369,27 @@ let text = "1213 456 78843978523 3224 2421";
 {id: exercise-anagram}
 
 * Given two strings tell me if they are [Anagrams](https://en.wikipedia.org/wiki/Anagram)?
+
+## Exercise: Get nth double character
+{id: exercise-get-nth-double-character}
+
+Write a function that receives a string and returns the nth character that is duplicated.
+
+```
+"xyzaabb", 1   -> a
+"xyzaabb", 2   -> b
+```
+
+## Exercise: get first word
+{id: exercise-get-first-word}
+
+Given a sentence (letters and spaces), return the first word:
+
+```
+"The black cat" -> "The"
+"example"       -> "example"
+```
+
 
 ## Solution: Count digits from string
 {id: solution-count-digits-from-string}
