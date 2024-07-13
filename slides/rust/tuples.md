@@ -34,7 +34,8 @@
 {id: change-tuple}
 {i: mut}
 
-* Use the `mut` keyword to make the tuple mutable.
+* Use the `mut` keyword to make the values of the tuple mutable.
+* We still cannot add elements to the tuple. It's shape and the types of the fields are fixed.
 * Assign a new value to one of the elements using the dot-notation.
 
 ![](examples/tuples/change-tuple/src/main.rs)
@@ -87,4 +88,19 @@
 
 ![](examples/tuples/one-element/src/main.rs)
 ![](examples/tuples/one-element/out.out)
+
+## Enumerate over vector uses tuples
+{id: enumerate-over-vector}
+
+![](examples/tuples/enumerate-vector/src/main.rs)
+
+![](examples/tuples/enumerate-vector/out.out)
+
+
+## Return multiple values from a function
+{id: return-multiple-values-from-a-functions}
+
+![](examples/tuples/return-multiple-values/src/main.rs)
+
+![](examples/tuples/return-multiple-values/out.out)
 
