@@ -99,7 +99,9 @@ Publishers
 * [Manning](https://www.manning.com/)
 * [Pragmatic Bookshelf](https://pragprog.com/)
 * [O'Reilly](https://www.oreilly.com/)
+* [no starch press](https://nostarch.com/)
 
+* [Free ebooks](https://rust-ebooks.code-maven.com/)
 
 ## Crates (3rd party libraries)
 {id: crates-io}
