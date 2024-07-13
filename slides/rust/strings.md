@@ -172,6 +172,16 @@ This is a simple, and apparently partially incorrect solution. There is a crate 
 ![](examples/strings/split-string-whitespace/src/main.rs)
 ![](examples/strings/split-string-whitespace/out.out)
 
+## Split on newlines - use lines
+{id: split-on-newlines}
+{i: lines}
+{i: Lines}
+
+* The `lines` method returns a [Lines](https://doc.rust-lang.org/std/str/struct.Lines.html) struct, an iterator over the lines.
+
+![](examples/strings/split-lines/src/main.rs)
+![](examples/strings/split-lines/out.out)
+
 ## Append to string with push_str
 {id: append-to-string-with-push-str}
 {i: push}
