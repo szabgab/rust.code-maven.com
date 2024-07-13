@@ -386,4 +386,10 @@ cargo run
 cargo run --release
 ```
 
+## Add method to HashMap that sums the values
+{id: add-method-to-hashmap-that-sums-the-values}
+{i: HashMap}
+{i: TBD}
+
+![](examples/hashes/total-values-method/src/main.rs)
 
