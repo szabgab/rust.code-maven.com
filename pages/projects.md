@@ -18,5 +18,6 @@ tags:
 * [SEO Site Checker](https://site-checker.code-maven.com/) to analyze a web site and give recommendations on how to improve it Search Engine Optimiziation.
 * [Rustatic](https://rustatic.code-maven.com/) a simple web server to show static pages. Especially during development of static sites.
 * [Meet-OS](https://meet-os.com/) a platform to organize meetings.
+* [Free Rust ebooks](https://rust-ebooks.code-maven.com/)
 * [My Crates](https://crates.io/users/szabgab)
 
