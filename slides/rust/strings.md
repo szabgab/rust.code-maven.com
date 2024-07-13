@@ -343,4 +343,3 @@ let text = "1213 456 78843978523 3224 2421";
 ![](examples/strings/count-digits/src/main.rs)
 ![](examples/strings/count-digits/out.out)
 
-

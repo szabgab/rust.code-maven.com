@@ -375,3 +375,15 @@ showing how Rust makes us avoid it. So far this code has compilation errors.
 
 ![](examples/other/memory-leak/src/main.rs)
 
+## Debug assertions
+{id: debug-assertions}
+
+![](examples/other/debug-assertions/src/main.rs)
+
+```
+cargo run
+
+cargo run --release
+```
+
+
