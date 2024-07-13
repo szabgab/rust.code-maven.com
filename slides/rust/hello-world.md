@@ -73,7 +73,7 @@ rustc src/main.rs
 {id: hello-world-with-cargo}
 {i: cargo}
 
-* Cargo is the package management system of Rust
+* Cargo is the package management, dependency management, and build system of Rust.
 * `cargo new hello-world` creates a new folder called `hello-world`
 * With a file called `Cargo.toml`
 * A folder called `src` and  a file `src/main.rs` with the hello world code.

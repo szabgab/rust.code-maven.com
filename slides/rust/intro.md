@@ -79,6 +79,13 @@
 * [Rust for Rustaceans](https://rust-for-rustaceans.com/)
 * [Zero To Production In Rust](https://www.zero2prod.com/)
 
+
+Publishers
+* [Manning](https://www.manning.com/)
+* [Pragmatic Bookshelf](https://pragprog.com/)
+* [O'Reilly](https://www.oreilly.com/)
+
+
 ## Crates (3rd party libraries)
 {id: crates-io}
 
