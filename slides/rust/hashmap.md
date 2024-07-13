@@ -227,3 +227,47 @@
 
 ![](examples/hashes/structs-as-keys/out.out)
 
+## Merge HashMaps (extend)
+{id: merge-hashmaps}
+{i: extend}
+
+* If the same key appears twice, the value of the second one wins.
+
+![](examples/hashes/merge/src/main.rs)
+![](examples/hashes/merge/out.out)
+
+## Merge two HashMaps adding the values
+{id: merge-hashmaps-adding-the-values}
+{i: HashMap}
+
+Given
+
+```
+{
+    "a" : 1,
+    "b" : 2,
+}
+
+{
+    "a" : 3,
+    "c" : 5,
+}
+```
+
+Adding them together should result in
+
+```
+{
+    "a" : 4,
+    "b" : 2,
+    "c" : 5,
+}
+```
+
+
+
+![](examples/hashes/total-values/src/main.rs)
+
+![](examples/hashes/total-values/out.out)
+
+

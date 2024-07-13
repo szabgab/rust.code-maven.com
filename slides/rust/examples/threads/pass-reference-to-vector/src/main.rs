@@ -10,7 +10,7 @@ fn main() {
     ]);
 
     println!("{:?}", animals);
-    {
+    for _ in 1..4 {
         let animals = animals.clone();
         let handle = std::thread::spawn(move || {
             list_animals(&animals);
@@ -22,6 +22,6 @@ fn main() {
 
 fn list_animals(animals: &Vec<String>) {
     for animal in animals {
-        println!("{}", animal);
+        println!("{:?} {}", std::thread::current().id(), animal);
     }
 }
