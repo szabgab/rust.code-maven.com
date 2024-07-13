@@ -1,5 +1,5 @@
 # Strings in Rust
-{id: rust-strings}
+{id: strings}
 
 ## Create a String
 {id: create-string}
@@ -34,6 +34,15 @@
 
 ![](examples/strings/length/src/main.rs)
 ![](examples/strings/length/out.out)
+
+
+## Capacity of string
+{id: capacity-of-string}
+{i: capacity}
+
+![](examples/strings/capacity/src/main.rs)
+
+![](examples/strings/capacity/out.out)
 
 
 ## Rust - string ends with
