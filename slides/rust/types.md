@@ -9,6 +9,7 @@
 * Floating point: `f32`, `f64`.
 * [minimum and maximum values of numeric types](https://rust.code-maven.com/minimum-and-maximum-values-of-numeric-types)
 * [size of integers in Python](https://python.code-maven.com/size-of-integer-in-python)
+* unit `()`
 
 * Boolean: `bool`: (`true`, `false`).
 * Char: `char`

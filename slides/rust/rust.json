@@ -62,6 +62,7 @@
         "macros.md",
         "egui.md",
         "sqlite.md",
+        "binary.md",
         "other.md"
     ]
 }
