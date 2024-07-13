@@ -1,9 +1,14 @@
 use std::sync::Arc;
 
 fn main() {
-    let animals = Arc::new(Vec::from_iter(
-        ["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_string()),
-    ));
+    let animals = Arc::new(vec![
+        String::from("mouse"),
+        String::from("elephant"),
+        String::from("cat"),
+        String::from("dog"),
+        String::from("giraffe"),
+    ]);
+
     println!("{:?}", animals);
     {
         let animals = animals.clone();
