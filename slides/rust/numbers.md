@@ -323,7 +323,10 @@ cargo test
 ## Exercise: Rectangle ARGS with protection
 {id: exercise-rectangle-args-with-protection}
 
-* Improve the previous solution by handling the overflow of the computation somehow.
+* Change the previous solution to have a function that accepts 2 `u8` values and returns the area as `u8`.
+* What should happen if the two numbers are both 20?
+* One solution should return 255 in that case.
+* You might provide other solutions as well, but for now this one is enough.
 
 
 ## Exercise: Rectangle add tests
@@ -340,4 +343,8 @@ cargo test
 * Move the "business logic" (the computation) to one or more functions.
 * Write tests to verify the functions.
 
+## Solution: Rectangle ARGS with protection
+{id: solution-rectangle-args-with-protection}
+
+![](examples/numbers/rectangle-u8/src/main.rs)
 
