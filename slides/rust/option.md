@@ -14,3 +14,12 @@
 
 ![](examples/option/checked-add/src/main.rs)
 
+
+## Get language function returning Option
+{id: get-language-function}
+{i: Option}
+{i: match}
+
+![](examples/option/get-language/src/main.rs)
+
+
