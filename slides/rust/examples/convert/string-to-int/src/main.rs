@@ -5,7 +5,7 @@ fn main() {
 
     let number: i32 = text
         .parse()
-        .expect("Could not convert to i32");
+        .unwrap();
 
     println!("{number}", );
     println!("{}", number + 1);
@@ -16,4 +16,13 @@ fn main() {
         .expect("Could not convert to i32");
     println!("{number}", );
     println!("{}", number + 1);
+
+
+
+    let text = "3.14";
+    let number = text
+        .parse::<i32>()
+        .unwrap();
+        //.expect("Could not convert to i32");
+    println!("{number}", );
 }
