@@ -359,6 +359,13 @@ let text = "1213 456 78843978523 3224 2421";
 
 ![](examples/strings/count-digits/out.out)
 
+## Exercise: concatenate strings
+{id: exercise-concatenate-strings}
+
+Write two programs.
+
+* Get two strings on the command line, concatenate them and print them.
+* Ask the user for two string on STDIN and concatenate them.
 
 ## Exercise: is it a palindrome?
 {id: exercise-palindrome}
