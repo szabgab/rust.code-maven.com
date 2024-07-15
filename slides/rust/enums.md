@@ -1,6 +1,17 @@
 # Enum
 {id: enum}
 
+## Enum to represent exit status
+{id: enum-to-represent-exit-status}
+
+![](examples/enums/exit-status/src/main.rs)
+
+## Enum to represent exit code
+{id: enum-to-represent-exit-code}
+
+![](examples/enums/exit-code/src/main.rs)
+
+
 ## Simple enumeration
 {id: simple-enumeration}
 
