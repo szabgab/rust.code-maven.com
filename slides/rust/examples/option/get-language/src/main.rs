@@ -1,10 +1,24 @@
 #![allow(dead_code)]
 fn main() {
+    for ext in ["pl", "c"] {
+        let lang = get_language(ext);
+        println!("{:?}", lang);
+        match lang {
+            None => (),
+            Some(val) => println!("{}", val),
+        };
+
+        if let Some(val) = lang {
+            println!("if: {}", val);
+        } else {
+            println!("we had none");
+        }
+    }
 }
 
 fn get_language_empty_string(ext: &str) -> &str {
     if ext == "rs" {
-       return "rust"; 
+        return "rust";
     }
     if ext == "py" {
         return "python";
@@ -16,7 +30,6 @@ fn get_language_empty_string(ext: &str) -> &str {
     ""
 }
 
-
 fn get_language_empty_string_match(ext: &str) -> &str {
     match ext {
         "rs" => "rust",
@@ -25,7 +38,6 @@ fn get_language_empty_string_match(ext: &str) -> &str {
         _ => "",
     }
 }
-
 
 fn get_language(ext: &str) -> Option<&str> {
     match ext {
@@ -63,5 +75,4 @@ mod tests {
         assert_eq!(get_language("pl"), Some("perl"));
         assert_eq!(get_language("qqrq"), None);
     }
-
 }
