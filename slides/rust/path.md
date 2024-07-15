@@ -105,4 +105,9 @@ dotless         None
 
 ![](examples/path/list-dir/out.out)
 
+## List dir recursively
+{id: list-dir-recursively}
+
+![](examples/iterators/list-dir-recursively/src/main.rs)
+
 
