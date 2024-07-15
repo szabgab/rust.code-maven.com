@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum ExitCode {
     Success,
@@ -9,7 +8,7 @@ fn main() {
     let args = std::env::args().collect::<Vec<_>>();
     let exit = if args.len() == 2 {
         ExitCode::Success
-    } else if args.len() < 2 { 
+    } else if args.len() < 2 {
         ExitCode::Failure(1)
     } else {
         ExitCode::Failure(2)
@@ -17,9 +16,14 @@ fn main() {
 
     println!("{exit:?}");
     let code = match exit {
-        ExitCode::Success => println!("success"),
-        ExitCode::Failure(err) => println!("Error: {err}"),
+        ExitCode::Success => {
+            println!("success");
+            0
+        }
+        ExitCode::Failure(err) => {
+            println!("Error: {err}");
+            err
+        }
     };
     println!("{:?}", code);
-
 }
