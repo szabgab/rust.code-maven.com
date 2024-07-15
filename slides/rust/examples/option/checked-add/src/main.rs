@@ -1,9 +1,10 @@
 fn main() {
+    nulled_area(20,30);
 }
-
 
 fn nulled_area(width: u8, length: u8) -> u8 {
     let area_option = width.checked_mul(length);
+    //println!("{:?}", area_option);
     match area_option {
         Some(area) => area,
         None => 0,
