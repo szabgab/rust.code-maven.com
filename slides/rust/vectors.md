@@ -158,9 +158,6 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 * Write a function that given a vector of integers it will return the median.
 
-![](examples/vectors/median/src/main.rs)
-![](examples/vectors/median/out.out)
-
 ## Exercise: ROT13
 {id: rot13}
 
@@ -168,6 +165,13 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 * If we call the function again with the result we should get back the original string.
 
 ![](examples/vectors/rot13/src/main.rs)
+
+## Solution: Median
+{id: solution-median}
+
+![](examples/vectors/median/src/main.rs)
+![](examples/vectors/median/out.out)
+
 
 ## Chars to string
 {id: chars-to-string}
