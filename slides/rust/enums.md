@@ -120,12 +120,13 @@ Basically we need to implement the operation that allows use to compare two valu
 ![](examples/enums/colors-struct/src/main.rs)
 ![](examples/enums/colors-struct/out.out)
 
-## Enums with embedded values and comparing them with match
-{id: enums-with-embedded-values}
-{i: enum}
+## Exercise: enum for programming languages
+{id: exercise-enum-for-programming-languages}
 
-![](examples/enums/colors-enum-with-value/src/main.rs)
-![](examples/enums/colors-enum-with-value/out.out)
+* Create an enum representing "all" the programming languages.
+* Add a constructor to return the enum based on the file extension.
+* Remember, Perl uses both `pl` and `pm` as extensions.
+* Write tests that will check some of the cases.
 
 ## The Result enum
 {id: the-result-enum}
