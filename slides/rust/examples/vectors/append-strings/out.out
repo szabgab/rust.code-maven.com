@@ -1,0 +1,6 @@
+ 2  2 0x7ffcda3de400  0x5aae5be7fb80 '["apple", "banana"]'
+ 3  3 0x7ffcda3de838  0x5aae5be7fc00 '["peach", "kiwi", "mango"]'
+ 4  4 0x5aae5be7fc18  0x5aae5be7fc70 '"kiwi"'
+ 4  4 0x5aae5be7fcf8  0x5aae5be7fc70 '"kiwi"'
+ 5  5 0x7ffcda3de400  0x5aae5be7fcb0 '["apple", "banana", "peach", "kiwi", "mango"]'
+ 0  3 0x7ffcda3de838  0x5aae5be7fc00 '[]'

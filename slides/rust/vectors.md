@@ -108,10 +108,25 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/extend-strings/src/main.rs)
 ![](examples/vectors/extend-strings/out.out)
 
+
+## Append vector of Strings (moving over elements)
+{id: vector-append-strings}
+{i: append}
+
+* This will empty the second vector.
+
+![](examples/vectors/append-strings/src/main.rs)
+![](examples/vectors/append-strings/out.out)
+
+
 ## Split string into vector
 {id: split-string-into-vector}
 {i: split}
 {i: vec}
+
+* [split](https://doc.rust-lang.org/std/primitive.str.html#method.split) method returning an iterator called [Split](https://doc.rust-lang.org/std/str/struct.Split.html).
+
+* [split_whitespace](https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace) method returning an iterator called [SplitWhitespace](https://doc.rust-lang.org/std/str/struct.SplitWhitespace.html).
 
 ![](examples/vectors/split-string-into-vector/src/main.rs)
 ![](examples/vectors/split-string-into-vector/out.out)
