@@ -82,10 +82,12 @@ cargo run ../person.json
 ```
 cargo run ../person.json
 ```
+![](examples/json/read-json-from-reader-to-struct/data.json)
 
 ![](examples/json/read-json-from-reader-to-struct/src/main.rs)
 
 ![](examples/json/read-json-from-reader-to-struct/out.out)
+
 
 ## Read complex JSON
 {id: read-complex-json}
@@ -189,8 +191,11 @@ cargo run ../person.json
 * [serde](https://crates.io/crates/serde)
 * [serde_json](https://crates.io/crates/serde_json)
 
+
 ![](examples/json/json-serialize-struct/Cargo.toml)
 ![](examples/json/json-serialize-struct/src/main.rs)
+
+![](examples/json/json-serialize-struct/out.out)
 
 ## Serialize struct and Deserialize JSON
 {id: serialize-struct-deserialize-json}
@@ -235,6 +240,7 @@ cargo run ../person.json
 
 ![](examples/json/json-serialize-struct-with-date/Cargo.toml)
 ![](examples/json/json-serialize-struct-with-date/src/main.rs)
+![](examples/json/json-serialize-struct-with-date/out.out)
 
 * Deserialize into struct
 * Read multi-json files (the result of a json-based logger)

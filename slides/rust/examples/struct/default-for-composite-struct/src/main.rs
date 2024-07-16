@@ -1,3 +1,4 @@
+#![allow(clippy::derivable_impls)]
 
 #[derive(Debug)]
 #[allow(dead_code)]

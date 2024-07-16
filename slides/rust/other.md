@@ -384,4 +384,11 @@ cargo run --release
 {i: TBD}
 
 ![](examples/hashes/total-values-method/src/main.rs)
+![](examples/hashes/total-values-method/out.out)
+
+## Passing string to function
+{id: passing-string-to-function}
+{i: TBD}
+
+![](examples/other/passing-string-to-function/src/main.rs)
 
