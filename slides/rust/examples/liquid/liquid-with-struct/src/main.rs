@@ -23,10 +23,10 @@ fn main() {
         ").unwrap();
 
     let car = Car {
-        manufacturer: "Ford".to_string(),
+        manufacturer: String::from("Ford"),
         electric: false,
         gears: 5,
-        names: vec!["Mustang".to_string(), "Anglia".to_string()],
+        names: vec![String::from("Mustang"), String::from("Anglia")],
     };
     //println!("manufacturer: {}", car.manufacturer);
     //println!("electric: {}", car.electric);

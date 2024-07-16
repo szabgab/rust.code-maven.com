@@ -17,7 +17,7 @@ struct Thing {
 
 fn main() {
     let thing = Thing {
-        name: "Foo Bar".to_string(),
+        name: String::from("Foo Bar"),
         number: 42,
         numbers: vec![23, 19],
         now: Utc::now(),

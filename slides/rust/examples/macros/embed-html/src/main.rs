@@ -15,10 +15,7 @@ fn main() {
     println!("{}", html);
     assert_eq!(html, "<div><h2>Title</h2><hr></div>");
 
-
-
-
-    let name = "Foo".to_string();
+    let name = String::from("Foo");
 
     let html = html!(<div>"hello "{name}</div>);
     println!("{}", html);

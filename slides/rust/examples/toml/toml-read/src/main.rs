@@ -32,7 +32,7 @@ fn main() {
 }
 
 fn parse_toml() {
-    let text = "
+    let text = String::from("
 name = 'bar'
 year = 2023
 
@@ -47,7 +47,7 @@ name = 'other thing'
 toml = '0.5'
 yaml = '0.9'
 serde = { version = '1.0', features = ['derive'] }
-    ".to_string();
+    ");
 
 
     let config: Config = toml::from_str(&text).unwrap();

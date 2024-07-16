@@ -10,7 +10,7 @@ fn main() {
     for capture in re.captures_iter(text) {
         println!("{}", &capture[0]);
 
-        results.push(capture[0].to_string());
+        results.push(capture[0].to_owned());
     }
 
     println!("{:?}", results);

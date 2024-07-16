@@ -1,6 +1,6 @@
 
 fn main() {
-    let animals = Vec::from_iter(["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_string()));
+    let animals = Vec::from_iter(["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_owned()));
     println!("{:?}", animals);
     std::thread::scope(|s| {
         s.spawn(|| list_animals(&animals) );

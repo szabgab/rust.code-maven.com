@@ -34,6 +34,6 @@ fn get_filename() -> String {
         eprintln!("Usage: {} FILENAME", args[0]);
         std::process::exit(1);
     }
-    args[1].to_string()
+    args[1].to_owned()
 }
 

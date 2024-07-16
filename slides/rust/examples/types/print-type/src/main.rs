@@ -8,7 +8,7 @@ fn main() {
     let an_str = "Hello";
     print_type(&an_str);
 
-    let a_string = "World".to_string();
+    let a_string = String:from("World");
     print_type(&a_string);
 
     let a_vector = vec![3, 4, 5];
