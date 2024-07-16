@@ -12,13 +12,13 @@ fn main() {
         Something {number: 11, text: String::from("medium"), numbers: vec![11, 12]},
         Something {number: 101, text: String::from("large"), numbers: vec![101]},
     ];
-    dbg!(&va);
+    println!("{:#?}", va);
 
     //let vb = &va.iter().collect::<Vec<&Something>>();
     let vb = &va.iter().collect::<Vec<_>>();
 
     let v_big = &vb.iter().filter(|thing| thing.number > 20).collect::<Vec<_>>();
     //let v_big = &vb.into_iter().filter(|thing| thing.number > 20).collect::<Vec<_>>();
-    dbg!(&v_big);
-    dbg!(&vb);
+    println!("{:#?}", v_big);
+    println!("{:#?}", vb);
 }

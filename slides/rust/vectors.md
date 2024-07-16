@@ -301,12 +301,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: iter_into}
 
 ![](examples/vectors/filter-numbers-iter-into/src/main.rs)
+![](examples/vectors/filter-numbers-iter-into/out.out)
 
 
 ## filter numbers by named function
 {id: filter-numbers-by-named-function}
 
 ![](examples/vectors/filter-numbers-by-function/src/main.rs)
+![](examples/vectors/filter-numbers-by-function/out.out)
 
 ## filter string
 {id: filter-string}
@@ -321,46 +323,56 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ## Two references to the same vector
 {id: two-refernces-to-the-same-vector}
+{i: TBD}
 
 ![](examples/vectors/two-references-to-the-same-vector/src/main.rs)
-
+![](examples/vectors/two-references-to-the-same-vector/out.out)
 
 ## Filter vector of structs (cloning)
 {id: filter-vector-of-structs-cloning}
 {i: filter}
 {i: cloned}
 {i: Clone}
+{i: TBD}
 
 ![](examples/vectors/filter-vector-of-structs-with-clone/src/main.rs)
+![](examples/vectors/filter-vector-of-structs-with-clone/out.out)
 
 ## Convert vector of structs to vector of references
 {id: convert-vector-of-structs-to-vector-of-references}
+{i: TBD}
 
 ![](examples/vectors/convert-vector-of-structs-to-vector-of-references/src/main.rs)
+![](examples/vectors/convert-vector-of-structs-to-vector-of-references/out.out)
 
 
 ## Filter vector of structs without copy
 {id: filter-vector-of-structs-without-copy}
+{i: TBD}
 
 ![](examples/vectors/filter-vector-of-structs/src/main.rs)
+![](examples/vectors/filter-vector-of-structs/out.out)
 
 ## Accessing the last element of a vector
 {id: accessing-the-last-element-of-a-vector}
 {i: len}
 {i: last}
+{i: TBD}
 
 * Unlike Python and Perl, rust won't let us use a negative index in a vector so we won't be able to access the last element using `vector_name[-1]`
 * We can either use `vector_name.len()-1` or
-* We can use `vector_name.last(), but in this case we get an `Option` that can be `None` as well.
+* We can use `vector_name.last()`, but in this case we get an `Option` that can be `None` as well.
 
 * If we access a seemingly arbitrary element that we calculated using `vector_name.len()-1` then either we get back a value or Rust will panic if we gave an index too big.
 * On the other hand using `last` we are more protected. In that case we either get a value or `None` if the vector was empty.
 
 ![](examples/vectors/last-vec-index/src/main.rs)
+![](examples/vectors/last-vec-index/out.out)
 
 ## Insert element in vector
 {id: instert-element-in-vector}
 {i: insert}
+{i: TBD}
 
 ![](examples/vectors/insert-element-in-vector/src/main.rs)
 
@@ -370,6 +382,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: get}
 {i: is_none}
 {i: is_some}
+{i: TBD}
 
 * If we have a vector that some of the elements can be `None` then the other elements must be `Some`-values and the whole thing must be defined using `Option`.
 * If we try to access an element in a vector that is out of range we get a run-time panic.
@@ -387,6 +400,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: None}
 {i: Some}
 {i: get}
+{i: TBD}
 
 ![](examples/vectors/options/src/main.rs)
 ![](examples/vectors/options/out.out)
@@ -398,12 +412,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: capacity}
 {i: with_capacity}
 {i: resize}
+{i: TBD}
 
 ![](examples/vectors/with-capacity/src/main.rs)
 ![](examples/vectors/with-capacity/out.out)
 
 ## References to numbers
 {id: references-to-numbers}
+{i: TBD}
 
 ![](examples/other/references-to-numbers/src/main.rs)
 ![](examples/other/references-to-numbers/out.out)
@@ -448,17 +464,20 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/create-from-iter/out.out)
 
 
-## Count words using two vectors
-{id: count-words-using-two-vectors}
+## Exercise: Count words using two vectors
+{id: exercise-count-words-using-two-vectors}
 
 * Given a string that consists of words and white-spaces, count how many times each word appears!
 * In this solution we use two vectors. A much better solution would be to use `HashMap`, but in this example I wanted to show the solution with two vectors.
 * One vector will hold the list of distinct words.
 * The second vector will hold the count for each word.
 
+
+## Solution: Count words using two vectors
+{id: solution-count-words-using-two-vectors}
+
+
 ![](examples/vectors/count-words/src/main.rs)
 ![](examples/vectors/count-words/out.out)
-
-
 
 

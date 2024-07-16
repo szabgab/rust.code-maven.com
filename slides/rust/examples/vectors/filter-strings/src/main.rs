@@ -5,11 +5,15 @@ fn main() {
         String::from("snake"),
         String::from("dog"),
     ];
-    dbg!(&animals);
+    println!("{:?}", &animals);
 
     let same_animals: Vec<String> = animals.iter().filter(|_animal| true).cloned().collect();
-    dbg!(&same_animals);
+    println!("{:?}", &same_animals);
 
-    let short_animals: Vec<String> = animals.iter().filter(|animal| animal.len() < 4).cloned().collect();
-    dbg!(&short_animals);
+    let short_animals: Vec<String> = animals
+        .iter()
+        .filter(|animal| animal.len() < 4)
+        .cloned()
+        .collect();
+    println!("{:?}", &short_animals);
 }

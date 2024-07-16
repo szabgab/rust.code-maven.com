@@ -12,9 +12,9 @@ fn main() {
         Something {number: 11, text: String::from("medium"), numbers: vec![11, 12]},
         Something {number: 101, text: String::from("large"), numbers: vec![101]},
     ];
-    dbg!(&va);
+    println!("{:#?}", va);
 
-    let vb = &va;
-    dbg!(&vb);
-    dbg!(&va);
+    let vb = &va;   // use & to borrow
+    println!("{:#?}", vb);
+    println!("{:#?}", va);
 }

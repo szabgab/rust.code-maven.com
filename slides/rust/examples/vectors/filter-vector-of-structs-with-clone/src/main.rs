@@ -13,12 +13,12 @@ fn main() {
         Something {number: 11, text: String::from("medium"), numbers: vec![11, 12]},
         Something {number: 101, text: String::from("large"), numbers: vec![101]},
     ];
-    dbg!(&va);
+    println!("{:#?}", &va);
 
     // This needs the Clone trait above and I am not sure if this does not mean that we duplicate
     // the data.
     let v_big = va.iter().filter(|thing| thing.number > 20).cloned().collect::<Vec<Something>>();
     //let v_big = &va.into_iter().filter(|thing| thing.number > 20).collect::<Vec<Something>>();
-    dbg!(&v_big);
-    dbg!(&va);
+    println!("{:#?}", &v_big);
+    println!("{:#?}", &va);
 }

@@ -13,9 +13,8 @@ fn main() {
     println!("{:?}", &positive_numbers);
 
     let big_numbers: Vec<i32> = numbers
-        .iter()
+        .into_iter()
         .filter(|number| number > &&12)
-        .cloned()
         .collect();
     println!("{:?}", &big_numbers);
 }
