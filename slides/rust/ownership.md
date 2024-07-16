@@ -146,7 +146,7 @@
 ![](examples/ownership/pass-ownership/src/main.rs)
 ![](examples/ownership/pass-ownership/out.out)
 
-## Rust ownership borrow string in function
+## Borrow String when passing to a function
 {id: rust-ownership-borrow-string-in-function}
 {i: &}
 
@@ -157,7 +157,7 @@
 ![](examples/ownership/string-function-borrow/src/main.rs)
 ![](examples/ownership/string-function-borrow/out.out)
 
-## Rust ownership string in function
+## Borrow &str when passing String to a function
 {id: rust-ownership-string-in-function}
 
 ![](examples/ownership/string-function/src/main.rs)
@@ -168,6 +168,7 @@
 {id: rust-function-to-change-string}
 
 ![](examples/ownership/change-string/src/main.rs)
+![](examples/ownership/change-string/out.out)
 
 ## Rust function to change integer (i32)
 {id: rust-function-to-change-integer}
@@ -180,10 +181,19 @@
 {id: lifetime-annotation}
 
 ![](examples/ownership/lifetime-annotation/src/main.rs)
+![](examples/ownership/lifetime-annotation/out.out)
 
 ## Change vector of structs
 {id: change-vector-of-structs}
 
 ![](examples/ownership/change-vector-of-structs/src/main.rs)
 ![](examples/ownership/change-vector-of-structs/out.out)
+
+## Exercise: concatenate file content
+{id: exercise-concatenate-file-content}
+
+Write a function that received the name of two files and returns the content of the two files concatenated in both directions.
+
+e.g. If file 1 contains "cat" and file 2 contains "dog" then return "catdog" and "dogcat"
+
 

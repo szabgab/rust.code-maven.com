@@ -7,11 +7,11 @@ fn main() {
     display(&text);
 }
 
-fn display(txt: &String) {
+fn display(txt: &str) {
     println!("Display: {txt}")
 }
 
 fn change(txt: &mut String) {
-    *txt = String::from("Bar");
+    //*txt = String::from("Bar");
+    txt.push_str(" Bar");
 }
-

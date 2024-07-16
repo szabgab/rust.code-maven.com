@@ -3,8 +3,6 @@ fn main() {
     println!("{name}");
     greet(&name);
     println!("{name}");
-    greet(&name);
-    println!("{name}");
 }
 
 fn greet(text: &String) {
