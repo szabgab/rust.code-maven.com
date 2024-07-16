@@ -1,33 +1,59 @@
 # Enum
 {id: enum}
 
+## Why enums
+{id: why-enums}
+
+* [Defining an enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
+
+* An enum type has `variants`.
+* `match` pattern matching operations must be exhaustive, this helps us ensuring that we handled every case.
+
 ## Enum to represent exit status
 {id: enum-to-represent-exit-status}
+
+* We define a **type** called `ExitCode` that has two **variants**: `Success` and `Failure`.
+* We can then, based on the results of our porgram set the value of exit.
+
+* However, this is a bit limited as we can only indicate failure without the details we are used to - which is a number.
+
+* By default Rust does not implement the `Debug` trait for an arbitrary `enum` so we `derive` from the `Debug` trait to be able to print the values using the `:?` placeholder.
+* We can also observe that `if`-statements can have a return value.
 
 ![](examples/enums/exit-status/src/main.rs)
 
 ## Enum to represent exit code
 {id: enum-to-represent-exit-code}
 
+* We can also define `Failure` variant of the `ExitCode` type to have an number - a small number holding a value between 0-255.
+* We can use a `match` statement to extract the actual number from the `Failure`.
+
+
 ![](examples/enums/exit-code/src/main.rs)
 
+* Apparently the standard library of Rust uses a struct to represent an [ExitCode](https://doc.rust-lang.org/std/process/struct.ExitCode.html).
 
-## Simple enumeration
-{id: simple-enumeration}
+## Enumeration of the 7 days of the week
+{id: enumeration-of-days-of-week}
+
+* We can then assign one of the days to a variable and then we can use a `match` to know which day it is.
 
 ![](examples/enums/weekdays-simple/src/main.rs)
 
+![](examples/enums/weekdays-simple/out.out)
 
-## Enumeration
+
+## Enumeration with non-exhaustive patterns
 {id: enumeration}
 {i: enum}
-{i: PartialEq}
 {i: dead_code}
 
-* [Defining an enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
-
+* In this example in the `match` we don't hanle every variant of the enum and thus we have to handle the "deafult" case using and `_` underscore.
+* Try running this code after commenting out the row handline `_`.
 
 ![](examples/enums/weekdays/src/main.rs)
+
+{i: PartialEq}
 
 ## Enumeration colors
 {id: enumeration-colors}

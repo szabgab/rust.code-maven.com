@@ -1,4 +1,4 @@
-#[derive(PartialEq, Debug)]
+#[derive(Debug)]
 #[allow(dead_code)]
 enum Weekday {
     Monday,
@@ -10,16 +10,20 @@ enum Weekday {
     Sunday,
 }
 
-// We need the allow dead_code beacause in this example we did not use all the values that were listed in the enum
+// We need the allow dead_code beacause in this example
+// we did not use all the values that were listed in the enum
 
 fn main() {
     let today = Weekday::Sunday;
-    let other_day = Weekday::Monday;
-    println!("{:?}", today == other_day);
 
     println!("{:?}", today);
     println!();
-    for day in [Weekday::Monday, Weekday::Tuesday, Weekday::Saturday, Weekday::Sunday] {
+    for day in [
+        Weekday::Monday,
+        Weekday::Tuesday,
+        Weekday::Saturday,
+        Weekday::Sunday,
+    ] {
         println!("{:?}", day);
         match day {
             Weekday::Sunday => println!("Today is {day:?}, it is a day off in Europe"),
@@ -28,4 +32,3 @@ fn main() {
         }
     }
 }
-
