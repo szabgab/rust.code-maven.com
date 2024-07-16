@@ -257,6 +257,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: collect}
 
 ![](examples/vectors/map-on-integers/src/main.rs)
+![](examples/vectors/map-on-integers/out.out)
 
 ## Update values in vector of structs using map
 {id: update-values-in-vector-of-structs-using-map}
@@ -266,6 +267,13 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ## map is lazy
 {id: map-is-lazy}
+
+![](examples/vectors/map-is-lazy/src/main.rs)
+![](examples/vectors/map-is-lazy/out.out)
+
+
+## map is lazy that can cause problems
+{id: map-is-lazy-with-problems}
 
 ![](examples/vectors/map1/src/main.rs)
 ![](examples/vectors/map1/out.out)
