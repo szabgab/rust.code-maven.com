@@ -1,7 +1,7 @@
 fn main() {
     let animals = vec![
-        ("elephant", "huge", 100),
-        ("snake", "long", 3),
+        (String::from("elephant"), String::from("huge"), 100),
+        (String::from("snake"), String::from("long"), 3),
     ];
     println!("{:?}", animals);
     for animal in &animals {

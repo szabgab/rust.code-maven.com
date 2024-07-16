@@ -159,12 +159,10 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 * Write a function that given a vector of integers it will return the median.
 
 ## Exercise: ROT13
-{id: rot13}
+{id: exercise-rot13}
 
 * Implement a function that given a string will return it ROT13 encrypted version.
 * If we call the function again with the result we should get back the original string.
-
-![](examples/vectors/rot13/src/main.rs)
 
 ## Solution: Median
 {id: solution-median}
@@ -172,11 +170,24 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/median/src/main.rs)
 ![](examples/vectors/median/out.out)
 
+## Solution: ROT13
+{id: solution-rot13}
 
-## Chars to string
+
+![](examples/vectors/rot13/src/main.rs)
+
+
+## Convert vector of chars to String
 {id: chars-to-string}
+{i: iter}
+{i: into_iter}
+
+* The `into_iter` consumes the vector so we won't be able to use it again.
+* The `iter` allows for the reusing the iterator.
+
 
 ![](examples/vectors/chars-to-string/src/main.rs)
+![](examples/vectors/chars-to-string/out.out)
 
 ## Vector of tuples
 {id: vector-of-tuples}
@@ -212,6 +223,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: collect}
 
 ![](examples/vectors/join-integers/src/main.rs)
+![](examples/vectors/join-integers/out.out)
 
 ## Maximum value of a vector
 {id: maximum-vale-of-a-vector}
@@ -235,6 +247,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 * max and min by length
 
 ![](examples/vectors/get-longest-string/src/main.rs)
+![](examples/vectors/get-longest-string/out.out)
 
 
 ## Change vector using map
