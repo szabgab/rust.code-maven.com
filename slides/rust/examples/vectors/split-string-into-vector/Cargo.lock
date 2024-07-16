@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "split-string-into-vector"
+name = "split-to-vector"
 version = "0.1.0"

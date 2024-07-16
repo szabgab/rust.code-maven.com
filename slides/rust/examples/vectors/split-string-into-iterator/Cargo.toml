@@ -1,5 +1,5 @@
 [package]
-name = "split-to-vector"
+name = "split-string-into-vector"
 version = "0.1.0"
 edition = "2021"
 

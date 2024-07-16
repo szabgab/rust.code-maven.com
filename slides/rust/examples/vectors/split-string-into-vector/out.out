@@ -1,12 +1,6 @@
-mouse cat   oliphant
-mouse
-cat
-
-
-oliphant
--------
-mouse
-cat
-oliphant
+One
+Two
+Three
 -------
 ["mouse", "cat", "oliphant"]
+mouse

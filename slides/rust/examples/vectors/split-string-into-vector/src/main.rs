@@ -1,25 +1,17 @@
+
 fn main() {
+    let text = String::from("One=Two=Three");
+
+    let parts: Vec<&str> = text.split('=').collect();
+    println!("{}", parts[0]);
+    println!("{}", parts[1]);
+    println!("{}", parts[2]);
+    println!("-------");
+
     let text = String::from("mouse cat   oliphant");
-    println!("{text}");
-
-    let parts = text.split(' ');
-    //println!("{:?}", parts);
-    for part in parts {
-        println!("{}", part);
-    }
-    println!("-------");
-
-    let parts = text.split_whitespace();
-    //println!("{:?}", parts);
-    for part in parts {
-        println!("{}", part);
-    }
-    println!("-------");
-
-
-    //println!("{}", parts[0]); // cannot index into a value of type `SplitWhitespace<'_>`
-
-    let parts = text.split_whitespace();
-    let parts: Vec<&str> = parts.collect();
+    let parts = text.split_whitespace().collect::<Vec<_>>();
     println!("{:?}", parts);
+    println!("{}", parts[0]);
+
 }
+
