@@ -63,16 +63,26 @@ Basically we need to implement the operation that allows use to compare two valu
 
 ![](examples/enums/weekdays-manual-comparision/src/main.rs)
 
-## Enumeration colors
-{id: enumeration-colors}
+## Enumeration colors - functions and String
+{id: enumeration-colors-with-functions-and-string}
 {i: enum}
 {i: dead_code}
 {i: PartialEq}
 
-* Similar example with colors.
+* Similar example with colors with functions to convert to RGB and from RGB values.
 
-![](examples/enums/colors-partial-equal/src/main.rs)
-![](examples/enums/colors-partial-equal/out.out)
+![](examples/enums/colors-with-functions-using-strings/src/main.rs)
+![](examples/enums/colors-with-functions-using-strings/out.out)
+
+
+## Enumeration colors - functions and str
+{id: enumeration-colors-with-functions-and-str}
+
+* This example is similar, but instead of storing owned string we are using str in the enum.
+
+![](examples/enums/colors-with-functions-using-str/src/main.rs)
+![](examples/enums/colors-with-functions-using-str/out.out)
+
 
 ## Enum with method
 {id: enumeration-with-method}

@@ -1,5 +1,5 @@
 [package]
-name = "colors-partial-equal"
+name = "colors-with-functions-using-strings"
 version = "0.1.0"
 edition = "2021"
 
