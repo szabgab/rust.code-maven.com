@@ -348,6 +348,15 @@ and [is_alphanumeric](https://doc.rust-lang.org/std/primitive.char.html#method.i
 ![](examples/strings/is-alphabetic/src/main.rs)
 ![](examples/strings/is-alphabetic/out.out)
 
+## Compare memory address (pointer)
+{id: compare-memory-address}
+{i: std::ptr::addr_of}
+{i: addr_of}
+
+![](examples/strings/compare-memory-address/src/main.rs)
+![](examples/strings/compare-memory-address/out.out)
+
+
 ## Exercise: Count digits from string
 {id: exercise-count-digits-from-string}
 
