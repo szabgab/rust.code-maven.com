@@ -145,6 +145,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/sort-vector/src/main.rs)
 ![](examples/vectors/sort-vector/out.out)
 
+## Sort vector of strings using sorting condition
+{id: sort-vector-of-strings}
+{i: sort}
+{i: sort_by}
+
+![](examples/vectors/sort-strings/src/main.rs)
+![](examples/vectors/sort-strings/out.out)
+
 ## Exercise: Median
 {id: exercise-median}
 
