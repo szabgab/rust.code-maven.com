@@ -24,6 +24,7 @@
 * We can iterate over the elements of a vector using the `for .. in ..` loop construct.
 
 ![](examples/vectors/numbers-iterate/src/main.rs)
+![](examples/vectors/numbers-iterate/out.out)
 
 ## Mutable vector of numbers, append (push) values
 {id: mutable-numbers-vector}
@@ -35,6 +36,7 @@
 * We can **append** an element to the end of the vector using the `push` method.
 
 ![](examples/vectors/mutable-numbers-vector/src/main.rs)
+![](examples/vectors/mutable-numbers-vector/out.out)
 
 ## Mutable empty vector for numbers (push)
 {id: mutable-empty-vector-for-numbers}

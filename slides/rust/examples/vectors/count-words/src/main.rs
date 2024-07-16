@@ -1,5 +1,5 @@
 fn main() {
-    let text = "mouse cat cat oliphant";
+    let text = String::from("mouse cat cat oliphant");
     let parts = text.split_whitespace();
 
     let mut words:Vec<&str> = vec![];

@@ -1,5 +1,5 @@
 fn main() {
-    let mut numbers:Vec<i32> = vec![];
+    let mut numbers:Vec<i8> = vec![];
     println!("{:?}", numbers);
 
     let input = "42";
