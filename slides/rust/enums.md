@@ -84,22 +84,23 @@ Basically we need to implement the operation that allows use to compare two valu
 ![](examples/enums/colors-with-functions-using-str/out.out)
 
 
-## Enum with method
-{id: enumeration-with-method}
+## Enumeration colors - with method
+{id: enumeration-colors-with-method}
 {i: enum}
 {i: Debug}
 {i: impl}
 {i: self}
 
-![](examples/enums/enum-with-method/src/main.rs)
-![](examples/enums/enum-with-method/out.out)
+![](examples/enums/colors-with-method/src/main.rs)
+![](examples/enums/colors-with-method/out.out)
 
-## Enum with constructor
-{id: enumeration-with-constructor}
+## Enumeration colorse - with constructor
+{id: enumeration-colors-with-constructor}
 {i: impl}
 {i: Self}
 
-![](examples/enums/enum-with-constructor/src/main.rs)
+![](examples/enums/colors-with-constructor/src/main.rs)
+![](examples/enums/colors-with-constructor/out.out)
 
 ## Enumerate without PartialEq using match
 {id: enumerat-with-match}
