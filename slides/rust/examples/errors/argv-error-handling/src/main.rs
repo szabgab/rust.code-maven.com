@@ -42,7 +42,7 @@ fn main() {
 // }
 // fn get_name() -> String {
 //     let args: Vec<String> = env::args().collect();
-//     if args.len() == 2 { args[1].clone() } else { "".to_string() }
+//     if args.len() == 2 { args[1].clone() } else { String::new() }
 // }
 
 
@@ -74,8 +74,8 @@ fn run() {
 fn get_name() -> Result<String, String> {
     let args: Vec<String> = env::args().collect();
     match args.len().cmp(&2_usize) {
-        Ordering::Less => Err("Not enough parameters".to_string()),
-        Ordering::Greater => Err("Too many parameters".to_string()),
+        Ordering::Less => Err(String::from("Not enough parameters")),
+        Ordering::Greater => Err(String::from("Too many parameters")),
         Ordering::Equal => Ok(args[1].clone()),
     }
 }

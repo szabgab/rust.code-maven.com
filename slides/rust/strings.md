@@ -353,6 +353,8 @@ and [is_alphanumeric](https://doc.rust-lang.org/std/primitive.char.html#method.i
 {i: std::ptr::addr_of}
 {i: addr_of}
 
+* Another way to show that different pieces of strings are located in different places in the memory.
+
 ![](examples/strings/compare-memory-address/src/main.rs)
 ![](examples/strings/compare-memory-address/out.out)
 

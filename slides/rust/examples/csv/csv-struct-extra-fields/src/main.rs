@@ -28,13 +28,13 @@ struct Record {
     person: Person
 }
 fn get_text() -> String {
-    "abc".to_string()
+    String::from("abc")
 }
 fn get_zero() -> f32 {
     0.0
 }
 fn get_person() -> Person {
-    Person { name: "".to_string(), birth_year: 0 }
+    Person { name: String::new(), birth_year: 0 }
 }
 
 fn main() {

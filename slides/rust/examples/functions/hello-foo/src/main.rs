@@ -8,7 +8,7 @@ fn main() {
     greet(name);
     println!();
 
-    let name = "Bar".to_string();
+    let name = String::from("Bar");
     greet(&name);
     greet(&name);
 }

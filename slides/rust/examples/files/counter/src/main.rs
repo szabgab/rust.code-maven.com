@@ -11,7 +11,7 @@ fn main() {
             file.read_to_string(&mut content).unwrap();
         },
         Err(_) => {
-            content = "0".to_string();
+            content = String::from("0");
         },
     }
     let mut counter: i32 = content.trim().parse().expect("Wanted a number");

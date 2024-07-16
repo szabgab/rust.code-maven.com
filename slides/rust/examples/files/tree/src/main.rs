@@ -19,10 +19,10 @@ fn get_path() -> String {
 
     if args.len() == 2 {
         println!("{}", args[1]);
-        return args[1].to_string();
+        return args[1].to_owned();
     }
 
-    ".".to_string()
+    String::from(".")
 }
 
 

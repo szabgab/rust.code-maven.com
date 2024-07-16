@@ -8,13 +8,13 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        println!("Print input your guess");
+        println!("Input your guess: ");
 
         let mut guess = String::new();
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
-        guess = guess.trim().to_string();
+        guess = guess.trim().to_owned();
 
         if guess == "c" {
             println!("The secret number is {secret_number}");
