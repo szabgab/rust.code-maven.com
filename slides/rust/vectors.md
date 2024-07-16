@@ -77,18 +77,6 @@
 ![](examples/vectors/mutable-vector-of-strings/src/main.rs)
 ![](examples/vectors/mutable-vector-of-strings/out.out)
 
-## Count words using two vectors
-{id: count-words-using-two-vectors}
-
-* Given a string that consists of words and white-spaces, count how many times each word appears!
-* In this solution we use two vectors. A much better solution would be to use `HashMap`, but in this example I wanted to show the solution with two vectors.
-* One vector will hold the list of distinct words.
-* The second vector will hold the count for each word.
-
-![](examples/vectors/count-words/src/main.rs)
-![](examples/vectors/count-words/out.out)
-
-
 ## Stack and the capacity of a vector
 {id: stack-and-the-capacity-of-a-vector}
 {i: push}
@@ -102,16 +90,23 @@ Then how it reduces the length but keeps the allocated `capacity` as we `pop` ou
 
 Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
-![](examples/stack/src/main.rs)
-![](examples/stack/out.out)
+![](examples/vectors/stack/src/main.rs)
+![](examples/vectors/stack/out.out)
 
-
-## Vector extend (combining two vectors)
-{id: vector-extend}
+## Extend vectors of numbers (combining two vectors)
+{id: vector-extend-numbers}
 {i: extend}
 
-![](examples/vectors/extend/src/main.rs)
-![](examples/vectors/extend/out.out)
+![](examples/vectors/extend-numbers/src/main.rs)
+![](examples/vectors/extend-numbers/out.out)
+
+
+## Extend vector of Strings (combining two vectors)
+{id: vector-extend-strings}
+{i: extend}
+
+![](examples/vectors/extend-strings/src/main.rs)
+![](examples/vectors/extend-strings/out.out)
 
 ## Split string into vector
 {id: split-string-into-vector}
@@ -399,4 +394,19 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ![](examples/vectors/create-from-iter/src/main.rs)
 ![](examples/vectors/create-from-iter/out.out)
+
+
+## Count words using two vectors
+{id: count-words-using-two-vectors}
+
+* Given a string that consists of words and white-spaces, count how many times each word appears!
+* In this solution we use two vectors. A much better solution would be to use `HashMap`, but in this example I wanted to show the solution with two vectors.
+* One vector will hold the list of distinct words.
+* The second vector will hold the count for each word.
+
+![](examples/vectors/count-words/src/main.rs)
+![](examples/vectors/count-words/out.out)
+
+
+
 
