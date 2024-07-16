@@ -7,7 +7,7 @@
 * [Defining an enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
 
 * An enum type has `variants`.
-* `match` pattern matching operations must be exhaustive, this helps us ensuring that we handled every case.
+* `match` pattern matching operations must be exhaustive, this helps us ensuring that we handled every variant.
 
 ## Enum to represent exit status
 {id: enum-to-represent-exit-status}
@@ -92,6 +92,7 @@ Basically we need to implement the operation that allows use to compare two valu
 {i: self}
 
 ![](examples/enums/enum-with-method/src/main.rs)
+![](examples/enums/enum-with-method/out.out)
 
 ## Enum with constructor
 {id: enumeration-with-constructor}

@@ -32,16 +32,6 @@ fn from_rgb(rgb: &str) -> Color {
     }
 }
 
-// fn to_rgb<'a>(color: &Color) -> &'a str {
-//     return match color {
-//         Color::Black => "000000",
-//         Color::Red => "ff0000",
-//         Color::Green => "00ff00",
-//         Color::Blue => "0000ff",
-//         Color::White => "ffffff",
-//     }
-// }
-
 fn main() {
     let background = Color::Black;
     let foreground = Color::White;
@@ -51,7 +41,6 @@ fn main() {
 
     let experiment = from_rgb("ab89e2");
 
-    // This comparision requires the PartialEq trait
     println!("{}", background == foreground);
     println!("{}", background == ink);
     println!();
