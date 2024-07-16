@@ -1,6 +1,18 @@
 # Option
 {id: option}
 
+## The Option enum
+{id: the-option-enum}
+
+The [Option enum](https://doc.rust-lang.org/std/option/enum.Option.html).
+
+```
+enum Option<T> {
+    None,
+    Some(T),
+}
+```
+
 ## Create Option
 {id: create-option}
 {i: None}

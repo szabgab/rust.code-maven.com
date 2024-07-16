@@ -44,7 +44,7 @@
 
 
 ## Enumeration with non-exhaustive patterns
-{id: enumeration}
+{id: enumeration-non-exhaustive-match}
 {i: enum}
 {i: dead_code}
 
@@ -53,7 +53,15 @@
 
 ![](examples/enums/weekdays/src/main.rs)
 
+## Enumeration and manual comparision
+{id: enumeration-and-manual-comparision}
 {i: PartialEq}
+
+We can also compare variables holding enum variants, but for that to work we also need to derivede from the [ParialEq](https://doc.rust-lang.org/std/cmp/trait.PartialEq.html) trait.
+Basically we need to implement the operation that allows use to compare two values of this type.
+
+
+![](examples/enums/weekdays-manual-comparision/src/main.rs)
 
 ## Enumeration colors
 {id: enumeration-colors}
@@ -61,7 +69,7 @@
 {i: dead_code}
 {i: PartialEq}
 
-* Create an enum with some values
+* Similar example with colors.
 
 ![](examples/enums/colors-partial-equal/src/main.rs)
 ![](examples/enums/colors-partial-equal/out.out)
@@ -108,4 +116,15 @@
 ![](examples/enums/colors-enum-with-value/src/main.rs)
 ![](examples/enums/colors-enum-with-value/out.out)
 
+## The Result enum
+{id: the-result-enum}
+
+The [Result enum](https://doc.rust-lang.org/std/result/enum.Result.html)
+
+```
+pub enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+```
 
