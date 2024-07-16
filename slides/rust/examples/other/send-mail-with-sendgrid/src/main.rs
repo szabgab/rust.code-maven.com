@@ -5,9 +5,9 @@ use std::io::{BufRead, BufReader};
 
 fn main() {
     let sendgrid_api_key = get_key();
-    let to_address = "szabgab@gmail.com".to_string();
-    let to_name = "Gabor Szabo".to_string();
-    let subject = "Test mail".to_string();
+    let to_address = String::from("szabgab@gmail.com");
+    let to_name = String::from("Gabor Szabo");
+    let subject = String::from("Test mail");
 
     sendgrid(&sendgrid_api_key, &to_name, &to_address, &subject);
 }
@@ -22,7 +22,7 @@ fn get_key() -> String {
                 let parts = line.split('=');
                 let parts: Vec<&str> = parts.collect();
                 if parts[0] == "SENDGRID_API_KEY" {
-                    return parts[1].to_string();
+                    return parts[1].to_owned();
                 }
             }
             panic!("Could not find line");
@@ -48,7 +48,7 @@ fn sendgrid(api_key: &str, to_name: &str, to_address: &str, subject: &str) {
         .add_from_name("Original Sender")
         .add_subject(subject)
         .add_html("<h1>Hello from SendGrid!</h1>")
-        .add_header("x-cool".to_string(), "indeed")
+        .add_header(String::from("x-cool"), "indeed")
         .add_x_smtpapi(&x_smtpapi);
 
     match sg.send(mail_info) {

@@ -22,7 +22,7 @@ fn main() {
     io::stdin()
         .read_line(&mut op)
         .expect("Failed to get input");
-    op = op.trim().to_string();
+    op = op.trim().to_owned();
 
     print!("b: ");
     io::stdout().flush().expect("Oups");

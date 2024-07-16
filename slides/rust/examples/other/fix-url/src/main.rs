@@ -1,7 +1,7 @@
 fn main() {
     for site in [
-        "https://rust.code-maven.com".to_string(),
-        "https://rust.code-maven.com/".to_string(),
+        String::from("https://rust.code-maven.com"),
+        String::from("https://rust.code-maven.com/"),
     ] {
         process(url::Url::parse(&site).unwrap());
     }

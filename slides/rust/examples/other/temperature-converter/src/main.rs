@@ -19,7 +19,7 @@
 // }
 
 // fn calc() -> Result<String, String> {
-//     let filename = "input.json".to_string();
+//     let filename = String::from("input.json");
 //     let fh = std::fs::File::open(filename)?;
 //     println!("Hello, world!");
 //     ()
