@@ -1,7 +1,10 @@
 fn main() {
     let name = String::from("Foo Bar");
+    println!("{name}");
     greet(&name);
+    println!("{name}");
     greet(&name);
+    println!("{name}");
 }
 
 fn greet(text: &String) {

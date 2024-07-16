@@ -1,7 +1,20 @@
+macro_rules! prt {
+    ($var:expr) => {
+        println!(
+            "{:2} {:2} {:p} {:15?} '{}'",
+            $var.len(),
+            $var.capacity(),
+            &$var,
+            $var.as_ptr(),
+            $var
+        );
+    };
+}
+
 fn main() {
     let x = String::from("Foo Bar");
-    println!("{x}");
+    prt!(x);
     let y = x.clone();
-    println!("{y}");
-    println!("{x}");
+    prt!(x);
+    prt!(y);
 }
