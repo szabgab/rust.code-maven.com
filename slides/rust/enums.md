@@ -94,7 +94,7 @@ Basically we need to implement the operation that allows use to compare two valu
 ![](examples/enums/colors-with-method/src/main.rs)
 ![](examples/enums/colors-with-method/out.out)
 
-## Enumeration colorse - with constructor
+## Enumeration colors - with constructor
 {id: enumeration-colors-with-constructor}
 {i: impl}
 {i: Self}
@@ -124,10 +124,16 @@ Basically we need to implement the operation that allows use to compare two valu
 ## Exercise: enum for programming languages
 {id: exercise-enum-for-programming-languages}
 
-* Create an enum representing "all" the programming languages.
+* Create an enum representing "all" the programming languages. (py for Python, rs for Rust)
 * Add a constructor to return the enum based on the file extension.
 * Remember, Perl uses both `pl` and `pm` as extensions.
 * Write tests that will check some of the cases.
+
+## Solution: enum for programming languages
+{id: solution-enum-for-programming-languages}
+
+![](examples/enums/file-extensions/src/main.rs)
+
 
 ## The Result enum
 {id: the-result-enum}
@@ -140,4 +146,8 @@ pub enum Result<T, E> {
     Err(E),
 }
 ```
+
+TODO: show the constructor example without lifetimes
+TODO: Show ordering of simple enums and enums that can have different variants
+TODO: show enum where one of the variants have more than one values or a value which is complex (e.g. tuple or struct)
 
