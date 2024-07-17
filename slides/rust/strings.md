@@ -96,6 +96,8 @@ text[3]
 ## Rust - string slices
 {id: rust-string-slices}
 
+* Provide address of bytes, but make sure you are on the character boundaries!
+
 ![](examples/strings/slice/src/main.rs)
 ![](examples/strings/slice/out.out)
 
