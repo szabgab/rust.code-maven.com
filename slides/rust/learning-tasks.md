@@ -56,11 +56,24 @@ let x = &args[1].parse::<u32>().unwrap();
 let y = &args[2].parse::<u32>().except("Oh oh");
 
 
-add protection to args (if , len)
+## add protection to args (if , len)
+{id: lt-add-protection-to-getting-args}
 
-add protection for number parsing
+
+## add protection to number parsing
+{id: lt-add-protection-to-number-parsing}
+
 
 ## Exercise: rectangle, circle
-{id: exercise-rectangle-circle}
+{id: lt-exercise-rectangle-circle}
+
+
+* Handle overflow
+
+
+* Read, Write file with oneliners
+* Counter
+
+
 
 

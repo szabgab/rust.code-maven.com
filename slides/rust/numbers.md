@@ -48,13 +48,13 @@
 * That's because Rust will infere the type of the first variable from the type of the second variable and the operation.
 
 
-## Increment integers - augumented assignment
+## Increment integers - augmented assignment
 {id: increment-integers}
 {i: +=}
 {i: ++}
 {i: --}
 
-* Instead of `x = x + 1` we can use `x += 1` called [augumented assignment](https://en.wikipedia.org/wiki/Augmented_assignment).
+* Instead of `x = x + 1` we can use `x += 1` called [augmented assignment](https://en.wikipedia.org/wiki/Augmented_assignment).
 * There are no prefix and postfix [increment and decrement operators](https://en.wikipedia.org/wiki/Increment_and_decrement_operators).
 
 ![](examples/numbers/increment/src/main.rs)
