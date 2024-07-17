@@ -53,6 +53,7 @@
         "json.md",
         "yaml.md",
         "toml.md",
+        "lifetime.md",
         "iterators.md",
         "advanced-functions.md",
         "image.md",
