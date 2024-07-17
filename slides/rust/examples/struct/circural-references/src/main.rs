@@ -2,12 +2,12 @@ fn main() {
     let mut joe = Person {name: String::from("Joe"), partner: None};
     #[allow(unused_mut)]
     let mut jane = Person {name: String::from("Jane"), partner: None};
-    dbg!(&joe);
-    dbg!(&jane);
+    println!("{:?}", &joe);
+    println!("{:?}", &jane);
     joe.partner = Some(&jane);
     //jane.partner = Some(&joe);
-    dbg!(&joe);
-    dbg!(&jane);
+    println!("{:?}", &joe);
+    println!("{:?}", &jane);
 
 }
 

@@ -1,11 +1,11 @@
-struct Course<'a> {
-    name: &'a str,
+struct Course {
+    name: String,
     grades: Vec<i32>,
     final_grade: Option<i32>,
 }
 
 fn main() {
-    let mut c = Course { name: "Programming Rust", grades: vec![78, 80], final_grade: None };
+    let mut c = Course { name: String::from("Programming Rust"), grades: vec![78, 80], final_grade: None };
     println!("{}", c.name);
     println!("{:?}", c.grades);
     println!("{:?}", c.final_grade);

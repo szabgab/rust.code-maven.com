@@ -56,21 +56,21 @@ fn main() {
         name: String::from("Foo Bar"),
         input: Input { name: String::from("input text") },
     };
-    dbg!(sg);
+    println!("{:?}", sg);
 
     let new = Something::new();
-    dbg!(new);
+    println!("{:?}", new);
 
     let empty = Something {
         ..Something::default()
     };
-    dbg!(empty);
+    println!("{:?}", empty);
 
 
     let with_name = Something {
         name: String::from("Hello"),
         ..Something::default()
     };
-    dbg!(with_name);
+    println!("{:?}", with_name);
 
 }

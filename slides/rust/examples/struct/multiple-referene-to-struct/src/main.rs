@@ -8,10 +8,10 @@ struct Something {
 
 fn main() {
     let a = Something {number: 2, text: String::from("blue"), numbers: vec![5, 6]};
-    dbg!(&a);
+    println!("{:?}", &a);
 
     let b = &a;
-    dbg!(&b);
-    dbg!(&a);
+    println!("{:?}", &b);
+    println!("{:?}", &a);
 }
 

@@ -112,6 +112,7 @@
 * We can print the values of the individual attributes of a struct, but we cannot print the whole struct.
 
 ![](examples/struct/printing-struct-fails/src/main.rs)
+![](examples/struct/printing-struct-fails/out.out)
 
 ## Print struct
 {id: print-struct}

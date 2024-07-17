@@ -1,20 +1,20 @@
 use std::fmt;
 
-struct Animal<'a> {
-    name: &'a str,
-    size: &'a str,
+struct Animal {
+    name: String,
+    size: String,
     weight: i32,
 }
 
-impl std::fmt::Display for Animal<'_> {
-    fn fmt(&self, format: &mut fmt::Formatter<'_>) -> fmt::Result {
+impl std::fmt::Display for Animal {
+    fn fmt(&self, format: &mut fmt::Formatter) -> fmt::Result {
         write!(format, "name: {}, size: {}, weight: {}", self.name, self.size, self.weight)
     }
 }
 
 
 fn main() {
-    let eli = Animal {name: "elephant", size: "huge", weight: 100};
+    let eli = Animal {name: String::from("elephant"), size: String::from("huge"), weight: 100};
     println!("{}", eli.name);
     println!("{}", eli.size);
     println!("{}", eli.weight);

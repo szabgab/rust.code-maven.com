@@ -19,8 +19,8 @@ fn main() {
         name: String::from("Foo Bar"),
         number: 42,
     };
-    dbg!(sg);
+    println!("{:?}", sg);
 
     let new = Something::qqrq();
-    dbg!(new);
+    println!("{:?}", new);
 }
