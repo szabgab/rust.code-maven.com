@@ -93,6 +93,11 @@
 ![](examples/booleans/match-operator/src/main.rs)
 ![](examples/booleans/match-operator/out.out)
 
+## match all the numbers of an integer type
+{id: match-all-the-numbers-of-an-integer-type}
+
+![](examples/booleans/integer-ranges/src/main.rs)
+
 ## match with conditions
 {id: match-with-conditions}
 
