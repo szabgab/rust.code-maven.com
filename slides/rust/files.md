@@ -163,7 +163,7 @@ In each case we only need to count the number of each digit.
 
 
 
-## Exercise - word count
+## Exercise - wc (word count)
 {id: exercise-word-count}
 
 Implement the default behaviour of the `wc` command of Linux/Unix. For each file showing
@@ -179,4 +179,29 @@ $ wc intro.md files.md strings.md
   345   943  9708 strings.md
   689  1735 18499 total
 ```
+
+## Exercise - simple grep
+{id: exercise-simple-grep}
+
+* Implement a simple version of grep that receives a search-term and a file and shows the lines in the file that match.
+
+* Extend it to be able to work on more than one file.
+* Extend it to accept regex as the search-term
+* Extend it to accept an `-r` or `--recursive` flag and if given a folder then process each file recursively.
+
+## Exercise - du (disk usage)
+{id: exercise-disk-usage}
+
+* Implement the Linux/Unix `du` command:
+
+* Given a filename shows the size of the file.
+* Given a folder shows the file sizes in the whole directory tree.
+* Given the `-s` flag shows a summary instead of all the files.
+
+
+
+
+
+
+
 

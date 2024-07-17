@@ -10,14 +10,17 @@
 pass function as a parameter to another function
 
 ![](examples/advanced-functions/pass-function-as-argument-simple/src/main.rs)
+![](examples/advanced-functions/pass-function-as-argument-simple/out.out)
 
 
 ## Pass function with parameter as an argument
 {id: pass-function-with-parameter-as-an-argument}
 
 ![](examples/advanced-functions/pass-function-with-parameter-as-argument/src/main.rs)
+![](examples/advanced-functions/pass-function-with-parameter-as-argument/out.out)
 
-## Calculator
-{id: calculator}
+## Dispatch table - Calculator
+{id: dispatch-table}
 
 ![](examples/advanced-functions/calculator/src/main.rs)
+![](examples/advanced-functions/calculator/out.out)
