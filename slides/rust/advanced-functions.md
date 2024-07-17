@@ -24,3 +24,12 @@ pass function as a parameter to another function
 
 ![](examples/advanced-functions/calculator/src/main.rs)
 ![](examples/advanced-functions/calculator/out.out)
+
+## Dispatch table - Calculator
+{id: dispatch-table-take-2}
+
+![](examples/advanced-functions/calculator-dispatch-table-take2/src/main.rs)
+![](examples/advanced-functions/calculator-dispatch-table-take2/out.out)
+
+See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table/114527](https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table/114527).
+
