@@ -80,11 +80,12 @@
 ## Remove the last element using pop, reduce capacity
 {id: remove-last-element-using-pop}
 {i: pop}
+{i: len}
+{i: capacity}
 {i: shrink_to_fit}
 
 ![](examples/vectors/vector-pop/src/main.rs)
 ![](examples/vectors/vector-pop/out.out)
-
 
 ## Stack and the capacity of a vector
 {id: stack-and-the-capacity-of-a-vector}
