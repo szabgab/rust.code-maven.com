@@ -98,8 +98,15 @@
 
 ![](examples/booleans/integer-ranges/src/main.rs)
 
+## match all the numbers of a float type
+{id: match-all-the-numbers-of-a-float-type}
+
+![](examples/booleans/float-ranges/src/main.rs)
+
 ## match with conditions
 {id: match-with-conditions}
+
+* The variable in each arm can be all the same or they can be different.
 
 ![](examples/booleans/match-with-conditions/src/main.rs)
 ![](examples/booleans/match-with-conditions/out.out)
