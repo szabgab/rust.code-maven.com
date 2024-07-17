@@ -5,16 +5,25 @@ fn main() {
     let same_numbers: Vec<i32> = numbers.iter().filter(|_number| true).cloned().collect();
     println!("{:?}", &same_numbers);
 
-    let positive_numbers: Vec<i32> = numbers
+    // get vector of i32 references
+    let positive_numbers = numbers
+        .iter()
+        .filter(|number| number.is_positive())
+        .collect::<Vec<_>>();
+    println!("{:?}", &positive_numbers);
+
+    // get vector of i32
+    let positive_numbers = numbers
         .iter()
         .filter(|number| number.is_positive())
         .cloned()
-        .collect();
+        .collect::<Vec<_>>();
     println!("{:?}", &positive_numbers);
 
-    let big_numbers: Vec<i32> = numbers
+    // get vector of i32 and move the numbers so we won't be able to use them again
+    let big_numbers = numbers
         .into_iter()
         .filter(|number| number > &&12)
-        .collect();
+        .collect::<Vec<_>>();
     println!("{:?}", &big_numbers);
 }
