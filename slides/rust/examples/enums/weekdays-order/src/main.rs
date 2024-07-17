@@ -1,4 +1,4 @@
-#[derive(PartialEq)]
+#[derive(PartialOrd, PartialEq)]
 #[allow(dead_code)]
 enum Weekday {
     Monday,
@@ -14,14 +14,14 @@ enum Weekday {
 // we did not use all the values that were listed in the enum
 
 fn main() {
+    let yesterday = Weekday::Friday;
     let today = Weekday::Saturday;
     let tomorrow = Weekday::Sunday;
-    let market = Weekday::Sunday;
 
-    if market == today {
-        println!("Today is market day");
+    if yesterday < today {
+        println!("Today is after yesterday");
     }
-    if market == tomorrow {
-        println!("Tomorrow is market day");
+    if today < tomorrow {
+        println!("Tomorrow is after today");
     }
 }

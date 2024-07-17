@@ -52,6 +52,7 @@
 * Try running this code after commenting out the row handline `_`.
 
 ![](examples/enums/weekdays/src/main.rs)
+![](examples/enums/weekdays/out.out)
 
 ## Enumeration and manual comparision
 {id: enumeration-and-manual-comparision}
@@ -60,8 +61,18 @@
 We can also compare variables holding enum variants, but for that to work we also need to derivede from the [ParialEq](https://doc.rust-lang.org/std/cmp/trait.PartialEq.html) trait.
 Basically we need to implement the operation that allows use to compare two values of this type.
 
-
 ![](examples/enums/weekdays-manual-comparision/src/main.rs)
+![](examples/enums/weekdays-manual-comparision/out.out)
+
+## Enumeration and order
+{id: enumeration-and-order}
+{i: PartialEq}
+{i: PartialOrd}
+
+![](examples/enums/weekdays-order/src/main.rs)
+
+![](examples/enums/weekdays-order/out.out)
+
 
 ## Enumeration colors - functions and String
 {id: enumeration-colors-with-functions-and-string}
