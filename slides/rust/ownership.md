@@ -208,3 +208,8 @@ e.g. If file 1 contains "cat" and file 2 contains "dog" then return "catdog" and
 * TODO: This works, but let's also implement without format!
 * TODO: Return Result
 
+## Pass vector to function
+{id: pass-vector-to-function}
+{i: TBD}
+
+![](examples/ownership/pass-vector-to-function/src/main.rs)
