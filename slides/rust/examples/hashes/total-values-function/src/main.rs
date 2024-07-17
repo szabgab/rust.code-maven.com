@@ -24,3 +24,10 @@ fn add<'a>(total: &mut HashMap<&'a str, i32>, other : &HashMap<&'a str, i32>) {
         *total.entry(key).or_insert(0) += value;
     }
 }
+
+// fn add(total: &mut HashMap<&str, i32>, other : &HashMap<&str, i32>) {
+//     for (key, value) in other.iter() {
+//         *total.entry(key).or_insert(0) += value;
+//     }
+// }
+
