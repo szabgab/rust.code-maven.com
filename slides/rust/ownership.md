@@ -189,11 +189,22 @@
 ![](examples/ownership/change-vector-of-structs/src/main.rs)
 ![](examples/ownership/change-vector-of-structs/out.out)
 
+## Try to return &str from function
+{id: try-to-return-str-from-function}
+
+![](examples/ownership/read-file-and-trim-newline/src/main.rs)
+
+
 ## Exercise: concatenate file content
 {id: exercise-concatenate-file-content}
+{i: TBD}
 
 Write a function that received the name of two files and returns the content of the two files concatenated in both directions.
 
 e.g. If file 1 contains "cat" and file 2 contains "dog" then return "catdog" and "dogcat"
 
+![](examples/ownership/concatenate-content-of-files/src/main.rs)
+
+* TODO: This works, but let's also implement without format!
+* TODO: Return Result
 
