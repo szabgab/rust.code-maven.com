@@ -1,19 +1,35 @@
 use std::fs::File;
 use std::io::Read;
+use std::env;
 
 
 fn main() {
-    let filename = "data.txt";
-    match File::open(filename) {
+    let filename = get_filename();
+    match File::open(&filename) {
         Ok(mut file) => {
             let mut content = String::new();
 
-            file.read_to_string(&mut content).unwrap();
+            match file.read_to_string(&mut content) {
+                Ok(size) => {
+                    println!("Read {size} bytes.");
+                    println!("We have a string of {} bytes.", content.len());
+                    println!("{content}");
+                },
+                Err(err) => eprintln!("Error: {err}"),
+            }
 
-            println!("{}", content);
         },
         Err(error) => {
-            println!("Error opening file {}: {}", filename, error);
+            eprintln!("Error opening file {filename}: {error}");
         },
     }
+}
+
+fn get_filename() -> String {
+    let args = env::args().collect::<Vec<_>>();
+    if args.len() != 2 {
+        eprintln!("Usage: {} data.txt", args[0])
+    }
+
+    args[1].to_owned()    
 }
