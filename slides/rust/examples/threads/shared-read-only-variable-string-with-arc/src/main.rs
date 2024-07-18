@@ -1,6 +1,5 @@
-use std::time::Duration;
 use std::sync::Arc;
-
+use std::time::Duration;
 
 fn main() {
     let answer = Arc::new(String::from("Hello World!"));
