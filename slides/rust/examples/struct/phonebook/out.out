@@ -1,0 +1,28 @@
+Person {
+    name: "Joe",
+    id: "123456",
+    phones: [
+        Phone {
+            number: "055-1234567",
+            ptype: Home,
+        },
+    ],
+    notes: None,
+    title: None,
+}
+Person {
+    name: "Jane",
+    id: "678",
+    phones: [
+        Phone {
+            number: "123",
+            ptype: Work,
+        },
+    ],
+    notes: Some(
+        "was a student",
+    ),
+    title: Some(
+        Doctor,
+    ),
+}
