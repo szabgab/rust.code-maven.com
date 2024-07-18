@@ -12,9 +12,22 @@
 {id: thread-simple}
 {i: thread}
 {i: spawn}
-{i: join}
+
+* We can easily start a new thread using the [spawn](https://doc.rust-lang.org/std/thread/fn.spawn.html) function of the [thread](https://doc.rust-lang.org/std/thread/) crate.
+* There is a slight problem though. Our main program might end before the thread can do anything.
 
 ![](examples/threads/simple/src/main.rs)
+![](examples/threads/simple/out.out)
+
+## Simple thread with join
+{id: thread-simple-with-join}
+{i: thread}
+{i: spawn}
+{i: join}
+
+![](examples/threads/simple-with-join/src/main.rs)
+![](examples/threads/simple-with-join/out.out)
+
 
 ## First example with threads
 {id: threads-first-example}
