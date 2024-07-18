@@ -8,18 +8,23 @@ struct Animal {
 
 impl std::fmt::Display for Animal {
     fn fmt(&self, format: &mut fmt::Formatter) -> fmt::Result {
-        write!(format, "name: {}, size: {}, weight: {}", self.name, self.size, self.weight)
+        write!(
+            format,
+            "name: {}, size: {}, weight: {}",
+            self.name, self.size, self.weight
+        )
     }
 }
 
-
 fn main() {
-    let eli = Animal {name: String::from("elephant"), size: String::from("huge"), weight: 100};
+    let eli = Animal {
+        name: String::from("elephant"),
+        size: String::from("huge"),
+        weight: 100,
+    };
     println!("{}", eli.name);
     println!("{}", eli.size);
     println!("{}", eli.weight);
 
-
     println!("{}", eli);
 }
-

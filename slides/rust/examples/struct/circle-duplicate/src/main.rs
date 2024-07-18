@@ -26,9 +26,8 @@ impl Circle {
     }
 }
 
-
 fn main() {
-    let mut p = Point {x: 2, y: 3};
+    let mut p = Point { x: 2, y: 3 };
     println!("{}", p.x);
     println!("{}", p.y);
     println!();
@@ -38,7 +37,11 @@ fn main() {
     println!("{}", p.y);
     println!("----");
 
-    let mut a = Circle {x: 2, y: 3, radius: 7};
+    let mut a = Circle {
+        x: 2,
+        y: 3,
+        radius: 7,
+    };
     println!("{}", a.x);
     println!("{}", a.y);
     println!("{}", a.radius);

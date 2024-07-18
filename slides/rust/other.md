@@ -105,6 +105,21 @@ TODO
 * [type](https://doc.rust-lang.org/std/keyword.type.html)
 
 ![](examples/other/type-alias/src/main.rs)
+![](examples/other/type-alias/out.out)
+
+## Struct and type alias - Polygon
+{id: struct-and-type-alias}
+{i: struct}
+{i: type}
+
+* The simplest way to represent a polygon (a series of points) is a vector of `Point` instances.
+* We can even give it a name using the [type](https://doc.rust-lang.org/std/keyword.type.html) keyword.
+* Despite its name it does **not** create a new type, just an alias.
+* That's why we cannot use `impl` to add a method.
+
+![](examples/struct/polygon-type/src/main.rs)
+![](examples/struct/polygon-type/out.out)
+
 
 ## Solution: Age limit
 {id: solution-age-limit}
@@ -391,4 +406,14 @@ cargo run --release
 {i: TBD}
 
 ![](examples/other/passing-string-to-function/src/main.rs)
+
+## Struct duplicate
+{id: struct-duplicate}
+
+* This seems to be an old example showing that if we don't compose one struct from another then we have to implement everything in both cases.
+* In this case the `Circle` struct has its own x and y attribute and its own `mv` method.
+
+![](examples/struct/circle-duplicate/src/main.rs)
+![](examples/struct/circle-duplicate/out.out)
+
 

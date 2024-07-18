@@ -9,7 +9,7 @@ fn main() {
 }
 
 fn calc(y: Meters) {
-    dbg!(y);
+    println!("{y}");
 }
 
 

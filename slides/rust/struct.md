@@ -75,19 +75,6 @@
 ![](examples/struct/line-compose/src/main.rs)
 ![](examples/struct/line-compose/out.out)
 
-## Struct and type alias - Polygon
-{id: struct-and-type-alias}
-{i: struct}
-{i: type}
-
-* The simplest way to represent a polygon (a series of points) is a vector of `Point` instances.
-* We can even give it a name using the [type](https://doc.rust-lang.org/std/keyword.type.html) keyword.
-* Despite its name it does **not** create a new type, just an alias.
-* That's why we cannot use `impl` to add a method.
-
-![](examples/struct/polygon-type/src/main.rs)
-![](examples/struct/polygon-type/out.out)
-
 ## Struct with vector of structs - Polygon
 {id: struct-with-vector}
 
@@ -97,15 +84,6 @@
 ![](examples/struct/polygon-struct/src/main.rs)
 ![](examples/struct/polygon-struct/out.out)
 
-## Struct duplicate
-{id: struct-duplicate}
-
-* This seems to be an old example showing that if we don't compose one struct from another then we have to implement everything in both cases.
-* In this case the `Circle` struct has its own x and y attribute and its own `mv` method.
-
-![](examples/struct/circle-duplicate/src/main.rs)
-![](examples/struct/circle-duplicate/out.out)
-
 ## Printing struct fails
 {id: printing-struct-fails}
 
@@ -114,14 +92,19 @@
 ![](examples/struct/printing-struct-fails/src/main.rs)
 ![](examples/struct/printing-struct-fails/out.out)
 
-## Print struct
+## Print struct - implement Display
 {id: print-struct}
+{i: impl}
+{i: Display}
+{i: Formatter}
 
 ![](examples/struct/printing-struct/src/main.rs)
 ![](examples/struct/printing-struct/out.out)
 
-## Debug struct
+## Debug struct - implement Debug
 {id: debug-struct}
+{i: impl}
+{i: Debug}
 
 ![](examples/struct/debugging-struct/src/main.rs)
 ![](examples/struct/debugging-struct/out.out)

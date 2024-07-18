@@ -5,7 +5,11 @@ struct Animal {
 }
 
 fn main() {
-    let eli = Animal {name: String::from("elephant"), size: String::from("huge"), weight: 100};
+    let eli = Animal {
+        name: String::from("elephant"),
+        size: String::from("huge"),
+        weight: 100,
+    };
     println!("{}", eli.name);
     println!("{}", eli.size);
     println!("{}", eli.weight);
@@ -14,4 +18,3 @@ fn main() {
     // println!("{:?}", eli); // `Animal<'_>` doesn't implement `Debug`
     // dbg!(eli);             // `Animal<'_>` doesn't implement `Debug`
 }
-
