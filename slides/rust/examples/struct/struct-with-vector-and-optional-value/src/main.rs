@@ -5,11 +5,16 @@ struct Course {
 }
 
 fn main() {
-    let mut c = Course { name: String::from("Programming Rust"), grades: vec![78, 80], final_grade: None };
+    let mut c = Course {
+        name: String::from("Programming Rust"),
+        grades: vec![78, 80],
+        final_grade: None,
+    };
     println!("{}", c.name);
     println!("{:?}", c.grades);
     println!("{:?}", c.final_grade);
-    // println!("{:?}", c.final_grade.unwrap()); // thread 'main' panicked at 'called `Option::unwrap()` on a `None` value'
+    // println!("{:?}", c.final_grade.unwrap());
+    // thread 'main' panicked at 'called `Option::unwrap()` on a `None` value'
 
     match c.final_grade {
         Some(value) => println!("Final grade is {value}"),

@@ -14,7 +14,12 @@ fn main() {
     println!("{}", eli.size);
     println!("{}", eli.weight);
 
-    // println!("{}", eli);   // `Animal<'_>` doesn't implement `std::fmt::Display`
-    // println!("{:?}", eli); // `Animal<'_>` doesn't implement `Debug`
-    // dbg!(eli);             // `Animal<'_>` doesn't implement `Debug`
+    // println!("{}", eli);
+    // `Animal<'_>` doesn't implement `std::fmt::Display`
+
+    // println!("{:?}", eli);
+    // `Animal<'_>` doesn't implement `Debug`
+
+    // dbg!(eli);
+    // `Animal<'_>` doesn't implement `Debug`
 }

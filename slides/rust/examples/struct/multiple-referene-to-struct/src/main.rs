@@ -7,11 +7,14 @@ struct Something {
 }
 
 fn main() {
-    let a = Something {number: 2, text: String::from("blue"), numbers: vec![5, 6]};
+    let a = Something {
+        number: 2,
+        text: String::from("blue"),
+        numbers: vec![5, 6],
+    };
     println!("{:?}", &a);
 
     let b = &a;
     println!("{:?}", &b);
     println!("{:?}", &a);
 }
-

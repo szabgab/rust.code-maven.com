@@ -9,14 +9,14 @@ impl std::fmt::Display for Color {
 
 fn main() {
     let black = Color(0, 0, 0);
-    println!("{}", black);    // RGB(0, 0, 0)
-    println!("{:?}", black);  // Color(0, 0, 0)
+    println!("{}", black); // RGB(0, 0, 0)
+    println!("{:?}", black); // Color(0, 0, 0)
 
     let white = Color(255, 255, 255);
-    println!("{}", white);    // RGB(255, 255, 255)
-    println!("{:?}", white);  // Color(255, 255, 255)
+    println!("{}", white); // RGB(255, 255, 255)
+    println!("{:?}", white); // Color(255, 255, 255)
 
     let red = Color(255, 0, 0);
-    println!("{}", red);    // RGB(255, 0, 0)
-    println!("{:?}", red);  // Color(255, 0, 0)
+    println!("{}", red); // RGB(255, 0, 0)
+    println!("{:?}", red); // Color(255, 0, 0)
 }

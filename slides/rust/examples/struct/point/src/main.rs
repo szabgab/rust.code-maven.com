@@ -8,6 +8,7 @@ fn main() {
     println!("{}", a.x);
     println!("{}", a.y);
 
-    // a.y = 7; // cannot assign to `a.y`, as `a` is not declared as mutable
+    // a.y = 7;
+    // cannot assign to `a.y`, as `a` is not declared as mutable
     // println!("{}", a.y);
 }

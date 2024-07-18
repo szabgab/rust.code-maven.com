@@ -21,9 +21,11 @@ impl Circle {
     }
 }
 
-
 fn main() {
-    let mut a = Circle {point: Point {x: 2, y: 3}, radius: 7};
+    let mut a = Circle {
+        point: Point { x: 2, y: 3 },
+        radius: 7,
+    };
     println!("{}", a.point.x);
     println!("{}", a.point.y);
     println!("{}", a.radius);

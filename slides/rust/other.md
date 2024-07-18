@@ -416,4 +416,25 @@ cargo run --release
 ![](examples/struct/circle-duplicate/src/main.rs)
 ![](examples/struct/circle-duplicate/out.out)
 
+## Multiple referene to a struct
+{id: multiple-reference-to-a-struct}
+
+![](examples/struct/multiple-referene-to-struct/src/main.rs)
+
+## Print struct (Point)
+{id: print-struct-point}
+{i: std::fmt::Display}
+{i: Display}
+
+![](examples/struct/print-point/src/main.rs)
+![](examples/struct/print-point/out.out)
+
+## Debug struct (Point)
+{id: debug-struct-point}
+{i: std::fmt::Debug}
+{i: Debug}
+
+![](examples/struct/debug-point/src/main.rs)
+![](examples/struct/debug-point/out.out)
+
 

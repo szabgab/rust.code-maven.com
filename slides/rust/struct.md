@@ -121,22 +121,6 @@
 ![](examples/struct/debug-struct/out.out)
 
 
-## Print struct (Point)
-{id: print-struct-point}
-{i: std::fmt::Display}
-{i: Display}
-
-![](examples/struct/print-point/src/main.rs)
-![](examples/struct/print-point/out.out)
-
-## Debug struct (Point)
-{id: debug-struct-point}
-{i: std::fmt::Debug}
-{i: Debug}
-
-![](examples/struct/debug-point/src/main.rs)
-![](examples/struct/debug-point/out.out)
-
 ## Struct with vector and optional value
 {id: struct-with-vector-and-optional-value}
 
@@ -176,7 +160,7 @@
 ## Structs and circural references
 {id: structs-and-circular-references}
 
-* Rust will make sure we cannot create circulare reference in this way.
+* Rust will make sure we cannot create circular reference in this way.
 * `#[allow(unused_mut)]` is needed to silence clippy, the linter
 
 ![](examples/struct/circural-references/src/main.rs)
@@ -186,14 +170,11 @@
 
 ![](examples/struct/circural-references/err.out)
 
-## Multiple referene to a struct
-{id: multiple-reference-to-a-struct}
-
-![](examples/struct/multiple-referene-to-struct/src/main.rs)
-
 ## new method with default values for struct
 {id: new-method-with-default-values}
 {i: new}
+
+* We use the `new` name by convention. It has no special meaning in Rust.
 
 ![](examples/struct/new-method/src/main.rs)
 
