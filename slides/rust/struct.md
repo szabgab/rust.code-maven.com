@@ -285,6 +285,13 @@
 
 ![](examples/struct/implement-ordering/out.out)
 
+## Copy attributes from struct instance
+{id: copy-attributes-from-struct-insrance}
+
+![](examples/struct/copy-attributes/src/main.rs)
+![](examples/struct/copy-attributes/out.out)
+
+
 ## Exercise - struct for contact info
 {id: exercise-struct-for-contact-info}
 
