@@ -63,15 +63,6 @@
 
 ![](examples/files/list-tree/src/main.rs)
 
-## Count digits in file
-{id: count-digits-in-file}
-{i: chars}
-{i: usize}
-{i: enumerate}
-
-![](examples/files/count-digits/src/main.rs)
-![](examples/files/count-digits/out.out)
-
 ## Makedir
 {id: makedir}
 {i: mkdir}
@@ -149,8 +140,8 @@
 
 ![](examples/files/du/src/main.rs)
 
-## Exercise count digits from file
-{id: exercise-count-digits-from-file}
+## Exercise count digits in file
+{id: exercise-count-digits-in-file}
 
 Write a function that receives a string as a parameter and returns an array of 10 numbers,
 the number of each digit in the file. At first you can assume the file contains a single
@@ -198,6 +189,14 @@ $ wc intro.md files.md strings.md
 * Given a folder shows the file sizes in the whole directory tree.
 * Given the `-s` flag shows a summary instead of all the files.
 
+## Solution: count digits in file
+{id: solution-count-digits-in-file}
+{i: chars}
+{i: usize}
+{i: enumerate}
+
+![](examples/files/count-digits/src/main.rs)
+![](examples/files/count-digits/out.out)
 
 
 

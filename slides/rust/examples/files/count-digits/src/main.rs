@@ -1,6 +1,6 @@
 fn main() {
-    let text = "1213 456 788";
-    let counter = count_digits(text);
+    let text = get_text();
+    let counter = count_digits(&text);
     display(&counter);
 }
 
@@ -10,6 +10,10 @@ fn count_digits(text: &str) -> [i8; 10] {
         if ch == ' ' {
             continue;
         }
+        if ! "0123456789".contains(ch) {
+            continue;
+        }
+        
         let ix = ch as usize - '0' as usize;
         //println!("{ch}");
         //println!("{ix}");
@@ -23,4 +27,14 @@ fn display(counter: &[i8]) {
     for (ix, count) in counter.iter().enumerate() {
         println!("{ix}: {}", count);
     }
+}
+
+fn get_text() -> String {
+    let args = std::env::args().collect::<Vec<_>>();
+    if args.len() != 2 {
+        eprintln!("Usage: {} FILENAME", args[0]);
+        std::process::exit(1)
+    }
+
+    std::fs::read_to_string(&args[1]).unwrap()
 }
