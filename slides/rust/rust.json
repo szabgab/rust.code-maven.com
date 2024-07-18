@@ -65,6 +65,7 @@
         "sqlite.md",
         "binary.md",
         "learning-tasks.md",
+        "procedural-macros.md",
         "other.md"
     ]
 }

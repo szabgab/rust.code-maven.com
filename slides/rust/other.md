@@ -437,4 +437,11 @@ cargo run --release
 ![](examples/struct/debug-point/src/main.rs)
 ![](examples/struct/debug-point/out.out)
 
+## Num traits
+{id: num-traits}
+
+
+* [num-traits](https://crates.io/crates/num-traits)
+* [num-traits](https://docs.rs/num-traits)
+
 
