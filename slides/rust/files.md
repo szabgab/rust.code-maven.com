@@ -127,7 +127,7 @@
 
 ![](examples/files/open-file-handling/src/main.rs)
 
-## Appand to file
+## Append to file
 {id: append-to-file}
 {i: append}
 {i: open}
