@@ -473,6 +473,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/create-from-iter/src/main.rs)
 ![](examples/vectors/create-from-iter/out.out)
 
+## Memory allocation and vectors
+{id: memory-allocation-and-vectors}
+{i: TBD}
+
+![](examples/vectors/memory/src/main.rs)
+![](examples/vectors/memory/out.out)
+
+TODO: can we change the strings in the vector? What happens to the memory allocation then?
 
 ## Exercise: Count words using two vectors
 {id: exercise-count-words-using-two-vectors}
