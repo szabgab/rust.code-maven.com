@@ -7,14 +7,22 @@
 * [Feerless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
 * [std::thread](https://doc.rust-lang.org/std/thread/)
 
+## Simple thread (with fake work)
+{id: thread-simple-with-fake-work}
+
+* We can easily start a new thread using the [spawn](https://doc.rust-lang.org/std/thread/fn.spawn.html) function of the [thread](https://doc.rust-lang.org/std/thread/) crate.
+* We even have two loops one in the main thread and one in the created thread to "do some work". It seems to work.
+* There is a slight problem though. Our main program might end before the thread can do the actual work and this example we don't even see that.
+
+![](examples/threads/simple-while-main-is-working/src/main.rs)
+![](examples/threads/simple-while-main-is-working/out.out)
 
 ## Simple thread
 {id: thread-simple}
 {i: thread}
 {i: spawn}
 
-* We can easily start a new thread using the [spawn](https://doc.rust-lang.org/std/thread/fn.spawn.html) function of the [thread](https://doc.rust-lang.org/std/thread/) crate.
-* There is a slight problem though. Our main program might end before the thread can do anything.
+* In this case when the main thread does not do "extra job" it is obvious that the other thread did not even have a chance to start working.
 
 ![](examples/threads/simple/src/main.rs)
 ![](examples/threads/simple/out.out)
@@ -25,12 +33,14 @@
 {i: spawn}
 {i: join}
 
+* The solution is to save the `handle` of the thread and the use `join` to wait for its termination.
+
 ![](examples/threads/simple-with-join/src/main.rs)
 ![](examples/threads/simple-with-join/out.out)
 
 
-## First example with threads
-{id: threads-first-example}
+## Show that threads work in parallel
+{id: threads-work-in-parallel}
 {i: thread}
 {i: spawn}
 {i: sleep}
@@ -51,10 +61,13 @@
 {i: recv}
 {i: move}
 
-* We can faciliate communication between the main thread and the spawned thread.
+* We can facilitate communication between the main thread and the spawned thread.
 * In this example the spawned thread is sending a message to the main thread.
 * The `move` keyword tells Rust that the variables declared before spawning that are also used in the spawned code need to be moved. (`tx` in this case)
-* `recv` is blocking the main thread.
+* We can use `recv`, which is blocking the main thread, to wait for a message from the spwaned thread.
+* In that case we will have to know how many messages to expect and if we are still waiting for a message while the spawened thread exits then we either get stuck or get panic!.
+* Using the second loop is a better solution.
+
 
 ![](examples/threads/threads-messages/src/main.rs)
 ![](examples/threads/threads-messages/out.out)
@@ -87,6 +100,7 @@ N    single     multi
 ```
 
 ![](examples/threads/speed-test/src/main.rs)
+![](examples/threads/speed-test/out.out)
 
 
 ## Save many files (both CPU and IO intensive)

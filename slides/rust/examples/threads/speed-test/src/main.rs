@@ -1,8 +1,8 @@
-use std::time::Instant;
-use std::sync::mpsc;
-use std::thread;
 use std::env;
 use std::process;
+use std::sync::mpsc;
+use std::thread;
+use std::time::Instant;
 
 fn main() {
     let args = env::args().collect::<Vec<String>>();
@@ -10,7 +10,9 @@ fn main() {
         eprintln!("Usage: {} n [linear|threads]", args[0]);
         process::exit(1);
     }
-    let n = args[1].parse::<u64>().expect(format!("Could not convert {} to integer", args[1]).as_str());
+    let n = args[1]
+        .parse::<u64>()
+        .expect(format!("Could not convert {} to integer", args[1]).as_str());
 
     let repetition = 10;
 
@@ -19,18 +21,15 @@ fn main() {
         linear(n, repetition);
     } else if args[2] == "threads" {
         in_threads(n, repetition);
-
     } else {
         println!("Invalid parameter {}", args[2])
     }
 
-
     let duration = start.elapsed();
     println!("Time elapsed in expensive_function() is: {:?}", duration);
-
 }
 
-fn fibonacci(n :u64) -> u64 {
+fn fibonacci(n: u64) -> u64 {
     if n == 0 || n == 1 {
         return 1;
     }
@@ -53,12 +52,12 @@ fn in_threads(n: u64, repetition: i32) {
         thread::spawn(move || {
             let res = fibonacci(n);
             txr.send(res.to_string()).unwrap();
-            println!("spawned thread finished");
+            println!("spawned {:?} finished", thread::current().id());
         });
     }
     drop(tx); // need to drop in the main thread
 
     for received in rx {
-        println!("Got: {}", received);
-    }    
+        println!("Received: {}", received);
+    }
 }

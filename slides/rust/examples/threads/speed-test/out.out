@@ -1,0 +1,22 @@
+multiple threads
+spawned ThreadId(2) finished
+spawned ThreadId(4) finished
+spawned ThreadId(3) finished
+spawned ThreadId(5) finished
+spawned ThreadId(7) finished
+spawned ThreadId(8) finished
+spawned ThreadId(6) finished
+spawned ThreadId(9) finished
+Received: 10946
+Received: 10946
+Received: 10946
+Received: 10946
+Received: 10946
+Received: 10946
+Received: 10946
+Received: 10946
+spawned ThreadId(10) finished
+Received: 10946
+spawned ThreadId(11) finished
+Received: 10946
+Time elapsed in expensive_function() is: 1.851333ms

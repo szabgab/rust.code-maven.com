@@ -1,0 +1,3 @@
+Before starting: ThreadId(1)
+In thread ThreadId(2)
+After ending: ThreadId(1)
