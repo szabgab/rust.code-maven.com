@@ -116,7 +116,7 @@ cargo run bar
 
 
 ## Macro ok! to replace unwrap
-{id: macri-ok}
+{id: macro-ok}
 
 Seen in the tests of the sqlite crate.
 
@@ -124,5 +124,10 @@ Seen in the tests of the sqlite crate.
 macro_rules! ok(($result:expr) => ($result.unwrap()));
 ```
 
+## Optional function parameters using macros
+{id: optional-function-parameters-using-macro}
+
+![](examples/macros/optional-parameter/src/main.rs)
+![](examples/macros/optional-parameter/out.out)
 
 
