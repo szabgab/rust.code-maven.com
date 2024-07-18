@@ -127,7 +127,29 @@ N    single     multi
 ## Rust threads read-only access to shared variables
 {id: read-only-access-to-shared-variables}
 
-* See several solutions
+See several examples:
+
+* Shared read-only variable with a number in it.
+
+## Shared read-only variable with numeric value
+{id: shared-read-only-variable-with-numeric-value}
+
+![](examples/threads/shared-read-only-variable-number/src/main.rs)
+![](examples/threads/shared-read-only-variable-number/out.out)
+
+## Shared read-only variable with string value
+{id: shared-read-only-variable-with-string-value}
+
+![](examples/threads/shared-read-only-variable-string/src/main.rs)
+![](examples/threads/shared-read-only-variable-string/out.out)
+
+
+## Shared read-only variable with string value with Arc
+{id: shared-read-only-variable-with-string-value-with-arc}
+
+![](examples/threads/shared-read-only-variable-string-with-arc/src/main.rs)
+![](examples/threads/shared-read-only-variable-string-with-arc/out.out)
+
 
 ## Pass reference of read-only vector to thread
 {id: pass-reference-of-read-only-vector-to-thread}
