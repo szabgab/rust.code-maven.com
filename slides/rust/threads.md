@@ -181,24 +181,26 @@ See several examples:
 ![](examples/threads/pass-vector/src/main.rs)
 ![](examples/threads/pass-vector/out.out)
 
-## Pass and return reference (return ownership)
-{id: pass-and-return-reference}
-{i: TBD}
-
-* TODO: As I understand this would only work properly if the threads do not need the same variable at the same time.
-* So either they run sequentially in which case we don't gain CPU or each thread has a different variable.
-
-* An alternate way to handle this situation is to return the vector.
-* This way we pass the ownership back to the caller.
-
-![](examples/threads/pass-and-return-reference/src/main.rs)
-
-## Process string slices in parallel
+## Process read-only string slices in parallel
 {id: process-string-slices-in-parallel}
+
+* Reference counting with [Arc](https://doc.rust-lang.org/std/sync/struct.Arc.html).
 
 ![](examples/threads/process-string-slices/src/main.rs)
 ![](examples/threads/process-string-slices/out.out)
 
+
+## Pass and return ownership
+{id: pass-and-return-reference}
+
+* An alternate way to handle this situation is to return the vector.
+* This way we pass the ownership back to the caller.
+
+* This would only work properly if the threads do not need the same variable at the same time.
+* So either they run sequentially in which case we don't gain CPU or each thread needs a different variable.
+
+![](examples/threads/pass-and-return-reference/src/main.rs)
+![](examples/threads/pass-and-return-reference/out.out)
 
 ## Thread scope
 {id: thread-scrope}
@@ -206,6 +208,7 @@ See several examples:
 * using [thread::scope](https://doc.rust-lang.org/stable/std/thread/fn.scope.html) there is an even simpler solution.
 
 ![](examples/threads/thread-scope/src/main.rs)
+![](examples/threads/thread-scope/out.out)
 
 ## chdir in threads
 {id: chdir-in-threads}

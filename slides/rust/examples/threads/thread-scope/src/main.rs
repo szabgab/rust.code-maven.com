@@ -1,16 +1,36 @@
 
+macro_rules! prt {
+    ($text: expr, $var: expr) => {
+        println!("{:11} {:?} {:p} {:?}", $text, $var, &$var, $var.as_ptr());
+    };
+}
+
 fn main() {
-    let animals = Vec::from_iter(["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_owned()));
-    println!("{:?}", animals);
+    let animals = vec![
+        String::from("crab"),
+        String::from("ant"),
+        String::from("cat"),
+        String::from("dog"),
+        String::from("bat"),
+    ];
+
+    prt!("Before:", animals);
+
     std::thread::scope(|s| {
+        s.spawn(|| list_animals(&animals) );
+        s.spawn(|| list_animals(&animals) );
         s.spawn(|| list_animals(&animals) );
     });
 
-    println!("{:?}", animals);
+    prt!("After:", animals);
 }
 
 fn list_animals(animals: &Vec<String>) {
-    for animal in animals {
-        println!("{}", animal);
-    }
+    // Enable this to show that they work in parallel
+    // for animal in animals {        
+    //     println!(" {} in {:?}", animal, std::thread::current().id());
+    //     std::thread::sleep(std::time::Duration::from_millis(rand::random::<u8>() as u64));
+    // }
+
+    prt!(format!("{:?}", std::thread::current().id()), animals);
 }

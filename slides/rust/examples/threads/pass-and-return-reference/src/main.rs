@@ -1,17 +1,34 @@
-fn main() {
-    let animals = Vec::from_iter(["mouse", "elephant", "cat", "dog", "giraffe"].map(|animal| animal.to_owned()));
-    println!("{:?}", animals);
+macro_rules! prt {
+    ($text: expr, $var: expr) => {
+        println!("{:11} {:?} {:p} {:?}", $text, $var, &$var, $var.as_ptr());
+    };
+}
+
+
+fn main() {   
+    let animals = vec![
+        String::from("crab"),
+        String::from("ant"),
+        String::from("cat"),
+        String::from("dog"),
+        String::from("bat"),
+    ];
+
+    prt!("Before:", animals);
 
     let handle = std::thread::spawn(move || {
         list_animals(&animals);
         animals
     });
+
+    // Here we cannot access animals
+    //prt!("Started:", animals);
+    println!("Started:");
+
     let animals = handle.join().unwrap();
-    println!("{:?}", animals);
+    prt!("After:", animals);
 }
 
 fn list_animals(animals: &Vec<String>) {
-    for animal in animals {
-        println!("{}", animal);
-    }
+    prt!(format!("{:?}", std::thread::current().id()), animals);
 }
