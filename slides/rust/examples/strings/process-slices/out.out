@@ -1,0 +1,7 @@
+len: 36 parts: 3
+Before:     0x7fff1ba74ea8 0x58b13bed0ae0 "The black cat climbed the green tree"
+Started:    0x7fff1ba74ea8 0x58b13bed0ae0 "The black cat climbed the green tree"
+ThreadId(2) 0x75d6e05ffb70 0x58b13bed0ae0 "The black ca"
+ThreadId(3) 0x75d6e01ffb70 0x58b13bed0ae0 "t climbed th"
+ThreadId(4) 0x75d6dfdffb70 0x58b13bed0ae0 "e green tree"
+After:      0x7fff1ba74ea8 0x58b13bed0ae0 "The black cat climbed the green tree"
