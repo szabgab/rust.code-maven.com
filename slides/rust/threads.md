@@ -214,25 +214,14 @@ See several examples:
 {id: chdir-in-threads}
 
 * The current working directory is a per process so separate threads cannot have different current working directories
-* Use forks.
 
+## Environment variables in threads
+{id: environment-variables-in-threads}
 
-## map with threads
-{id: map-with-threads}
-
-TODO: This is experimental code that needs to be improved
-
-![](examples/threads/map-thread/src/main.rs)
-
-## map with threads with Mutex
-{id: map-with-thread-mutex}
-{i: Mutex}
-
-![](examples/threads/map-thread-suggested/src/main.rs)
+* The environment variables are per process so separate threads cannot have different values.
 
 ## Counter in a loop in the same process and thread
 {id: counter-in-a-loop}
-
 
 * This simple examples shows how we can change a variable from multiple threads
 * This is the example without any threads:

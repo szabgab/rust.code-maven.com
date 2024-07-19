@@ -444,4 +444,19 @@ cargo run --release
 * [num-traits](https://crates.io/crates/num-traits)
 * [num-traits](https://docs.rs/num-traits)
 
+## map with threads
+{id: map-with-threads}
+{i: TBD}
+
+TODO: This is experimental code that needs to be improved
+
+![](examples/threads/map-thread/src/main.rs)
+
+## map with threads with Mutex
+{id: map-with-thread-mutex}
+{i: Mutex}
+{i: TBD}
+
+![](examples/threads/map-thread-suggested/src/main.rs)
+
 
