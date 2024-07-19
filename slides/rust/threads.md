@@ -252,7 +252,6 @@ See several examples:
 
 ![](examples/threads/counter-with-mutex-local/src/main.rs)
 
-
 ## Counter with message passing
 {id: counter-with-message-passing}
 {i: mpsc}
@@ -273,6 +272,26 @@ See several examples:
 * Using channel messages to let the main thread know the processing is done.
 
 ![](examples/threads/use-threadpool-with-messages/src/main.rs)
+
+
+## Exercise: character counting
+{id: exercise-character-counting-in-threads}
+
+* Given a string count how many time each character appears in the string.
+
+```
+Input: "abcax"
+Output:
+a: 2
+b: 1
+c: 1
+x: 1
+```
+
+* First implement a function that does this in a single thread.
+* Then create a threaded solution with a shared HashMap where each thread updates the shared HashMap.
+* Then create a threaded solution with local HashMaps and then updating the central HashMap at the end of the thread.
+
 
 ## Exercise - word count
 {id: exercise-word-count-in-threads}
