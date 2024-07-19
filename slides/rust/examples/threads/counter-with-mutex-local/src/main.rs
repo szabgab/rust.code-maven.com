@@ -16,10 +16,12 @@ fn count_with_mutex(threads: i32, limit: i32) -> i32 {
         for _ in 0..threads {
             scope.spawn(|| {
                 println!("Start {:?}", std::thread::current().id());
+                let mut my_counter = 0;
                 for _ in 0..limit {
-                    let mut guard = counter.lock().unwrap();
-                    *guard += 1;
+                    my_counter += 1;
                 }
+                let mut guard = counter.lock().unwrap();
+                *guard += my_counter;
             });
         }
     });

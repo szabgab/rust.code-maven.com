@@ -227,16 +227,31 @@ See several examples:
 * This is the example without any threads:
 
 ![](examples/threads/counter-loop/src/main.rs)
+![](examples/threads/counter-loop/out.out)
 
 
-## Counter with threads (shared variable?)
+## Counter with threads (shared variable)
 {id: counter-with-threads}
 {i: Mutex}
 {i: lock}
 
-* Solution is using Mutex
+* Solution is using [Mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html)
+
+* This solution is actually slower than the single-threaded solution because the the threads are waiting for each other to free the guards.
 
 ![](examples/threads/counter-with-mutex/src/main.rs)
+![](examples/threads/counter-with-mutex/out.out)
+
+
+## Counter with threads (local counting)
+{id: counter-with-threads-local-counting}
+{i: Mutex}
+{i: lock}
+
+* This solution does the work locally and updates the shared variable only at the end
+
+![](examples/threads/counter-with-mutex-local/src/main.rs)
+
 
 ## Counter with message passing
 {id: counter-with-message-passing}
@@ -244,6 +259,7 @@ See several examples:
 {i: channel}
 {i: send}
 {i: drop}
+{i: TBD}
 
 * Solution using messages
 
