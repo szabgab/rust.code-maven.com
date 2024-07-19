@@ -130,9 +130,13 @@ N    single     multi
 See several examples:
 
 * Shared read-only variable with a number in it.
+* Shared read-only variable with a string in it.
+* Shared read-only variable with a string in it using Arc.
 
 ## Shared read-only variable with numeric value
 {id: shared-read-only-variable-with-numeric-value}
+
+* The integer is copied
 
 ![](examples/threads/shared-read-only-variable-number/src/main.rs)
 ![](examples/threads/shared-read-only-variable-number/out.out)
@@ -140,12 +144,17 @@ See several examples:
 ## Shared read-only variable with string value
 {id: shared-read-only-variable-with-string-value}
 
+* The string muste be cloned for this to work.
+
 ![](examples/threads/shared-read-only-variable-string/src/main.rs)
 ![](examples/threads/shared-read-only-variable-string/out.out)
 
 
 ## Shared read-only variable with string value with Arc
 {id: shared-read-only-variable-with-string-value-with-arc}
+
+* We can use [Arc](https://doc.rust-lang.org/std/sync/struct.Arc.html) to create Reference Counting around the data.
+* The `clone` on the Arc will only increment the reference counter, but does not copy the data.
 
 ![](examples/threads/shared-read-only-variable-string-with-arc/src/main.rs)
 ![](examples/threads/shared-read-only-variable-string-with-arc/out.out)
@@ -160,16 +169,17 @@ See several examples:
 * Here the `clone` only copies the reference and not the whole data structure.
 
 ![](examples/threads/pass-reference-to-vector/src/main.rs)
-
+![](examples/threads/pass-reference-to-vector/out.out)
 
 ## Pass reference of read-only vector to thread improved
 {id: pass-reference-of-read-only-vector-to-thread-improved}
 {i: Arc}
 {i: clone}
 
-* In this solution the external block was moved inside the spawn.
+* In this solution the call to `clone` the Arc was moved inside the spawn.
 
 ![](examples/threads/pass-vector/src/main.rs)
+![](examples/threads/pass-vector/out.out)
 
 ## Pass and return reference (return ownership)
 {id: pass-and-return-reference}

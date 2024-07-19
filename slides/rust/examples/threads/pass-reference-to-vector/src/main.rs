@@ -1,27 +1,39 @@
 use std::sync::Arc;
 
+macro_rules! prt {
+    ($text: expr, $var: expr) => {
+        println!("{:11} {:?} {:p} {:?}", $text, $var, &$var, $var.as_ptr());
+    };
+}
+
 fn main() {
     let animals = Arc::new(vec![
-        String::from("mouse"),
-        String::from("elephant"),
+        String::from("crab"),
+        String::from("ant"),
         String::from("cat"),
         String::from("dog"),
-        String::from("giraffe"),
+        String::from("bat"),
     ]);
 
-    println!("{:?}", animals);
-    for _ in 1..4 {
+    prt!("Before:", animals);
+    let mut handles = vec![];
+    for _ in 1..=3 {
         let animals = animals.clone();
-        let handle = std::thread::spawn(move || {
+        handles.push(std::thread::spawn(move || {
             list_animals(&animals);
-        });
+        }));
+    }
+    prt!("Started:", animals);
+
+    for handle in handles {
         handle.join().unwrap();
     }
-    println!("{:?}", animals);
+    prt!("After:", animals);
 }
 
 fn list_animals(animals: &Vec<String>) {
-    for animal in animals {
-        println!("{:?} {}", std::thread::current().id(), animal);
-    }
+    prt!(format!("{:?}", std::thread::current().id()), animals);
+    //for animal in animals {
+    //    println!("{:?} {}", std::thread::current().id(), animal);
+    //}
 }

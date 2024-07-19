@@ -1,0 +1,6 @@
+Before:     ["crab", "ant", "cat", "dog", "bat"] 0x7fff3f32bef8 0x5adca2be2480
+Started:    ["crab", "ant", "cat", "dog", "bat"] 0x7fff3f32bef8 0x5adca2be2480
+ThreadId(2) ["crab", "ant", "cat", "dog", "bat"] 0x793310bff678 0x5adca2be2480
+ThreadId(4) ["crab", "ant", "cat", "dog", "bat"] 0x7933103ff678 0x5adca2be2480
+ThreadId(3) ["crab", "ant", "cat", "dog", "bat"] 0x7933107ff678 0x5adca2be2480
+After:      ["crab", "ant", "cat", "dog", "bat"] 0x7fff3f32bef8 0x5adca2be2480
