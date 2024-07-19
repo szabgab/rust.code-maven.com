@@ -189,6 +189,10 @@ See several examples:
 ![](examples/threads/process-string-slices/src/main.rs)
 ![](examples/threads/process-string-slices/out.out)
 
+## Filling the memory showing that Arc works
+{id: thread-without-copy}
+
+![](examples/threads/thread-without-copy/src/main.rs)
 
 ## Pass and return ownership
 {id: pass-and-return-reference}
@@ -272,6 +276,8 @@ See several examples:
 * Using channel messages to let the main thread know the processing is done.
 
 ![](examples/threads/use-threadpool-with-messages/src/main.rs)
+
+
 
 
 ## Exercise: character counting
