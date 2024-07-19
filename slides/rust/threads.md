@@ -4,7 +4,7 @@
 ## Threads in Rust
 {id: threads-in-rust}
 
-* [Feerless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
+* [Fearless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
 * [std::thread](https://doc.rust-lang.org/std/thread/)
 
 ## Simple thread (with fake work)
@@ -64,8 +64,8 @@
 * We can facilitate communication between the main thread and the spawned thread.
 * In this example the spawned thread is sending a message to the main thread.
 * The `move` keyword tells Rust that the variables declared before spawning that are also used in the spawned code need to be moved. (`tx` in this case)
-* We can use `recv`, which is blocking the main thread, to wait for a message from the spwaned thread.
-* In that case we will have to know how many messages to expect and if we are still waiting for a message while the spawened thread exits then we either get stuck or get panic!.
+* We can use `recv`, which is blocking the main thread, to wait for a message from the spawned thread.
+* In that case we will have to know how many messages to expect and if we are still waiting for a message while the spawned thread exits then we either get stuck or get panic!.
 * Using the second loop is a better solution.
 
 
@@ -86,8 +86,8 @@
 {id: threads-speed-improvements}
 
 
-* A CPU intensive task - computing the Fiboncci numbers up to N 10 times.
-* Once in a single threaded process and once in a multithreaded process with 10 threads.
+* A CPU intensive task - computing the Fibonacci numbers up to N 10 times.
+* Once in a single threaded process and once in a multi-threaded process with 10 threads.
 
 Results
 
@@ -107,13 +107,13 @@ N    single     multi
 {id: save-many-files}
 
 * In this example we demonstrate the speed improvement of threading.
-* The program will count the number of prime numbes up to a given number. This part is CPU intensive.
+* The program will count the number of prime numbers up to a given number. This part is CPU intensive.
 * Then it will create many small files. - This part is IO intensive.
 
 ![](examples/threads/save-many-files/src/main.rs)
 
 * Compute primes up to 1 (that is, do almost nothing).  Create 100,000 files. This is mostly IO intensive.
-* We can see a 35-40% speed imprvement going from no threads to 2 threads, but there is no more speed improvement.
+* We can see a 35-40% speed improvement going from no threads to 2 threads, but there is no more speed improvement.
 
 ![](examples/threads/save-many-files/100000_1.out)
 
@@ -144,7 +144,7 @@ See several examples:
 ## Shared read-only variable with string value
 {id: shared-read-only-variable-with-string-value}
 
-* The string muste be cloned for this to work.
+* The string must be cloned for this to work.
 
 ![](examples/threads/shared-read-only-variable-string/src/main.rs)
 ![](examples/threads/shared-read-only-variable-string/out.out)
@@ -296,7 +296,7 @@ x: 1
 ## Exercise - word count
 {id: exercise-word-count-in-threads}
 
-Implement the default behaviour of the `wc` command of Linux/Unix. For each file showing
+Implement the default behavior of the `wc` command of Linux/Unix. For each file showing
 * number of lines
 * number of words
 * number of bytes
@@ -322,7 +322,7 @@ $ wc intro.md files.md strings.md
 {i: TBD}
 
 
-In earlier parts of the course ee have implemented several functions that were searching a text string to find certain characters.
+In earlier parts of the course I have implemented several functions that were searching a text string to find certain characters.
 Now run those functions on a large text file.
 
 Allow the user to set the number of threads we would like to use.
@@ -338,7 +338,7 @@ Allow the user to set the number of threads we would like to use.
 ![](examples/threads/separate-functions/src/main.rs)
 
 TODO: what if there are variables in the main function? Can we read them from the threads? Can we write them?
-TODO: How to share workload? e.g. We would like to create 10,000 files with the sequnce number of the file being botht the content and the filename.
+TODO: How to share workload? e.g. We would like to create 10,000 files with the sequence number of the file being both the content and the filename.
 TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
 
 
