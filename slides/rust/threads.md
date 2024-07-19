@@ -183,11 +183,21 @@ See several examples:
 
 ## Pass and return reference (return ownership)
 {id: pass-and-return-reference}
+{i: TBD}
+
+* TODO: As I understand this would only work properly if the threads do not need the same variable at the same time.
+* So either they run sequentially in which case we don't gain CPU or each thread has a different variable.
 
 * An alternate way to handle this situation is to return the vector.
 * This way we pass the ownership back to the caller.
 
 ![](examples/threads/pass-and-return-reference/src/main.rs)
+
+## Process string slices in parallel
+{id: process-string-slices-in-parallel}
+
+![](examples/threads/process-string-slices/src/main.rs)
+![](examples/threads/process-string-slices/out.out)
 
 
 ## Thread scope
@@ -246,11 +256,6 @@ TODO: This is experimental code that needs to be improved
 * Solution using messages
 
 ![](examples/threads/counter-with-messages/src/main.rs)
-
-## Process string slices in parallel
-{id: process-string-slices-in-parallel}
-
-![](examples/strings/process-slices/src/main.rs)
 
 ## Use threadpool with messages
 {id: use-threadpool-with-messages}
