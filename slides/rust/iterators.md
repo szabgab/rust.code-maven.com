@@ -62,3 +62,13 @@
 ![](examples/iterators/count/src/main.rs)
 ![](examples/iterators/count/out.out)
 
+## Exercise: Iterator for the fibonacci series
+{id: exercise-fibonacci-iterator}
+
+* Crate an iterator that on every iteration will return the next value from the Fibonacci series.
+
+## Solution: Iterator for the fibonacci series
+{id: solution-fibonacci-iterator}
+
+![](examples/iterators/fibonacci/src/main.rs)
+
