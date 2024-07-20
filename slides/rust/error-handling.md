@@ -83,4 +83,36 @@ One way to avoid reaching stack overflow is to call panic! ourselves.
 
 ![](examples/errors/argv-error-handling/src/main.rs)
 
+## main returning Result - Set exit code
+{id: main-returning-result-set-exit-code}
+{i: Result}
+{i: Box}
+{i: dyn}
+{i: Error}
+{i: Ok}
+{i: ?}
+
+![](examples/errors/error-in-main/src/main.rs)
+
+A number of invocations:
+
+```
+cargo run
+cargo run data.txt
+cargo run data.txt 10
+cargo run data.txt abc
+cargo run data.txt 0
+```
+
+## Error in internal function
+{id: error-in-function}
+{i: Result}
+{i: Box}
+{i: dyn}
+{i: Error}
+{i: Ok}
+{i: ?}
+
+![](examples/errors/error-in-function/src/main.rs)
+
 
