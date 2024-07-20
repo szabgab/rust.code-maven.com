@@ -1,5 +1,5 @@
 fn main() {
-    let numbers = vec![23, 12, 7 , 8];
+    let numbers = vec![23, 7, 12, 8];
 
     if numbers.iter().all(|num| *num > 0) {
         println!("Positive numbers");
@@ -16,4 +16,13 @@ fn main() {
     // if numbers.into_iter().all(|num| num >= 10) {
     //     println!("Double digit numbers");
     // }
+
+    let numbers = vec![23, 12, 7, 8];
+
+    if numbers.into_iter().all(|num| {
+        println!("Checking {num}");
+        num >= 10
+    }) {
+        println!("Double digit numbers");
+    }
 }
