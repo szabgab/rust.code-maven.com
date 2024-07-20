@@ -459,4 +459,27 @@ TODO: This is experimental code that needs to be improved
 
 ![](examples/threads/map-thread-suggested/src/main.rs)
 
+## Accessing envrionment variables
+{id: accessin-environment-variables}
+{i: std::env}
+{i: std::env::var}
+
+We can access the environment variables from Rust using the [std::env::var](https://doc.rust-lang.org/std/env/fn.var.html) function.
+It returns a `Result`.
+
+![](examples/other/get-environment-variable/src/main.rs)
+
+Run as
+
+```
+cargo run
+RUST=42 cargo run
+```
+
+## List environment variables
+{id: list-environment-variables}
+{i: std::env}
+{i: std::env::vars}
+
+![](examples/other/environment-variables/src/main.rs)
 
