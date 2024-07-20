@@ -17,6 +17,48 @@
 ![](examples/iterators/iterator-over-vector-of-numbers-using-iter/src/main.rs)
 ![](examples/iterators/iterator-over-vector-of-numbers-using-iter/out.out)
 
+## Count number of elements of an iterator
+{id: count-number-of-elements-of-an-iterator}
+{i: count}
+
+![](examples/iterators/count/src/main.rs)
+![](examples/iterators/count/out.out)
+
+## Iterator: all the elements
+{id: all-the-elements}
+{i: all}
+{i: iter}
+{i: into_iter}
+
+* `all` - calls a closure on every element of the iterator and if the closure returns `true` for every element then the expression returns `true`.
+* See the documentation of the [all](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.all) method.
+
+* `iter` iterates over borrowed references and thus we need to dereference the variables with `*`, but we can continue useing the original vector.
+* `into_iter` iterates over the real values and thus we cannot use the original vector any more.
+
+* The last example shows that the iteration will stop when it encounters the first `false`.
+
+![](examples/iterators/all/src/main.rs)
+![](examples/iterators/all/out.out)
+
+
+## Iteration moves values
+{id: iteration-moves-values}
+
+* If we remove the `&` from the first iteration the code won't compile any more as we have moved the values.
+
+![](examples/iterators/iteration-moves-values/src/main.rs)
+![](examples/iterators/iteration-moves-values/out.out)
+
+
+## Iterator that restarts
+{id: iterator-that-restarts}
+{i: next}
+
+* After consuming all the elements of the iterator it return `None`, but then it restarts and we can ask for the `next` element.
+
+![](examples/iterators/circular/src/main.rs)
+
 
 ## Create a simple iterator to count up to a number
 {id: create-simple-iterator-to-count}
@@ -54,30 +96,6 @@
 {i: ReadDir}
 
 ![](examples/iterators/walk-directory-tree-return-strings/src/main.rs)
-
-## Count number of elements of an iterator
-{id: count-number-of-elements-of-an-iterator}
-{i: count}
-
-![](examples/iterators/count/src/main.rs)
-![](examples/iterators/count/out.out)
-
-## Iterator: all the elements
-{id: all-the-elements}
-{i: all}
-{i: iter}
-{i: into_iter}
-
-* `all` - calls a closure on every element of the iterator and if the closure returns `true` for every element then the expression returns `true`.
-* See the documentation of the [all](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.all) method.
-
-* `iter` iterates over borrowed references and thus we need to dereference the variables with `*`, but we can continue useing the original vector.
-* `into_iter` iterates over the real values and thus we cannot use the original vector any more.
-
-* The last example shows that the iteration will stop when it encounters the first `false`.
-
-![](examples/iterators/all/src/main.rs)
-![](examples/iterators/all/out.out)
 
 ## Exercise: Iterator for the fibonacci series
 {id: exercise-fibonacci-iterator}
