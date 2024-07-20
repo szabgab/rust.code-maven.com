@@ -54,6 +54,16 @@
 ![](examples/threads/try-threads/src/main.rs)
 ![](examples/threads/try-threads/out.out)
 
+
+## Handle panic! in threads
+{id: handle-panic-in-threads}
+{i: spawn}
+{i: join}
+{i: match}
+
+![](examples/threads/thread-panic/src/main.rs)
+
+
 ## Threads with messages
 {id: threads-with-messages}
 {i: channel}
