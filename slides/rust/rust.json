@@ -48,6 +48,7 @@
         "testing.md",
         "threads.md",
         "rayon.md",
+        "async.md",
         "regex.md",
         "sets.md",
         "clap.md",
