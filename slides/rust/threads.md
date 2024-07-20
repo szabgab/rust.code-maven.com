@@ -64,6 +64,12 @@
 ![](examples/threads/thread-panic/src/main.rs)
 
 
+```
+cargo run
+PANIC=23 cargo run
+```
+
+
 ## Threads with messages
 {id: threads-with-messages}
 {i: channel}
