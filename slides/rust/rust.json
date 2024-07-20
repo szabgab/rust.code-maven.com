@@ -47,6 +47,7 @@
         "crates.md",
         "testing.md",
         "threads.md",
+        "rayon.md",
         "regex.md",
         "sets.md",
         "clap.md",
