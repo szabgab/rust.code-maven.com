@@ -20,14 +20,15 @@ impl Iterator for CircleOfLife {
             self.index = Some(0);
         } else {
             let index = self.index.unwrap();
-            if index + 1 >= self.things.len() {
-                self.index = Some(0);
-            } else {
-                self.index = Some(index + 1)
-            }
+            self.index = Some(index + 1)
         }
 
         let index = self.index.unwrap();
+        if index >= self.things.len() {
+            self.index = None;
+            return None;
+        }
+
         Some(self.things[index].clone())
     }
 }
@@ -41,12 +42,18 @@ fn main() {
 
     let mut iterator = CircleOfLife::new(&animals);
 
-    for _ in 1..=5 {
+    loop {
         if let Some(animal) = iterator.next() {
             println!("{animal}")
         } else {
             println!("No more animals");
             break;
         }
+    }
+
+    if let Some(animal) = iterator.next() {
+        println!("{animal}")
+    } else {
+        println!("This iterator is finished");
     }
 }

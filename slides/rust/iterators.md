@@ -57,7 +57,17 @@
 
 * After consuming all the elements of the iterator it return `None`, but then it restarts and we can ask for the `next` element.
 
+![](examples/iterators/restarting/src/main.rs)
+![](examples/iterators/restarting/out.out)
+
+## Circular Iterator that restarts
+{id: circular-iterator-that-restarts}
+{i: next}
+
 ![](examples/iterators/circular/src/main.rs)
+![](examples/iterators/circular/out.out)
+
+
 
 
 ## Create a simple iterator to count up to a number
