@@ -17,8 +17,8 @@ fn count_with_mutex(threads: i32, limit: i32) -> i32 {
             scope.spawn(|| {
                 println!("Start {:?}", std::thread::current().id());
                 for _ in 0..limit {
-                    let mut guard = counter.lock().unwrap();
-                    *guard += 1;
+                    let mut guarded_counter = counter.lock().unwrap();
+                    *guarded_counter += 1;
                 }
             });
         }
