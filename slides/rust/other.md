@@ -483,3 +483,9 @@ RUST=42 cargo run
 
 ![](examples/other/environment-variables/src/main.rs)
 
+## Closures
+{id: closures}
+
+![](examples/other/closure-demo/src/main.rs)
+
+
