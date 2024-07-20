@@ -488,4 +488,9 @@ RUST=42 cargo run
 
 ![](examples/other/closure-demo/src/main.rs)
 
+## Reference to a number
+{id: reference-to-a-number}
+{i: TBD}
+
+![](examples/other/reference-to-number/src/main.rs)
 
