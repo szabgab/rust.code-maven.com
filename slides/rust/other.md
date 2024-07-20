@@ -494,3 +494,11 @@ RUST=42 cargo run
 
 ![](examples/other/reference-to-number/src/main.rs)
 
+## Out of memory
+{id: out-of-memory}
+
+This program will create an ever growing string. When it reaches the total size of the (free) memory in the computer it crashes.
+
+![](examples/other/out-of-memory/src/main.rs)
+
+
