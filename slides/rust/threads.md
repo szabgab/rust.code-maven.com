@@ -69,6 +69,15 @@ cargo run
 PANIC=23 cargo run
 ```
 
+## Threads polling the substhreads
+{id: polling-the-subthread}
+{i: is_finished}
+{i: iter}
+{i: all}
+
+![](examples/threads/polling/src/main.rs)
+![](examples/threads/polling/out.out)
+
 
 ## Threads with messages
 {id: threads-with-messages}

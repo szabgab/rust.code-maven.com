@@ -1,0 +1,25 @@
+Before
+Started
+In Main
+ThreadId(2) 0 
+ThreadId(3) 0 
+ThreadId(4) 0 
+In Main
+ThreadId(2) 1 
+ThreadId(3) 1 
+ThreadId(4) 1 
+In Main
+ThreadId(2) 2 
+ThreadId(3) 2 
+ThreadId(4) 2 
+In Main
+ThreadId(3) 3 
+ThreadId(2) 3 
+ThreadId(4) 3 
+In Main
+ThreadId(3) 4 
+ThreadId(4) 4 
+ThreadId(2) 4 
+In Main
+In Main
+After
