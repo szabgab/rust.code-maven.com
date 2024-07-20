@@ -258,6 +258,23 @@ See several examples:
 ![](examples/threads/counter-loop/src/main.rs)
 ![](examples/threads/counter-loop/out.out)
 
+## Mutex - without threads
+{id: mutex-without-threads}
+{i: Mutex}
+
+* Mutex = mutual exclusion.
+
+A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html) without even using a thread.
+
+![](examples/threads/mutex-without-threads/src/main.rs)
+![](examples/threads/mutex-without-threads/out.out)
+
+## Lock with Mutex
+{id: lock-with-mutex}
+{i: Mutex}
+
+![](examples/threads/lock-with-mutex/src/main.rs)
+![](examples/threads/lock-with-mutex/out.out)
 
 ## Counter with threads (shared variable) using Mutex
 {id: counter-with-threads}
@@ -270,16 +287,6 @@ See several examples:
 
 ![](examples/threads/counter-with-mutex/src/main.rs)
 ![](examples/threads/counter-with-mutex/out.out)
-
-## Mutex - without threads
-{id: mutex-without-threads}
-
-* Mutex = mutual exclusion.
-
-A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html) without even using a thread.
-
-![](examples/threads/mutex-without-threads/src/main.rs)
-![](examples/threads/mutex-without-threads/out.out)
 
 
 ## Counter with threads (local counting)
