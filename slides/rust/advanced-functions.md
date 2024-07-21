@@ -53,5 +53,13 @@ See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table
 * Implement a function that receives two `f32` values and returns the bigger.
 * Implement a generic function that receives two values (of the same type) and returns the bigger.
 
+## Exercise: call the add function with point
+{id: exercise-call-the-add-function-with-point}
+
+* Create a struct representing a point: two attibutes x and y holding `u32` both.
+* Call the add function passing two points to it.
+* The result needs to be a new Point that has x1 + x2 and y1 + y2 as coordinates.
+
+
 
 
