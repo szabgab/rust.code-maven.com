@@ -33,3 +33,7 @@ pass function as a parameter to another function
 
 See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table/114527](https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table/114527).
 
+## Generic functions to add numbers
+{id: generic-functions}
+
+![](examples/advanced-functions/generic-functions-add/src/main.rs)
