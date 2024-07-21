@@ -60,6 +60,18 @@ See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table
 * Call the add function passing two points to it.
 * The result needs to be a new Point that has x1 + x2 and y1 + y2 as coordinates.
 
+## Exercise: Implement function to repeate a string
+{id: exercise-repeate-string}
+
+* Implement a function that receives a string and an integer number and returns the string repeated N times:
+
+```
+repeate("abc_", 3)  returns abc_abc_abc_
+```
+
+Make sure we can accept any integer.
+
+
 ## Solution: call the add function for two points
 {id: solution-call-the-add-function-for-two-points}
 
