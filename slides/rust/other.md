@@ -493,4 +493,14 @@ This program will create an ever growing string. When it reaches the total size 
 
 ![](examples/other/out-of-memory/src/main.rs)
 
+## Two leveles of modules
+{id: modules-two-levels-of-modules}
+
+![](examples/modules/two-levels-of-modules/src/main.rs)
+
+
+## Try packages
+{id: try-packages}
+
+![](examples/modules/try-packages/src/main.rs)
 

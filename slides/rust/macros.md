@@ -4,8 +4,8 @@
 ## What are macros used for?
 {id: what-are-macros-used-for}
 
-* DRY - Don't Repeate Yourself
 * Metaprogramming - a program that generate a program
+* DRY - Don't Repeate Yourself
 * DSL - Domain Specific Language
 * Variadic Interfaces (the same function name but different number of arguments, eg. sum())
 
