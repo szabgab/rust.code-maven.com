@@ -107,7 +107,14 @@
 
 ![](examples/iterators/walk-directory-tree-return-strings/src/main.rs)
 
-## Exercise: Iterator for the fibonacci series
+## Mutable iterator
+{id: mutable-iterator}
+{i: iter_mut}
+
+![](examples/iterators/change/src/main.rs)
+![](examples/iterators/change/out.out)
+
+## Exercise: Iterator for the Fibonacci series
 {id: exercise-fibonacci-iterator}
 
 * Crate an iterator that on every iteration will return the next value from the Fibonacci series.
