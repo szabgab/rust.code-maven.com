@@ -40,6 +40,8 @@ cargo run bar
 * `match`-like arms to match the input of the macro.
 
 
+* Macro matchers and transcribers.
+
 ## Hello World macro
 {id: macro-hello-world}
 {i: macro_rules!}
