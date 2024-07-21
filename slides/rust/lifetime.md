@@ -24,3 +24,23 @@ rustc --explain E0106
 ![](examples/lifetime/function-two-params/src/main.rs)
 ![](examples/lifetime/function-two-params/out.out)
 
+
+## Exercise: longest string
+{id: exercise-lifetime-longest-string}
+
+* Implement a function that received 3 strings and returns the longest string
+
+```
+fn longest(a: &str, b: &str, c: &str) -> &str
+```
+
+* You will probably need some lifetime annotations.
+
+## Exercise: lifetime
+{id: exercise-lifetime-longer-or-static}
+
+* Implement a function that receives 2 strings and returns one string.
+* If the first string is longer than the second string return the first string.
+* Otherwise return the string "nope".
+
+
