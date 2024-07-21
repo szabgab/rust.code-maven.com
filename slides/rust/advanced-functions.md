@@ -36,4 +36,12 @@ See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table
 ## Generic functions to add numbers
 {id: generic-functions}
 
+* Generics
+
 ![](examples/advanced-functions/generic-functions-add/src/main.rs)
+
+## Generic functions to add numbers using where clause
+{id: generic-functions-where-clause}
+{i: where}
+
+![](examples/advanced-functions/generic-functions-add-where/src/main.rs)
