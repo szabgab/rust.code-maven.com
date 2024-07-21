@@ -1,0 +1,8 @@
+[package]
+name = "repeat-string"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+num-integer = "0.1.46"
+num-traits = "0.2.19"

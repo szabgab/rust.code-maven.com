@@ -71,6 +71,11 @@ repeat("abc_", 3)  returns abc_abc_abc_
 
 Make sure we can accept any integer.
 
+## Exercise: Implement function to repeate a string
+{id: exercise-repeate-string}
+{i: TBD}
+
+![](examples/advanced-functions/repeat-string/src/main.rs)
 
 ## Solution: call the add function for two points
 {id: solution-call-the-add-function-for-two-points}
