@@ -63,12 +63,13 @@
         "logging.md",
         "external.md",
         "macros.md",
+        "declarative-macros.md",
+        "procedural-macros.md",
         "egui.md",
         "sqlite.md",
         "binary.md",
         "learning-tasks.md",
         "unsafe.md",
-        "procedural-macros.md",
         "other.md"
     ]
 }
