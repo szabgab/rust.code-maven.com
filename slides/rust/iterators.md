@@ -119,7 +119,7 @@
 
 * Crate an iterator that on every iteration will return the next value from the Fibonacci series.
 
-## Solution: Iterator for the fibonacci series
+## Solution: Iterator for the Fibonacci series
 {id: solution-fibonacci-iterator}
 
 ![](examples/iterators/fibonacci/src/main.rs)

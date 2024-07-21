@@ -63,10 +63,10 @@ See [https://users.rust-lang.org/t/mismatched-types-when-creating-dispatch-table
 ## Exercise: Implement function to repeate a string
 {id: exercise-repeate-string}
 
-* Implement a function that receives a string and an integer number and returns the string repeated N times:
+* Implement a function that receives a reference to a string and an integer number and returns the string repeated N times:
 
 ```
-repeate("abc_", 3)  returns abc_abc_abc_
+repeat("abc_", 3)  returns abc_abc_abc_
 ```
 
 Make sure we can accept any integer.
