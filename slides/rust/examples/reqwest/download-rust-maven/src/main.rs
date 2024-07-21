@@ -1,4 +1,5 @@
 use regex::Regex;
+use std::sync::Arc;
 use tokio::join;
 use tokio::task::JoinHandle;
 
@@ -22,19 +23,23 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     for capture in re.captures_iter(&text) {
         //println!("Full match: '{}'", &capture[0]);
         //println!("URL match: '{}'", &capture[1]);
-        let path = capture[1].to_owned();
-        tasks.push(tokio::spawn(async move {
-            match reqwest::get(&path).await {
-                Ok(resp) => match resp.text().await {
-                    Ok(text) => {
-                        println!("RESPONSE: {} bytes from {}", text.len(), path);
-                    }
-                    Err(_) => println!("ERROR reading {}", path),
-                },
-                Err(_) => println!("ERROR downloading {}", path),
-            }
-            Ok(())
-        }));
+        let path = Arc::new(capture[1].to_owned());
+        {
+            let path = path.clone();
+            tasks.push(tokio::spawn(async move {
+                match reqwest::get(&*path).await {
+                    Ok(resp) => match resp.text().await {
+                        Ok(text) => {
+                            println!("RESPONSE: {} bytes from {}", text.len(), path);
+                        }
+                        Err(_) => println!("ERROR reading {}", path),
+                    },
+                    Err(_) => println!("ERROR downloading {}", path),
+                }
+                Ok(())
+            }));
+        }
+        println!("{path}");
 
         count += 1;
         if count > 10 {
