@@ -19,6 +19,11 @@ fn add8(x: i8, y: i8) -> i8 {
     x + y
 }
 
+// fn add<T>(x: T, y: T) -> T {
+//     print_type(&x);
+//     x + y
+// }
+
 fn add<T: std::ops::Add<Output = T>>(x: T, y: T) -> T {
     print_type(&x);
     x + y
