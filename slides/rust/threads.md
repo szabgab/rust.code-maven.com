@@ -7,6 +7,11 @@
 * [Fearless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
 * [std::thread](https://doc.rust-lang.org/std/thread/)
 
+## Available cores
+{id: available-parallelism}
+
+![](examples/threads/available/src/main.rs)
+
 ## Simple thread (with fake work)
 {id: thread-simple-with-fake-work}
 
