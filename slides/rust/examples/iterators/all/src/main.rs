@@ -19,10 +19,19 @@ fn main() {
 
     let numbers = vec![23, 12, 7, 8];
 
+    if numbers.iter().all(big) {
+        println!("Double digit numbers");
+    }
+
     if numbers.into_iter().all(|num| {
         println!("Checking {num}");
         num >= 10
     }) {
         println!("Double digit numbers");
     }
+}
+
+fn big(num: &i32) -> bool {
+    println!("Checking in big {num}");
+    *num >= 10
 }
