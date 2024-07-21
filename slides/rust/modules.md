@@ -44,4 +44,8 @@
 
 ![](examples/modules/modules-and-enums/src/main.rs)
 
+## Modules and structs
+{id: modules-and-structs}
+
+![](examples/modules/modules-and-structs/src/main.rs)
 
