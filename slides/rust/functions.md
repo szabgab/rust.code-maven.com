@@ -144,4 +144,12 @@ Simplify it by moving the code that reads the number from STDIN into a function 
 
 ![](examples/functions/rectangle-stdin/src/main.rs)
 
+## Exercise: is prime?
+{id: exercise-is-prime}
+
+Implement a function that receives a number and returns `true` if it is a prime number.
+
+Implement another function that, given a number, will return different enum variants
+if the number was prime number, composite number, zero or one.
+
 
