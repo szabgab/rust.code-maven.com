@@ -315,14 +315,6 @@ A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/st
 
 ![](examples/threads/counter-with-messages/src/main.rs)
 
-
-## A threaded version of the map function
-{id: a-threaded-version-of-the-map-function}
-
-* Using the [threaded-map](https://crates.io/crates/threaded-map) crate we can use the threadpool  as the `map` function.
-
-![](examples/threads/map-with-thread/src/main.rs)
-
 ## Exercise: character counting
 {id: exercise-character-counting-in-threads}
 

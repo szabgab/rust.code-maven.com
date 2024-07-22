@@ -48,6 +48,7 @@
         "testing.md",
         "threads.md",
         "threadpool.md",
+        "threaded-map.md",
         "rayon.md",
         "async.md",
         "regex.md",
