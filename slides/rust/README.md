@@ -21,4 +21,8 @@ TODO
 
 * Cow
 * Box
+* Create my own error types
+* Anyhow
+* iter() vs into_iter()   when would we want to use either of those?
+* Create your own trait and implement it for some types
 
