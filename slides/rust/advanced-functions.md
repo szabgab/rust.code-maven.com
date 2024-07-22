@@ -71,8 +71,8 @@ repeat("abc_", 3)  returns abc_abc_abc_
 
 Make sure we can accept any integer.
 
-## Exercise: Implement function to repeate a string
-{id: exercise-repeate-string}
+## Solution: Implement function to repeate a string
+{id: solution-repeate-string}
 {i: TBD}
 
 ![](examples/advanced-functions/repeat-string/src/main.rs)
