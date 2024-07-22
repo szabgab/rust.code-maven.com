@@ -122,4 +122,16 @@ TODO
 
 * mutuallay exclusive options (--delete, --add, --list)
 
+## Exercise: implement accepting the parameters of wc
+{id: exercise-command-line-of-wc}
+
+You can get it either by typing "man wc" in your terminal or by visiting [man wc](https://linux.die.net/man/1/wc).
+
+
+## Solution: implement accepting the parameters of wc
+{id: solution-command-line-of-wc}
+{i: TBD}
+
+![](examples/clap/wc-cli/src/main.rs)
+
 
