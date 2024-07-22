@@ -14,6 +14,7 @@ tags:
 | ---------- | ---------------------------------------------------------------------------------------------------------------- |
 | 2024.07.31 | [Command Line Tools: Implementing wc in Rust](https://www.meetup.com/code-mavens/events/302151487/)              |
 | 2024.08.06 | [Web development in Rust using Rocket - part 2](https://www.meetup.com/code-mavens/events/301736709/)            |
+| 2024.08.08 | [Rust Source Code Reading: The thousands crate](https://www.meetup.com/code-mavens/events/302391142/)            |
 
 ## Past events
 
