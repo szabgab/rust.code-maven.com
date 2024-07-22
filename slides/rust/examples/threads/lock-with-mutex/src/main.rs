@@ -1,6 +1,9 @@
 use std::sync;
 use std::thread;
 
+// TODO: run many times and show that they work in parallel
+// and still get the right updates
+
 fn main() {
     let text = sync::Mutex::new(String::new());
 

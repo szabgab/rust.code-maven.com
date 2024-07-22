@@ -1,6 +1,8 @@
 use std::env;
 use std::thread;
 
+// TODO what if the subthread causes a segmentation fault
+
 fn main() {
     println!("Before starting: {:?}", thread::current().id());
 
