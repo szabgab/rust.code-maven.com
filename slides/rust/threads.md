@@ -315,15 +315,6 @@ A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/st
 
 ![](examples/threads/counter-with-messages/src/main.rs)
 
-## Use threadpool with messages
-{id: use-threadpool-with-messages}
-{i: threadpool}
-
-* [threadpool](https://crates.io/crates/threadpool)
-* Using channel messages to let the main thread know the processing is done.
-
-![](examples/threads/use-threadpool-with-messages/src/main.rs)
-
 
 ## A threaded version of the map function
 {id: a-threaded-version-of-the-map-function}

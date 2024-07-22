@@ -47,6 +47,7 @@
         "crates.md",
         "testing.md",
         "threads.md",
+        "threadpool.md",
         "rayon.md",
         "async.md",
         "regex.md",
