@@ -43,7 +43,6 @@
 ![](examples/threads/simple-with-join/src/main.rs)
 ![](examples/threads/simple-with-join/out.out)
 
-
 ## Show that threads work in parallel
 {id: threads-work-in-parallel}
 {i: thread}
@@ -59,6 +58,9 @@
 ![](examples/threads/try-threads/src/main.rs)
 ![](examples/threads/try-threads/out.out)
 
+## Return value from thread
+{id: return-value-from-thread}
+{i: TBD}
 
 ## Handle panic! in threads
 {id: handle-panic-in-threads}
