@@ -124,3 +124,9 @@
 
 ![](examples/iterators/fibonacci/src/main.rs)
 
+## Iter strings
+{id: iter-strings}
+{i: TBD}
+
+![](examples/iterators/iter-strings/src/main.rs)
+
