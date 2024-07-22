@@ -291,6 +291,14 @@
 ![](examples/struct/copy-attributes/src/main.rs)
 ![](examples/struct/copy-attributes/out.out)
 
+## Drop - destructor
+{id: drop}
+{i: Drop}
+{i: drop}
+
+* Implement the [Drop](https://doc.rust-lang.org/std/ops/trait.Drop.html) trait
+
+![](examples/struct/drop-demo/src/main.rs)
 
 ## Exercise - struct for contact info
 {id: exercise-struct-for-contact-info}
