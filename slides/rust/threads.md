@@ -351,7 +351,7 @@ x: 1
 * Then create a threaded solution with local HashMaps and then updating the central HashMap at the end of the thread.
 
 
-## Exercise - word count
+## Exercise: word count
 {id: exercise-word-count-in-threads}
 
 Implement the default behavior of the `wc` command of Linux/Unix. For each file showing
@@ -368,14 +368,14 @@ $ wc intro.md files.md strings.md
   689  1735 18499 total
 ```
 
-## Exercise - count characters, words
+## Exercise: count characters, words
 {id: exercise-count-characters}
 
 *  Given many files (e.g. clone the [Rust-maven](https://github.com/szabgab/rust.code-maven.com/) repository or the [slides](https://github.com/szabgab/slides) repository or the [ladino-dictionary-data](https://github.com/kantoniko/ladino-diksionaryo-data) repo)
 * Count how many times each character appears.
 * Count how many times each word appear.
 
-## Exercise - run several functions on the same text
+## Exercise: run several functions on the same text
 {id: exercise-run-several-functions-on-the-same-text}
 {i: TBD}
 
@@ -385,7 +385,14 @@ Now run those functions on a large text file.
 
 Allow the user to set the number of threads we would like to use.
 
-## Solution - count characters, words
+## Exercise: Download many files in threads
+{id: exercise-download-many-files-in-threads}
+
+In the chapter about http we had an example for a blocking http client and we had an example downloading all the pages of the Rust Maven site using Tokio and async calls.
+
+Implement the "download many files" application using threads and blocking the http client. Make the main thread collect the sizes of the downloaded pages.
+
+## Solution: count characters, words
 {id: solution-count-characters}
 
 ![](examples/threads/count-characters/src/main.rs)
