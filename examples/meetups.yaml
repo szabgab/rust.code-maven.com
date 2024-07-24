@@ -78,6 +78,7 @@
   url: https://www.meetup.com/rustdelhi/
   members: 1012
   location: Delhi, India
+  web: https://rustdelhi.in/
 - name: Rust Argentina
   url: https://www.meetup.com/rust-argentina/
   members: 995
@@ -90,6 +91,7 @@
   url: https://www.meetup.com/rust-tlv/
   members: 950
   location: Tel Aviv-Yafo, Israel
+  web: https://rust.org.il/
 - name: Rust Oslo
   url: https://www.meetup.com/Rust-Oslo/
   members: 902
@@ -450,6 +452,7 @@
   url: https://www.meetup.com/rust-in-israel/
   members: 18
   location: Tel Aviv, Israel
+  web: https://rust.org.il/
 - name: Rust Indonesia
   url: https://github.com/rustid/meetup
   members: 0
