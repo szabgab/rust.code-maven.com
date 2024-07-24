@@ -7,6 +7,7 @@ struct Group {
     url: String,
     members: u32,
     location: String,
+    web: Option<String>,
 }
 
 fn main() {
@@ -30,12 +31,17 @@ fn meetups() {
 
     groups.sort_by(|a, b| b.members.cmp(&a.members));
     for (ix, group) in groups.iter().enumerate() {
+        let web = match &group.web {
+            Some(url) => format!("[web]({})", url),
+            None => String::new(),
+        };
         text.push_str(
             format!(
-                "| {} | [{}]({}) | {} | {} |\n",
+                "| {} | [{}]({}) | {} | {} | {} |\n",
                 ix + 1,
                 group.name,
                 group.url,
+                web,
                 group.members,
                 group.location
             )

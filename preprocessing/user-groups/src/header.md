@@ -25,5 +25,5 @@ the number of members.
 
 Total number of members: {} (the same person might be member of several groups.)
 
-| # | name | members | location |
-| - | ---- | ------- | -------- |
+| # | name | web | members | location |
+| - | ---- | --- | ------- | -------- |
