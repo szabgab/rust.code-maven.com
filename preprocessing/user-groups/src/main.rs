@@ -43,11 +43,8 @@ fn meetups() {
         );
     }
 
-    text.push_str(r#"
-
-For this page even the Markdown file is generated. See the `preprocessing` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.
-
-"#);
+    let footer  = include_str!("footer.md");
+    text.push_str(&footer);
 
     let filename = "../../pages/user-groups.md";
     if let Err(err) = std::fs::write(filename, text) {
