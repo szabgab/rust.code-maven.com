@@ -16,7 +16,7 @@
 
 ## Types of macros
 {id: types-of-macros}
-{id: TBD}
+{i: TBD}
 
 * **declarative** Somthing that looks like a function but ends with an exclamation point. e.g. `println!`
 * **procedural** e.g. `#[allow(dead_code)]` etc.
