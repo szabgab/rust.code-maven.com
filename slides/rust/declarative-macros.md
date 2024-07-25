@@ -17,6 +17,8 @@
 * [Full list of standard macros](https://doc.rust-lang.org/std/#macros)
 * [Crates tagged as macro](https://crates.io/keywords/macro)
 
+* [Declarative macros](https://veykril.github.io/tlborm/decl-macros.html) in the Little book of macros
+
 ## todo!
 {id: macro-todo}
 {i: todo!}
@@ -121,4 +123,13 @@ macro_rules! ok(($result:expr) => ($result.unwrap()));
 ![](examples/macros/optional-parameter/src/main.rs)
 ![](examples/macros/optional-parameter/out.out)
 
+
+## Define a function using a macro
+{id: define-a-function-using-a-macro}
+
+* We can use both `tt` and `ident` in the macro parameter definition.
+* We can use the macro both inside and outside functions.
+* The former will create functions scoped to the block where they were created. The latter will be global.
+
+![](examples/macros/define-function/src/main.rs)
 
