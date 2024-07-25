@@ -510,4 +510,12 @@ This program will create an ever growing string. When it reaches the total size 
 * More than 500 crates have a file called `release.toml` in their git repository and 2 have `.release.toml`.
 * These are configuration files of the [cargo-release](https://crates.io/crates/cargo-release) crate to make releases easier.
 
+## thousands crate for struct with Display (commafy)
+{id: thousands-crate-for-struct-with-display}
+{i: thousands}
+{i: commafy}
+
+![](examples/other/thousands-for-struct/src/main.rs)
+![](examples/other/thousands-for-struct/out.out)
+
 
