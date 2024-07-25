@@ -152,4 +152,15 @@ Implement a function that receives a number and returns `true` if it is a prime 
 Implement another function that, given a number, will return different enum variants
 if the number was prime number, composite number, zero or one.
 
+## Scoped functions
+{id: scoped-functions}
+
+* We can defined a function inside a function and then it will be only available in that scope.
+* Surprisingly (or not) we can call the function anywhere inside the scope, even before its declaration.
+
+![](examples/functions/scoped-functions/src/main.rs)
+
+![](examples/functions/scoped-functions/out.out)
+
+
 
