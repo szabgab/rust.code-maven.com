@@ -190,7 +190,7 @@ Setting the envronment can be done on the same row (on linux and macOS) as we se
 * Actually I am not sure this is such a good example for `default_value_if` as setting the default even if the `log_to_file` is `False` would not be a problem.
 The just would not use it.
 
-![](examples/clap/default-value-if/src/main.rs)
+![](examples/clap/default-value-if-equals/src/main.rs)
 
 ```
 $ cargo run -q
@@ -205,6 +205,32 @@ Args: Cli { log_to_file: true, log_file: Some("other.log") }
 $ cargo run -q -- --log-file other.log
 Args: Cli { log_to_file: false, log_file: Some("other.log") }
 ```
+
+## Clap - set default value if other argument provided
+{id: clap-set-default-value-if-other-argument-provided}
+{i: default_value_if}
+{i: ArgPredicate}
+{i: IsPresent}
+
+* This is a similar example but now we say that if the user provides a name for the logfile then we'll automatically turn on logging to that file.
+* This might be more logical than the previous one, but I am not sure I like this either.
+
+![](examples/clap/default-value-if-ispresent/src/main.rs)
+
+```
+$ cargo run -q
+Args: Cli { log_to_file: false, log_file: "my.log" }
+
+$ cargo run -q -- --log-to-file
+Args: Cli { log_to_file: true, log_file: "my.log" }
+
+$ cargo run -q -- --log-file other.log
+Args: Cli { log_to_file: true, log_file: "other.log" }
+
+$ cargo run -q -- --log-to-file  --log-file other.log
+Args: Cli { log_to_file: true, log_file: "other.log" }
+```
+
 
 
 ## Clap: default value only if the flag was provides
