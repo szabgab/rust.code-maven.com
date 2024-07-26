@@ -123,7 +123,7 @@ This is usually a repetition of parameter name in upper case letters.
 In many cases this gives good indication of the value the program is expecting, but sometimes you might want to give a better hint.
 In such caces you can set the string that will appear inside the angle brackets using the `value_name` parameter.
 
-* In this exampl the input field has the default: `--input <INPUT>` while the out field was set to `FILENAME` by the `value_field.`
+* In this exampl the input field has the default: `INPUT` while the out field was set to `FILENAME` by the `value_field.`
 
 ![](examples/clap/value-name/src/main.rs)
 ![](examples/clap/value-name/out.out)
