@@ -178,6 +178,34 @@ DEMO_HOSTNAME=localhost cargo run
 
 Setting the envronment can be done on the same row (on linux and macOS) as we see in our example, but it can be also set earlier.
 
+## Clap - set default value if other flag provided
+{id: clap-set-default-value-if-other-flag-provided}
+{i: default_value_if}
+{i: ArgPredicate}
+{i: Equals}
+{i: OsStr}
+
+* If `log_to_file` is true then `log_file` will get a default value.
+
+* Actually I am not sure this is such a good example for `default_value_if` as setting the default even if the `log_to_file` is `False` would not be a problem.
+The just would not use it.
+
+![](examples/clap/default-value-if/src/main.rs)
+
+```
+$ cargo run -q
+Args: Cli { log_to_file: false, log_file: None }
+
+$ cargo run -q -- --log-to-file
+Args: Cli { log_to_file: true, log_file: Some("my.log") }
+
+$ cargo run -q -- --log-to-file --log-file other.log
+Args: Cli { log_to_file: true, log_file: Some("other.log") }
+
+$ cargo run -q -- --log-file other.log
+Args: Cli { log_to_file: false, log_file: Some("other.log") }
+```
+
 
 ## Clap: default value only if the flag was provides
 {id: clap-default-on-condition}
