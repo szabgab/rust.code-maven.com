@@ -14,6 +14,8 @@
 * Derive
 * Builder
 
+* Extension called [clap_complete](https://crates.io/search?q=clap_complete).
+
 ## Clap Single positional argument
 {id: clap-single-positional-argument}
 
@@ -88,6 +90,7 @@ cargo add clap --features derive
 
 ## Clap validate number range
 {id: clap-validate-number-range}
+{i: value_parser!}
 
 ![](examples/clap/validate-number-range/src/main.rs)
 
@@ -189,6 +192,9 @@ Setting the envronment can be done on the same row (on linux and macOS) as we se
 
 * Actually I am not sure this is such a good example for `default_value_if` as setting the default even if the `log_to_file` is `False` would not be a problem. The code just would not use it.
 
+* [ArgPredicate](https://docs.rs/clap/latest/clap/builder/enum.ArgPredicate.html)
+* [default_value_if](https://docs.rs/clap/latest/clap/struct.Arg.html#method.default_value_if)
+
 ![](examples/clap/default-value-if-equals/src/main.rs)
 
 ```
@@ -253,6 +259,16 @@ Args: Cli { mode: Release, log_level: 10 }
 
 ![](examples/clap/default-value-if-equals-multiple-values/src/main.rs)
 
+
+## Clap complete enum - name of shell
+{id: clap-complete-name-of-shell-enum}
+{i: clap_complete}
+{i: Shell}
+
+* [clap_complete](https://crates.io/crates/clap_complete)
+* [Shell](https://docs.rs/clap_complete/latest/clap_complete/shells/enum.Shell.html)
+
+![](examples/clap/clap-complete-shell/src/main.rs)
 
 ## Clap: default value only if the flag was provides
 {id: clap-default-on-condition}

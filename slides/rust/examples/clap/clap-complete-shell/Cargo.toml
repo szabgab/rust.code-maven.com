@@ -1,0 +1,8 @@
+[package]
+name = "clap-complete-shell"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.11", features = ["derive"] }
+clap_complete = "4.5.11"
