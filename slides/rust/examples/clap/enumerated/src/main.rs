@@ -4,6 +4,8 @@ use clap::ValueEnum;
 #[derive(Debug, Clone, Copy, ValueEnum)]
 enum Color {
     Red,
+
+    #[value(alias="Green", alias="verde")]
     Green,
     Blue,
 }
