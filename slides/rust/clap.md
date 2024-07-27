@@ -143,7 +143,8 @@ The `enum` has to derive from `clap::ValueEnum` and also from `Clone` and `Copy`
 
 We can also use the `alias` to allow alternate values to be mapped onto specific variants of the enum.
 
-Then we can pass the value like this:
+
+![](examples/clap/enumerated/src/main.rs)
 
 ```
 cargo run -q -- --color blue
@@ -153,8 +154,6 @@ cargo run -q -- --color green
 cargo run -q -- --color Green
 cargo run -q -- --color verde
 ```
-
-![](examples/clap/enumerated/src/main.rs)
 
 
 ## Clap and environment variables
