@@ -23,10 +23,9 @@
 
 * [Declarative macros](https://veykril.github.io/tlborm/decl-macros.html) in the Little book of macros
 
-## todo!
+## todo! for and if-condition
 {id: macro-todo}
 {i: todo!}
-{i: unimplemented!}
 
 * [todo!](https://doc.rust-lang.org/std/macro.todo.html) when we put in the layout of the code but cannot work on all the codepathes at the same time and we would like to say it explicitely.
 * [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
@@ -37,6 +36,32 @@
 cargo run foo
 cargo run bar
 ```
+
+## todo! for a match
+{id: tod-for-a-match}
+{i: todo!}
+
+![](examples/macros/todo-match/src/main.rs)
+
+```
+$ cargo run -q foo
+We are handling foo
+
+$ cargo run -q bar
+We are handling bar
+
+
+$ cargo run -q qqrq
+thread 'main' panicked at src/main.rs:15:17:
+not yet implemented: We still need to implement for qqrq
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
+
+## unimplemented
+{id: unimplemented}
+{i: unimplemented!}
+
+* Very similar to `todo!` without the vague promise that it will be implemented.
 
 ## About Declarative macros
 {id: about-declarative-macros}
