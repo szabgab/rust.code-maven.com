@@ -7,7 +7,11 @@
 
 * [print!](https://doc.rust-lang.org/std/macro.print.html)
 * [println!](https://doc.rust-lang.org/std/macro.println.html)
-* [vec!](https://doc.rust-lang.org/std/macro.vec.html)
+* [eprint!](https://doc.rust-lang.org/std/macro.eprint.html)
+* [eprintln!](https://doc.rust-lang.org/std/macro.eprintln.html)
+* [format!](https://doc.rust-lang.org/std/macro.format.html)
+
+* [vec!](https://doc.rust-lang.org/std/macro.vec.html) - create a vector.
 * [todo!](https://doc.rust-lang.org/std/macro.todo.html)
 * [include_str!](https://doc.rust-lang.org/std/macro.include_str.html)
 * [include_bytes!](https://doc.rust-lang.org/std/macro.include_bytes.html)
@@ -136,18 +140,5 @@ macro_rules! ok(($result:expr) => ($result.unwrap()));
 ## Error logging
 {id: macro-error-logging}
 
-A macro that will replace
-
-
-```
-let x = err_log!(expression);
-
-let x = match expression {
-    Ok(val) => val,
-    Err(err) => {
-        log::error!("{:?}", err),
-    }
-}
-```
-
+![](examples/macros/error-logging/src/main.rs)
 
