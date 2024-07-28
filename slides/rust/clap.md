@@ -269,6 +269,75 @@ Args: Cli { mode: Release, log_level: 10 }
 
 ![](examples/clap/clap-complete-shell/src/main.rs)
 
+## Repeat the same argument several times
+{id: repeat-the-same-argument-several-times}
+{i: Vec}
+{i: required}
+
+* If we set the element of the struct to be a vector then Clap will allow us to supply the same argument several times.
+* As a vector can also be emptty this will also work if we don't provide any `--animal` arguments.
+* We could also include `required=true` to require at least one value.
+
+![](examples/clap/repeat-the-same-argument/src/main.rs)
+
+```
+$ cargo run -q
+Cli { animal: [] }
+
+$ cargo run -q -- --animal Cat
+Cli { animal: ["Cat"] }
+
+$ cargo run -q -- --animal Cat Dog
+error: unexpected argument 'Dog' found
+
+Usage: repeat-the-same-argument [OPTIONS]
+
+For more information, try '--help'.
+
+$ cargo run -q -- --animal Cat --animal Dog
+Cli { animal: ["Cat", "Dog"] }
+```
+
+## Limit the number of values for a vector argument
+{id: limit-the-number-of-values}
+{i: num_args}
+{i: Vec}
+{i: required}
+
+* A different approach is to accept multiple values with a single mention of the argument. We can achieve this by setting the `num_args`.
+* It can accept either a single number or a range such as `2..=3` (2 or 3), `..=3` (same as 0..=3), or `3..` (3 or more).
+* We can also supply `required=true` to make sure the argument must be supplied.
+
+
+![](examples/clap/limit-number-of-args/src/main.rs)
+
+```
+$ cargo run -q
+error: the following required arguments were not provided:
+  --animal <ANIMAL> <ANIMAL>...
+
+Usage: limit-number-of-args --animal <ANIMAL> <ANIMAL>...
+
+For more information, try '--help'.
+
+
+$ cargo run -q -- --animal Cat Dog
+Cli { animal: ["Cat", "Dog"], sisters: [] }
+
+
+$ cargo run -q -- --animal Cat Dog Crab
+Cli { animal: ["Cat", "Dog", "Crab"], sisters: [] }
+
+
+$ cargo run -q -- --animal Cat Dog Crab Snake
+error: unexpected argument 'Snake' found
+
+Usage: limit-number-of-args [OPTIONS] --animal <ANIMAL> <ANIMAL>...
+
+For more information, try '--help'.
+```
+
+
 ## Clap: default value only if the flag was provides
 {id: clap-default-on-condition}
 {i: TBD}
