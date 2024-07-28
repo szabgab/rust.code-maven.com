@@ -342,7 +342,7 @@ For more information, try '--help'.
 {id: clap-fixed-list-of-values-for-generic-type}
 {i: value_parser}
 
-* Besides creating an enum we could also just list the possible value of a generic type using the `value_parse` option.
+* Besides creating an enum we could also just list the possible value of a generic type using the [value_parse](https://docs.rs/clap/latest/clap/struct.Arg.html#method.value_parser) option.
 
 ![](examples/clap/value-parser-fixed-list/src/main.rs)
 
@@ -377,6 +377,29 @@ error: invalid value 'snake' for '--animal <ANIMAL>'
 For more information, try '--help'.
 ```
 
+## Clap: arbitraty function to validate argument )
+{id: clap-arbitrary-function-to-validate-argument}
+{i: value_parser}
+
+
+![](examples/clap/even-number/src/main.rs)
+
+```
+$ cargo run -q -- --number 22
+Cli { number: 22 }
+
+$ cargo run -q -- --number 23
+error: invalid value '23' for '--number <NUMBER>': An even number is expected
+
+For more information, try '--help'.
+
+
+
+$ cargo run -q -- --number ad
+error: invalid value 'ad' for '--number <NUMBER>': invalid digit found in string
+
+For more information, try '--help'.
+```
 
 
 ## Clap: default value only if the flag was provides
