@@ -59,21 +59,4 @@ TODO
 * [SQLx](https://crates.io/crates/sqlx)
 
 
-## Error logging
-{id: macro-error-logging}
-
-A macro that will replace
-
-
-```
-let x = err_log!(expression);
-
-let x = match expression {
-    Ok(val) => val,
-    Err(err) => {
-        log::error!("{:?}", err),
-    }
-}
-```
-
 
