@@ -307,6 +307,7 @@ Cli { animal: ["Cat", "Dog"] }
 * A different approach is to accept multiple values with a single mention of the argument. We can achieve this by setting the `num_args`.
 * It can accept either a single number or a range such as `2..=3` (2 or 3), `..=3` (same as 0..=3), or `3..` (3 or more).
 * We can also supply `required=true` to make sure the argument must be supplied.
+* See [num_args](https://docs.rs/clap/latest/clap/struct.Arg.html#method.num_args)
 
 
 ![](examples/clap/limit-number-of-args/src/main.rs)
@@ -336,6 +337,46 @@ Usage: limit-number-of-args [OPTIONS] --animal <ANIMAL> <ANIMAL>...
 
 For more information, try '--help'.
 ```
+
+## Clap: fixed list of valid values for generic type
+{id: clap-fixed-list-of-values-for-generic-type}
+{i: value_parser}
+
+* Besides creating an enum we could also just list the possible value of a generic type using the `value_parse` option.
+
+![](examples/clap/value-parser-fixed-list/src/main.rs)
+
+```
+$ cargo run -q -- -h
+Usage: value-parser-fixed-list --animal <ANIMAL>
+
+Options:
+      --animal <ANIMAL>  [possible values: cat, dog, crab]
+  -h, --help             Print help
+
+
+
+$ cargo run -q
+error: the following required arguments were not provided:
+  --animal <ANIMAL>
+
+Usage: value-parser-fixed-list --animal <ANIMAL>
+
+For more information, try '--help'.
+
+
+
+$ cargo run -q -- --animal cat
+Cli { animal: "cat" }
+
+
+$ cargo run -q -- --animal snake
+error: invalid value 'snake' for '--animal <ANIMAL>'
+  [possible values: cat, dog, crab]
+
+For more information, try '--help'.
+```
+
 
 
 ## Clap: default value only if the flag was provides
