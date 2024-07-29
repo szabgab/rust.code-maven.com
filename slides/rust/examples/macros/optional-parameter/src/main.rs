@@ -1,5 +1,4 @@
 macro_rules! ping {
-
     ($address: expr) => {
         ping($address, 4);
     };
