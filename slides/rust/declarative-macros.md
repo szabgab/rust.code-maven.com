@@ -103,6 +103,14 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 ![](examples/macros/macro-with-literal/src/main.rs)
 
+## Macro with ident - create function
+{id: macro-with-ident}
+
+* `ident` matches an [identifier](https://doc.rust-lang.org/reference/identifiers.html) (e.g variable names, function names)
+
+![](examples/macros/macro-create-function/src/main.rs)
+
+
 ## Macro with parameter to say hello
 {id: macro-say-hello}
 {i: macro_rules!}
