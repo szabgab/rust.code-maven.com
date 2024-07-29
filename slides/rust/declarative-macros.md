@@ -12,11 +12,12 @@
 * [format!](https://doc.rust-lang.org/std/macro.format.html)
 
 * [vec!](https://doc.rust-lang.org/std/macro.vec.html) - create a vector.
+
 * [todo!](https://doc.rust-lang.org/std/macro.todo.html)
+* [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
+
 * [include_str!](https://doc.rust-lang.org/std/macro.include_str.html)
 * [include_bytes!](https://doc.rust-lang.org/std/macro.include_bytes.html)
-* [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
-* [matches!](https://doc.rust-lang.org/std/macro.matches.html)
 
 * [Full list of standard macros](https://doc.rust-lang.org/std/#macros)
 * [Crates tagged as macro](https://crates.io/keywords/macro)
@@ -57,21 +58,22 @@ not yet implemented: We still need to implement for qqrq
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 
+## About Declarative macros
+{id: about-declarative-macros}
+
+* They are also called [Macros-By-Example](https://doc.rust-lang.org/reference/macros-by-example.html) in the reference book.
+* We use `macro_rules!` to defined them.
+* When used, declarative macros look like functions with an exclamation mark `!` at the end.
+* `match`-like arms to match the input of the macro.
+
+* Macro matchers and transcribers (aka. expansions).
+
+
 ## unimplemented
 {id: unimplemented}
 {i: unimplemented!}
 
 * Very similar to `todo!` without the vague promise that it will be implemented.
-
-## About Declarative macros
-{id: about-declarative-macros}
-
-* Use `macro_rules!`
-* Macros look like functions with an exclamation mark `!` at the end.
-* `match`-like arms to match the input of the macro.
-
-
-* Macro matchers and transcribers.
 
 ## Hello World macro
 {id: macro-hello-world}
@@ -127,15 +129,11 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ![](examples/macros/create-counter-hash/src/main.rs)
 ![](examples/macros/create-counter-hash/out.out)
 
+## Macro prt! to explore memory allocation
+{id: macro-prt-to-explore-memory-allocation}
 
-## HTML to string macro
-{id: html-to-string-macro}
-
-* [html-to-string-macro](https://crates.io/crates/html-to-string-macro)
-
-![](examples/macros/embed-html/Cargo.toml)
-![](examples/macros/embed-html/src/main.rs)
-
+![](examples/macros/macro-prt/src/main.rs)
+![](examples/macros/macro-prt/out.out)
 
 ## Macro ok! to replace unwrap
 {id: macro-ok}
@@ -145,6 +143,10 @@ Seen in the tests of the sqlite crate.
 ```
 macro_rules! ok(($result:expr) => ($result.unwrap()));
 ```
+
+![](examples/macros/macro-ok/src/main.rs)
+
+
 
 ## Optional function parameters using macros
 {id: optional-function-parameters-using-macro}
@@ -166,4 +168,20 @@ macro_rules! ok(($result:expr) => ($result.unwrap()));
 {id: macro-error-logging}
 
 ![](examples/macros/error-logging/src/main.rs)
+
+## Some crates that provide macros
+{id: crates-that-provide-macros}
+
+* [Crates tagged as macro](https://crates.io/keywords/macro)
+
+* HTML
+
+## HTML to string macro
+{id: html-to-string-macro}
+
+* [html-to-string-macro](https://crates.io/crates/html-to-string-macro)
+
+![](examples/macros/embed-html/Cargo.toml)
+![](examples/macros/embed-html/src/main.rs)
+
 
