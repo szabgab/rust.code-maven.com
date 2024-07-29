@@ -135,18 +135,24 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ![](examples/macros/macro-prt/src/main.rs)
 ![](examples/macros/macro-prt/out.out)
 
+## Macro String::from
+{id: macro-string-from}
+
+![](examples/macros/macro-string-from/src/main.rs)
+
 ## Macro ok! to replace unwrap
 {id: macro-ok}
 
-Seen in the tests of the sqlite crate.
-
-```
-macro_rules! ok(($result:expr) => ($result.unwrap()));
-```
+Seen in the tests of the [sqlite crate](https://crates.io/crates/sqlite).
 
 ![](examples/macros/macro-ok/src/main.rs)
 
+## Macro pair! to create tuple with Some
+{id: macro-pair}
 
+Seen in the [sqlite crate](https://crates.io/crates/sqlite).
+
+![](examples/macros/macro-sqlite-pair/src/main.rs)
 
 ## Optional function parameters using macros
 {id: optional-function-parameters-using-macro}
