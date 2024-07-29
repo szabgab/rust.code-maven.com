@@ -86,6 +86,29 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 ![](examples/macros/hello-world/src/main.rs)
 
+## Macro with literal values
+{id: macro-with-literal-values}
+
+![](examples/macros/macro-literal-values/src/main.rs)
+
+
+## Macro with parameter to say hello
+{id: macro-say-hello}
+{i: macro_rules!}
+{i: expr}
+
+* The macro is called `say_hello`.
+* parameters of the macro
+* `$name: expr`    means that the macro is expecting an `expr` (expression) and it will be assigned to a variable called `$name`.
+
+
+// $t:ty          means we have a paramerer called $t    and it has a type "ty" (type, such as i32 or f64)
+// With this macro we can replace a short syntax with a longer syntax in at compile time.
+
+
+![](examples/macros/say-hello/src/main.rs)
+
+
 ## Fragment specifiers
 {id: macro-fragment-specifiers}
 
@@ -110,22 +133,6 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 ![](examples/macros/macro-create-function/src/main.rs)
 
-
-## Macro with parameter to say hello
-{id: macro-say-hello}
-{i: macro_rules!}
-{i: expr}
-
-* The macro is called `say_hello`.
-* parameters of the macro
-* `$name: expr`    means that the macro is expecting an `expr` (expression) and it will be assigned to a variable called `$name`.
-
-
-// $t:ty          means we have a paramerer called $t    and it has a type "ty" (type, such as i32 or f64)
-// With this macro we can replace a short syntax with a longer syntax in at compile time.
-
-
-![](examples/macros/say-hello/src/main.rs)
 
 ## Macro with optional parameter to say hello
 {id: macro-with-optional-parameter}
