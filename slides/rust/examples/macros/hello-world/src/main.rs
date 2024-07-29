@@ -7,8 +7,4 @@ macro_rules! hello_world {
 
 fn main() {
     hello_world!();
-
-    // hello_world!(apple);
-    // hello_world!("apple");
-    // ^ no rules expected this token in macro call
 }

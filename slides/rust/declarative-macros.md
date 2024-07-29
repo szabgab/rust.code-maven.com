@@ -29,7 +29,6 @@
 {i: todo!}
 
 * [todo!](https://doc.rust-lang.org/std/macro.todo.html) when we put in the layout of the code but cannot work on all the codepathes at the same time and we would like to say it explicitely.
-* [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
 
 ![](examples/macros/todo/src/main.rs)
 
@@ -58,6 +57,15 @@ not yet implemented: We still need to implement for qqrq
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 
+
+## unimplemented
+{id: unimplemented}
+{i: unimplemented!}
+
+* Very similar to `todo!` without the vague promise that it will be implemented.
+* [unimplemented!](https://doc.rust-lang.org/std/macro.unimplemented.html)
+
+
 ## About Declarative macros
 {id: about-declarative-macros}
 
@@ -69,12 +77,6 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 * Macro matchers and transcribers (aka. expansions).
 
 
-## unimplemented
-{id: unimplemented}
-{i: unimplemented!}
-
-* Very similar to `todo!` without the vague promise that it will be implemented.
-
 ## Hello World macro
 {id: macro-hello-world}
 {i: macro_rules!}
@@ -83,6 +85,23 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 * The `()` matches empty input.
 
 ![](examples/macros/hello-world/src/main.rs)
+
+## Fragment specifiers
+{id: macro-fragment-specifiers}
+
+* block
+* expr
+* ident
+* ...
+
+[fragment-specifiers](https://veykril.github.io/tlborm/decl-macros/minutiae/fragment-specifiers.html)
+
+
+## Macro with literal
+{id: macro-with-literal}
+{i: literal}
+
+![](examples/macros/macro-with-literal/src/main.rs)
 
 ## Macro with parameter to say hello
 {id: macro-say-hello}
