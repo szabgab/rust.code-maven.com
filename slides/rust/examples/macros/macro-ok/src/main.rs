@@ -1,5 +1,7 @@
 macro_rules! ok(($result:expr) => ($result.unwrap()));
 
+//macro_rules! ok{($result:expr) => ($result.unwrap())}
+
 // macro_rules! ok {
 //     ($result:expr) => {
 //         $result.unwrap()
