@@ -1,6 +1,12 @@
 # SQLite
 {id: sqlite}
 
+## SQLite crate
+{id: sqlite-crate}
+
+* [SQLite](https://sqlite.org/) - the most populare embedded relational database.
+* [sqlite crate](https://crates.io/crates/sqlite)
+
 ## SQLite in memory example
 {id: sqlite-in-memory-example}
 {i: memory}
@@ -8,8 +14,6 @@
 {i: execute}
 {i: INSERT}
 {i: SELECT}
-
-* [sqlite](https://crates.io/crates/sqlite)
 
 * In this example we use an in-memory database.
 * That's useful for the examples and it can be also useful if we have a lot of data on the disk that we would like analyze using SQL statements but we don't need to store the data in a database.
