@@ -191,7 +191,7 @@ Seen in the [sqlite crate](https://crates.io/crates/sqlite).
 ## Optional function parameters using macros
 {id: optional-function-parameters-using-macro}
 
-* Rust does not allow the declaration of the same function-name with different signatures as many otherl languages.
+* Rust does not allow the declaration of the same function-name with different signatures as many other languages.
 * Rust does not allow the definition of a function with optional parameters and/or with default values.
 
 * We can use declarative macros to overcome this limitation.
@@ -201,6 +201,20 @@ Seen in the [sqlite crate](https://crates.io/crates/sqlite).
 ![](examples/macros/optional-parameter/src/main.rs)
 ![](examples/macros/optional-parameter/out.out)
 
+
+## Debugging macros using trace_macros
+{id: debuging-macros-using-trace-macros}
+{i: trace_macros}
+
+* Install Nightly chain
+
+```
+rustup toolchain update nightly
+```
+
+```
+cargo +nightly run
+```
 
 ## Define a function using a macro
 {id: define-a-function-using-a-macro}
