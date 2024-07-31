@@ -19,3 +19,10 @@
 * Access fields of a union
 
 ![](examples/unsafe/unsafe-demo/src/main.rs)
+
+## Unsafe - core dump
+{id: unsafe-core-dump}
+{i: TBD}
+
+![](examples/unsafe/core-dump/src/main.rs)
+
