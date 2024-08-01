@@ -128,10 +128,20 @@
 
 ## Skip the first N elements of an iterator
 {id: skip-the-first-n-iterations}
+{i: skip}
 
 ![](examples/iterators/iterator-skip/src/main.rs)
 
 ![](examples/iterators/iterator-skip/out.out)
+
+## Skip and take from an iterator
+{id: skip-and-take-from-iterator}
+{i: skip}
+{i: take}
+
+![](examples/iterators/skip-and-take/src/main.rs)
+
+![](examples/iterators/skip-and-take/out.out)
 
 
 ## Exercise: Iterator for the Fibonacci series
