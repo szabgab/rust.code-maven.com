@@ -12,6 +12,10 @@ todo:
 ---
 
 We really don't need to do much to set up Continuous Integration (CI) for our Rust project if it is hosted on GitHub.
+Accroding to the [stats](https://rust-digger.code-maven.com/stats) if the [Rust Digger](https://rust-digger.code-maven.com/)
+approximately 75.96% of the crates use GitHub, but 38.83% are [on GitHub, but don't have CI](https://rust-digger.code-maven.com/github-but-no-ci).
+It's a pity as it is very easy to set it up.
+
 
 Probably the simplests version would be creating a folder called `.github/workflows` in your repository and saving the following file
 as `ci.yml`. (The actual name does not matter, but the extension has to be either `yml` or `yaml`.
