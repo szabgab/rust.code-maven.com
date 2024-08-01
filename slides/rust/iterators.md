@@ -114,6 +114,26 @@
 ![](examples/iterators/change/src/main.rs)
 ![](examples/iterators/change/out.out)
 
+## Take the first N elements of an iterator
+{id: take-the-first-n-iterations}
+{i: take}
+
+* `take` creates a new iterator from the first `n` element of any iterator.
+* It can be used on an infinite iterator as well.
+* The example we have here does not add value over just using a range, but for every other iterator it will make sense.
+
+![](examples/iterators/iterator-take/src/main.rs)
+
+![](examples/iterators/iterator-take/out.out)
+
+## Skip the first N elements of an iterator
+{id: skip-the-first-n-iterations}
+
+![](examples/iterators/iterator-skip/src/main.rs)
+
+![](examples/iterators/iterator-skip/out.out)
+
+
 ## Exercise: Iterator for the Fibonacci series
 {id: exercise-fibonacci-iterator}
 
