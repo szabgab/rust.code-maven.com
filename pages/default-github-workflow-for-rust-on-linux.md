@@ -1,5 +1,5 @@
 ---
-title: Default GitHub Action Workflow for Rust project running on Ubuntu Linux
+title: GitHub Action Workflow for Rust project running on Ubuntu Linux
 timestamp: 2024-08-01T12:00:01
 author: szabgab
 published: true
