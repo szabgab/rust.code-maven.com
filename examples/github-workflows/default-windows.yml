@@ -1,0 +1,16 @@
+name: Default on Windows
+on:
+  - pull_request
+  - push
+jobs:
+  main:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup --version
+      - run: rustc -vV
+
+      - run: cargo clippy -- --deny clippy::pedantic
+      - run: cargo fmt --all -- --check
+      - run: cargo test
+

@@ -1,0 +1,30 @@
+name: Matrix
+on:
+  - pull_request
+  - push
+jobs:
+  main:
+    strategy:
+      matrix:
+        rust:
+          - stable
+          - beta
+          - nightly
+          - 1.78
+    name: ${{matrix.rust}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@v1
+        with:
+          toolchain: ${{matrix.rust}}
+          components: rustfmt, clippy
+      - run: rustup --version
+      - run: rustc -vV
+
+      - run: cargo clippy -- --deny clippy::pedantic
+      - run: cargo fmt --all -- --check
+      - run: cargo test
+        #      - run: cargo install cargo-tarpaulin && cargo tarpaulin --out Xml
+        #      - uses: codecov/codecov-action@v1
+
