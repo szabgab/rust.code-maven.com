@@ -1,0 +1,12 @@
+run_test:
+  image: rust:latest
+  before_script:
+    - rustup --version
+    - rustc -vV
+    - rustup component add clippy
+    - rustup component add rustfmt
+  script:
+    - cargo clippy -- --deny clippy::pedantic
+    - cargo fmt --all -- --check
+    - cargo test
+
