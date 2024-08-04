@@ -44,3 +44,6 @@ Rust Digger reports that 1.23% of all the crates are on GitLab without a pipelin
 See the [stats](https://rust-digger.code-maven.com/stats) and the list of [crates on GitLab without a pipeline](https://rust-digger.code-maven.com/gitlab-but-no-ci).
 
 
+## Other
+
+See also the [example in the Cargo Guide](https://doc.rust-lang.org/cargo/guide/continuous-integration.html#gitlab-ci).

@@ -64,4 +64,7 @@ Then we have 3 cargo commands to check the code in various ways. You can change 
 
 I maintain a [repository with several more examples](https://github.com/szabgab/github-actions-rust).
 
+## Other
+
+See also the [example in the Cargo guide](https://doc.rust-lang.org/cargo/guide/continuous-integration.html#github-actions)
 
