@@ -1,0 +1,3 @@
+2024-08-04T12:12:25.438Z INFO  [simple_logger_init_with_level] This is a sample info.
+2024-08-04T12:12:25.438Z WARN  [simple_logger_init_with_level] This is a sample warn.
+2024-08-04T12:12:25.438Z ERROR [simple_logger_init_with_level] This is a sample error.

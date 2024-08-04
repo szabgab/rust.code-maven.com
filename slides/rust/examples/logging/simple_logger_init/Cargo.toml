@@ -1,5 +1,5 @@
 [package]
-name = "simple_logger_demo"
+name = "simple_logger_init"
 version = "0.1.0"
 edition = "2021"
 

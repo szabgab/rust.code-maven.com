@@ -1,0 +1,5 @@
+2024-08-04T12:09:32.085Z TRACE [simple_logger_init] This is a sample trace.
+2024-08-04T12:09:32.085Z DEBUG [simple_logger_init] This is a sample debug.
+2024-08-04T12:09:32.085Z INFO  [simple_logger_init] This is a sample info.
+2024-08-04T12:09:32.085Z WARN  [simple_logger_init] This is a sample warn.
+2024-08-04T12:09:32.085Z ERROR [simple_logger_init] This is a sample error.

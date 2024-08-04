@@ -1,10 +1,30 @@
 # Logging
 {id: logging}
 
-## Simple Logging
-{id: simple-logging}
+## Simple Logger new 
+{id: simple-logger-new}
+{i: log}
+{i: simple_logger}
 
-![](examples/logging/simple_logger_demo/Cargo.toml)
-![](examples/logging/simple_logger_demo/src/main.rs)
+![](examples/logging/simple_logger_new/Cargo.toml)
+
+![](examples/logging/simple_logger_new/src/main.rs)
+
+![](examples/logging/simple_logger_new/out.out)
+
+
+## Simple Logger init
+{id: simple-logger-init}
+
+![](examples/logging/simple_logger_init/src/main.rs)
+
+![](examples/logging/simple_logger_init/out.out)
+
+## Simple Logger init
+{id: simple-logger-init}
+
+![](examples/logging/simple_logger_level/src/main.rs)
+
+![](examples/logging/simple_logger_level/out.out)
 
 
