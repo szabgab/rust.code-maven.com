@@ -24,10 +24,10 @@
 ## Rocket Hello World with Tera template
 {id: rocket-hello-world-with-tera-template}
 
-![](hello-world-tera-template/Cargo.toml)
-![](hello-world-tera-template/src/main.rs)
-![](hello-world-tera-template/src/tests.rs)
-![](hello-world-tera-template/templates/index.html.tera)
+![](examples/rocket/hello-world-tera-template/Cargo.toml)
+![](examples/rocket/hello-world-tera-template/src/main.rs)
+![](examples/rocket/hello-world-tera-template/src/tests.rs)
+![](examples/rocket/hello-world-tera-template/templates/index.html.tera)
 
 
 ## Rocket in-memory counter - sessions
