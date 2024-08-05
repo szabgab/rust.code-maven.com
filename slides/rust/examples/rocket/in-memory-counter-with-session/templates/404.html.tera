@@ -1,0 +1,6 @@
+{% set title = "404 Not Found" %}
+{% include "incl/header" %}
+
+    <div>Page not found</div>
+
+{% include "incl/footer" %}
