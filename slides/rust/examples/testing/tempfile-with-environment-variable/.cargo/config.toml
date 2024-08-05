@@ -1,0 +1,8 @@
+
+[alias]
+t = "test -- --test-threads=1"
+
+[env]
+RUST_TEST_THREADS = "1"
+
+

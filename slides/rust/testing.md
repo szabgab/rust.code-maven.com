@@ -64,6 +64,29 @@ If we run `cargo test` we don't see any of this as the tester captures them.
 
 If we run `cargo test -- --nocapture` then we'll see the output of all the 4 print-statements.
 
+## Testing with temporary directory passed as an environment variable
+{id: testing-with-temporary-directory-passed-as-en-environment-variable}
+{i: config.toml}
+{i: RUST_TEST_THREADS}
+{i: --test-threads}
+{i: env}
+
+Because environment variables are per-process and not per thread,
+we cannot run the tests in threads (which is the default).
+
+![](examples/testing/tempfile-with-environment-variable/Cargo.toml)
+
+![](examples/testing/tempfile-with-environment-variable/.cargo/config.toml)
+![](examples/testing/tempfile-with-environment-variable/src/main.rs)
+
+## Testing with temorary directory passed in a thread-local variable
+{id: testing-with-temporary-directory-passed-in-a-thread-local-variable}
+{i: RefCell}
+{i: thread_local!}
+
+![](examples/testing/tempfile-with-thread-local/Cargo.toml)
+![](examples/testing/tempfile-with-thread-local/src/main.rs)
+
 
 ## Testing crates
 {id: testing-crates}
