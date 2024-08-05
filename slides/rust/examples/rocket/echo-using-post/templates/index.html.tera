@@ -1,0 +1,12 @@
+<h1>Echo</h1>
+<form method="POST" action="/echo">
+<input name="text">
+<input type="submit" value="Echo">
+</form>
+
+
+<h1>Bad form</h1>
+Missing the text field.
+<form method="POST" action="/echo">
+<input type="submit" value="Echo">
+</form>

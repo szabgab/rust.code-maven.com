@@ -4,15 +4,37 @@
 ## Rocket web framework
 {id: rocket-web-framework}
 
-* [Rocket](https://rocket.rs/)
-* [Rocket starter](https://crates.io/crates/rocket-starter)
+* The [Rocket](https://rocket.rs/) web framework for Rust.
+* [Rocket starter](https://crates.io/crates/rocket-starter) is a small tool to create a project skeleton.
+* [Articles about Rocket](https://rust.code-maven.com/rocket) with examples.
+* [Discussion](https://github.com/rwf2/Rocket/discussions) about Rocket where you can ask questions.
+
 
 ## Rocket Hello World with separate test file
 {id: rocket-hello-world-with-separate-test-file}
 
+* Create a new crate, add rocket as a dependency `cargo add rocket`
+
 ![](examples/rocket/hello-world-external-test-file/Cargo.toml)
+
+
 ![](examples/rocket/hello-world-external-test-file/src/main.rs)
+
+```
+cargo run
+```
+
+The tests
+
 ![](examples/rocket/hello-world-external-test-file/src/tests.rs)
+
+```
+cargo test
+```
+
+```
+curl -i http://localhost:8000/
+```
 
 ## Rocket Hello World returning static RawHtml
 {id: rocket-hello-world-static-raw-html}
@@ -28,6 +50,28 @@
 ![](examples/rocket/hello-world-tera-template/src/main.rs)
 ![](examples/rocket/hello-world-tera-template/src/tests.rs)
 ![](examples/rocket/hello-world-tera-template/templates/index.html.tera)
+
+
+## Echo using GET
+{id: echo-using-get}
+{i: GET}
+
+![](examples/rocket/echo-using-get/Cargo.toml)
+![](examples/rocket/echo-using-get/src/main.rs)
+![](examples/rocket/echo-using-get/src/tests.rs)
+![](examples/rocket/echo-using-get/templates/echo.html.tera)
+![](examples/rocket/echo-using-get/templates/index.html.tera)
+
+## Echo using POST
+{id: echo-using-post}
+{i: POST}
+
+![](examples/rocket/echo-using-post/Cargo.toml)
+![](examples/rocket/echo-using-post/src/main.rs)
+![](examples/rocket/echo-using-post/src/tests.rs)
+![](examples/rocket/echo-using-post/templates/echo.html.tera)
+![](examples/rocket/echo-using-post/templates/index.html.tera)
+
 
 
 ## Rocket in-memory counter - sessions
