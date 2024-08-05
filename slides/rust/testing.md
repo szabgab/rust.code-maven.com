@@ -52,6 +52,18 @@ cargo tarpaulin --ignore-tests -o Html
 ![](examples/testing/test-function/Cargo.toml)
 ![](examples/testing/test-function/src/main.rs)
 
+## Show STDOUT and STDERR during testing
+{id: show-stdout-and-stderr-during-testing}
+{i: nocapture}
+
+In this example there are print-statements both in the code and in the test function.
+
+![](examples/testing/nocapture/src/lib.rs)
+
+If we run `cargo test` we don't see any of this as the tester captures them.
+
+If we run `cargo test -- --nocapture` then we'll see the output of all the 4 print-statements.
+
 
 ## Testing crates
 {id: testing-crates}
