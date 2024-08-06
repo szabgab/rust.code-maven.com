@@ -1,0 +1,5 @@
+cat,4
+dog,4
+spider,8
+human,2
+insects,6
