@@ -1,0 +1,4 @@
+[debug]
+# `critical`, `normal`, `debug`, `off`
+#log_level = "normal"
+#log_level = "debug"

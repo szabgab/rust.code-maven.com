@@ -73,6 +73,25 @@ curl -i http://localhost:8000/
 ![](examples/rocket/echo-using-post/templates/index.html.tera)
 
 
+## Rocket: logging to the console
+{id: rocket-logging-to-the-console}
+{i: trace!}
+{i: debug!}
+{i: info!}
+{i: warn!}
+{i: error!}
+
+![](examples/rocket/logging/src/main.rs)
+
+![](examples/rocket/logging/Rocket.toml)
+
+
+## Rocket: Calculator with GET (passing multiple parameters)
+{id: rocket-calculator-with-get}
+{i: RawHtml}
+
+![](examples/rocket/calculator-with-get/src/main.rs)
+
 
 ## Rocket in-memory counter - sessions
 {id: rocket-in-memory-counter-sessions}
@@ -92,5 +111,17 @@ curl -i http://localhost:8000/
 ![](examples/rocket/in-memory-counter-with-session/templates/incl/footer.html.tera)
 ![](examples/rocket/in-memory-counter-with-session/templates/incl/header.html.tera)
 ![](examples/rocket/in-memory-counter-with-session/templates/index.html.tera)
+
+## Rocket: Automatic reload of the application
+{id: rocket-automatic-reload}
+{i: watch}
+
+* During development it can be usefule to automatically reload the application as we are making changes to the code.
+
+* [cargo-watch](https://github.com/watchexec/cargo-watch)
+
+```
+cargo watch -x run
+```
 
 
