@@ -47,6 +47,12 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 
 * [Web development in Rust using Rocket](/web-development-in-rust-using-rocket) an introduction.
 
+* [Rust Rocket.rs Part 1 - Creating an API Endpoint in Rocket](https://www.youtube.com/watch?v=2vxvSMkm5Lg)
+* [Rust Rocket.rs Part 2 - Making API Requests Inside Rocket Server](https://www.youtube.com/watch?v=Alyr-JN2pdQ)
+* [Rust Rocket.rs Part 3 - JSON Manipulation](https://www.youtube.com/watch?v=FHlCVMhNdeU)
+* [Rust Rocket.rs Part 4v2 - Caching Function Results Within Rocket Context](https://www.youtube.com/watch?v=AQ4YXEQEA4o)
+* [Rust Rocket.rs Part 5 - Serding Structs and Organizing the Codebase](https://www.youtube.com/watch?v=F6r3GleRewU)
+
 ## Rocket-based Open Source projects
 
 * The [Pastebin tutorial](https://rocket.rs/guide/v0.5/pastebin/#pastebin-tutorial)
