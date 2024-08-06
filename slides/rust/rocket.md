@@ -73,6 +73,10 @@ curl -i http://localhost:8000/
 ## Echo using POST
 {id: echo-using-post}
 {i: POST}
+{i: Form}
+{i: context}
+{i: Template}
+{i: FromForm}
 
 ![](examples/rocket/echo-using-post/Cargo.toml)
 ![](examples/rocket/echo-using-post/src/main.rs)

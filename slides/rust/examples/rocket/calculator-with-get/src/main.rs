@@ -2,29 +2,39 @@
 extern crate rocket;
 
 use rocket::response::content;
+use rocket::form::Form;
+// TODO: This was added to Rocket on 2024.08.06 so it is not released yet https://github.com/rwf2/Rocket/issues/2826
+
+
+enum Operation {
+    Add,
+    Subtract,
+    Multiply,
+    Divide,
+}
 
 #[get("/?<a>&<b>&<op>")]
-fn index(a: Option<i64>, b: Option<i64>, op: Option<String>) -> content::RawHtml<String> {
+fn index(a: Option<i64>, b: Option<i64>, op: Option<Operation>) -> content::RawHtml<String> {
     let mut selected_add = "";
     let mut selected_multiply = "";
     let mut selected_subtract = "";
     let mut selected_divide = "";
 
     let result = match (a, b, op) {
-        (Some(a), Some(b), Some(op)) => match op.as_ref() {
-            "add" => {
+        (Some(a), Some(b), Some(op)) => match op {
+            Operation::Add => {
                 selected_add = r#"selected="selected""#;
                 (a + b).to_string()
             }
-            "subtract" => {
+            Operation::Subtract => {
                 selected_subtract = r#"selected="selected""#;
                 (a - b).to_string()
             }
-            "divide" => {
+            Operation::Divide => {
                 selected_divide = r#"selected="selected""#;
                 (a / b).to_string()
             }
-            "multiply" => {
+            Operation::Multiply => {
                 selected_multiply = r#"selected="selected""#;
                 (a * b).to_string()
             }
