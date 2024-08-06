@@ -317,6 +317,18 @@ A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/st
 
 ![](examples/threads/counter-with-messages/src/main.rs)
 
+## thread-local variables
+{id: thread-local-variables}
+{i: thread_local!}
+{i: RefCell}
+
+* [thread_local!](https://doc.rust-lang.org/std/macro.thread_local.html)
+* [RefCell](https://doc.rust-lang.org/std/cell/struct.RefCell.html)
+
+![](examples/threads/thread-local/src/main.rs)
+![](examples/threads/thread-local/out.out)
+
+
 ## Exercise: character counting
 {id: exercise-character-counting-in-threads}
 
