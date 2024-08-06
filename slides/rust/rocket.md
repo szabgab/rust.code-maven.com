@@ -43,6 +43,14 @@ curl -i http://localhost:8000/
 ![](examples/rocket/hello-world-html/src/main.rs)
 ![](examples/rocket/hello-world-html/src/tests.rs)
 
+## Rocket: generated RawHtml page
+{id: rocket-generated-rawhtml-page}
+{i: RawHtml}
+{i: epoch}
+{i: UNIX_EPOCH}
+
+![](examples/rocket/generated-rawhtml/src/main.rs)
+
 ## Rocket Hello World with Tera template
 {id: rocket-hello-world-with-tera-template}
 
