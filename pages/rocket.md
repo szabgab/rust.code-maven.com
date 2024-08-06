@@ -4,6 +4,7 @@ timestamp: 2023-12-22T12:30:01
 author: szabgab
 published: true
 description: Examples with the Rocket web framework for Rustlang
+show_related: false
 tags:
     - Rocket
     - web
