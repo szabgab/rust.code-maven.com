@@ -165,9 +165,16 @@ Limitation of this solution:
 
 * TODO: Implement the same in the separate files case.
 * TODO: Redirect using other Status code
-* TODO: Redirect with parameters
 * TODO: Redirect to an external URL
+* TODO: Optional redirction? (e.g. after successful login we redirect, but if it fails we would like to show the login page)
+* TODO: Dynamic redirect. (e.g. after successful login we go to the page where the user really wanted to go)
 
 ![](examples/rocket/redirect-to-fixed-url/src/main.rs)
 ![](examples/rocket/redirect-to-fixed-url/src/tests.rs)
 
+
+## Redirect with parameters
+{id: redirect-with-parameters}
+
+![](examples/rocket/redirect-with-parameters/src/main.rs)
+![](examples/rocket/redirect-with-parameters/src/tests.rs)
