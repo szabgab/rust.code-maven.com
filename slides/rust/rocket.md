@@ -136,4 +136,21 @@ curl -i http://localhost:8000/
 cargo watch -x run
 ```
 
+## Rocket: two applications in separate files
+{id: rocket-separate-files}
+
+* We created a separate file with its own routes
+* We then mounted it under a path called /blog
+* We provide a function called `routes` listing all the routes in this applcation and use that in the `mount`.
+
+Limitation of this solution:
+
+* in the `blog_test` we need to use `super::super::rocket()` instead of `super::rocket()`.
+* in the `blog_test` we need to access `/blog` that mean we need to know where it will be mounted.
+
+![](examples/rocket/separate-files/src/main.rs)
+![](examples/rocket/separate-files/src/tests.rs)
+
+![](examples/rocket/separate-files/src/blog.rs)
+![](examples/rocket/separate-files/src/blog/blog_tests.rs)
 
