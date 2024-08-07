@@ -43,9 +43,12 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [404 page with static content](/rocket-404-page-with-static-content) - `404`, `content`, `RawHtml`, `routes!`, `catchers!`, `mount`, `register`, `include_str!`.
 * [In memory hit counter using state](/rocket-in-memory-hit-counter-state) - `AtomicUsize`, `Ordering`, `State`, `manage`.
 
-## Videos
+## My Videos
 
 * [Web development in Rust using Rocket](/web-development-in-rust-using-rocket) an introduction.
+* [Building a job board](/web-development-in-rust-using-rocket-building-a-job-board)
+
+## Other Videos
 
 * [Rust Rocket.rs Part 1 - Creating an API Endpoint in Rocket](https://www.youtube.com/watch?v=2vxvSMkm5Lg)
 * [Rust Rocket.rs Part 2 - Making API Requests Inside Rocket Server](https://www.youtube.com/watch?v=Alyr-JN2pdQ)
