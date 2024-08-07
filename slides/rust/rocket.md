@@ -138,6 +138,7 @@ cargo watch -x run
 
 ## Rocket: two applications in separate files
 {id: rocket-separate-files}
+{i: TBD}
 
 * We created a separate file with its own routes
 * We then mounted it under a path called /blog
@@ -153,4 +154,20 @@ Limitation of this solution:
 
 ![](examples/rocket/separate-files/src/blog.rs)
 ![](examples/rocket/separate-files/src/blog/blog_tests.rs)
+
+## Redirect to another page
+{id: redirect-to-another-page}
+{i: Redirect}
+{i: uri!}
+{i: Status}
+{i: SeeOther}
+{i: TBD}
+
+* TODO: Implement the same in the separate files case.
+* TODO: Redirect using other Status code
+* TODO: Redirect with parameters
+* TODO: Redirect to an external URL
+
+![](examples/rocket/redirect-to-fixed-url/src/main.rs)
+![](examples/rocket/redirect-to-fixed-url/src/tests.rs)
 
