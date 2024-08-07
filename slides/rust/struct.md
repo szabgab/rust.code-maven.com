@@ -344,13 +344,14 @@ borrowed value does not live long enough
 {/aside}
 
 
-## From and Into for String and &str
+## Converting between types: The From and Into traits
 {id: from-and-into}
 {i: from}
 {i: into}
 
 You have probably seen code using `::from()` or `.into()` in some code.
 These are methods of the From and Into traits. You always implement only one of them.
+
 
 ## From and Into for String and &str
 {id: from-and-into-for-string}
