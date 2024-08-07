@@ -15,7 +15,7 @@ tags:
 00:56 Self Introduction.
 01:49 Meetup page about the event.
 02:45 Sponsors
-03.12 How does Rocket compare to  Axum or Actix-Web?
+03:12 How does Rocket compare to  Axum or Actix-Web?
 04:35 The website of Rocket.
 05:50 Workshops / events.
 06:55 Link to the articles about Rocket https://rust.code-maven.com/rocket
