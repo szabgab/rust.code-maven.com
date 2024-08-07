@@ -344,3 +344,32 @@ borrowed value does not live long enough
 {/aside}
 
 
+## From and Into for String and &str
+{id: from-and-into}
+{i: from}
+{i: into}
+
+You have probably seen code using `::from()` or `.into()` in some code.
+These are methods of the From and Into traits. You always implement only one of them.
+
+## From and Into for String and &str
+{id: from-and-into-for-string}
+{i: &str}
+{i: String}
+{i: from}
+{i: into}
+
+* We can create a `String` from an `&str` by using the `String::from()` method because `String` implements the From trait for `&str`.
+* We can also use the `into` method, but then we must tell Rust the expected type.
+* For some reason we cannot use the Turbofish syntax.
+
+![](examples/struct/from-str-into-string/src/main.rs)
+
+## Implementing the From trait for 2D and 3D point structs
+{id: implementing-the-from-trait-for-2d-and-3d-structs}
+{i: From}
+{i: from}
+{i: into}
+
+![](examples/struct/from-point2d/src/main.rs)
+
