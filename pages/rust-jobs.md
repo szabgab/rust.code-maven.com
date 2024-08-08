@@ -20,7 +20,7 @@ Something else? Some place more specific to your country? Please share your link
 ## Rust Specific
 
 * [RustJobs.com](https://www.rustjobs.com/)
-* [RustJobs.dev](https://rustjobs.dev/)
+* [RustJobs.dev](https://rustjobs.dev/) they are also on [LinkedIn](https://www.linkedin.com/company/rustjobs-dev/).
 * [Rust-Jobs.com](https://rust-jobs.com/)
 * [Rust Jobs](https://rust.jobs/)
 * [Rust Careers](https://rust.careers/)
