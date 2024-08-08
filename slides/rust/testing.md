@@ -64,7 +64,7 @@ If we run `cargo test` we don't see any of this as the tester captures them.
 
 If we run `cargo test -- --nocapture` then we'll see the output of all the 4 print-statements.
 
-## Testing with temporary directory passed as an environment variable
+## Testing with temporary directory passed as an environment variable (test in a single thread RUST_TEST_THREADS)
 {id: testing-with-temporary-directory-passed-as-en-environment-variable}
 {i: config.toml}
 {i: RUST_TEST_THREADS}
