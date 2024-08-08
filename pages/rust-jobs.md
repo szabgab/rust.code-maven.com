@@ -35,4 +35,9 @@ Something else? Some place more specific to your country? Please share your link
 * [Indeed](https://indeed.com/)
 * [Reddit](https://new.reddit.com/r/rust/?f=flair_name%3A%22%F0%9F%92%BC%20jobs%20megathread%22)
 
+## Suggestions by others:
+
+* [Alex Pitsikoulis](https://www.linkedin.com/in/alex-pitsikoulis-797640186/): "[Otta](https://otta.com/) you can filter by technologies here, always had lots of rust jobs posted." (Gabor: I did not have the patience to go over all the questions and to register just to see job posts that are not relevant to me.)
+* [Serhii Kupriienko](https://www.linkedin.com/in/serhii-kupriienko/): "Easy, [Djinni](https://djinni.co/)" - (Gabor: I did not sign up as I am not interested in a job post.)
+* [Mandar Vaze](https://www.linkedin.com/in/mandarvaze/): "I watch [Mainmatter](https://www.youtube.com/@mainmatter2180). They usually interview folks who use Rust in production. I just follow the interviewee's website. They usually have rust jobs.". - (Gabor: I have not watched any yet, but it sounds interesting to hear from companies that use Rust in production.)
 
