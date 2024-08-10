@@ -38,3 +38,8 @@ You might also want to consult the [Awesome SurrealDB](https://github.com/surrea
 * [SQL to SurrealDB mapping](https://docs.surrealdb.com/docs/introduction/sql)
 * [MongoDB to SurrealDB mapping](https://docs.surrealdb.com/docs/introduction/mongo)
 
+## Videos
+
+* [SurrealDB - Rust Embedded Database - Quick Tutorial](https://www.youtube.com/watch?v=iOyvum0D3LM)
+
+
