@@ -1,18 +1,18 @@
 # http
 {id: http}
 
-## http-client with reqwest
-{id: http-client}
+## httpbin
+{id: httpbin}
 
-* [reqwest](https://crates.io/crates/reqwest)
-* [tokio](https://crates.io/crates/tokio)
-
-![](examples/reqwest/http-client/Cargo.toml)
-![](examples/reqwest/http-client/src/main.rs)
+* [httpbin](https://httpbin.org/) a service to test http client implementations.
 
 
-## Simple blocking http client
+## Simple blocking http client with reqwest
 {id: simple-blocking-http-clients}
+{i: reqwest}
+{i: blocking}
+{i: get}
+{i: status}
 
 ```
 cargo add reqwest --features blocking
@@ -20,6 +20,27 @@ cargo add reqwest --features blocking
 
 ![](examples/reqwest/simple-http-client/Cargo.toml)
 ![](examples/reqwest/simple-http-client/src/main.rs)
+
+
+## http-client async with reqwest
+{id: http-client}
+{i: reqwest}
+{i: async}
+{i: tokio}
+
+* [reqwest](https://crates.io/crates/reqwest)
+* [tokio](https://crates.io/crates/tokio)
+
+
+```
+apt-get install pkg-config
+apt-get install libssl-dev
+```
+
+
+![](examples/reqwest/http-client/Cargo.toml)
+![](examples/reqwest/http-client/src/main.rs)
+
 
 ## Download many URLs in parallel (async)
 {id: download-many-urls-async}
