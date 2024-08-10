@@ -178,3 +178,20 @@ Limitation of this solution:
 
 ![](examples/rocket/redirect-with-parameters/src/main.rs)
 ![](examples/rocket/redirect-with-parameters/src/tests.rs)
+
+## Rocket - Serving static files
+{id: rocket-serving-static-files}
+{i: relative}
+{i: FileServer}
+
+* We can use the FileServer to return static files such as images, css files, javascript files etc.
+* We need to mount it to "/".
+* It sets the content type properly for each file.
+
+![](examples/rocket/static-files/src/main.rs)
+
+![](examples/rocket/static-files/src/tests.rs)
+
+![](examples/rocket/static-files/static/css/style.css)
+![](examples/rocket/static-files/static/js/demo.js)
+
