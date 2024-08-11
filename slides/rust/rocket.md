@@ -234,4 +234,13 @@ Limitation of this solution:
 
 ![](examples/rocket/request-guard/src/main.rs)
 
+## Rocket - blog using request guard
+{id: rocket-blog-using-request-guard}
+i
+![](examples/rocket/blog-with-guard/src/main.rs)
+![](examples/rocket/blog-with-guard/src/tests.rs)
+
+![](examples/rocket/blog-with-guard/pages/about.md)
+![](examples/rocket/blog-with-guard/pages/main.md)
+
 
