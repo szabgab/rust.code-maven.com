@@ -226,3 +226,12 @@ Limitation of this solution:
 ![](examples/rocket/static-files/static/css/style.css)
 ![](examples/rocket/static-files/static/js/demo.js)
 
+
+## Rocket - Request guard
+{id: rocket-request-guard}
+
+* These guards don't check anything yet, they just either accept or reject the reuqest, but this can be a good skeleton.
+
+![](examples/rocket/request-guard/src/main.rs)
+
+
