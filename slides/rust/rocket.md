@@ -243,4 +243,13 @@ i
 ![](examples/rocket/blog-with-guard/pages/about.md)
 ![](examples/rocket/blog-with-guard/pages/main.md)
 
+## Rocket - blog with FromParam - selectively accept pathes
+{id: rocket-blog-with-fromparam}
+
+![](examples/rocket/blog-with-fromparam/src/main.rs)
+![](examples/rocket/blog-with-fromparam/src/tests.rs)
+
+![](examples/rocket/blog-with-fromparam/pages/about.md)
+![](examples/rocket/blog-with-fromparam/pages/main.md)
+
 
