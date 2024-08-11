@@ -84,6 +84,19 @@ curl -i http://localhost:8000/
 ![](examples/rocket/echo-using-post/templates/echo.html.tera)
 ![](examples/rocket/echo-using-post/templates/index.html.tera)
 
+## Rocket path parameters
+{id: rocket-path-parameters}
+
+Instead of passing parameters in the Query string in a GET request we can also use the path to pass parameters.
+This is especially interesgint if we would like to make the pages indexable by search engines.
+
+* e.g. in a blog engine the path can be mapped to a blog entry
+* In a social sice we might want to have a separate page for each users.
+
+
+![](examples/rocket/path-parameters/src/main.rs)
+![](examples/rocket/path-parameters/src/tests.rs)
+
 
 ## Rocket: logging to the console
 {id: rocket-logging-to-the-console}
