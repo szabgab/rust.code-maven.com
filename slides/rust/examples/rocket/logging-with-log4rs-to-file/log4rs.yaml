@@ -1,0 +1,14 @@
+appenders:
+  stdout:
+    kind: console
+  all:
+    kind: file
+    path: "all.log"
+    encoder:
+      pattern: "{d} - {l} {f}:{L} {m}{n}"
+
+root:
+  level: debug
+  appenders:
+    #- stdout
+    - all
