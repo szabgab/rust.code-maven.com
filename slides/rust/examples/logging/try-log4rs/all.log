@@ -1,0 +1,5 @@
+2024-08-11T12:13:17.484581753+03:00 - TRACE src/main.rs:16 do_something trace.
+2024-08-11T12:13:17.484603574+03:00 - DEBUG src/main.rs:17 do_something debug.
+2024-08-11T12:13:17.484615887+03:00 - INFO src/main.rs:18 do_something info.
+2024-08-11T12:13:17.484627539+03:00 - WARN src/main.rs:19 do_something warn.
+2024-08-11T12:13:17.484639321+03:00 - ERROR src/main.rs:20 do_something error.

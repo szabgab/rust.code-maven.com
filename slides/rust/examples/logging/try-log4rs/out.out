@@ -1,0 +1,9 @@
+2024-08-11T12:13:17.484418418+03:00 DEBUG try_log4rs - This is a sample debug.
+2024-08-11T12:13:17.484549182+03:00 INFO try_log4rs - This is a sample info.
+2024-08-11T12:13:17.484559672+03:00 WARN try_log4rs - This is a sample warn.
+2024-08-11T12:13:17.484566695+03:00 ERROR try_log4rs - This is a sample error.
+2024-08-11T12:13:17.484595188+03:00 TRACE try_log4rs::tools - do_something trace.
+2024-08-11T12:13:17.484609084+03:00 DEBUG try_log4rs::tools - do_something debug.
+2024-08-11T12:13:17.484620947+03:00 INFO try_log4rs::tools - do_something info.
+2024-08-11T12:13:17.484632638+03:00 WARN try_log4rs::tools - do_something warn.
+2024-08-11T12:13:17.484644481+03:00 ERROR try_log4rs::tools - do_something error.
