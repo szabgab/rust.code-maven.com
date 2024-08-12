@@ -81,7 +81,7 @@ curl -i http://localhost:8000
 
 * content-type: `text/html`
 
-## Rocket - generated RawHtml page
+## Rocket - Generated RawHtml page
 {id: rocket-generated-rawhtml-page}
 {i: RawHtml}
 {i: epoch}
@@ -122,7 +122,7 @@ curl -i http://localhost:8000
 ![](examples/rocket/echo-using-post/templates/echo.html.tera)
 ![](examples/rocket/echo-using-post/templates/index.html.tera)
 
-## Rocket - path parameters
+## Rocket - Path parameters
 {id: rocket-path-parameters}
 
 Instead of passing parameters in the Query string in a GET request we can also use the path to pass parameters.
@@ -146,7 +146,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 * We don't handle variable overflow properly.
 
 
-## Rocket - logging to the console
+## Rocket - Logging to the console
 {id: rocket-logging-to-the-console}
 {i: trace!}
 {i: debug!}
@@ -158,7 +158,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/logging/Rocket.toml)
 
-## Rocket - logging to a file using log4rs
+## Rocket - Logging to a file using log4rs
 {id: rocket-logging-to-a-file-using-log4rs}
 
 * Add [log4rs](https://crates.io/crates/log4rs) to the dependencies.
@@ -180,14 +180,10 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/calculator-with-get/src/main.rs)
 
-## Rocket - in-memory counter sessions
-{id: rocket-in-memory-counter-sessions}
-
-
-## Rocket - in-memory counter
+## Rocket - In-memory counter using State
 {id: rocket-in-memory-counter}
 
-* A single counter in-memory counter (multipel browsers share the counter)
+* A single counter in-memory counter (multiple browsers share the counter)
 
 * [rocket](https://crates.io/crates/rocket)
 * [rocket_dyn_templates](https://crates.io/crates/rocket_dyn_templates)
@@ -231,7 +227,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 cargo watch -x run
 ```
 
-## Rocket - two applications in separate files
+## Rocket - Two applications in separate files
 {id: rocket-separate-files}
 {i: TBD}
 
@@ -298,16 +294,16 @@ Limitation of this solution:
 
 ![](examples/rocket/request-guard/src/main.rs)
 
-## Rocket - blog using request guard
+## Rocket - Blog using request guard
 {id: rocket-blog-using-request-guard}
-i
+
 ![](examples/rocket/blog-with-guard/src/main.rs)
 ![](examples/rocket/blog-with-guard/src/tests.rs)
 
 ![](examples/rocket/blog-with-guard/pages/about.md)
 ![](examples/rocket/blog-with-guard/pages/main.md)
 
-## Rocket - blog with FromParam - selectively accept pathes
+## Rocket - Blog with FromParam - selectively accept pathes
 {id: rocket-blog-with-fromparam}
 
 ![](examples/rocket/blog-with-fromparam/src/main.rs)
@@ -316,7 +312,7 @@ i
 ![](examples/rocket/blog-with-fromparam/pages/about.md)
 ![](examples/rocket/blog-with-fromparam/pages/main.md)
 
-## Rocket - access custom configuration in the routes
+## Rocket - Access custom configuration in the routes
 {id: rocket-access-custom-configuration-in-the-routes}
 
 ![](examples/rocket/configuration/Rocket.toml)
