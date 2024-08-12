@@ -201,6 +201,11 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/in-memory-counter/templates/incl/header.html.tera)
 ![](examples/rocket/in-memory-counter/templates/index.html.tera)
 
+## Rocket - get, set (add), delete cookies - pending cookies
+{id: rocket-get-set-delete-cookies}
+
+![](examples/rocket/set-cookie/src/main.rs)
+
 ## Rocket - Multi-counter using cookies (in the client)
 {id: rocket-multi-counter-using-cookies}
 
@@ -286,16 +291,39 @@ Limitation of this solution:
 ![](examples/rocket/static-files/static/css/style.css)
 ![](examples/rocket/static-files/static/js/demo.js)
 
+## Rocket - 404 page with static content
+{id: rocket-404-page-with-static-content}
 
-## Rocket - Request guard
+![](examples/rocket/http-404-page-with-static-content/src/main.rs)
+![](examples/rocket/http-404-page-with-static-content/src/templates/404.html)
+![](examples/rocket/http-404-page-with-static-content/src/tests.rs)
+
+## Rocket - Access custom configuration in the routes
+{id: rocket-access-custom-configuration-in-the-routes}
+
+![](examples/rocket/configuration/Rocket.toml)
+
+![](examples/rocket/configuration/Cargo.toml)
+
+![](examples/rocket/configuration/src/main.rs)
+
+
+
+## Rocket - Request guard - FromRequest
 {id: rocket-request-guard}
+{i: FromRequest}
+{i: Request}
+{i: Outcome}
+{i: async_trait}
 
 * These guards don't check anything yet, they just either accept or reject the reuqest, but this can be a good skeleton.
 
 ![](examples/rocket/request-guard/src/main.rs)
 
-## Rocket - Blog using request guard
+## Rocket - Blog using request guard - FromRequest
 {id: rocket-blog-using-request-guard}
+{i: FromRequest}
+{i: Status}
 
 ![](examples/rocket/blog-with-guard/src/main.rs)
 ![](examples/rocket/blog-with-guard/src/tests.rs)
@@ -312,27 +340,9 @@ Limitation of this solution:
 ![](examples/rocket/blog-with-fromparam/pages/about.md)
 ![](examples/rocket/blog-with-fromparam/pages/main.md)
 
-## Rocket - Access custom configuration in the routes
-{id: rocket-access-custom-configuration-in-the-routes}
+## Rocket - Return Status (arbitrary HTTP code)
+{id: rocket-return-status}
 
-![](examples/rocket/configuration/Rocket.toml)
-
-![](examples/rocket/configuration/Cargo.toml)
-
-![](examples/rocket/configuration/src/main.rs)
-
-## Rocket - get, set (add), delete cookies - pending cookies
-{id: rocket-get-set-delete-cookies}
-
-![](examples/rocket/set-cookie/src/main.rs)
-
-
-## Rocket - 404 page with static content
-{id: rocket-404-page-with-static-content}
-
-![](examples/rocket/http-404-page-with-static-content/src/main.rs)
-![](examples/rocket/http-404-page-with-static-content/src/templates/404.html)
-![](examples/rocket/http-404-page-with-static-content/src/tests.rs)
-
-
+![](examples/rocket/return-result/src/main.rs)
+![](examples/rocket/return-result/src/tests.rs)
 
