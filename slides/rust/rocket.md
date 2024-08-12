@@ -205,6 +205,21 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/in-memory-counter/templates/incl/header.html.tera)
 ![](examples/rocket/in-memory-counter/templates/index.html.tera)
 
+## Rocket: Multi-counter using cookies (in the client)
+{id: rocket-multi-counter-using-cookies}
+
+![](examples/rocket/multi-counter-using-cookies/src/main.rs)
+![](examples/rocket/multi-counter-using-cookies/src/tests.rs)
+
+## Rocket: Multi-counter using secure cookies (in the client)
+{id: rocket-multi-counter-using-secure-cookies}
+
+![](examples/rocket/multi-counter-using-encrypted-cookies/Cargo.toml)
+![](examples/rocket/multi-counter-using-encrypted-cookies/Rocket.toml)
+![](examples/rocket/multi-counter-using-encrypted-cookies/src/main.rs)
+![](examples/rocket/multi-counter-using-encrypted-cookies/src/tests.rs)
+
+
 ## Rocket: Automatic reload of the application (watch)
 {id: rocket-automatic-reload}
 {i: watch}
