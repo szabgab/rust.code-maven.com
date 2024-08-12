@@ -325,11 +325,18 @@ i
 
 ![](examples/rocket/configuration/src/main.rs)
 
-## Rocket: get, set (add), delete cookies - pending cookies
+## Rocket - get, set (add), delete cookies - pending cookies
 {id: rocket-get-set-delete-cookies}
 
 ![](examples/rocket/set-cookie/src/main.rs)
 
+
+## Rocket - 404 page with static content
+{id: rocket-404-page-with-static-content}
+
+![](examples/rocket/http-404-page-with-static-content/src/main.rs)
+![](examples/rocket/http-404-page-with-static-content/src/templates/404.html)
+![](examples/rocket/http-404-page-with-static-content/src/tests.rs)
 
 
 
