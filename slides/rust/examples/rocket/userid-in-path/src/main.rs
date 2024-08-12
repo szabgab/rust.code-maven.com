@@ -2,7 +2,6 @@
 
 #[cfg(test)] mod tests;
 
-use rocket::fs::relative;
 use rocket::response::content;
 
 use rocket::request::FromParam;
@@ -16,12 +15,15 @@ impl<'r> FromParam<'r> for User {
 
     fn from_param(param: &'r str) -> Result<Self, Self::Error> {
         rocket::info!("from_param: {:?}", param);
-        let uid = param.parse::<usize>().unwrap()   ;
-        
-        if uid < 10000 {
-            Ok(Self { uid })
-        } else {
-            Err("bad")
+        match param.parse::<usize>() {
+            Ok(uid) => {
+                if uid < 10000 {
+                    Ok(Self { uid })
+                } else {
+                    Err("bad uid")
+                }
+            },
+            Err(_) => Err("not a usize")
         }
     }
 }
