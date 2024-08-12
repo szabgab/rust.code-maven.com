@@ -707,6 +707,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "in-memory-counter"
+version = "0.1.0"
+dependencies = [
+ "rocket",
+ "rocket_dyn_templates",
+ "serde",
+]
+
+[[package]]
 name = "indexmap"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1350,15 +1359,6 @@ dependencies = [
  "ubyte",
  "version_check",
  "yansi",
-]
-
-[[package]]
-name = "rocket-sessions"
-version = "0.1.0"
-dependencies = [
- "rocket",
- "rocket_dyn_templates",
- "serde",
 ]
 
 [[package]]

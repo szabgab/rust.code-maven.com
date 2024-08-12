@@ -129,8 +129,7 @@ Instead of passing parameters in the Query string in a GET request we can also u
 This is especially interesgint if we would like to make the pages indexable by search engines.
 
 * e.g. in a blog engine the path can be mapped to a blog entry
-* In a social sice we might want to have a separate page for each users.
-
+* In a social site we might want to have a separate page for each users.
 
 ![](examples/rocket/path-parameters/src/main.rs)
 ![](examples/rocket/path-parameters/src/tests.rs)
@@ -181,27 +180,32 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/calculator-with-get/src/main.rs)
 
-
-## Rocket in-memory counter - sessions
+## Rocket in-memory counter sessions
 {id: rocket-in-memory-counter-sessions}
+
+
+## Rocket in-memory counter
+{id: rocket-in-memory-counter}
+
+* A single counter in-memory counter (multipel browsers share the counter)
 
 * [rocket](https://crates.io/crates/rocket)
 * [rocket_dyn_templates](https://crates.io/crates/rocket_dyn_templates)
 * [tera](https://crates.io/crates/tera)
 * [serde](https://crates.io/crates/serde)
 
-![](examples/rocket/in-memory-counter-with-session/Cargo.toml)
+![](examples/rocket/in-memory-counter/Cargo.toml)
 
-![](examples/rocket/in-memory-counter-with-session/src/main.rs)
-![](examples/rocket/in-memory-counter-with-session/src/tests.rs)
+![](examples/rocket/in-memory-counter/src/main.rs)
+![](examples/rocket/in-memory-counter/src/tests.rs)
 
-![](examples/rocket/in-memory-counter-with-session/Rocket.toml)
-![](examples/rocket/in-memory-counter-with-session/templates/404.html.tera)
-![](examples/rocket/in-memory-counter-with-session/templates/incl/footer.html.tera)
-![](examples/rocket/in-memory-counter-with-session/templates/incl/header.html.tera)
-![](examples/rocket/in-memory-counter-with-session/templates/index.html.tera)
+![](examples/rocket/in-memory-counter/Rocket.toml)
+![](examples/rocket/in-memory-counter/templates/404.html.tera)
+![](examples/rocket/in-memory-counter/templates/incl/footer.html.tera)
+![](examples/rocket/in-memory-counter/templates/incl/header.html.tera)
+![](examples/rocket/in-memory-counter/templates/index.html.tera)
 
-## Rocket: Automatic reload of the application
+## Rocket: Automatic reload of the application (watch)
 {id: rocket-automatic-reload}
 {i: watch}
 
