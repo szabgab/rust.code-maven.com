@@ -1,0 +1,9 @@
+[default]
+custom_in_default = "hi"
+
+[debug]
+custom_a = "Hello World!"
+
+[release]
+log_level = "normal"
+custom_b = "Special value for b"

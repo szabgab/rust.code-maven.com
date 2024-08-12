@@ -1,7 +1,7 @@
 # Rocket
 {id: rocket}
 
-## Rocket web framework
+## Rocket - A web framework for Rust
 {id: rocket-web-framework}
 
 * The [Rocket](https://rocket.rs/) web framework for Rust.
@@ -316,4 +316,12 @@ i
 ![](examples/rocket/blog-with-fromparam/pages/about.md)
 ![](examples/rocket/blog-with-fromparam/pages/main.md)
 
+## Rocket - access custom configuration in the routes
+{id: rocket-access-custom-configuration-in-the-routes}
+
+![](examples/rocket/configuration/Rocket.toml)
+
+![](examples/rocket/configuration/Cargo.toml)
+
+![](examples/rocket/configuration/src/main.rs)
 
