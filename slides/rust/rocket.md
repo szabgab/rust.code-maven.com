@@ -13,6 +13,26 @@
 * TODO: log into a logfile
 * TODO: Blog engine, map the path to an entry in the database, what if that entry does not exist in the database? How do we return 404 not found. (either return Template or a 404 not found page)
 
+## Rocket Hello World
+{id: rocket-hello-world}
+
+```
+cargo add rocket
+```
+
+![](examples/rocket/hello-world/Cargo.toml)
+
+![](examples/rocket/hello-world/src/main.rs)
+
+```
+cargo test
+```
+
+```
+cargo run
+```
+
+
 ## Rocket Hello World with separate test file
 {id: rocket-hello-world-with-separate-test-file}
 
