@@ -99,7 +99,7 @@ curl -i http://localhost:8000
 
 
 ## Rocket - Echo using GET
-{id: echo-using-get}
+{id: rocket-echo-using-get}
 {i: GET}
 
 ![](examples/rocket/echo-using-get/Cargo.toml)
@@ -109,7 +109,7 @@ curl -i http://localhost:8000
 ![](examples/rocket/echo-using-get/templates/index.html.tera)
 
 ## Rocket - Echo using POST
-{id: echo-using-post}
+{id: rocket-echo-using-post}
 {i: POST}
 {i: Form}
 {i: context}
@@ -251,7 +251,7 @@ Limitation of this solution:
 ![](examples/rocket/separate-files/src/blog/blog_tests.rs)
 
 ## Rocket - Redirect to another page
-{id: redirect-to-another-page}
+{id: rocket-redirect-to-another-page}
 {i: Redirect}
 {i: uri!}
 {i: Status}
@@ -269,7 +269,7 @@ Limitation of this solution:
 
 
 ## Rocket - Redirect with parameters
-{id: redirect-with-parameters}
+{id: rocket-redirect-with-parameters}
 
 ![](examples/rocket/redirect-with-parameters/src/main.rs)
 ![](examples/rocket/redirect-with-parameters/src/tests.rs)
