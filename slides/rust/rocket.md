@@ -13,7 +13,7 @@
 * TODO: log into a logfile
 * TODO: Blog engine, map the path to an entry in the database, what if that entry does not exist in the database? How do we return 404 not found. (either return Template or a 404 not found page)
 
-## Rocket Hello World
+## Rocket - Hello World
 {id: rocket-hello-world}
 
 ```
@@ -39,7 +39,7 @@ $ curl -i http://127.0.0.1:8000/
 * Content-type is `text/plain`
 
 
-## Rocket Hello World with separate test file
+## Rocket - Hello World with separate test file
 {id: rocket-hello-world-with-separate-test-file}
 
 * Create a new crate, add rocket as a dependency `cargo add rocket`
@@ -65,7 +65,7 @@ cargo test
 curl -i http://localhost:8000/
 ```
 
-## Rocket Hello World returning static RawHtml
+## Rocket - Hello World returning static RawHtml
 {id: rocket-hello-world-static-raw-html}
 {i: content}
 {i: RawHtml}
@@ -81,7 +81,7 @@ curl -i http://localhost:8000
 
 * content-type: `text/html`
 
-## Rocket: generated RawHtml page
+## Rocket - generated RawHtml page
 {id: rocket-generated-rawhtml-page}
 {i: RawHtml}
 {i: epoch}
@@ -89,7 +89,7 @@ curl -i http://localhost:8000
 
 ![](examples/rocket/generated-rawhtml/src/main.rs)
 
-## Rocket Hello World with Tera template
+## Rocket - Hello World with Tera template
 {id: rocket-hello-world-with-tera-template}
 
 ![](examples/rocket/hello-world-tera-template/Cargo.toml)
@@ -98,7 +98,7 @@ curl -i http://localhost:8000
 ![](examples/rocket/hello-world-tera-template/templates/index.html.tera)
 
 
-## Echo using GET
+## Rocket - Echo using GET
 {id: echo-using-get}
 {i: GET}
 
@@ -108,7 +108,7 @@ curl -i http://localhost:8000
 ![](examples/rocket/echo-using-get/templates/echo.html.tera)
 ![](examples/rocket/echo-using-get/templates/index.html.tera)
 
-## Echo using POST
+## Rocket - Echo using POST
 {id: echo-using-post}
 {i: POST}
 {i: Form}
@@ -122,7 +122,7 @@ curl -i http://localhost:8000
 ![](examples/rocket/echo-using-post/templates/echo.html.tera)
 ![](examples/rocket/echo-using-post/templates/index.html.tera)
 
-## Rocket path parameters
+## Rocket - path parameters
 {id: rocket-path-parameters}
 
 Instead of passing parameters in the Query string in a GET request we can also use the path to pass parameters.
@@ -134,7 +134,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/path-parameters/src/main.rs)
 ![](examples/rocket/path-parameters/src/tests.rs)
 
-## Rocket: Single hit-counter using a text file
+## Rocket - Single hit-counter using a text file
 {id: rocket-single-hit-counter-using-a-text-file}
 
 ![](examples/rocket/single-counter-in-text-file/Cargo.toml)
@@ -146,7 +146,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 * We don't handle variable overflow properly.
 
 
-## Rocket: logging to the console
+## Rocket - logging to the console
 {id: rocket-logging-to-the-console}
 {i: trace!}
 {i: debug!}
@@ -158,7 +158,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/logging/Rocket.toml)
 
-## Rocket: logging to a file using log4rs
+## Rocket - logging to a file using log4rs
 {id: rocket-logging-to-a-file-using-log4rs}
 
 * Add [log4rs](https://crates.io/crates/log4rs) to the dependencies.
@@ -174,17 +174,17 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/logging-with-log4rs-to-file/src/main.rs)
 
 
-## Rocket: Calculator with GET (passing multiple parameters)
+## Rocket - Calculator with GET (passing multiple parameters)
 {id: rocket-calculator-with-get}
 {i: RawHtml}
 
 ![](examples/rocket/calculator-with-get/src/main.rs)
 
-## Rocket in-memory counter sessions
+## Rocket - in-memory counter sessions
 {id: rocket-in-memory-counter-sessions}
 
 
-## Rocket in-memory counter
+## Rocket - in-memory counter
 {id: rocket-in-memory-counter}
 
 * A single counter in-memory counter (multipel browsers share the counter)
@@ -205,13 +205,13 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/in-memory-counter/templates/incl/header.html.tera)
 ![](examples/rocket/in-memory-counter/templates/index.html.tera)
 
-## Rocket: Multi-counter using cookies (in the client)
+## Rocket - Multi-counter using cookies (in the client)
 {id: rocket-multi-counter-using-cookies}
 
 ![](examples/rocket/multi-counter-using-cookies/src/main.rs)
 ![](examples/rocket/multi-counter-using-cookies/src/tests.rs)
 
-## Rocket: Multi-counter using secure cookies (in the client)
+## Rocket - Multi-counter using secure cookies (in the client)
 {id: rocket-multi-counter-using-secure-cookies}
 
 ![](examples/rocket/multi-counter-using-encrypted-cookies/Cargo.toml)
@@ -219,8 +219,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 ![](examples/rocket/multi-counter-using-encrypted-cookies/src/main.rs)
 ![](examples/rocket/multi-counter-using-encrypted-cookies/src/tests.rs)
 
-
-## Rocket: Automatic reload of the application (watch)
+## Rocket - Automatic reload of the application (watch)
 {id: rocket-automatic-reload}
 {i: watch}
 
@@ -232,7 +231,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 cargo watch -x run
 ```
 
-## Rocket: two applications in separate files
+## Rocket - two applications in separate files
 {id: rocket-separate-files}
 {i: TBD}
 
@@ -251,7 +250,7 @@ Limitation of this solution:
 ![](examples/rocket/separate-files/src/blog.rs)
 ![](examples/rocket/separate-files/src/blog/blog_tests.rs)
 
-## Redirect to another page
+## Rocket - Redirect to another page
 {id: redirect-to-another-page}
 {i: Redirect}
 {i: uri!}
@@ -269,7 +268,7 @@ Limitation of this solution:
 ![](examples/rocket/redirect-to-fixed-url/src/tests.rs)
 
 
-## Redirect with parameters
+## Rocket - Redirect with parameters
 {id: redirect-with-parameters}
 
 ![](examples/rocket/redirect-with-parameters/src/main.rs)
