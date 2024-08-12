@@ -343,6 +343,9 @@ Limitation of this solution:
 ## Rocket - Return Status (arbitrary HTTP code)
 {id: rocket-return-status}
 
+* Returning a Status allows us to either return some content or return an arbitrary HTTP status code
+* Then we can - if we want - setup a catcher for that error code to show content we would like to show.
+
 ![](examples/rocket/return-result/src/main.rs)
 ![](examples/rocket/return-result/src/tests.rs)
 
