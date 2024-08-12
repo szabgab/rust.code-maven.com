@@ -325,3 +325,11 @@ i
 
 ![](examples/rocket/configuration/src/main.rs)
 
+## Rocket: get, set (add), delete cookies - pending cookies
+{id: rocket-get-set-delete-cookies}
+
+![](examples/rocket/set-cookie/src/main.rs)
+
+
+
+
