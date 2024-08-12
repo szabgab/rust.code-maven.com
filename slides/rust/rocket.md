@@ -32,6 +32,12 @@ cargo test
 cargo run
 ```
 
+```
+$ curl -i http://127.0.0.1:8000/
+```
+
+* Content-type is `text/plain`
+
 
 ## Rocket Hello World with separate test file
 {id: rocket-hello-world-with-separate-test-file}
@@ -61,10 +67,19 @@ curl -i http://localhost:8000/
 
 ## Rocket Hello World returning static RawHtml
 {id: rocket-hello-world-static-raw-html}
+{i: content}
+{i: RawHtml}
+
 
 ![](examples/rocket/hello-world-html/Cargo.toml)
 ![](examples/rocket/hello-world-html/src/main.rs)
 ![](examples/rocket/hello-world-html/src/tests.rs)
+
+```
+curl -i http://localhost:8000
+```
+
+* content-type: `text/html`
 
 ## Rocket: generated RawHtml page
 {id: rocket-generated-rawhtml-page}
@@ -119,6 +134,17 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/path-parameters/src/main.rs)
 ![](examples/rocket/path-parameters/src/tests.rs)
+
+## Rocket: Single hit-counter using a text file
+{id: rocket-single-hit-counter-using-a-text-file}
+
+![](examples/rocket/single-counter-in-text-file/Cargo.toml)
+![](examples/rocket/single-counter-in-text-file/src/main.rs)
+![](examples/rocket/single-counter-in-text-file/src/tests.rs)
+
+* Error handling - `unwrap`.
+* File operations are not atomic.
+* We don't handle variable overflow properly.
 
 
 ## Rocket: logging to the console
