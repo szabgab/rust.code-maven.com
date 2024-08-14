@@ -24,7 +24,17 @@
 ![](examples/sqlite/in-memory-example/src/main.rs)
 ![](examples/sqlite/in-memory-example/out.out)
 
+## SQLite in-memory COUNT
+{id: sqlite-in-memory-count}
 
+![](examples/sqlite/in-memory-count/src/main.rs)
+![](examples/sqlite/in-memory-count/out.out)
+
+## SQLite in-memory plain placeholder (?)
+{id: sqlite-in-memory-plain-placeholder}
+
+![](examples/sqlite/in-memory-placeholder/src/main.rs)
+![](examples/sqlite/in-memory-placeholder/out.out)
 
 ## SQLite SELECT with named placeholder - bind variables
 {id: sqlite-select-with-named-placeholder-bind-variables}
@@ -59,10 +69,13 @@
 ![](examples/sqlite/in-memory-insert-placeholders/src/main.rs)
 ![](examples/sqlite/in-memory-insert-placeholders/out.out)
 
-## SQLite Counter
-{id: sqlite-counter}
+## SQLite Multi-Counter
+{id: sqlite-multi-counter}
+
+* Command line counter using the `counter.db` file as the database to store the counters.
 
 ![](examples/sqlite/counter/src/main.rs)
+
 
 TODO: AUTOINCREMENT
 TODO: User and Group (with )
