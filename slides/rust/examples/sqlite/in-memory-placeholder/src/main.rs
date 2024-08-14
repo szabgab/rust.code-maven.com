@@ -15,8 +15,8 @@ fn main() {
         insert_statement.bind((1, row.0)).unwrap();
         insert_statement.bind((2, row.1)).unwrap();
         insert_statement.bind((3, row.2)).unwrap();
-        let _ = insert_statement.next();
-        let _ = insert_statement.reset();
+        assert_eq!(insert_statement.next().unwrap(), State::Done);
+        insert_statement.reset().unwrap();
     }
 
     let age = 50;
