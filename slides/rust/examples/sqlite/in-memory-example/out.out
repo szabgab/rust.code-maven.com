@@ -1,4 +1,4 @@
-name = Alice
-age = 42
-name = Bob
-age = 69
+name = Alice  age = 42
+name = Bob    age = 23
+---------------------
+name = Alice  age = 42
