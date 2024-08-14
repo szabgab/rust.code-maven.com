@@ -31,6 +31,9 @@
 {i: bind}
 {i: prepare}
 
+* When the values are in variables - which is almost always - then we should use placeholders and bind the variables to them.
+* We can use the `bind` method to bind them one-by-one.
+
 ![](examples/sqlite/in-memory-select-placeholders-bind/src/main.rs)
 ![](examples/sqlite/in-memory-select-placeholders-bind/out.out)
 
@@ -39,6 +42,8 @@
 {i: prepare}
 {i: bind_iter}
 {i: next}
+
+* We could also bind multiple variables in one statement. We can use either the index of the placeholder or its name. The latter makes more readable code.
 
 ![](examples/sqlite/in-memory-select-placeholders/src/main.rs)
 ![](examples/sqlite/in-memory-select-placeholders/out.out)
@@ -49,10 +54,15 @@
 {i: bind}
 {i: next}
 
+* We can (and should) use placeholders in INSERT statements as well
+
 ![](examples/sqlite/in-memory-insert-placeholders/src/main.rs)
+![](examples/sqlite/in-memory-insert-placeholders/out.out)
 
 ## SQLite Counter
 {id: sqlite-counter}
 
 ![](examples/sqlite/counter/src/main.rs)
 
+TODO: AUTOINCREMENT
+TODO: User and Group (with )
