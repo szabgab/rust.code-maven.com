@@ -79,12 +79,20 @@
 ## SQLte with AUTOINCREMENT
 {id: sqlite-with-autoincrement}
 {i: AUTOINCREMENT}
+{i: TBD}
 
 * Currently this example does not work.
 * [issue](https://github.com/stainless-steel/sqlite/issues/99)
 
 ![](examples/sqlite/with-autoincrement/src/main.rs)
 
+## SQLite - field with DEFAULT value
+{id: sqlite-field-with-default-value}
+{i: TBD}
+
+* Currently this example does not work. See AUTOINCREMENT
+
+![](examples/sqlite/field-with-default/src/main.rs)
+
 TODO: User and Group (with )
-TODO: field with default value
 
