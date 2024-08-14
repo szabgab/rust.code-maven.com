@@ -76,7 +76,7 @@
 
 ![](examples/sqlite/counter/src/main.rs)
 
-## SQLte with AUTOINCREMENT
+## SQLite with AUTOINCREMENT
 {id: sqlite-with-autoincrement}
 {i: AUTOINCREMENT}
 {i: TBD}
