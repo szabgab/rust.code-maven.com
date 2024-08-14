@@ -71,4 +71,19 @@ $ cargo run -q
 Hello World
 Other message
 ```
+## SurrealDB experiments
+{id: surrealdb-experiments}
+{i: TBD}
+
+![](examples/surrealdb/create-select/Cargo.toml)
+![](examples/surrealdb/create-select/src/main.rs)
+
+## SurrealDB - REMOVE NAMESPACE
+{id: surrealdb-remove-namespace}
+
+* [Bug: Server panic when trying to remove namespace](https://github.com/surrealdb/surrealdb/issues/3903)
+* [Bug: InvalidQuery RenderedError for "REMOVE NAMESPACE IF EXISTS surrealdb"](https://github.com/surrealdb/surrealdb/issues/3904)
+
+![](examples/surrealdb/remove-namespace/Cargo.toml)
+![](examples/surrealdb/remove-namespace/src/main.rs)
 
