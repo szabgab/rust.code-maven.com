@@ -27,5 +27,6 @@ tags:
 
 * [markdown crate](https://crates.io/crates/markdown) - [source](https://github.com/wooorm/markdown-rs)
 
-* [GitHub pages with Rust skeleton](https://github.com/szabgab/github-pages-with-rust-skeleton) all the Rust code we saw in the video.
+* [GitHub pages with Rust skeleton](https://szabgab.github.io/github-pages-with-rust-skeleton/) all the Rust code we saw in the video. and the [source](https://szabgab.github.io/github-pages-with-rust-skeleton/)
 
+* [The pages we created](https://szabgab.github.io/github-pages-2024.06.09/) during the video and their [source](https://github.com/szabgab/github-pages-2024.06.09/).
