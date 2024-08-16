@@ -85,6 +85,7 @@
 * [issue](https://github.com/stainless-steel/sqlite/issues/99)
 
 ![](examples/sqlite/with-autoincrement/src/main.rs)
+![](examples/sqlite/with-autoincrement/out.out)
 
 ## SQLite - field with DEFAULT value
 {id: sqlite-field-with-default-value}

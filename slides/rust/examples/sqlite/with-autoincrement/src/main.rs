@@ -19,11 +19,8 @@ fn main() {
 }
 
 fn insert(conn: &Connection, name: &str) {
-    // Error { code: Some(1), message: Some("table users has 2 columns but 1 values were supplied") }
-    let mut statement = conn.prepare("INSERT INTO users VALUES (:name);").unwrap();
-    //let mut statement = conn.prepare("INSERT INTO users VALUES (:id, :name);").unwrap();
+    let mut statement = conn.prepare("INSERT INTO users (name) VALUES (:name);").unwrap();
     statement.bind((":name", Value::String(name.into()))).unwrap();
-    //statement.bind((":id", Value::Null)).unwrap();
     assert_eq!(statement.next().unwrap(), State::Done);
 }
 
