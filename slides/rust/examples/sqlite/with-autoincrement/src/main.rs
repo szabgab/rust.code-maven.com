@@ -27,7 +27,7 @@ fn insert(conn: &Connection, name: &str) {
 fn list_all(conn: &Connection) {
     let mut statement = conn.prepare("SELECT * FROM users").unwrap();
     while let Ok(State::Row) = statement.next() {
-        let id = statement.read::<i64, _>("name").unwrap();
+        let id = statement.read::<i64, _>("id").unwrap();
         let name = statement.read::<String, _>("name").unwrap();
         println!("id={id} name = {name}");
     }

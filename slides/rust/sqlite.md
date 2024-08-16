@@ -79,10 +79,6 @@
 ## SQLite with AUTOINCREMENT
 {id: sqlite-with-autoincrement}
 {i: AUTOINCREMENT}
-{i: TBD}
-
-* Currently this example does not work.
-* [issue](https://github.com/stainless-steel/sqlite/issues/99)
 
 ![](examples/sqlite/with-autoincrement/src/main.rs)
 ![](examples/sqlite/with-autoincrement/out.out)
