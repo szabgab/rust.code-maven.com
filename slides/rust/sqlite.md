@@ -89,11 +89,10 @@
 
 ## SQLite - field with DEFAULT value
 {id: sqlite-field-with-default-value}
-{i: TBD}
 
-* Currently this example does not work. See AUTOINCREMENT
 
 ![](examples/sqlite/field-with-default/src/main.rs)
+![](examples/sqlite/field-with-default/out.out)
 
 TODO: User and Group (with )
 

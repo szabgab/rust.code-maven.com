@@ -21,7 +21,7 @@ fn main() {
 
 fn insert_qa(conn: &Connection, question: &str, answer: &str) {
     let mut statement = conn
-        .prepare("INSERT INTO qa VALUES (:question, :answer);")
+        .prepare("INSERT INTO qa (question, answer) VALUES (:question, :answer);")
         .unwrap();
     statement
         .bind((":question", Value::String(question.into())))
@@ -34,7 +34,7 @@ fn insert_qa(conn: &Connection, question: &str, answer: &str) {
 
 fn insert_q(conn: &Connection, question: &str) {
     // Error { code: Some(1), message: Some("table qa has 2 columns but 1 values were supplied") }
-    let mut statement = conn.prepare("INSERT INTO qa VALUES (:question);").unwrap();
+    let mut statement = conn.prepare("INSERT INTO qa (question) VALUES (:question);").unwrap();
     statement
         .bind((":question", Value::String(question.into())))
         .unwrap();
@@ -44,7 +44,7 @@ fn insert_q(conn: &Connection, question: &str) {
 fn list_all(conn: &Connection) {
     let mut statement = conn.prepare("SELECT * FROM qa").unwrap();
     while let Ok(State::Row) = statement.next() {
-        let question = statement.read::<i64, _>("question").unwrap();
+        let question = statement.read::<String, _>("question").unwrap();
         let answer = statement.read::<String, _>("answer").unwrap();
         println!("{question} - {answer}");
     }
