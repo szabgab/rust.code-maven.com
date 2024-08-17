@@ -160,14 +160,29 @@ Total: 2000
 ![](examples/sqlite/bank/Cargo.toml)
 ![](examples/sqlite/bank/src/main.rs)
 
+## SQLite - Groups and Owners (with FOREIGN KEY)
+{sqlite-groups-and-owners}
+{i: FOREIGN KEY}
 
-TODO: User and Group (with FOREIGN KEY)
+In order to make SQLite enforce FOREIGN KEY we need to turn on the [foreign_keys PRAGMA](https://sqlite.org/pragma.html#pragma_foreign_keys) on the connection.
 
-//use sqlite::ffi::sqlite3_get_autocommit;
-   //sqlite3_get_autocommit(arg1)
+* There is also a compile-time option called [default_foreign_keys](https://sqlite.org/compile.html#default_foreign_keys) but I think we don't want to compile our own sqlite.
 
-    //let flags = OpenFlags::new().with_create().with_read_write();
-    //let connection = Connection::open_with_flags(":memory:", flags).unwrap();
+![](examples/sqlite/groups-and-owner/src/main.rs)
 
-    println!("autocommit: {}", connection.get_autocommit());
 
+## TODO: SQLite functions
+{id: sqlite-functions}
+{i: TBD}
+
+See this issue
+
+```
+use sqlite::ffi::sqlite3_get_autocommit;
+sqlite3_get_autocommit(arg1)
+
+let flags = OpenFlags::new().with_create().with_read_write();
+let connection = Connection::open_with_flags(":memory:", flags).unwrap();
+
+println!("autocommit: {}", connection.get_autocommit());
+```
