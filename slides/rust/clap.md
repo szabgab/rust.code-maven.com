@@ -1,4 +1,4 @@
-# Command line Interface with clap
+# CLI - Command line Interface with clap
 {id: clap}
 
 ## Clap - Command Line Argument Parser
