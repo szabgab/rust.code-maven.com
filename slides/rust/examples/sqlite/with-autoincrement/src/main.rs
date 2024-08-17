@@ -1,4 +1,4 @@
-use sqlite::{Connection, Value, State};
+use sqlite::{Connection, State, Value};
 
 fn main() {
     let connection = sqlite::open(":memory:").unwrap();
@@ -15,13 +15,19 @@ fn main() {
     list_all(&connection);
     insert(&connection, "Jane");
     list_all(&connection);
-
 }
 
 fn insert(conn: &Connection, name: &str) {
-    let mut statement = conn.prepare("INSERT INTO users (name) VALUES (:name);").unwrap();
-    statement.bind((":name", Value::String(name.into()))).unwrap();
+    let mut statement = conn
+        .prepare("INSERT INTO users (name) VALUES (:name);")
+        .unwrap();
+    statement
+        .bind((":name", Value::String(name.into())))
+        .unwrap();
     assert_eq!(statement.next().unwrap(), State::Done);
+
+    let rowid = unsafe { sqlite::ffi::sqlite3_last_insert_rowid(conn.as_raw()) };
+    println!("{rowid}");
 }
 
 fn list_all(conn: &Connection) {

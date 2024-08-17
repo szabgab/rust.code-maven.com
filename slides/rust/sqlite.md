@@ -79,6 +79,9 @@
 ## SQLite with AUTOINCREMENT
 {id: sqlite-with-autoincrement}
 {i: AUTOINCREMENT}
+{i: last_insert_rowid}
+
+* See also [last_insert_rowid](https://sqlite.org/c3ref/last_insert_rowid.html).
 
 ![](examples/sqlite/with-autoincrement/src/main.rs)
 ![](examples/sqlite/with-autoincrement/out.out)
