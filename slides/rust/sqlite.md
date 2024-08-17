@@ -154,8 +154,14 @@ Total: 2000
 -----
 ```
 
+## SQLite transaction - bank
+{id: sqlite-transaction-in-a-bank}
+
+![](examples/sqlite/bank/Cargo.toml)
+![](examples/sqlite/bank/src/main.rs)
+
+
 TODO: User and Group (with FOREIGN KEY)
-TODO: transactions
 
 //use sqlite::ffi::sqlite3_get_autocommit;
    //sqlite3_get_autocommit(arg1)

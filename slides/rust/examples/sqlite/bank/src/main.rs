@@ -1,18 +1,32 @@
 use sqlite::{Connection, State};
 
 use clap::Parser;
-use clap::ValueEnum;
+use clap::Subcommand;
 
-#[derive(Debug, Clone, Copy, ValueEnum)]
+#[derive(Subcommand, Debug)]
 enum Action {
-    Plain,
-    Panic,
-    Transaction,
-    Show,
+    Setup {},
+    Add {
+        account: String,
+        amount: i64,
+    },
+    Transfer {
+        from: String,
+        to: String,
+        amount: i64,
+
+        #[arg(long)]
+        panic: bool,
+
+        #[arg(long)]
+        transaction: bool,
+    },
+    Show {},
 }
 
 #[derive(Parser, Debug)]
 struct Cli {
+    #[command(subcommand)]
     action: Action,
 }
 
@@ -20,21 +34,30 @@ fn main() {
     let args = Cli::parse();
 
     let filename = "bank.db";
-    let exists = std::path::PathBuf::from(filename).exists();
     let connection = sqlite::open(filename).unwrap();
 
-    if !exists {
-        setup_bank(&connection);
+    match &args.action {
+        Action::Setup {} => {
+            setup_bank(&connection);
+        }
+        Action::Add { account, amount } => {
+            println!("{:?} {:?}", account, amount);
+            add(&connection, account, *amount);
+        }
+        Action::Transfer {
+            from,
+            to,
+            amount,
+            panic,
+            transaction,
+        } => {
+            println!("{:?} {:?} {:?}", from, to, amount);
+            transfer(&connection, from, to, *amount, *panic, *transaction)
+        }
+        Action::Show {} => {
+            show(&connection);
+        }
     }
-
-    match args.action {
-        Action::Plain => transfer(&connection, "Mary", "Jane", 100, false, false),
-        Action::Panic => transfer(&connection, "Mary", "Jane", 100, true, false),
-        Action::Transaction => transfer(&connection, "Mary", "Jane", 100, true, true),
-        Action::Show => (),
-    };
-    show(&connection);
-    std::fs::remove_file(filename).unwrap();
 }
 
 fn setup_bank(connection: &Connection) {
@@ -48,15 +71,6 @@ fn setup_bank(connection: &Connection) {
     "#,
         )
         .unwrap();
-    connection
-        .execute("INSERT INTO bank (name, balance) VALUES ('Jane', 0);")
-        .unwrap();
-    connection
-        .execute("INSERT INTO bank (name, balance) VALUES ('Mary', 1000);")
-        .unwrap();
-    connection
-        .execute("INSERT INTO bank (name, balance) VALUES ('Ann', 1000);")
-        .unwrap();
 }
 
 fn transfer(
@@ -67,10 +81,13 @@ fn transfer(
     fail: bool,
     transaction: bool,
 ) {
-    let sql = r#"UPDATE bank SET balance = (SELECT balance FROM bank WHERE name = :name) + :amount WHERE name = :name;"#;
+    let sql = r#"
+        UPDATE bank SET balance = (
+            SELECT balance FROM bank WHERE name = :name
+        ) + :amount WHERE name = :name;
+    "#;
 
     if transaction {
-        println!("BEGIN");
         connection.prepare("BEGIN").unwrap().next().unwrap();
     }
     let mut statement = connection.prepare(sql).unwrap();
@@ -87,7 +104,6 @@ fn transfer(
     statement.next().unwrap();
 
     if transaction {
-        println!("COMMIT");
         connection.prepare("COMMIT").unwrap().next().unwrap();
     }
 }
@@ -107,6 +123,14 @@ fn show(connection: &Connection) {
         let total = statement.read::<i64, _>("total").unwrap();
         println!("Total: {:>4}", total);
     }
-    //
     println!("-----");
+}
+
+fn add(connection: &Connection, name: &str, amount: i64) {
+    let mut statement = connection
+        .prepare("INSERT INTO bank (name, balance) VALUES (:name, :amount);")
+        .unwrap();
+    statement.bind((":name", name)).unwrap();
+    statement.bind((":amount", amount)).unwrap();
+    statement.next().unwrap();
 }

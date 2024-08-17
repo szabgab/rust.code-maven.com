@@ -52,6 +52,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "bank"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "sqlite",
+]
+
+[[package]]
 name = "cc"
 version = "1.1.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -191,14 +199,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "transaction"
-version = "0.1.0"
-dependencies = [
- "clap",
- "sqlite",
 ]
 
 [[package]]
