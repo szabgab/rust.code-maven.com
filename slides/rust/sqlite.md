@@ -164,7 +164,7 @@ Total: 2000
 ![](examples/sqlite/bank/src/main.rs)
 
 ## SQLite - Groups and Owners (with FOREIGN KEY)
-{sqlite-groups-and-owners}
+{id: sqlite-groups-and-owners}
 {i: FOREIGN KEY}
 
 In order to make SQLite enforce FOREIGN KEY we need to turn on the [foreign_keys PRAGMA](https://sqlite.org/pragma.html#pragma_foreign_keys) on the connection.
