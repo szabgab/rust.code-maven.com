@@ -171,18 +171,13 @@ In order to make SQLite enforce FOREIGN KEY we need to turn on the [foreign_keys
 ![](examples/sqlite/groups-and-owner/src/main.rs)
 
 
-## TODO: SQLite functions
-{id: sqlite-functions}
-{i: TBD}
+## SQLite get_autocommit function
+{id: sqlite-get-autocommit}
+{i: get_autocommit}
+{i: raw}
 
-See this issue
+* See [get_autocommit](https://sqlite.org/c3ref/get_autocommit.html)
+* [All the SQLite functions](https://sqlite.org/c3ref/funclist.html)
 
-```
-use sqlite::ffi::sqlite3_get_autocommit;
-sqlite3_get_autocommit(arg1)
+![](examples/sqlite/sqlite_get_autocommit/src/main.rs)
 
-let flags = OpenFlags::new().with_create().with_read_write();
-let connection = Connection::open_with_flags(":memory:", flags).unwrap();
-
-println!("autocommit: {}", connection.get_autocommit());
-```
