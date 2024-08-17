@@ -156,3 +156,12 @@ Total: 2000
 
 TODO: User and Group (with FOREIGN KEY)
 TODO: transactions
+
+//use sqlite::ffi::sqlite3_get_autocommit;
+   //sqlite3_get_autocommit(arg1)
+
+    //let flags = OpenFlags::new().with_create().with_read_write();
+    //let connection = Connection::open_with_flags(":memory:", flags).unwrap();
+
+    println!("autocommit: {}", connection.get_autocommit());
+
