@@ -1,0 +1,9 @@
+List:
+List:
+   Fruit { name: "apple", date: 2024-08-20T13:39:19.962090693Z }
+1134 microseconds
+   Fruit { name: "banana", date: 2024-08-20T13:39:19.962687672Z }
+537 microseconds
+List:
+   Fruit { name: "banana", date: 2024-08-20T13:39:19.962687672Z }
+1839 microseconds

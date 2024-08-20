@@ -96,3 +96,12 @@ Other message
 ![](examples/surrealdb/create-select-delete/src/main.rs)
 ![](examples/surrealdb/create-select-delete/out.out)
 
+## SurrealDB - Datetime with Chrono
+{id: surrealdb-datetime-with-chrono}
+{i: DATETIME}
+
+* [Datetimes in SurrealDB](https://surrealdb.com/docs/surrealdb/surrealql/datamodel/datetimes)
+
+![](examples/surrealdb/date-and-time/src/main.rs)
+![](examples/surrealdb/date-and-time/out.out)
+
