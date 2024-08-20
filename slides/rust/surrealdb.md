@@ -87,3 +87,12 @@ Other message
 ![](examples/surrealdb/remove-namespace/Cargo.toml)
 ![](examples/surrealdb/remove-namespace/src/main.rs)
 
+## SurrealDB - CREATE, SELECT, DELETE
+{id: surreldb-create-select-delete}
+{i: CREATE}
+{i: SELECT}
+{i: DELETE}
+
+![](examples/surrealdb/create-select-delete/src/main.rs)
+![](examples/surrealdb/create-select-delete/out.out)
+

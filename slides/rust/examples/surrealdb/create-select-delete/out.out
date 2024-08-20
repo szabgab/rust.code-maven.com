@@ -1,0 +1,6 @@
+List:
+List:
+   Fruit { name: "apple" }
+   Fruit { name: "banana" }
+List:
+   Fruit { name: "banana" }
