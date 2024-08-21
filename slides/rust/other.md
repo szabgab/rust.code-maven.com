@@ -518,4 +518,8 @@ This program will create an ever growing string. When it reaches the total size 
 ![](examples/other/thousands-for-struct/src/main.rs)
 ![](examples/other/thousands-for-struct/out.out)
 
+## Early return on None Option
+{id: earlyreturn-on-none}
+
+![](examples/other/early-return-on-none/src/lib.rs)
 
