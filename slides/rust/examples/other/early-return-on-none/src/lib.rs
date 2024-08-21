@@ -62,20 +62,15 @@ fn with_macro(input: bool) -> String {
     format!("Process {data}")
 }
 
-fn improved(input: bool) -> String {
+fn let_else(input: bool) -> String {
     let result = compute(input);
 
-    let data = ok_or_return!(result, String::from("Missing"));
+    let Some(data) = result else {
+        return String::from("Missing");
+    };
 
     // process data:
     format!("Process {data}")
-
-    // let data = result.unwrap_or_else(||
-    //     return String::from("Missing")
-    // );
-
-    // // process data:
-    // format!("Process {data}")
 }
 
 #[test]
@@ -110,7 +105,7 @@ fn test_with_macro() {
 }
 
 #[test]
-fn test_improved() {
-    assert_eq!(improved(true), String::from("Process text"));
-    assert_eq!(improved(false), String::from("Missing"));
+fn test_let_else() {
+    assert_eq!(let_else(true), String::from("Process text"));
+    assert_eq!(let_else(false), String::from("Missing"));
 }
