@@ -1,0 +1,16 @@
+List:
+----------
+db: Fruit { name: "apple", color: "yellow" }
+db: Fruit { name: "banana", color: "yellow" }
+List:
+   Fruit { name: "apple", color: "yellow" }
+   Fruit { name: "banana", color: "yellow" }
+----------
+List:
+   Fruit { name: "apple", color: "red" }
+   Fruit { name: "banana", color: "yellow" }
+----------
+List:
+   Fruit { name: "apple", color: "green" }
+   Fruit { name: "banana", color: "yellow" }
+----------

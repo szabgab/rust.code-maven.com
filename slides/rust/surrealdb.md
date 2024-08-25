@@ -105,3 +105,10 @@ Other message
 ![](examples/surrealdb/date-and-time/src/main.rs)
 ![](examples/surrealdb/date-and-time/out.out)
 
+## SurrealDB - CREATE, SELECT, UPDATE, DELETE
+{id: suurealdb-create-select-update-delete}
+{i: update}
+
+![](examples/surrealdb/update/src/main.rs)
+![](examples/surrealdb/update/out.out)
+
