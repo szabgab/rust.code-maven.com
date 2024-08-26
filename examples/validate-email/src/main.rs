@@ -12,6 +12,7 @@ fn main() {
         "foo?@bar.com",
         "|foo@bar.com",
         "/foo@bar.com",
+        "foo@bar",      // Why is this accepted as valid?
     ];
 
     for address in good_addresses {
