@@ -34,9 +34,10 @@ async fn main() -> surrealdb::Result<()> {
 
     list(&dbh).await?;
 
-    set(&dbh, 1, false).await?;
-    set(&dbh, 3, true).await?;
+    toggle_status(&dbh, 1).await?;
+    toggle_status(&dbh, 3).await?;
 
+    //toggle_status(&dbh, 4).await?;
     list(&dbh).await?;
 
     Ok(())
@@ -45,27 +46,31 @@ async fn main() -> surrealdb::Result<()> {
 async fn set(dbh: &Surreal<Client>, uid: u32, status: bool) -> surrealdb::Result<()> {
     //println!("set {uid} to status: {status}");
 
+    let _created: Vec<Record> = dbh
+        .create("toggle")
+        .content(Toggle {
+            uid: uid,
+            status: status,
+        })
+        .await?;
+
+    Ok(())
+}
+
+async fn toggle_status(dbh: &Surreal<Client>, uid: u32) -> surrealdb::Result<()> {
     let mut response = dbh
         .query("SELECT * FROM toggle where uid=$uid")
         .bind(("uid", uid))
         .await?;
     let rows: Vec<Toggle> = response.take(0)?;
-    if let Some(_toggle) = rows.first() {
-        //println!("Update: {toggle:?} with {status}");
-        dbh.query("UPDATE toggle SET status=$status WHERE uid=$uid")
-            .bind(("status", status))
-            .bind(("uid", uid))
-            .await?;
-    } else {
-        let _created: Vec<Record> = dbh
-            .create("toggle")
-            .content(Toggle {
-                uid: uid,
-                status: status,
-            })
-            .await?;
-        //println!("created: {created:?}");
-    }
+    let Some(toggle) = rows.first() else {
+        return Ok(()); // Should return Err()
+    };
+
+    dbh.query("UPDATE toggle SET status=$status WHERE uid=$uid")
+        .bind(("status", !toggle.status))
+        .bind(("uid", uid))
+        .await?;
 
     Ok(())
 }

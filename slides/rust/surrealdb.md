@@ -123,9 +123,10 @@ Other message
 
 ## SurrealDB - toggle
 {id: surrealdb-toggle}
+{i: TBD}
+
+* TODO: The error handling should be improved
 
 ![](examples/surrealdb/toggle/src/main.rs)
 ![](examples/surrealdb/toggle/out.out)
-
-
 
