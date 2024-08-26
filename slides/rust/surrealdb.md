@@ -112,6 +112,15 @@ Other message
 ![](examples/surrealdb/update/src/main.rs)
 ![](examples/surrealdb/update/out.out)
 
+## SurrealDB - RSVP
+{id: surrealdb-rsvp}
+
+* Set a value to true or false and if it does not exist, create it first with the appropriate starting value
+
+![](examples/surrealdb/rsvp/src/main.rs)
+![](examples/surrealdb/rsvp/out.out)
+
+
 ## SurrealDB - toggle
 {id: surrealdb-toggle}
 

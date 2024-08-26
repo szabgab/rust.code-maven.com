@@ -5,7 +5,7 @@ use surrealdb::sql::Thing;
 use surrealdb::Surreal;
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Toggle {
+struct RSVP {
     uid: u32,
     status: bool,
 }
@@ -22,10 +22,10 @@ async fn main() -> surrealdb::Result<()> {
 
     dbh.use_ns("demo").use_db("demo").await?;
     let _response = dbh
-        .query("DEFINE INDEX toggle_id ON TABLE toggle COLUMNS uid UNIQUE")
+        .query("DEFINE INDEX rsvp_id ON TABLE rsvp COLUMNS uid UNIQUE")
         .await?;
 
-    let _response = dbh.query("DELETE toggle").await?.check();
+    let _response = dbh.query("DELETE rsvp").await?.check();
     list(&dbh).await?;
 
     set(&dbh, 1, true).await?;
@@ -46,20 +46,20 @@ async fn set(dbh: &Surreal<Client>, uid: u32, status: bool) -> surrealdb::Result
     //println!("set {uid} to status: {status}");
 
     let mut response = dbh
-        .query("SELECT * FROM toggle where uid=$uid")
+        .query("SELECT * FROM rsvp where uid=$uid")
         .bind(("uid", uid))
         .await?;
-    let rows: Vec<Toggle> = response.take(0)?;
-    if let Some(_toggle) = rows.first() {
-        //println!("Update: {toggle:?} with {status}");
-        dbh.query("UPDATE toggle SET status=$status WHERE uid=$uid")
+    let rows: Vec<RSVP> = response.take(0)?;
+    if let Some(_rsvp) = rows.first() {
+        //println!("Update: {rsvp:?} with {status}");
+        dbh.query("UPDATE rsvp SET status=$status WHERE uid=$uid")
             .bind(("status", status))
             .bind(("uid", uid))
             .await?;
     } else {
         let _created: Vec<Record> = dbh
-            .create("toggle")
-            .content(Toggle {
+            .create("rsvp")
+            .content(RSVP {
                 uid: uid,
                 status: status,
             })
@@ -71,7 +71,7 @@ async fn set(dbh: &Surreal<Client>, uid: u32, status: bool) -> surrealdb::Result
 }
 
 async fn list(db: &Surreal<Client>) -> surrealdb::Result<()> {
-    let statuses: Vec<Toggle> = db.select("toggle").await?;
+    let statuses: Vec<RSVP> = db.select("rsvp").await?;
     println!("List:");
     for status in statuses {
         println!("   {:?}", status);
