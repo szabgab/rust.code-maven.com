@@ -1,0 +1,9 @@
+List:
+List:
+   RSVP { uid: 3, status: false }
+   RSVP { uid: 1, status: true }
+   RSVP { uid: 2, status: true }
+List:
+   RSVP { uid: 3, status: true }
+   RSVP { uid: 1, status: false }
+   RSVP { uid: 2, status: true }

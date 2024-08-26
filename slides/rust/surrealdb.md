@@ -112,3 +112,11 @@ Other message
 ![](examples/surrealdb/update/src/main.rs)
 ![](examples/surrealdb/update/out.out)
 
+## SurrealDB - toggle
+{id: surrealdb-toggle}
+
+![](examples/surrealdb/toggle/src/main.rs)
+![](examples/surrealdb/toggle/out.out)
+
+
+
