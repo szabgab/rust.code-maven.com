@@ -2,7 +2,7 @@
 title: "Command line tools: Implementing wc in Rust"
 timestamp: 2024-08-28T12:00:01
 author: szabgab
-published: show
+published: true
 description:
 tags:
     - wc
