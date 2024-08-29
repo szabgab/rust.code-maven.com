@@ -1,0 +1,26 @@
+Creating 3
+Number { num: 3 }
+Dropping Number! 3
+Creating 4
+Number { num: 4 }
+Dropping Number! 4
+Creating 5
+Number { num: 5 }
+Dropping Number! 5
+for loop: 3
+-----
+Creating 3
+Creating 4
+Creating 5
+collect.len: 3
+Dropping Number! 3
+Dropping Number! 4
+Dropping Number! 5
+-----
+Creating 3
+Dropping Number! 3
+Creating 4
+Dropping Number! 4
+Creating 5
+Dropping Number! 5
+count: 3
