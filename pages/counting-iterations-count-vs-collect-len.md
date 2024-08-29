@@ -14,11 +14,11 @@ todo:
     - TODO
 ---
 
+Code
+
 {% include file="examples/count-vs-collect-len/src/main.rs" %}
 
+Output
+
 {% include file="examples/count-vs-collect-len/out.out" %}
-
-
-
-{% youtube id="" %}
 
