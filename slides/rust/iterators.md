@@ -143,6 +143,11 @@
 
 ![](examples/iterators/skip-and-take/out.out)
 
+## Counting the number of iterations - count vs collect-len
+{id: counting-the-number-of-iterations}
+
+![](examples/iterators/count-vs-collect-len/src/main.rs)
+![](examples/iterators/count-vs-collect-len/out.out)
 
 ## Exercise: Iterator for the Fibonacci series
 {id: exercise-fibonacci-iterator}
