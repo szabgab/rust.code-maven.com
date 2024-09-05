@@ -376,3 +376,12 @@ let client = Client::tracked(app).unwrap();
 ![](examples/rocket/return-result/src/main.rs)
 ![](examples/rocket/return-result/src/tests.rs)
 
+## Rocket - catch panic in the route handle
+{id: rocket-catch-panic-in-the-route-handle}
+{i: catch}
+{i: catchers!}
+{i: 500}
+
+![](examples/rocket/catch-division-by-zero/src/main.rs)
+
+
