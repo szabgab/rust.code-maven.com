@@ -1,6 +1,36 @@
 # SurrealDB
 {id: surrealdb}
 
+## What is SurrealDB
+{id: what-is-surrealdb}
+
+* [SurrealDB](https://surrealdb.com/)
+
+* We can use it embedded or as a separate server.
+* Embedded can work with in-memory databse (which is not persistent) or with on-disk backend.
+* When using as a separate server we can have one node or multiple nodes.
+
+* SurrealDB itself is written in Rust and can be used with multiple programming languages.
+
+## SurrealDB in-memory database in Rust
+{i: surrealdb-in-memory-database-in-rust}
+{i: kv-mem}
+{i: Mem}
+
+![](examples/surrealdb/in-memory-setup/Cargo.toml)
+![](examples/surrealdb/in-memory-setup/src/main.rs)
+
+## SurrealDB with RocksDB backend in Rust
+{id: surrealdb-with-rocksdb-backend-in-rust}
+{i: SurrealDB}
+{i: RocksDB}
+
+![](examples/surrealdb/embedded-rocksdb/Cargo.toml)
+
+* This will create a folder called `tempdb` in the root of the crate. You could also give a path there to some other folder.
+
+![](examples/surrealdb/embedded-rocksdb/src/main.rs)
+
 ## Start SurrealDB in Docker
 {id: start-surrealdb-in-docker}
 
@@ -14,7 +44,7 @@ docker volume create my-surreal-db
 * Start the Docker container using the latest SurrealDB image:
 
 ```
-docker run --name surrealdb --rm -p 8001:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:latest start --log trace file://database
+docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:latest start --log trace file://database
 ```
 
 * Stop the container:
