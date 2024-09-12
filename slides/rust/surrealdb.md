@@ -51,6 +51,14 @@ docker volume create my-surreal-db
 docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:latest start --log trace file://database
 ```
 
+* Or a specific version:
+
+```
+docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:v1.5.5 start --log trace file://database
+```
+
+* This one will listen on port 8000. You could tell it to listen on some other port. e.g. port 8001:  `-p 8001:8000`.
+
 * Stop the container:
 
 ```
@@ -63,6 +71,9 @@ Ctrl-c
 docker volume remove my-surreal-db
 ```
 
+* See the [tags](https://hub.docker.com/r/surrealdb/surrealdb/tags) for available versions.
+
+
 ## SurrealDB in-memory with SQL demo in Rust - CREATE (INSERT), SELECT, UPDATE, DELETE
 {id: surrealdb-in-memory-with-sql-demo-in-rust}
 {i: Mem}
@@ -72,6 +83,11 @@ docker volume remove my-surreal-db
 {i: UPDATE}
 {i: DELETE}
 {i: surrealdb::Result}
+
+* First think would be to authenticate, but we are skipping that in these examples
+* then select the namespace and the database.
+* There can be as many namespaces as you want and each namespace can have multipled databases.
+* A namespace migh correspond to a department in a company and each database is for a product or (micro)service.
 
 ![](examples/surrealdb/in-memory-demo/src/main.rs)
 
@@ -134,6 +150,15 @@ Other message
 ![](examples/surrealdb/remove-namespace/Cargo.toml)
 ![](examples/surrealdb/remove-namespace/src/main.rs)
 
+## INSERT and SELECT in Memory
+{id: insert-and-select}
+
+
+![](examples/surrealdb/insert-select-in-memory/src/main.rs)
+
+![](examples/surrealdb/insert-select-in-memory/out.out)
+
+
 ## SurrealDB - CREATE, SELECT, DELETE
 {id: surreldb-create-select-delete}
 {i: CREATE}
@@ -185,4 +210,11 @@ Other message
 ![](examples/surrealdb/cli-multi-counter/src/main.rs)
 
 ![](examples/surrealdb/cli-multi-counter/tests/tests.rs)
+
+## Generate ID
+{id: generate-id}
+
+
+![](examples/surrealdb/generate-id/src/main.rs)
+![](examples/surrealdb/generate-id/out.out)
 
