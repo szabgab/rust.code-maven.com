@@ -12,8 +12,11 @@
 
 * SurrealDB itself is written in Rust and can be used with multiple programming languages.
 
+* [SurrealDB for SQL developers](https://surrealdb.com/docs/surrealdb/introduction/sql)
+* [SurrealDB for MongoDB developers](https://surrealdb.com/docs/surrealdb/introduction/mongo)
+
 ## SurrealDB in-memory database in Rust
-{i: surrealdb-in-memory-database-in-rust}
+{id: surrealdb-in-memory-database-in-rust}
 {i: kv-mem}
 {i: Mem}
 
@@ -173,4 +176,13 @@ Other message
 
 ![](examples/surrealdb/toggle/src/main.rs)
 ![](examples/surrealdb/toggle/out.out)
+
+## Multi-counter with embedded SurrealDB database
+{id: multi-counter-with-embedded-surrealdb-database}
+
+![](examples/surrealdb/cli-multi-counter/Cargo.toml)
+
+![](examples/surrealdb/cli-multi-counter/src/main.rs)
+
+![](examples/surrealdb/cli-multi-counter/tests/tests.rs)
 
