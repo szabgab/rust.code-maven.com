@@ -16,10 +16,11 @@ struct Record {
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    // Connect to the server
-    let db = Surreal::new::<Ws>("127.0.0.1:8001").await?;
+    let host = "127.0.0.1";
+    let port = "8000";
+    let dsn = format!("{host}:{port}");
+    let db = Surreal::new::<Ws>(dsn).await?;
 
-    // Select a specific namespace / database
     db.use_ns("demo").use_db("demo-1").await?;
 
     let args = std::env::args().collect::<Vec<String>>();
