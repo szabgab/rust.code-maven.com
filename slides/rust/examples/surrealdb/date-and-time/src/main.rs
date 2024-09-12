@@ -14,7 +14,7 @@ struct Fruit {
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    let db = Surreal::new::<Ws>("127.0.0.1:8001").await?;
+    let db = Surreal::new::<Ws>("127.0.0.1:8000").await?;
     db.use_ns("demo").use_db("demo-time").await?;
 
     let _response = db.query("DELETE fruits").await?.check();
