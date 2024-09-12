@@ -18,6 +18,7 @@
 {i: Mem}
 
 ![](examples/surrealdb/in-memory-setup/Cargo.toml)
+
 ![](examples/surrealdb/in-memory-setup/src/main.rs)
 
 ## SurrealDB with RocksDB backend in Rust
@@ -58,6 +59,19 @@ Ctrl-c
 ```
 docker volume remove my-surreal-db
 ```
+
+## SurrealDB in-memory with SQL demo in Rust - CREATE (INSERT), SELECT, UPDATE, DELETE
+{id: surrealdb-in-memory-with-sql-demo-in-rust}
+{i: Mem}
+{i: DEFINE}
+{i: CREATE}
+{i: SELECT}
+{i: UPDATE}
+{i: DELETE}
+{i: surrealdb::Result}
+
+![](examples/surrealdb/in-memory-demo/src/main.rs)
+
 
 
 ## SurrealDB create INSERT SELECT
