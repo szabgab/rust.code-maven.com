@@ -211,10 +211,24 @@ Other message
 
 ![](examples/surrealdb/cli-multi-counter/tests/tests.rs)
 
-## Generate ID
+## Get version of SurrealDB
+{id: version-of-surrealdb}
+
+![](examples/surrealdb/version/src/main.rs)
+![](examples/surrealdb/version/out.out)
+
+
+
+## Generate ID in SurrealDB
 {id: generate-id}
 
 
 ![](examples/surrealdb/generate-id/src/main.rs)
 ![](examples/surrealdb/generate-id/out.out)
+
+## Generate Thing in SurrealDB
+{id: generate-thing}
+
+![](examples/surrealdb/generate-thing/src/main.rs)
+![](examples/surrealdb/generate-thing/out.out)
 

@@ -1,0 +1,11 @@
+id Thing { tb: "person", id: String("qyi311f3aol1vj5lj9jm") }
+id person:qyi311f3aol1vj5lj9jm
+id person:qyi311f3aol1vj5lj9jm
+
+ulid Thing { tb: "person", id: String("01J7JWR2N1M9DBX7S0PS29VEZ3") }
+ulid person:01J7JWR2N1M9DBX7S0PS29VEZ3
+ulid person:01J7JWR2N1M9DBX7S0PS29VEZ3
+
+uuid Thing { tb: "person", id: String("0191e5cc-0aa2-7213-91e7-9e6270853975") }
+uuid person:⟨0191e5cc-0aa2-7213-91e7-9e6270853975⟩
+uuid person:⟨0191e5cc-0aa2-7213-91e7-9e6270853975⟩
