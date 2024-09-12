@@ -1,0 +1,78 @@
+[DanceClass { id: Thing { tb: "dance", id: String("3bj451ia0x5vkeifvd4s") }, name: "Introduction to Dancing" }]
+[DanceClass { id: Thing { tb: "dance", id: String("j7xfsdvleidtpihu0a3r") }, name: "Flamenco" }]
+[
+    DanceClass {
+        id: Thing {
+            tb: "dance",
+            id: String(
+                "3bj451ia0x5vkeifvd4s",
+            ),
+        },
+        name: "Introduction to Dancing",
+    },
+    DanceClass {
+        id: Thing {
+            tb: "dance",
+            id: String(
+                "j7xfsdvleidtpihu0a3r",
+            ),
+        },
+        name: "Flamenco",
+    },
+]
+[
+    Student {
+        id: Thing {
+            tb: "student",
+            id: String(
+                "8jorvixkpl90d91ytg8g",
+            ),
+        },
+        name: "Jane Doe",
+        classes: [
+            Thing {
+                tb: "dance",
+                id: String(
+                    "3bj451ia0x5vkeifvd4s",
+                ),
+            },
+            Thing {
+                tb: "dance",
+                id: String(
+                    "j7xfsdvleidtpihu0a3r",
+                ),
+            },
+        ],
+    },
+]
+Students = [
+    StudentClasses {
+        id: Thing {
+            tb: "student",
+            id: String(
+                "8jorvixkpl90d91ytg8g",
+            ),
+        },
+        name: "Jane Doe",
+        classes: [
+            DanceClass {
+                id: Thing {
+                    tb: "dance",
+                    id: String(
+                        "3bj451ia0x5vkeifvd4s",
+                    ),
+                },
+                name: "Introduction to Dancing",
+            },
+            DanceClass {
+                id: Thing {
+                    tb: "dance",
+                    id: String(
+                        "j7xfsdvleidtpihu0a3r",
+                    ),
+                },
+                name: "Flamenco",
+            },
+        ],
+    },
+]

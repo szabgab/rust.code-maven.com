@@ -232,3 +232,10 @@ Other message
 ![](examples/surrealdb/generate-thing/src/main.rs)
 ![](examples/surrealdb/generate-thing/out.out)
 
+
+## Map field to id of other table (FOREIGN KEY)
+{id: map-field-to-id-of-other-table}
+
+![](examples/surrealdb/map-field-to-id-of-other-table/src/main.rs)
+![](examples/surrealdb/map-field-to-id-of-other-table/out.out)
+
