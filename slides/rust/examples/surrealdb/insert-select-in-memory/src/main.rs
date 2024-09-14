@@ -1,9 +1,8 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::engine::local::Mem;
 use surrealdb::engine::local::Db;
+use surrealdb::engine::local::Mem;
 use surrealdb::sql::Thing;
 use surrealdb::Surreal;
-
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Message {
@@ -29,6 +28,7 @@ async fn main() -> surrealdb::Result<()> {
 
     Ok(())
 }
+
 async fn select_all_the_messages(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let mut response = db.query("SELECT * from messages").await?;
     let messages: Vec<Message> = response.take(0)?;
