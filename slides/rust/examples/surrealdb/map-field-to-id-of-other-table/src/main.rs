@@ -7,14 +7,12 @@ const DANCE: &str = "dance";
 const STUDENT: &str = "student";
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 struct DanceClass {
     id: Thing,
     name: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
 struct Student {
     id: Thing,
     name: String,
@@ -22,7 +20,6 @@ struct Student {
 }
 
 #[derive(Debug, Deserialize)]
-#[serde(rename_all = "camelCase")]
 #[allow(dead_code)]
 struct StudentClasses {
     id: Thing,
@@ -37,7 +34,12 @@ async fn main() -> surrealdb::Result<()> {
     db.use_ns("namespace").use_db("database").await?;
 
     add_classes(&db).await?;
-    let classes = get_classes(&db).await?;
+    let mut classes = get_classes(&db).await?;
+    classes.push(DanceClass {
+        id: Thing::from((DANCE, Id::rand())),
+        name: String::from("Belly dance"),
+    });
+
 
     add_students(&db, classes).await?;
 
@@ -47,23 +49,17 @@ async fn main() -> surrealdb::Result<()> {
 }
 
 async fn add_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
-    let classes: Vec<DanceClass> = db
+    for name in ["Introduction to Dancing", "Flamenco"] {
+        let classes: Vec<DanceClass> = db
         .create(DANCE)
         .content(DanceClass {
             id: Thing::from((DANCE, Id::rand())),
-            name: String::from("Introduction to Dancing"),
+            name: name.to_owned(),
         })
         .await?;
-    println!("{classes:?}");
+        println!("class added: {classes:?}");
 
-    let classes: Vec<DanceClass> = db
-        .create(DANCE)
-        .content(DanceClass {
-            id: Thing::from((DANCE, Id::rand())),
-            name: String::from("Flamenco"),
-        })
-        .await?;
-    println!("{classes:?}");
+    }
 
     Ok(())
 }
@@ -72,7 +68,10 @@ async fn get_classes(db: &Surreal<Db>) -> surrealdb::Result<Vec<DanceClass>> {
     let sql = format!("SELECT * FROM dance");
     let mut results = db.query(sql).await?;
     let classes: Vec<DanceClass> = results.take(0)?;
-    println!("{classes:#?}");
+
+    for class in &classes {
+        println!("get_classes: {class:?}");
+    }
 
     Ok(classes)
 }
@@ -86,7 +85,7 @@ async fn add_students(db: &Surreal<Db>, classes: Vec<DanceClass>) -> surrealdb::
             classes: classes.into_iter().map(|class| class.id).collect(),
         })
         .await?;
-    println!("{students:#?}");
+    println!("student added: {students:#?}");
 
     Ok(())
 }
@@ -95,7 +94,7 @@ async fn show_students_in_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let sql = format!("SELECT * FROM {STUDENT} FETCH classes");
     let mut results = db.query(sql).await?;
     let students: Vec<StudentClasses> = results.take(0)?;
-    println!("Students = {students:#?}");
+    println!("Students: {students:#?}");
 
     Ok(())
 }
