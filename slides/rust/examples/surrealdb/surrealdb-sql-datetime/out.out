@@ -1,0 +1,12 @@
+Event {
+    id: Thing {
+        tb: "events",
+        id: String(
+            "cxgerehhr27m9gsx5vwg",
+        ),
+    },
+    title: "Introduction to Rust",
+    date: Datetime(
+        2024-09-14T08:33:03.723138054Z,
+    ),
+}

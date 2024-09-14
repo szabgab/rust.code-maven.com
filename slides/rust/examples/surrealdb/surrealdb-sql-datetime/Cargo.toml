@@ -1,0 +1,9 @@
+[package]
+name = "surrealdb-sql-datetime"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+surrealdb = { version = "1.1", features = ["kv-mem"] }
+tokio = { version = "1.35", features = ["macros", "rt-multi-thread"] }
