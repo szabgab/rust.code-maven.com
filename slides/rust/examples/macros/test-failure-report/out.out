@@ -1,0 +1,44 @@
+
+running 5 tests
+test tests::test_bad_add_func ... FAILED
+test tests::test_bad_add_macro ... FAILED
+test tests::test_bad_multiply_macro ... FAILED
+test tests::test_bad_multiply_func ... FAILED
+test tests::test_good ... ok
+
+failures:
+
+---- tests::test_bad_add_func stdout ----
+thread 'tests::test_bad_add_func' panicked at src/lib.rs:69:13:
+assertion `left == right` failed
+  left: "9"
+ right: "6"
+
+---- tests::test_bad_add_macro stdout ----
+thread 'tests::test_bad_add_macro' panicked at src/lib.rs:54:9:
+assertion `left == right` failed
+  left: "9"
+ right: "6"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- tests::test_bad_multiply_macro stdout ----
+thread 'tests::test_bad_multiply_macro' panicked at src/lib.rs:62:9:
+assertion `left == right` failed
+  left: "6"
+ right: "9"
+
+---- tests::test_bad_multiply_func stdout ----
+thread 'tests::test_bad_multiply_func' panicked at src/lib.rs:69:13:
+assertion `left == right` failed
+  left: "6"
+ right: "9"
+
+
+failures:
+    tests::test_bad_add_func
+    tests::test_bad_add_macro
+    tests::test_bad_multiply_func
+    tests::test_bad_multiply_macro
+
+test result: FAILED. 1 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

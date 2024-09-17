@@ -246,3 +246,13 @@ cargo +nightly run
 ![](examples/macros/embed-html/src/main.rs)
 
 
+## Using a helper macro vs helper function in tests
+{id: using-helper-macro-in-tests}
+
+
+* If we use helper functions then the assert failure will be reported in the function and it will be harder for us to know which call to that function triggered the error.
+* If we use macro, then we get the line where the macro is called.
+
+![](examples/macros/test-failure-report/src/lib.rs)
+![](examples/macros/test-failure-report/out.out)
+
