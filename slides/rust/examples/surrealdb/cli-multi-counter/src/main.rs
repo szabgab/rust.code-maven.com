@@ -57,7 +57,7 @@ async fn main() -> surrealdb::Result<()> {
 async fn increment(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
     let response = db
         .query("INSERT INTO counter (name, count) VALUES ($name, $count) ON DUPLICATE KEY UPDATE count += 1;")
-        .bind(("name", name))
+        .bind(("name", name.to_owned()))
         .bind(("count", 1))
         .await?;
 
