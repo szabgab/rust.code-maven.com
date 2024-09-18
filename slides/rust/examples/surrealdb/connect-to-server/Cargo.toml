@@ -1,0 +1,9 @@
+[package]
+name = "connect-to-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+surrealdb = "2.0.1"
+tokio = { version = "1.35", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0", features = ["derive"] }

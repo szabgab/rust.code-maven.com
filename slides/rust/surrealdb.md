@@ -91,6 +91,19 @@ docker volume remove my-surreal-db
 
 ![](examples/surrealdb/in-memory-demo/src/main.rs)
 
+```
+cargo run -q > out.out 2>&1
+```
+
+![](examples/surrealdb/in-memory-demo/out.out)
+
+## SurrealDB connect to server
+{id: surrealdb-connect-to-server}
+
+![](examples/surrealdb/connect-to-server/Cargo.toml)
+
+![](examples/surrealdb/connect-to-server/src/main.rs)
+
 
 
 ## SurrealDB create INSERT SELECT

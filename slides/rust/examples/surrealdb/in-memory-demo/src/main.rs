@@ -44,8 +44,8 @@ async fn add_to(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<
     for (name, phone) in data {
         let response = db
             .query("CREATE entry SET  name=$name, phone=$phone")
-            .bind(("name", name))
-            .bind(("phone", phone))
+            .bind(("name", name.to_owned()))
+            .bind(("phone", phone.to_owned()))
             .await?;
 
         match response.check() {
