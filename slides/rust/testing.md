@@ -104,3 +104,12 @@ the parameters and then creating many test functions calling that function.
 
 ![](examples/testing/fake-parametrize/src/lib.rs)
 
+## Rust testing setup and teardown fixtures
+{id: rust-testing-with-fixtures}
+
+We can create setup/teardown fixtures using a struct and the Drop trait that will be executed even if the test panics.
+
+![](examples/testing/fixtures/src/lib.rs)
+
+![](examples/testing/fixtures/out.out)
+

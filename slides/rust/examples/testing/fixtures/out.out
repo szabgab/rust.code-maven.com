@@ -1,0 +1,19 @@
+
+running 3 tests
+before 2_2
+after  2_2
+test tests::works_2_2 ... ok
+before 2_0
+before 4_3
+after  4_3
+test tests::works_4_3 ... ok
+after  2_0
+test tests::works_2_0 ... FAILED
+
+failures:
+
+failures:
+    tests::works_2_0
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
