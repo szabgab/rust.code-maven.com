@@ -162,6 +162,7 @@ Other message
 
 ![](examples/surrealdb/remove-namespace/Cargo.toml)
 ![](examples/surrealdb/remove-namespace/src/main.rs)
+![](examples/surrealdb/remove-namespace/out.out)
 
 ## INSERT and SELECT in Memory
 {id: insert-and-select}
