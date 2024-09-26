@@ -68,5 +68,7 @@ code of each one of them from [Rust Maven GitHub repo](https://github.com/szabga
 * [Tempfiles](https://tempfiles.ninja/) A simple file sharing service that encrypts files at rest and deletes them automatically after 24 hours. - [source](https://github.com/olback/tempfiles-rs)
 
 
+* [CreatureBattleSimulator](https://github.com/MDH0/CreatureBattleSimulator/) Rocket + surrealDB
+
 * A lichess clone of SHOBU powered by Rust. (in development) [source](https://github.com/Kapsyloffer/RUSTBU)
 
