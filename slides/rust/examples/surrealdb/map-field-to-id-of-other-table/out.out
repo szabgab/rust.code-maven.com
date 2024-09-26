@@ -1,31 +1,13 @@
-[DanceClass { id: Thing { tb: "dance", id: String("3bj451ia0x5vkeifvd4s") }, name: "Introduction to Dancing" }]
-[DanceClass { id: Thing { tb: "dance", id: String("j7xfsdvleidtpihu0a3r") }, name: "Flamenco" }]
-[
-    DanceClass {
-        id: Thing {
-            tb: "dance",
-            id: String(
-                "3bj451ia0x5vkeifvd4s",
-            ),
-        },
-        name: "Introduction to Dancing",
-    },
-    DanceClass {
-        id: Thing {
-            tb: "dance",
-            id: String(
-                "j7xfsdvleidtpihu0a3r",
-            ),
-        },
-        name: "Flamenco",
-    },
-]
-[
+class added: [DanceClass { id: Thing { tb: "dance", id: String("gjjhx7vr62vaiqr49ivr") }, name: "Introduction to Dancing" }]
+class added: [DanceClass { id: Thing { tb: "dance", id: String("c4v2dpfzsreg1u5nleeq") }, name: "Flamenco" }]
+get_classes: DanceClass { id: Thing { tb: "dance", id: String("c4v2dpfzsreg1u5nleeq") }, name: "Flamenco" }
+get_classes: DanceClass { id: Thing { tb: "dance", id: String("gjjhx7vr62vaiqr49ivr") }, name: "Introduction to Dancing" }
+student added: [
     Student {
         id: Thing {
             tb: "student",
             id: String(
-                "8jorvixkpl90d91ytg8g",
+                "h8c5rpmyhb3p3l0yu7al",
             ),
         },
         name: "Jane Doe",
@@ -33,24 +15,24 @@
             Thing {
                 tb: "dance",
                 id: String(
-                    "3bj451ia0x5vkeifvd4s",
+                    "c4v2dpfzsreg1u5nleeq",
                 ),
             },
             Thing {
                 tb: "dance",
                 id: String(
-                    "j7xfsdvleidtpihu0a3r",
+                    "gjjhx7vr62vaiqr49ivr",
                 ),
             },
         ],
     },
 ]
-Students = [
+Students: [
     StudentClasses {
         id: Thing {
             tb: "student",
             id: String(
-                "8jorvixkpl90d91ytg8g",
+                "h8c5rpmyhb3p3l0yu7al",
             ),
         },
         name: "Jane Doe",
@@ -59,19 +41,19 @@ Students = [
                 id: Thing {
                     tb: "dance",
                     id: String(
-                        "3bj451ia0x5vkeifvd4s",
+                        "c4v2dpfzsreg1u5nleeq",
                     ),
                 },
-                name: "Introduction to Dancing",
+                name: "Flamenco",
             },
             DanceClass {
                 id: Thing {
                     tb: "dance",
                     id: String(
-                        "j7xfsdvleidtpihu0a3r",
+                        "gjjhx7vr62vaiqr49ivr",
                     ),
                 },
-                name: "Flamenco",
+                name: "Introduction to Dancing",
             },
         ],
     },

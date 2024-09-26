@@ -34,16 +34,20 @@ async fn main() -> surrealdb::Result<()> {
     db.use_ns("namespace").use_db("database").await?;
 
     add_classes(&db).await?;
-    let mut classes = get_classes(&db).await?;
-    classes.push(DanceClass {
-        id: Thing::from((DANCE, Id::rand())),
-        name: String::from("Belly dance"),
-    });
+    let classes = get_classes(&db).await?;
+
+    // the next lines are valid but then will lead to an error when fetching the data
+    // classes.push(DanceClass {
+    //     id: Thing::from((DANCE, Id::rand())),
+    //     name: String::from("Belly dance"),
+    // });
 
 
     add_students(&db, classes).await?;
 
     show_students_in_classes(&db).await?;
+
+    export(&db).await?;
 
     Ok(())
 }
@@ -96,5 +100,10 @@ async fn show_students_in_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let students: Vec<StudentClasses> = results.take(0)?;
     println!("Students: {students:#?}");
 
+    Ok(())
+}
+
+async fn export(db: &Surreal<Db>) -> surrealdb::Result<()> {
+    db.export("out.sql").await?;
     Ok(())
 }
