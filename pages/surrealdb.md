@@ -42,4 +42,7 @@ You might also want to consult the [Awesome SurrealDB](https://github.com/surrea
 
 * [SurrealDB - Rust Embedded Database - Quick Tutorial](https://www.youtube.com/watch?v=iOyvum0D3LM)
 
+## Open Source projects using SurrealDB
+
+* [CreatureBattleSimulator](https://github.com/MDH0/CreatureBattleSimulator/) Rocket + surrealDB
 
