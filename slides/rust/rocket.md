@@ -389,9 +389,23 @@ let client = Client::tracked(app).unwrap();
 
 * TODO: why is the item.id.id shown as [object] in the web page while printing to the log shows the ID only.
 
+
+Setup server:
+
+
+```
+docker volume create my-surreal-db
+docker run --detach --restart always --name surrealdb -p 127.0.0.1:8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:v2.0.1 start --user root --pass root --log trace file://database
+```
+
+Dependencies
+
 ![](examples/rocket/simple-todo-with-surrealdb/Cargo.toml)
+
 ![](examples/rocket/simple-todo-with-surrealdb/Rocket.toml)
-![](examples/rocket/simple-todo-with-surrealdb/src/db.rs)
+
 ![](examples/rocket/simple-todo-with-surrealdb/src/main.rs)
+![](examples/rocket/simple-todo-with-surrealdb/src/db.rs)
+
 ![](examples/rocket/simple-todo-with-surrealdb/templates/index.html.tera)
 
