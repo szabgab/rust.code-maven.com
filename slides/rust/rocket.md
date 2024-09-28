@@ -384,4 +384,14 @@ let client = Client::tracked(app).unwrap();
 
 ![](examples/rocket/catch-division-by-zero/src/main.rs)
 
+## Simple TODO list with Rocket and SurrealDB
+{id: simple-todo-list-with-rocket-and-surrealdb}
+
+* TODO: why is the item.id.id shown as [object] in the web page while printing to the log shows the ID only.
+
+![](examples/rocket/simple-todo-with-surrealdb/Cargo.toml)
+![](examples/rocket/simple-todo-with-surrealdb/Rocket.toml)
+![](examples/rocket/simple-todo-with-surrealdb/src/db.rs)
+![](examples/rocket/simple-todo-with-surrealdb/src/main.rs)
+![](examples/rocket/simple-todo-with-surrealdb/templates/index.html.tera)
 

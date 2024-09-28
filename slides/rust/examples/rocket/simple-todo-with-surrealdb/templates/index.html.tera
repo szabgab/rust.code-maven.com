@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+  </head>
+  <body>
+      <h1><a href="/">{{title}}</a></h1>
+       <form method="POST" action="/">
+           <input name="title"><br>
+           <input type="submit" value="Add"><br>
+       </form>
+       <ul>
+       {% for item in items %}
+       <li><a href="/item/{{item.id.id}}">{{item.title}} {{item.id.id}}</a></li>
+       {% endfor %}
+       </ul>
+  </body>
+</html>
