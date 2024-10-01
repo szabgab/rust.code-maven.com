@@ -304,6 +304,15 @@ Other message
 
 ![](examples/surrealdb/schemafull-ignore-extra-fields/out.out)
 
+## SurrealDB - missing field
+{id: surrealdb-missing-field}
+
+* We have a SCHEMAFULL table but not all the fields are supplied.
+
+![](examples/surrealdb/missing-field/src/main.rs)
+![](examples/surrealdb/missing-field/out.out)
+
+
 
 
 ## SurrealDB in Docker using the CLI

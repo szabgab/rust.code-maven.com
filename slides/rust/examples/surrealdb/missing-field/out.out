@@ -1,0 +1,8 @@
+Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 6, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(1.370849ms) }, Ok(Array(Array([Object(Object({"email": Strand(Strand("foo@bar.com")), "id": Thing(Thing { tb: "entry", id: String("l2y3ynljpdka6x6xxjpv") }), "name": Strand(Strand("Answer")), "number": Number(Int(42))}))]))))}, live_queries: {} }
+---------
+Error: Found 'not_an_email' for field `email`, with record `entry:bqtpzweyb8g8k0xjf4s0`, but field must conform to: string::is::email($value)
+---------
+Error: Found NONE for field `name`, with record `entry:ae621vvz8gc1r5clcpw5`, but expected a string
+---------
+entry:l2y3ynljpdka6x6xxjpv 42 Answer foo@bar.com
+---------
