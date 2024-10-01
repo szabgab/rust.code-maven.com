@@ -1,0 +1,6 @@
+Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 4, features: {Backup, LiveQueries} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(639.419µs) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("y93feg7h3xxu6ww51spz") }), "number": Number(Int(42))}))]))))}, live_queries: {} }
+---------
+Error: Found 'fortytwo' for field `number`, with record `entry:o31e2ou83s5buvxc55yq`, but expected a int
+---------
+entry:y93feg7h3xxu6ww51spz 42
+---------

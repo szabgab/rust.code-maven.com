@@ -275,6 +275,25 @@ Other message
 
 ![](examples/surrealdb/add-columns-without-schema/out.out)
 
+
+## SurrealDB - Schema
+{id: surrealdb-schema}
+
+## SurrealDB - define field type - try to create entry with incorrect type (int, string)
+{id: surrealdb-define-field0type-int}
+{i: SCHEMAFULL}
+{i: TABLE}
+{i: FIELD}
+{i: DEFINE}
+
+* Using the `DEFINE` keyword we can define a table to have schema, then we can define the column and their type.
+* Then if we try to insert (CREATE) an entry that does not match the type the query will fail. We need to use `check` to verify success.
+
+![](examples/surrealdb/define-field-type/src/main.rs)
+
+![](examples/surrealdb/define-field-type/out.out)
+
+
 ## SurrealDB in Docker using the CLI
 {id: surrealdb-in-docker-using-cli}
 
