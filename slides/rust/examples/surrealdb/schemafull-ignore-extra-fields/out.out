@@ -1,0 +1,10 @@
+Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 4, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(1.279388ms) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("5rw5ezjzvm6rf5nrc9xw") }), "number": Number(Int(42))}))]))))}, live_queries: {} }
+---------
+Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 5, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(1.046842ms) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("wz9sxmpax344kr8u3c8s") }), "number": Number(Int(19))}))]))))}, live_queries: {} }
+---------
+entry:5rw5ezjzvm6rf5nrc9xw 42
+entry:wz9sxmpax344kr8u3c8s 19
+---------
+entry:5rw5ezjzvm6rf5nrc9xw 42  NO NAME
+entry:wz9sxmpax344kr8u3c8s 19  NO NAME
+---------
