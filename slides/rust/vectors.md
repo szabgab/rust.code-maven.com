@@ -363,6 +363,17 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ![](examples/vectors/filter-vector-of-structs/src/main.rs)
 ![](examples/vectors/filter-vector-of-structs/out.out)
 
+
+## Combine filter and map into filter_map
+{id: combine-filter-and-map}
+{i: filter}
+{i: map}
+{i: filter_map}
+
+![](examples/vectors/filter-map/src/main.rs)
+![](examples/vectors/filter-map/out.out)
+
+
 ## Accessing the last element of a vector
 {id: accessing-the-last-element-of-a-vector}
 {i: len}
