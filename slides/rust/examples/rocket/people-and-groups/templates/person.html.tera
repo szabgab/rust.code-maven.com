@@ -1,0 +1,6 @@
+{% include "incl/header" %}
+
+      <h2>Name: {{person.name}}</h2>
+
+{% include "incl/footer" %}
+

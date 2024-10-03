@@ -106,21 +106,21 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
     list_people(dbh).await
 }
 
-// #[get("/item/<id>")]
-// async fn get_item(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
-//     if let Some(item) = db::get_item(dbh, &id).await.unwrap() {
-//         return Some(Template::render(
-//             "item",
-//             context! {
-//                 title: item.title.clone(),
-//                 id: item.id.clone().id.to_string(),
-//                 item: item,
-//             },
-//         ));
-//     }
+#[get("/person/<id>")]
+async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
+    if let Some(person) = db::get_person(dbh, &id).await.unwrap() {
+        return Some(Template::render(
+            "person",
+            context! {
+                title: person.name.clone(),
+                id: person.id.clone().id.to_string(),
+                person: person,
+            },
+        ));
+    }
 
-//     None
-// }
+    None
+}
 
 // #[post("/update", data = "<input>")]
 // async fn update_item(dbh: &State<Surreal<Client>>, input: Form<UpdateForm<'_>>) -> Template {
@@ -138,7 +138,7 @@ fn rocket() -> _ {
     rocket::build()
         .mount(
             "/",
-            routes![clear_db, get_index, get_people, post_add_person],
+            routes![clear_db, get_index, get_people, get_person, post_add_person],
         )
         .attach(Template::fairing())
         .attach(db::fairing())
