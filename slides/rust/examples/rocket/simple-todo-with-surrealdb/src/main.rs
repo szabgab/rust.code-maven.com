@@ -21,11 +21,20 @@ async fn form_and_list(dbh: &State<Surreal<Client>>) -> Template {
     for item in &items {
         rocket::info!("{} {}", item.id.id, item.title);
     }
+
+    let pairs = items
+        .iter()
+        .map(|item| {
+            let id = item.id.id.to_string();
+            (id, item)
+        })
+        .collect::<Vec<_>>();
+
     Template::render(
         "index",
         context! {
             title: "TODO",
-            items,
+            items: pairs,
         },
     )
 }
@@ -43,11 +52,27 @@ async fn post_index(dbh: &State<Surreal<Client>>, input: Form<AddForm<'_>>) -> T
     form_and_list(dbh).await
 }
 
+#[get("/item/<id>")]
+async fn get_item(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
+    rocket::info!("Get item '{}'", id);
+
+    if let Some(item) = db::get_item(dbh, &id).await.unwrap() {
+        return Some(Template::render(
+            "item",
+            context! {
+                title: item.title.clone(),
+                item: item,
+            },
+        ));
+    }
+
+    None
+}
+
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![get_index, post_index,])
+        .mount("/", routes![get_index, post_index, get_item])
         .attach(Template::fairing())
         .attach(db::fairing())
 }
-

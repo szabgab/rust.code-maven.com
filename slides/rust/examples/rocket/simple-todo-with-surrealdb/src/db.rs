@@ -58,3 +58,20 @@ pub async fn get_items(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Item>> {
     let entries: Vec<Item> = response.take(0)?;
     Ok(entries)
 }
+
+pub async fn get_item(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Option<Item>> {
+    rocket::info!("get_item({})", id);
+
+    dbh.select(("items", id)).await
+        //.query("SELECT * FROM items WHERE id=items:01J8WDNEVWEPTPJFXQJ25M7J81;")
+        //.bind(("id", id.to_owned()))
+        //.await?;
+//    let entries: Vec<Item> = response.take(0)?;
+    // if let Some(entry) = entries.get(0) {
+    //     rocket::info!("matched");
+    //     Ok(Some(entry.clone()))
+    // } else {
+    //     Ok(None)
+    // }
+    //response
+}

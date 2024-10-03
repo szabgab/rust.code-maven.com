@@ -13,7 +13,7 @@
        </form>
        <ul>
        {% for item in items %}
-       <li><a href="/item/{{item.id.id}}">{{item.title}} {{item.id.id}}</a></li>
+          <li><a href="/item/{{item.0}}">{{item.1.title}}</a></li>
        {% endfor %}
        </ul>
   </body>
