@@ -1,0 +1,4 @@
+<hr>
+      {% include "incl/menu" %}
+</body>
+</html>

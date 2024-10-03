@@ -1,0 +1,17 @@
+{% include "incl/header" %}
+
+
+      <form method="POST" action="/add-person">
+           <input name="name"><br>
+           <input type="submit" value="Add"><br>
+       </form>
+       <ul>
+       {% for person in people %}
+          <li><a href="/person/{{person.0}}">{{person.1.name}}</a></li>
+       {% endfor %}
+       </ul>
+
+
+
+{% include "incl/footer" %}
+       

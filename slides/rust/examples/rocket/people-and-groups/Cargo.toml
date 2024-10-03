@@ -1,0 +1,13 @@
+[package]
+name = "people-and-groups"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = { version = "0.5", features = ["secrets", "uuid"] }
+rocket_dyn_templates = { version = "0.1", features = ["tera"] }
+surrealdb = "2.0"
+tokio = { version = "1.35", features = ["macros", "rt-multi-thread"] }
+chrono = "0.4.38"
+serde = { version = "1.0", features = ["derive"] }
+
