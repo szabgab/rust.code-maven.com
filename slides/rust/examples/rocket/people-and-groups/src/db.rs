@@ -53,14 +53,12 @@ pub async fn clear(dbh: &Surreal<Client>) -> surrealdb::Result<()> {
 }
 
 pub async fn add_person(dbh: &Surreal<Client>, name: &str) -> surrealdb::Result<()> {
-    let id = Id::ulid();
-
     let entry = Person {
-        id: Thing::from(("items", id)),
+        id: Thing::from((PERSON, Id::ulid())),
         name: name.to_owned(),
     };
 
-    dbh.create(Resource::from("items")).content(entry).await?;
+    dbh.create(Resource::from(PERSON)).content(entry).await?;
 
     Ok(())
 }

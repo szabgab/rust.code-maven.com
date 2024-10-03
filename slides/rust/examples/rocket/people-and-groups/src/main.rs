@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate rocket;
 
-//use rocket::form::Form;
+use rocket::form::Form;
 use rocket::State;
 use rocket_dyn_templates::{context, Template};
 
@@ -11,10 +11,10 @@ use surrealdb::Surreal;
 pub mod db;
 //use crate::db::{Person, Group};
 
-// #[derive(FromForm)]
-// struct AddPerson<'r> {
-//     title: &'r str,
-// }
+#[derive(FromForm)]
+struct AddPerson<'r> {
+    name: &'r str,
+}
 
 // #[derive(FromForm)]
 // struct UpdateForm<'r> {
@@ -56,19 +56,7 @@ async fn index_page() -> Template {
     )
 }
 
-#[get("/")]
-async fn get_index(_dbh: &State<Surreal<Client>>) -> Template {
-    index_page().await
-}
-
-#[get("/clear")]
-async fn clear_db(dbh: &State<Surreal<Client>>) -> Template {
-    db::clear(&dbh).await.unwrap();
-    index_page().await
-}
-
-#[get("/people")]
-async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
+async fn list_people(dbh: &State<Surreal<Client>>) -> Template {
     let people = db::get_people(dbh).await.unwrap();
     rocket::info!("People: {:?}", people);
 
@@ -89,14 +77,34 @@ async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
     )
 }
 
+// ----------------------------------
 
-// #[post("/", data = "<input>")]
-// async fn post_index(dbh: &State<Surreal<Client>>, input: Form<AddForm<'_>>) -> Template {
-//     rocket::info!("Add '{}'", input.title);
-//     let title = input.title.trim();
-//     db::add_item(dbh, title).await.unwrap();
-//     form_and_list(dbh).await
-// }
+
+#[get("/")]
+async fn get_index(_dbh: &State<Surreal<Client>>) -> Template {
+    index_page().await
+}
+
+#[get("/clear")]
+async fn clear_db(dbh: &State<Surreal<Client>>) -> Template {
+    db::clear(&dbh).await.unwrap();
+    index_page().await
+}
+
+#[get("/people")]
+async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
+    list_people(dbh).await
+}
+
+
+#[post("/add-person", data = "<input>")]
+async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>>) -> Template {
+    let name = input.name.trim();
+    rocket::info!("Add  person called '{name}'");
+    db::add_person(dbh, name).await.unwrap();
+
+    list_people(dbh).await
+}
 
 // #[get("/item/<id>")]
 // async fn get_item(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
@@ -130,7 +138,7 @@ fn rocket() -> _ {
     rocket::build()
         .mount(
             "/",
-            routes![clear_db, get_index, get_people],
+            routes![clear_db, get_index, get_people, post_add_person],
         )
         .attach(Template::fairing())
         .attach(db::fairing())
