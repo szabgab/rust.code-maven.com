@@ -16,5 +16,8 @@
           <li><a href="/item/{{item.0}}">{{item.1.title}}</a></li>
        {% endfor %}
        </ul>
+
+      <hr>
+      <a href="/clear">remove all the items</a>
   </body>
 </html>

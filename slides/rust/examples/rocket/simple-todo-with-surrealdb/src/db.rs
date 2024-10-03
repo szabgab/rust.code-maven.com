@@ -12,6 +12,7 @@ use surrealdb::Surreal;
 pub struct Item {
     pub id: Thing,
     pub title: String,
+    pub text: Option<String>,
     pub date: DateTime<Utc>,
 }
 
@@ -37,6 +38,11 @@ pub fn fairing() -> AdHoc {
     })
 }
 
+pub async fn clear(dbh: &Surreal<Client>) -> surrealdb::Result<()> {
+    dbh.query("DELETE FROM items;").await?;
+    Ok(())
+}
+
 pub async fn add_item(dbh: &Surreal<Client>, title: &str) -> surrealdb::Result<()> {
     let utc: DateTime<Utc> = Utc::now();
 
@@ -45,10 +51,36 @@ pub async fn add_item(dbh: &Surreal<Client>, title: &str) -> surrealdb::Result<(
     let entry = Item {
         id: Thing::from(("items", id)),
         title: title.to_owned(),
+        text: None,
         date: utc,
     };
 
     dbh.create(Resource::from("items")).content(entry).await?;
+
+    Ok(())
+}
+
+pub async fn update_item(
+    dbh: &Surreal<Client>,
+    id: &str,
+    title: &str,
+    text: &str,
+) -> surrealdb::Result<()> {
+    rocket::info!("Update '{}' '{}'", id, title);
+
+    #[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
+    struct UpdateItem {
+        title: String,
+        text: String,
+    }
+
+    let _item: Option<Item> = dbh
+        .update(("items", id))
+        .merge(UpdateItem {
+            title: title.to_owned(),
+            text: text.to_owned(),
+        })
+        .await?;
 
     Ok(())
 }
@@ -60,18 +92,5 @@ pub async fn get_items(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Item>> {
 }
 
 pub async fn get_item(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Option<Item>> {
-    rocket::info!("get_item({})", id);
-
     dbh.select(("items", id)).await
-        //.query("SELECT * FROM items WHERE id=items:01J8WDNEVWEPTPJFXQJ25M7J81;")
-        //.bind(("id", id.to_owned()))
-        //.await?;
-//    let entries: Vec<Item> = response.take(0)?;
-    // if let Some(entry) = entries.get(0) {
-    //     rocket::info!("matched");
-    //     Ok(Some(entry.clone()))
-    // } else {
-    //     Ok(None)
-    // }
-    //response
 }

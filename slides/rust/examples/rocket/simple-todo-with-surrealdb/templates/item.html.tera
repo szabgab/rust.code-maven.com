@@ -8,5 +8,14 @@
   <body>
       <h1><a href="/">home</a></h1>
       <h2>Title: {{item.title}}</h2>
+      <div>Date: {{item.date}}</div>
+
+      <form method="POST" action="/update">
+        <input type="hidden" name="id" value="{{id}}">
+        <input name="title" value="{{item.title}}"><br>
+        <textarea name="text">{{item.text}}</textarea><br>
+        <input type="submit" value="Update"><br>
+      </form>
+
   </body>
 </html>
