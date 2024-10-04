@@ -17,15 +17,17 @@ async fn main() -> surrealdb::Result<()> {
 
     entries("Before", &dbh).await;
 
-    let _response = dbh
+    let response = dbh
         .query("INSERT INTO people (name) VALUES ($name);")
         .bind(("name", "Foo"))
         .await?;
+    response.check()?;
 
-    let _response = dbh
+    let response = dbh
         .query("INSERT INTO people (name) VALUES ($name);")
         .bind(("name", "Bar"))
         .await?;
+    response.check()?;
 
     entries("Data added", &dbh).await;
 
