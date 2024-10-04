@@ -1,6 +1,5 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::engine::remote::ws::Client;
-use surrealdb::engine::remote::ws::Ws;
+use surrealdb::engine::local::{Db, Mem};
 use surrealdb::sql::Thing;
 use surrealdb::Surreal;
 
@@ -18,7 +17,7 @@ struct Record {
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    let dbh = Surreal::new::<Ws>("127.0.0.1:8000").await?;
+    let dbh = Surreal::new::<Mem>(()).await?;
 
     dbh.use_ns("demo").use_db("demo").await?;
     let _response = dbh
@@ -43,10 +42,10 @@ async fn main() -> surrealdb::Result<()> {
     Ok(())
 }
 
-async fn set(dbh: &Surreal<Client>, uid: u32, status: bool) -> surrealdb::Result<()> {
+async fn set(dbh: &Surreal<Db>, uid: u32, status: bool) -> surrealdb::Result<()> {
     //println!("set {uid} to status: {status}");
 
-    let _created: Vec<Record> = dbh
+    let _created: Option<Record> = dbh
         .create("toggle")
         .content(Toggle {
             uid: uid,
@@ -57,7 +56,7 @@ async fn set(dbh: &Surreal<Client>, uid: u32, status: bool) -> surrealdb::Result
     Ok(())
 }
 
-async fn toggle_status(dbh: &Surreal<Client>, uid: u32) -> surrealdb::Result<()> {
+async fn toggle_status(dbh: &Surreal<Db>, uid: u32) -> surrealdb::Result<()> {
     let mut response = dbh
         .query("SELECT * FROM toggle where uid=$uid")
         .bind(("uid", uid))
@@ -75,7 +74,7 @@ async fn toggle_status(dbh: &Surreal<Client>, uid: u32) -> surrealdb::Result<()>
     Ok(())
 }
 
-async fn list(db: &Surreal<Client>) -> surrealdb::Result<()> {
+async fn list(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let statuses: Vec<Toggle> = db.select("toggle").await?;
     println!("List:");
     for status in statuses {
