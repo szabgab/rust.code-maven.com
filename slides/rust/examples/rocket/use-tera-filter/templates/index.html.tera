@@ -1,0 +1,1 @@
+Hello <b>{{ text }}!</b> length: <b>{{ text | length }}</b>

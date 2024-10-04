@@ -91,6 +91,7 @@ curl -i http://localhost:8000
 
 ## Rocket - Hello World with Tera template
 {id: rocket-hello-world-with-tera-template}
+{i: Tera}
 
 ![](examples/rocket/hello-world-tera-template/Cargo.toml)
 ![](examples/rocket/hello-world-tera-template/src/main.rs)
@@ -101,6 +102,7 @@ curl -i http://localhost:8000
 ## Rocket - Echo using GET
 {id: rocket-echo-using-get}
 {i: GET}
+{i: Tera}
 
 ![](examples/rocket/echo-using-get/Cargo.toml)
 ![](examples/rocket/echo-using-get/src/main.rs)
@@ -115,6 +117,7 @@ curl -i http://localhost:8000
 {i: context}
 {i: Template}
 {i: FromForm}
+{i: Tera}
 
 ![](examples/rocket/echo-using-post/Cargo.toml)
 ![](examples/rocket/echo-using-post/src/main.rs)
@@ -408,4 +411,19 @@ Dependencies
 ![](examples/rocket/simple-todo-with-surrealdb/src/db.rs)
 
 ![](examples/rocket/simple-todo-with-surrealdb/templates/index.html.tera)
+
+## Use Tera filters (length)
+{id: use-tera-filters}
+{i: Tera}
+{i: length}
+
+* The Tera template system comes with a number of [filters](https://keats.github.io/tera/docs/#filters)
+* List of [built-in filters](https://keats.github.io/tera/docs/#built-in-filters)
+
+this is a simple example using the `length` filter:
+
+![](use-tera-filter/templates/index.html.tera)
+
+![](use-tera-filter/src/main.rs)
+![](use-tera-filter/src/tests.rs)
 
