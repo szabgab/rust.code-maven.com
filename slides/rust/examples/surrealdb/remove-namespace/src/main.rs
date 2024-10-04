@@ -29,10 +29,10 @@ async fn main() -> surrealdb::Result<()> {
 
     entries("Data added", &dbh).await;
 
-    let _result = dbh
-        .query("REMOVE NAMESPACE `$namespace`;")
-        .bind(("namespace", namespace))
+    let result = dbh
+        .query(format!("REMOVE NAMESPACE `{namespace}`;"))
         .await?;
+    result.check()?;
     //println!("{:?}", result);
 
     entries("After remove", &dbh).await;
