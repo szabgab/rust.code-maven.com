@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use surrealdb::engine::remote::ws::Ws;
 use surrealdb::sql::Thing;
 use surrealdb::Surreal;
+use surrealdb::opt::auth::Root;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Message {
@@ -21,12 +22,17 @@ async fn main() -> surrealdb::Result<()> {
     let dsn = format!("{host}:{port}");
     let db = Surreal::new::<Ws>(dsn).await?;
 
+    db.signin(Root {
+        username: "root",
+        password: "root",
+    }).await?;
+
     db.use_ns("demo").use_db("demo-1").await?;
 
     let args = std::env::args().collect::<Vec<String>>();
     if args.len() == 2 {
         // Create a new message with a random id
-        let created: Vec<Record> = db
+        let created: Option<Record> = db
             .create("messages")
             .content(Message {
                 text: args[1].to_owned(),
