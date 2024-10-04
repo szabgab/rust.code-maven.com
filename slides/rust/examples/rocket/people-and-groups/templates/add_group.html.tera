@@ -1,0 +1,10 @@
+{% include "incl/header" %}
+
+    <form method="POST" action="/add-group">
+        <input type="hidden" value="{{uid}}" name="uid">
+        <input name="name"><br>
+        <input type="submit" value="Add group"><br>
+    </form>
+       
+{% include "incl/footer" %}
+       

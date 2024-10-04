@@ -1,6 +1,11 @@
 {% include "incl/header" %}
 
       <h2>Name: {{person.name}}</h2>
+      <div><a  href="/add-group?uid={{id}}">add group</a></div>
+      <h2>Groups owned</h2>
+
+
+      <h2>Group membership</h2>
 
 {% include "incl/footer" %}
 

@@ -1,0 +1,7 @@
+{% include "incl/header" %}
+
+      <h2>Name: {{group.name}}</h2>
+      <h2>Owner name: {{ group.owner }}</h2>
+
+{% include "incl/footer" %}
+

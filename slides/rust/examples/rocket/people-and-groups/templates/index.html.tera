@@ -1,5 +1,7 @@
 {% include "incl/header" %}
 
+<div>Number of people: {{people | length}}</div>
+<div>Number of groups: {{groups | length}}</div>
 
 {% include "incl/footer" %}
 
