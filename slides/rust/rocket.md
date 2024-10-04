@@ -422,8 +422,8 @@ Dependencies
 
 this is a simple example using the `length` filter:
 
-![](use-tera-filter/templates/index.html.tera)
+![](examples/rocket/use-tera-filter/templates/index.html.tera)
 
-![](use-tera-filter/src/main.rs)
-![](use-tera-filter/src/tests.rs)
+![](examples/rocket/use-tera-filter/src/main.rs)
+![](examples/rocket/use-tera-filter/src/tests.rs)
 
