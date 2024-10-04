@@ -1,0 +1,5 @@
+text:               'Hello, World!'
+fixed_filter:       'some fixed value'
+same_value_filter:  'Hello, World!'
+my_len:             '13'
+filter_with_params: 'param=hello attr=1'

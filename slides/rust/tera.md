@@ -9,6 +9,8 @@
 
 ## Tera Hello World
 {id: tera-hello-world}
+{i: Context}
+{i: render}
 
 ![](examples/tera/hello-world/Cargo.toml)
 ![](examples/tera/hello-world/src/main.rs)
@@ -53,5 +55,27 @@ $ tree
 ![](examples/tera/list-templates/Cargo.toml)
 ![](examples/tera/list-templates/templates/hello.html)
 ![](examples/tera/list-templates/templates/incl/header.html)
+
+
+## Tera - use built-in filters on strings
+{id: tera-use-built-in-filters-on-strings}
+
+![](examples/tera/string-filters/src/main.rs)
+![](examples/tera/string-filters/templates/hello.html)
+
+![](examples/tera/string-filters/out.out)
+
+## Tera - create your own filter
+{id: tera-create-your-own-filter}
+{i: register_filter}
+{i: Result}
+{i: Tera}
+{i: Value}
+{i: to_value}
+
+![](examples/tera/create-filter/src/main.rs)
+![](examples/tera/create-filter/templates/hello.html)
+
+![](examples/tera/create-filter/out.out)
 
 
