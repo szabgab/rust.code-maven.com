@@ -427,3 +427,15 @@ this is a simple example using the `length` filter:
 ![](examples/rocket/use-tera-filter/src/main.rs)
 ![](examples/rocket/use-tera-filter/src/tests.rs)
 
+## Create Tera filters
+{id: create-tera-filters}
+
+![](examples/rocket/create-tera-filter/Cargo.toml)
+![](examples/rocket/create-tera-filter/Rocket.toml)
+
+![](examples/rocket/create-tera-filter/src/main.rs)
+![](examples/rocket/create-tera-filter/src/mytera.rs)
+![](examples/rocket/create-tera-filter/src/tests.rs)
+
+![](examples/rocket/create-tera-filter/templates/index.html.tera)
+

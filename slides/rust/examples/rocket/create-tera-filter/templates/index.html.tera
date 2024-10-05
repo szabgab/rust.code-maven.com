@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tera Demo - {{ title }}</title>
+  </head>
+  <body>
+
+<a href="/">Home</a> | <a href="/hello/Unknown">Hello</a>
+    <h1>Hi {{ name }}!</h1>
+    <div>The name is {{ name | length }} characters long.</div>
+    <div>My number is {{ name | my_len }}.</div>
+    <p>Try going to <a href="/hello/Your%20Name">/hello/Your Name</a></p>
+  </body>
+</html>
