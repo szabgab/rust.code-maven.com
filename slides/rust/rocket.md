@@ -439,3 +439,12 @@ this is a simple example using the `length` filter:
 
 ![](examples/rocket/create-tera-filter/templates/index.html.tera)
 
+## Skip route by returning None
+{id: skip-route-by-returning-none}
+{i: Option}
+{i: None}
+
+* Unfortunately this does not work as I expected. see [my question](https://github.com/rwf2/Rocket/discussions/2876)
+
+![](examples/rocket/skip-route/src/main.rs)
+
