@@ -448,3 +448,13 @@ this is a simple example using the `length` filter:
 
 ![](examples/rocket/skip-route/src/main.rs)
 
+## Skip route using a guard
+{id: skip-route-by-using-a-guard}
+{i: FromRequest}
+{i: Outcome::Success}
+{i: Outcome::Forward}
+{i: Outcome::Error}
+
+
+![](examples/rocket/skip-route-using-guard/src/main.rs)
+
