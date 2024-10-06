@@ -149,6 +149,7 @@ async fn post_add_group(dbh: &State<Surreal<Client>>, input: Form<AddGroup<'_>>)
 #[get("/group/<id>")]
 async fn get_group(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
     if let Some(group) = db::get_group_with_owner(dbh, &id).await.unwrap() {
+        rocket::info!("Group: {}", group.owner.id);
         return Some(Template::render(
             "group",
             context! {
@@ -164,6 +165,10 @@ async fn get_group(dbh: &State<Surreal<Client>>, id: String) -> Option<Template>
 
 #[launch]
 fn rocket() -> _ {
+    start(String::from("people-and-groups"))
+}
+
+fn start(database: String) -> rocket::Rocket<rocket::Build> {
     rocket::build()
         .mount(
             "/",
@@ -180,5 +185,37 @@ fn rocket() -> _ {
             ],
         )
         .attach(Template::fairing())
-        .attach(db::fairing())
+        .attach(db::fairing(database))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::start;
+
+    use rocket::http::{ContentType, Status};
+    use rocket::local::blocking::Client;
+
+    #[test]
+    fn test_main() {
+        let client = Client::tracked(start(String::from("test-people-and-groups"))).unwrap();
+
+        let response = client.get("/clear").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+
+        let response = client.get("/").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"<title>People and Groups</title>"#));
+        assert!(html.contains(r#"<div>Number of people: 0</div>"#));
+        assert!(html.contains(r#"<div>Number of groups: 0</div>"#));
+
+        let response = client
+            .post("/add-person")
+            .header(ContentType::Form)
+            .body("name=John")
+            .dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#">John</a></li>"#));
+    }
 }

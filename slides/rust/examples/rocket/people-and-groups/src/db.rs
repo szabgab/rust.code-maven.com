@@ -35,19 +35,17 @@ pub struct GroupWithOwner {
 ///
 /// Panics when it fails to connect to the database
 #[must_use]
-pub fn fairing() -> AdHoc {
+pub fn fairing(database: String) -> AdHoc {
     AdHoc::on_ignite("Managed Database Connection", |rocket| async {
         let address = "127.0.0.1:8000";
         let username = "root";
         let password = "root";
 
-        let db_database = "people-and-groups";
-
         let dbh = Surreal::new::<Ws>(address).await.unwrap();
 
         dbh.signin(Root { username, password }).await.unwrap();
 
-        dbh.use_ns(NAMESPACE).use_db(db_database).await.unwrap();
+        dbh.use_ns(NAMESPACE).use_db(database).await.unwrap();
 
         rocket.manage(dbh)
     })
@@ -112,13 +110,15 @@ pub async fn get_group(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Opt
 pub async fn get_group_with_owner(
     dbh: &Surreal<Client>,
     id: &str,
-) -> surrealdb::Result<Option<Group>> {
+) -> surrealdb::Result<Option<GroupWithOwner>> {
     let mut response = dbh
-        .query(format!("SELECT * FROM {GROUP} WHERE id=type::thing($id)"))
+        .query(format!(
+            "SELECT * FROM {GROUP} WHERE id=type::thing($id) FETCH owner"
+        ))
         .bind(("id", format!("{GROUP}:{id}")))
         .await?;
 
-    let entries: Vec<Group> = response.take(0)?;
+    let entries: Vec<GroupWithOwner> = response.take(0)?;
     rocket::info!("Response: {:?}", entries);
     Ok(entries.get(0).cloned())
 }
