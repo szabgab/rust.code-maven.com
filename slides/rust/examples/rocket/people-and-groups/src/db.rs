@@ -51,11 +51,9 @@ pub fn fairing(database: String) -> AdHoc {
     })
 }
 
-pub async fn clear(dbh: &Surreal<Client>) -> surrealdb::Result<()> {
+pub async fn clear(dbh: &Surreal<Client>, database: String) -> surrealdb::Result<()> {
     rocket::info!("Clearing database");
-    let result = dbh
-        .query(format!("REMOVE NAMESPACE `{NAMESPACE}`;"))
-        .await?;
+    let result = dbh.query(format!("REMOVE DATABASE `{database}`;")).await?;
     result.check()?;
 
     // dbh.query(format!("DELETE FROM {PERSON};")).await?;

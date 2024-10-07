@@ -8,6 +8,9 @@ use rocket_dyn_templates::{context, Template};
 use surrealdb::engine::remote::ws::Client;
 use surrealdb::Surreal;
 
+struct Config {
+    database: String,
+}
 pub mod db;
 //use crate::db::{Person, Group};
 
@@ -85,8 +88,9 @@ async fn get_index(dbh: &State<Surreal<Client>>) -> Template {
 }
 
 #[get("/clear")]
-async fn clear_db(dbh: &State<Surreal<Client>>) -> Template {
-    db::clear(&dbh).await.unwrap();
+async fn clear_db(dbh: &State<Surreal<Client>>, config: &State<Config>) -> Template {
+    rocket::info!("Clearing database {}", config.database);
+    db::clear(&dbh, config.database.clone()).await.unwrap();
     index_page(&dbh).await
 }
 
@@ -184,6 +188,9 @@ fn start(database: String) -> rocket::Rocket<rocket::Build> {
                 post_add_group,
             ],
         )
+        .manage(Config {
+            database: database.clone(),
+        })
         .attach(Template::fairing())
         .attach(db::fairing(database))
 }
@@ -215,7 +222,23 @@ mod tests {
             .body("name=John")
             .dispatch();
         assert_eq!(response.status(), Status::Ok);
+
+        let response = client
+            .post("/add-person")
+            .header(ContentType::Form)
+            .body("name=Mary Ann")
+            .dispatch();
+        assert_eq!(response.status(), Status::Ok);
+
         let html = response.into_string().unwrap();
         assert!(html.contains(r#">John</a></li>"#));
+        assert!(html.contains(r#">Mary Ann</a></li>"#));
+
+        let response = client.get("/").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"<title>People and Groups</title>"#));
+        assert!(html.contains(r#"<div>Number of people: 2</div>"#));
+        assert!(html.contains(r#"<div>Number of groups: 0</div>"#));
     }
 }
