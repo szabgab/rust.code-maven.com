@@ -2,7 +2,7 @@
 
 <ul>
    {% for group in groups %}
-      <li><a href="/group/{{group.0}}">{{group.1.name}}</a></li>
+      <li><a href="/group/{{group.id | object2id}}">{{group.name}}</a></li>
    {% endfor %}
    </ul>
 </ul>

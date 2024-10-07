@@ -1,9 +1,13 @@
 {% include "incl/header" %}
 
       <h2>Name: {{person.name}}</h2>
-      <div><a  href="/add-group?uid={{id}}">add group</a></div>
+      <div><a  href="/add-group?uid={{person.id | object2id}}">add group</a></div>
       <h2>Groups owned</h2>
-
+      <ul>
+            {% for group in owned_groups %}
+                  <li><a href="/group/{{group.id | object2id}}">{{group.name}}</a></li>
+            {% endfor %}
+      </ul>
 
       <h2>Group membership</h2>
 

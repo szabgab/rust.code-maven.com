@@ -94,6 +94,26 @@ pub async fn get_person(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Op
     dbh.select((PERSON, id)).await
 }
 
+pub async fn get_person_with_groups(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Option<(Person, Vec<Group>)>> {
+    let person = get_person(dbh, id).await?;
+    match person {
+        None => return Ok(None),
+        Some(person) => {
+            let groups = get_groups_by_owner(dbh, id).await?;
+            Ok(Some((person, groups)))        
+        },
+    }
+}
+
+pub async fn get_groups_by_owner(dbh: &Surreal<Client>, uid: &str) -> surrealdb::Result<Vec<Group>> {
+    rocket::info!("Getting groups for {}", uid);
+    let mut response = dbh.query(format!("SELECT * FROM {GROUP} WHERE owner=type::thing($user_table, $uid);"))
+    .bind(("uid", uid.to_owned()))
+    .bind(("user_table", PERSON)).await?;
+    let entries: Vec<Group> = response.take(0)?;
+    Ok(entries)
+}
+
 pub async fn get_groups(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Group>> {
     let mut response = dbh.query(format!("SELECT * FROM {GROUP};")).await?;
     let entries: Vec<Group> = response.take(0)?;

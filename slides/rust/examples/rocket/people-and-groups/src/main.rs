@@ -53,27 +53,6 @@ async fn list_people(dbh: &State<Surreal<Client>>) -> Template {
     )
 }
 
-async fn list_groups(dbh: &State<Surreal<Client>>) -> Template {
-    let groups = db::get_groups(dbh).await.unwrap();
-    rocket::info!("Groups: {:?}", groups);
-
-    let pairs = groups
-        .iter()
-        .map(|item| {
-            let id = item.id.id.to_string();
-            (id, item)
-        })
-        .collect::<Vec<_>>();
-
-    Template::render(
-        "groups",
-        context! {
-            title: "Groups",
-            groups: pairs,
-        },
-    )
-}
-
 // ----------------------------------
 
 #[get("/")]
@@ -110,13 +89,13 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
 
 #[get("/person/<id>")]
 async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
-    if let Some(person) = db::get_person(dbh, &id).await.unwrap() {
+    if let Some((person, owned_groups)) = db::get_person_with_groups(dbh, &id).await.unwrap() {
         return Some(Template::render(
             "person",
             context! {
                 title: person.name.clone(),
-                id: person.id.clone().id.to_string(),
-                person: person,
+                person,
+                owned_groups,
             },
         ));
     }
@@ -126,7 +105,17 @@ async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template
 
 #[get("/groups")]
 async fn get_groups(dbh: &State<Surreal<Client>>) -> Template {
-    list_groups(dbh).await
+    let groups = db::get_groups(dbh).await.unwrap();
+    rocket::info!("Groups: {:?}", groups);
+
+    Template::render(
+        "groups",
+        context! {
+            title: "Groups",
+            groups,
+        },
+    )
+
 }
 
 #[get("/add-group?<uid>")]
