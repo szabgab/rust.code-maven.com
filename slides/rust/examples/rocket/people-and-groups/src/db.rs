@@ -58,8 +58,6 @@ pub async fn clear(dbh: &Surreal<Client>, database: String) -> surrealdb::Result
         .await?;
     result.check()?;
 
-    // dbh.query(format!("DELETE FROM {PERSON};")).await?;
-    // dbh.query(format!("DELETE FROM {GROUP};")).await?;
     Ok(())
 }
 
@@ -91,7 +89,10 @@ pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surreald
 }
 
 pub async fn get_people(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Person>> {
-    let mut response = dbh.query(format!("SELECT * FROM {PERSON};")).await?;
+    let mut response = dbh
+        .query(format!("SELECT * FROM type::table($table);"))
+        .bind(("table", PERSON))
+        .await?;
     let entries: Vec<Person> = response.take(0)?;
     Ok(entries)
 }
@@ -120,9 +121,10 @@ pub async fn get_groups_by_owner(
 ) -> surrealdb::Result<Vec<Group>> {
     rocket::info!("Getting groups for {}", uid);
     let mut response = dbh
-        .query(format!(
-            "SELECT * FROM {GROUP} WHERE owner=type::thing($user_table, $uid);"
-        ))
+        .query(
+            "SELECT * FROM type::table($group_table) WHERE owner=type::thing($user_table, $uid);",
+        )
+        .bind(("group_table", GROUP))
         .bind(("uid", uid.to_owned()))
         .bind(("user_table", PERSON))
         .await?;
@@ -140,15 +142,13 @@ pub async fn get_group(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Opt
     dbh.select((GROUP, id)).await
 }
 
-// type::table($table)
 pub async fn get_group_with_owner(
     dbh: &Surreal<Client>,
     id: &str,
 ) -> surrealdb::Result<Option<GroupWithOwner>> {
     let mut response = dbh
-        .query(format!(
-            "SELECT * FROM {GROUP} WHERE id=type::thing($id) FETCH owner"
-        ))
+        .query("SELECT * FROM type::table($group_table) WHERE id=type::thing($id) FETCH owner")
+        .bind(("group_table", GROUP))
         .bind(("id", format!("{GROUP}:{id}")))
         .await?;
 
