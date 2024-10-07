@@ -14,6 +14,8 @@ struct Config {
 pub mod db;
 //use crate::db::{Person, Group};
 
+mod mytera;
+
 #[derive(FromForm)]
 struct AddPerson<'r> {
     name: &'r str,
@@ -42,19 +44,11 @@ async fn list_people(dbh: &State<Surreal<Client>>) -> Template {
     let people = db::get_people(dbh).await.unwrap();
     rocket::info!("People: {:?}", people);
 
-    let pairs = people
-        .iter()
-        .map(|item| {
-            let id = item.id.id.to_string();
-            (id, item)
-        })
-        .collect::<Vec<_>>();
-
     Template::render(
         "people",
         context! {
             title: "People",
-            people: pairs,
+            people,
         },
     )
 }
@@ -112,8 +106,6 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
             person,
         },
     )
-
-    //list_people(dbh).await
 }
 
 #[get("/person/<id>")]
@@ -138,11 +130,13 @@ async fn get_groups(dbh: &State<Surreal<Client>>) -> Template {
 }
 
 #[get("/add-group?<uid>")]
-async fn get_add_group(_dbh: &State<Surreal<Client>>, uid: String) -> Template {
+async fn get_add_group(dbh: &State<Surreal<Client>>, uid: String) -> Template {
+    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+
     Template::render(
         "add_group",
         context! {
-            title: "Add Group",
+            title: format!("Add Group owned by {}", person.name),
             uid: uid.to_string(),
         },
     )
@@ -153,21 +147,30 @@ async fn post_add_group(dbh: &State<Surreal<Client>>, input: Form<AddGroup<'_>>)
     let name = input.name.trim();
     let uid = input.uid.trim();
     rocket::info!("Add  group called '{name}' to user '{uid}'");
-    db::add_group(dbh, name, uid).await.unwrap();
+    let group = db::add_group(dbh, name, uid).await.unwrap();
 
-    list_groups(dbh).await
+    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+
+    Template::render(
+        "group_added",
+        context! {
+            title: format!("Group called {} owned by {} was added", name, person.name),
+            uid: uid.to_string(),
+            group,
+        },
+    )
 }
 
 #[get("/group/<id>")]
 async fn get_group(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
     if let Some(group) = db::get_group_with_owner(dbh, &id).await.unwrap() {
         rocket::info!("Group: {}", group.owner.id);
+        rocket::info!("Group: {:?}", group);
         return Some(Template::render(
             "group",
             context! {
                 title: group.name.clone(),
-                id: group.id.clone().id.to_string(),
-                group: group,
+                group,
             },
         ));
     }
@@ -199,7 +202,9 @@ fn start(database: String) -> rocket::Rocket<rocket::Build> {
         .manage(Config {
             database: database.clone(),
         })
-        .attach(Template::fairing())
+        .attach(Template::custom(|engines| {
+            mytera::customize(&mut engines.tera);
+        }))
         .attach(db::fairing(database))
 }
 
@@ -209,6 +214,7 @@ mod tests {
 
     use rocket::http::{ContentType, Status};
     use rocket::local::blocking::Client;
+    //use scraper::{Html, Selector};
 
     #[test]
     fn test_main() {
@@ -231,7 +237,12 @@ mod tests {
             .dispatch();
         assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
-        assert!(html.contains(r#"Person added: <a href="/person/"#));
+        assert!(html.contains(r#"Person added:"#));
+        let document = scraper::Html::parse_document(&html);
+        let selector = scraper::Selector::parse("#added").unwrap();
+        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "John");
+        let john_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        let john_id = john_path.split('/').nth(2).unwrap();
 
         let response = client
             .post("/add-person")
@@ -240,7 +251,13 @@ mod tests {
             .dispatch();
         assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
-        assert!(html.contains(r#"Person added: <a href="/person/"#));
+        assert!(html.contains(r#"Person added:"#));
+        let document = scraper::Html::parse_document(&html);
+        let selector = scraper::Selector::parse("#added").unwrap();
+        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "Mary Ann");
+        let mary_ann_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        let mary_ann_id = mary_ann_path.split('/').nth(2).unwrap();
+
 
 
         let response = client.get("/people").dispatch();
@@ -255,5 +272,45 @@ mod tests {
         assert!(html.contains(r#"<title>People and Groups</title>"#));
         assert!(html.contains(r#"<div>Number of people: 2</div>"#));
         assert!(html.contains(r#"<div>Number of groups: 0</div>"#));
+
+        let response = client.get(john_path.to_string()).dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"<h2>Name: John</h2>"#));
+        let expected = format!(r#"<div><a  href="/add-group?uid={john_id}">add group</a></div>"#);
+        assert!(html.contains(&expected));
+
+        let response = client.get(format!("/add-group?uid={john_id}")).dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"<title>Add Group owned by John</title>"#));
+
+
+        let response = client
+        .post("/add-group")
+        .header(ContentType::Form)
+        .body(format!("name=group one&uid={mary_ann_id}"))
+        .dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        println!("html: {}", html);
+        assert!(html.contains(r#"<h1>Group called group one owned by Mary Ann was added</h1>"#));
+        assert!(html.contains(r#"Group added:"#));
+
+        let document = scraper::Html::parse_document(&html);
+        let selector = scraper::Selector::parse("#added").unwrap();
+        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "group one");
+        let group_one_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        let _group_one_id = group_one_path.split('/').nth(2).unwrap();
+
+
+        let response = client.get(group_one_path.to_string()).dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"<h2>Name: group one</h2>"#));
+        let expected = format!(r#"<h2>Owner name: <a href="/person/{mary_ann_id}">Mary Ann</a></h2>"#);
+        assert!(html.contains(&expected));
+
+      
     }
 }

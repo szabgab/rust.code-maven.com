@@ -8,7 +8,7 @@
        
        <ul>
        {% for person in people %}
-          <li><a href="/person/{{person.0}}">{{person.1.name}}</a></li>
+          <li><a href="/person/{{person.id | object2id}}">{{person.name}}</a></li>
        {% endfor %}
        </ul>
 

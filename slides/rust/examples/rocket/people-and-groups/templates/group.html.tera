@@ -1,7 +1,7 @@
 {% include "incl/header" %}
 
       <h2>Name: {{group.name}}</h2>
-      <h2>Owner name: <a href="/person/{{ group.owner.id.id | lower }}">{{ group.owner.name }}</a></h2>
+      <h2>Owner name: <a href="/person/{{ group.owner.id | object2id }}">{{ group.owner.name }}</a></h2>
 
 {% include "incl/footer" %}
 

@@ -1,0 +1,6 @@
+{% include "incl/header" %}
+
+<p>Group added: <a id="added" href="/group/{{group.id | object2id }}">{{group.name}}</a></p>
+
+{% include "incl/footer" %}
+

@@ -72,16 +72,16 @@ pub async fn add_person(dbh: &Surreal<Client>, name: &str) -> surrealdb::Result<
     Ok(entry)
 }
 
-pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surrealdb::Result<()> {
+pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surrealdb::Result<Group> {
     let entry = Group {
         id: Thing::from((GROUP, Id::ulid())),
         name: name.to_owned(),
         owner: Thing::from((PERSON, Id::from(uid))),
     };
 
-    dbh.create(Resource::from(GROUP)).content(entry).await?;
+    dbh.create(Resource::from(GROUP)).content(entry.clone()).await?;
 
-    Ok(())
+    Ok(entry)
 }
 
 pub async fn get_people(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Person>> {

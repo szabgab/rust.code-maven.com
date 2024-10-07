@@ -10,4 +10,6 @@ surrealdb = "2.0"
 tokio = { version = "1.35", features = ["macros", "rt-multi-thread"] }
 chrono = "0.4.38"
 serde = { version = "1.0", features = ["derive"] }
+tera = "1.20.0"
+scraper = "0.20.0"
 
