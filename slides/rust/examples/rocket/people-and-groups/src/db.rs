@@ -53,7 +53,9 @@ pub fn fairing(database: String) -> AdHoc {
 
 pub async fn clear(dbh: &Surreal<Client>, database: String) -> surrealdb::Result<()> {
     rocket::info!("Clearing database");
-    let result = dbh.query(format!("REMOVE DATABASE `{database}`;")).await?;
+    let result = dbh
+        .query(format!("REMOVE DATABASE IF EXISTS `{database}`;"))
+        .await?;
     result.check()?;
 
     // dbh.query(format!("DELETE FROM {PERSON};")).await?;
@@ -67,7 +69,9 @@ pub async fn add_person(dbh: &Surreal<Client>, name: &str) -> surrealdb::Result<
         name: name.to_owned(),
     };
 
-    dbh.create(Resource::from(PERSON)).content(entry.clone()).await?;
+    dbh.create(Resource::from(PERSON))
+        .content(entry.clone())
+        .await?;
 
     Ok(entry)
 }
@@ -79,7 +83,9 @@ pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surreald
         owner: Thing::from((PERSON, Id::from(uid))),
     };
 
-    dbh.create(Resource::from(GROUP)).content(entry.clone()).await?;
+    dbh.create(Resource::from(GROUP))
+        .content(entry.clone())
+        .await?;
 
     Ok(entry)
 }
@@ -94,22 +100,32 @@ pub async fn get_person(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Op
     dbh.select((PERSON, id)).await
 }
 
-pub async fn get_person_with_groups(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Option<(Person, Vec<Group>)>> {
+pub async fn get_person_with_groups(
+    dbh: &Surreal<Client>,
+    id: &str,
+) -> surrealdb::Result<Option<(Person, Vec<Group>)>> {
     let person = get_person(dbh, id).await?;
     match person {
         None => return Ok(None),
         Some(person) => {
             let groups = get_groups_by_owner(dbh, id).await?;
-            Ok(Some((person, groups)))        
-        },
+            Ok(Some((person, groups)))
+        }
     }
 }
 
-pub async fn get_groups_by_owner(dbh: &Surreal<Client>, uid: &str) -> surrealdb::Result<Vec<Group>> {
+pub async fn get_groups_by_owner(
+    dbh: &Surreal<Client>,
+    uid: &str,
+) -> surrealdb::Result<Vec<Group>> {
     rocket::info!("Getting groups for {}", uid);
-    let mut response = dbh.query(format!("SELECT * FROM {GROUP} WHERE owner=type::thing($user_table, $uid);"))
-    .bind(("uid", uid.to_owned()))
-    .bind(("user_table", PERSON)).await?;
+    let mut response = dbh
+        .query(format!(
+            "SELECT * FROM {GROUP} WHERE owner=type::thing($user_table, $uid);"
+        ))
+        .bind(("uid", uid.to_owned()))
+        .bind(("user_table", PERSON))
+        .await?;
     let entries: Vec<Group> = response.take(0)?;
     Ok(entries)
 }

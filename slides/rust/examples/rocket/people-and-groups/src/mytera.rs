@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use rocket_dyn_templates::tera::Tera;
-use tera::{Result, Value, to_value};
+use tera::{to_value, Result, Value};
 
 fn object2id(val: &Value, _map: &HashMap<String, Value>) -> Result<Value> {
     let s = val["id"]["String"].as_str().unwrap();

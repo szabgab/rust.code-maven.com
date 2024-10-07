@@ -27,7 +27,10 @@ struct AddGroup<'r> {
     uid: &'r str,
 }
 
-async fn index_page(dbh: &State<Surreal<Client>>) -> Template {
+// ----------------------------------
+
+#[get("/")]
+async fn get_index(dbh: &State<Surreal<Client>>) -> Template {
     let people = db::get_people(dbh).await.unwrap();
     let groups = db::get_groups(dbh).await.unwrap();
     Template::render(
@@ -40,7 +43,20 @@ async fn index_page(dbh: &State<Surreal<Client>>) -> Template {
     )
 }
 
-async fn list_people(dbh: &State<Surreal<Client>>) -> Template {
+#[get("/clear")]
+async fn clear_db(dbh: &State<Surreal<Client>>, config: &State<Config>) -> Template {
+    rocket::info!("Clearing database {}", config.database);
+    db::clear(&dbh, config.database.clone()).await.unwrap();
+    Template::render(
+        "database_cleared",
+        context! {
+            title: "Database cleared",
+        },
+    )
+}
+
+#[get("/people")]
+async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
     let people = db::get_people(dbh).await.unwrap();
     rocket::info!("People: {:?}", people);
 
@@ -51,25 +67,6 @@ async fn list_people(dbh: &State<Surreal<Client>>) -> Template {
             people,
         },
     )
-}
-
-// ----------------------------------
-
-#[get("/")]
-async fn get_index(dbh: &State<Surreal<Client>>) -> Template {
-    index_page(&dbh).await
-}
-
-#[get("/clear")]
-async fn clear_db(dbh: &State<Surreal<Client>>, config: &State<Config>) -> Template {
-    rocket::info!("Clearing database {}", config.database);
-    db::clear(&dbh, config.database.clone()).await.unwrap();
-    index_page(&dbh).await
-}
-
-#[get("/people")]
-async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
-    list_people(dbh).await
 }
 
 #[post("/add-person", data = "<input>")]
@@ -115,7 +112,6 @@ async fn get_groups(dbh: &State<Surreal<Client>>) -> Template {
             groups,
         },
     )
-
 }
 
 #[get("/add-group?<uid>")]
@@ -212,6 +208,10 @@ mod tests {
         let response = client.get("/clear").dispatch();
         assert_eq!(response.status(), Status::Ok);
 
+        // Make sure we can clear the database even if it does not exist
+        let response = client.get("/clear").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+
         let response = client.get("/").dispatch();
         assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
@@ -229,8 +229,16 @@ mod tests {
         assert!(html.contains(r#"Person added:"#));
         let document = scraper::Html::parse_document(&html);
         let selector = scraper::Selector::parse("#added").unwrap();
-        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "John");
-        let john_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        assert_eq!(
+            &document.select(&selector).next().unwrap().inner_html(),
+            "John"
+        );
+        let john_path = &document
+            .select(&selector)
+            .next()
+            .unwrap()
+            .attr("href")
+            .unwrap();
         let john_id = john_path.split('/').nth(2).unwrap();
 
         let response = client
@@ -243,11 +251,17 @@ mod tests {
         assert!(html.contains(r#"Person added:"#));
         let document = scraper::Html::parse_document(&html);
         let selector = scraper::Selector::parse("#added").unwrap();
-        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "Mary Ann");
-        let mary_ann_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        assert_eq!(
+            &document.select(&selector).next().unwrap().inner_html(),
+            "Mary Ann"
+        );
+        let mary_ann_path = &document
+            .select(&selector)
+            .next()
+            .unwrap()
+            .attr("href")
+            .unwrap();
         let mary_ann_id = mary_ann_path.split('/').nth(2).unwrap();
-
-
 
         let response = client.get("/people").dispatch();
         assert_eq!(response.status(), Status::Ok);
@@ -274,12 +288,11 @@ mod tests {
         let html = response.into_string().unwrap();
         assert!(html.contains(r#"<title>Add Group owned by John</title>"#));
 
-
         let response = client
-        .post("/add-group")
-        .header(ContentType::Form)
-        .body(format!("name=group one&uid={mary_ann_id}"))
-        .dispatch();
+            .post("/add-group")
+            .header(ContentType::Form)
+            .body(format!("name=group one&uid={mary_ann_id}"))
+            .dispatch();
         assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
         println!("html: {}", html);
@@ -288,18 +301,24 @@ mod tests {
 
         let document = scraper::Html::parse_document(&html);
         let selector = scraper::Selector::parse("#added").unwrap();
-        assert_eq!(&document.select(&selector).next().unwrap().inner_html(), "group one");
-        let group_one_path = &document.select(&selector).next().unwrap().attr("href").unwrap();
+        assert_eq!(
+            &document.select(&selector).next().unwrap().inner_html(),
+            "group one"
+        );
+        let group_one_path = &document
+            .select(&selector)
+            .next()
+            .unwrap()
+            .attr("href")
+            .unwrap();
         let _group_one_id = group_one_path.split('/').nth(2).unwrap();
-
 
         let response = client.get(group_one_path.to_string()).dispatch();
         assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
         assert!(html.contains(r#"<h2>Name: group one</h2>"#));
-        let expected = format!(r#"<h2>Owner name: <a href="/person/{mary_ann_id}">Mary Ann</a></h2>"#);
+        let expected =
+            format!(r#"<h2>Owner name: <a href="/person/{mary_ann_id}">Mary Ann</a></h2>"#);
         assert!(html.contains(&expected));
-
-      
     }
 }
