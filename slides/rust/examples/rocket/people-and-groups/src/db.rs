@@ -61,15 +61,15 @@ pub async fn clear(dbh: &Surreal<Client>, database: String) -> surrealdb::Result
     Ok(())
 }
 
-pub async fn add_person(dbh: &Surreal<Client>, name: &str) -> surrealdb::Result<()> {
+pub async fn add_person(dbh: &Surreal<Client>, name: &str) -> surrealdb::Result<Person> {
     let entry = Person {
         id: Thing::from((PERSON, Id::ulid())),
         name: name.to_owned(),
     };
 
-    dbh.create(Resource::from(PERSON)).content(entry).await?;
+    dbh.create(Resource::from(PERSON)).content(entry.clone()).await?;
 
-    Ok(())
+    Ok(entry)
 }
 
 pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surrealdb::Result<()> {

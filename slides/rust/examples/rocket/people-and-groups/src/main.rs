@@ -103,9 +103,17 @@ async fn get_people(dbh: &State<Surreal<Client>>) -> Template {
 async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>>) -> Template {
     let name = input.name.trim();
     rocket::info!("Add  person called '{name}'");
-    db::add_person(dbh, name).await.unwrap();
+    let person = db::add_person(dbh, name).await.unwrap();
 
-    list_people(dbh).await
+    Template::render(
+        "person_added",
+        context! {
+            title: "Person added",
+            person,
+        },
+    )
+
+    //list_people(dbh).await
 }
 
 #[get("/person/<id>")]
@@ -222,6 +230,8 @@ mod tests {
             .body("name=John")
             .dispatch();
         assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"Person added: <a href="/person/"#));
 
         let response = client
             .post("/add-person")
@@ -229,7 +239,12 @@ mod tests {
             .body("name=Mary Ann")
             .dispatch();
         assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains(r#"Person added: <a href="/person/"#));
 
+
+        let response = client.get("/people").dispatch();
+        assert_eq!(response.status(), Status::Ok);
         let html = response.into_string().unwrap();
         assert!(html.contains(r#">John</a></li>"#));
         assert!(html.contains(r#">Mary Ann</a></li>"#));

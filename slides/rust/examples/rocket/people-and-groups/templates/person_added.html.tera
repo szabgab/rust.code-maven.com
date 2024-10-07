@@ -1,0 +1,6 @@
+{% include "incl/header" %}
+
+<p>Person added: <a href="/person/{{person.id}}">{{person.name}}</a></p>
+
+{% include "incl/footer" %}
+
