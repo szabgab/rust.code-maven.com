@@ -10,6 +10,7 @@ use surrealdb::Surreal;
 const NAMESPACE: &str = "rust-slides";
 const PERSON: &str = "person";
 const GROUP: &str = "group";
+const MEMBERSHIP: &str = "membership";
 
 #[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
 pub struct Person {
@@ -22,6 +23,20 @@ pub struct Group {
     pub id: Thing,
     pub name: String,
     pub owner: Thing,
+}
+
+#[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
+pub struct Membership {
+    pub id: Thing,
+    pub person: Thing,
+    pub group: Thing,
+}
+
+#[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
+pub struct MembershipWithPersonAndGroup {
+    pub id: Thing,
+    pub person: Person,
+    pub group: Group,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
@@ -46,6 +61,11 @@ pub fn fairing(database: String) -> AdHoc {
         dbh.signin(Root { username, password }).await.unwrap();
 
         dbh.use_ns(NAMESPACE).use_db(database).await.unwrap();
+
+        let query = format!(
+            "DEFINE INDEX membership_ids ON TABLE {MEMBERSHIP} COLUMNS {PERSON}, {GROUP} UNIQUE"
+        );
+        dbh.query(query).await.unwrap();
 
         rocket.manage(dbh)
     })
@@ -86,6 +106,44 @@ pub async fn add_group(dbh: &Surreal<Client>, name: &str, uid: &str) -> surreald
         .await?;
 
     Ok(entry)
+}
+
+pub async fn add_member(dbh: &Surreal<Client>, uid: &str, gid: &str) -> surrealdb::Result<()> {
+    let entry = Membership {
+        id: Thing::from((MEMBERSHIP, Id::ulid())),
+        person: Thing::from((PERSON, Id::from(uid))),
+        group: Thing::from((GROUP, Id::from(gid))),
+    };
+
+    dbh.create(Resource::from(MEMBERSHIP))
+        .content(entry.clone())
+        .await?;
+
+    Ok(())
+}
+
+pub async fn get_memberships(
+    dbh: &Surreal<Client>,
+) -> surrealdb::Result<Vec<MembershipWithPersonAndGroup>> {
+    let mut response = dbh
+        .query("SELECT * FROM type::table($table) FETCH person, group")
+        .bind(("table", MEMBERSHIP))
+        .await?;
+
+    let entries: Vec<MembershipWithPersonAndGroup> = response.take(0)?;
+    rocket::info!("Response: {:?}", entries);
+    Ok(entries)
+}
+
+pub async fn delete_membership(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<()> {
+    let res = dbh
+        .query("DELETE type::table($table) WHERE id=type::thing($table, $id)")
+        .bind(("table", MEMBERSHIP))
+        .bind(("id", id.to_owned()))
+        .await?;
+    res.check()?;
+
+    Ok(())
 }
 
 pub async fn get_people(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Person>> {

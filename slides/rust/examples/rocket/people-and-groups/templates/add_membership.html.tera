@@ -1,0 +1,15 @@
+{% include "incl/header" %}
+
+    <form method="POST" action="/add-membership">
+        <input type="hidden" value="{{uid}}" name="uid">
+        <ul style="list-style-type: none;">
+            {% for group in groups %}
+                <li><input type="radio" name="gid" value="{{group.id | object2id}}">{{group.name}}</li>
+            {% endfor %}
+        </ul>
+
+        <input type="submit" value="Add member to group"><br>
+    </form>
+       
+{% include "incl/footer" %}
+       

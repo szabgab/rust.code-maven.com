@@ -1,11 +1,1 @@
-{% include "incl/header" %}
-
-<ul>
-   {% for group in groups %}
-      <li><a href="/group/{{group.id | object2id}}">{{group.name}}</a></li>
-   {% endfor %}
-   </ul>
-</ul>
-
-{% include "incl/footer" %}
-       
+head

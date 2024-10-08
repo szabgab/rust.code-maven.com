@@ -1,0 +1,6 @@
+{% include "incl/header" %}
+
+<p>Person <a href="/person/{{person.id | object2id}}">{{person.name}}</a> was added to group <a href="/group/{{group.id | object2id }}">{{group.name}}</a></p>
+
+{% include "incl/footer" %}
+

@@ -1,0 +1,19 @@
+{% include "incl/header" %}
+
+<table>
+    <tr>
+        <td>Person</td>
+        <td>Group</td>
+    </tr>
+
+   {% for mem in memberships %}
+    <tr>
+        <td><a href="/person/{{mem.person.id | object2id}}">{{mem.person.name}}</a></td>
+        <td><a href="/group/{{mem.group.id | object2id}}">{{mem.group.name}}</a></td>
+        <td><a href="/delete-membership?id={{mem.id | object2id}}">delete</a></td>
+    </tr>
+   {% endfor %}
+</table>
+
+{% include "incl/footer" %}
+       

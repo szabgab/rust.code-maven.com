@@ -1,6 +1,8 @@
 #[macro_use]
 extern crate rocket;
 
+use std::vec;
+
 use rocket::form::Form;
 use rocket::State;
 use rocket_dyn_templates::{context, Template};
@@ -12,7 +14,7 @@ struct Config {
     database: String,
 }
 pub mod db;
-//use crate::db::{Person, Group};
+use crate::db::Group;
 
 mod mytera;
 
@@ -24,6 +26,12 @@ struct AddPerson<'r> {
 #[derive(FromForm)]
 struct AddGroup<'r> {
     name: &'r str,
+    uid: &'r str,
+}
+
+#[derive(FromForm)]
+struct AddMember<'r> {
+    gid: &'r str,
     uid: &'r str,
 }
 
@@ -86,6 +94,7 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
 
 #[get("/person/<id>")]
 async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
+    let member_groups: Vec<Group> = vec![];
     if let Some((person, owned_groups)) = db::get_person_with_groups(dbh, &id).await.unwrap() {
         return Some(Template::render(
             "person",
@@ -93,6 +102,7 @@ async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template
                 title: person.name.clone(),
                 person,
                 owned_groups,
+                member_groups
             },
         ));
     }
@@ -146,6 +156,70 @@ async fn post_add_group(dbh: &State<Surreal<Client>>, input: Form<AddGroup<'_>>)
     )
 }
 
+#[get("/add-membership?<uid>")]
+async fn get_add_membership(dbh: &State<Surreal<Client>>, uid: String) -> Template {
+    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+
+    let groups = db::get_groups(dbh).await.unwrap();
+    // remove the groups that the person already owns or is a member of
+    let groups = groups
+        .into_iter()
+        .filter(|group| group.owner.id != person.id.id)
+        .collect::<Vec<_>>();
+    Template::render(
+        "add_membership",
+        context! {
+            title: format!("Add {} to one of the groups as a member", person.name),
+            uid: uid.to_string(),
+            groups
+        },
+    )
+}
+
+#[post("/add-membership", data = "<input>")]
+async fn post_add_membership(dbh: &State<Surreal<Client>>, input: Form<AddMember<'_>>) -> Template {
+    let gid = input.gid.trim();
+    let uid = input.uid.trim();
+    rocket::info!("Add  person '{uid}' to group '{gid}'");
+    let group = db::get_group(dbh, gid).await.unwrap().unwrap();
+    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+    db::add_member(dbh, uid, gid).await.unwrap();
+
+    Template::render(
+        "added_to_group",
+        context! {
+            title: format!("'{}' was added to group '{}'", person.name, group.name),
+            person,
+            group,
+        },
+    )
+}
+
+#[get("/delete-membership?<id>")]
+async fn delete_membership(dbh: &State<Surreal<Client>>, id: String) -> Template {
+    db::delete_membership(dbh, &id).await.unwrap();
+
+    Template::render(
+        "membership_deleted",
+        context! {
+            title: "Membership deleted",
+        },
+    )
+}
+
+#[get("/memberships")]
+async fn get_membership(dbh: &State<Surreal<Client>>) -> Template {
+    let memberships = db::get_memberships(dbh).await.unwrap();
+
+    Template::render(
+        "memberships",
+        context! {
+            title: "Memberships",
+            memberships
+        },
+    )
+}
+
 #[get("/group/<id>")]
 async fn get_group(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
     if let Some(group) = db::get_group_with_owner(dbh, &id).await.unwrap() {
@@ -174,14 +248,18 @@ fn start(database: String) -> rocket::Rocket<rocket::Build> {
             "/",
             routes![
                 clear_db,
+                delete_membership,
+                get_add_membership,
                 get_index,
                 get_people,
                 get_person,
-                post_add_person,
                 get_groups,
                 get_group,
+                get_membership,
                 get_add_group,
                 post_add_group,
+                post_add_membership,
+                post_add_person,
             ],
         )
         .manage(Config {
