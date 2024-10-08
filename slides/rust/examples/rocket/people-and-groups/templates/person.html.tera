@@ -13,8 +13,8 @@
       <h2>Group membership</h2>
       <div><a  href="/add-membership?uid={{person.id | object2id}}">add membersip</a></div>
       <ul>
-            {% for group in member_groups %}
-                  <li><a href="/group/{{group.id | object2id}}">{{group.name}}</a></li>
+            {% for mem in memberships %}
+                  <li><a href="/group/{{mem.group.id | object2id}}">{{mem.group.name}}</a></li>
             {% endfor %}
       </ul>
 

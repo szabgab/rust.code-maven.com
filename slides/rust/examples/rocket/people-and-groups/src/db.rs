@@ -135,6 +135,22 @@ pub async fn get_memberships(
     Ok(entries)
 }
 
+pub async fn get_memberships_of_person(
+    dbh: &Surreal<Client>,
+    uid: &str,
+) -> surrealdb::Result<Vec<MembershipWithPersonAndGroup>> {
+    let mut response = dbh
+        .query("SELECT * FROM type::table($table) WHERE person=type::thing($person_table, $uid) FETCH person, group")
+        .bind(("table", MEMBERSHIP))
+        .bind(("person_table", PERSON))
+        .bind(("uid", uid.to_owned()))
+        .await?;
+
+    let entries: Vec<MembershipWithPersonAndGroup> = response.take(0)?;
+    rocket::info!("Response: {:?}", entries);
+    Ok(entries)
+}
+
 pub async fn delete_membership(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<()> {
     let res = dbh
         .query("DELETE type::table($table) WHERE id=type::thing($table, $id)")
@@ -162,13 +178,14 @@ pub async fn get_person(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Op
 pub async fn get_person_with_groups(
     dbh: &Surreal<Client>,
     id: &str,
-) -> surrealdb::Result<Option<(Person, Vec<Group>)>> {
+) -> surrealdb::Result<Option<(Person, Vec<Group>, Vec<MembershipWithPersonAndGroup>)>> {
     let person = get_person(dbh, id).await?;
     match person {
         None => return Ok(None),
         Some(person) => {
             let groups = get_groups_by_owner(dbh, id).await?;
-            Ok(Some((person, groups)))
+            let memberships = get_memberships_of_person(dbh, id).await?;
+            Ok(Some((person, groups, memberships)))
         }
     }
 }

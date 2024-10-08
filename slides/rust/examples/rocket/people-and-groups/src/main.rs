@@ -14,7 +14,6 @@ struct Config {
     database: String,
 }
 pub mod db;
-use crate::db::Group;
 
 mod mytera;
 
@@ -94,15 +93,14 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
 
 #[get("/person/<id>")]
 async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
-    let member_groups: Vec<Group> = vec![];
-    if let Some((person, owned_groups)) = db::get_person_with_groups(dbh, &id).await.unwrap() {
+    if let Some((person, owned_groups, memberships)) = db::get_person_with_groups(dbh, &id).await.unwrap() {
         return Some(Template::render(
             "person",
             context! {
                 title: person.name.clone(),
                 person,
                 owned_groups,
-                member_groups
+                memberships,
             },
         ));
     }
