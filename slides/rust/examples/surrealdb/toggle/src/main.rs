@@ -19,7 +19,6 @@ async fn main() -> surrealdb::Result<()> {
     let dbh = Surreal::new::<Mem>(()).await?;
 
     dbh.use_ns("demo").use_db("demo").await?;
-    let _response = dbh.query("DELETE toggle").await?.check();
 
     let _response = dbh
         .query("DEFINE INDEX toggle_id ON TABLE toggle COLUMNS uid UNIQUE")
