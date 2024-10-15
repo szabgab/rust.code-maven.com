@@ -75,6 +75,7 @@
         "tera.md",
         "rocket.md",
         "surrealdb.md",
+        "sea-orm.md",
         "other.md"
     ]
 }

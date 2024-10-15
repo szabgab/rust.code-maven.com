@@ -1,0 +1,8 @@
+[package]
+name = "counter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3.30"
+sea-orm = { version = "1.0.1", features = ["sqlx-sqlite", "runtime-async-std-native-tls", "macros"] }
