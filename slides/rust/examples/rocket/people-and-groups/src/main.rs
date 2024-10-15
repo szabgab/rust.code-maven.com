@@ -93,7 +93,9 @@ async fn post_add_person(dbh: &State<Surreal<Client>>, input: Form<AddPerson<'_>
 
 #[get("/person/<id>")]
 async fn get_person(dbh: &State<Surreal<Client>>, id: String) -> Option<Template> {
-    if let Some((person, owned_groups, memberships)) = db::get_person_with_groups(dbh, &id).await.unwrap() {
+    if let Some((person, owned_groups, memberships)) =
+        db::get_person_with_groups(dbh, &id).await.unwrap()
+    {
         return Some(Template::render(
             "person",
             context! {
@@ -158,7 +160,10 @@ async fn post_add_group(dbh: &State<Surreal<Client>>, input: Form<AddGroup<'_>>)
 async fn get_add_membership(dbh: &State<Surreal<Client>>, uid: String) -> Template {
     let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
 
-    let groups = db::get_groups(dbh).await.unwrap();
+    //let groups = db::get_groups(dbh).await.unwrap();
+    let groups = db::get_groups_not(dbh, &uid).await.unwrap();
+    //let memberships = db::get_memberships_of_person(dbh, &person.id.to_string()).await.unwrap();
+
     // remove the groups that the person already owns or is a member of
     let groups = groups
         .into_iter()

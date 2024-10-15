@@ -213,6 +213,30 @@ pub async fn get_groups(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Group>> 
     Ok(entries)
 }
 
+#[derive(Debug, Deserialize, Serialize, Clone, PartialEq)]
+struct GroupId {
+    group: Thing,
+}
+
+pub async fn get_groups_not(dbh: &Surreal<Client>, uid: &str) -> surrealdb::Result<Vec<Group>> {
+    let mut response = dbh
+        .query(format!(
+            "SELECT group FROM {MEMBERSHIP} WHERE person = type::thing($person_table, $uid)"
+        ))
+        .bind(("person_table", PERSON))
+        .bind(("uid", uid.to_owned()))
+        .await?;
+
+    let entries: Vec<GroupId> = response.take(0)?;
+    println!("ids: {:?}", entries);
+
+    let mut response = dbh.query(format!("SELECT * FROM {GROUP} WHERE {GROUP}.id IN (SELECT group FROM {MEMBERSHIP} WHERE person = type::thing($person_table, $uid))"))
+    .bind(("person_table", PERSON))
+    .bind(("uid", uid.to_owned())).await?;
+    let entries: Vec<Group> = response.take(0)?;
+    Ok(entries)
+}
+
 pub async fn get_group(dbh: &Surreal<Client>, id: &str) -> surrealdb::Result<Option<Group>> {
     dbh.select((GROUP, id)).await
 }
