@@ -461,3 +461,11 @@ TODO: index
 ![](examples/surrealdb/references-and-selects/out.out)
 ![](examples/surrealdb/references-and-selects/out.sql)
 
+
+## SurrealDB Demo
+{id: surreldb-demo}
+{i: TBD}
+
+![](examples/surrealdb/demo/Cargo.toml)
+![](examples/surrealdb/demo/src/main.rs)
+
