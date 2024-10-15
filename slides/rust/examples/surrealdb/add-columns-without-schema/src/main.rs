@@ -31,26 +31,48 @@ async fn main() -> surrealdb::Result<()> {
 
     add_color(&dbh, "Red").await?;
     add_color(&dbh, "Green").await?;
-    list_first(&dbh).await?;
-    println!("-------------");
 
-    list_second(&dbh).await?;
-    println!("-------------");
+    let entries = get_first(&dbh).await?;
+    assert_eq!(entries.len(), 2);
+    assert_eq!(entries[0].name, "Red");
+    assert_eq!(entries[1].name, "Green");
+    list_first(entries);
+
+    let entries = get_second(&dbh).await?;
+    assert_eq!(entries.len(), 2);
+    assert_eq!(entries[0].name, "Red");
+    assert_eq!(entries[1].name, "Green");
+    assert_eq!(entries[0].rgb, None);
+    list_second(entries);
 
     add_color_with_rgb(&dbh, "Blue", "0000FF").await?;
 
-    list_second(&dbh).await?;
-    println!("-------------");
+    let entries = get_second(&dbh).await?;
+    assert_eq!(entries.len(), 3);
+    assert_eq!(entries[0].name, "Red");
+    assert_eq!(entries[1].name, "Green");
+    assert_eq!(entries[2].name, "Blue");
+    assert_eq!(entries[0].rgb, None);
+    assert_eq!(entries[1].rgb, None);
+    assert_eq!(entries[2].rgb, Some(String::from("0000FF")));
+    list_second(entries);
 
     // We can't do this because the table doesn't have the rgb column
-    // list_third(&dbh).await?;
-    // println!("-------------");
+    // let entries = get_third(&dbh).await?;
+    // Error: Db(Serialization("failed to deserialize; expected a string, found None"))
 
     add_missing_rgb(&dbh, "Red", "FF0000").await?;
     add_missing_rgb(&dbh, "Green", "00FF00").await?;
 
-    list_third(&dbh).await?;
-    println!("-------------");
+    let entries = get_third(&dbh).await?;
+    assert_eq!(entries.len(), 3);
+    assert_eq!(entries[0].name, "Red");
+    assert_eq!(entries[1].name, "Green");
+    assert_eq!(entries[2].name, "Blue");
+    assert_eq!(entries[0].rgb, "FF0000");
+    assert_eq!(entries[1].rgb, "00FF00");
+    assert_eq!(entries[2].rgb, "0000FF");
+    list_third(entries);
 
     Ok(())
 }
@@ -67,14 +89,18 @@ async fn add_color(db: &Surreal<Db>, name: &str) -> surrealdb::Result<()> {
     Ok(())
 }
 
-async fn list_first(db: &Surreal<Db>) -> surrealdb::Result<()> {
+async fn get_first(db: &Surreal<Db>) -> surrealdb::Result<Vec<First>> {
     let mut entries = db.query("SELECT id, name FROM colors").await?;
     let entries: Vec<First> = entries.take(0)?;
+
+    Ok(entries)
+}
+
+fn list_first(entries: Vec<First>) {
     for entry in entries {
         println!("{} {}", entry.id, entry.name);
     }
-
-    Ok(())
+    println!("-------------");
 }
 
 async fn add_color_with_rgb(db: &Surreal<Db>, name: &str, rgb: &str) -> surrealdb::Result<()> {
@@ -90,9 +116,12 @@ async fn add_color_with_rgb(db: &Surreal<Db>, name: &str, rgb: &str) -> surreald
     Ok(())
 }
 
-async fn list_second(db: &Surreal<Db>) -> surrealdb::Result<()> {
+async fn get_second(db: &Surreal<Db>) -> surrealdb::Result<Vec<Second>> {
     let mut entries = db.query("SELECT id, name, rgb FROM colors").await?;
-    let entries: Vec<Second> = entries.take(0)?;
+    entries.take(0)
+}
+
+fn list_second(entries: Vec<Second>) {
     for entry in entries {
         println!(
             "{} {:6} {}",
@@ -101,18 +130,20 @@ async fn list_second(db: &Surreal<Db>) -> surrealdb::Result<()> {
             entry.rgb.unwrap_or("no color".to_owned())
         );
     }
-
-    Ok(())
+    println!("-------------");
 }
 
-async fn list_third(db: &Surreal<Db>) -> surrealdb::Result<()> {
+async fn get_third(db: &Surreal<Db>) -> surrealdb::Result<Vec<Third>> {
     let mut entries = db.query("SELECT id, name, rgb FROM colors").await?;
     let entries: Vec<Third> = entries.take(0)?;
+    Ok(entries)
+}
+
+fn list_third(entries: Vec<Third>) {
     for entry in entries {
         println!("{} {:6} {}", entry.id, entry.name, entry.rgb);
     }
-
-    Ok(())
+    println!("-------------");
 }
 
 async fn add_missing_rgb(dbh: &Surreal<Db>, name: &str, rgb: &str) -> surrealdb::Result<()> {
