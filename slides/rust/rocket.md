@@ -466,3 +466,11 @@ this is a simple example using the `length` filter:
 ![](examples/rocket/guards/Rocket.toml)
 ![](examples/rocket/guards/src/main.rs)
 
+## Rocket return user-id
+{id: rocket-return-user-id}
+{i: TBD}
+
+![](examples/rocket/return-result-user-id/Cargo.toml)
+![](examples/rocket/return-result-user-id/src/main.rs)
+![](examples/rocket/return-result-user-id/src/tests.rs)
+
