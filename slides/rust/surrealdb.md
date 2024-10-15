@@ -452,3 +452,12 @@ TODO: types of data?
 TODO: schema?
 TODO: index
 
+## SurrealDB - references and SELECT
+{id: surrealdb-references-and-select}
+{i: TBD}
+
+![](examples/surrealdb/references-and-selects/Cargo.toml)
+![](examples/surrealdb/references-and-selects/src/main.rs)
+![](examples/surrealdb/references-and-selects/out.out)
+![](examples/surrealdb/references-and-selects/out.sql)
+

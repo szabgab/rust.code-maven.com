@@ -1,0 +1,60 @@
+class added: [DanceClass { id: Thing { tb: "dance", id: String("gjjhx7vr62vaiqr49ivr") }, name: "Introduction to Dancing" }]
+class added: [DanceClass { id: Thing { tb: "dance", id: String("c4v2dpfzsreg1u5nleeq") }, name: "Flamenco" }]
+get_classes: DanceClass { id: Thing { tb: "dance", id: String("c4v2dpfzsreg1u5nleeq") }, name: "Flamenco" }
+get_classes: DanceClass { id: Thing { tb: "dance", id: String("gjjhx7vr62vaiqr49ivr") }, name: "Introduction to Dancing" }
+student added: [
+    Student {
+        id: Thing {
+            tb: "student",
+            id: String(
+                "h8c5rpmyhb3p3l0yu7al",
+            ),
+        },
+        name: "Jane Doe",
+        classes: [
+            Thing {
+                tb: "dance",
+                id: String(
+                    "c4v2dpfzsreg1u5nleeq",
+                ),
+            },
+            Thing {
+                tb: "dance",
+                id: String(
+                    "gjjhx7vr62vaiqr49ivr",
+                ),
+            },
+        ],
+    },
+]
+Students: [
+    StudentClasses {
+        id: Thing {
+            tb: "student",
+            id: String(
+                "h8c5rpmyhb3p3l0yu7al",
+            ),
+        },
+        name: "Jane Doe",
+        classes: [
+            DanceClass {
+                id: Thing {
+                    tb: "dance",
+                    id: String(
+                        "c4v2dpfzsreg1u5nleeq",
+                    ),
+                },
+                name: "Flamenco",
+            },
+            DanceClass {
+                id: Thing {
+                    tb: "dance",
+                    id: String(
+                        "gjjhx7vr62vaiqr49ivr",
+                    ),
+                },
+                name: "Introduction to Dancing",
+            },
+        ],
+    },
+]
