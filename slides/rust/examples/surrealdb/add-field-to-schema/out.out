@@ -1,11 +1,1 @@
-Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 4, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(1.154985ms) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("0hxnlkp591bmupg87eys") }), "number": Number(Int(42))}))]))))}, live_queries: {} }
----------
-entry:0hxnlkp591bmupg87eys 42
----------
-Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 6, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(425.508µs) }, Ok(None))}, live_queries: {} }
----------
-Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 7, features: {LiveQueries, Backup} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(800.58µs) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("2rhf5zqye67zakt72a76") }), "name": Strand(Strand("twenty three")), "number": Number(Int(23))}))]))))}, live_queries: {} }
----------
-entry:0hxnlkp591bmupg87eys 42 missing
-entry:2rhf5zqye67zakt72a76 23 twenty three
----------
+Success: Response { client: Surreal { router: OnceLock(Router { sender: Sender { .. }, last_id: 2, features: {Backup, LiveQueries} }), engine: PhantomData<surrealdb::api::engine::any::Any> }, results: {0: (Stats { execution_time: Some(1.434877ms) }, Ok(Array(Array([Object(Object({"id": Thing(Thing { tb: "entry", id: String("1iqktq46inqa3ekw677r") }), "number": Number(Int(42))}))]))))}, live_queries: {} }
