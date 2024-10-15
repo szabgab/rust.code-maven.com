@@ -41,6 +41,8 @@ async fn main() -> surrealdb::Result<()> {
 
     let mut entries = dbh.query("SELECT * FROM entry").await?;
     let entries: Vec<EntryNummer> = entries.take(0)?;
+    assert_eq!(entries.len(), 1);
+    assert_eq!(entries[0].number, 42);
     for entry in entries {
         println!("{} {}", entry.id, entry.number);
     }
@@ -71,6 +73,11 @@ async fn main() -> surrealdb::Result<()> {
 
     let mut entries = dbh.query("SELECT * FROM entry").await?;
     let entries: Vec<EntryWithName> = entries.take(0)?;
+    assert_eq!(entries.len(), 2);
+    assert_eq!(entries[0].number, 42);
+    assert_eq!(entries[0].name, None);
+    assert_eq!(entries[1].number, 23);
+    assert_eq!(entries[1].name, Some(String::from("twenty three")));
     for entry in entries {
         println!(
             "{} {} {}",
@@ -82,4 +89,14 @@ async fn main() -> surrealdb::Result<()> {
     println!("---------");
 
     Ok(())
+}
+
+#[cfg(test)]
+mod test {
+    use super::main;
+
+    #[test]
+    fn check() {
+        main().unwrap();
+    }
 }
