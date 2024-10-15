@@ -469,3 +469,10 @@ TODO: index
 ![](examples/surrealdb/demo/Cargo.toml)
 ![](examples/surrealdb/demo/src/main.rs)
 
+## SurrealDB columns with schema
+{id: surrealdb-columns-with-schema}
+{i: TBD}
+
+![](examples/surrealdb/columns-with-schema/Cargo.toml)
+![](examples/surrealdb/columns-with-schema/src/main.rs)
+
