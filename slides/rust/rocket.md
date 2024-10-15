@@ -458,3 +458,11 @@ this is a simple example using the `length` filter:
 
 ![](examples/rocket/skip-route-using-guard/src/main.rs)
 
+## Rocket Guards - experiment
+{id: rocket-guards-experiment}
+{i: TBD}
+
+![](examples/rocket/guards/Cargo.toml)
+![](examples/rocket/guards/Rocket.toml)
+![](examples/rocket/guards/src/main.rs)
+
