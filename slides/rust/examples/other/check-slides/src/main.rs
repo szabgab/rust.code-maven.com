@@ -34,7 +34,11 @@ fn main() {
             continue;
         }
         if !imported_files.contains(&filename) {
-            println!("ERROR Unused file: `{}`", filename);
+            if filename.starts_with("examples/rocket/people-and-groups/templates/") {
+                continue;
+            }
+
+            println!("ERROR Unused file: `{filename}`");
             count += 1;
         }
     }

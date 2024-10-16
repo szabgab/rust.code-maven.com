@@ -474,3 +474,14 @@ this is a simple example using the `length` filter:
 ![](examples/rocket/return-result-user-id/src/main.rs)
 ![](examples/rocket/return-result-user-id/src/tests.rs)
 
+## Rocket People and groups
+{id: rocket-people-and-groups}
+{i: TBD}
+
+TODO
+
+![](examples/rocket/people-and-groups/src/db.rs)
+![](examples/rocket/people-and-groups/src/mytera.rs)
+![](examples/rocket/people-and-groups/src/main.rs)
+![](examples/rocket/people-and-groups/Rocket.toml)
+
