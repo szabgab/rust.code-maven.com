@@ -18,13 +18,14 @@ fn main() {
     let sg = Something {
         name: String::from("Foo Bar"),
         number: 42,
+        //..Default::default()   // We can enable this or leave it out, does not matter.
     };
     println!("{:?}", sg);
     assert_eq!(sg.name, "Foo Bar");
     assert_eq!(sg.number, 42);
 
     let empty = Something {
-        ..Something::default()
+        ..Default::default()
     };
     println!("{:?}", empty);
     assert_eq!(empty.name, "Rust");
@@ -32,7 +33,7 @@ fn main() {
 
     let with_name = Something {
         name: String::from("Hello"),
-        ..Something::default()
+        ..Default::default()
     };
     println!("{:?}", with_name);
     assert_eq!(with_name.name, "Hello");
@@ -40,7 +41,7 @@ fn main() {
 
     let with_number = Something {
         number: 42,
-        ..Something::default()
+        ..Default::default()
     };
     println!("{:?}", with_number);
     assert_eq!(with_number.name, "Rust");
