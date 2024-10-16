@@ -11,6 +11,8 @@ fn main() {
         .filter(|number| number.is_positive())
         .collect::<Vec<_>>();
     println!("{:?}", &positive_numbers);
+    let expected: Vec<&i32> = vec![&1, &2, &22, &23];
+    assert_eq!(positive_numbers, expected);
 
     // get vector of i32
     let positive_numbers = numbers
@@ -19,11 +21,15 @@ fn main() {
         .cloned()
         .collect::<Vec<_>>();
     println!("{:?}", &positive_numbers);
+    let expected: Vec<i32> = vec![1, 2, 22, 23];
+    assert_eq!(positive_numbers, expected);
 
     // get vector of i32 and move the numbers so we won't be able to use them again
     let big_numbers = numbers
         .into_iter()
-        .filter(|number| number > &&12)
+        .filter(|number| number > &12)
         .collect::<Vec<_>>();
     println!("{:?}", &big_numbers);
+    let expected: Vec<i32> = vec![22, 23];
+    assert_eq!(big_numbers, expected);
 }

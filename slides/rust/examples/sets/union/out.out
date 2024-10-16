@@ -1,0 +1,4 @@
+{"door", "car", "lunar", "era"}
+{"hola", "era", "lunar"}
+{"car", "hola", "lunar", "door", "era"}
+["door", "car", "lunar", "era", "hola"]
