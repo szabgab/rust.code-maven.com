@@ -1,3 +1,4 @@
-["snake", "crab", "camel", "elephant", "lizard"]
-["camel", "crab", "elephant", "lizard", "snake"]
-["crab", "camel", "snake", "lizard", "elephant"]
+["snake", "crab", "elephant", "lizard"]
+["crab", "elephant", "lizard", "snake"]
+["crab", "snake", "lizard", "elephant"]
+["crab", "snake", "lizard", "elephant"]
