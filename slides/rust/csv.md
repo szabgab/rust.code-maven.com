@@ -15,7 +15,7 @@
 ![](examples/csv/csv-stringrecord/planets.csv)
 ![](examples/csv/csv-stringrecord/Cargo.toml)
 ![](examples/csv/csv-stringrecord/src/main.rs)
-![](examples/csv/csv-stringrecord/out.txt)
+![](examples/csv/csv-stringrecord/out.out)
 
 ## Read CSV file into hashes
 {id: read-csv-file-into-hashes}
@@ -25,7 +25,7 @@
 ![](examples/csv/csv-hash/planets.csv)
 ![](examples/csv/csv-hash/Cargo.toml)
 ![](examples/csv/csv-hash/src/main.rs)
-![](examples/csv/csv-hash/out.txt)
+![](examples/csv/csv-hash/out.out)
 
 ## Read CSV file as structs
 {id: read-csv-file-into-structs}
@@ -37,13 +37,13 @@
 ![](examples/csv/csv-struct/Cargo.toml)
 ![](examples/csv/csv-struct/src/main.rs)
 
-![](examples/csv/csv-struct/out.txt)
+![](examples/csv/csv-struct/out.out)
 
 ## Read CSV to struct, add extra fields
 {id: read-csv-to-struct-with-extra-fields}
 
 ![](examples/csv/csv-struct-extra-fields/Cargo.toml)
-![](examples/csv/csv-struct-extra-fields/out.txt)
+![](examples/csv/csv-struct-extra-fields/out.out)
 ![](examples/csv/csv-struct-extra-fields/planets.csv)
 ![](examples/csv/csv-struct-extra-fields/src/main.rs)
 

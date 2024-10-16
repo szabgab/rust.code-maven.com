@@ -54,7 +54,7 @@ liquid = "0.26.4"
 
 
 ![](examples/liquid/liquid-hello-world/src/main.rs)
-![](examples/liquid/liquid-hello-world/out.txt)
+![](examples/liquid/liquid-hello-world/out.out)
 
 ## Liquid Hello World with variable
 {id: liquid-hello-world-with-variable}
@@ -65,7 +65,7 @@ liquid = "0.26.4"
 * The value of "name" is hard-coded in a variable as `str`.
 * The value of "name" is a `String` that could come from the outside world (e.g. from a file).
 
-![](examples/liquid/liquid-hello-world-variables/out.txt)
+![](examples/liquid/liquid-hello-world-variables/out.out)
 ![](examples/liquid/liquid-hello-world-variables/src/main.rs)
 
 ## Liquid Hello World read template from file
@@ -77,7 +77,7 @@ liquid = "0.26.4"
 * Instead of `parse` we can use `parse_file` to load the template from an external file.
 * This happens at run-time so you will need to supply the templates outside of the binary or the user will need to create the templates.
 
-![](examples/liquid/liquid-hello-world-from-file/out.txt)
+![](examples/liquid/liquid-hello-world-from-file/out.out)
 ![](examples/liquid/liquid-hello-world-from-file/src/main.rs)
 ![](examples/liquid/liquid-hello-world-from-file/template.txt)
 
@@ -104,14 +104,14 @@ liquid = "0.26.4"
 * Liquid has simple conditionals: `if` that we end with `endif` and the optional `else`.
 
 ![](examples/liquid/liquid-if-else/src/main.rs)
-![](examples/liquid/liquid-if-else/out.txt)
+![](examples/liquid/liquid-if-else/out.out)
 
 ## Liquid flow control: else if written as elsif
 {id: liquid-flow-control-elsif}
 {i: elsif}
 
 ![](examples/liquid/liquid-elsif/src/main.rs)
-![](examples/liquid/liquid-elsif/out.txt)
+![](examples/liquid/liquid-elsif/out.out)
 
 ## Liquid flow control: case/when
 {id: liquid-flow-control-case-when}
@@ -122,13 +122,13 @@ liquid = "0.26.4"
 * the `case` statement ends with `endcase`.
 
 ![](examples/liquid/liquid-case-when/src/main.rs)
-![](examples/liquid/liquid-case-when/out.txt)
+![](examples/liquid/liquid-case-when/out.out)
 
 ## Liquid passing more complex data
 {id: liquid-passing-more-complex-data}
 
 ![](examples/liquid/liquid-objects/src/main.rs)
-![](examples/liquid/liquid-objects/out.txt)
+![](examples/liquid/liquid-objects/out.out)
 
 ## Liquid for loop passing a vector or an array
 {id: liquid-for-loop}
@@ -139,7 +139,7 @@ liquid = "0.26.4"
 * In this example we pass a vector of strings.
 
 ![](examples/liquid/liquid-for-loop/src/main.rs)
-![](examples/liquid/liquid-for-loop/out.txt)
+![](examples/liquid/liquid-for-loop/out.out)
 
 ## Liquid vector of tuples
 {id: liquid-vector-of-tuples}
@@ -149,7 +149,7 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-vector-of-tuples/src/main.rs)
 
-![](examples/liquid/liquid-vector-of-tuples/out.txt)
+![](examples/liquid/liquid-vector-of-tuples/out.out)
 
 
 ## Liquid HashMap
@@ -161,7 +161,7 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-hashmap/src/main.rs)
 
-![](examples/liquid/liquid-hashmap/out.txt)
+![](examples/liquid/liquid-hashmap/out.out)
 
 ## Liquid for loop with if conditions
 {id: liquid-for-loop-with-if-conditions}
@@ -171,7 +171,7 @@ liquid = "0.26.4"
 {i: endif}
 
 ![](examples/liquid/liquid-loop-and-if/src/main.rs)
-![](examples/liquid/liquid-loop-and-if/out.txt)
+![](examples/liquid/liquid-loop-and-if/out.out)
 
 ## Liquid with struct
 {id: liquid-with-struct}
@@ -179,7 +179,7 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-with-struct/Cargo.toml)
 ![](examples/liquid/liquid-with-struct/src/main.rs)
-![](examples/liquid/liquid-with-struct/out.txt)
+![](examples/liquid/liquid-with-struct/out.out)
 
 
 ## Liquid with Option in a struct
@@ -190,6 +190,7 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-with-option/src/main.rs)
 
+![](examples/liquid/liquid-with-option/out.out)
 
 ## Liquid include
 {id: liquid-include}
@@ -202,13 +203,13 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-include/src/main.rs)
 
-![](examples/liquid/liquid-include/out.txt)
+![](examples/liquid/liquid-include/out.out)
 
 ## Liquid include header and footer
 {id: liquid-include-header-and-footer}
 {i: include}
 
-![](examples/liquid/liquid-include-header-footer/out.txt)
+![](examples/liquid/liquid-include-header-footer/out.out)
 ![](examples/liquid/liquid-include-header-footer/src/main.rs)
 ![](examples/liquid/liquid-include-header-footer/templates/incl/footer.txt)
 ![](examples/liquid/liquid-include-header-footer/templates/incl/header.txt)
@@ -220,9 +221,9 @@ liquid = "0.26.4"
 {i: include}
 {i: capture}
 
-![](examples/liquid/liquid-layout/out.txt)
+![](examples/liquid/liquid-layout/out.out)
 ![](examples/liquid/liquid-layout/src/main.rs)
-![](examples/liquid/liquid-layout/templates/layout.txt)
+![](examples/liquid/liquid-layout/templates/layout.out)
 ![](examples/liquid/liquid-layout/templates/page.txt)
 
 ## Liquid assign to variable in template
@@ -234,7 +235,7 @@ liquid = "0.26.4"
 ![](examples/liquid/liquid-assign/templates/page.txt)
 ![](examples/liquid/liquid-assign/templates/incl/header.txt)
 
-![](examples/liquid/liquid-assign/out.txt)
+![](examples/liquid/liquid-assign/out.out)
 
 ## Liquid filters on strings: upcase, downcase, capitalize
 {id: liquid-filters-strings}
@@ -243,7 +244,7 @@ liquid = "0.26.4"
 {i: capitalize}
 
 ![](examples/liquid/liquid-filters-strings/src/main.rs)
-![](examples/liquid/liquid-filters-strings/out.txt)
+![](examples/liquid/liquid-filters-strings/out.out)
 
 
 ## Liquid filters on numbers: plus, minus
@@ -255,7 +256,7 @@ liquid = "0.26.4"
 * Increment or decerement the number by the given number.
 
 ![](examples/liquid/liquid-filters-numbers/src/main.rs)
-![](examples/liquid/liquid-filters-numbers/out.txt)
+![](examples/liquid/liquid-filters-numbers/out.out)
 
 ## Liquid filters: first, last
 {id: liquid-filters-first-last}
@@ -267,7 +268,7 @@ first or last
 * element in an array, a vector, or a tuple
 
 ![](examples/liquid/liquid-filters-order/src/main.rs)
-![](examples/liquid/liquid-filters-order/out.txt)
+![](examples/liquid/liquid-filters-order/out.out)
 
 
 
@@ -335,7 +336,7 @@ We can use the **escape** filter on each field where we would like to avoid this
 
 ![](examples/liquid/embed-html-tags/src/main.rs)
 
-![](examples/liquid/embed-html-tags/out.txt)
+![](examples/liquid/embed-html-tags/out.out)
 
 ## Liquid TODO
 {id: liquid-todo}

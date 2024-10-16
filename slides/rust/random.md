@@ -30,4 +30,4 @@ cargo add random
 cargo run
 ```
 
-![](examples/random/show-random/out.txt)
+![](examples/random/show-random/out.out)
