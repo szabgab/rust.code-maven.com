@@ -12,16 +12,11 @@ fn main() {
         .read_line(&mut var_a)
         .expect("Failed to get input");
 
-    let var_a:f64 = var_a
-        .trim()
-        .parse()
-        .expect("Could not convert to f64");
+    let var_a: f64 = var_a.trim().parse().expect("Could not convert to f64");
 
     print!("op: ");
     io::stdout().flush().expect("Oups");
-    io::stdin()
-        .read_line(&mut op)
-        .expect("Failed to get input");
+    io::stdin().read_line(&mut op).expect("Failed to get input");
     op = op.trim().to_owned();
 
     print!("b: ");
@@ -30,10 +25,7 @@ fn main() {
         .read_line(&mut var_b)
         .expect("Failed to get input");
 
-    let var_b:f64 = var_b
-        .trim()
-        .parse()
-        .expect("Could not convert to f64");
+    let var_b: f64 = var_b.trim().parse().expect("Could not convert to f64");
 
     let res: f64;
     if op == "+" {

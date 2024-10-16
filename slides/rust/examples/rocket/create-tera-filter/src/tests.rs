@@ -20,5 +20,3 @@ fn test_index() {
     let response = client.get("/").dispatch().into_string().unwrap();
     assert!(response.contains(r#"See <a href="/hello/Foo Bar">Foo Bar</a>."#));
 }
-
-

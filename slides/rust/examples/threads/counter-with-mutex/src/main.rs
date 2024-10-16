@@ -26,4 +26,3 @@ fn count_with_mutex(threads: i32, limit: i32) -> i32 {
 
     counter.into_inner().unwrap()
 }
-

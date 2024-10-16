@@ -35,7 +35,6 @@ mod tools {
         // pub fn new_till42() -> Counter {
         //     Counter { current: 0, limit: 42 }
         // }
- 
     }
 
     impl Iterator for Counter {

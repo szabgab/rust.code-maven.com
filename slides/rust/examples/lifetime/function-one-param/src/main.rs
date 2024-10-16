@@ -32,4 +32,3 @@ fn select(text: &str) -> &'static str {
 //             "second"
 //         }
 //     }
-    

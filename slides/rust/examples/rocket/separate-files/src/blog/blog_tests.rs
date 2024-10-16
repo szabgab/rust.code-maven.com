@@ -12,5 +12,4 @@ fn check_blog() {
         "text/plain; charset=utf-8"
     );
     assert_eq!(response.into_string(), Some("Blog".into()));
-
 }

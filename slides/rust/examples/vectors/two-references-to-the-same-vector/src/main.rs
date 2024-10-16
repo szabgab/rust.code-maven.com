@@ -8,13 +8,25 @@ struct Something {
 
 fn main() {
     let va: Vec<Something> = vec![
-        Something {number: 1, text: String::from("small"), numbers: vec![1, 2, 3]},
-        Something {number: 11, text: String::from("medium"), numbers: vec![11, 12]},
-        Something {number: 101, text: String::from("large"), numbers: vec![101]},
+        Something {
+            number: 1,
+            text: String::from("small"),
+            numbers: vec![1, 2, 3],
+        },
+        Something {
+            number: 11,
+            text: String::from("medium"),
+            numbers: vec![11, 12],
+        },
+        Something {
+            number: 101,
+            text: String::from("large"),
+            numbers: vec![101],
+        },
     ];
     println!("{:#?}", va);
 
-    let vb = &va;   // use & to borrow
+    let vb = &va; // use & to borrow
     println!("{:#?}", vb);
     println!("{:#?}", va);
 }

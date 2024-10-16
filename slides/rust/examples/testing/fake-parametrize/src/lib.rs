@@ -15,12 +15,17 @@ mod tests {
         assert_eq!(result, 6);
     }
 
-    #[test] fn it_works_1_2() { test_add(1, 2, 3) }
-    #[test] fn it_works_2_3() { test_add(2, 3, 5) }
+    #[test]
+    fn it_works_1_2() {
+        test_add(1, 2, 3)
+    }
+    #[test]
+    fn it_works_2_3() {
+        test_add(2, 3, 5)
+    }
 
     fn test_add(a: u64, b: u64, expected: u64) {
         let result = add(a, b);
         assert_eq!(result, expected);
     }
-
 }

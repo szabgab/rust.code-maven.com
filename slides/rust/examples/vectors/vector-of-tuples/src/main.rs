@@ -17,7 +17,4 @@ fn main() {
     for (animal, _, _) in &animals {
         println!("{animal}");
     }
-
 }
-
-

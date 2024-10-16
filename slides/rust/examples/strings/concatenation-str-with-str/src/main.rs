@@ -6,4 +6,3 @@ fn main() {
     let text = str1.to_owned() + " " + str2;
     println!("{}", text);
 }
-

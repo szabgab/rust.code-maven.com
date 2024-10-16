@@ -20,5 +20,4 @@ fn main() {
             Some(number) => println!("It was this: {number} number"),
         };
     }
-
 }

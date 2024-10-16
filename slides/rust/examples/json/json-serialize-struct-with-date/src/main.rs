@@ -1,6 +1,6 @@
-use serde::{Serialize};
-use chrono::{Utc, DateTime};
 use chrono::serde::ts_seconds;
+use chrono::{DateTime, Utc};
+use serde::Serialize;
 
 // https://docs.rs/chrono/0.4.19/chrono/serde/index.html
 

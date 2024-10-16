@@ -30,11 +30,10 @@ fn main() {
 //     let r1 = &num;
 
 //     num += 1;
-    
+
 //     println!("{num}");
 //     println!("{r1}");
 // }
-
 
 // fn unsafe_increment() {
 
@@ -48,7 +47,7 @@ fn main() {
 //         println!("r1 is: {}", *r1);
 //         println!("r2 is: {}", *r2);
 //         *r2 += 1;
-    
+
 //     }
 //     println!("{num}");
 // }

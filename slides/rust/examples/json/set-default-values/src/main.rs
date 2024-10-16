@@ -1,16 +1,13 @@
 use serde::Deserialize;
 
-
 #[derive(Deserialize, Debug)]
 #[allow(dead_code)]
 struct Person {
     #[serde(default = "get_default_fname")]
     fname: String,
 
-
     #[serde(default = "get_default_false")]
     married: bool,
-
 }
 
 fn get_default_fname() -> String {
@@ -20,7 +17,6 @@ fn get_default_fname() -> String {
 fn get_default_false() -> bool {
     false
 }
-
 
 fn main() {
     let content = "{}";

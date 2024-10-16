@@ -7,11 +7,10 @@ fn main() {
 
 fn get_graph() -> Vec<Point> {
     vec![
-        Point {x: 0, y: 0},
-        Point {x: 10, y: 20},
-        Point {x: 30, y: 40},
+        Point { x: 0, y: 0 },
+        Point { x: 10, y: 20 },
+        Point { x: 30, y: 40 },
     ]
-
 }
 
 fn move_graph(graph: &mut Vec<Point>) {
@@ -20,11 +19,9 @@ fn move_graph(graph: &mut Vec<Point>) {
     }
 }
 
-
 #[derive(Debug)]
 #[allow(dead_code)]
 struct Point {
     x: i32,
     y: i32,
 }
-

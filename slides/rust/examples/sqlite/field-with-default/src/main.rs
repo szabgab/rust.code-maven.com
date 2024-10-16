@@ -34,7 +34,9 @@ fn insert_qa(conn: &Connection, question: &str, answer: &str) {
 
 fn insert_q(conn: &Connection, question: &str) {
     // Error { code: Some(1), message: Some("table qa has 2 columns but 1 values were supplied") }
-    let mut statement = conn.prepare("INSERT INTO qa (question) VALUES (:question);").unwrap();
+    let mut statement = conn
+        .prepare("INSERT INTO qa (question) VALUES (:question);")
+        .unwrap();
     statement
         .bind((":question", Value::String(question.into())))
         .unwrap();

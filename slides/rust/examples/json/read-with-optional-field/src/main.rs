@@ -1,6 +1,5 @@
 use serde::Deserialize;
 
-
 #[derive(Deserialize, Debug)]
 #[allow(dead_code)]
 struct Person {
@@ -16,7 +15,6 @@ fn get_default_language() -> String {
     String::from("Rust")
 }
 
-
 fn main() {
     let filename = get_filename();
 
@@ -29,7 +27,6 @@ fn main() {
         None => println!("We don't know if {} is married or not", data.name),
         Some(val) => println!("Marrige status: {val}"),
     }
-
 }
 
 fn get_filename() -> String {
@@ -40,4 +37,3 @@ fn get_filename() -> String {
     }
     args[1].to_owned()
 }
-

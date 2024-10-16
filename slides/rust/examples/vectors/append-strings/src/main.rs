@@ -11,12 +11,15 @@ macro_rules! prt {
     };
 }
 
-
 fn main() {
     let mut fruits1 = vec![String::from("apple"), String::from("banana")];
     prt!(fruits1);
 
-    let mut fruits2 = vec![String::from("peach"), String::from("kiwi"), String::from("mango")];
+    let mut fruits2 = vec![
+        String::from("peach"),
+        String::from("kiwi"),
+        String::from("mango"),
+    ];
     prt!(fruits2);
 
     prt!(fruits2[1]);

@@ -15,4 +15,3 @@ fn combine(fname: &str, lname: &str) -> String {
     //format!("{fname} {lname}")
     fname.to_owned() + " " + lname
 }
-

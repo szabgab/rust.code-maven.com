@@ -1,5 +1,5 @@
 fn main() {
-    nulled_area(20,30);
+    nulled_area(20, 30);
 }
 
 fn nulled_area(width: u8, length: u8) -> u8 {
@@ -13,9 +13,8 @@ fn nulled_area(width: u8, length: u8) -> u8 {
 
 fn checked_area(width: u8, length: u8) -> Option<u8> {
     width.checked_mul(length)
-//    let area_option = width.checked_mul(length);
+    //    let area_option = width.checked_mul(length);
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -32,5 +31,4 @@ mod tests {
         assert_eq!(checked_area(3, 4), Some(12));
         assert_eq!(checked_area(20, 20), None);
     }
-
 }

@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use rocket_dyn_templates::tera::Tera;
-use tera::{Result, Value, to_value};
+use tera::{to_value, Result, Value};
 
 fn my_len(val: &Value, _map: &HashMap<String, Value>) -> Result<Value> {
     let s = val.as_str().unwrap();

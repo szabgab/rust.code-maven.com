@@ -4,7 +4,7 @@ fn main() {
 
     let result = count_with_messages(threads, limit);
     println!("{}", result);
-    assert_eq!(result, threads*limit);
+    assert_eq!(result, threads * limit);
 }
 
 fn count_with_messages(threads: i32, limit: i32) -> i32 {

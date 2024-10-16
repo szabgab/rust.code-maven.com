@@ -4,13 +4,11 @@
 //    };
 //}
 
-
 // const RANDOM_CONSTANT: u16 = 42;
 // This is not very random, is it?
 //
 // const RANDOM_CONSTANT: u16 = rand::random();
 // cannot call non-const fn `random::<u16>` in constants
-
 
 extern crate random_constant_macro;
 use random_constant_macro::get_random;
@@ -23,5 +21,4 @@ fn main() {
     println!("random_number: {random_number}");
 
     println!("random_constant: {RANDOM_CONSTANT}");
-
 }

@@ -1,11 +1,10 @@
+use chrono::{DateTime, Utc};
 use handlebars::Handlebars;
 use serde_json::json;
 use std::error::Error;
 use std::fs::File;
-use std::io::Write;
 use std::io::Read;
-use chrono::{Utc, DateTime};
-
+use std::io::Write;
 
 fn main() {
     let filename = "hello.html";
@@ -34,11 +33,10 @@ fn read_template(template_file: &str) -> String {
     match File::open(template_file) {
         Ok(mut file) => {
             file.read_to_string(&mut template).unwrap();
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", template_file, error);
-        },
+        }
     }
     template
 }
-

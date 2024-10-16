@@ -1,13 +1,12 @@
 #[macro_use]
 extern crate rocket;
 
-use rocket::request::{self, FromRequest, Request};
-use rocket::outcome::Outcome;
 use rocket::http::Status;
+use rocket::outcome::Outcome;
+use rocket::request::{self, FromRequest, Request};
 
 #[derive(Debug)]
 struct GuardA;
-
 
 #[rocket::async_trait]
 impl<'r> FromRequest<'r> for GuardA {
@@ -22,7 +21,6 @@ impl<'r> FromRequest<'r> for GuardA {
 #[derive(Debug)]
 struct OddGuard;
 
-
 #[rocket::async_trait]
 impl<'r> FromRequest<'r> for OddGuard {
     type Error = ();
@@ -33,7 +31,7 @@ impl<'r> FromRequest<'r> for OddGuard {
             None => {
                 println!("none");
                 Outcome::Success(OddGuard)
-            },
+            }
             Some(val) => {
                 println!("{val:?}");
                 match val {
@@ -42,8 +40,8 @@ impl<'r> FromRequest<'r> for OddGuard {
                             Outcome::Success(OddGuard)
                         } else {
                             Outcome::Error((Status::BadRequest, ()))
-                        }                                
-                    },
+                        }
+                    }
                     Err(err) => {
                         println!("{err}");
                         Outcome::Error((Status::BadRequest, ()))
@@ -53,7 +51,6 @@ impl<'r> FromRequest<'r> for OddGuard {
         }
     }
 }
-
 
 // #[derive(Debug)]
 // struct Alfa {
@@ -92,7 +89,6 @@ impl<'r> FromRequest<'r> for OddGuard {
 
 #[get("/")]
 async fn index() -> String {
-
     String::from("Hello, world!")
 }
 
@@ -107,7 +103,6 @@ async fn number(num: u32, g: OddGuard) -> String {
     rocket::info!("{num} {g:?}");
     String::from("Guarded")
 }
-
 
 #[launch]
 fn rocket() -> _ {

@@ -1,12 +1,9 @@
-
 fn main() {
     helper::show_animal();
 
     let animal = helper::get_animal();
     println!("{:?}", animal);
-
 }
-
 
 mod helper {
 
@@ -16,7 +13,6 @@ mod helper {
         Cat,
         Dog,
     }
-
 
     pub fn show_animal() {
         let animal = Animal::Cat;

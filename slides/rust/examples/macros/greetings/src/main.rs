@@ -1,6 +1,6 @@
 macro_rules! greet {
     () => {
-        println!("Hello World");   
+        println!("Hello World");
     };
 
     (joe) => {
@@ -9,7 +9,7 @@ macro_rules! greet {
 
     (mary jean) => {
         println!("Hi Mary!")
-    }
+    };
 }
 
 macro_rules! s {
@@ -17,7 +17,6 @@ macro_rules! s {
         String::from($name)
     };
 }
-
 
 macro_rules! strings {
     ($( $name: expr ),+) => {
@@ -50,5 +49,3 @@ fn main() {
     fruits.push(s!["banana"]);
     println!("{:#?}", fruits);
 }
-
-

@@ -4,7 +4,6 @@ fn main() {
     let path = get_dirname();
     let path = Path::new(&path);
     list_dir(path);
-
 }
 
 fn get_dirname() -> String {
@@ -20,7 +19,8 @@ fn get_dirname() -> String {
 fn list_dir(path: &Path) {
     println!("path: {:?}", path);
     match path.read_dir() {
-        Ok(dh) => {  // A ReadDir instance
+        Ok(dh) => {
+            // A ReadDir instance
             for entry in dh {
                 println!("{:?}", entry);
                 if let Ok(entry) = entry {
@@ -30,8 +30,7 @@ fn list_dir(path: &Path) {
                     }
                 }
             }
-        },
+        }
         Err(err) => println!("Could not open directory '{:?}': {}", path, err),
     }
 }
-

@@ -6,7 +6,6 @@ struct Person {
     lname: String,
 }
 
-
 fn main() {
     let a = Person {
         fname: String::from("Steve"),
@@ -17,7 +16,6 @@ fn main() {
         fname: String::from("Bill"),
         lname: String::from("Gates"),
     };
-
 
     let mut lookup = HashMap::new();
     lookup.insert(a, "Apple");

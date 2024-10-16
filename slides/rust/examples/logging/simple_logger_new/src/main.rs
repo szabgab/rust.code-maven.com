@@ -1,4 +1,3 @@
-
 fn main() {
     simple_logger::SimpleLogger::new().init().unwrap();
 
@@ -8,4 +7,3 @@ fn main() {
     log::warn!("This is a sample warn.");
     log::error!("This is a sample error.");
 }
-

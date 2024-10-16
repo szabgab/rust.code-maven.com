@@ -7,4 +7,3 @@ fn main() {
     log::warn!("This is a sample warn.");
     log::error!("This is a sample error.");
 }
-

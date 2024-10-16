@@ -7,7 +7,6 @@ fn main() {
 fn do_something() {
     let age = 42;
 
-
     let display = || println!("The age is {age}");
 
     display();
@@ -15,7 +14,6 @@ fn do_something() {
 
 fn do_something_more() {
     let age = 42;
-
 
     let display = || {
         println!("Before");
@@ -28,7 +26,6 @@ fn do_something_more() {
 
 fn change_something() {
     let mut age = 42;
-
 
     let mut change = || {
         age = 43;

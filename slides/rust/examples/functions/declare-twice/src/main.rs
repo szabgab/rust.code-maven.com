@@ -4,7 +4,7 @@ fn main() {
 }
 
 fn add(x: i32, y: i32) {
-    let z = x+y;
+    let z = x + y;
     println!("{z}");
 }
 

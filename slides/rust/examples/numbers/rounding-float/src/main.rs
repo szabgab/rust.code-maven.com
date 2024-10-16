@@ -10,7 +10,7 @@ fn main() {
 
     println!("");
 
-    let x:f32 = 3.14159;
+    let x: f32 = 3.14159;
     println!("{x}");
     println!("{:.2}", x);
     let y = (x * 100.0).round() / 100.0;

@@ -1,6 +1,13 @@
 macro_rules! prt {
     ($var: expr) => {
-        println!("{:2} {:2} {:p} {:?} {:?}", $var.len(), $var.capacity(), &$var, $var.as_ptr(), $var);
+        println!(
+            "{:2} {:2} {:p} {:?} {:?}",
+            $var.len(),
+            $var.capacity(),
+            &$var,
+            $var.as_ptr(),
+            $var
+        );
     };
 }
 fn main() {
@@ -25,5 +32,3 @@ fn main() {
     prt!(animals[1]);
     prt!(animals[2]);
 }
-
-

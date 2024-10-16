@@ -1,7 +1,7 @@
 fn main() {
     let string1 = String::from("Apple");
     let string2 = String::from("Banana");
-    let str3    = "Peach";
+    let str3 = "Peach";
 
     let text = format!("{}-{}-{}-{}", string1, string2, str3, "other");
     println!("{}", text);
@@ -9,4 +9,3 @@ fn main() {
     println!("{}", string2);
     println!("{}", str3);
 }
-

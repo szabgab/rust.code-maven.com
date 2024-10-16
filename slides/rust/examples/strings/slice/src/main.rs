@@ -1,11 +1,11 @@
 fn main() {
     let text = String::from("The black cat: 🐈‍ climbed the green tree: 🌳!");
     println!("{}", text);
-    println!("'{}'", &text[4..4]);  // ''  empty string
+    println!("'{}'", &text[4..4]); // ''  empty string
     println!("'{}'", &text[4..=4]); // 'b'
-    println!("'{}'", &text[4..9]);  // 'black'
-    println!("'{}'", &text[30..]);  // ' the green tree: 🌳!'
-    println!("'{}'", &text[..4]);   // 'The '
+    println!("'{}'", &text[4..9]); // 'black'
+    println!("'{}'", &text[30..]); // ' the green tree: 🌳!'
+    println!("'{}'", &text[..4]); // 'The '
 
     println!("'{}'", &text[15..22]); // '🐈‍'
 

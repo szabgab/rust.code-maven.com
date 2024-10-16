@@ -10,9 +10,9 @@ fn main() {
                 let line = line.unwrap();
                 println!("{}. {}", index + 1, line);
             }
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", filename, error);
-        },
+        }
     }
 }

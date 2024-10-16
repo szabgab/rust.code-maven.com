@@ -1,5 +1,4 @@
 fn main() {
-
     let x = 12345i16;
     let y = 2345678i32;
     //println!("{}", x as i64 + y as i64);
@@ -21,8 +20,9 @@ fn main() {
 //    num.into()
 //}
 
-
-fn any_number<Integer: Into<f64> +  Copy + std::fmt::Debug + std::fmt::Display>(num: Integer) -> f64 {
+fn any_number<Integer: Into<f64> + Copy + std::fmt::Debug + std::fmt::Display>(
+    num: Integer,
+) -> f64 {
     //println!("{:?}", num);
     num.into()
 }

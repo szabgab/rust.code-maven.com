@@ -2,9 +2,13 @@ use sqlite::State;
 
 fn main() {
     let connection = sqlite::open(":memory:").unwrap();
-    connection.execute("CREATE TABLE users (name TEXT, age INTEGER, grade INTEGER);").unwrap();
+    connection
+        .execute("CREATE TABLE users (name TEXT, age INTEGER, grade INTEGER);")
+        .unwrap();
 
-    let mut insert_statement = connection.prepare("INSERT INTO users VALUES (:name, :age, :grade);").unwrap();
+    let mut insert_statement = connection
+        .prepare("INSERT INTO users VALUES (:name, :age, :grade);")
+        .unwrap();
 
     //insert_statement
     match insert_statement.bind_iter::<_, (_, sqlite::Value)>([
@@ -28,8 +32,6 @@ fn main() {
     }
     let _ = insert_statement.next();
 
-
-
     let query = "SELECT * FROM users";
     let mut statement = connection.prepare(query).unwrap();
 
@@ -38,5 +40,4 @@ fn main() {
         println!("age = {}", statement.read::<i64, _>("age").unwrap());
         println!("grade = {}", statement.read::<i64, _>("grade").unwrap());
     }
-
 }

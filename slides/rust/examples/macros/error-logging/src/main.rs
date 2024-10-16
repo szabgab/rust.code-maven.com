@@ -1,6 +1,5 @@
 use simple_logger::SimpleLogger;
 
-
 macro_rules! err_log_default {
     ($result:expr, $default:expr) => {
         match $result {
@@ -10,7 +9,7 @@ macro_rules! err_log_default {
                 $default
             }
         }
-    }
+    };
 }
 
 fn main() {
@@ -25,5 +24,3 @@ fn main() {
 
     log::info!("End example");
 }
-
-

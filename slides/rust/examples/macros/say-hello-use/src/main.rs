@@ -5,4 +5,3 @@ fn main() {
     say_hello!(Joe);
     say_hello!(Jane);
 }
-

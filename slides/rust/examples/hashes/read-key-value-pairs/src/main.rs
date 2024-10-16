@@ -1,6 +1,6 @@
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use std::collections::HashMap;
 
 fn main() {
     let filename = "key_value_pairs.txt";
@@ -18,10 +18,10 @@ fn main() {
                 //println!("{:?}", parts[0]);
                 data.insert(parts[0].to_owned(), parts[1].to_owned());
             }
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", filename, error);
-        },
+        }
     }
     println!("{:?}", data);
 }

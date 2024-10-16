@@ -15,7 +15,5 @@ fn main() {
         println!("{}", part);
     }
 
-
     //println!("{}", parts[0]); // cannot index into a value of type `SplitWhitespace<'_>`
-
 }

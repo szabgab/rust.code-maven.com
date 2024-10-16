@@ -38,7 +38,6 @@ fn main() {
     // let d3 = Point3D::from(p2); // Error: mismatched types  expected `Point3D`, found `Point2D`
     // TODO should no it also mention the possibility to create a From or Into trait?
 
-
     let d3 = Point3D::from(&p2);
     println!("{d3:?}");
 
@@ -48,6 +47,4 @@ fn main() {
     //let x3 = (&p2).into::<Point3D>();
     let x3 = Into::<Point3D>::into(&p2);
     println!("{x3:?}");
-
-
 }

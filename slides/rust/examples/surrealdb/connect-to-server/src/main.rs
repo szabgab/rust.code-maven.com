@@ -1,7 +1,6 @@
-use surrealdb::{Error, Surreal};
-use surrealdb::opt::auth::Root;
 use surrealdb::engine::remote::ws::Ws;
-
+use surrealdb::opt::auth::Root;
+use surrealdb::{Error, Surreal};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {

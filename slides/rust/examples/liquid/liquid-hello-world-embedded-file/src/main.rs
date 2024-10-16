@@ -1,8 +1,10 @@
 fn main() {
     let template = include_str!("../template.txt");
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse(template).unwrap();
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
 
     let name = String::from("Liquid");
     let globals = liquid::object!({

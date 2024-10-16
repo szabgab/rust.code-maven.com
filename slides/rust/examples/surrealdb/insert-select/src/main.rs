@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
 use surrealdb::engine::remote::ws::Ws;
+use surrealdb::opt::auth::Root;
 use surrealdb::sql::Thing;
 use surrealdb::Surreal;
-use surrealdb::opt::auth::Root;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Message {
@@ -25,7 +25,8 @@ async fn main() -> surrealdb::Result<()> {
     db.signin(Root {
         username: "root",
         password: "root",
-    }).await?;
+    })
+    .await?;
 
     db.use_ns("demo").use_db("demo-1").await?;
 

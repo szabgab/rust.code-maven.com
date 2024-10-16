@@ -1,6 +1,6 @@
 struct Point {
     x: f64,
-    y: f64
+    y: f64,
 }
 
 impl Point {
@@ -10,7 +10,7 @@ impl Point {
 }
 
 fn main() {
-    let pnt = Point {x: 2.0, y: 3.0};
+    let pnt = Point { x: 2.0, y: 3.0 };
     println!("x: {}", pnt.x);
     println!("y: {}", pnt.y);
 

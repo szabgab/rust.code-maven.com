@@ -97,7 +97,6 @@ fn test_with_match_and() {
     assert_eq!(with_match_and(false), String::from("Missing"));
 }
 
-
 #[test]
 fn test_with_macro() {
     assert_eq!(with_match_and(true), String::from("Process text"));

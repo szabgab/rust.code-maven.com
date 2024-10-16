@@ -14,4 +14,3 @@ fn longer<'a>(x: &'a str, y: &'a str) -> &'a str {
         y
     }
 }
-

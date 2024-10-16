@@ -10,10 +10,7 @@ fn main() {
         .read_line(&mut height)
         .expect("Failed to get input");
 
-    let height:i32 = height
-        .trim()
-        .parse()
-        .expect("Could not convert to i32");
+    let height: i32 = height.trim().parse().expect("Could not convert to i32");
 
-    println!("Your height is 1 cm less than {}", height+1);
+    println!("Your height is 1 cm less than {}", height + 1);
 }

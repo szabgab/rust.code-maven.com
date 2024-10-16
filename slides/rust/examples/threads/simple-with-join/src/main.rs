@@ -4,7 +4,7 @@ fn main() {
     println!("Before starting: {:?}", thread::current().id());
 
     let handle = thread::spawn(|| {
-           println!("In thread {:?}", thread::current().id());
+        println!("In thread {:?}", thread::current().id());
     });
 
     println!("Before join: {:?}", thread::current().id());

@@ -3,10 +3,8 @@ fn main() {
     println!("{name}");
     borrow(&name);
     println!("{name}");
-
 }
 
 fn borrow(name: &str) {
     println!("in function: {name}");
 }
-

@@ -11,8 +11,6 @@ macro_rules! prt {
     };
 }
 
-
-
 fn main() {
     let mut numbers1 = vec![10, 11];
     prt!(numbers1);

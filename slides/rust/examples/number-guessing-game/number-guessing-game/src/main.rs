@@ -1,6 +1,6 @@
+use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-use rand::Rng;
 
 fn main() {
     println!("Number Guessing game");
@@ -29,7 +29,7 @@ fn main() {
 
         let guess: u32 = match guess.parse() {
             Ok(num) => num,
-            Err(err)  => {
+            Err(err) => {
                 println!("Error: {err}");
                 continue;
             }

@@ -65,7 +65,6 @@ fn main() {
 
     println!("{output_2}");
 
-
     // verify
     let output = output_1 + &output_2;
     let expected = std::fs::read_to_string("out.txt").unwrap();

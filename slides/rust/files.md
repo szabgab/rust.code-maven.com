@@ -113,11 +113,6 @@
 
 ![](examples/files/chdir/src/main.rs)
 
-## open file error handling
-{id: open-file-error-handling}
-
-![](examples/files/open-file-handling/src/main.rs)
-
 ## Append to file
 {id: append-to-file}
 {i: append}

@@ -5,6 +5,10 @@ fn main() {
     println!("{}", Blue.bold().paint("blue"));
     println!("{}", Green.dimmed().paint("green"));
 
-    println!("Hello {} sky and {} grass!", Blue.bold().paint("blue"), Green.bold().paint("green"));
+    println!(
+        "Hello {} sky and {} grass!",
+        Blue.bold().paint("blue"),
+        Green.bold().paint("green")
+    );
     println!("{}", Red.bold().paint("red"));
 }

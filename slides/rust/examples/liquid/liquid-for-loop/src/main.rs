@@ -6,8 +6,10 @@ fn main() {
     ";
 
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse(template).unwrap();
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
 
     //let colors: [&str; 3] = ["red", "green", "blue"];
     let colors = vec!["red", "green", "blue"];

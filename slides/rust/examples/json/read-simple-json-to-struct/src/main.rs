@@ -20,6 +20,4 @@ fn main() {
     // Using the Turbofixh syntax
     let other = serde_json::from_str::<Point>(&content).unwrap();
     println!("other = {:?}", other);
-
 }
-

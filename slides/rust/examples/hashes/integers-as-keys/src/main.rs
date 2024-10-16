@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-
 fn main() {
     let mut lookup = HashMap::new();
     lookup.insert(0, "Sunday");

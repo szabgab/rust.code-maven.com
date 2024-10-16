@@ -1,6 +1,8 @@
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 
-#[cfg(test)] mod tests;
+#[cfg(test)]
+mod tests;
 
 use rocket::response::content;
 
@@ -22,8 +24,8 @@ impl<'r> FromParam<'r> for User {
                 } else {
                     Err("bad uid")
                 }
-            },
-            Err(_) => Err("not a usize")
+            }
+            Err(_) => Err("not a usize"),
         }
     }
 }

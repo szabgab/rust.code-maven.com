@@ -4,7 +4,6 @@ struct Thing {
     name: String,
 }
 
-
 fn main() {
     let a = Thing {
         number: 42,
@@ -33,5 +32,4 @@ fn main() {
     println!("{}", a < d); // because 42 < 43
                            // the comparisions is in the order of declaraion of the fields
                            // So the `name` field is not checked here
-
 }

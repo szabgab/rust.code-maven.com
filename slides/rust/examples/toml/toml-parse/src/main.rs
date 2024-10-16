@@ -1,6 +1,5 @@
 use toml::Table;
 
-
 fn main() {
     parse_toml_pairs();
 }

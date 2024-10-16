@@ -1,7 +1,7 @@
 macro_rules! s {
     ($text:expr) => {
         String::from($text)
-    }
+    };
 }
 
 fn main() {

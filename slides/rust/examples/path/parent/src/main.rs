@@ -25,6 +25,4 @@ fn main() {
         Some(val) => println!("ok {}", val.display()),
         None => println!("No parent"),
     }
-
-
 }

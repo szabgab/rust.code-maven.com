@@ -3,7 +3,6 @@ fn main() {
     in_main();
 }
 
-
 fn in_main() {
     println!("in_main");
 }

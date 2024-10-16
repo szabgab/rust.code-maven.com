@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use tera::{Context, Result, Tera, Value, to_value};
+use tera::{to_value, Context, Result, Tera, Value};
 
 fn fixed_filter(_val: &Value, _map: &HashMap<String, Value>) -> Result<Value> {
     Ok(to_value("some fixed value").unwrap())

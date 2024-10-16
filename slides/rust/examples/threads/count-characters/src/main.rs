@@ -10,9 +10,8 @@ fn main() {
             println!("{:#?}", &data);
             add(&mut total, &data);
             println!("{:#?}", total);
-        }    
+        }
     } else {
-    
     }
 }
 
@@ -35,7 +34,7 @@ fn count_characters(text: &str) -> HashMap<char, u32> {
     counter
 }
 
-fn add(total: &mut HashMap<char, u32>, other : &HashMap<char, u32>) {
+fn add(total: &mut HashMap<char, u32>, other: &HashMap<char, u32>) {
     for (key, value) in other.iter() {
         *total.entry(*key).or_insert(0) += value;
     }

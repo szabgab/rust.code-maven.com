@@ -48,14 +48,13 @@ async fn main() -> surrealdb::Result<()> {
 async fn add_courses(db: &Surreal<Db>) -> surrealdb::Result<()> {
     for name in ["Chemistry", "Biology", "Physics"] {
         let courses: Vec<Course> = db
-        .create(COURSE)
-        .content(Course {
-            id: Thing::from((COURSE, Id::rand())),
-            name: name.to_owned(),
-        })
-        .await?;
+            .create(COURSE)
+            .content(Course {
+                id: Thing::from((COURSE, Id::rand())),
+                name: name.to_owned(),
+            })
+            .await?;
         println!("course added: {courses:?}");
-
     }
 
     Ok(())

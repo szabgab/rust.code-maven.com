@@ -31,7 +31,6 @@ fn check_main() {
     assert!(html.contains(r#"slug: "main" content: Main page"#));
 }
 
-
 #[test]
 fn check_about() {
     let client = Client::tracked(super::rocket()).unwrap();
@@ -46,7 +45,6 @@ fn check_about() {
     //println!("{html}");
     assert!(html.contains(r#"slug: "about" content: About page"#));
 }
-
 
 #[test]
 fn check_missing_page() {

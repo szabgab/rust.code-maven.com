@@ -5,6 +5,5 @@ fn main() {
     println!("{x} / {y} = {div}"); // 8 / 3 = 2
 
     let div = x as f32 / y as f32;
-    println!("{x} / {y} = {div}");  // 8 / 3 = 2.6666667
-
+    println!("{x} / {y} = {div}"); // 8 / 3 = 2.6666667
 }

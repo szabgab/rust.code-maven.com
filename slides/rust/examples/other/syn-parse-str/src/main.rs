@@ -9,7 +9,6 @@ fn main() {
     cases();
 }
 
-
 fn run() -> Result<()> {
     let code = "..";
     let expr = syn::parse_str::<Expr>(code)?;
@@ -23,8 +22,10 @@ fn run() -> Result<()> {
 }
 
 fn cases() {
-    assert!(matches!(syn::parse_str::<Expr>("..").unwrap(), syn::Expr::Range(_expr)));
-
+    assert!(matches!(
+        syn::parse_str::<Expr>("..").unwrap(),
+        syn::Expr::Range(_expr)
+    ));
 
     //let res = syn::parse_str::<Expr>("2 == 3").unwrap();
     //assert!(matches!(res, syn::Expr::Range(_expr)));

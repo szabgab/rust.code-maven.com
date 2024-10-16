@@ -1,14 +1,8 @@
 macro_rules! prt {
     ($var:expr) => {
-        println!(
-            "{:2} {:2} {:?}",
-            $var.len(),
-            $var.capacity(),
-            $var,
-        );
+        println!("{:2} {:2} {:?}", $var.len(), $var.capacity(), $var,);
     };
 }
-
 
 fn main() {
     let mut text = String::new();

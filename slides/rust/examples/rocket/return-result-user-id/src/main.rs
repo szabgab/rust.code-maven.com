@@ -5,23 +5,22 @@ use rocket::form::Form;
 use rocket::http::Status;
 use rocket::response::{content, Redirect};
 
-
 #[derive(FromForm)]
 struct LoginForm<'r> {
     username: &'r str,
     password: &'r str,
 }
 
-
 #[get("/")]
 fn index() -> content::RawHtml<&'static str> {
-    content::RawHtml(r#"
+    content::RawHtml(
+        r#"
     <form method="POST" action="/login">
     Username: <input name="username"> Password: <input type="password" name="password"> <input type="submit" value="Login">
     </form>
-    "#)
+    "#,
+    )
 }
-
 
 #[post("/login", data = "<input>")]
 fn login(input: Form<LoginForm>) -> std::result::Result<Redirect, Status> {

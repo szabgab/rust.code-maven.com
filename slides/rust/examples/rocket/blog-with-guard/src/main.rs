@@ -1,13 +1,14 @@
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 
-#[cfg(test)] mod tests;
+#[cfg(test)]
+mod tests;
 
-use rocket::response::content;
+use rocket::fs::relative;
+use rocket::http::Status;
 use rocket::outcome::Outcome;
 use rocket::request::{self, FromRequest, Request};
-use rocket::http::Status;
-use rocket::fs::relative;
-
+use rocket::response::content;
 
 struct MyGuard;
 
@@ -32,19 +33,19 @@ impl<'r> FromRequest<'r> for MyGuard {
     }
 }
 
-
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(r#"
+    let html = format!(
+        r#"
     <a href="/blog/main">main</a><br>
     <a href="/blog/missing">missing</a><br>
-    "#);
+    "#
+    );
     content::RawHtml(html)
 }
 
 #[get("/blog/<slug>")]
 fn blog(slug: &str, _g: MyGuard) -> content::RawHtml<String> {
-
     let mut filepath = std::path::PathBuf::from(relative!("pages")).join(slug);
     filepath.set_extension("md");
     let content = std::fs::read_to_string(filepath).unwrap();
@@ -54,9 +55,7 @@ fn blog(slug: &str, _g: MyGuard) -> content::RawHtml<String> {
     content::RawHtml(html)
 }
 
-
 #[launch]
 fn rocket() -> _ {
     rocket::build().mount("/", routes![index, blog])
 }
-

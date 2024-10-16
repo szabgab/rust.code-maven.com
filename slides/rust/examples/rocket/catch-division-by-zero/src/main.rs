@@ -1,17 +1,19 @@
 #[macro_use]
 extern crate rocket;
 
+use rocket::http::Status;
 use rocket::response::content;
 use rocket::Request;
-use rocket::http::Status;
 
 #[get("/")]
 fn index() -> content::RawHtml<&'static str> {
-    content::RawHtml(r#"
+    content::RawHtml(
+        r#"
     <form action="/divide" method="GET">
     Divide <input name="a"> by <input name="b"> <input type="submit" value="Divide">
     </form>
-    "#)
+    "#,
+    )
 }
 
 #[get("/divide?<a>&<b>")]
@@ -24,9 +26,12 @@ fn divide(a: i32, b: i32) -> content::RawHtml<String> {
 fn internal_error(status: Status, req: &Request) -> content::RawHtml<String> {
     let reason = status.reason().unwrap_or_default();
     rocket::error!("Error: {reason} in {}", req.uri());
-    content::RawHtml(format!(r#"
+    content::RawHtml(format!(
+        r#"
     Internal error: '{reason}' {}
-    "#, req.uri()))
+    "#,
+        req.uri()
+    ))
 }
 
 #[launch]
@@ -68,7 +73,6 @@ mod tests {
         );
         let html = response.into_string().unwrap();
         assert_eq!(html, "10 / 5 = 2");
-        
     }
 
     #[test]
@@ -84,7 +88,5 @@ mod tests {
         let html = response.into_string().unwrap();
         println!("{html}");
         assert!(html.contains("Internal error"));
-        
     }
-
 }

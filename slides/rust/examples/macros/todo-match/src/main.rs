@@ -8,10 +8,10 @@ fn main() {
     match args[1].as_str() {
         "foo" => {
             println!("We are handling foo")
-        },
-        "bar"  => {
+        }
+        "bar" => {
             println!("We are handling bar")
-        },
-        name => todo!("We still need to implement for {name}")
+        }
+        name => todo!("We still need to implement for {name}"),
     };
 }

@@ -1,5 +1,9 @@
 fn main() {
-    let texts = [String::from("Hello"), String::from("Abc"), String::from("שלום")];
+    let texts = [
+        String::from("Hello"),
+        String::from("Abc"),
+        String::from("שלום"),
+    ];
     for text in texts {
         let reversed = reverse(&text);
         let original = reverse(&reversed);

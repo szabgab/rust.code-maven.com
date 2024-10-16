@@ -1,4 +1,3 @@
-
 fn main() {
     {
         let random_bool: bool = rand::random();

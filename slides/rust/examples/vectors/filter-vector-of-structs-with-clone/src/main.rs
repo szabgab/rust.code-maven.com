@@ -1,5 +1,4 @@
-#[derive(Debug)]
-#[derive(Clone)]
+#[derive(Debug, Clone)]
 #[allow(dead_code)]
 struct Something {
     number: i32,
@@ -9,15 +8,31 @@ struct Something {
 
 fn main() {
     let va: Vec<Something> = vec![
-        Something {number: 1, text: String::from("small"), numbers: vec![1, 2, 3]},
-        Something {number: 11, text: String::from("medium"), numbers: vec![11, 12]},
-        Something {number: 101, text: String::from("large"), numbers: vec![101]},
+        Something {
+            number: 1,
+            text: String::from("small"),
+            numbers: vec![1, 2, 3],
+        },
+        Something {
+            number: 11,
+            text: String::from("medium"),
+            numbers: vec![11, 12],
+        },
+        Something {
+            number: 101,
+            text: String::from("large"),
+            numbers: vec![101],
+        },
     ];
     println!("{:#?}", &va);
 
     // This needs the Clone trait above and I am not sure if this does not mean that we duplicate
     // the data.
-    let v_big = va.iter().filter(|thing| thing.number > 20).cloned().collect::<Vec<Something>>();
+    let v_big = va
+        .iter()
+        .filter(|thing| thing.number > 20)
+        .cloned()
+        .collect::<Vec<Something>>();
     //let v_big = &va.into_iter().filter(|thing| thing.number > 20).collect::<Vec<Something>>();
     println!("{:#?}", &v_big);
     println!("{:#?}", &va);

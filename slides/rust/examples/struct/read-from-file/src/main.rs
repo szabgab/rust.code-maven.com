@@ -14,7 +14,6 @@ fn main() {
     println!("{:?}", animals);
 }
 
-
 fn read_file() -> Result<Vec<Animal>, Box<dyn Error>> {
     let filename = "animals.txt";
     let fh = File::open(filename)?;

@@ -7,5 +7,4 @@ fn main() {
     // println!("{:?}", letters.collect());
     println!("Hello");
     // println!('Hello'); // error: character literal may only contain one codepoint
-
 }

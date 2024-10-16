@@ -8,5 +8,3 @@ fn main() {
 fn greet(text: &str) {
     println!("Greet: {text}");
 }
-
-

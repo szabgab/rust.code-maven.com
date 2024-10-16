@@ -6,4 +6,3 @@ fn main() {
     println!("{new}");
     println!("{text}");
 }
-

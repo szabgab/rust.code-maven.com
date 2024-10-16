@@ -2,7 +2,6 @@ use std::io;
 use std::io::Write;
 
 fn main() {
-
     let mut age = String::new();
 
     print!("How old are you? ");
@@ -11,7 +10,10 @@ fn main() {
         .read_line(&mut age)
         .expect("Failed to get input");
 
-    let age: f32 = age.trim().parse().unwrap_or_else(|_| panic!("Could not convert '{age}' to floating point number"));
+    let age: f32 = age
+        .trim()
+        .parse()
+        .unwrap_or_else(|_| panic!("Could not convert '{age}' to floating point number"));
     if age < 18.0 {
         println!("You are under 18. You cannot legally drink alcohol!");
     } else {

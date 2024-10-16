@@ -7,5 +7,4 @@ fn main() {
     crate::tools::public_helper();
 }
 
-
 mod tools;

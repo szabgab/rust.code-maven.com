@@ -10,8 +10,10 @@ fn main() {
     ";
 
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse(template).unwrap();
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
 
     let globals = liquid::object!({
         "animals": [

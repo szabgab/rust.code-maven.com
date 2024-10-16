@@ -44,7 +44,6 @@ fn main() {
         height: 180,
     };
 
-
     println!("{}", a < b);
     println!("{}", a == c);
     println!("{}", b == x);

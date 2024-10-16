@@ -1,4 +1,3 @@
-
 use surrealdb::sql::{Id, Thing};
 
 fn main() {

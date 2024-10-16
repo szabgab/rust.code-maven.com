@@ -6,7 +6,6 @@ pub fn div(left: u64, right: u64) -> u64 {
 mod tests {
     use super::*;
 
-
     struct Thing {
         name: String,
     }
@@ -33,7 +32,6 @@ mod tests {
         assert_eq!(result, 1);
     }
 
-
     #[test]
     fn works_2_0() {
         let _thing = Thing::new("2_0");
@@ -47,5 +45,4 @@ mod tests {
         let result = div(4, 3);
         assert_eq!(result, 1);
     }
-
 }

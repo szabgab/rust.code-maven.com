@@ -8,5 +8,3 @@ fn main() {
     }
     println!("{:?}", numbers);
 }
-
-

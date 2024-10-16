@@ -1,7 +1,7 @@
 macro_rules! macro_with_literal {
-	($var:literal) => {
+    ($var:literal) => {
         println!("{:?}", $var)
-    }
+    };
 }
 
 fn main() {
@@ -11,4 +11,3 @@ fn main() {
     //macro_with_literal!(x);
     //macro_with_literal!(String::from("hello"));
 }
-

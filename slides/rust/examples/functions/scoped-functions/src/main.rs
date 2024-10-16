@@ -16,6 +16,3 @@ fn other() {
     // cannot find function `say_hi` in this scope
     //say_hi("other");
 }
-
-
-

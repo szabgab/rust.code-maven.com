@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 #[allow(dead_code)]
 struct Thing {
@@ -6,14 +5,12 @@ struct Thing {
     next: Option<Box<Thing>>,
 }
 
-
 fn main() {
     let a = Thing {
         data: String::from("First"),
         next: None,
     };
     println!("{:#?}", a);
-
 
     let b = Thing {
         data: String::from("Second"),
@@ -26,5 +23,4 @@ fn main() {
         next: Some(Box::new(b)),
     };
     println!("{:#?}", c);
-
 }

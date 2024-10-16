@@ -1,7 +1,6 @@
-use std::io::{self, Write};
 use std::fs::File;
+use std::io::{self, Write};
 use tempdir::TempDir;
-
 
 fn main() {
     match write_temp_folder_with_files() {
@@ -22,4 +21,3 @@ fn write_temp_folder_with_files() -> io::Result<()> {
 
     Ok(())
 }
-

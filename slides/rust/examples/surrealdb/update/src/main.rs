@@ -30,7 +30,11 @@ async fn main() -> surrealdb::Result<()> {
 
     for raw_fruit in fruits {
         id += 1;
-        let fruit: Fruit = dbh.create(("fruits", id)).content(raw_fruit).await?.unwrap();
+        let fruit: Fruit = dbh
+            .create(("fruits", id))
+            .content(raw_fruit)
+            .await?
+            .unwrap();
         println!("fruit: {:?}", fruit);
     }
     list(&dbh).await?;

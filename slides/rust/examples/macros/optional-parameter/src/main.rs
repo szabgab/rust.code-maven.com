@@ -16,15 +16,12 @@ fn ping(address: &str, mut repeat: u8) {
     }
 }
 fn main() {
-//    trace_macros!(true);
+    //    trace_macros!(true);
     ping("localhost", 1);
 
     //ping("remote");
     ping!("remote");
 
     ping!("localhost", 3);
-//    trace_macros!(false);
+    //    trace_macros!(false);
 }
-
-
-

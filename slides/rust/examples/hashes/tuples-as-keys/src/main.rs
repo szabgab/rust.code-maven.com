@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-
 fn main() {
     let mut lookup = HashMap::new();
     let a = ("Foo", 2);

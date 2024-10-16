@@ -1,6 +1,5 @@
-use std::path::Path;
 use std::fs::ReadDir;
-
+use std::path::Path;
 
 //#[derive(Debug)]
 //#[allow(dead_code)]
@@ -13,15 +12,13 @@ impl Walk {
         let path = Path::new(root);
         match path.read_dir() {
             Ok(rd) => {
-                let w = Walk {
-                    rds: vec![rd],
-                };
+                let w = Walk { rds: vec![rd] };
                 std::result::Result::Ok(w)
-            },
+            }
             Err(err) => {
                 println!("Could not open dir '{}': {}", root, err);
                 Err(Box::new(err))
-            },
+            }
         }
     }
 }
@@ -37,25 +34,21 @@ impl Iterator for Walk {
         let count = self.rds.len();
         let entry = self.rds[count - 1].next();
         match entry {
-            Some(result) => {
-                match result {
-                    Ok(dir_entry) => {
-                        if dir_entry.path().is_dir() {
-                            match dir_entry.path().read_dir() {
-                                Ok(rd) => {
-                                    self.rds.push(rd);
-                                }
-                                Err(err) => {
-                                    println!("Could not open dir {}", err);
-                                }
+            Some(result) => match result {
+                Ok(dir_entry) => {
+                    if dir_entry.path().is_dir() {
+                        match dir_entry.path().read_dir() {
+                            Ok(rd) => {
+                                self.rds.push(rd);
+                            }
+                            Err(err) => {
+                                println!("Could not open dir {}", err);
                             }
                         }
-                        return Some(dir_entry.path().to_str().unwrap().to_string());
-                    },
-                    Err(_err) =>  {
-                        None
-                    },
+                    }
+                    return Some(dir_entry.path().to_str().unwrap().to_string());
                 }
+                Err(_err) => None,
             },
             None => {
                 self.rds.pop();
@@ -84,4 +77,3 @@ fn main() {
         println!("{:?}", entry);
     }
 }
-

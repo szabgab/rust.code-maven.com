@@ -11,7 +11,7 @@ fn main() {
 }
 
 fn rot13(text: String) -> String {
-    let mut chars:Vec<char> = vec![];
+    let mut chars: Vec<char> = vec![];
     let a = 'a' as u32;
     let z = 'z' as u32;
     let aa = 'A' as u32;

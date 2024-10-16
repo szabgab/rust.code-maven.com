@@ -6,4 +6,3 @@ fn main() {
 fn give_ownership() -> String {
     String::from("Foo")
 }
-

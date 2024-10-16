@@ -5,4 +5,3 @@ fn main() {
     let name = "Bar";
     println!("{name}");
 }
-

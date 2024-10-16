@@ -10,7 +10,6 @@ fn main() {
         None => println!("No match"),
     };
 
-
     let re = Regex::new(r"dog").unwrap();
     match re.captures(text) {
         Some(value) => println!("Full match: '{}'", &value[0]),

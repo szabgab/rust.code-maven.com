@@ -1,12 +1,11 @@
 use std::collections::HashMap;
+use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader, Write};
-use std::env;
 use std::process::exit;
 
 type Counter = HashMap<String, u32>;
 const FILENAME: &str = "counter.csv";
-
 
 fn main() {
     let name = get_name();
@@ -48,10 +47,10 @@ fn read_the_csv_file() -> Counter {
                 let count: u32 = parts[1].parse().unwrap();
                 counters.insert(name.to_string(), count);
             }
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", FILENAME, error);
-        },
+        }
     }
     counters
 }
@@ -61,5 +60,4 @@ fn save_the_csv_file(counters: Counter) {
     for (name, count) in counters.iter() {
         writeln!(&mut file, "{}={}", name, count).unwrap();
     }
-    
 }

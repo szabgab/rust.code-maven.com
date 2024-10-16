@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::{Db, Mem};
-use surrealdb::{Surreal, RecordId};
+use surrealdb::{RecordId, Surreal};
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Toggle {
@@ -44,13 +44,7 @@ async fn main() -> surrealdb::Result<()> {
 async fn set(dbh: &Surreal<Db>, uid: u32, status: bool) -> surrealdb::Result<()> {
     //println!("set {uid} to status: {status}");
 
-    let _created: Option<Record> = dbh
-        .create("toggle")
-        .content(Toggle {
-            uid,
-            status,
-        })
-        .await?;
+    let _created: Option<Record> = dbh.create("toggle").content(Toggle { uid, status }).await?;
 
     Ok(())
 }

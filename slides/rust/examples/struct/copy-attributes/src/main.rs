@@ -4,7 +4,6 @@ macro_rules! prt {
     };
 }
 
-
 #[allow(dead_code)]
 #[derive(Debug)]
 struct Point {

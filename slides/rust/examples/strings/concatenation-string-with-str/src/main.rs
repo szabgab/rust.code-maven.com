@@ -22,4 +22,3 @@ fn main() {
     println!("{text}");
     //println!("{string1}");
 }
-

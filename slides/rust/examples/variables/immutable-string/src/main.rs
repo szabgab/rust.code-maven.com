@@ -5,4 +5,3 @@ fn main() {
     text = "Something else";
     println!("{text}");
 }
-

@@ -6,8 +6,16 @@ struct Animal<'a> {
 
 fn main() {
     let mut animals = vec![
-        Animal {name: "elephant", size: "huge", weight: 100},
-        Animal {name: "snake",    size: "long", weight: 3},
+        Animal {
+            name: "elephant",
+            size: "huge",
+            weight: 100,
+        },
+        Animal {
+            name: "snake",
+            size: "long",
+            weight: 3,
+        },
     ];
 
     for animal in &animals {
@@ -19,4 +27,3 @@ fn main() {
         println!("{} - {} - {}", animal.name, animal.size, animal.weight);
     }
 }
-

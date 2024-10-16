@@ -8,5 +8,3 @@ fn main() {
     println!("{}", a == c);
     println!("{}", c == d);
 }
-
-

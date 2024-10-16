@@ -1,6 +1,5 @@
 use surrealdb::sql::Id;
 
-
 fn main() {
     let id = Id::rand(); // Generate a new random ID
     println!("id {id:?}");

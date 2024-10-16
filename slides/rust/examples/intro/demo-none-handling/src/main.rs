@@ -20,6 +20,3 @@ fn say_hi(name: Option<String>) {
         None => println!("Welcome! My name is Rust."),
     }
 }
-
-
-

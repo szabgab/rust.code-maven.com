@@ -10,5 +10,4 @@ fn main() {
         Vec::from_raw_parts(ptr_1 as *mut i32, numbers.len() - 1, numbers.capacity() - 1)
     };
     println!("{:?}", nums);
-
 }

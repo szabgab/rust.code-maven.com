@@ -11,5 +11,8 @@ fn hello_world() {
         response.headers().get_one("Content-Type").unwrap(),
         "text/html; charset=utf-8"
     );
-    assert_eq!(response.into_string(), Some("Hello <b>Rocket with Tera!</b>".into()));
+    assert_eq!(
+        response.into_string(),
+        Some("Hello <b>Rocket with Tera!</b>".into())
+    );
 }

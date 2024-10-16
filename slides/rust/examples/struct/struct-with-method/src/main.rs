@@ -2,7 +2,7 @@
 struct Color {
     red: u8,
     green: u8,
-    blue: u8
+    blue: u8,
 }
 
 impl std::fmt::Display for Color {
@@ -17,9 +17,12 @@ impl Color {
     }
 }
 
-
 fn main() {
-    let color = Color { red: 80, green: 123, blue: 241 };
+    let color = Color {
+        red: 80,
+        green: 123,
+        blue: 241,
+    };
     println!("{}", color);
     println!("{:?}", color);
     println!("{}", color.hex());

@@ -13,7 +13,7 @@ fn main() {
 fn median(numbers: &[i32]) -> i32 {
     let mut numbers = numbers.to_owned();
     numbers.sort();
-    let middle = numbers.len()/2;
+    let middle = numbers.len() / 2;
     numbers[middle]
 }
 
@@ -32,7 +32,5 @@ mod tests {
         let med = median(&numbers);
         assert_eq!(med, 12);
         assert_eq!(numbers, vec![10, 12, 13, 11]);
-
     }
-
 }

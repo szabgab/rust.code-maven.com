@@ -18,6 +18,5 @@ mod tests {
 
         let result = add(19, 23);
         assert_eq!(result, 42);
-
     }
 }

@@ -5,9 +5,7 @@ fn main() {
     assert_eq!(taken, range);
     println!("{:?}", taken);
 
-
     // If there are not enough iterations it stops when the iterator is exhausted
     let numbers = range.iter().take(10).collect::<Vec<_>>();
     println!("{:?}", numbers);
-
 }

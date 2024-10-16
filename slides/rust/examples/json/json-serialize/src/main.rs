@@ -1,5 +1,5 @@
-use serde_json::json;
 use chrono::{DateTime, Utc};
+use serde_json::json;
 
 fn main() {
     let name = "Foo Bar";

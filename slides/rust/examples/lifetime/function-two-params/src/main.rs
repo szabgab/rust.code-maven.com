@@ -16,13 +16,12 @@ fn main() {
     println!("b {b}");
 }
 
-
 fn select<'a>(name1: &'a str, name2: &str) -> &'a str {
-   if name1 > name2 {
-       name1
-   } else {
-       "ab"
-   }
+    if name1 > name2 {
+        name1
+    } else {
+        "ab"
+    }
 }
 
 // fn select<'a>(name1: &str, name2: &str) -> &'a str {

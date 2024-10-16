@@ -15,4 +15,3 @@ fn main() {
     let string1 = String::from("Rust");
     prt!(string1);
 }
-

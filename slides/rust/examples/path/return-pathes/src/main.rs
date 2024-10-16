@@ -18,4 +18,3 @@ fn get_pathes() -> Vec<PathBuf> {
     }
     entries
 }
-

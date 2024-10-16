@@ -18,4 +18,3 @@ fn render() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
-

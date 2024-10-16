@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use surrealdb::engine::remote::ws::Ws;
-use surrealdb::opt::Resource;
 use surrealdb::opt::auth::Root;
+use surrealdb::opt::Resource;
 use surrealdb::Surreal;
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -23,7 +23,8 @@ async fn main() -> surrealdb::Result<()> {
     db.signin(Root {
         username: "root",
         password: "root",
-    }).await?;
+    })
+    .await?;
 
     println!("Select a specific namespace / database");
     db.use_ns("demo").use_db("demo-2").await?;

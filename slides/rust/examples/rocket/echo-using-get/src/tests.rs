@@ -17,9 +17,7 @@ fn main_page() {
 #[test]
 fn echo_page() {
     let client = Client::tracked(super::rocket()).unwrap();
-    let response = client
-        .get("/echo?text=Foo+Bar")
-        .dispatch();
+    let response = client.get("/echo?text=Foo+Bar").dispatch();
 
     assert_eq!(response.status(), Status::Ok);
     assert_eq!(

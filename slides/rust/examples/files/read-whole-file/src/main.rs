@@ -1,7 +1,6 @@
+use std::env;
 use std::fs::File;
 use std::io::Read;
-use std::env;
-
 
 fn main() {
     let filename = get_filename();
@@ -14,14 +13,13 @@ fn main() {
                     println!("Read {size} bytes.");
                     println!("We have a string of {} bytes.", content.len());
                     println!("{content}");
-                },
+                }
                 Err(err) => eprintln!("Error: {err}"),
             }
-
-        },
+        }
         Err(error) => {
             eprintln!("Error opening file {filename}: {error}");
-        },
+        }
     }
 }
 
@@ -31,5 +29,5 @@ fn get_filename() -> String {
         eprintln!("Usage: {} data.txt", args[0])
     }
 
-    args[1].to_owned()    
+    args[1].to_owned()
 }

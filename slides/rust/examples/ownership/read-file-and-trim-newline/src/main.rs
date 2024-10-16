@@ -25,7 +25,6 @@ fn main() {
 //     // returns a value referencing data owned by the current function
 // }
 
-
 fn read_file(file: &str) -> String {
     let data = std::fs::read_to_string(file).unwrap();
     prt!(data);
@@ -33,4 +32,3 @@ fn read_file(file: &str) -> String {
     //prt!(short);
     short.to_owned() // this to_owned also copies the data
 }
-

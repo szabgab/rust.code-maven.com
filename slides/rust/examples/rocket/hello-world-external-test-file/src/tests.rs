@@ -13,4 +13,3 @@ fn hello_world() {
     );
     assert_eq!(response.into_string(), Some("Hello, world!".into()));
 }
-

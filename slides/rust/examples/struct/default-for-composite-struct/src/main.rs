@@ -13,7 +13,6 @@ struct Input {
     name: String,
 }
 
-
 impl Something {
     pub fn new() -> Something {
         Something {
@@ -31,14 +30,11 @@ impl Input {
     }
 }
 
-
 impl Default for Something {
     fn default() -> Something {
         Something {
             name: String::new(),
-            input: Input {
-                ..Input::default()
-            },
+            input: Input { ..Input::default() },
         }
     }
 }
@@ -54,7 +50,9 @@ impl Default for Input {
 fn main() {
     let sg = Something {
         name: String::from("Foo Bar"),
-        input: Input { name: String::from("input text") },
+        input: Input {
+            name: String::from("input text"),
+        },
     };
     println!("{:?}", sg);
 
@@ -66,11 +64,9 @@ fn main() {
     };
     println!("{:?}", empty);
 
-
     let with_name = Something {
         name: String::from("Hello"),
         ..Something::default()
     };
     println!("{:?}", with_name);
-
 }

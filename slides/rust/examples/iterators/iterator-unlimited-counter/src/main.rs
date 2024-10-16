@@ -6,9 +6,7 @@ struct Counter {
 
 impl Counter {
     fn new() -> Counter {
-        Counter {
-            current: 0,
-        }
+        Counter { current: 0 }
     }
 }
 
@@ -19,7 +17,6 @@ impl Iterator for Counter {
         self.current += 1;
         Some(self.current)
     }
-
 }
 
 fn main() {
@@ -32,5 +29,3 @@ fn main() {
         //}
     }
 }
-
-

@@ -4,8 +4,7 @@ macro_rules! prt {
     };
 }
 
-
-fn main() {   
+fn main() {
     let animals = vec![
         String::from("crab"),
         String::from("ant"),

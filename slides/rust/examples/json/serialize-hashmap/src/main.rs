@@ -19,5 +19,4 @@ fn main() {
     let data_turbofish = serde_json::from_str::<HashMap<String, u32>>(&json_string).unwrap();
     println!("{:?}", data_turbofish);
     assert_eq!(data_before, data_turbofish);
-
 }

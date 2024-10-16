@@ -1,5 +1,5 @@
 fn main() {
-    let number:f32 = -1.0;
+    let number: f32 = -1.0;
     let i = number.sqrt();
     println!("{}", i);
     let j = number.sqrt();

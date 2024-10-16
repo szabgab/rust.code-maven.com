@@ -1,4 +1,3 @@
-
 fn main() {
     let res = match reqwest::blocking::get("https://httpbin.org/ip") {
         Ok(res) => res,

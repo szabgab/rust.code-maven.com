@@ -11,9 +11,6 @@ fn main() {
         .join(" ");
     println!("'{}'", short);
 
-    let other = text
-        .split_whitespace()
-        .collect::<Vec<_>>()
-        .join(" ");
+    let other = text.split_whitespace().collect::<Vec<_>>().join(" ");
     println!("'{}'", other);
 }

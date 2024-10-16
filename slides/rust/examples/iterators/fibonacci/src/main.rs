@@ -6,13 +6,13 @@ struct Fibonacci {
 }
 
 impl Fibonacci {
-     fn new() -> Fibonacci {
+    fn new() -> Fibonacci {
         Fibonacci {
             index: 0,
-            current:0,
+            current: 0,
             previous: 0,
         }
-     }
+    }
 }
 
 impl Iterator for Fibonacci {

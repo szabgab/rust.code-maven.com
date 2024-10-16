@@ -12,8 +12,7 @@ fn main() {
     let x_square = (x as f32).sqrt();
     println!("The square of {x} is {x_square}");
 
-
-    let x:f32 = 16.0;
+    let x: f32 = 16.0;
     let x_square = x.sqrt();
     println!("The square of {x} is {x_square}");
 }

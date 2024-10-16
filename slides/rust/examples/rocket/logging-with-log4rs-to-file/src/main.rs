@@ -1,7 +1,6 @@
 #[macro_use]
 extern crate rocket;
 
-
 #[get("/")]
 fn index() -> &'static str {
     rocket::trace!("Trace from Hello World");
@@ -17,4 +16,3 @@ fn rocket() -> _ {
     log4rs::init_file("log4rs.yaml", Default::default()).unwrap();
     rocket::build().mount("/", routes![index])
 }
-

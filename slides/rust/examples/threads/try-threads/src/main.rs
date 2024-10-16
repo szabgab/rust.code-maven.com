@@ -6,7 +6,11 @@ fn main() {
 
     let handle = thread::spawn(|| {
         for i in 1..=10 {
-            println!("Hi number {} from the spawned thread! {:?}", i, thread::current().id());
+            println!(
+                "Hi number {} from the spawned thread! {:?}",
+                i,
+                thread::current().id()
+            );
             thread::sleep(Duration::from_millis(1));
         }
         println!("Spawned thread ended");
@@ -15,7 +19,11 @@ fn main() {
     //thread::sleep(Duration::from_millis(1));
     //thread::sleep(Duration::from_micros(1));
     for i in 1..=5 {
-        println!("Hi number {} from the main    thread! {:?}", i, thread::current().id());
+        println!(
+            "Hi number {} from the main    thread! {:?}",
+            i,
+            thread::current().id()
+        );
         thread::sleep(Duration::from_millis(1));
     }
 

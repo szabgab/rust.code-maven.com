@@ -1,6 +1,6 @@
 fn main() {
     let numbers = vec![1, 3, 6];
-    let double = numbers.into_iter().map(|num| { 
+    let double = numbers.into_iter().map(|num| {
         println!("doubling {num}");
         num * 2
     });

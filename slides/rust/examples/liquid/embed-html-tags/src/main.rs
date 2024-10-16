@@ -8,7 +8,8 @@ fn plain_text() {
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
-        .parse("<h1>Welcome to {{field}}</h1>").unwrap();
+        .parse("<h1>Welcome to {{field}}</h1>")
+        .unwrap();
 
     let globals = liquid::object!({
         "field": "Liquid"
@@ -18,12 +19,12 @@ fn plain_text() {
     assert_eq!(output, "<h1>Welcome to Liquid</h1>");
 }
 
-
 fn embed_html() {
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
-        .parse("<h1>Welcome to {{field}}</h1>").unwrap();
+        .parse("<h1>Welcome to {{field}}</h1>")
+        .unwrap();
 
     let globals = liquid::object!({
         "field": "<>"
@@ -33,13 +34,12 @@ fn embed_html() {
     assert_eq!(output, "<h1>Welcome to <></h1>");
 }
 
-
 fn escape_html() {
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
-        .parse("<h1>Welcome to {{field | escape}}</h1>").unwrap();
-
+        .parse("<h1>Welcome to {{field | escape}}</h1>")
+        .unwrap();
 
     let globals = liquid::object!({
         "field": "<>"

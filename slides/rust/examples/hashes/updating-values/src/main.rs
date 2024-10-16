@@ -3,7 +3,7 @@ use std::collections::HashMap;
 fn main() {
     let mut grades = HashMap::new();
 
-    grades.insert(String::from("Joe"), 70);  // create
+    grades.insert(String::from("Joe"), 70); // create
     println!("{}", grades["Joe"]);
 
     grades.insert(String::from("Joe"), 71); // overwite

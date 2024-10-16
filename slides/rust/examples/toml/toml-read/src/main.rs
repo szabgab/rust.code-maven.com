@@ -1,38 +1,37 @@
-use toml::Table;
 use serde::Deserialize;
-
+use toml::Table;
 
 #[derive(Deserialize)]
 #[allow(dead_code)]
 struct Config {
-   name: String,
-   year: u16,
-   input: Input,
-   output: Output,
-   dependencies: Table,
+    name: String,
+    year: u16,
+    input: Input,
+    output: Output,
+    dependencies: Table,
 }
 
 #[derive(Deserialize)]
 #[allow(dead_code)]
 struct Input {
-   name: String,
-   year: Option<u16>,
+    name: String,
+    year: Option<u16>,
 }
 
 #[derive(Deserialize)]
 #[allow(dead_code)]
 struct Output {
-   name: String,
-   year: Option<u16>,
+    name: String,
+    year: Option<u16>,
 }
-
 
 fn main() {
     parse_toml();
 }
 
 fn parse_toml() {
-    let text = String::from("
+    let text = String::from(
+        "
 name = 'bar'
 year = 2023
 
@@ -47,8 +46,8 @@ name = 'other thing'
 toml = '0.5'
 yaml = '0.9'
 serde = { version = '1.0', features = ['derive'] }
-    ");
-
+    ",
+    );
 
     let config: Config = toml::from_str(&text).unwrap();
 
@@ -74,4 +73,3 @@ serde = { version = '1.0', features = ['derive'] }
     println!("{}", config.dependencies["serde"]["features"][0]);
     println!("{}", config.dependencies["serde"]["version"]);
 }
-

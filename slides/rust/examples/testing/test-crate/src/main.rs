@@ -11,7 +11,6 @@ fn main() {
     // run the tests in the docker
     // capture the output
 
-
     //let result = Command::new("docker"
     //        .arg("run --rm --workdir /opt -v$(pwd):/opt -it --user tester rust-test cargo test")
     //        .output()

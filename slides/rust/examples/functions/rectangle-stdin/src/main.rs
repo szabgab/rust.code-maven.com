@@ -5,7 +5,13 @@ fn main() {
     let length = get_number("Length");
     let width = get_number("Width");
 
-    println!("Length: {} Width: {}, Area: {} Circumference: {}", length, width, length*width, 2.0*(length+width));
+    println!(
+        "Length: {} Width: {}, Area: {} Circumference: {}",
+        length,
+        width,
+        length * width,
+        2.0 * (length + width)
+    );
 }
 
 fn get_number(name: &str) -> f32 {
@@ -16,10 +22,6 @@ fn get_number(name: &str) -> f32 {
         .read_line(&mut number)
         .expect("Failed to get input");
 
-    let number:f32 = number
-        .trim()
-        .parse()
-        .expect("Could not convert to i32");
+    let number: f32 = number.trim().parse().expect("Could not convert to i32");
     number
 }
-

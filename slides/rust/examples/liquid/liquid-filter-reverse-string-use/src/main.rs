@@ -9,7 +9,6 @@ fn main() {
     assert_eq!(result, "reversed: !dlroW olleH");
 }
 
-
 fn render(tmpl: &str, text: &str) -> String {
     let globals = liquid::object!({
         "text": text,
@@ -19,8 +18,8 @@ fn render(tmpl: &str, text: &str) -> String {
         .filter(ReverseStr)
         .build()
         .unwrap()
-        .parse(tmpl).unwrap();
+        .parse(tmpl)
+        .unwrap();
 
     template.render(&globals).unwrap()
 }
-

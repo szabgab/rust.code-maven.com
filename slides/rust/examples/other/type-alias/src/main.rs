@@ -11,5 +11,3 @@ fn main() {
 fn calc(y: Meters) {
     println!("{y}");
 }
-
-

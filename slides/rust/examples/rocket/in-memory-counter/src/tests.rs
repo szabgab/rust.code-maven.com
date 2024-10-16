@@ -32,4 +32,3 @@ fn page_not_found() {
     assert!(html.contains("<h1>404 Not Found</h1>"));
     assert!(html.contains("<div>Page not found</div>"));
 }
-

@@ -19,4 +19,3 @@ fn render_without_register(filename: &str) -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
-

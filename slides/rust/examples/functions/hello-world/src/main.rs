@@ -5,5 +5,3 @@ fn main() {
 fn greet() {
     println!("Hello World!");
 }
-
-

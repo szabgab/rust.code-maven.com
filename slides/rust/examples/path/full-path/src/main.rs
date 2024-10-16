@@ -8,5 +8,8 @@ fn main() {
     let path = std::path::PathBuf::from(&args[1]);
 
     println!("relative: {}", path.as_os_str().to_str().unwrap());
-    println!("absolute: {}", path.canonicalize().unwrap().as_os_str().to_str().unwrap());
+    println!(
+        "absolute: {}",
+        path.canonicalize().unwrap().as_os_str().to_str().unwrap()
+    );
 }

@@ -30,5 +30,3 @@ fn ex3() {
     println!("{other}");
     println!();
 }
-
-

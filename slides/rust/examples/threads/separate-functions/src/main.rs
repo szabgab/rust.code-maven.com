@@ -1,8 +1,6 @@
 fn main() {
     // let (threads, filename) = get_args();
 
-    
-
     println!("Hello, world!");
 }
 
@@ -16,14 +14,13 @@ fn main() {
 //     (args[1].parse().unwrap(), args[2].to_owned())
 // }
 
-
 // The idea here is to create CPU intensive functions to be able to show the impact ot threading.
 // It is not to create the most optimal functions
 
 // return the first character that repeates itself
 fn find_double_characters(text: &str, mut nth: u32) -> Option<char> {
     if text.len() < 2 {
-        return None
+        return None;
     }
     if nth < 1 {
         return None;
@@ -37,7 +34,7 @@ fn find_double_characters(text: &str, mut nth: u32) -> Option<char> {
         }
         if Some(chr) == resp {
             if nth == 1 {
-                return resp
+                return resp;
             } else {
                 nth -= 1;
             }
@@ -47,7 +44,6 @@ fn find_double_characters(text: &str, mut nth: u32) -> Option<char> {
 
     None
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -62,5 +58,4 @@ mod tests {
         assert_eq!(find_double_characters("aabb", 1), Some('a'));
         assert_eq!(find_double_characters("aabb", 2), Some('b'));
     }
-
 }

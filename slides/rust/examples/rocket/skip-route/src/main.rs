@@ -5,10 +5,12 @@ use rocket::response::content;
 
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(r#"
+    let html = format!(
+        r#"
     <a href="/number/23">23</a>
     <a href="/number/42">42</a>
-    "#);
+    "#
+    );
     content::RawHtml(html)
 }
 
@@ -22,13 +24,11 @@ fn odd_number(num: u32) -> Option<content::RawHtml<String>> {
     None
 }
 
-
 #[get("/number/<num>", rank = 2)]
 fn any_number(num: u32) -> content::RawHtml<String> {
     let html = format!("Any number: {num:?}");
     return content::RawHtml(html);
 }
-
 
 #[launch]
 fn rocket() -> _ {
@@ -69,5 +69,4 @@ mod test {
         let html = response.into_string().unwrap();
         assert_eq!(html, r#"Any number: 42"#);
     }
-
 }

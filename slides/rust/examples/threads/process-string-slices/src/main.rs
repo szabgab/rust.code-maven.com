@@ -29,12 +29,17 @@ fn main() {
             text.len()
         };
         //println!("{start:3}-{end:3} {}", &text[start..end]);
-        
+
         handles.push(thread::spawn({
             let text = text.clone();
             move || {
-            prt!(format!("{:?}", thread::current().id()), text, &text[start..end]);
-        }}));
+                prt!(
+                    format!("{:?}", thread::current().id()),
+                    text,
+                    &text[start..end]
+                );
+            }
+        }));
     }
     prt!("Started:", text);
 

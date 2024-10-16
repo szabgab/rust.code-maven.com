@@ -8,7 +8,6 @@ fn main() {
 
     colors::deep::in_deep();
 
-
     // colors::blue();
     // // colors::blue_helper(); // error[E0603]: function `blue_helper` is private
     // colors::dark::blue();
@@ -59,6 +58,4 @@ mod colors {
     //         println!("dark_green");
     //     }
     // }
-
 }
-

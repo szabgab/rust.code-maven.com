@@ -7,11 +7,11 @@ fn main() {
 
     //let parts = text.split(" ");
     let parts = text.split_whitespace(); // return an iterator
-    //println!("{:?}", parts);
-    //for part in parts {
-    //    println!("'{}'", part);
-    //}
-    //
+                                         //println!("{:?}", parts);
+                                         //for part in parts {
+                                         //    println!("'{}'", part);
+                                         //}
+                                         //
     let parts: Vec<&str> = parts.collect(); // collect the items from an iterator to be a vector
     println!("parts: {:?}", parts);
     println!("First element '{}'", parts[0]);
@@ -20,5 +20,4 @@ fn main() {
         data.insert(part, part);
     }
     println!("The Hash: {:?}", data);
-
 }

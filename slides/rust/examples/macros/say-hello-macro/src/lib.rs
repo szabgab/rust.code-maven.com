@@ -1,7 +1,6 @@
 extern crate proc_macro;
 use proc_macro::TokenStream;
 
-
 #[proc_macro]
 pub fn say_hello(input: TokenStream) -> TokenStream {
     println!("Input: {}", input);
@@ -12,4 +11,3 @@ pub fn say_hello(input: TokenStream) -> TokenStream {
     let code = format!(r#"println!("Hello {value}");"#);
     code.parse().unwrap()
 }
-

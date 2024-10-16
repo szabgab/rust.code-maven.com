@@ -8,7 +8,6 @@ struct Person {
     married: bool,
 }
 
-
 fn main() {
     let filename = get_filename();
 
@@ -18,17 +17,15 @@ fn main() {
             println!("{:#?}", &data);
             assert_eq!(data.fname, "Foo");
             assert_eq!(data.lname, "Bar");
-            assert!(data.married);        
-        },
+            assert!(data.married);
+        }
         Err(err) => {
             eprintln!("There was an error: {err}");
             //std::process::exit(1);
         }
     }
     println!("Still here");
-
 }
-
 
 fn get_filename() -> String {
     let args: Vec<String> = std::env::args().collect();
@@ -38,4 +35,3 @@ fn get_filename() -> String {
     }
     args[1].to_owned()
 }
-

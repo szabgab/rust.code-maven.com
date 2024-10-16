@@ -33,4 +33,3 @@ fn main() {
     // (or derived from) Ord or PartialOrd.
     // println!("{}", a < c);
 }
-

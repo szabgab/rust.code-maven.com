@@ -11,4 +11,3 @@ fn main() {
     let length = text.len();
     println!("{length}");
 }
-

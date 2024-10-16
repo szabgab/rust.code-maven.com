@@ -42,7 +42,6 @@ async fn main() -> surrealdb::Result<()> {
     //     name: String::from("Belly dance"),
     // });
 
-
     add_students(&db, classes).await?;
 
     show_students_in_classes(&db).await?;
@@ -55,14 +54,13 @@ async fn main() -> surrealdb::Result<()> {
 async fn add_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
     for name in ["Introduction to Dancing", "Flamenco"] {
         let classes: Vec<DanceClass> = db
-        .create(DANCE)
-        .content(DanceClass {
-            id: Thing::from((DANCE, Id::rand())),
-            name: name.to_owned(),
-        })
-        .await?;
+            .create(DANCE)
+            .content(DanceClass {
+                id: Thing::from((DANCE, Id::rand())),
+                name: name.to_owned(),
+            })
+            .await?;
         println!("class added: {classes:?}");
-
     }
 
     Ok(())

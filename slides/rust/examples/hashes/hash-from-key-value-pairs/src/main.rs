@@ -1,10 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
-    let input:Vec<String> = vec![
-        String::from("Monday=1"),
-        String::from("Tuesday=2"),
-    ];
+    let input: Vec<String> = vec![String::from("Monday=1"), String::from("Tuesday=2")];
 
     let mut data = HashMap::new();
     for entry in input {
@@ -20,5 +17,3 @@ fn mysplit(entry: &str) -> Vec<&str> {
     let parts: Vec<&str> = parts.collect();
     parts
 }
-
-

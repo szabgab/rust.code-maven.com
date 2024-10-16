@@ -3,9 +3,8 @@
 #[allow(dead_code)]
 struct Thing {
     data: String,
-    other: Option<Box<Thing>>
+    other: Option<Box<Thing>>,
 }
-
 
 fn main() {
     alloc();
@@ -21,7 +20,7 @@ fn alloc() {
         data: String::from("abc"),
         other: None,
     };
-    
+
     a.other = Some(Box::new(b));
     b.other = Some(Box::new(a));
 }

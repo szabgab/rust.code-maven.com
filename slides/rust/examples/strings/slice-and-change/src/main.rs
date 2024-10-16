@@ -10,4 +10,3 @@ fn main() {
     println!("{}", text);
     //println!("{}", slice);
 }
-

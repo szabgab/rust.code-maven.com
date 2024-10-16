@@ -7,21 +7,22 @@ mod mytera;
 mod tests;
 
 use rocket::response::content::RawHtml;
-use rocket_dyn_templates::{Template, context};
+use rocket_dyn_templates::{context, Template};
 
 #[get("/")]
 fn index() -> RawHtml<&'static str> {
-    RawHtml(
-        r#"See <a href="/hello/Foo Bar">Foo Bar</a>."#
-    )
+    RawHtml(r#"See <a href="/hello/Foo Bar">Foo Bar</a>."#)
 }
 
 #[get("/hello/<name>")]
 pub fn hello(name: &str) -> Template {
-    Template::render("index", context! {
-        title: "Hello",
-        name: Some(name),
-    })
+    Template::render(
+        "index",
+        context! {
+            title: "Hello",
+            name: Some(name),
+        },
+    )
 }
 
 #[launch]

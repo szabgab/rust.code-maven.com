@@ -46,7 +46,10 @@ fn main() {
                 "examples/ownership/concatenate-content-of-files/dog.txt",
                 "examples/ownership/concatenate-content-of-files/cat.txt",
                 "examples/ownership/read-file-and-trim-newline/cat.txt",
-            ].into_iter().map(|name| name.to_owned()).collect::<Vec<String>>();
+            ]
+            .into_iter()
+            .map(|name| name.to_owned())
+            .collect::<Vec<String>>();
             if files.contains(&filename) {
                 continue;
             }
@@ -87,7 +90,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
     for (ix, crate_folder) in crates.into_iter().enumerate() {
         started += 1;
         if verbose {
-            println!("crate: {}/{number_of_crates}, {crate_folder:?}", ix+1);
+            println!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         }
         let mytx = tx.clone();
 
@@ -135,14 +138,17 @@ fn check_crate(crate_folder: &PathBuf) -> bool {
         "examples/numbers/rounding-float",
         "examples/booleans/other",
         "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",  // TODO
+        "examples/files/list-tree",          // TODO
         "examples/files/open-file-handling", // TODO
         "examples/arrays/numbers-change",
         "examples/types/type-mismatch",
         "examples/errors/out-of-bounds-array",
         "examples/errors/div-by-zero-hard-coded",
         "examples/advanced-functions/calculator", // TODO
-    ].into_iter().map(|x| x.to_string()).collect::<String>();
+    ]
+    .into_iter()
+    .map(|x| x.to_string())
+    .collect::<String>();
     if folders.contains(&folder) {
         return true;
     }

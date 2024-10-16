@@ -10,12 +10,11 @@ fn main() {
         Some(value) => value,
         None => {
             println!("No match");
-            return
+            return;
         }
     };
     println!("Number of matches: {}", number.len());
     println!("Full match: '{}'", &number[0]);
-
 
     // match the number that comes after colon (:)
     // but the match now includes the : as well
@@ -24,7 +23,7 @@ fn main() {
         Some(value) => value,
         None => {
             println!("No match");
-            return
+            return;
         }
     };
     println!("Full match: '{}'", &number[0]);
@@ -35,7 +34,7 @@ fn main() {
         Some(value) => value,
         None => {
             println!("No match");
-            return
+            return;
         }
     };
     println!("Full match: '{}'", &number[0]);

@@ -1,5 +1,6 @@
 pub fn calc(a: i32, b: i32) -> String {
-    format!(r#"
+    format!(
+        r#"
     <html>
     <head>
     <title>Calc</title>
@@ -10,7 +11,10 @@ pub fn calc(a: i32, b: i32) -> String {
     <div id="multiply">{}</div>
     </body>
     </html>
-    "#, a*b, a+b)
+    "#,
+        a * b,
+        a + b
+    )
 }
 
 #[cfg(test)]
@@ -38,7 +42,6 @@ mod tests {
         check_html_function(&html, "h1", "Results");
     }
 
-
     #[test]
     fn test_bad_multiply_func() {
         let html = calc(3, 3);
@@ -53,7 +56,7 @@ mod tests {
         check_html_macro!(&html, "title", "Calc");
         check_html_macro!(&html, "#add", "6");
         check_html_macro!(&html, "h1", "Results");
-    }        
+    }
 
     #[test]
     fn test_bad_multiply_macro() {
@@ -64,14 +67,14 @@ mod tests {
     }
 
     fn check_html_function(html: &str, css_selector: &str, expected: &str) {
-            let document = scraper::Html::parse_document(html);
-            let selector = scraper::Selector::parse(css_selector).unwrap();
-            assert_eq!(
-                &document.select(&selector).next().unwrap().inner_html(),
-                expected
-            );
+        let document = scraper::Html::parse_document(html);
+        let selector = scraper::Selector::parse(css_selector).unwrap();
+        assert_eq!(
+            &document.select(&selector).next().unwrap().inner_html(),
+            expected
+        );
     }
-    
+
     macro_rules! check_html_macro {
         ($html: expr, $selectors: expr, $text: expr) => {{
             let document = scraper::Html::parse_document($html);
@@ -83,5 +86,4 @@ mod tests {
         }};
     }
     pub(crate) use check_html_macro;
-
 }

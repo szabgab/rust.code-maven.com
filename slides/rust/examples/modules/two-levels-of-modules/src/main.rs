@@ -8,13 +8,12 @@ fn main() {
     // kitchen is private
     //house::kitchen::cook();
     //crate::house::kitchen::cook();
-    
+
     //crate::house::bathroom::shower();
     //house::bathroom::shower();
 
     house::bathroom::shaving();
 }
-
 
 mod house {
     pub fn live() {
@@ -22,7 +21,6 @@ mod house {
         kitchen::cook();
         bathroom::shower();
     }
-
 
     mod kitchen {
         pub fn cook() {
@@ -35,11 +33,8 @@ mod house {
 
         pub fn doing_dishes() {
             println!("doing_dishes");
-            
         }
-
     }
-
 
     pub mod bathroom {
         pub fn shower() {
@@ -54,8 +49,7 @@ mod house {
         pub fn shaving() {
             println!("shaving");
             crate::house::kitchen::cook();
-            super::kitchen::cook();   
+            super::kitchen::cook();
         }
-
     }
 }

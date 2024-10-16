@@ -5,7 +5,6 @@ use serde::Deserialize;
 struct Thing {
     name: String,
     // rust-version: String,
-
     #[serde(alias = "rust-version")]
     rust_version: String,
 }

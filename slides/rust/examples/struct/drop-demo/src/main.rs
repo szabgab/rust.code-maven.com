@@ -1,7 +1,5 @@
 #![allow(dead_code, unused_variables)]
 
-
-
 struct HasDrop {
     name: String,
 }
@@ -23,7 +21,6 @@ impl Drop for HasTwoDrops {
     }
 }
 
-
 fn main() {
     let hd = HasDrop {
         name: String::from("Foo"),
@@ -39,8 +36,6 @@ fn main() {
 
     calc(3, 0);
 }
-
-
 
 fn calc(x: i32, y: i32) -> i32 {
     if y == 0 {

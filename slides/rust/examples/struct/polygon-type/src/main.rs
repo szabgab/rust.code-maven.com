@@ -13,10 +13,10 @@ type Polygon = Vec<Point>;
 
 fn main() {
     let poly: Polygon = vec![
-        Point {x: 3, y: 7},
-        Point {x: 10, y: 6},
-        Point {x: 23, y: 12},
-        Point {x: -2, y: -2},
+        Point { x: 3, y: 7 },
+        Point { x: 10, y: 6 },
+        Point { x: 23, y: 12 },
+        Point { x: -2, y: -2 },
     ];
 
     for point in poly {

@@ -51,7 +51,6 @@ mod test {
         assert_eq!(html, "Custom: In Test 1");
     }
 
-
     #[test]
     fn test_2() {
         let provider = Config::figment().merge(("custom", "In Test 2"));
@@ -64,5 +63,4 @@ mod test {
         let html = response.into_string().unwrap();
         assert_eq!(html, "Custom: In Test 2");
     }
-
 }

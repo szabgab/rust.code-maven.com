@@ -18,8 +18,8 @@ impl Line {
 }
 fn main() {
     let line = Line {
-        a: Point {x: 2.0, y: 3.0},
-        b: Point {x: 7.0, y: -7.0},
+        a: Point { x: 2.0, y: 3.0 },
+        b: Point { x: 7.0, y: -7.0 },
     };
 
     println!("a.x: {}", line.a.x);

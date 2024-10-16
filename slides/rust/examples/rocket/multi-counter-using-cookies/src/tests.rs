@@ -29,7 +29,6 @@ fn test_with_cookie() {
     assert_eq!(response.into_string(), Some("Counter: 42".into()));
 }
 
-
 #[test]
 fn test_with_bad_cookie() {
     let client = Client::tracked(super::rocket()).unwrap();

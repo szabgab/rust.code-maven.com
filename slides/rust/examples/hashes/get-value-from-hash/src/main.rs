@@ -1,10 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
-    let counter = HashMap::from([
-        ("foo", 1),
-        ("bar", 2),
-    ]);
+    let counter = HashMap::from([("foo", 1), ("bar", 2)]);
     println!("{}", counter["foo"]);
     println!("{:?}", counter.get("foo"));
 
@@ -22,5 +19,4 @@ fn main() {
         Some(val) => println!("{val}"),
         None => println!("None"),
     };
-
 }

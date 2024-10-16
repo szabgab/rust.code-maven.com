@@ -4,7 +4,6 @@ fn main() {
     let reversed = reverse(text);
     println!("{}", text);
     println!("{}", reversed);
-
 }
 
 fn reverse(text: &str) -> String {

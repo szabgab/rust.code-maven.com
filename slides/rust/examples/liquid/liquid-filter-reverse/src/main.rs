@@ -7,7 +7,8 @@ fn render(tmpl: &str) -> String {
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
-        .parse(tmpl).unwrap();
+        .parse(tmpl)
+        .unwrap();
 
     let globals = liquid::object!({
         "items": vec![2, 3, 4],

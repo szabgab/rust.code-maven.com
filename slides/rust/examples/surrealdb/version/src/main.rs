@@ -4,13 +4,13 @@ use surrealdb::Surreal;
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-	//let db = Surreal::new::<Ws>("localhost:8000").await?;
-	let db = Surreal::new::<Mem>(()).await?;
+    //let db = Surreal::new::<Ws>("localhost:8000").await?;
+    let db = Surreal::new::<Mem>(()).await?;
 
-	let version = db.version().await?;
+    let version = db.version().await?;
 
-	println!("{version:?}");
-	println!("{version}");
+    println!("{version:?}");
+    println!("{version}");
 
-	Ok(())
+    Ok(())
 }

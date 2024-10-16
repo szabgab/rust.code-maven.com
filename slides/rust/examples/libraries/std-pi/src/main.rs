@@ -4,4 +4,3 @@ fn main() {
 
     // println!("{}", PI); // error[E0425]: cannot find value `PI` in this scope
 }
-

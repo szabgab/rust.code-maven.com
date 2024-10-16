@@ -20,5 +20,4 @@ fn main() {
     } else {
         println!("This iterator is finished");
     }
-
 }

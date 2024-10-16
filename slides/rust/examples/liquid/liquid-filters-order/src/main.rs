@@ -1,7 +1,9 @@
 fn main() {
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse("
+        .build()
+        .unwrap()
+        .parse(
+            "
            plain: {{text}}
            first: {{text | first}}
            last: {{text | last}}
@@ -17,7 +19,9 @@ fn main() {
            plain: {{tpl}}
            first: {{tpl | first}}
            last: {{tpl | last}}
-       ").unwrap();
+       ",
+        )
+        .unwrap();
 
     let text = "This is some text";
     let words = ["These", "are", "words", "in", "an", "array"];

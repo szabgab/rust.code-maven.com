@@ -17,8 +17,7 @@ fn main() {
     assert_eq!(res, ());
 }
 
-fn empty() {
-}
+fn empty() {}
 
 fn no_return() {
     println!("Hello World!");

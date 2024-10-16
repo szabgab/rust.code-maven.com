@@ -6,11 +6,11 @@ use html_to_string_macro::html;
 
 fn main() {
     let html = html!(
-<div>
-<h2>"Title"</h2>
-<hr />
-</div>
-);
+    <div>
+    <h2>"Title"</h2>
+    <hr />
+    </div>
+    );
 
     println!("{}", html);
     assert_eq!(html, "<div><h2>Title</h2><hr></div>");

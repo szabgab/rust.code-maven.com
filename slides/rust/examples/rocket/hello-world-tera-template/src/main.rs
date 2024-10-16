@@ -5,9 +5,12 @@ use rocket_dyn_templates::{context, Template};
 
 #[get("/")]
 fn index() -> Template {
-    Template::render("index", context! {
-        name: "Rocket with Tera"
-    })
+    Template::render(
+        "index",
+        context! {
+            name: "Rocket with Tera"
+        },
+    )
 }
 
 #[launch]

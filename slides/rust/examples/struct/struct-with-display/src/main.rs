@@ -9,6 +9,6 @@ impl std::fmt::Display for Red {
 
 fn main() {
     let red = Red(10);
-    println!("{}", red);    // 10
-    println!("{:?}", red);  //  Red(10)
+    println!("{}", red); // 10
+    println!("{:?}", red); //  Red(10)
 }

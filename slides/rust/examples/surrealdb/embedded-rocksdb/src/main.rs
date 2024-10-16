@@ -1,5 +1,5 @@
-use surrealdb::Surreal;
 use surrealdb::engine::local::RocksDb;
+use surrealdb::Surreal;
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {

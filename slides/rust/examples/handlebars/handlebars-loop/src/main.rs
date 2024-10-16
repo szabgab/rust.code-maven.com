@@ -2,9 +2,8 @@ use handlebars::Handlebars;
 use serde_json::json;
 use std::error::Error;
 use std::fs::File;
-use std::io::Write;
 use std::io::Read;
-
+use std::io::Write;
 
 fn main() {
     let filename = "hello.html";
@@ -20,10 +19,10 @@ fn render_without_register(template_file: &str, filename: &str) -> Result<(), Bo
     match File::open(template_file) {
         Ok(mut file) => {
             file.read_to_string(&mut template).unwrap();
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", template_file, error);
-        },
+        }
     }
 
     let reg = Handlebars::new();
@@ -34,4 +33,3 @@ fn render_without_register(template_file: &str, filename: &str) -> Result<(), Bo
 
     Ok(())
 }
-

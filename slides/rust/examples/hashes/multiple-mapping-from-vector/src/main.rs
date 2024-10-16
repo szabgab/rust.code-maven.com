@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-
 #[derive(Debug)]
 #[allow(dead_code)]
 struct Something {
@@ -10,8 +9,14 @@ struct Something {
 
 fn main() {
     let things: Vec<Something> = vec![
-        Something { key1: String::from("one"), key2: String::from("two") },
-        Something { key1: String::from("uno"), key2: String::from("dos") },
+        Something {
+            key1: String::from("one"),
+            key2: String::from("two"),
+        },
+        Something {
+            key1: String::from("uno"),
+            key2: String::from("dos"),
+        },
     ];
     dbg!(&things);
 

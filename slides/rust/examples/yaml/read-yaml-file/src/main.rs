@@ -1,6 +1,6 @@
 use std::fs::File;
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Point {
@@ -18,7 +18,8 @@ fn read_any_yaml() {
     let filename = "data.yaml";
     match File::open(filename) {
         Ok(file) => {
-            let data: serde_yaml::Value = serde_yaml::from_reader(file).expect("YAML parsing error");
+            let data: serde_yaml::Value =
+                serde_yaml::from_reader(file).expect("YAML parsing error");
             dbg!(&data);
 
             let text = match data.get("text") {
@@ -35,14 +36,13 @@ fn read_any_yaml() {
                 Some(val) => val.as_i64().unwrap(),
                 None => panic!("Field y does not exist"),
             };
-            println!("{}", x+y);
-        },
+            println!("{}", x + y);
+        }
         Err(error) => {
             println!("Error opening file {}: {}", filename, error);
-        },
+        }
     }
 }
-
 
 fn read_struct_yaml() {
     let filename = "data.yaml";
@@ -55,8 +55,6 @@ fn read_struct_yaml() {
         }
         Err(error) => {
             println!("Error opening file {}: {}", filename, error);
-        },
+        }
     }
 }
-
-

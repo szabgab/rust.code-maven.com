@@ -3,13 +3,11 @@ use surrealdb::engine::local::Mem;
 use surrealdb::sql::Thing;
 use surrealdb::Surreal;
 
-
 #[derive(Debug, Deserialize, Serialize)]
 struct Entry {
     id: Thing,
     number: u32,
 }
-
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
@@ -18,21 +16,29 @@ async fn main() -> surrealdb::Result<()> {
     dbh.use_ns("demo").use_db("demo").await?;
 
     dbh.query("DEFINE TABLE entry SCHEMAFULL").await?;
-    dbh.query("DEFINE FIELD number ON TABLE entry TYPE int").await?;
+    dbh.query("DEFINE FIELD number ON TABLE entry TYPE int")
+        .await?;
 
-
-    let res = dbh.query("CREATE entry CONTENT {
+    let res = dbh
+        .query(
+            "CREATE entry CONTENT {
         number: 42,
-    };").await?;
+    };",
+        )
+        .await?;
     match res.check() {
         Ok(val) => println!("Success: {val:?}"),
         Err(err) => println!("Error: {err}"),
     }
     println!("---------");
 
-    let res = dbh.query("CREATE entry CONTENT {
+    let res = dbh
+        .query(
+            "CREATE entry CONTENT {
         number: 'fortytwo',
-    };").await?;
+    };",
+        )
+        .await?;
     match res.check() {
         Ok(val) => println!("Success: {val:?}"),
         Err(err) => println!("Error: {err}"),

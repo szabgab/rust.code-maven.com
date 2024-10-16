@@ -1,4 +1,3 @@
-
 fn main() {
     let width = 800;
     let height = 800;
@@ -61,7 +60,6 @@ fn main() {
         // *pixel = image::Rgb([red, green, blue]);
         *imgbuf.get_pixel_mut(x, y) = image::Rgb([red, green, blue]);
     }
-
 
     imgbuf.save("image.png").unwrap();
 }

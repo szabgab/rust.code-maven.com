@@ -13,4 +13,3 @@ fn rocket() -> _ {
 
 #[cfg(test)]
 mod tests;
-

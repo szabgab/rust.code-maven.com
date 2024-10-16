@@ -1,19 +1,17 @@
 macro_rules! define_with_tt {
-	($var:tt) => {
+    ($var:tt) => {
         fn $var() {
             println!("hi");
         }
-
-    }
+    };
 }
 
 macro_rules! define_with_ident {
-	($var:ident) => {
+    ($var:ident) => {
         fn $var() {
             println!("hi");
         }
-
-    }
+    };
 }
 
 fn main() {
@@ -28,4 +26,3 @@ fn main() {
 
 define_with_tt!(global_tt);
 define_with_ident!(global_ident);
-

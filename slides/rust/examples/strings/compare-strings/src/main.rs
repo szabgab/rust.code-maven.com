@@ -4,7 +4,7 @@ fn main() {
     let z = "abd";
     println!("{}", x < y);
     println!("{:?}", x.cmp(y));
-    println!("{}", y == z) ;
+    println!("{}", y == z);
     println!("{:?}", y.cmp(y));
     println!();
 
@@ -13,7 +13,6 @@ fn main() {
     let z = String::from("abd");
     println!("{}", x < y);
     println!("{:?}", x.cmp(&y));
-    println!("{}", y == z) ;
+    println!("{}", y == z);
     println!("{:?}", y.cmp(&y));
 }
-

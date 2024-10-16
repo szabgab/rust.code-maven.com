@@ -26,4 +26,3 @@ fn main() {
     // We cannot compare which is bigger as we have not implemented (or derived from) Ord or PartialOrd.
     // println!("{}", a < c);
 }
-

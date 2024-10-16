@@ -1,11 +1,21 @@
-pub fn commafy<Integer: Into<i64> +  Copy + std::fmt::Debug + std::fmt::Display>(num: Integer) -> String {
-//pub fn commafy(num: i32) -> String {
+pub fn commafy<Integer: Into<i64> + Copy + std::fmt::Debug + std::fmt::Display>(
+    num: Integer,
+) -> String {
+    //pub fn commafy(num: i32) -> String {
     let num = format!("{num}");
     let mut ix = 0;
-    let num = num.chars().rev().map(|chr| {
-        ix += 1;
-        if ix % 3 == 1 && ix > 1 { format!(",{chr}") } else { format!("{chr}") }
-    }).collect::<String>();
+    let num = num
+        .chars()
+        .rev()
+        .map(|chr| {
+            ix += 1;
+            if ix % 3 == 1 && ix > 1 {
+                format!(",{chr}")
+            } else {
+                format!("{chr}")
+            }
+        })
+        .collect::<String>();
     num.chars().rev().collect::<String>()
 }
 
@@ -28,4 +38,3 @@ mod tests {
         assert_eq!("1,254", commafy(1254u16));
     }
 }
-

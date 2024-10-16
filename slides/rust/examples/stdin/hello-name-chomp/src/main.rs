@@ -12,4 +12,3 @@ fn main() {
 
     println!("Hello {name}, how are you?");
 }
-

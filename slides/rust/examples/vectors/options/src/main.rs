@@ -1,10 +1,10 @@
 #[allow(clippy::needless_range_loop)]
 #[allow(clippy::nonminimal_bool)]
 fn main() {
-    let numbers_real: Vec<Option<i32>> = vec![Some(3),  None, None,     Some(7), Some(9)];
+    let numbers_real: Vec<Option<i32>> = vec![Some(3), None, None, Some(7), Some(9)];
     println!("{:?}", numbers_real);
 
-    let numbers_ref: Vec<Option<&i32>> = vec![Some(&3), None, Some(&5), None,    Some(&9)];
+    let numbers_ref: Vec<Option<&i32>> = vec![Some(&3), None, Some(&5), None, Some(&9)];
     println!("{:?}", numbers_ref);
     println!();
 

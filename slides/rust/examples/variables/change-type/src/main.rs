@@ -9,4 +9,3 @@ fn main() {
     println!("{answer}");
     println!("{}", answer + 1);
 }
-

@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-
 #[derive(Debug)]
 #[allow(dead_code)]
 struct Something {
@@ -9,8 +8,14 @@ struct Something {
 }
 
 fn main() {
-    let a = Something { key1: String::from("one"), key2: String::from("two") };
-    let b = Something { key1: String::from("uno"), key2: String::from("dos") };
+    let a = Something {
+        key1: String::from("one"),
+        key2: String::from("two"),
+    };
+    let b = Something {
+        key1: String::from("uno"),
+        key2: String::from("dos"),
+    };
     dbg!(&a);
     dbg!(&b);
 

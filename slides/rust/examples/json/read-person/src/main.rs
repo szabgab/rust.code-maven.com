@@ -8,7 +8,6 @@ struct Child {
     birthdate: u32,
 }
 
-
 #[derive(Deserialize, Debug)]
 #[serde(deny_unknown_fields)]
 #[allow(dead_code)]
@@ -33,7 +32,6 @@ fn main() {
     assert!(person.numbers[0] == 23);
     assert!(person.children[0].name == "Alpha");
 }
-
 
 fn get_filename() -> String {
     let args: Vec<String> = std::env::args().collect();

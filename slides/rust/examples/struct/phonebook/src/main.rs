@@ -5,8 +5,6 @@ enum Title {
     Prof,
 }
 
-
-
 #[allow(dead_code)]
 #[derive(Debug)]
 enum PhoneType {
@@ -36,12 +34,10 @@ fn main() {
     let joe = Person {
         name: String::from("Joe"),
         id: String::from("123456"),
-        phones: vec![
-            Phone {
-                number: String::from("055-1234567"),
-                ptype: PhoneType::Home,
-            }
-        ],
+        phones: vec![Phone {
+            number: String::from("055-1234567"),
+            ptype: PhoneType::Home,
+        }],
         notes: None,
         title: None,
     };
@@ -49,14 +45,12 @@ fn main() {
     let jane = Person {
         name: String::from("Jane"),
         id: String::from("678"),
-        phones: vec![
-            Phone {
-                number: String::from("123"),
-                ptype: PhoneType::Work,
-            }
-        ],
+        phones: vec![Phone {
+            number: String::from("123"),
+            ptype: PhoneType::Work,
+        }],
         notes: Some(String::from("was a student")),
-        title: Some(Title::Doctor)
+        title: Some(Title::Doctor),
     };
 
     println!("{:#?}", joe);

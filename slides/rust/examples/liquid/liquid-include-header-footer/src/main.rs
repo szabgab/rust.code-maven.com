@@ -5,9 +5,9 @@ pub type Partials = liquid::partials::EagerCompiler<liquid::partials::InMemorySo
 
 fn main() {
     let mut partials = Partials::empty();
-    let filename ="templates/incl/header.txt";
+    let filename = "templates/incl/header.txt";
     partials.add(filename, read_file(filename));
-    let filename ="templates/incl/footer.txt";
+    let filename = "templates/incl/footer.txt";
     partials.add(filename, read_file(filename));
 
     let template = liquid::ParserBuilder::with_stdlib()
@@ -27,17 +27,15 @@ fn main() {
     println!("{}", output);
 }
 
-
 fn read_file(template_file: &str) -> String {
     let mut template = String::new();
     match File::open(template_file) {
         Ok(mut file) => {
             file.read_to_string(&mut template).unwrap();
-        },
+        }
         Err(error) => {
             println!("Error opening file {}: {}", template_file, error);
-        },
+        }
     }
     template
 }
-

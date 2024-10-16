@@ -34,7 +34,6 @@ fn echo_page() {
     );
 }
 
-
 #[test]
 fn echo_page_missing_text() {
     let client = Client::tracked(super::rocket()).unwrap();
@@ -49,6 +48,8 @@ fn echo_page_missing_text() {
         response.headers().get_one("Content-Type").unwrap(),
         "text/html; charset=utf-8"
     );
-    assert!(
-        response.into_string().unwrap().contains("<h1>422: Unprocessable Entity</h1>"));
+    assert!(response
+        .into_string()
+        .unwrap()
+        .contains("<h1>422: Unprocessable Entity</h1>"));
 }

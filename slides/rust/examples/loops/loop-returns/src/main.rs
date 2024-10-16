@@ -6,7 +6,7 @@ fn main() {
         number += random_number;
         println!("{number}");
         if number > 100 {
-            break random_number
+            break random_number;
         }
     };
 

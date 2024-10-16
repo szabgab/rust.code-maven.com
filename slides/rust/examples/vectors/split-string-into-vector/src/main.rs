@@ -1,4 +1,3 @@
-
 fn main() {
     let text = String::from("One=Two=Three");
 
@@ -12,6 +11,4 @@ fn main() {
     let parts = text.split_whitespace().collect::<Vec<_>>();
     println!("{:?}", parts);
     println!("{}", parts[0]);
-
 }
-

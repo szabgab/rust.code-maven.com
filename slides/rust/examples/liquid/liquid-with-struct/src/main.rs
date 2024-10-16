@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 struct Car {
@@ -10,8 +10,10 @@ struct Car {
 
 fn main() {
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse("
+        .build()
+        .unwrap()
+        .parse(
+            "
             Car manufacturer: {{car.manufacturer}}
             {% if car.electric %}
                 electric
@@ -20,7 +22,9 @@ fn main() {
             {% for name in car.names %}
                {{name}}
             {% endfor %}
-        ").unwrap();
+        ",
+        )
+        .unwrap();
 
     let car = Car {
         manufacturer: String::from("Ford"),
