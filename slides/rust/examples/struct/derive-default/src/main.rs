@@ -1,19 +1,8 @@
-#![allow(clippy::derivable_impls)]
-
-#[derive(Debug)]
+#[derive(Debug, Default)]
 #[allow(dead_code)]
 struct Something {
     name: String,
     number: i32,
-}
-
-impl Default for Something {
-    fn default() -> Something {
-        Something {
-            name: String::new(),
-            number: 0,
-        }
-    }
 }
 
 fn main() {

@@ -37,6 +37,19 @@ fn main() {
             if filename.starts_with("examples/rocket/people-and-groups/templates/") {
                 continue;
             }
+            let files = [
+                "examples/threads/count-characters/aadef.txt",
+                "examples/threads/count-characters/abc.txt",
+                "examples/rocket/static-files/static/favicon.ico",
+                "examples/files/count-digits/digits.txt",
+                "examples/files/read-whole-file/data.txt",
+                "examples/ownership/concatenate-content-of-files/dog.txt",
+                "examples/ownership/concatenate-content-of-files/cat.txt",
+                "examples/ownership/read-file-and-trim-newline/cat.txt",
+            ].into_iter().map(|name| name.to_owned()).collect::<Vec<String>>();
+            if files.contains(&filename) {
+                continue;
+            }
 
             println!("ERROR Unused file: `{filename}`");
             count += 1;
@@ -74,7 +87,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
     for (ix, crate_folder) in crates.into_iter().enumerate() {
         started += 1;
         if verbose {
-            println!("crate: {}/{}, {:?}", ix+1, number_of_crates, crate_folder);
+            println!("crate: {}/{number_of_crates}, {crate_folder:?}", ix+1);
         }
         let mytx = tx.clone();
 
@@ -93,7 +106,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
     }
 
     for received in rx {
-        //println!("received {}", thread_count);
+        //println!("received {thread_count}");
         finished += 1;
         if !received {
             clippy_error += 1;
@@ -262,7 +275,7 @@ fn get_imported_files(md_files: Vec<PathBuf>) -> Vec<String> {
                 }
             }
             Err(error) => {
-                println!("Error opening file {:?}: {}", filename, error);
+                println!("Error opening file {filename:?}: {error}");
             }
         }
     }

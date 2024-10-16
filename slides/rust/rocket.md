@@ -428,6 +428,7 @@ this is a simple example using the `length` filter:
 
 ![](examples/rocket/use-tera-filter/src/main.rs)
 ![](examples/rocket/use-tera-filter/src/tests.rs)
+![](examples/rocket/use-tera-filter/Rocket.toml)
 
 ## Create Tera filters
 {id: create-tera-filters}
@@ -460,6 +461,7 @@ this is a simple example using the `length` filter:
 
 
 ![](examples/rocket/skip-route-using-guard/src/main.rs)
+![](examples/rocket/skip-route-using-guard/Rocket.toml)
 
 ## Rocket Guards - experiment
 {id: rocket-guards-experiment}
@@ -492,6 +494,4 @@ this is a simple example using the `length` filter:
 
 ![](examples/rocket/userid-in-path/src/main.rs)
 ![](examples/rocket/userid-in-path/src/tests.rs)
-![](examples/rocket/use-tera-filter/Rocket.toml`
-![](examples/rocket/skip-route-using-guard/Rocket.toml`
 

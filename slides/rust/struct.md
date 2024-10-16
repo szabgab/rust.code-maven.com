@@ -187,11 +187,34 @@
 
 ![](examples/struct/constructor/src/main.rs)
 
-
 ## Default values
 {id: default-values}
+{i: impl}
+{i: Default}
+
+* We can implement the [Default](https://doc.rust-lang.org/std/default/trait.Default.html) trait and then we can use
+
+..Something::default()
+
+to fill in the blank fields with the default values.
+
+![](examples/struct/other-defaults/src/main.rs)
+
+## Empty string and zero as default values
+{id: empty-string-and-zero-as-default-values}
+{i: derivable_impls}
+
+* In this special case the default values we set in the implementation of the Default trait happen to be the default values of each primitive type. (empty string for strings and 0 for numbers).
+* In this case **clippy** will indicate that we don't need to implement Default by ourselves.
+* In this example we silences clippy, in the next example we derive from Default.
 
 ![](examples/struct/default/src/main.rs)
+
+## Derived Default values
+{id: derived-default-values}
+
+![](examples/struct/derive-default/src/main.rs)
+
 
 ## Default for composite struct
 {id: default-for-composite-struct}

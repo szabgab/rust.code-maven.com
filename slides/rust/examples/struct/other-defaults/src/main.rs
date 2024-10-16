@@ -1,5 +1,3 @@
-#![allow(clippy::derivable_impls)]
-
 #[derive(Debug)]
 #[allow(dead_code)]
 struct Something {
@@ -10,8 +8,8 @@ struct Something {
 impl Default for Something {
     fn default() -> Something {
         Something {
-            name: String::new(),
-            number: 0,
+            name: String::from("Rust"),
+            number: 19,
         }
     }
 }
@@ -29,8 +27,8 @@ fn main() {
         ..Something::default()
     };
     println!("{:?}", empty);
-    assert_eq!(empty.name, "");
-    assert_eq!(empty.number, 0);
+    assert_eq!(empty.name, "Rust");
+    assert_eq!(empty.number, 19);
 
     let with_name = Something {
         name: String::from("Hello"),
@@ -38,13 +36,13 @@ fn main() {
     };
     println!("{:?}", with_name);
     assert_eq!(with_name.name, "Hello");
-    assert_eq!(with_name.number, 0);
+    assert_eq!(with_name.number, 19);
 
     let with_number = Something {
         number: 42,
         ..Something::default()
     };
     println!("{:?}", with_number);
-    assert_eq!(with_number.name, "");
+    assert_eq!(with_number.name, "Rust");
     assert_eq!(with_number.number, 42);
 }
