@@ -283,6 +283,7 @@ first or last
 {i: reversed}
 
 ![](examples/liquid/liquid-loops/src/main.rs)
+![](examples/liquid/liquid-loops/out.out)
 
 ## Liquid comma between every two elements (forloop.last)
 {id: liquid-forloop-last}
@@ -296,6 +297,7 @@ first or last
 * last
 
 ![](examples/liquid/liquid-loop-last/src/main.rs)
+![](examples/liquid/liquid-loop-last/out.out)
 
 ## Liquid: create your own filter: reverse a string
 {id: liquid-create-your-own-filter-reverse-a-string}
@@ -320,6 +322,7 @@ This is using the [liquid-filter-reverse-string](https://crates.io/crates/liquid
 * We can do that using the `size` attribute.
 
 ![](examples/liquid/liquid-size/src/main.rs)
+![](examples/liquid/liquid-size/out.out)
 
 ## Liquid: Embed HTML - escape HTML
 {id: liquid-embed-html-escape-html}
