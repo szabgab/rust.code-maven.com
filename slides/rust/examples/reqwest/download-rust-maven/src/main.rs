@@ -49,7 +49,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Started {} tasks. Waiting...", tasks.len());
     for task in tasks {
-        let r = join!(task);
+        let _r = join!(task);
     }
     //join_all(tasks).await;
 

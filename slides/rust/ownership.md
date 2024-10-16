@@ -213,3 +213,5 @@ e.g. If file 1 contains "cat" and file 2 contains "dog" then return "catdog" and
 {i: TODO}
 
 ![](examples/ownership/pass-vector-to-function/src/main.rs)
+![](examples/ownership/pass-vector-to-function/out.out)
+

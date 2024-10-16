@@ -9,9 +9,8 @@ enum Color {
     Other(String),
 }
 
-
 fn to_rgb(color: &Color) -> String {
-    return match color {
+    match color {
         Color::Black => String::from("000000"),
         Color::Red => String::from("ff0000"),
         Color::Green => String::from("00ff00"),
@@ -22,7 +21,7 @@ fn to_rgb(color: &Color) -> String {
 }
 
 fn from_rgb(rgb: &str) -> Color {
-    return match rgb.to_ascii_lowercase().as_str() {
+    match rgb.to_ascii_lowercase().as_str() {
         "000000" => Color::Black,
         "ff0000" => Color::Red,
         "00ff00" => Color::Green,
@@ -42,10 +41,15 @@ fn main() {
     let experiment = from_rgb("ab89e2");
 
     println!("{}", background == foreground);
+    assert_ne!(background, foreground);
     println!("{}", background == ink);
+    assert_eq!(background, ink);
     println!();
 
-    for color in [background, foreground, ink, sky, other, experiment] {
-        println!("{} {:?}", to_rgb(&color), color);
+    for color in [&background, &foreground, &ink, &sky, &other, &experiment] {
+        println!("{} {:?}", to_rgb(color), color);
     }
+
+    assert_eq!(to_rgb(&background), "000000");
+    assert_eq!(to_rgb(&other), "4674b9");
 }

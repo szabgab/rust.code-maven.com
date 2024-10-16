@@ -1,10 +1,10 @@
 {
-    "banana": 1,
     "apple": 1,
+    "banana": 1,
 }
 {
-    "banana": 1,
-    "peach": 2,
-    "grape": 2,
     "apple": 3,
+    "banana": 1,
+    "grape": 2,
+    "peach": 2,
 }

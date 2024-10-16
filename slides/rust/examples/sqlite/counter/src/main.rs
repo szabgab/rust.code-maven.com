@@ -23,7 +23,7 @@ fn main() {
     if name == "list" {
         list_counter(&connection);
     } else {
-        count(&connection, &name);
+        count(&connection, name);
     }
 }
 

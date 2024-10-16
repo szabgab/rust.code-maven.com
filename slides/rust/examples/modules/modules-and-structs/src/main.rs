@@ -2,10 +2,9 @@ fn main() {
     tools::use_struct();
 
     let p = tools::get_struct();
-    println!("Hello {:#?}", p);
-
-    println!("Hello {}", p.fname);
-    //println!("Hello {}", p.lname);
+    println!("after get_struct: {:#?}", p);
+    assert_eq!(p.fname, "Public");
+    //println!("Hello {}", p.lname); // private field
 }
 
 mod tools {
@@ -22,16 +21,17 @@ mod tools {
             lname: String::from("Bar"),
         };
 
-        println!("Hello {:#?}", p);
+        println!("in use_struct: {:#?}", p);
+        assert_eq!(p.fname, "Foo");
+        assert_eq!(p.lname, "Bar");
     }
 
-
     pub fn get_struct() -> Person {
+        #[allow(clippy::let_and_return)]
         let p = Person {
             fname: String::from("Public"),
             lname: String::from("User"),
         };
         p
     }
-
 }

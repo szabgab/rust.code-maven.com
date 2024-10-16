@@ -18,18 +18,17 @@ fn main() {
     prt!(numbers);
 }
 
-fn move_vector() {
-    let numbers = vec![5, 2, 3];
-    prt!(numbers);
-    show_vector(numbers);
-    //prt!(numbers);
-}
-
-fn show_vector(things: Vec<i32>) {
-    prt!(things);
-}
+// fn move_vector() {
+//     let numbers = vec![5, 2, 3];
+//     prt!(numbers);
+//     show_vector(numbers);
+//     //prt!(numbers);
+// }
+//
+// fn show_vector(things: Vec<i32>) {
+//     prt!(things);
+// }
 
 fn show_vector_ref(things: &Vec<i32>) {
     prt!(things);
 }
-

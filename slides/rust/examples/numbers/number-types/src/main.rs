@@ -1,3 +1,5 @@
+#![allow(clippy::approx_constant)]
+
 fn main() {
     let number = 139871;
     println!("{number}");
