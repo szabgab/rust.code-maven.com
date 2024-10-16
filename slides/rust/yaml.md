@@ -9,7 +9,9 @@
 {i: as_i64}
 {i: as_str}
 {i: struct}
+{i: TODO}
 
+* TODO: if the number of dashes at the top is not correct (e.g. 4, the parser will panic, how to handle this properly?)
 
 ![](examples/yaml/read-yaml-file/out.out)
 
@@ -23,5 +25,4 @@
 
 ![](examples/yaml/read-yaml-file/out.out)
 
-* TODO: if the number of dashes at the top is not correct (e.g. 4, the parser will panic, how to handle this properly?)
 

@@ -161,7 +161,14 @@
 
 ## Iter strings
 {id: iter-strings}
-{i: TBD}
+{i: TODO}
 
 ![](examples/iterators/iter-strings/src/main.rs)
+
+## Non-circular iterators
+{id: non-cicrucular-iterator}
+{i: TODO}
+
+![](examples/iterators/non-circular-iterator/src/main.rs)
+![](examples/iterators/non-circular-iterator/out.out)
 

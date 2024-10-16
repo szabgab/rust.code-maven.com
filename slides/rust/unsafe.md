@@ -10,7 +10,7 @@
 
 ## unsafe powers
 {id: unsafe-powers}
-{i: TBD}
+{i: TODO}
 
 * Dereference a raw pointer
 * Call an unsafe function or method
@@ -22,7 +22,7 @@
 
 ## Unsafe - core dump
 {id: unsafe-core-dump}
-{i: TBD}
+{i: TODO}
 
 ![](examples/unsafe/core-dump/src/main.rs)
 

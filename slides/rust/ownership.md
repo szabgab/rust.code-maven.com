@@ -197,7 +197,7 @@
 
 ## Exercise: concatenate file content
 {id: exercise-concatenate-file-content}
-{i: TBD}
+{i: TODO}
 
 Write a function that received the name of two files and returns the content of the two files concatenated in both directions.
 
@@ -210,6 +210,6 @@ e.g. If file 1 contains "cat" and file 2 contains "dog" then return "catdog" and
 
 ## Pass vector to function
 {id: pass-vector-to-function}
-{i: TBD}
+{i: TODO}
 
 ![](examples/ownership/pass-vector-to-function/src/main.rs)

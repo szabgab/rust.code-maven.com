@@ -149,7 +149,7 @@ Other message
 ```
 ## SurrealDB experiments
 {id: surrealdb-experiments}
-{i: TBD}
+{i: TODO}
 
 ![](examples/surrealdb/create-select/Cargo.toml)
 ![](examples/surrealdb/create-select/src/main.rs)
@@ -209,7 +209,7 @@ Other message
 
 ## SurrealDB - toggle
 {id: surrealdb-toggle}
-{i: TBD}
+{i: TODO}
 
 * TODO: The error handling should be improved
 
@@ -326,6 +326,12 @@ Other message
 
 ## SurrealDB in Docker using the CLI
 {id: surrealdb-in-docker-using-cli}
+{i: TODO}
+
+* TODO: types of data?
+* TODO: schema?
+* TODO: index
+
 
 * We would like to try SurrealDB, but we rather use Docker instead of installing SurrealDB on our computer.
 * At first we'll use the SurrealDB command line with an in-memory (not persistent) database.
@@ -448,13 +454,9 @@ ns/db> SELECT * from person, planet
 
 ```
 
-TODO: types of data?
-TODO: schema?
-TODO: index
-
 ## SurrealDB - references and SELECT
 {id: surrealdb-references-and-select}
-{i: TBD}
+{i: TODO}
 
 ![](examples/surrealdb/references-and-selects/Cargo.toml)
 ![](examples/surrealdb/references-and-selects/src/main.rs)
@@ -464,14 +466,14 @@ TODO: index
 
 ## SurrealDB Demo
 {id: surreldb-demo}
-{i: TBD}
+{i: TODO}
 
 ![](examples/surrealdb/demo/Cargo.toml)
 ![](examples/surrealdb/demo/src/main.rs)
 
 ## SurrealDB columns with schema
 {id: surrealdb-columns-with-schema}
-{i: TBD}
+{i: TODO}
 
 ![](examples/surrealdb/columns-with-schema/Cargo.toml)
 ![](examples/surrealdb/columns-with-schema/src/main.rs)

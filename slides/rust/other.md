@@ -396,14 +396,14 @@ cargo run --release
 ## Add method to HashMap that sums the values
 {id: add-method-to-hashmap-that-sums-the-values}
 {i: HashMap}
-{i: TBD}
+{i: TODO}
 
 ![](examples/hashes/total-values-method/src/main.rs)
 ![](examples/hashes/total-values-method/out.out)
 
 ## Passing string to function
 {id: passing-string-to-function}
-{i: TBD}
+{i: TODO}
 
 ![](examples/other/passing-string-to-function/src/main.rs)
 
@@ -447,7 +447,7 @@ cargo run --release
 ## map with threads with Mutex
 {id: map-with-thread-mutex}
 {i: Mutex}
-{i: TBD}
+{i: TODO}
 
 ![](examples/threads/map-thread-suggested/src/main.rs)
 
@@ -482,7 +482,7 @@ RUST=42 cargo run
 
 ## Reference to a number
 {id: reference-to-a-number}
-{i: TBD}
+{i: TODO}
 
 ![](examples/other/reference-to-number/src/main.rs)
 

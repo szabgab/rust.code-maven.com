@@ -73,7 +73,7 @@ Make sure we can accept any integer.
 
 ## Solution: Implement function to repeate a string
 {id: solution-repeate-string}
-{i: TBD}
+{i: TODO}
 
 ![](examples/advanced-functions/repeat-string/src/main.rs)
 

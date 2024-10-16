@@ -260,7 +260,7 @@ error: arithmetic operation that can potentially result in unexpected side-effec
 
 ## Approximately compare floating point numbers
 {id: approximately-compare-floating-point-numbers}
-{i: TBD}
+{i: TODO}
 {i: approx_eq}
 
 * [float-cmp](https://crates.io/crates/float-cmp)
@@ -301,7 +301,7 @@ error: arithmetic operation that can potentially result in unexpected side-effec
 
 ## Complex numbers
 {id: complex-numbers}
-{i: TBD}
+{i: TODO}
 
 * The [num-complex](https://crates.io/crates/num-complex) seems to be the most popular one.
 

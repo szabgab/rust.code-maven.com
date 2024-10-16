@@ -60,7 +60,7 @@
 
 ## Return value from thread
 {id: return-value-from-thread}
-{i: TBD}
+{i: TODO}
 
 ## Handle panic! in threads
 {id: handle-panic-in-threads}
@@ -304,6 +304,7 @@ A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/st
 * This solution does the work locally and updates the shared variable only at the end
 
 ![](examples/threads/counter-with-mutex-local/src/main.rs)
+![](examples/threads/counter-with-mutex-local/out.out)
 
 ## Counter with message passing
 {id: counter-with-message-passing}
@@ -311,7 +312,7 @@ A few examples to get used to the syntax of [Mutex](https://doc.rust-lang.org/st
 {i: channel}
 {i: send}
 {i: drop}
-{i: TBD}
+{i: TODO}
 
 * Solution using messages
 
@@ -374,7 +375,7 @@ $ wc intro.md files.md strings.md
 
 ## Exercise: run several functions on the same text
 {id: exercise-run-several-functions-on-the-same-text}
-{i: TBD}
+{i: TODO}
 
 
 In earlier parts of the course I have implemented several functions that were searching a text string to find certain characters.
@@ -396,10 +397,11 @@ Implement the "download many files" application using threads and blocking the h
 
 ## Solution: run several functions on the same text
 {id: solution-run-several-functions-on-the-same-text}
+{i: TODO}
 
 ![](examples/threads/separate-functions/src/main.rs)
 
-TODO: How to share workload? e.g. We would like to create 10,000 files with the sequence number of the file being both the content and the filename.
-TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
+* TODO: How to share workload? e.g. We would like to create 10,000 files with the sequence number of the file being both the content and the filename.
+* TODO: What if we have a vector of 10,000 values and we would like to save each one of them in a separate file?
 
 

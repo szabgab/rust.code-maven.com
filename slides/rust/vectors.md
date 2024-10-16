@@ -333,7 +333,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ## Two references to the same vector
 {id: two-refernces-to-the-same-vector}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/two-references-to-the-same-vector/src/main.rs)
 ![](examples/vectors/two-references-to-the-same-vector/out.out)
@@ -343,14 +343,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: filter}
 {i: cloned}
 {i: Clone}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/filter-vector-of-structs-with-clone/src/main.rs)
 ![](examples/vectors/filter-vector-of-structs-with-clone/out.out)
 
 ## Convert vector of structs to vector of references
 {id: convert-vector-of-structs-to-vector-of-references}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/convert-vector-of-structs-to-vector-of-references/src/main.rs)
 ![](examples/vectors/convert-vector-of-structs-to-vector-of-references/out.out)
@@ -358,7 +358,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 
 ## Filter vector of structs without copy
 {id: filter-vector-of-structs-without-copy}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/filter-vector-of-structs/src/main.rs)
 ![](examples/vectors/filter-vector-of-structs/out.out)
@@ -378,7 +378,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {id: accessing-the-last-element-of-a-vector}
 {i: len}
 {i: last}
-{i: TBD}
+{i: TODO}
 
 * Unlike Python and Perl, rust won't let us use a negative index in a vector so we won't be able to access the last element using `vector_name[-1]`
 * We can either use `vector_name.len()-1` or
@@ -393,7 +393,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 ## Insert element in vector
 {id: instert-element-in-vector}
 {i: insert}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/insert-element-in-vector/src/main.rs)
 
@@ -403,7 +403,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: get}
 {i: is_none}
 {i: is_some}
-{i: TBD}
+{i: TODO}
 
 * If we have a vector that some of the elements can be `None` then the other elements must be `Some`-values and the whole thing must be defined using `Option`.
 * If we try to access an element in a vector that is out of range we get a run-time panic.
@@ -421,7 +421,7 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: None}
 {i: Some}
 {i: get}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/options/src/main.rs)
 ![](examples/vectors/options/out.out)
@@ -433,14 +433,14 @@ Finally how it can reduce the `capacity` when calling `shrink_to_fit`.
 {i: capacity}
 {i: with_capacity}
 {i: resize}
-{i: TBD}
+{i: TODO}
 
 ![](examples/vectors/with-capacity/src/main.rs)
 ![](examples/vectors/with-capacity/out.out)
 
 ## References to numbers
 {id: references-to-numbers}
-{i: TBD}
+{i: TODO}
 
 ![](examples/other/references-to-numbers/src/main.rs)
 ![](examples/other/references-to-numbers/out.out)

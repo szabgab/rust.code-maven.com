@@ -21,7 +21,7 @@
 
 ## Tasks with different processing time
 {id: tasks-with-different-processing-time}
-{i: TBD}
+{i: TODO}
 
 Experimental example to show how Rayon distributes the load when the tasks have random processing time
 (betwee 1-1000 ms) and/or when there are a few long-running tasks and many short tasks.
@@ -31,7 +31,7 @@ Experimental example to show how Rayon distributes the load when the tasks have 
 
 ## map with threads
 {id: map-with-threads}
-{i: TBD}
+{i: TODO}
 
 TODO: This is experimental code that needs to be improved
 

@@ -237,7 +237,7 @@ cargo watch -x run
 
 ## Rocket - Two applications in separate files
 {id: rocket-separate-files}
-{i: TBD}
+{i: TODO}
 
 * We created a separate file with its own routes
 * We then mounted it under a path called /blog
@@ -260,7 +260,7 @@ Limitation of this solution:
 {i: uri!}
 {i: Status}
 {i: SeeOther}
-{i: TBD}
+{i: TODO}
 
 * TODO: Implement the same in the separate files case.
 * TODO: Redirect using other Status code
@@ -412,6 +412,8 @@ Dependencies
 
 ![](examples/rocket/simple-todo-with-surrealdb/templates/index.html.tera)
 
+![](examples/rocket/simple-todo-with-surrealdb/templates/item.html.tera)
+
 ## Use Tera filters (length)
 {id: use-tera-filters}
 {i: Tera}
@@ -447,6 +449,7 @@ this is a simple example using the `length` filter:
 * Unfortunately this does not work as I expected. see [my question](https://github.com/rwf2/Rocket/discussions/2876)
 
 ![](examples/rocket/skip-route/src/main.rs)
+![](examples/rocket/skip-route/Rocket.toml)
 
 ## Skip route using a guard
 {id: skip-route-by-using-a-guard}
@@ -460,7 +463,7 @@ this is a simple example using the `length` filter:
 
 ## Rocket Guards - experiment
 {id: rocket-guards-experiment}
-{i: TBD}
+{i: TODO}
 
 ![](examples/rocket/guards/Cargo.toml)
 ![](examples/rocket/guards/Rocket.toml)
@@ -468,7 +471,7 @@ this is a simple example using the `length` filter:
 
 ## Rocket return user-id
 {id: rocket-return-user-id}
-{i: TBD}
+{i: TODO}
 
 ![](examples/rocket/return-result-user-id/Cargo.toml)
 ![](examples/rocket/return-result-user-id/src/main.rs)
@@ -476,12 +479,19 @@ this is a simple example using the `length` filter:
 
 ## Rocket People and groups
 {id: rocket-people-and-groups}
-{i: TBD}
-
-TODO
+{i: TODO}
 
 ![](examples/rocket/people-and-groups/src/db.rs)
 ![](examples/rocket/people-and-groups/src/mytera.rs)
 ![](examples/rocket/people-and-groups/src/main.rs)
 ![](examples/rocket/people-and-groups/Rocket.toml)
+
+## Rocket Userid in path
+{id: rocket-userid-in-path}
+{i: TODO}
+
+![](examples/rocket/userid-in-path/src/main.rs)
+![](examples/rocket/userid-in-path/src/tests.rs)
+![](examples/rocket/use-tera-filter/Rocket.toml`
+![](examples/rocket/skip-route-using-guard/Rocket.toml`
 

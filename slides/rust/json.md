@@ -162,7 +162,7 @@ cargo run ../person.json
 
 ## Read lists of JSON structures
 {id: read-list-of-json-structures}
-{i: TBD}
+{i: TODO}
 
 ![](examples/json/read-list-of-json/data.json)
 

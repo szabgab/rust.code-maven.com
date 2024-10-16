@@ -90,8 +90,7 @@ we cannot run the tests in threads (which is the default).
 
 ## Testing crates
 {id: testing-crates}
-
-TODO
+{i: TODO}
 
 ![](examples/testing/test-crate/Cargo.toml)
 ![](examples/testing/test-crate/src/main.rs)
