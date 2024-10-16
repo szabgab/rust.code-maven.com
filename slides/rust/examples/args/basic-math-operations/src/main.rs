@@ -10,8 +10,8 @@ fn main() {
     let x: i32 = args[1].parse().expect("Wanted a number");
     let y: i32 = args[2].parse().expect("Wanted a number");
 
-    println!("{x} + {y} = {}", x+y);
-    println!("{x} * {y} = {}", x*y);
-    println!("{x} - {y} = {}", x-y);
-    println!("{x} / {y} = {}", x/y);
+    println!("{x} + {y} = {}", x + y);
+    println!("{x} * {y} = {}", x * y);
+    println!("{x} - {y} = {}", x - y);
+    println!("{x} / {y} = {}", x / y);
 }

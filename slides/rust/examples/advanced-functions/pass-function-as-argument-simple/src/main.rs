@@ -1,4 +1,3 @@
-
 fn main() {
     //hello();
     call(hello);
@@ -13,9 +12,6 @@ fn world() {
     println!("World");
 }
 
-
 fn call(my_function: fn() -> ()) {
     my_function();
 }
-
-

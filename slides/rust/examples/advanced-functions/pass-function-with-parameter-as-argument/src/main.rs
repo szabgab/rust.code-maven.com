@@ -1,4 +1,3 @@
-
 fn main() {
     call(hello);
 }
@@ -12,5 +11,3 @@ fn call(my_function: fn(text: &str) -> ()) {
 
     my_function("Bar");
 }
-
-
