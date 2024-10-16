@@ -2,7 +2,6 @@ use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::{Db, RocksDb};
 use surrealdb::Surreal;
 
-
 #[derive(Debug, Deserialize, Serialize)]
 struct Entry {
     name: String,
