@@ -4,28 +4,23 @@ use std::io::Write;
 use std::cell::RefCell;
 
 thread_local! {
-    pub static RESULT_PATH: RefCell<String> = RefCell::new(String::new());
+    pub static RESULT_PATH: RefCell<String> = const { RefCell::new(String::new()) };
 }
 
-fn main() {
-    let args = std::env::args().collect::<Vec<String>>();
-    let name = &args[1];
-    println!("Hello {name}");
-}
+fn main() {}
 
+#[allow(dead_code)]
 fn add(x: i32, y: i32) -> i32 {
     let time: u64 = rand::random();
     let time = time % 3;
-    
 
     std::thread::sleep(std::time::Duration::from_secs(time));
 
     RESULT_PATH.with_borrow(|file_path| {
-            let mut file = File::create(&file_path).unwrap();
-            println!("add({x}, {y}) file {file_path}");
-            writeln!(&mut file, "{}", x + y).unwrap();
-        }
-    );
+        let mut file = File::create(file_path).unwrap();
+        println!("add({x}, {y}) file {file_path}");
+        writeln!(&mut file, "{}", x + y).unwrap();
+    });
     x + y
 }
 

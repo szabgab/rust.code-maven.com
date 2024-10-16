@@ -1,26 +1,20 @@
 use std::fs::File;
 use std::io::Write;
 
-fn main() {
-    let args = std::env::args().collect::<Vec<String>>();
-    let name = &args[1];
-    println!("Hello {name}");
-}
+fn main() {}
 
+#[allow(dead_code)]
 fn add(x: i32, y: i32) -> i32 {
     let time: u64 = rand::random();
     let time = time % 3;
 
     std::thread::sleep(std::time::Duration::from_secs(time));
 
-    match std::env::var("RESULT_PATH") {
-        Ok(file_path) => {
-            let mut file = File::create(&file_path).unwrap();
-            println!("add({x}, {y}) file {file_path}");
-            writeln!(&mut file, "{}", x + y).unwrap();
-        }
-        Err(_) => {}
-    };
+    if let Ok(file_path) = std::env::var("RESULT_PATH") {
+        let mut file = File::create(&file_path).unwrap();
+        println!("add({x}, {y}) file {file_path}");
+        writeln!(&mut file, "{}", x + y).unwrap();
+    }
     x + y
 }
 

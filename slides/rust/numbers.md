@@ -14,7 +14,7 @@
 * In Python a small integers takes up 28 bytes. [Size of integers in Python](https://python.code-maven.com/size-of-integer-in-python).
 
 ![](examples/numbers/number-types/src/main.rs)
-![](examples/numbers/number-types/out.out
+![](examples/numbers/number-types/out.out)
 
 ## Numerical operations on integers
 {id: numerical-operations-integers}

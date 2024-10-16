@@ -33,4 +33,8 @@ fn main() {
     let output = template.render(&globals).unwrap();
 
     println!("{}", output);
+
+    // verify
+    let expected = std::fs::read_to_string("out.txt").unwrap();
+    assert_eq!(output.trim(), expected.trim());
 }

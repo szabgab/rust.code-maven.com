@@ -79,7 +79,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
     // We want run max_threads at once, when one is finished we start a new one
     // Then we collect the messages from the remaining ones.
     let (tx, rx) = mpsc::channel();
-    let max_threads = 10;
+    let max_threads = 2;
     let mut thread_count = 0;
     let mut started = 0;
     let mut finished = 0;

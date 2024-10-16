@@ -1,7 +1,6 @@
 use liquid_filter_reverse_string::ReverseStr;
 
 fn main() {
-
     let template = "reversed: {{text | reversestr}}";
     let text = "Hello World!";
 

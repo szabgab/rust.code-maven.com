@@ -11,15 +11,18 @@ fn main() {
     "#;
 
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse(template).unwrap();
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
 
     // 1st
     let globals = liquid::object!({
         "color": "blue",
     });
     let output = template.render(&globals).unwrap();
-    println!("{}", output);
+    println!("{output}");
+    assert_eq!(output.trim(), "blue");
 
     // 2nd
     let globals = liquid::object!({
@@ -27,6 +30,7 @@ fn main() {
     });
     let output = template.render(&globals).unwrap();
     println!("{}", output);
+    assert_eq!(output.trim(), "green");
 
     // 3rd
     let globals = liquid::object!({
@@ -34,5 +38,5 @@ fn main() {
     });
     let output = template.render(&globals).unwrap();
     println!("{}", output);
-
+    assert_eq!(output.trim(), "Unrecognized color");
 }
