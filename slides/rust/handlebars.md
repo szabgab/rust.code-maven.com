@@ -16,7 +16,7 @@
 
 * The generated output looks like this:
 
-![](examples/handlebars/handlebars-quick/out.html)
+![](examples/handlebars/handlebars-quick/out.txt)
 
 ![](examples/handlebars/handlebars-quick/Cargo.toml)
 
@@ -28,7 +28,7 @@
 * In this example we register a template to make it easier to reuse it and then use it twice.
 
 ![](examples/handlebars/handlebars-separate-functions/src/main.rs)
-![](examples/handlebars/handlebars-separate-functions/out.html)
+![](examples/handlebars/handlebars-separate-functions/out.txt)
 ![](examples/handlebars/handlebars-separate-functions/Cargo.toml)
 
 ##  Handlebars - render to file

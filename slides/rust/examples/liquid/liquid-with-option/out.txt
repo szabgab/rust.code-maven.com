@@ -1,0 +1,20 @@
+
+            Car manufacturer: Ford
+            Always color: blue
+            
+                Color: blue
+            
+
+            
+                Weight: 1000
+            
+        
+
+            Car manufacturer: Ford
+            Always color: 
+            
+                no color
+            
+
+            
+        

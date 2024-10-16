@@ -179,7 +179,7 @@ liquid = "0.26.4"
 
 ![](examples/liquid/liquid-with-struct/Cargo.toml)
 ![](examples/liquid/liquid-with-struct/src/main.rs)
-![](examples/liquid/liquid-with-struct/out.html)
+![](examples/liquid/liquid-with-struct/out.txt)
 
 
 ## Liquid with Option in a struct

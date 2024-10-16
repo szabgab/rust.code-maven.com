@@ -8,19 +8,20 @@ fn main() {
     ";
 
     let template = liquid::ParserBuilder::with_stdlib()
-        .build().unwrap()
-        .parse(template).unwrap();
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
 
-    let colors: HashMap<&str, u32> = HashMap::from([
-        ("red", 23),
-        ("green", 17),
-        ("blue", 42),
-    ]);
+    let colors: HashMap<&str, u32> = HashMap::from([("red", 23), ("green", 17), ("blue", 42)]);
     println!("{colors:#?}");
 
     let globals = liquid::object!({
         "colors": colors,
     });
     let output = template.render(&globals).unwrap();
-    println!("{}", output);
+    println!("{output}");
+    assert!(output.contains("blue - 42"));
+    assert!(output.contains("red - 23"));
+    assert!(output.contains("green - 17"));
 }
