@@ -25,14 +25,13 @@ fn read_file(filename: &str) -> Result<String, Box<dyn std::error::Error>> {
     Ok(content)
 }
 
-
 fn convert_number(text: &str) -> Result<u8, Box<dyn std::error::Error>> {
     let number = text.parse::<u8>()?;
 
     Ok(number)
 }
 
-fn increment_number(number: u8) -> Result<u8, Box<dyn std::error::Error>> {   
+fn increment_number(number: u8) -> Result<u8, Box<dyn std::error::Error>> {
     let num = number.checked_add(255).ok_or("overflow")?;
 
     Ok(num)

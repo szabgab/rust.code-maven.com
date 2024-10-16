@@ -8,5 +8,3 @@ fn main() {
     let y = a / c;
     println!("{y}");
 }
-
-

@@ -20,7 +20,6 @@ fn to_rgb<'a>(color: &'a Color) -> &'a str {
     }
 }
 
-
 fn from_rgb(rgb: &str) -> Color {
     match rgb {
         "000000" => Color::Black,
@@ -31,7 +30,6 @@ fn from_rgb(rgb: &str) -> Color {
         val => Color::Other(val),
     }
 }
-
 
 fn main() {
     let background = Color::Black;

@@ -14,7 +14,6 @@ struct Cli {
     #[arg(long, default_value_t = 0.0)]
     float: f32,
 
-
     #[arg(long, default_value_t = false)]
     debug: bool,
 

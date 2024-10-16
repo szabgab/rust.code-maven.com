@@ -8,4 +8,3 @@ fn main() {
     t = !t;
     println!("{t}");
 }
-

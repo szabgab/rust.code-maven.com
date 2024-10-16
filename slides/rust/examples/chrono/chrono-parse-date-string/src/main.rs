@@ -1,4 +1,4 @@
-use chrono::{DateTime, Utc, TimeZone, NaiveDateTime};
+use chrono::{DateTime, NaiveDateTime, TimeZone, Utc};
 
 fn main() {
     let ts1 = "2023-09-19T08:00:01Z".parse::<DateTime<Utc>>().unwrap();
@@ -13,15 +13,15 @@ fn main() {
     let ts3 = NaiveDateTime::parse_from_str("2023-09-19 08:00:02", "%Y-%m-%d %H:%M:%S").unwrap();
     println!("{}", ts3);
 
-    let ts4 = NaiveDateTime::parse_from_str("2023-09-19 08:00:02 UTC", "%Y-%m-%d %H:%M:%S %Z").unwrap();
+    let ts4 =
+        NaiveDateTime::parse_from_str("2023-09-19 08:00:02 UTC", "%Y-%m-%d %H:%M:%S %Z").unwrap();
     println!("{}", ts4);
 
     println!("{}", ts3 == ts4);
 
-    let ts5 = DateTime::parse_from_str("2023-09-19 08:00:02 +00:00", "%Y-%m-%d %H:%M:%S %z").unwrap();
+    let ts5 =
+        DateTime::parse_from_str("2023-09-19 08:00:02 +00:00", "%Y-%m-%d %H:%M:%S %z").unwrap();
     println!("{}", ts5);
 
-    println!("{}", ts3 ==  ts5.naive_utc());
-
+    println!("{}", ts3 == ts5.naive_utc());
 }
-

@@ -16,6 +16,4 @@ fn main() {
     } else {
         println!("y in else part");
     }
-
 }
-

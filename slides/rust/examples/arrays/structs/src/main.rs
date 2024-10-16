@@ -5,7 +5,6 @@ struct Person {
     lname: String,
 }
 
-
 fn main() {
     let mut people = [
         Person {
@@ -18,9 +17,8 @@ fn main() {
         },
     ];
 
-
     println!("{:#?}", people);
-    
+
     people[0].fname = String::from("Jane");
     println!("{:#?}", people);
 }

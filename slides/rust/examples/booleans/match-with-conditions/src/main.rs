@@ -13,4 +13,3 @@ fn main() {
     number(0);
     number(-7);
 }
-

@@ -4,5 +4,3 @@ fn main() {
     println!("{}", v[0]);
     println!("{}", v[5]);
 }
-
-

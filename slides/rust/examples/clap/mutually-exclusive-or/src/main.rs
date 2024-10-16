@@ -14,4 +14,3 @@ fn main() {
     println!("more: {}", cli.more);
     println!("less: {}", cli.less);
 }
-

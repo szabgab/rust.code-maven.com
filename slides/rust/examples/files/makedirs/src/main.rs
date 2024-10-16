@@ -4,10 +4,10 @@ fn main() {
     match makedirs() {
         Ok(res) => {
             dbg!(res);
-        },
+        }
         Err(_) => {
             dbg!("error");
-        },
+        }
     }
 }
 

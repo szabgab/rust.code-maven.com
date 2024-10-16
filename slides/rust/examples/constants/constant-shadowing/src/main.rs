@@ -9,5 +9,3 @@ fn main() {
     }
     println!("name={NAME}");
 }
-
-

@@ -1,5 +1,5 @@
-use std::error::Error;
 use clap::Parser;
+use std::error::Error;
 
 #[derive(Parser, Debug)]
 struct Cli {
@@ -12,9 +12,10 @@ fn parse_even_number(number: &str) -> Result<u32, Box<dyn Error + Send + Sync + 
     if number % 2 == 0 {
         return Ok(number);
     }
-    Err(Box::<dyn Error + Send + Sync>::from("An even number is expected"))
+    Err(Box::<dyn Error + Send + Sync>::from(
+        "An even number is expected",
+    ))
 }
-
 
 fn main() {
     let args = Cli::parse();

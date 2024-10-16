@@ -1,4 +1,3 @@
-
 #![allow(dead_code)]
 
 #[derive(Debug, PartialEq)]
@@ -24,13 +23,10 @@ impl Language {
             _ => panic!("No such language"),
         }
     }
-
 }
 fn main() {
     println!("Hello, world!");
 }
-
-
 
 #[cfg(test)]
 mod test {

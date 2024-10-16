@@ -5,6 +5,6 @@ fn main() {
     let z = x < y;
     println!("{}", z);
 
-    let z =  x > y;
+    let z = x > y;
     println!("{}", z);
 }

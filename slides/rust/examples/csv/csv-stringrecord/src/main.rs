@@ -1,6 +1,5 @@
 use std::fs::File;
 
-
 fn main() {
     let filepath = "planets.csv";
     let rows = read_file(filepath);
@@ -15,11 +14,10 @@ fn main() {
     println!("------");
 
     println!("{}", &rows[3][0]);
-
 }
 
 fn read_file(filepath: &str) -> Vec<csv::StringRecord> {
-    let mut rows:Vec<csv::StringRecord> = vec![];
+    let mut rows: Vec<csv::StringRecord> = vec![];
     match File::open(filepath) {
         Ok(file) => {
             let mut rdr = csv::Reader::from_reader(file);
@@ -27,11 +25,11 @@ fn read_file(filepath: &str) -> Vec<csv::StringRecord> {
                 match result {
                     Ok(row) => {
                         rows.push(row.clone());
-                    },
-                    Err(err) => panic!("Error {}", err)
+                    }
+                    Err(err) => panic!("Error {}", err),
                 };
             }
-        },
+        }
         Err(error) => panic!("Error opening file {}: {}", filepath, error),
     }
 

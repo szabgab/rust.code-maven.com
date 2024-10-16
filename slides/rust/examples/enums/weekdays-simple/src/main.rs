@@ -27,7 +27,6 @@ fn main() {
     }
 }
 
-
 fn handle_day(day: Weekday) {
     match day {
         Weekday::Monday => println!("Today is Monday"),
@@ -39,5 +38,3 @@ fn handle_day(day: Weekday) {
         Weekday::Sunday => println!("Today is Sunday"),
     }
 }
-
-

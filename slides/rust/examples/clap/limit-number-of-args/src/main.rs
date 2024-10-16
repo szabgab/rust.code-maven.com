@@ -5,13 +5,11 @@ struct Cli {
     #[arg(long, num_args=2..=3, required=true)]
     animal: Vec<String>,
 
-    #[arg(long, num_args=3)]
+    #[arg(long, num_args = 3)]
     sisters: Vec<String>,
 }
 
-
 fn main() {
-     let args = Cli::parse();
-     println!("{args:?}");
+    let args = Cli::parse();
+    println!("{args:?}");
 }
-

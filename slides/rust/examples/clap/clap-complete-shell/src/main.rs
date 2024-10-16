@@ -1,4 +1,4 @@
-use clap::{Parser, value_parser};
+use clap::{value_parser, Parser};
 use clap_complete::Shell;
 
 #[derive(Parser, Debug)]
@@ -7,8 +7,7 @@ struct Cli {
     shell: Shell,
 }
 
-
 fn main() {
-     let args = Cli::parse();
-     println!("{args:?}");
+    let args = Cli::parse();
+    println!("{args:?}");
 }

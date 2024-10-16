@@ -5,7 +5,7 @@ use clap::ValueEnum;
 enum Color {
     Red,
 
-    #[value(alias="Green", alias="verde")]
+    #[value(alias = "Green", alias = "verde")]
     Green,
     Blue,
 }
@@ -15,7 +15,6 @@ struct Cli {
     #[arg(long)]
     color: Color,
 }
-
 
 fn main() {
     let args = Cli::parse();

@@ -10,10 +10,10 @@ use clap::Parser;
 #[derive(Parser)]
 #[command(version)]
 struct Cli {
-    #[arg(long, short='c')]
+    #[arg(long, short = 'c')]
     bytes: bool,
 
-    #[arg(long, short='m')]
+    #[arg(long, short = 'm')]
     chars: bool,
 
     #[arg(long, short)]
@@ -23,17 +23,16 @@ struct Cli {
     // We can use both
     //       --files0-from  file.txt
     // and
-    //       --files0-from=file.txt 
+    //       --files0-from=file.txt
     #[arg(long)] //, alias="files0-from")]
     files0_from: Option<String>,
 
     // --max-line-length  is automatically mapped to this
-    #[arg(long, short='L')]
+    #[arg(long, short = 'L')]
     max_line_length: bool,
 
     #[arg(long, short)]
     words: bool,
-
     // #[arg(long)]
     // total: Total,
 }
@@ -55,7 +54,10 @@ fn main() {
         if files0_from == "-" {
             println!("If F is - then read names from standard input");
         } else {
-            println!("read input from the files specified by NUL-terminated names in file F={}", files0_from);
+            println!(
+                "read input from the files specified by NUL-terminated names in file F={}",
+                files0_from
+            );
         }
     }
 
@@ -68,5 +70,4 @@ fn main() {
     }
     // --total=WHEN
     //           when to print a line with total counts; WHEN can be: auto, always, only, never
-
 }

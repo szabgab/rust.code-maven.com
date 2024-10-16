@@ -1,17 +1,13 @@
+use std::cmp::Ordering;
 use std::env;
 use std::process::exit;
-use std::cmp::Ordering;
 
 fn main() {
     run();
-
 }
-
-
 
 // We are expecting the user to provide a command line argument.
 // How do we handle if the user does not provide it (or provides too many)?
-
 
 // In the get_name function call exit if the user did not supply the required parameter
 // fn run() {
@@ -27,7 +23,6 @@ fn main() {
 //     }
 //     args[1].clone()
 // }
-
 
 // Return the empty string
 // This makes the caller need to handle the cases, but more problematic is that in the called
@@ -45,7 +40,6 @@ fn main() {
 //     if args.len() == 2 { args[1].clone() } else { String::new() }
 // }
 
-
 // Return either the Ok() with the value provided by the user or Err with the specific error message
 // The caller needs to use match to sepearat the two cases.
 // fn run() {
@@ -57,7 +51,6 @@ fn main() {
 //     }
 // }
 
-
 fn run() {
     let res = get_name();
     //println!("{:?}", res);
@@ -65,7 +58,7 @@ fn run() {
         Err(error_message) => {
             eprintln!("{error_message}");
             exit(1);
-        },
+        }
         Ok(name) => name,
     };
     println!("{name}");

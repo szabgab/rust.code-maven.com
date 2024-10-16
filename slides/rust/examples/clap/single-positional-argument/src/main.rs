@@ -9,4 +9,3 @@ fn main() {
     let args = Cli::parse();
     println!("filename: {}", args.filename);
 }
-

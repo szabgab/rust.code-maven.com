@@ -1,4 +1,4 @@
-use clap::{Parser, Args};
+use clap::{Args, Parser};
 
 #[derive(Parser)]
 pub struct Cli {

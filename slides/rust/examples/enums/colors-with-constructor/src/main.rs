@@ -6,7 +6,7 @@ enum Color<'a> {
     Blue,
     White,
     Black,
-    Other(&'a str)
+    Other(&'a str),
 }
 
 impl<'a> Color<'a> {
@@ -19,8 +19,7 @@ impl<'a> Color<'a> {
             "ffffff" => Color::White,
             val => Color::Other(val),
             //_ => panic!("Unhandled color {rgb}"),
-            
-        }
+        };
     }
 }
 
@@ -30,7 +29,6 @@ fn main() {
     let ink = Color::from_rgb("000000");
     let sky = Color::Blue;
     let other = Color::Other("4674b9");
-
 
     for color in [background, foreground, ink, sky, other] {
         println!("{:?}", color);

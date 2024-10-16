@@ -3,8 +3,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 #[derive(Parser)]
 #[command(about = get_about())]
-struct Cli {
-}
+struct Cli {}
 
 fn main() {
     let _args = Cli::parse();
@@ -16,5 +15,8 @@ fn get_about() -> String {
     let since_the_epoch = start
         .duration_since(UNIX_EPOCH)
         .expect("Time went backwards");
-    format!("The description generated at {}", since_the_epoch.as_nanos())
+    format!(
+        "The description generated at {}",
+        since_the_epoch.as_nanos()
+    )
 }

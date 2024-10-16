@@ -5,7 +5,6 @@ fn main() {
         1.0..=20.0 => println!("small"),
         21.0.. => println!("big"),
         _ => println!("other"),
-
     }
 }
 

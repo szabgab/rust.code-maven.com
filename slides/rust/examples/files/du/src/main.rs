@@ -6,8 +6,12 @@ use std::process::exit;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
-    let path = if args.len() == 1 { Path::new(".") } else { Path::new(&args[1]) };
-    if ! path.exists() {
+    let path = if args.len() == 1 {
+        Path::new(".")
+    } else {
+        Path::new(&args[1])
+    };
+    if !path.exists() {
         eprintln!("given path '{:?}' does not exist", path);
         exit(1);
     }
@@ -24,17 +28,17 @@ fn get_total(path: &Path) -> u64 {
         for entry in path.read_dir().expect("read_dir call failed").flatten() {
             total += get_total(&entry.path());
         }
-        return total
+        return total;
     }
 
     match std::fs::metadata(path) {
         Ok(meta) => {
             println!("{:?} {:?}", meta.len(), path);
             meta.len()
-        },
+        }
         Err(_) => {
             eprintln!("Error in {:?}", path);
             0
-        },
+        }
     }
 }

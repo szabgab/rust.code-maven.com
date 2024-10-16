@@ -25,7 +25,7 @@ struct Record {
     float: f32,
 
     #[serde(default = "get_person")]
-    person: Person
+    person: Person,
 }
 fn get_text() -> String {
     String::from("abc")
@@ -34,7 +34,10 @@ fn get_zero() -> f32 {
     0.0
 }
 fn get_person() -> Person {
-    Person { name: String::new(), birth_year: 0 }
+    Person {
+        name: String::new(),
+        birth_year: 0,
+    }
 }
 
 fn main() {
@@ -53,13 +56,13 @@ fn main() {
             println!("{}", rows[3].float);
             println!("{}", rows[3].person.name);
             println!("{}", rows[3].person.birth_year);
-        },
-        Err(err) => panic!("Error: {}", err)
+        }
+        Err(err) => panic!("Error: {}", err),
     }
 }
 
 fn read_file(filepath: &str) -> Result<Vec<Record>, Box<dyn Error>> {
-    let mut records:Vec<Record> = vec![];
+    let mut records: Vec<Record> = vec![];
     match File::open(filepath) {
         Ok(file) => {
             let mut rdr = csv::Reader::from_reader(file);
@@ -67,7 +70,7 @@ fn read_file(filepath: &str) -> Result<Vec<Record>, Box<dyn Error>> {
                 let record: Record = result?;
                 records.push(record);
             }
-        },
+        }
         Err(error) => panic!("Error opening file {}: {}", filepath, error),
     }
     Ok(records)

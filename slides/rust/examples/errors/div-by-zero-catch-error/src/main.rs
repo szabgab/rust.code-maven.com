@@ -12,7 +12,6 @@ fn main() {
     }
 }
 
-
 fn divide_by(dividend: i32, divisor: i32) -> Result<i32, &'static str> {
     if divisor == 0 {
         return Err("Cannot divide by 0");
@@ -30,11 +29,7 @@ fn get_number() -> i32 {
         .read_line(&mut number)
         .expect("Failed to get input");
 
-    let number:i32 = number
-        .trim()
-        .parse()
-        .expect("Could not convert to i32");
+    let number: i32 = number.trim().parse().expect("Could not convert to i32");
 
     number
 }
-

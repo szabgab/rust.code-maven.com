@@ -10,10 +10,10 @@ fn count_digits(text: &str) -> [i8; 10] {
         if ch == ' ' {
             continue;
         }
-        if ! "0123456789".contains(ch) {
+        if !"0123456789".contains(ch) {
             continue;
         }
-        
+
         let ix = ch as usize - '0' as usize;
         //println!("{ch}");
         //println!("{ix}");

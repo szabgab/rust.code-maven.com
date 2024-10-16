@@ -7,7 +7,7 @@ fn main() {
         println!("Usage {} length width", args[0]);
         exit(1);
     }
-    let width: i32  = args[1].parse().expect("Wanted a number");
+    let width: i32 = args[1].parse().expect("Wanted a number");
     let height: i32 = args[2].parse().expect("Wanted a number");
 
     let area: i32 = width * height;

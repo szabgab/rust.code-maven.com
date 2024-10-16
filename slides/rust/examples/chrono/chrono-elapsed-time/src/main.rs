@@ -22,8 +22,13 @@ fn main() {
     println!("end timestamp:     {}", end.timestamp_micros());
 
     println!();
-    println!("Elapsed (sec):     {}", end.timestamp()-start.timestamp());
-    println!("Elapsed (millis):  {}", end.timestamp_millis()-start.timestamp_millis());
-    println!("Elapsed (micros):  {}", end.timestamp_micros()-start.timestamp_micros());
-
+    println!("Elapsed (sec):     {}", end.timestamp() - start.timestamp());
+    println!(
+        "Elapsed (millis):  {}",
+        end.timestamp_millis() - start.timestamp_millis()
+    );
+    println!(
+        "Elapsed (micros):  {}",
+        end.timestamp_micros() - start.timestamp_micros()
+    );
 }

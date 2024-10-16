@@ -25,13 +25,13 @@ fn main() {
             println!("{}", rows[3].name);
             println!("{}", rows[3].distance);
             println!("{}", rows[3].mass);
-        },
-        Err(err) => panic!("Error: {}", err)
+        }
+        Err(err) => panic!("Error: {}", err),
     }
 }
 
 fn read_file(filepath: &str) -> Result<Vec<Record>, Box<dyn Error>> {
-    let mut records:Vec<Record> = vec![];
+    let mut records: Vec<Record> = vec![];
     match File::open(filepath) {
         Ok(file) => {
             let mut rdr = csv::Reader::from_reader(file);
@@ -39,7 +39,7 @@ fn read_file(filepath: &str) -> Result<Vec<Record>, Box<dyn Error>> {
                 let record: Record = result?;
                 records.push(record);
             }
-        },
+        }
         Err(error) => panic!("Error opening file {}: {}", filepath, error),
     }
     Ok(records)

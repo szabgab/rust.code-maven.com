@@ -9,10 +9,10 @@ fn main() {
     match File::open(filename) {
         Ok(mut file) => {
             file.read_to_string(&mut content).unwrap();
-        },
+        }
         Err(_) => {
             content = String::from("0");
-        },
+        }
     }
     let mut counter: i32 = content.trim().parse().expect("Wanted a number");
     counter += 1;

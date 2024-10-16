@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum ExitCode {
     Success,

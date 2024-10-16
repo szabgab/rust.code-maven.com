@@ -10,5 +10,4 @@ fn main() {
 
     let filename = &args[1];
     println!("We are working on file '{}'", filename);
-
 }

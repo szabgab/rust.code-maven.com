@@ -7,5 +7,4 @@ fn main() {
     let elapsed = end - start;
     println!("{:?}", elapsed);
     println!("{:?}", start.elapsed());
-
 }

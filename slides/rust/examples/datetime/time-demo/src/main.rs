@@ -7,7 +7,6 @@ use time::Month;
 //        Time::from_hms(hour, minute, second).unwrap(),
 //    )
 
-
 fn main() {
     let date = Date::from_calendar_date(2023, Month::June, 18);
     println!("{:?}", date);
@@ -56,5 +55,3 @@ fn print_date(date: Date) {
     println!("{}", date.day());
     println!();
 }
-
-

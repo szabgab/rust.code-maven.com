@@ -5,7 +5,7 @@ struct Cli {
     #[arg(short)]
     debug: bool,
 
-    #[arg(short='H')]
+    #[arg(short = 'H')]
     host: String,
 }
 
@@ -14,5 +14,3 @@ fn main() {
     println!("debug:   {}", args.debug);
     println!("host:    {}", args.host);
 }
-
-

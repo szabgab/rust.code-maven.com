@@ -6,9 +6,7 @@ struct Cli {
     animal: Vec<String>,
 }
 
-
 fn main() {
-     let args = Cli::parse();
-     println!("{args:?}");
+    let args = Cli::parse();
+    println!("{args:?}");
 }
-

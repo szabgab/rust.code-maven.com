@@ -6,8 +6,6 @@ struct Cli {
     animal: String,
 }
 
-
-
 fn main() {
     let args = Cli::parse();
     println!("{args:?}");

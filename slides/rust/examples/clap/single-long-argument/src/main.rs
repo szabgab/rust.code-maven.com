@@ -10,4 +10,3 @@ fn main() {
     let args = Cli::parse();
     println!("host: {}", args.host);
 }
-

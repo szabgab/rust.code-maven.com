@@ -17,5 +17,4 @@ fn main() {
     let now2 = later - Duration::seconds(1);
     println!("{}", now2);
     println!("now is now: {}", now == now2);
-
 }

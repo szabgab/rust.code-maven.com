@@ -15,5 +15,3 @@ fn main() {
     greet("Joe");
     greet("George");
 }
-
-

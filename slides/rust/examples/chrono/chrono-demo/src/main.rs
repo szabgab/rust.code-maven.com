@@ -1,4 +1,4 @@
-use chrono::{DateTime, Utc, Local};
+use chrono::{DateTime, Local, Utc};
 
 fn main() {
     let utc: DateTime<Utc> = Utc::now();
@@ -10,7 +10,6 @@ fn main() {
     let local: DateTime<Local> = Local::now();
     println!("{}", local);
     println!("{}", local.timestamp());
-
 
     let text = String::from("2023-08-30T12:30:01+0000");
     let dt = DateTime::parse_from_str(&text, "%Y-%m-%dT%H:%M:%S%z").unwrap();

@@ -12,11 +12,10 @@ struct Color {
     rgb: String,
 }
 
-
 fn main() {
     let background = Color {
         name: ColorName::Black,
-        rgb : String::from("#000000"),
+        rgb: String::from("#000000"),
     };
     let foreground = Color {
         name: ColorName::White,

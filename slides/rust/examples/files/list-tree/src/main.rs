@@ -1,7 +1,7 @@
 use std::env;
+use std::fs;
 use std::path::Path;
 use std::process::exit;
-use std::fs;
 
 fn main() {
     let path = get_path();
@@ -24,7 +24,6 @@ fn get_path() -> String {
 
     return String::from(".");
 }
-
 
 fn list_dir(path: &Path) -> Vec<String> {
     for entry in path.read_dir().expect("read_dir call failed") {
