@@ -12,7 +12,7 @@ fn main() {
     }
     let n = args[1]
         .parse::<u64>()
-        .expect(format!("Could not convert {} to integer", args[1]).as_str());
+        .unwrap_or_else(|_| panic!("Could not convert {} to integer", args[1]));
 
     let repetition = 10;
 

@@ -1,3 +1,5 @@
+#![allow(clippy::single_char_add_str)]
+
 fn main() {
     let mut text = String::from("");
     println!("{text}");

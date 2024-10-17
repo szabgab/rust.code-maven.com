@@ -1,3 +1,7 @@
+#![allow(clippy::approx_constant)]
+#![allow(clippy::unnecessary_cast)]
+#![allow(clippy::excessive_precision)]
+
 fn main() {
     let pi = 3.1415926535897932384626433;
     println!("{pi}");
@@ -8,7 +12,7 @@ fn main() {
     let xpi = (pi * 10000.0 as f64).round() / 10000.0;
     println!("{xpi}");
 
-    println!("");
+    println!();
 
     let x: f32 = 3.14159;
     println!("{x}");

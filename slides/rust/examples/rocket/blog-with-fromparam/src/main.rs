@@ -23,7 +23,7 @@ impl<'r> FromParam<'r> for MyPath {
         rocket::info!("filepath: {:?}", filepath);
 
         if filepath.exists() {
-            Ok(Self { filepath: filepath })
+            Ok(Self { filepath })
         } else {
             Err("bad")
         }
@@ -32,11 +32,11 @@ impl<'r> FromParam<'r> for MyPath {
 
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(
+    let html = String::from(
         r#"
     <a href="/blog/main">main</a><br>
     <a href="/blog/missing">missing</a><br>
-    "#
+    "#,
     );
     content::RawHtml(html)
 }

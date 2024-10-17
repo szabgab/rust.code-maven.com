@@ -53,7 +53,7 @@ async fn get_index(dbh: &State<Surreal<Client>>) -> Template {
 
 #[get("/clear")]
 async fn clear_db(dbh: &State<Surreal<Client>>) -> Template {
-    db::clear(&dbh).await.unwrap();
+    db::clear(dbh).await.unwrap();
     form_and_list(dbh).await
 }
 

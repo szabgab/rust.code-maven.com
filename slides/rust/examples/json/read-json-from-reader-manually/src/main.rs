@@ -22,7 +22,7 @@ fn main() {
     assert_eq!(data["year"].as_u64().unwrap(), 1992);
     assert_eq!(data["numbers"].as_array().unwrap().len(), 3);
     assert_eq!(data["numbers"][0].as_u64().unwrap(), 23);
-    assert_eq!(data["married"].as_bool().unwrap(), true); // maybe better to use assert!
+    assert!(data["married"].as_bool().unwrap());
     assert_eq!(data["children"].as_array().unwrap().len(), 2);
     assert_eq!(data["children"][0]["name"].as_str().unwrap(), "Alpha");
 }

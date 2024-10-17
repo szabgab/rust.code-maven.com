@@ -1,3 +1,6 @@
+#![allow(clippy::let_unit_value)]
+#![allow(clippy::unit_cmp)]
+
 fn main() {
     let x = ();
     println!("{:?}", x);

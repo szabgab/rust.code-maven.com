@@ -15,7 +15,7 @@ fn main() {
             continue;
         }
         //println!("row: {row}");
-        let data = serde_json::from_str::<Thing>(&row).unwrap();
+        let data = serde_json::from_str::<Thing>(row).unwrap();
         println!("data: {data:#?}");
     }
 }

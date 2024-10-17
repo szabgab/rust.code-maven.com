@@ -1,3 +1,5 @@
+#![allow(clippy::approx_constant)]
+
 use std::env;
 use std::process::exit;
 

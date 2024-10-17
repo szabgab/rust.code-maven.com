@@ -24,7 +24,7 @@ fn main() {
         "{}",
         animals.iter().all(|animal| {
             prt!(animal);
-            animal.len() > 0
+            !animal.is_empty()
         })
     );
     println!();

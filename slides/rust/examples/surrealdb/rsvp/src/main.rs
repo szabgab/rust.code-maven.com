@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::{Db, Mem};
 use surrealdb::{RecordId, Surreal};
 
+#[allow(clippy::upper_case_acronyms)]
 #[derive(Debug, Serialize, Deserialize)]
 struct RSVP {
     uid: u32,
@@ -58,8 +59,8 @@ async fn set(dbh: &Surreal<Db>, uid: u32, status: bool) -> surrealdb::Result<()>
         let _created: Option<Record> = dbh
             .create("rsvp")
             .content(RSVP {
-                uid: uid,
-                status: status,
+                uid,
+                status,
             })
             .await?;
         //println!("created: {created:?}");

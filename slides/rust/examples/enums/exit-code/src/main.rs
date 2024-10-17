@@ -1,3 +1,5 @@
+#![allow(clippy::comparison_chain)]
+
 #[derive(Debug)]
 enum ExitCode {
     Success,

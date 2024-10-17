@@ -32,12 +32,12 @@ impl<'r> FromParam<'r> for User {
 
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(
+    let html = String::from(
         r#"
     <a href="/user/42">id 42</a><br>
     <a href="/user/10001">id 10001</a> (not in database)<br>
     <a href="/user/text">text</a><br>
-    "#
+    "#,
     );
     content::RawHtml(html)
 }

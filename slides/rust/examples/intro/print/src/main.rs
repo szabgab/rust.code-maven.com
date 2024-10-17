@@ -1,3 +1,5 @@
+#[allow(clippy::print_with_newline)]
+
 fn main() {
     let fname = "Foo";
     let lname = "Bar";

@@ -53,7 +53,7 @@ async fn get_index(dbh: &State<Surreal<Client>>) -> Template {
 #[get("/clear")]
 async fn clear_db(dbh: &State<Surreal<Client>>, config: &State<Config>) -> Template {
     rocket::info!("Clearing database {}", config.database);
-    db::clear(&dbh, config.database.clone()).await.unwrap();
+    db::clear(dbh, config.database.clone()).await.unwrap();
     Template::render(
         "database_cleared",
         context! {
@@ -144,7 +144,7 @@ async fn post_add_group(dbh: &State<Surreal<Client>>, input: Form<AddGroup<'_>>)
     rocket::info!("Add  group called '{name}' to user '{uid}'");
     let group = db::add_group(dbh, name, uid).await.unwrap();
 
-    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+    let person = db::get_person(dbh, uid).await.unwrap().unwrap();
 
     Template::render(
         "group_added",
@@ -185,7 +185,7 @@ async fn post_add_membership(dbh: &State<Surreal<Client>>, input: Form<AddMember
     let uid = input.uid.trim();
     rocket::info!("Add  person '{uid}' to group '{gid}'");
     let group = db::get_group(dbh, gid).await.unwrap().unwrap();
-    let person = db::get_person(dbh, &uid).await.unwrap().unwrap();
+    let person = db::get_person(dbh, uid).await.unwrap().unwrap();
     db::add_member(dbh, uid, gid).await.unwrap();
 
     Template::render(

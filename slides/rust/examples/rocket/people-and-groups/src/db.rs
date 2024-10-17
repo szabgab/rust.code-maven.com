@@ -164,7 +164,7 @@ pub async fn delete_membership(dbh: &Surreal<Client>, id: &str) -> surrealdb::Re
 
 pub async fn get_people(dbh: &Surreal<Client>) -> surrealdb::Result<Vec<Person>> {
     let mut response = dbh
-        .query(format!("SELECT * FROM type::table($table);"))
+        .query("SELECT * FROM type::table($table);")
         .bind(("table", PERSON))
         .await?;
     let entries: Vec<Person> = response.take(0)?;
@@ -181,7 +181,7 @@ pub async fn get_person_with_groups(
 ) -> surrealdb::Result<Option<(Person, Vec<Group>, Vec<MembershipWithPersonAndGroup>)>> {
     let person = get_person(dbh, id).await?;
     match person {
-        None => return Ok(None),
+        None => Ok(None),
         Some(person) => {
             let groups = get_groups_by_owner(dbh, id).await?;
             let memberships = get_memberships_of_person(dbh, id).await?;
@@ -253,5 +253,5 @@ pub async fn get_group_with_owner(
 
     let entries: Vec<GroupWithOwner> = response.take(0)?;
     rocket::info!("Response: {:?}", entries);
-    Ok(entries.get(0).cloned())
+    Ok(entries.first().cloned())
 }

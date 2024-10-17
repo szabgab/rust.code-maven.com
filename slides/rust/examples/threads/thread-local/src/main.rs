@@ -1,7 +1,7 @@
 use std::cell::RefCell;
 
 thread_local! {
-    pub static TEXT: RefCell<String> = RefCell::new(String::new());
+    pub static TEXT: RefCell<String> = const { RefCell::new(String::new()) };
 }
 
 fn main() {

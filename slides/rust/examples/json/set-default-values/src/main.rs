@@ -20,6 +20,6 @@ fn get_default_false() -> bool {
 
 fn main() {
     let content = "{}";
-    let data = serde_json::from_str::<Person>(&content).expect("JSON parsing error");
+    let data = serde_json::from_str::<Person>(content).expect("JSON parsing error");
     println!("{:#?}", &data);
 }

@@ -1,3 +1,4 @@
+
 fn main() {
     // let (threads, filename) = get_args();
 
@@ -18,6 +19,7 @@ fn main() {
 // It is not to create the most optimal functions
 
 // return the first character that repeates itself
+#[allow(dead_code)]
 fn find_double_characters(text: &str, mut nth: u32) -> Option<char> {
     if text.len() < 2 {
         return None;

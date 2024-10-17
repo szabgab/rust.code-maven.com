@@ -5,6 +5,7 @@ fn main() {
     let x = a / b;
     println!("{x}");
 
+    #[allow(unconditional_panic)]
     let y = a / c;
     println!("{y}");
 }

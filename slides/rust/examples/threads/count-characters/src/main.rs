@@ -11,7 +11,6 @@ fn main() {
             add(&mut total, &data);
             println!("{:#?}", total);
         }
-    } else {
     }
 }
 

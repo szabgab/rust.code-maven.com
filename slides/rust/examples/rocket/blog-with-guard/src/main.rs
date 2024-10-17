@@ -35,11 +35,11 @@ impl<'r> FromRequest<'r> for MyGuard {
 
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(
+    let html = String::from(
         r#"
     <a href="/blog/main">main</a><br>
     <a href="/blog/missing">missing</a><br>
-    "#
+    "#,
     );
     content::RawHtml(html)
 }

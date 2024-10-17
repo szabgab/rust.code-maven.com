@@ -44,11 +44,11 @@ impl<'r> FromRequest<'r> for OddNumberU32 {
 
 #[get("/")]
 fn index() -> content::RawHtml<String> {
-    let html = format!(
+    let html = String::from(
         r#"
     <a href="/number/23">23</a>
     <a href="/number/42">42</a>
-    "#
+    "#,
     );
     content::RawHtml(html)
 }
@@ -56,14 +56,14 @@ fn index() -> content::RawHtml<String> {
 #[get("/number/<num>", rank = 1)]
 fn odd_number(num: u32, _x: OddNumberU32) -> Option<content::RawHtml<String>> {
     let html = format!("Odd number: {num:?}");
-    return Some(content::RawHtml(html));
+    Some(content::RawHtml(html))
 }
 
 #[get("/number/<num>", rank = 2)]
 fn any_number(num: u32) -> content::RawHtml<String> {
     println!("any_number");
     let html = format!("Any number: {num:?}");
-    return content::RawHtml(html);
+    content::RawHtml(html)
 }
 
 #[launch]

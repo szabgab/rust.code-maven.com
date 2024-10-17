@@ -1,5 +1,5 @@
 fn main() {
-    let animals = vec![
+    let animals = [
         String::from("cat"),
         String::from("dog"),
         String::from("crab"),

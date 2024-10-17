@@ -67,7 +67,7 @@ async fn add_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
 }
 
 async fn get_classes(db: &Surreal<Db>) -> surrealdb::Result<Vec<DanceClass>> {
-    let sql = format!("SELECT * FROM dance");
+    let sql = "SELECT * FROM dance";
     let mut results = db.query(sql).await?;
     let classes: Vec<DanceClass> = results.take(0)?;
 

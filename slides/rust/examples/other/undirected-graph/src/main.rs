@@ -1,3 +1,5 @@
+#![allow(clippy::vec_init_then_push)]
+
 #[allow(dead_code)]
 #[derive(Debug)]
 struct Node {
@@ -23,7 +25,7 @@ fn main() {
     let left = Node {
         name: String::from("Left bank"),
     };
-    let right = Node {
+    let _right = Node {
         name: String::from("Right bank"),
     };
 

@@ -1,6 +1,6 @@
 fn main() {
-    //    copy_and_change();
-    //    reference_is_borrow();
+    copy_and_change();
+    reference_is_borrow();
     reference_in_scope_is_borrow();
 }
 

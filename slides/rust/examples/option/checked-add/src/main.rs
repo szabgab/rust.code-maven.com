@@ -1,3 +1,7 @@
+#![allow(dead_code)]
+#![allow(clippy::manual_unwrap_or_default)]
+#![allow(clippy::manual_unwrap_or)]
+
 fn main() {
     nulled_area(20, 30);
 }
