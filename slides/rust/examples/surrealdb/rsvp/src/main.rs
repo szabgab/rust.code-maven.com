@@ -56,13 +56,7 @@ async fn set(dbh: &Surreal<Db>, uid: u32, status: bool) -> surrealdb::Result<()>
             .bind(("uid", uid))
             .await?;
     } else {
-        let _created: Option<Record> = dbh
-            .create("rsvp")
-            .content(RSVP {
-                uid,
-                status,
-            })
-            .await?;
+        let _created: Option<Record> = dbh.create("rsvp").content(RSVP { uid, status }).await?;
         //println!("created: {created:?}");
     }
 

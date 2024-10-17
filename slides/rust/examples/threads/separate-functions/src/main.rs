@@ -1,4 +1,3 @@
-
 fn main() {
     // let (threads, filename) = get_args();
 
