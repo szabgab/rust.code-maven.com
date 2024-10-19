@@ -8,6 +8,7 @@ use std::process::Command;
 use std::sync::mpsc;
 use std::thread;
 
+use chrono::{DateTime, Utc};
 use clap::Parser;
 
 // use regex::Regex;
@@ -32,10 +33,15 @@ struct Cli {
     update: bool,
 
     #[arg(long)]
+    fmt: bool,
+
+    #[arg(long)]
     clippy: bool,
 }
 
 fn main() {
+    let start: DateTime<Utc> = Utc::now();
+
     let args = Cli::parse();
     if args.verbose {
         println!("verbose: {}", args.verbose);
@@ -55,12 +61,28 @@ fn main() {
         );
     }
 
+    let (fmt_success, fmt_failures) = cargo_fmt(&crates, args.fmt, args.verbose);
+    if args.verbose {
+        println!(
+            "fmt_success: {fmt_success}, fmt_failure: {}",
+            fmt_failures.len()
+        );
+    }
+
     let clippy_error = cargo_clippy(&crates, args.clippy, args.verbose);
 
     println!("------- Report -------");
+    let end: DateTime<Utc> = Utc::now();
+    println!("Elapsed: {}", end.timestamp() - start.timestamp());
 
     if unused_examples > 0 {
         eprintln!("There are {unused_examples} unused examples");
+    }
+    if fmt_failures.len() > 0 {
+        eprintln!("There are {} examples with fmt errors.", fmt_failures.len());
+        for failure in &fmt_failures {
+            eprintln!("  {failure:?}",);
+        }
     }
     if update_failures.len() > 0 {
         eprintln!(
@@ -126,12 +148,15 @@ fn check_use_of_example_files(use_examples: bool, verbose: bool) -> i32 {
     count
 }
 
-fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
+fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
+    if !fmt {
+        return (count_success, failures);
+    }
 
     for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_update_for_crate(&crate_folder, update, verbose);
+        let result = cargo_fmt_for_crate(&crate_folder, verbose);
         if result {
             count_success += 1;
         } else {
@@ -142,10 +167,43 @@ fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec
     (count_success, failures)
 }
 
-fn cargo_update_for_crate(crate_path: &PathBuf, update: bool, verbose: bool) -> bool {
-    if !update {
-        return true;
+fn cargo_fmt_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
+    if verbose {
+        println!("cargo_fmt_for_crate {crate_path:?}",);
     }
+    let result = Command::new("cargo")
+        .arg("fmt")
+        .current_dir(crate_path)
+        .output()
+        .expect("failed to execute 'cargo fmt' process");
+
+    if !result.status.success() {
+        println!("ERROR cannot fmt crate: {:?}", crate_path);
+        return false;
+    }
+    true
+}
+
+fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
+    let mut count_success = 0;
+    let mut failures = vec![];
+    if !update {
+        return (count_success, failures);
+    }
+
+    for (_ix, crate_folder) in crates.into_iter().enumerate() {
+        let result = cargo_update_for_crate(&crate_folder, verbose);
+        if result {
+            count_success += 1;
+        } else {
+            failures.push(crate_folder);
+        }
+    }
+
+    (count_success, failures)
+}
+
+fn cargo_update_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
     if verbose {
         println!("cargo_update_for_crate {crate_path:?}",);
     }
@@ -156,7 +214,7 @@ fn cargo_update_for_crate(crate_path: &PathBuf, update: bool, verbose: bool) -> 
         .expect("failed to execute update process");
 
     if !result.status.success() {
-        println!("ERROR in crate: {:?}", crate_path);
+        println!("ERROR cannot update crate: {:?}", crate_path);
         return false;
     }
     true
