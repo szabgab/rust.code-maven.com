@@ -20,14 +20,24 @@
 {i: kv-mem}
 {i: Mem}
 
+Using the in-memory database can be very useful, especially in short-lived examples like we have
+but in other cases as well. It does not need any additional server component.
+
+In this example we only setup the database connection without doing anything.
+
 ![](examples/surrealdb/in-memory-setup/Cargo.toml)
 
 ![](examples/surrealdb/in-memory-setup/src/main.rs)
 
-## SurrealDB with RocksDB backend in Rust
+## SurrealDB with RocksDB backend in Rust embedded client with local database storage
 {id: surrealdb-with-rocksdb-backend-in-rust}
 {i: SurrealDB}
+{i: kv-rocksdb}
 {i: RocksDB}
+
+This version does not need an external database server either.
+The compilation time is longer as we also compile the database backend, but this can be used as
+an embedded, but already persistan database.
 
 ![](examples/surrealdb/embedded-rocksdb/Cargo.toml)
 
@@ -54,7 +64,7 @@ docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/data
 * Or a specific version:
 
 ```
-docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:v1.5.5 start --log trace file://database
+docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:v2.0.4 start --log trace file://database
 ```
 
 * This one will listen on port 8000. You could tell it to listen on some other port. e.g. port 8001:  `-p 8001:8000`.
@@ -72,6 +82,14 @@ docker volume remove my-surreal-db
 ```
 
 * See the [tags](https://hub.docker.com/r/surrealdb/surrealdb/tags) for available versions.
+
+## SurrealDB connect to server
+{id: surrealdb-connect-to-server}
+
+![](examples/surrealdb/connect-to-server/Cargo.toml)
+
+![](examples/surrealdb/connect-to-server/src/main.rs)
+
 
 
 ## SurrealDB in-memory with SQL demo in Rust - CREATE (INSERT), SELECT, UPDATE, DELETE
@@ -96,14 +114,6 @@ cargo run -q > out.out 2>&1
 ```
 
 ![](examples/surrealdb/in-memory-demo/out.out)
-
-## SurrealDB connect to server
-{id: surrealdb-connect-to-server}
-
-![](examples/surrealdb/connect-to-server/Cargo.toml)
-
-![](examples/surrealdb/connect-to-server/src/main.rs)
-
 
 
 ## SurrealDB create INSERT SELECT
