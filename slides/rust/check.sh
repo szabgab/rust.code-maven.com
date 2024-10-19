@@ -1,3 +1,3 @@
 cd examples/other/check-slides/
-cargo run
+cargo run -- "$@"
 
