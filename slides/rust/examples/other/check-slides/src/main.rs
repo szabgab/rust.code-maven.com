@@ -8,6 +8,8 @@ use std::process::Command;
 use std::sync::mpsc;
 use std::thread;
 
+use clap::Parser;
+
 // use regex::Regex;
 
 // from all the md files extract the list of included files
@@ -18,9 +20,50 @@ use std::thread;
 //
 const ROOT: &str = "../../..";
 
+#[derive(Parser)]
+struct Cli {
+    #[arg(long)]
+    verbose: bool,
+
+    #[arg(long)]
+    examples: bool,
+
+    #[arg(long)]
+    clippy: bool,
+}
+
 fn main() {
-    let verbose = false;
+    let args = Cli::parse();
+    if args.verbose {
+        println!("verbose: {}", args.verbose);
+    }
+
     std::env::set_current_dir(ROOT).unwrap();
+
+    let count = check_use_of_example_files(args.examples, args.verbose);
+
+    let crates = get_crates(Path::new("examples"));
+
+    let clippy_error = carg_clippy(crates, args.clippy, args.verbose);
+
+    if clippy_error > 0 {
+        eprintln!("There are {clippy_error} examples with clippy errors.");
+        exit(1);
+    }
+
+    if count > 0 {
+        eprintln!("There are {count} unused examples");
+        exit(1);
+    }
+}
+
+fn check_use_of_example_files(use_examples: bool, verbose: bool) -> i32 {
+    if !use_examples {
+        return 0;
+    }
+    if verbose {
+        println!("check_use_of_example_files");
+    }
     let md_files = get_md_files();
     let imported_files = get_imported_files(md_files);
     let examples = get_all_the_examples();
@@ -58,25 +101,17 @@ fn main() {
             count += 1;
         }
     }
-
-    let crates = get_crates(Path::new("examples"));
-
-    let clippy_error = check_crates(crates, verbose);
-
-    if clippy_error > 0 {
-        eprintln!("There are {clippy_error} examples with clippy errors.");
-        exit(1);
-    }
-
-    if count > 0 {
-        eprintln!("There are {count} unused examples");
-        exit(1);
-    }
+    count
 }
 
-fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
-    println!("check_crates");
+fn carg_clippy(crates: Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
     let mut clippy_error = 0;
+    if !run_clippy {
+        return clippy_error;
+    }
+    if verbose {
+        println!("cargo_clippy");
+    }
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -95,7 +130,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = check_crate(&crate_folder);
+            let res = cargo_clippy_for_crate(&crate_folder);
             mytx.send(res).unwrap();
         });
         thread_count += 1;
@@ -123,7 +158,7 @@ fn check_crates(crates: Vec<PathBuf>, verbose: bool) -> i32 {
     clippy_error
 }
 
-fn check_crate(crate_folder: &PathBuf) -> bool {
+fn cargo_clippy_for_crate(crate_folder: &PathBuf) -> bool {
     let folder = crate_folder.clone().into_os_string().into_string().unwrap();
     let folders = vec![
         "examples/intro/formatting-required",
