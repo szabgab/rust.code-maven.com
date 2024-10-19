@@ -29,6 +29,9 @@ struct Cli {
     examples: bool,
 
     #[arg(long)]
+    update: bool,
+
+    #[arg(long)]
     clippy: bool,
 }
 
@@ -40,19 +43,38 @@ fn main() {
 
     std::env::set_current_dir(ROOT).unwrap();
 
-    let count = check_use_of_example_files(args.examples, args.verbose);
+    let unused_examples = check_use_of_example_files(args.examples, args.verbose);
 
     let crates = get_crates(Path::new("examples"));
 
-    let clippy_error = carg_clippy(crates, args.clippy, args.verbose);
-
-    if clippy_error > 0 {
-        eprintln!("There are {clippy_error} examples with clippy errors.");
-        exit(1);
+    let (update_success, update_failures) = cargo_update(&crates, args.update, args.verbose);
+    if args.verbose {
+        println!(
+            "updated_success: {update_success}, update_failure: {}",
+            update_failures.len()
+        );
     }
 
-    if count > 0 {
-        eprintln!("There are {count} unused examples");
+    let clippy_error = cargo_clippy(&crates, args.clippy, args.verbose);
+
+    println!("------- Report -------");
+
+    if unused_examples > 0 {
+        eprintln!("There are {unused_examples} unused examples");
+    }
+    if update_failures.len() > 0 {
+        eprintln!(
+            "There are {} examples with update errors.",
+            update_failures.len()
+        );
+        for failure in &update_failures {
+            eprintln!("  {failure:?}",);
+        }
+    }
+    if clippy_error > 0 {
+        eprintln!("There are {clippy_error} examples with clippy errors.");
+    }
+    if unused_examples > 0 || update_failures.len() > 0 || clippy_error > 0 {
         exit(1);
     }
 }
@@ -104,7 +126,43 @@ fn check_use_of_example_files(use_examples: bool, verbose: bool) -> i32 {
     count
 }
 
-fn carg_clippy(crates: Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
+fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
+    let mut count_success = 0;
+    let mut failures = vec![];
+
+    for (_ix, crate_folder) in crates.into_iter().enumerate() {
+        let result = cargo_update_for_crate(&crate_folder, update, verbose);
+        if result {
+            count_success += 1;
+        } else {
+            failures.push(crate_folder);
+        }
+    }
+
+    (count_success, failures)
+}
+
+fn cargo_update_for_crate(crate_path: &PathBuf, update: bool, verbose: bool) -> bool {
+    if !update {
+        return true;
+    }
+    if verbose {
+        println!("cargo_update_for_crate {crate_path:?}",);
+    }
+    let result = Command::new("cargo")
+        .arg("update")
+        .current_dir(crate_path)
+        .output()
+        .expect("failed to execute update process");
+
+    if !result.status.success() {
+        println!("ERROR in crate: {:?}", crate_path);
+        return false;
+    }
+    true
+}
+
+fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
     let mut clippy_error = 0;
     if !run_clippy {
         return clippy_error;
@@ -122,7 +180,7 @@ fn carg_clippy(crates: Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
     let mut started = 0;
     let mut finished = 0;
 
-    for (ix, crate_folder) in crates.into_iter().enumerate() {
+    for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         started += 1;
         if verbose {
             println!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
