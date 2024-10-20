@@ -11,7 +11,8 @@ async fn main() -> Result<(), Error> {
     db.signin(Root {
         username: "local",
         password: "secret",
-    }).await?;
+    })
+    .await?;
 
     println!("Select a specific namespace and database:");
     db.use_ns("namespace").use_db("database").await?;
