@@ -3,7 +3,7 @@ use surrealdb::engine::local::{Db, Mem};
 use surrealdb::Surreal;
 
 #[derive(Debug, Deserialize)]
-struct Entry {
+struct Person {
     name: String,
     phone: String,
 }
@@ -12,38 +12,44 @@ struct Entry {
 async fn main() -> surrealdb::Result<()> {
     let db = Surreal::new::<Mem>(()).await?;
 
-    db.use_ns("test_ns").use_db("test_db").await?;
+    db.use_ns("namespace").use_db("database").await?;
 
     let _response = db
-        .query("DEFINE INDEX entry_email ON TABLE entry COLUMNS name UNIQUE")
+        .query("DEFINE INDEX person_email ON TABLE person COLUMNS name UNIQUE")
         .await?;
 
     let data = vec![("Joe", "123"), ("Jane", "456"), ("Jil", "789")];
 
-    add_to(&db, data).await?;
-    list_all(&db).await?;
-    println!("-------------");
+    create(&db, data).await?;
+    let all = get_all(&db).await?;
+    assert_eq!(all[0].name, "Jane");
+    assert_eq!(all[0].phone, "456");
+    assert_eq!(all[1].name, "Jil");
+    assert_eq!(all[1].phone, "789");
+    assert_eq!(all[2].name, "Joe");
+    assert_eq!(all[2].phone, "123");
+    list_all(all);
 
     update(&db).await?;
-    list_all(&db).await?;
-    println!("-------------");
+    let all = get_all(&db).await?;
+    list_all(all);
 
     delete(&db).await?;
-    list_all(&db).await?;
-    println!("-------------");
+    let all = get_all(&db).await?;
+    list_all(all);
 
-    add_to(&db, vec![("Joe", "7777777")]).await?;
+    create(&db, vec![("Joe", "7777777")]).await?;
     println!("this will not happen as the previous statement panics");
-    list_all(&db).await?;
-    println!("-------------");
+    let all = get_all(&db).await?;
+    list_all(all);
 
     Ok(())
 }
 
-async fn add_to(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<()> {
+async fn create(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<()> {
     for (name, phone) in data {
         let response = db
-            .query("CREATE entry SET  name=$name, phone=$phone")
+            .query("CREATE person SET  name=$name, phone=$phone")
             .bind(("name", name.to_owned()))
             .bind(("phone", phone.to_owned()))
             .await?;
@@ -51,7 +57,7 @@ async fn add_to(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<
         match response.check() {
             Ok(_) => {}
             Err(err) => {
-                eprintln!("Could not add entry: '{}'", err);
+                eprintln!("Could not add person: '{}'", err);
                 return Err(err);
             }
         };
@@ -59,17 +65,20 @@ async fn add_to(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<
     Ok(())
 }
 
-async fn list_all(db: &Surreal<Db>) -> surrealdb::Result<()> {
+async fn get_all(db: &Surreal<Db>) -> surrealdb::Result<Vec<Person>> {
     let mut entries = db
         .query("SELECT name, phone FROM type::table($table) ORDER BY name ASC")
-        .bind(("table", "entry"))
+        .bind(("table", "person"))
         .await?;
-    let entries: Vec<Entry> = entries.take(0)?;
+    let entries: Vec<Person> = entries.take(0)?;
+    Ok(entries)
+}
+
+fn list_all(entries: Vec<Person>) {
     for entry in entries {
         println!("{}: {}", entry.name, entry.phone);
     }
-
-    Ok(())
+    println!("-------------");
 }
 
 async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
@@ -85,12 +94,11 @@ async fn update(db: &Surreal<Db>) -> surrealdb::Result<()> {
     match response.check() {
         Ok(_) => Ok(()),
         Err(err) => {
-            eprintln!("Could not add entry {}", err);
+            eprintln!("Could not update entry {}", err);
             Err(err)
         }
     }
 }
-
 
 async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
     let name = "Jane";
@@ -108,4 +116,3 @@ async fn delete(db: &Surreal<Db>) -> surrealdb::Result<()> {
         }
     }
 }
-

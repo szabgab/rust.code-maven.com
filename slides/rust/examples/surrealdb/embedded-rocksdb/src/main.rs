@@ -3,7 +3,9 @@ use surrealdb::engine::local::RocksDb;
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    let _db = Surreal::new::<RocksDb>("tempdb").await?;
+    let db = Surreal::new::<RocksDb>("tempdb").await?;
+
+    db.use_ns("namespace").use_db("database").await?;
 
     Ok(())
 }

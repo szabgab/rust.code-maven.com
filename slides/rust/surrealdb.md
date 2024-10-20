@@ -55,36 +55,42 @@ an embedded, but already persistan database.
 docker volume create my-surreal-db
 ```
 
-* Start the Docker container using the latest SurrealDB image:
+* Start the Docker container using a specific version of SurrealDB image:
+
 
 ```
-docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:latest start --log trace file://database
+docker run --detach --restart always --name surrealdb -p 127.0.0.1:8000:8000 --user root -v$(pwd):/external -v my-surreal-db:/database surrealdb/surrealdb:v2.0.4 start --user local --pass secret --log trace file://database
 ```
 
-* Or a specific version:
-
-```
-docker run --name surrealdb --rm -p 8000:8000 --user root -v my-surreal-db:/database surrealdb/surrealdb:v2.0.4 start --log trace file://database
-```
+For the current list of available docker tags check [SurrealDB on the Docker HUB](https://hub.docker.com/r/surrealdb/surrealdb/tags).
 
 * This one will listen on port 8000. You could tell it to listen on some other port. e.g. port 8001:  `-p 8001:8000`.
 
 * Stop the container:
 
 ```
-Ctrl-c
+docker stop surrealdb
+```
+
+* Remove the container
+
+```
+docker container rm surrealdb
 ```
 
 * Remove the volume
 
 ```
 docker volume remove my-surreal-db
-```
 
-* See the [tags](https://hub.docker.com/r/surrealdb/surrealdb/tags) for available versions.
 
 ## SurrealDB connect to server
 {id: surrealdb-connect-to-server}
+{i: Ws}
+{i: signin}
+{i: Root}
+{i: use_ns}
+{i: use_db}
 
 ![](examples/surrealdb/connect-to-server/Cargo.toml)
 
@@ -349,7 +355,7 @@ Other message
 We could use the `latest` tag, but to make sure total reproducability we prefer to pick the [latest tag](https://hub.docker.com/r/surrealdb/surrealdb/tags) in the  2.* series.
 
 ```
-$ docker run -it --rm  --user root surrealdb/surrealdb:v2.0.2 sql --endpoint memory --ns ns --db db --pretty
+$ docker run -it --rm  --user root surrealdb/surrealdb:v2.0.4 sql --endpoint memory --ns ns --db db --pretty
 ```
 
 * Using `ns` as our namespace and `db` as our database so they won't take much real estate in the prompt. Feel free to use anything else.
