@@ -43,33 +43,33 @@ fn main() {
     let start: DateTime<Utc> = Utc::now();
 
     let args = Cli::parse();
-    if args.verbose {
-        println!("verbose: {}", args.verbose);
-    }
+    let log_level = if args.verbose {
+        log::Level::Info
+    } else {
+        log::Level::Warn
+    };
+    simple_logger::init_with_level(log_level).unwrap();
+    log::info!("verbose: {}", args.verbose);
 
     std::env::set_current_dir(ROOT).unwrap();
 
-    let unused_examples = check_use_of_example_files(args.examples, args.verbose);
+    let unused_examples = check_use_of_example_files(args.examples);
 
     let crates = get_crates(Path::new("examples"));
 
-    let (update_success, update_failures) = cargo_update(&crates, args.update, args.verbose);
-    if args.verbose {
-        println!(
-            "updated_success: {update_success}, update_failure: {}",
-            update_failures.len()
-        );
-    }
+    let (update_success, update_failures) = cargo_update(&crates, args.update);
+    log::info!(
+        "updated_success: {update_success}, update_failure: {}",
+        update_failures.len()
+    );
 
-    let (fmt_success, fmt_failures) = cargo_fmt(&crates, args.fmt, args.verbose);
-    if args.verbose {
-        println!(
-            "fmt_success: {fmt_success}, fmt_failure: {}",
-            fmt_failures.len()
-        );
-    }
+    let (fmt_success, fmt_failures) = cargo_fmt(&crates, args.fmt);
+    log::info!(
+        "fmt_success: {fmt_success}, fmt_failure: {}",
+        fmt_failures.len()
+    );
 
-    let clippy_error = cargo_clippy(&crates, args.clippy, args.verbose);
+    let clippy_error = cargo_clippy(&crates, args.clippy);
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
@@ -101,13 +101,11 @@ fn main() {
     }
 }
 
-fn check_use_of_example_files(use_examples: bool, verbose: bool) -> i32 {
+fn check_use_of_example_files(use_examples: bool) -> i32 {
     if !use_examples {
         return 0;
     }
-    if verbose {
-        println!("check_use_of_example_files");
-    }
+    log::info!("check_use_of_example_files");
     let md_files = get_md_files();
     let imported_files = get_imported_files(md_files);
     let examples = get_all_the_examples();
@@ -141,14 +139,14 @@ fn check_use_of_example_files(use_examples: bool, verbose: bool) -> i32 {
                 continue;
             }
 
-            println!("ERROR Unused file: `{filename}`");
+            log::error!("Unused file: `{filename}`");
             count += 1;
         }
     }
     count
 }
 
-fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
+fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool) -> (i32, Vec<&PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !fmt {
@@ -156,7 +154,7 @@ fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool, verbose: bool) -> (i32, Vec<&Path
     }
 
     for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_fmt_for_crate(&crate_folder, verbose);
+        let result = cargo_fmt_for_crate(&crate_folder);
         if result {
             count_success += 1;
         } else {
@@ -167,10 +165,8 @@ fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool, verbose: bool) -> (i32, Vec<&Path
     (count_success, failures)
 }
 
-fn cargo_fmt_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
-    if verbose {
-        println!("cargo_fmt_for_crate {crate_path:?}",);
-    }
+fn cargo_fmt_for_crate(crate_path: &PathBuf) -> bool {
+    log::info!("cargo_fmt_for_crate {crate_path:?}",);
     let result = Command::new("cargo")
         .arg("fmt")
         .current_dir(crate_path)
@@ -178,13 +174,13 @@ fn cargo_fmt_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
         .expect("failed to execute 'cargo fmt' process");
 
     if !result.status.success() {
-        println!("ERROR cannot fmt crate: {:?}", crate_path);
+        log::error!("Cannot fmt crate: {:?}", crate_path);
         return false;
     }
     true
 }
 
-fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec<&PathBuf>) {
+fn cargo_update(crates: &Vec<PathBuf>, update: bool) -> (i32, Vec<&PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !update {
@@ -192,7 +188,7 @@ fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec
     }
 
     for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_update_for_crate(&crate_folder, verbose);
+        let result = cargo_update_for_crate(&crate_folder);
         if result {
             count_success += 1;
         } else {
@@ -203,10 +199,8 @@ fn cargo_update(crates: &Vec<PathBuf>, update: bool, verbose: bool) -> (i32, Vec
     (count_success, failures)
 }
 
-fn cargo_update_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
-    if verbose {
-        println!("cargo_update_for_crate {crate_path:?}",);
-    }
+fn cargo_update_for_crate(crate_path: &PathBuf) -> bool {
+    log::info!("cargo_update_for_crate {crate_path:?}",);
     let result = Command::new("cargo")
         .arg("update")
         .current_dir(crate_path)
@@ -214,20 +208,18 @@ fn cargo_update_for_crate(crate_path: &PathBuf, verbose: bool) -> bool {
         .expect("failed to execute update process");
 
     if !result.status.success() {
-        println!("ERROR cannot update crate: {:?}", crate_path);
+        log::error!("Cannot update crate: {:?}", crate_path);
         return false;
     }
     true
 }
 
-fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
+fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
     let mut clippy_error = 0;
     if !run_clippy {
         return clippy_error;
     }
-    if verbose {
-        println!("cargo_clippy");
-    }
+    log::info!("cargo_clippy");
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -240,9 +232,7 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
 
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         started += 1;
-        if verbose {
-            println!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
-        }
+        log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
 
         thread::spawn(move || {
@@ -270,7 +260,7 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, verbose: bool) -> i32 {
         }
     }
 
-    println!("check crates done");
+    log::info!("check crates done");
     clippy_error
 }
 
@@ -303,8 +293,8 @@ fn cargo_clippy_for_crate(crate_folder: &PathBuf) -> bool {
     if folders.contains(&folder) {
         return true;
     }
-    //println!("current_dir:  {:?}", std::env::current_dir().unwrap());
-    //println!("crate_folder: {:?}", crate_folder);
+    //log::debug!("current_dir:  {:?}", std::env::current_dir().unwrap());
+    //log::debug!("crate_folder: {:?}", crate_folder);
     //std::env::set_current_dir(crate_folder).unwrap();
     let result = Command::new("cargo")
         .arg("clippy")
@@ -316,8 +306,8 @@ fn cargo_clippy_for_crate(crate_folder: &PathBuf) -> bool {
         .expect("failed to execute process");
 
     if !result.status.success() {
-        //println!("{}", result.status);
-        println!("ERROR in crate: {:?}", crate_folder);
+        //log::debug!("{}", result.status);
+        log::error!("In crate: {:?}", crate_folder);
         //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
         //println!("{}", std::str::from_utf8(&result.stderr).unwrap());
         //std::process::exit(1);
@@ -335,9 +325,9 @@ fn cargo_clippy_for_crate(crate_folder: &PathBuf) -> bool {
 }
 
 fn get_crates(path: &Path) -> Vec<PathBuf> {
-    println!("get_crates");
+    log::info!("get_crates");
     let crates = get_crates_recoursive(path);
-    println!("get_crates done\n");
+    log::info!("get_crates done\n");
     crates
 }
 
@@ -363,7 +353,7 @@ fn get_crates_recoursive(path: &Path) -> Vec<PathBuf> {
 // TODO: go deeper than 2 levels to also handle examples/*/src/main.rs
 // TODO: but exclude examples/*/target/
 fn get_all_the_examples() -> Vec<String> {
-    println!("get_all_the_examples");
+    log::info!("get_all_the_examples");
 
     let exclude: Vec<String> = [
         "examples/image/create-image/image.png",
@@ -380,7 +370,7 @@ fn get_all_the_examples() -> Vec<String> {
         .cloned()
         .collect();
 
-    println!("get_all_the_examples done\n");
+    log::info!("get_all_the_examples done\n");
     pathes
 }
 
@@ -413,7 +403,7 @@ fn get_examples(path: &Path) -> Vec<String> {
 }
 
 fn get_imported_files(md_files: Vec<PathBuf>) -> Vec<String> {
-    println!("get_imported_files");
+    log::info!("get_imported_files");
     // println!("{:?}", md_files);
     // ![](examples/arrays/update_hash.rs)
     // let re = Regex::new(r"^!\[\]]\((.*)\)\s*$").unwrap();
@@ -432,16 +422,16 @@ fn get_imported_files(md_files: Vec<PathBuf>) -> Vec<String> {
                 }
             }
             Err(error) => {
-                println!("Error opening file {filename:?}: {error}");
+                log::error!("Failed opening file {filename:?}: {error}");
             }
         }
     }
-    println!("get_imported_files done\n");
+    log::info!("get_imported_files done\n");
     return Vec::from_iter(imported_files.iter().map(|s| s.to_string()));
 }
 
 fn get_md_files() -> Vec<PathBuf> {
-    println!("get_md_files");
+    log::info!("get_md_files");
     let mut md_files = vec![];
     let path = Path::new(".");
     for entry in path.read_dir().expect("read_dir call failed").flatten() {
@@ -458,6 +448,6 @@ fn get_md_files() -> Vec<PathBuf> {
         //println!("{:?}", extension.unwrap())
     }
 
-    println!("get_md_files done\n");
+    log::info!("get_md_files done\n");
     md_files
 }
