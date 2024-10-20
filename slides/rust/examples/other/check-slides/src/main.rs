@@ -27,7 +27,7 @@ struct Cli {
     verbose: bool,
 
     #[arg(long)]
-    examples: bool,
+    use_examples: bool,
 
     #[arg(long)]
     update: bool,
@@ -38,7 +38,7 @@ struct Cli {
     #[arg(long)]
     clippy: bool,
 
-    crates: Vec<String>,
+    examples: Vec<String>,
 }
 
 fn main() {
@@ -53,30 +53,33 @@ fn main() {
     simple_logger::init_with_level(log_level).unwrap();
     log::info!("verbose: {}", args.verbose);
 
-    let crates = if args.crates.is_empty() {
-        get_crates(Path::new("examples"))
-    } else {
-        args.crates.iter().map(|name| PathBuf::from(name)).collect()
-    };
-    log::info!("Number of examples: {}", crates.len());
-
     std::env::set_current_dir(ROOT).unwrap();
 
-    let unused_examples = check_use_of_example_files(args.examples);
+    let examples = if args.examples.is_empty() {
+        get_crates(Path::new("examples"))
+    } else {
+        args.examples
+            .iter()
+            .map(|name| PathBuf::from(name))
+            .collect()
+    };
+    log::info!("Number of examples: {}", examples.len());
 
-    let (update_success, update_failures) = cargo_update(&crates, args.update);
+    let unused_examples = check_use_of_example_files(args.use_examples);
+
+    let (update_success, update_failures) = cargo_update(&examples, args.update);
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
     );
 
-    let (fmt_success, fmt_failures) = cargo_fmt(&crates, args.fmt);
+    let (fmt_success, fmt_failures) = cargo_fmt(&examples, args.fmt);
     log::info!(
         "fmt_success: {fmt_success}, fmt_failure: {}",
         fmt_failures.len()
     );
 
-    let clippy_error = cargo_clippy(&crates, args.clippy);
+    let clippy_error = cargo_clippy(&examples, args.clippy);
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
