@@ -82,6 +82,7 @@ docker container rm surrealdb
 
 ```
 docker volume remove my-surreal-db
+```
 
 
 ## SurrealDB connect to server
