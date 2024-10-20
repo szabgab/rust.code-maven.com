@@ -37,6 +37,8 @@ struct Cli {
 
     #[arg(long)]
     clippy: bool,
+
+    crates: Vec<String>,
 }
 
 fn main() {
@@ -51,11 +53,16 @@ fn main() {
     simple_logger::init_with_level(log_level).unwrap();
     log::info!("verbose: {}", args.verbose);
 
+    let crates = if args.crates.is_empty() {
+        get_crates(Path::new("examples"))
+    } else {
+        args.crates.iter().map(|name| PathBuf::from(name)).collect()
+    };
+    log::info!("Number of examples: {}", crates.len());
+
     std::env::set_current_dir(ROOT).unwrap();
 
     let unused_examples = check_use_of_example_files(args.examples);
-
-    let crates = get_crates(Path::new("examples"));
 
     let (update_success, update_failures) = cargo_update(&crates, args.update);
     log::info!(
