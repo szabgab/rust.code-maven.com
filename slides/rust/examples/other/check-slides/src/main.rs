@@ -218,13 +218,35 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
     let mut started = 0;
     let mut finished = 0;
 
+    let skip_clippy = &[
+        "examples/intro/formatting-required",
+        "examples/intro/print",
+        "examples/functions/declare-twice",
+        "examples/variables/change-literal-string",
+        "examples/variables/immutable-string",
+        "examples/variables/immutable-number",
+        "examples/variables/cannot-change-type",
+        "examples/tuples/empty",
+        "examples/numbers/small-integers-unfit-in-i8",
+        "examples/numbers/rounding-float",
+        "examples/booleans/other",
+        "examples/ownership/mutable-string-in-immutable-variable",
+        "examples/files/list-tree",          // TODO
+        "examples/files/open-file-handling", // TODO
+        "examples/arrays/numbers-change",
+        "examples/types/type-mismatch",
+        "examples/errors/out-of-bounds-array",
+        "examples/errors/div-by-zero-hard-coded",
+        "examples/advanced-functions/calculator", // TODO
+    ];
+
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         started += 1;
         log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = cargo_clippy_for_crate(&crate_folder);
+            let res = cargo_clippy_for_crate(&crate_folder, skip_clippy);
             mytx.send(res).unwrap();
         });
         thread_count += 1;
@@ -252,29 +274,9 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
     clippy_error
 }
 
-fn cargo_clippy_for_crate(crate_folder: &PathBuf) -> bool {
+fn cargo_clippy_for_crate(crate_folder: &PathBuf, skip: &[&str]) -> bool {
     let folder = crate_folder.clone().into_os_string().into_string().unwrap();
-    let folders = vec![
-        "examples/intro/formatting-required",
-        "examples/intro/print",
-        "examples/functions/declare-twice",
-        "examples/variables/change-literal-string",
-        "examples/variables/immutable-string",
-        "examples/variables/immutable-number",
-        "examples/variables/cannot-change-type",
-        "examples/tuples/empty",
-        "examples/numbers/small-integers-unfit-in-i8",
-        "examples/numbers/rounding-float",
-        "examples/booleans/other",
-        "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",          // TODO
-        "examples/files/open-file-handling", // TODO
-        "examples/arrays/numbers-change",
-        "examples/types/type-mismatch",
-        "examples/errors/out-of-bounds-array",
-        "examples/errors/div-by-zero-hard-coded",
-        "examples/advanced-functions/calculator", // TODO
-    ]
+    let folders = skip
     .into_iter()
     .map(|x| x.to_string())
     .collect::<String>();
