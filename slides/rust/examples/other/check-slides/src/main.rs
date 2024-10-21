@@ -82,7 +82,8 @@ fn main() {
         fmt_failures.len()
     );
 
-    let (fmt_check_success, fmt_check_failures) = cargo_fmt_check(&examples, args.fmt_check);
+    let (fmt_check_success, fmt_check_failures) =
+        cargo_on_all(&examples, args.fmt_check, &["fmt", "--check"]);
     log::info!(
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
@@ -165,15 +166,15 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_fmt_check(crates: &Vec<PathBuf>, fmt: bool) -> (i32, Vec<&PathBuf>) {
+fn cargo_on_all<'a>(crates: &'a Vec<PathBuf>, run: bool, args: &[&str]) -> (i32, Vec<&'a PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
-    if !fmt {
+    if !run {
         return (count_success, failures);
     }
 
     for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_fmt_check_for_crate(&crate_folder);
+        let result = cargo_on_single(&crate_folder, args);
         if result {
             count_success += 1;
         } else {
@@ -184,18 +185,19 @@ fn cargo_fmt_check(crates: &Vec<PathBuf>, fmt: bool) -> (i32, Vec<&PathBuf>) {
     (count_success, failures)
 }
 
-fn cargo_fmt_check_for_crate(crate_path: &PathBuf) -> bool {
-    log::info!("cargo_fmt_for_crate {crate_path:?}",);
-    let result = Command::new("cargo")
-        .arg("fmt")
-        .arg("--check")
-        .current_dir(crate_path)
-        .output()
-        .expect("failed to execute 'cargo fmt --check' process");
+fn cargo_on_single(crate_path: &PathBuf, args: &[&str]) -> bool {
+    log::info!("cargo {args:?} on {crate_path:?}",);
+    let error = format!("failed to execute 'cargo {args:?} --check' process");
+    let mut cmd = Command::new("cargo");
+    for arg in args {
+        cmd.arg(arg);
+    }
+
+    let result = cmd.current_dir(crate_path).output().expect(&error);
 
     if !result.status.success() {
-        log::error!("Cannot fmt crate: {:?}", crate_path);
-          return false;
+        log::error!("Cannot run {args:?} on crate: {crate_path:?}");
+        return false;
     }
     true
 }
