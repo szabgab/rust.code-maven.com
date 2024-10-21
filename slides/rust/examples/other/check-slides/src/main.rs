@@ -283,9 +283,6 @@ fn cargo_clippy_for_crate(crate_folder: &PathBuf, skip: &[&str]) -> bool {
     if folders.contains(&folder) {
         return true;
     }
-    //log::debug!("current_dir:  {:?}", std::env::current_dir().unwrap());
-    //log::debug!("crate_folder: {:?}", crate_folder);
-    //std::env::set_current_dir(crate_folder).unwrap();
     let result = Command::new("cargo")
         .arg("clippy")
         .arg("--")
@@ -296,22 +293,9 @@ fn cargo_clippy_for_crate(crate_folder: &PathBuf, skip: &[&str]) -> bool {
         .expect("failed to execute process");
 
     if !result.status.success() {
-        //log::debug!("{}", result.status);
         log::error!("In crate: {:?}", crate_folder);
-        //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
-        //println!("{}", std::str::from_utf8(&result.stderr).unwrap());
-        //std::process::exit(1);
     }
     result.status.success()
-
-    //let result = Command::new("cargo")
-    //    .arg("fmt")
-    //    .arg("--check")
-    //    .output()
-    //    .expect("failed to execute process");
-    //println!("{}", std::str::from_utf8(&result.stdout).unwrap());
-    //println!("{}", std::str::from_utf8(&result.stderr).unwrap());
-    //println!("{}", result.status);
 }
 
 fn get_crates(path: &Path) -> Vec<PathBuf> {
