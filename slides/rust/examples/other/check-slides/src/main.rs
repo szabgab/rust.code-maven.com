@@ -167,7 +167,7 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
 }
 
 fn cargo_on_all<'a>(crates: &'a Vec<PathBuf>, run: bool, args: &[&str]) -> (i32, Vec<&'a PathBuf>) {
-    let mut count_success = 0;
+      let mut count_success = 0;
     let mut failures = vec![];
     if !run {
         return (count_success, failures);
