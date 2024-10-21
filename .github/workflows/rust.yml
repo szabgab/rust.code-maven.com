@@ -29,10 +29,12 @@ jobs:
             echo "$file was changed"
           done
           CHANGED_FOLDERS=$(perl -E'say join " ", grep { $_ ne "" and not $uniq{$_}++ } map {m{(/examples/[^/]+/[^/]+)}; $1}  @ARGV' $ALL_CHANGED_FILES)
-          echo "$CHANGED_FOLDERS"
+          echo "CHANGED_FOLDERS: $CHANGED_FOLDERS"
+          echo $CHANGED_FOLDERS > folders.txt
       - name: Check the slides
         run: |
-          echo "$CHANGED_FOLDERS"
+          CHANGED_FOLDERS=$(cat folders.txt)
+          echo "CHANGED_FOLDERS: $CHANGED_FOLDERS"
           cd slides/rust
           # comment out as it takes 10 minutes to run
           # maybe we could improve it by sharing some of the binaries and/or caching
