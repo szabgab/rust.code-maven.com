@@ -28,7 +28,7 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
-          CHANGED_FOLDERS=$(perl -E'say join " ", grep { $_ ne "" and not $uniq{$_}++ } map {m{(/examples/[^/]+/[^/]+)}; $1}  @ARGV' $ALL_CHANGED_FILES)
+          CHANGED_FOLDERS=$(perl -E'say join " ", grep { $_ ne "" and not $uniq{$_}++ } map {m{/(examples/[^/]+/[^/]+)}; $1}  @ARGV' $ALL_CHANGED_FILES)
           echo "CHANGED_FOLDERS: $CHANGED_FOLDERS"
           echo $CHANGED_FOLDERS > folders.txt
       - name: Check the slides
