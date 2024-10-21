@@ -36,6 +36,9 @@ struct Cli {
     fmt: bool,
 
     #[arg(long)]
+    fmt_check: bool,
+
+    #[arg(long)]
     clippy: bool,
 
     examples: Vec<String>,
@@ -77,6 +80,12 @@ fn main() {
     log::info!(
         "fmt_success: {fmt_success}, fmt_failure: {}",
         fmt_failures.len()
+    );
+
+    let (fmt_check_success, fmt_check_failures) = cargo_fmt_check(&examples, args.fmt_check);
+    log::info!(
+        "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
+        fmt_check_failures.len()
     );
 
     let clippy_error = cargo_clippy(&examples, args.clippy);
@@ -154,6 +163,41 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
         }
     }
     count
+}
+
+fn cargo_fmt_check(crates: &Vec<PathBuf>, fmt: bool) -> (i32, Vec<&PathBuf>) {
+    let mut count_success = 0;
+    let mut failures = vec![];
+    if !fmt {
+        return (count_success, failures);
+    }
+
+    for (_ix, crate_folder) in crates.into_iter().enumerate() {
+        let result = cargo_fmt_check_for_crate(&crate_folder);
+        if result {
+            count_success += 1;
+        } else {
+            failures.push(crate_folder);
+        }
+    }
+
+    (count_success, failures)
+}
+
+fn cargo_fmt_check_for_crate(crate_path: &PathBuf) -> bool {
+    log::info!("cargo_fmt_for_crate {crate_path:?}",);
+    let result = Command::new("cargo")
+        .arg("fmt")
+        .arg("--check")
+        .current_dir(crate_path)
+        .output()
+        .expect("failed to execute 'cargo fmt --check' process");
+
+    if !result.status.success() {
+        log::error!("Cannot fmt crate: {:?}", crate_path);
+          return false;
+    }
+    true
 }
 
 fn cargo_fmt(crates: &Vec<PathBuf>, fmt: bool) -> (i32, Vec<&PathBuf>) {
