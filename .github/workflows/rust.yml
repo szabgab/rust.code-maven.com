@@ -28,9 +28,12 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
+          CHHANGED_FOLDERS=$(perl -E'say join " ", grep { $_ ne "" and not $uniq{$_}++ } map {m{(/examples/[^/]+/[^/]+)}; $1}  @ARGV' $ALL_CHANGED_FILES)
+          echo "$CHANGED_FOLDERS"
       - name: Check the slides
         run: |
+          echo "$CHANGED_FOLDERS"
           cd slides/rust
           # comment out as it takes 10 minutes to run
           # maybe we could improve it by sharing some of the binaries and/or caching
-          #./check.sh
+          ./check.sh --verbose --fmt $CHANGED_FOLDERS
