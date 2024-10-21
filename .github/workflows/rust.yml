@@ -39,5 +39,5 @@ jobs:
           # comment out as it takes 10 minutes to run
           # maybe we could improve it by sharing some of the binaries and/or caching
           if [ "$CHANGED_FOLDERS" != "" ]; then
-            ./check.sh --verbose --fmt $CHANGED_FOLDERS
+            ./check.sh --verbose --fmt-check $CHANGED_FOLDERS
           fi
