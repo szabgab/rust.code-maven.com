@@ -174,7 +174,7 @@ fn cargo_on_all<'a>(crates: &'a Vec<PathBuf>, run: bool, args: &[&str]) -> (i32,
     }
 
     for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_on_single(&crate_folder, args);
+        let result = cargo_on_single(&crate_folder, args, &[]);
         if result {
             count_success += 1;
         } else {
@@ -185,8 +185,17 @@ fn cargo_on_all<'a>(crates: &'a Vec<PathBuf>, run: bool, args: &[&str]) -> (i32,
     (count_success, failures)
 }
 
-fn cargo_on_single(crate_path: &PathBuf, args: &[&str]) -> bool {
+fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
     log::info!("cargo {args:?} on {crate_path:?}",);
+    let folder = crate_path.clone().into_os_string().into_string().unwrap();
+    let folders = skip
+    .into_iter()
+    .map(|x| x.to_string())
+    .collect::<String>();
+    if folders.contains(&folder) {
+        return true;
+    }
+
     let error = format!("failed to execute 'cargo {args:?} --check' process");
     let mut cmd = Command::new("cargo");
     for arg in args {
@@ -201,6 +210,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str]) -> bool {
     }
     true
 }
+
 
 fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
     let mut clippy_error = 0;
@@ -246,7 +256,7 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = cargo_clippy_for_crate(&crate_folder, skip_clippy);
+            let res = cargo_on_single(&crate_folder, &["clippy", "--", "--deny", "warnings"], skip_clippy);
             mytx.send(res).unwrap();
         });
         thread_count += 1;
@@ -274,29 +284,6 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
     clippy_error
 }
 
-fn cargo_clippy_for_crate(crate_folder: &PathBuf, skip: &[&str]) -> bool {
-    let folder = crate_folder.clone().into_os_string().into_string().unwrap();
-    let folders = skip
-    .into_iter()
-    .map(|x| x.to_string())
-    .collect::<String>();
-    if folders.contains(&folder) {
-        return true;
-    }
-    let result = Command::new("cargo")
-        .arg("clippy")
-        .arg("--")
-        .arg("--deny")
-        .arg("warnings")
-        .current_dir(crate_folder)
-        .output()
-        .expect("failed to execute process");
-
-    if !result.status.success() {
-        log::error!("In crate: {:?}", crate_folder);
-    }
-    result.status.success()
-}
 
 fn get_crates(path: &Path) -> Vec<PathBuf> {
     log::info!("get_crates");
