@@ -44,6 +44,9 @@ struct Cli {
     #[arg(long)]
     test: bool,
 
+    #[arg(long)]
+    run: bool,
+
     examples: Vec<String>,
 }
 
@@ -132,6 +135,12 @@ fn main() {
         test_failures.len()
     );
 
+    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, &["run"], &[]);
+    log::info!(
+        "run_success: {run_success}, run_failure: {}",
+        run_failures.len()
+    );
+
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
     println!("Elapsed: {}", end.timestamp() - start.timestamp());
@@ -145,6 +154,7 @@ fn main() {
     report_errors("update", &update_failures);
     report_errors("clippy", &clippy_failures);
     report_errors("test", &test_failures);
+    report_errors("run", &run_failures);
 
     if unused_examples > 0
         || !update_failures.is_empty()
@@ -152,6 +162,7 @@ fn main() {
         || !fmt_check_failures.is_empty()
         || !clippy_failures.is_empty()
         || !test_failures.is_empty()
+        || !run_failures.is_empty()
     {
         exit(1);
     }
