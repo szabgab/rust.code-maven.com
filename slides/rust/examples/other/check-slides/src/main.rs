@@ -112,7 +112,12 @@ fn main() {
     ];
 
 
-    let clippy_error = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+    let (clippy_success, clippy_failures) 
+    = cargo_clippy(examples.clone(), args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+    log::info!(
+        "clippy_success: {clippy_success}, clippy_failure: {}",
+        clippy_failures.len()
+    );
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
@@ -136,10 +141,10 @@ fn main() {
             eprintln!("  {failure:?}",);
         }
     }
-    if clippy_error > 0 {
-        eprintln!("There are {clippy_error} examples with clippy errors.");
+    if clippy_failures.len() > 0 {
+        eprintln!("There are {} examples with clippy errors.", clippy_failures.len());
     }
-    if unused_examples > 0 || update_failures.len() > 0 || clippy_error > 0 {
+    if unused_examples > 0 || update_failures.len() > 0 || clippy_failures.len() > 0 {
         exit(1);
     }
 }
@@ -235,11 +240,13 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
 }
 
 
-fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str], skip: &'static [&str]) -> i32 {
-    let mut clippy_error = 0;
-    if !run_clippy {
-        return clippy_error;
+fn cargo_clippy<'a>(crates: Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
+    let mut count_success = 0;
+    let mut failures = vec![];
+    if !run {
+        return (count_success, failures);
     }
+
     log::info!("cargo_clippy");
     let number_of_crates = crates.len();
 
@@ -258,13 +265,15 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str], 
 
         thread::spawn(move || {
             let res = cargo_on_single(&crate_folder, args, skip);
-            mytx.send(res).unwrap();
+            mytx.send((res, crate_folder)).unwrap();
         });
         thread_count += 1;
         if thread_count >= max_threads {
             let received = rx.recv().unwrap();
-            if !received {
-                clippy_error += 1;
+            if received.0 {
+                count_success += 1;
+            } else {
+                failures.push(received.1);
             }
             finished += 1;
         }
@@ -273,8 +282,10 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str], 
     for received in rx {
         //println!("received {thread_count}");
         finished += 1;
-        if !received {
-            clippy_error += 1;
+        if received.0 {
+            count_success += 1;
+        } else {
+            failures.push(received.1);
         }
         if finished >= started {
             break;
@@ -282,7 +293,8 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str], 
     }
 
     log::info!("check crates done");
-    clippy_error
+
+    (count_success, failures)
 }
 
 
