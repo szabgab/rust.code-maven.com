@@ -132,6 +132,13 @@ fn main() {
             eprintln!("  {failure:?}",);
         }
     }
+
+    if fmt_check_failures.len() > 0 {
+        eprintln!("There are {} examples with fmt check errors.", fmt_check_failures.len());
+        for failure in &fmt_check_failures {
+            eprintln!("  {failure:?}",);
+        }
+    }
     if update_failures.len() > 0 {
         eprintln!(
             "There are {} examples with update errors.",
@@ -143,7 +150,11 @@ fn main() {
     }
     if clippy_failures.len() > 0 {
         eprintln!("There are {} examples with clippy errors.", clippy_failures.len());
+        for failure in &clippy_failures {
+            eprintln!("  {failure:?}",);
+        }
     }
+
     if unused_examples > 0 || update_failures.len() > 0 || clippy_failures.len() > 0 {
         exit(1);
     }
