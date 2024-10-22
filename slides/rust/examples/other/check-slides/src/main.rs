@@ -89,7 +89,30 @@ fn main() {
         fmt_check_failures.len()
     );
 
-    let clippy_error = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"]);
+    let skip_clippy = &[
+        "examples/intro/formatting-required",
+        "examples/intro/print",
+        "examples/functions/declare-twice",
+        "examples/variables/change-literal-string",
+        "examples/variables/immutable-string",
+        "examples/variables/immutable-number",
+        "examples/variables/cannot-change-type",
+        "examples/tuples/empty",
+        "examples/numbers/small-integers-unfit-in-i8",
+        "examples/numbers/rounding-float",
+        "examples/booleans/other",
+        "examples/ownership/mutable-string-in-immutable-variable",
+        "examples/files/list-tree",          // TODO
+        "examples/files/open-file-handling", // TODO
+        "examples/arrays/numbers-change",
+        "examples/types/type-mismatch",
+        "examples/errors/out-of-bounds-array",
+        "examples/errors/div-by-zero-hard-coded",
+        "examples/advanced-functions/calculator", // TODO
+    ];
+
+
+    let clippy_error = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
@@ -212,7 +235,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
 }
 
 
-fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str]) -> i32 {
+fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str], skip: &'static [&str]) -> i32 {
     let mut clippy_error = 0;
     if !run_clippy {
         return clippy_error;
@@ -228,35 +251,13 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str]) 
     let mut started = 0;
     let mut finished = 0;
 
-    let skip_clippy = &[
-        "examples/intro/formatting-required",
-        "examples/intro/print",
-        "examples/functions/declare-twice",
-        "examples/variables/change-literal-string",
-        "examples/variables/immutable-string",
-        "examples/variables/immutable-number",
-        "examples/variables/cannot-change-type",
-        "examples/tuples/empty",
-        "examples/numbers/small-integers-unfit-in-i8",
-        "examples/numbers/rounding-float",
-        "examples/booleans/other",
-        "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",          // TODO
-        "examples/files/open-file-handling", // TODO
-        "examples/arrays/numbers-change",
-        "examples/types/type-mismatch",
-        "examples/errors/out-of-bounds-array",
-        "examples/errors/div-by-zero-hard-coded",
-        "examples/advanced-functions/calculator", // TODO
-    ];
-
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         started += 1;
         log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = cargo_on_single(&crate_folder, args, skip_clippy);
+            let res = cargo_on_single(&crate_folder, args, skip);
             mytx.send(res).unwrap();
         });
         thread_count += 1;
