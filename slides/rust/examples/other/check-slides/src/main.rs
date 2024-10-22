@@ -126,39 +126,26 @@ fn main() {
     if unused_examples > 0 {
         eprintln!("There are {unused_examples} unused examples");
     }
-    if fmt_failures.len() > 0 {
-        eprintln!("There are {} examples with fmt errors.", fmt_failures.len());
-        for failure in &fmt_failures {
-            eprintln!("  {failure:?}",);
-        }
-    }
 
-    if fmt_check_failures.len() > 0 {
-        eprintln!("There are {} examples with fmt check errors.", fmt_check_failures.len());
-        for failure in &fmt_check_failures {
-            eprintln!("  {failure:?}",);
-        }
-    }
-    if update_failures.len() > 0 {
-        eprintln!(
-            "There are {} examples with update errors.",
-            update_failures.len()
-        );
-        for failure in &update_failures {
-            eprintln!("  {failure:?}",);
-        }
-    }
-    if clippy_failures.len() > 0 {
-        eprintln!("There are {} examples with clippy errors.", clippy_failures.len());
-        for failure in &clippy_failures {
-            eprintln!("  {failure:?}",);
-        }
-    }
+    report_errors("fmt", &fmt_failures);   
+    report_errors("fmt --check", &fmt_check_failures);   
+    report_errors("update", &update_failures);
+    report_errors("clippy", &clippy_failures);
 
     if unused_examples > 0 || !update_failures.is_empty() || !fmt_failures.is_empty() || !fmt_check_failures.is_empty() || !clippy_failures.is_empty() {
         exit(1);
     }
 }
+
+fn report_errors(name: &str, failures: &[PathBuf]) {
+    if !failures.is_empty() {
+        eprintln!("There are {} examples with {name} errors.", failures.len());
+        for failure in failures {
+            eprintln!("  {failure:?}",);
+        }
+    }
+}
+
 
 fn check_use_of_example_files(use_examples: bool) -> i32 {
     if !use_examples {
