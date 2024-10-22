@@ -61,10 +61,7 @@ fn main() {
     let examples = if args.examples.is_empty() {
         get_crates(Path::new("examples"))
     } else {
-        args.examples
-            .iter()
-            .map(PathBuf::from)
-            .collect()
+        args.examples.iter().map(PathBuf::from).collect()
     };
     log::info!("Number of examples: {}", examples.len());
 
@@ -111,9 +108,12 @@ fn main() {
         "examples/advanced-functions/calculator", // TODO
     ];
 
-
-    let (clippy_success, clippy_failures) 
-    = cargo_on_all(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+    let (clippy_success, clippy_failures) = cargo_on_all(
+        &examples,
+        args.clippy,
+        &["clippy", "--", "--deny", "warnings"],
+        skip_clippy,
+    );
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
         clippy_failures.len()
@@ -127,12 +127,17 @@ fn main() {
         eprintln!("There are {unused_examples} unused examples");
     }
 
-    report_errors("fmt", &fmt_failures);   
-    report_errors("fmt --check", &fmt_check_failures);   
+    report_errors("fmt", &fmt_failures);
+    report_errors("fmt --check", &fmt_check_failures);
     report_errors("update", &update_failures);
     report_errors("clippy", &clippy_failures);
 
-    if unused_examples > 0 || !update_failures.is_empty() || !fmt_failures.is_empty() || !fmt_check_failures.is_empty() || !clippy_failures.is_empty() {
+    if unused_examples > 0
+        || !update_failures.is_empty()
+        || !fmt_failures.is_empty()
+        || !fmt_check_failures.is_empty()
+        || !clippy_failures.is_empty()
+    {
         exit(1);
     }
 }
@@ -145,7 +150,6 @@ fn report_errors(name: &str, failures: &[PathBuf]) {
         }
     }
 }
-
 
 fn check_use_of_example_files(use_examples: bool) -> i32 {
     if !use_examples {
@@ -195,7 +199,12 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all(crates: &[PathBuf], run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
+fn cargo_on_all(
+    crates: &[PathBuf],
+    run: bool,
+    args: &'static [&str],
+    skip: &'static [&str],
+) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !run {
@@ -252,15 +261,11 @@ fn cargo_on_all(crates: &[PathBuf], run: bool, args: &'static [&str], skip: &'st
     (count_success, failures)
 }
 
-
 fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
     log::info!("cargo {} on {crate_path:?}", args.join(" "));
 
     let folder = crate_path.clone().into_os_string().into_string().unwrap();
-    let folders = skip
-    .iter()
-    .map(|x| x.to_string())
-    .collect::<String>();
+    let folders = skip.iter().map(|x| x.to_string()).collect::<String>();
     if folders.contains(&folder) {
         return true;
     }
@@ -279,8 +284,6 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
     }
     true
 }
-
-
 
 fn get_crates(path: &Path) -> Vec<PathBuf> {
     log::info!("get_crates");
