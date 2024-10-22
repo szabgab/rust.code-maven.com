@@ -124,7 +124,7 @@ fn main() {
     println!("Elapsed: {}", end.timestamp() - start.timestamp());
 
     if unused_examples > 0 {
-        eprintln!("There are {unused_examples} unused examples");
+        println!("There are {unused_examples} unused examples");
     }
 
     report_errors("fmt", &fmt_failures);
@@ -144,9 +144,9 @@ fn main() {
 
 fn report_errors(name: &str, failures: &[PathBuf]) {
     if !failures.is_empty() {
-        eprintln!("There are {} examples with {name} errors.", failures.len());
+        println!("There are {} examples with {name} errors.", failures.len());
         for failure in failures {
-            eprintln!("  {failure:?}",);
+            println!("  {failure:?}",);
         }
     }
 }
