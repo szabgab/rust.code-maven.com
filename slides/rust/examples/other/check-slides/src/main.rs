@@ -70,20 +70,20 @@ fn main() {
 
     let unused_examples = check_use_of_example_files(args.use_examples);
 
-    let (update_success, update_failures) = cargo_on_all(&examples, args.update, &["update"]);
+    let (update_success, update_failures) = cargo_on_all(&examples, args.update, &["update"], &[]);
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
     );
 
-    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, &["fmt"]);
+    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, &["fmt"], &[]);
     log::info!(
         "fmt_success: {fmt_success}, fmt_failure: {}",
         fmt_failures.len()
     );
 
     let (fmt_check_success, fmt_check_failures) =
-        cargo_on_all(&examples, args.fmt_check, &["fmt", "--check"]);
+        cargo_on_all(&examples, args.fmt_check, &["fmt", "--check"], &[]);
     log::info!(
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
@@ -113,7 +113,7 @@ fn main() {
 
 
     let (clippy_success, clippy_failures) 
-    = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+    = cargo_on_all(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
         clippy_failures.len()
@@ -194,60 +194,14 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all<'a>(crates: &'a Vec<PathBuf>, run: bool, args: &[&str]) -> (i32, Vec<&'a PathBuf>) {
-      let mut count_success = 0;
-    let mut failures = vec![];
-    if !run {
-        return (count_success, failures);
-    }
-
-    for (_ix, crate_folder) in crates.into_iter().enumerate() {
-        let result = cargo_on_single(&crate_folder, args, &[]);
-        if result {
-            count_success += 1;
-        } else {
-            failures.push(crate_folder);
-        }
-    }
-
-    (count_success, failures)
-}
-
-fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
-    log::info!("cargo {args:?} on {crate_path:?}",);
-    let folder = crate_path.clone().into_os_string().into_string().unwrap();
-    let folders = skip
-    .into_iter()
-    .map(|x| x.to_string())
-    .collect::<String>();
-    if folders.contains(&folder) {
-        return true;
-    }
-
-    let error = format!("failed to execute 'cargo {args:?} --check' process");
-    let mut cmd = Command::new("cargo");
-    for arg in args {
-        cmd.arg(arg);
-    }
-
-    let result = cmd.current_dir(crate_path).output().expect(&error);
-
-    if !result.status.success() {
-        log::error!("Cannot run {args:?} on crate: {crate_path:?}");
-        return false;
-    }
-    true
-}
-
-
-fn cargo_clippy(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
+fn cargo_on_all(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !run {
         return (count_success, failures);
     }
 
-    log::info!("cargo_clippy");
+    log::info!("cargo_on_all {}", args.join(" "));
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -292,10 +246,38 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &
         }
     }
 
-    log::info!("check crates done");
+    log::info!("cargo_on_all {} done", args.join(" "));
 
     (count_success, failures)
 }
+
+
+fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
+    log::info!("cargo {args:?} on {crate_path:?}",);
+    let folder = crate_path.clone().into_os_string().into_string().unwrap();
+    let folders = skip
+    .into_iter()
+    .map(|x| x.to_string())
+    .collect::<String>();
+    if folders.contains(&folder) {
+        return true;
+    }
+
+    let error = format!("failed to execute 'cargo {args:?} --check' process");
+    let mut cmd = Command::new("cargo");
+    for arg in args {
+        cmd.arg(arg);
+    }
+
+    let result = cmd.current_dir(crate_path).output().expect(&error);
+
+    if !result.status.success() {
+        log::error!("Cannot run {args:?} on crate: {crate_path:?}");
+        return false;
+    }
+    true
+}
+
 
 
 fn get_crates(path: &Path) -> Vec<PathBuf> {
