@@ -155,7 +155,7 @@ fn main() {
         }
     }
 
-    if unused_examples > 0 || update_failures.len() > 0 || clippy_failures.len() > 0 {
+    if unused_examples > 0 || !update_failures.is_empty() || !fmt_failures.is_empty() || !fmt_check_failures.is_empty() || !clippy_failures.is_empty() {
         exit(1);
     }
 }
@@ -208,7 +208,7 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
+fn cargo_on_all(crates: &[PathBuf], run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !run {
@@ -271,7 +271,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
 
     let folder = crate_path.clone().into_os_string().into_string().unwrap();
     let folders = skip
-    .into_iter()
+    .iter()
     .map(|x| x.to_string())
     .collect::<String>();
     if folders.contains(&folder) {
