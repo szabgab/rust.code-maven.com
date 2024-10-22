@@ -89,7 +89,7 @@ fn main() {
         fmt_check_failures.len()
     );
 
-    let clippy_error = cargo_clippy(&examples, args.clippy);
+    let clippy_error = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"]);
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
@@ -212,7 +212,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
 }
 
 
-fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
+fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool, args: &'static [&str]) -> i32 {
     let mut clippy_error = 0;
     if !run_clippy {
         return clippy_error;
@@ -256,7 +256,7 @@ fn cargo_clippy(crates: &Vec<PathBuf>, run_clippy: bool) -> i32 {
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = cargo_on_single(&crate_folder, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+            let res = cargo_on_single(&crate_folder, args, skip_clippy);
             mytx.send(res).unwrap();
         });
         thread_count += 1;
