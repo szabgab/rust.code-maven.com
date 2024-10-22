@@ -201,7 +201,7 @@ fn cargo_on_all(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &
         return (count_success, failures);
     }
 
-    log::info!("cargo_on_all {}", args.join(" "));
+    log::info!("cargo_on_all {} START", args.join(" "));
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -246,14 +246,15 @@ fn cargo_on_all(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &
         }
     }
 
-    log::info!("cargo_on_all {} done", args.join(" "));
+    log::info!("cargo_on_all {} DONE", args.join(" "));
 
     (count_success, failures)
 }
 
 
 fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
-    log::info!("cargo {args:?} on {crate_path:?}",);
+    log::info!("cargo {} on {crate_path:?}", args.join(" "));
+
     let folder = crate_path.clone().into_os_string().into_string().unwrap();
     let folders = skip
     .into_iter()
