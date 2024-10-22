@@ -216,13 +216,13 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
 
 fn cargo_on_all(
     crates: &[PathBuf],
-    run: bool,
+    dothis: bool,
     args: &'static [&str],
     skip: &'static [&str],
 ) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
-    if !run {
+    if !dothis {
         return (count_success, failures);
     }
 
@@ -294,7 +294,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
     let result = cmd.current_dir(crate_path).output().expect(&error);
 
     if !result.status.success() {
-        log::error!("Cannot run {args:?} on crate: {crate_path:?}");
+        log::error!("Cannot execute {args:?} on crate: {crate_path:?}");
         return false;
     }
     true
