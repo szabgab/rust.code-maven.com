@@ -63,7 +63,7 @@ fn main() {
     } else {
         args.examples
             .iter()
-            .map(|name| PathBuf::from(name))
+            .map(PathBuf::from)
             .collect()
     };
     log::info!("Number of examples: {}", examples.len());
