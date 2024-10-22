@@ -113,7 +113,7 @@ fn main() {
 
 
     let (clippy_success, clippy_failures) 
-    = cargo_clippy(examples.clone(), args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
+    = cargo_clippy(&examples, args.clippy, &["clippy", "--", "--deny", "warnings"], skip_clippy);
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
         clippy_failures.len()
@@ -240,7 +240,7 @@ fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
 }
 
 
-fn cargo_clippy<'a>(crates: Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
+fn cargo_clippy(crates: &Vec<PathBuf>, run: bool, args: &'static [&str], skip: &'static [&str]) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !run {
