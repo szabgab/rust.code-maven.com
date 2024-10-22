@@ -41,6 +41,9 @@ struct Cli {
     #[arg(long)]
     clippy: bool,
 
+    #[arg(long)]
+    test: bool,
+
     examples: Vec<String>,
 }
 
@@ -58,6 +61,10 @@ fn main() {
 
     std::env::set_current_dir(ROOT).unwrap();
 
+    let skip_update = &[
+        "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
+    ];
+
     let examples = if args.examples.is_empty() {
         get_crates(Path::new("examples"))
     } else {
@@ -67,7 +74,8 @@ fn main() {
 
     let unused_examples = check_use_of_example_files(args.use_examples);
 
-    let (update_success, update_failures) = cargo_on_all(&examples, args.update, &["update"], &[]);
+    let (update_success, update_failures) =
+        cargo_on_all(&examples, args.update, &["update"], skip_update);
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
@@ -85,7 +93,6 @@ fn main() {
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
     );
-
     let skip_clippy = &[
         "examples/intro/formatting-required",
         "examples/intro/print",
@@ -119,6 +126,12 @@ fn main() {
         clippy_failures.len()
     );
 
+    let (test_success, test_failures) = cargo_on_all(&examples, args.fmt_check, &["test"], &[]);
+    log::info!(
+        "test_success: {test_success}, test_failure: {}",
+        test_failures.len()
+    );
+
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
     println!("Elapsed: {}", end.timestamp() - start.timestamp());
@@ -131,12 +144,14 @@ fn main() {
     report_errors("fmt --check", &fmt_check_failures);
     report_errors("update", &update_failures);
     report_errors("clippy", &clippy_failures);
+    report_errors("test", &test_failures);
 
     if unused_examples > 0
         || !update_failures.is_empty()
         || !fmt_failures.is_empty()
         || !fmt_check_failures.is_empty()
         || !clippy_failures.is_empty()
+        || !test_failures.is_empty()
     {
         exit(1);
     }
