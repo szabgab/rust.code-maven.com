@@ -170,6 +170,9 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
             if filename.starts_with("examples/rocket/people-and-groups/templates/") {
                 continue;
             }
+            if filename.starts_with("examples/surrealdb/embedded-rocksdb/tempdb/") {
+                continue;
+            }
             let files = [
                 "examples/threads/count-characters/aadef.txt",
                 "examples/threads/count-characters/abc.txt",
