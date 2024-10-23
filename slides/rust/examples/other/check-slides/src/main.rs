@@ -209,12 +209,9 @@ fn cargo_on_all(
     // Then we collect the messages from the remaining ones.
     let (tx, rx) = mpsc::channel();
     let max_threads = 2;
-    let mut started = 0;
-    let mut finished = 0;
     let pool = ThreadPool::new(max_threads);
 
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
-        started += 1;
         log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
 
@@ -223,19 +220,16 @@ fn cargo_on_all(
             mytx.send((res, crate_folder)).unwrap();
         });
     }
+    drop(tx);
 
     for received in rx {
         //println!("received {thread_count}");
-        finished += 1;
         if received.0 {
             *success.entry(action).or_insert(0) += 1;
         } else {
             failures
                 .entry(action)
                 .and_modify(|value| value.push(received.1));
-        }
-        if finished >= started {
-            break;
         }
     }
 
