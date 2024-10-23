@@ -1,8 +1,7 @@
-use sea_orm::{ConnectOptions, Database};
+use sea_orm::{ConnectOptions, Database, DbErr};
 // cargo install sea-orm-cli
 
 use futures::executor::block_on;
-use sea_orm::{Database, DbErr};
 
 fn main() {
     if let Err(err) = block_on(run()) {
@@ -18,7 +17,7 @@ async fn run() -> Result<(), DbErr> {
     }
 
     let opt = ConnectOptions::new("sqlite:./counter.db?mode=rwc");
-    let db = Database::connect(opt).await?;
+    let _db = Database::connect(opt).await?;
 
     if args.len() == 1 {
         list_counters();
@@ -26,6 +25,7 @@ async fn run() -> Result<(), DbErr> {
         let name = &args[1];
         increment(name);
     }
+    Ok(())
 }
 
 fn list_counters() {
