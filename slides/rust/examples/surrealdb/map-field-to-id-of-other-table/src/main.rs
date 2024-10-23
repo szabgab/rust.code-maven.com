@@ -98,4 +98,3 @@ async fn show_students_in_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
 
     Ok(())
 }
-
