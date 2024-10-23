@@ -1,6 +1,5 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::engine::remote::ws::Client;
-use surrealdb::engine::remote::ws::Ws;
+use surrealdb::engine::local::{Db, Mem};
 use surrealdb::opt::Resource;
 use surrealdb::Surreal;
 
@@ -14,36 +13,36 @@ struct Fruit {
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    let db = Surreal::new::<Ws>("127.0.0.1:8000").await?;
-    db.use_ns("demo").use_db("demo-time").await?;
+    let dbh = Surreal::new::<Mem>(()).await?;
+    dbh.use_ns("demo").use_db("demo-time").await?;
 
-    let _response = db.query("DELETE fruits").await?.check();
-    list(&db).await?;
+    let _response = dbh.query("DELETE fruits").await?.check();
+    list(&dbh).await?;
 
     for name in ["apple", "banana"] {
         let fruit = Fruit {
             name: name.to_owned(),
             date: Utc::now(),
         };
-        let _result = db.create(Resource::from("fruits")).content(fruit).await?;
+        let _result = dbh.create(Resource::from("fruits")).content(fruit).await?;
         //println!("{}", result);
     }
-    list(&db).await?;
+    list(&dbh).await?;
 
-    let _response = db
+    let _response = dbh
         .query("DELETE fruits WHERE name=$name")
         .bind(("name", "apple"))
         .await?
         .check();
     //println!("{:?}", response);
-    list(&db).await?;
+    list(&dbh).await?;
 
     Ok(())
 }
 
-async fn list(db: &Surreal<Client>) -> surrealdb::Result<()> {
+async fn list(dbh: &Surreal<Db>) -> surrealdb::Result<()> {
     let utc: DateTime<Utc> = Utc::now();
-    let fruits: Vec<Fruit> = db.select("fruits").await?;
+    let fruits: Vec<Fruit> = dbh.select("fruits").await?;
     println!("List:");
     for fruit in fruits {
         println!("   {:?}", fruit);
