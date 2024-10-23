@@ -270,6 +270,14 @@ Adding them together should result in
 
 ![](examples/hashes/total-values/out.out)
 
+## Merge two HashMaps adding the values implemented as a function
+{id: function-to-merge-hashmaps-adding-the-values}
+{i: HashMap}
+
+![](examples/hashes/total-values-using-function/src/main.rs)
+
+![](examples/hashes/total-values-using-function/out.out)
+
 ## Merge two HashMaps adding the values in a function
 {id: merge-hashmaps-adding-the-values-in-a-function}
 {i: HashMap}
