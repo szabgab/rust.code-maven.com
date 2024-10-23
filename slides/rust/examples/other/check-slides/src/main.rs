@@ -53,6 +53,30 @@ struct Cli {
     examples: Vec<String>,
 }
 
+fn get_actions(args: &Cli) -> Vec<&'static str> {
+    let mut actions: Vec<&str> = vec![];
+    if args.update {
+        actions.push("update");
+    }
+    if args.fmt {
+        actions.push("fmt")
+    }
+    if args.fmt_check {
+        actions.push("fmt_check")
+    }
+    if args.clippy {
+        actions.push("clippy")
+    }
+    if args.test {
+        actions.push("test")
+    }
+    if args.run {
+        actions.push("run")
+    }
+
+    actions
+}
+
 fn main() {
     let start: DateTime<Utc> = Utc::now();
 
@@ -78,25 +102,7 @@ fn main() {
 
     let mut success: HashMap<&str, i32> = HashMap::new();
     let mut failures: HashMap<&str, Vec<PathBuf>> = HashMap::new();
-    let mut actions: Vec<&str> = vec![];
-    if args.update {
-        actions.push("update");
-    }
-    if args.fmt {
-        actions.push("fmt")
-    }
-    if args.fmt_check {
-        actions.push("fmt_check")
-    }
-    if args.clippy {
-        actions.push("clippy")
-    }
-    if args.test {
-        actions.push("test")
-    }
-    if args.run {
-        actions.push("run")
-    }
+    let actions = get_actions(&args);
 
     for action in actions {
         cargo_on_all(&mut success, &mut failures, &examples, true, action);
