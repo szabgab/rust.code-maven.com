@@ -7,10 +7,10 @@ use std::path::PathBuf;
 use std::process::exit;
 use std::process::Command;
 use std::sync::mpsc;
-use std::thread;
 
 use chrono::{DateTime, Utc};
 use clap::Parser;
+use threadpool::ThreadPool;
 
 // use regex::Regex;
 
@@ -209,31 +209,19 @@ fn cargo_on_all(
     // Then we collect the messages from the remaining ones.
     let (tx, rx) = mpsc::channel();
     let max_threads = 2;
-    let mut thread_count = 0;
     let mut started = 0;
     let mut finished = 0;
+    let pool = ThreadPool::new(max_threads);
 
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         started += 1;
         log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
 
-        thread::spawn(move || {
+        pool.execute(move || {
             let res = cargo_on_single(&crate_folder, action);
             mytx.send((res, crate_folder)).unwrap();
         });
-        thread_count += 1;
-        if thread_count >= max_threads {
-            let received = rx.recv().unwrap();
-            if received.0 {
-                *success.entry(action).or_insert(0) += 1;
-            } else {
-                failures
-                    .entry(action)
-                    .and_modify(|value| value.push(received.1));
-            }
-            finished += 1;
-        }
     }
 
     for received in rx {
