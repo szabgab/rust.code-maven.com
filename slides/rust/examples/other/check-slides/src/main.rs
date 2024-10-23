@@ -432,11 +432,19 @@ fn skip(name: &str) -> &'static [&'static str] {
         "examples/errors/div-by-zero-hard-coded",
         "examples/advanced-functions/calculator", // TODO
     ];
+
+    let skip_run = &[
+        "examples/surrealdb/connect-to-server", // needs a SurrealDB server to run
+    ];
+
     if name == "update" {
         return skip_update;
     }
     if name == "clippy" {
         return skip_clippy;
+    }
+    if name == "run" {
+        return skip_run;
     }
 
     &[]
