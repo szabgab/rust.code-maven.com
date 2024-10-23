@@ -45,8 +45,6 @@ async fn main() -> surrealdb::Result<()> {
 
     show_students_in_classes(&db).await?;
 
-    export(&db).await?;
-
     Ok(())
 }
 
@@ -100,7 +98,4 @@ async fn show_students_in_classes(db: &Surreal<Db>) -> surrealdb::Result<()> {
     Ok(())
 }
 
-async fn export(db: &Surreal<Db>) -> surrealdb::Result<()> {
-    db.export("out.sql").await?;
-    Ok(())
-}
+

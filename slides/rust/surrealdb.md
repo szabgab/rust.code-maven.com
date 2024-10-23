@@ -478,7 +478,6 @@ ns/db> SELECT * from person, planet
 ![](examples/surrealdb/references-and-selects/Cargo.toml)
 ![](examples/surrealdb/references-and-selects/src/main.rs)
 ![](examples/surrealdb/references-and-selects/out.out)
-![](examples/surrealdb/references-and-selects/out.sql)
 
 
 ## SurrealDB Demo
