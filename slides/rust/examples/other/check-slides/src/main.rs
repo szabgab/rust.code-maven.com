@@ -68,6 +68,28 @@ fn main() {
         "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
     ];
 
+    let skip_clippy = &[
+        "examples/intro/formatting-required",
+        "examples/intro/print",
+        "examples/functions/declare-twice",
+        "examples/variables/change-literal-string",
+        "examples/variables/immutable-string",
+        "examples/variables/immutable-number",
+        "examples/variables/cannot-change-type",
+        "examples/tuples/empty",
+        "examples/numbers/small-integers-unfit-in-i8",
+        "examples/numbers/rounding-float",
+        "examples/booleans/other",
+        "examples/ownership/mutable-string-in-immutable-variable",
+        "examples/files/list-tree",          // TODO
+        "examples/files/open-file-handling", // TODO
+        "examples/arrays/numbers-change",
+        "examples/types/type-mismatch",
+        "examples/errors/out-of-bounds-array",
+        "examples/errors/div-by-zero-hard-coded",
+        "examples/advanced-functions/calculator", // TODO
+    ];
+
     let examples = if args.examples.is_empty() {
         get_crates(Path::new("examples"))
     } else {
@@ -96,27 +118,6 @@ fn main() {
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
     );
-    let skip_clippy = &[
-        "examples/intro/formatting-required",
-        "examples/intro/print",
-        "examples/functions/declare-twice",
-        "examples/variables/change-literal-string",
-        "examples/variables/immutable-string",
-        "examples/variables/immutable-number",
-        "examples/variables/cannot-change-type",
-        "examples/tuples/empty",
-        "examples/numbers/small-integers-unfit-in-i8",
-        "examples/numbers/rounding-float",
-        "examples/booleans/other",
-        "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",          // TODO
-        "examples/files/open-file-handling", // TODO
-        "examples/arrays/numbers-change",
-        "examples/types/type-mismatch",
-        "examples/errors/out-of-bounds-array",
-        "examples/errors/div-by-zero-hard-coded",
-        "examples/advanced-functions/calculator", // TODO
-    ];
 
     let (clippy_success, clippy_failures) = cargo_on_all(
         &examples,
