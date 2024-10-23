@@ -78,31 +78,29 @@ fn main() {
 
     let mut success: HashMap<&str, i32> = HashMap::new();
     let mut failures: HashMap<&str, Vec<PathBuf>> = HashMap::new();
+    let mut actions: Vec<&str> = vec![];
+    if args.update {
+        actions.push("update");
+    }
+    if args.fmt {
+        actions.push("fmt")
+    }
+    if args.fmt_check {
+        actions.push("fmt_check")
+    }
+    if args.clippy {
+        actions.push("clippy")
+    }
+    if args.test {
+        actions.push("test")
+    }
+    if args.run {
+        actions.push("run")
+    }
 
-    cargo_on_all(
-        &mut success,
-        &mut failures,
-        &examples,
-        args.update,
-        "update",
-    );
-    cargo_on_all(&mut success, &mut failures, &examples, args.fmt, "fmt");
-    cargo_on_all(
-        &mut success,
-        &mut failures,
-        &examples,
-        args.fmt_check,
-        "fmt_check",
-    );
-    cargo_on_all(
-        &mut success,
-        &mut failures,
-        &examples,
-        args.clippy,
-        "clippy",
-    );
-    cargo_on_all(&mut success, &mut failures, &examples, args.test, "test");
-    cargo_on_all(&mut success, &mut failures, &examples, args.run, "run");
+    for action in actions {
+        cargo_on_all(&mut success, &mut failures, &examples, true, action);
+    }
 
     let mut failures_total = 0;
     for action in ACTIONS {
