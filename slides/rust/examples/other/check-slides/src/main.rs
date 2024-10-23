@@ -194,17 +194,14 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &str) -> (i32, Vec<PathBuf>) {
-    let args = get_args(action);
-    let skip = skip(action);
-
+fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &'static str) -> (i32, Vec<PathBuf>) {
     let mut count_success = 0;
     let mut failures = vec![];
     if !dothis {
         return (count_success, failures);
     }
 
-    log::info!("cargo_on_all {} START", args.join(" "));
+    log::info!("cargo_on_all {action} START");
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -221,7 +218,7 @@ fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &str) -> (i32, Vec<Pat
         let mytx = tx.clone();
 
         thread::spawn(move || {
-            let res = cargo_on_single(&crate_folder, args, skip);
+            let res = cargo_on_single(&crate_folder, action);
             mytx.send((res, crate_folder)).unwrap();
         });
         thread_count += 1;
@@ -249,13 +246,16 @@ fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &str) -> (i32, Vec<Pat
         }
     }
 
-    log::info!("cargo_on_all {} DONE", args.join(" "));
+    log::info!("cargo_on_all {action} DONE");
 
     (count_success, failures)
 }
 
-fn cargo_on_single(crate_path: &PathBuf, args: &[&str], skip: &[&str]) -> bool {
-    log::info!("cargo {} on {crate_path:?}", args.join(" "));
+fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
+    log::info!("{action} on {crate_path:?}");
+
+    let args = get_args(action);
+    let skip = skip(action);
 
     let folder = crate_path.clone().into_os_string().into_string().unwrap();
     let folders = skip.iter().map(|x| x.to_string()).collect::<String>();
