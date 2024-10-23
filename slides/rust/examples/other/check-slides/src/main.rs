@@ -64,32 +64,6 @@ fn main() {
 
     std::env::set_current_dir(ROOT).unwrap();
 
-    let skip_update = &[
-        "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
-    ];
-
-    let skip_clippy = &[
-        "examples/intro/formatting-required",
-        "examples/intro/print",
-        "examples/functions/declare-twice",
-        "examples/variables/change-literal-string",
-        "examples/variables/immutable-string",
-        "examples/variables/immutable-number",
-        "examples/variables/cannot-change-type",
-        "examples/tuples/empty",
-        "examples/numbers/small-integers-unfit-in-i8",
-        "examples/numbers/rounding-float",
-        "examples/booleans/other",
-        "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",          // TODO
-        "examples/files/open-file-handling", // TODO
-        "examples/arrays/numbers-change",
-        "examples/types/type-mismatch",
-        "examples/errors/out-of-bounds-array",
-        "examples/errors/div-by-zero-hard-coded",
-        "examples/advanced-functions/calculator", // TODO
-    ];
-
     let examples = if args.examples.is_empty() {
         get_crates(Path::new("examples"))
     } else {
@@ -100,7 +74,7 @@ fn main() {
     let unused_examples = check_use_of_example_files(args.use_examples);
 
     let (update_success, update_failures) =
-        cargo_on_all(&examples, args.update, &["update"], skip_update);
+        cargo_on_all(&examples, args.update, &["update"], skip("update"));
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
@@ -123,7 +97,7 @@ fn main() {
         &examples,
         args.clippy,
         &["clippy", "--", "--deny", "warnings"],
-        skip_clippy,
+        skip("clippy"),
     );
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
@@ -438,4 +412,40 @@ fn get_md_files() -> Vec<PathBuf> {
 
     log::info!("get_md_files done\n");
     md_files
+}
+
+fn skip(name: &str) -> &'static [&'static str] {
+    let skip_update = &[
+        "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
+    ];
+
+    let skip_clippy = &[
+        "examples/intro/formatting-required",
+        "examples/intro/print",
+        "examples/functions/declare-twice",
+        "examples/variables/change-literal-string",
+        "examples/variables/immutable-string",
+        "examples/variables/immutable-number",
+        "examples/variables/cannot-change-type",
+        "examples/tuples/empty",
+        "examples/numbers/small-integers-unfit-in-i8",
+        "examples/numbers/rounding-float",
+        "examples/booleans/other",
+        "examples/ownership/mutable-string-in-immutable-variable",
+        "examples/files/list-tree",          // TODO
+        "examples/files/open-file-handling", // TODO
+        "examples/arrays/numbers-change",
+        "examples/types/type-mismatch",
+        "examples/errors/out-of-bounds-array",
+        "examples/errors/div-by-zero-hard-coded",
+        "examples/advanced-functions/calculator", // TODO
+    ];
+    if name == "update" {
+        return skip_update;
+    }
+    if name == "clippy" {
+        return skip_clippy;
+    }
+
+    &[]
 }
