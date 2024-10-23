@@ -73,40 +73,38 @@ fn main() {
 
     let unused_examples = check_use_of_example_files(args.use_examples);
 
-    let (update_success, update_failures) =
-        cargo_on_all(&examples, args.update, "update", skip("update"));
+    let (update_success, update_failures) = cargo_on_all(&examples, args.update, "update");
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
     );
 
-    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, "fmt", &[]);
+    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, "fmt");
     log::info!(
         "fmt_success: {fmt_success}, fmt_failure: {}",
         fmt_failures.len()
     );
 
     let (fmt_check_success, fmt_check_failures) =
-        cargo_on_all(&examples, args.fmt_check, "fmt_check", &[]);
+        cargo_on_all(&examples, args.fmt_check, "fmt_check");
     log::info!(
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
     );
 
-    let (clippy_success, clippy_failures) =
-        cargo_on_all(&examples, args.clippy, "clippy", skip("clippy"));
+    let (clippy_success, clippy_failures) = cargo_on_all(&examples, args.clippy, "clippy");
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
         clippy_failures.len()
     );
 
-    let (test_success, test_failures) = cargo_on_all(&examples, args.fmt_check, "test", &[]);
+    let (test_success, test_failures) = cargo_on_all(&examples, args.fmt_check, "test");
     log::info!(
         "test_success: {test_success}, test_failure: {}",
         test_failures.len()
     );
 
-    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, "run", &[]);
+    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, "run");
     log::info!(
         "run_success: {run_success}, run_failure: {}",
         run_failures.len()
@@ -196,14 +194,10 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all(
-    crates: &[PathBuf],
-    dothis: bool,
-    action: &str,
-
-    skip: &'static [&str],
-) -> (i32, Vec<PathBuf>) {
+fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &str) -> (i32, Vec<PathBuf>) {
     let args = get_args(action);
+    let skip = skip(action);
+
     let mut count_success = 0;
     let mut failures = vec![];
     if !dothis {
