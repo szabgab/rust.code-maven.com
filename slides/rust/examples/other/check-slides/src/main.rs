@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::iter::FromIterator;
@@ -20,6 +21,8 @@ use clap::Parser;
 // Run every rs file, if there is an out file compare the results.
 //
 const ROOT: &str = "../../..";
+
+const ACTIONS: [&str; 6] = ["update", "fmt", "fmt_check", "clippy", "test", "run"];
 
 #[derive(Parser)]
 struct Cli {
@@ -73,42 +76,45 @@ fn main() {
 
     let unused_examples = check_use_of_example_files(args.use_examples);
 
-    let (update_success, update_failures) = cargo_on_all(&examples, args.update, "update");
-    log::info!(
-        "updated_success: {update_success}, update_failure: {}",
-        update_failures.len()
-    );
+    let mut success: HashMap<&str, i32> = HashMap::new();
+    let mut failures: HashMap<&str, Vec<PathBuf>> = HashMap::new();
 
-    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, "fmt");
-    log::info!(
-        "fmt_success: {fmt_success}, fmt_failure: {}",
-        fmt_failures.len()
+    cargo_on_all(
+        &mut success,
+        &mut failures,
+        &examples,
+        args.update,
+        "update",
     );
+    cargo_on_all(&mut success, &mut failures, &examples, args.fmt, "fmt");
+    cargo_on_all(
+        &mut success,
+        &mut failures,
+        &examples,
+        args.fmt_check,
+        "fmt_check",
+    );
+    cargo_on_all(
+        &mut success,
+        &mut failures,
+        &examples,
+        args.clippy,
+        "clippy",
+    );
+    cargo_on_all(&mut success, &mut failures, &examples, args.test, "test");
+    cargo_on_all(&mut success, &mut failures, &examples, args.run, "run");
 
-    let (fmt_check_success, fmt_check_failures) =
-        cargo_on_all(&examples, args.fmt_check, "fmt_check");
-    log::info!(
-        "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
-        fmt_check_failures.len()
-    );
-
-    let (clippy_success, clippy_failures) = cargo_on_all(&examples, args.clippy, "clippy");
-    log::info!(
-        "clippy_success: {clippy_success}, clippy_failure: {}",
-        clippy_failures.len()
-    );
-
-    let (test_success, test_failures) = cargo_on_all(&examples, args.test, "test");
-    log::info!(
-        "test_success: {test_success}, test_failure: {}",
-        test_failures.len()
-    );
-
-    let (run_success, run_failures) = cargo_on_all(&examples, args.run, "run");
-    log::info!(
-        "run_success: {run_success}, run_failure: {}",
-        run_failures.len()
-    );
+    let mut failures_total = 0;
+    for action in ACTIONS {
+        if success.contains_key(action) && failures.contains_key(action) {
+            log::info!(
+                "{action} success: {}, failure: {}",
+                success[action],
+                failures[action].len()
+            );
+            failures_total += failures[action].len();
+        }
+    }
 
     println!("------- Report -------");
     let end: DateTime<Utc> = Utc::now();
@@ -118,21 +124,13 @@ fn main() {
         println!("There are {unused_examples} unused examples");
     }
 
-    report_errors("fmt", &fmt_failures);
-    report_errors("fmt --check", &fmt_check_failures);
-    report_errors("update", &update_failures);
-    report_errors("clippy", &clippy_failures);
-    report_errors("test", &test_failures);
-    report_errors("run", &run_failures);
+    for action in ACTIONS {
+        if failures.contains_key(action) {
+            report_errors(action, &failures[action]);
+        }
+    }
 
-    if unused_examples > 0
-        || !update_failures.is_empty()
-        || !fmt_failures.is_empty()
-        || !fmt_check_failures.is_empty()
-        || !clippy_failures.is_empty()
-        || !test_failures.is_empty()
-        || !run_failures.is_empty()
-    {
+    if unused_examples > 0 || failures_total > 0 {
         exit(1);
     }
 }
@@ -194,11 +192,15 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
     count
 }
 
-fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &'static str) -> (i32, Vec<PathBuf>) {
-    let mut count_success = 0;
-    let mut failures = vec![];
+fn cargo_on_all(
+    success: &mut HashMap<&str, i32>,
+    failures: &mut HashMap<&str, Vec<PathBuf>>,
+    crates: &[PathBuf],
+    dothis: bool,
+    action: &'static str,
+) {
     if !dothis {
-        return (count_success, failures);
+        return;
     }
 
     log::info!("cargo_on_all {action} START");
@@ -225,9 +227,11 @@ fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &'static str) -> (i32,
         if thread_count >= max_threads {
             let received = rx.recv().unwrap();
             if received.0 {
-                count_success += 1;
+                *success.entry(action).or_insert(0) += 1;
             } else {
-                failures.push(received.1);
+                failures
+                    .entry(action)
+                    .and_modify(|value| value.push(received.1));
             }
             finished += 1;
         }
@@ -237,9 +241,11 @@ fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &'static str) -> (i32,
         //println!("received {thread_count}");
         finished += 1;
         if received.0 {
-            count_success += 1;
+            *success.entry(action).or_insert(0) += 1;
         } else {
-            failures.push(received.1);
+            failures
+                .entry(action)
+                .and_modify(|value| value.push(received.1));
         }
         if finished >= started {
             break;
@@ -247,8 +253,6 @@ fn cargo_on_all(crates: &[PathBuf], dothis: bool, action: &'static str) -> (i32,
     }
 
     log::info!("cargo_on_all {action} DONE");
-
-    (count_success, failures)
 }
 
 fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
