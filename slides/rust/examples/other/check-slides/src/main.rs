@@ -98,13 +98,13 @@ fn main() {
         clippy_failures.len()
     );
 
-    let (test_success, test_failures) = cargo_on_all(&examples, args.fmt_check, "test");
+    let (test_success, test_failures) = cargo_on_all(&examples, args.test, "test");
     log::info!(
         "test_success: {test_success}, test_failure: {}",
         test_failures.len()
     );
 
-    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, "run");
+    let (run_success, run_failures) = cargo_on_all(&examples, args.run, "run");
     log::info!(
         "run_success: {run_success}, run_failure: {}",
         run_failures.len()
