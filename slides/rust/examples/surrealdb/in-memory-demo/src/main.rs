@@ -38,8 +38,12 @@ async fn main() -> surrealdb::Result<()> {
     let all = get_all(&db).await?;
     list_all(all);
 
-    create(&db, vec![("Joe", "7777777")]).await?;
-    println!("this will not happen as the previous statement panics");
+    match create(&db, vec![("Joe", "7777777")]).await {
+        Ok(_) => println!("this will not happen as the previous statement returns an Error"),
+        Err(err) => println!("The Error: {err}"),
+    };
+    println!("-------------");
+
     let all = get_all(&db).await?;
     list_all(all);
 
@@ -57,7 +61,7 @@ async fn create(db: &Surreal<Db>, data: Vec<(&str, &str)>) -> surrealdb::Result<
         match response.check() {
             Ok(_) => {}
             Err(err) => {
-                eprintln!("Could not add person: '{}'", err);
+                println!("Could not add person: '{}'", err);
                 return Err(err);
             }
         };

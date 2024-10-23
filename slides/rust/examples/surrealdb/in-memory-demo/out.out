@@ -2,12 +2,18 @@ Jane: 456
 Jil: 789
 Joe: 123
 -------------
-Jane: 55555555
+Jane: 456
 Jil: 789
 Joe: 123
 -------------
+Jane: 456
 Jil: 789
 Joe: 123
 -------------
-Could not add entry: 'Database index `entry_email` already contains 'Joe', with record `entry:vbseo7tiaf4smg8xl7gn`'
-Error: Db(IndexExists { thing: Thing { tb: "entry", id: String("vbseo7tiaf4smg8xl7gn") }, index: "entry_email", value: "'Joe'" })
+Could not add person: 'Database index `person_email` already contains 'Joe', with record `person:kurmttdvdvv9u7x5i83w`'
+The Error: Database index `person_email` already contains 'Joe', with record `person:kurmttdvdvv9u7x5i83w`
+-------------
+Jane: 456
+Jil: 789
+Joe: 123
+-------------
