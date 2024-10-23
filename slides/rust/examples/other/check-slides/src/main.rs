@@ -74,43 +74,40 @@ fn main() {
     let unused_examples = check_use_of_example_files(args.use_examples);
 
     let (update_success, update_failures) =
-        cargo_on_all(&examples, args.update, &["update"], skip("update"));
+        cargo_on_all(&examples, args.update, get_args("update"), skip("update"));
     log::info!(
         "updated_success: {update_success}, update_failure: {}",
         update_failures.len()
     );
 
-    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, &["fmt"], &[]);
+    let (fmt_success, fmt_failures) = cargo_on_all(&examples, args.fmt, get_args("fmt"), &[]);
     log::info!(
         "fmt_success: {fmt_success}, fmt_failure: {}",
         fmt_failures.len()
     );
 
     let (fmt_check_success, fmt_check_failures) =
-        cargo_on_all(&examples, args.fmt_check, &["fmt", "--check"], &[]);
+        cargo_on_all(&examples, args.fmt_check, get_args("fmt_check"), &[]);
     log::info!(
         "fmt_check_success: {fmt_check_success}, fmt_check_failure: {}",
         fmt_check_failures.len()
     );
 
-    let (clippy_success, clippy_failures) = cargo_on_all(
-        &examples,
-        args.clippy,
-        &["clippy", "--", "--deny", "warnings"],
-        skip("clippy"),
-    );
+    let (clippy_success, clippy_failures) =
+        cargo_on_all(&examples, args.clippy, get_args("clippy"), skip("clippy"));
     log::info!(
         "clippy_success: {clippy_success}, clippy_failure: {}",
         clippy_failures.len()
     );
 
-    let (test_success, test_failures) = cargo_on_all(&examples, args.fmt_check, &["test"], &[]);
+    let (test_success, test_failures) =
+        cargo_on_all(&examples, args.fmt_check, get_args("test"), &[]);
     log::info!(
         "test_success: {test_success}, test_failure: {}",
         test_failures.len()
     );
 
-    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, &["run"], &[]);
+    let (run_success, run_failures) = cargo_on_all(&examples, args.fmt_check, get_args("run"), &[]);
     log::info!(
         "run_success: {run_success}, run_failure: {}",
         run_failures.len()
@@ -448,4 +445,27 @@ fn skip(name: &str) -> &'static [&'static str] {
     }
 
     &[]
+}
+
+fn get_args(action: &str) -> &'static [&'static str] {
+    if action == "clippy" {
+        return &["clippy", "--", "--deny", "warnings"];
+    }
+    if action == "update" {
+        return &["update"];
+    }
+    if action == "fmt" {
+        return &["fmt"];
+    }
+    if action == "fmt_check" {
+        return &["fmt", "--check"];
+    }
+    if action == "test" {
+        return &["test"];
+    }
+    if action == "run" {
+        return &["run"];
+    }
+
+    panic!("Unknown action: {action}");
 }
