@@ -269,6 +269,7 @@ Other message
 
 ![](examples/surrealdb/map-field-to-id-of-other-table/src/main.rs)
 ![](examples/surrealdb/map-field-to-id-of-other-table/out.out)
+
 ## SurrealDB Datetime
 {id: surrealdb-datetime}
 {i: Datetime}
