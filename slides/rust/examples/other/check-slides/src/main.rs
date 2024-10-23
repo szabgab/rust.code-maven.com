@@ -105,7 +105,7 @@ fn main() {
     let actions = get_actions(&args);
 
     for action in actions {
-        cargo_on_all(&mut success, &mut failures, &examples, true, action);
+        cargo_on_all(&mut success, &mut failures, &examples, action);
     }
 
     let mut failures_total = 0;
@@ -200,13 +200,8 @@ fn cargo_on_all(
     success: &mut HashMap<&str, i32>,
     failures: &mut HashMap<&str, Vec<PathBuf>>,
     crates: &[PathBuf],
-    dothis: bool,
     action: &'static str,
 ) {
-    if !dothis {
-        return;
-    }
-
     log::info!("cargo_on_all {action} START");
     let number_of_crates = crates.len();
 
