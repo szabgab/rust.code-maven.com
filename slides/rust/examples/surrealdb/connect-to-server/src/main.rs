@@ -9,8 +9,8 @@ async fn main() -> Result<(), Error> {
 
     println!("Authenticating as the root user:");
     db.signin(Root {
-        username: "local",
-        password: "secret",
+        username: "root",
+        password: "root",
     })
     .await?;
 
