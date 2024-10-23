@@ -5,39 +5,26 @@
 OPTION IMPORT;
 
 -- ------------------------------
--- TABLE: dance
+-- TABLE: course
 -- ------------------------------
 
-DEFINE TABLE dance SCHEMALESS PERMISSIONS NONE;
+DEFINE TABLE course TYPE ANY SCHEMALESS PERMISSIONS NONE;
 
 -- ------------------------------
 -- TABLE: student
 -- ------------------------------
 
-DEFINE TABLE student SCHEMALESS PERMISSIONS NONE;
+DEFINE TABLE student TYPE ANY SCHEMALESS PERMISSIONS NONE;
 
 -- ------------------------------
--- TRANSACTION
+-- TABLE DATA: course
 -- ------------------------------
 
-BEGIN TRANSACTION;
-
--- ------------------------------
--- TABLE DATA: dance
--- ------------------------------
-
-UPDATE dance:c4v2dpfzsreg1u5nleeq CONTENT { id: dance:c4v2dpfzsreg1u5nleeq, name: 'Flamenco' };
-UPDATE dance:gjjhx7vr62vaiqr49ivr CONTENT { id: dance:gjjhx7vr62vaiqr49ivr, name: 'Introduction to Dancing' };
+INSERT [ { id: course:hlj49mis0u0vbf9amnqr, name: 'Chemistry' }, { id: course:meq8szcqvtuq4or9nu6h, name: 'Physics' }, { id: course:naof29apn50iepz0kqy4, name: 'Biology' } ];
 
 -- ------------------------------
 -- TABLE DATA: student
 -- ------------------------------
 
-UPDATE student:h8c5rpmyhb3p3l0yu7al CONTENT { classes: [dance:c4v2dpfzsreg1u5nleeq, dance:gjjhx7vr62vaiqr49ivr], id: student:h8c5rpmyhb3p3l0yu7al, name: 'Jane Doe' };
-
--- ------------------------------
--- TRANSACTION
--- ------------------------------
-
-COMMIT TRANSACTION;
+INSERT [ { courses: [course:naof29apn50iepz0kqy4, course:hlj49mis0u0vbf9amnqr, course:meq8szcqvtuq4or9nu6h], id: student:i75save2cwar0v994a8z, name: 'Jane Doe' } ];
 
