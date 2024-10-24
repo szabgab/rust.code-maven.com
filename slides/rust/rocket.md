@@ -105,6 +105,7 @@ curl -i http://localhost:8000
 {i: Tera}
 
 ![](examples/rocket/echo-using-get/Cargo.toml)
+![](examples/rocket/echo-using-get/Rocket.toml)
 ![](examples/rocket/echo-using-get/src/main.rs)
 ![](examples/rocket/echo-using-get/src/tests.rs)
 ![](examples/rocket/echo-using-get/templates/echo.html.tera)
@@ -120,6 +121,7 @@ curl -i http://localhost:8000
 {i: Tera}
 
 ![](examples/rocket/echo-using-post/Cargo.toml)
+![](examples/rocket/echo-using-post/Rocket.toml)
 ![](examples/rocket/echo-using-post/src/main.rs)
 ![](examples/rocket/echo-using-post/src/tests.rs)
 ![](examples/rocket/echo-using-post/templates/echo.html.tera)
