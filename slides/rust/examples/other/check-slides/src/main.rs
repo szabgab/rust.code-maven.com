@@ -132,8 +132,11 @@ fn main() {
     let end: DateTime<Utc> = Utc::now();
     println!("Elapsed: {}", end.timestamp() - start.timestamp());
 
-    if unused_examples > 0 {
-        println!("There are {unused_examples} unused examples");
+    if !unused_examples.is_empty() {
+        println!("There are {} unused examples", unused_examples.len());
+        for example in &unused_examples {
+            println!("  {example:?}",);
+        }
     }
 
     for action in ACTIONS {
@@ -142,7 +145,7 @@ fn main() {
         }
     }
 
-    if unused_examples > 0 || failures_total > 0 {
+    if !unused_examples.is_empty() || failures_total > 0 {
         exit(1);
     }
 }
@@ -156,16 +159,16 @@ fn report_errors(name: &str, failures: &[PathBuf]) {
     }
 }
 
-fn check_use_of_example_files(use_examples: bool) -> i32 {
+fn check_use_of_example_files(use_examples: bool) -> Vec<String> {
+    let mut unused_examples = vec![];
     if !use_examples {
-        return 0;
+        return unused_examples;
     }
     log::info!("check_use_of_example_files");
     let md_files = get_md_files();
     let imported_files = get_imported_files(md_files);
     let examples = get_all_the_examples();
 
-    let mut count = 0;
     for filename in examples {
         if filename.ends_with("swp") {
             continue;
@@ -180,6 +183,10 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
             if filename.starts_with("examples/surrealdb/embedded-rocksdb/tempdb/") {
                 continue;
             }
+            if filename.starts_with("examples/surrealdb/cli-multi-counter/db/") {
+                continue;
+            }
+
             let files = [
                 "examples/threads/count-characters/aadef.txt",
                 "examples/threads/count-characters/abc.txt",
@@ -198,10 +205,10 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
             }
 
             log::error!("Unused file: `{filename}`");
-            count += 1;
+            unused_examples.push(filename);
         }
     }
-    count
+    unused_examples
 }
 
 fn cargo_on_all(
