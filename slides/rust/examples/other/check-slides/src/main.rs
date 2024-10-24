@@ -211,11 +211,10 @@ fn cargo_on_all(
     actions: Vec<String>,
     cleanup: bool,
 ) {
-    //log::info!("cargo_on_all {actions:?} START");
+    log::info!("cargo_on_all {actions:?} START");
+    let start: DateTime<Utc> = Utc::now();
     let number_of_crates = crates.len();
 
-    // We want run max_threads at once, when one is finished we start a new one
-    // Then we collect the messages from the remaining ones.
     let (tx, rx) = mpsc::channel();
     let max_threads = 2;
     let pool = ThreadPool::new(max_threads);
@@ -226,14 +225,14 @@ fn cargo_on_all(
         let actions = actions.clone();
 
         pool.execute(move || {
-            let res = cargo_actions_on_single(&crate_folder, &actions, cleanup);
+            let res =
+                cargo_actions_on_single(&crate_folder, &actions, cleanup, ix + 1, number_of_crates);
             mytx.send((res, crate_folder)).unwrap();
         });
     }
-    drop(tx);
+    drop(tx); // close this channel to allow the last thread to finish the receiving loop
 
     for received in rx {
-        //println!("received {thread_count}");
         for action in &actions {
             if received.0[action] {
                 *success.entry(action.clone()).or_insert(0) += 1;
@@ -245,15 +244,22 @@ fn cargo_on_all(
         }
     }
 
-    //log::info!("cargo_on_all {actions:?} DONE");
+    let end: DateTime<Utc> = Utc::now();
+    log::info!(
+        "cargo_on_all {actions:?} DONE Elapsed: {}",
+        end.timestamp() - start.timestamp()
+    );
 }
 
 fn cargo_actions_on_single(
     crate_folder: &PathBuf,
     actions: &[String],
     cleanup: bool,
+    ix: usize,
+    total: usize,
 ) -> HashMap<String, bool> {
-    log::info!("Actions on {crate_folder:?} START");
+    log::info!("Actions on {crate_folder:?} START {ix}/{total}");
+    let start = Utc::now();
     let mut res = HashMap::new();
     for action in actions {
         res.insert(action.clone(), cargo_on_single(crate_folder, action));
@@ -261,7 +267,12 @@ fn cargo_actions_on_single(
     if cleanup {
         std::fs::remove_dir_all(crate_folder.join("target")).unwrap();
     }
-    log::info!("Actions on {crate_folder:?} DONE");
+
+    let end = Utc::now();
+    log::info!(
+        "Actions on {crate_folder:?} DONE {ix}/{total} Elapsed: {}",
+        end.timestamp() - start.timestamp()
+    );
     res
 }
 
