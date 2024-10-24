@@ -57,7 +57,7 @@ struct Cli {
     examples: Vec<String>,
 }
 
-fn get_actions(args: &Cli) -> Vec<String> {
+fn get_actions(args: &Cli) -> Vec<&str> {
     let mut actions: Vec<&str> = vec![];
     if args.update {
         actions.push("update");
@@ -78,7 +78,7 @@ fn get_actions(args: &Cli) -> Vec<String> {
         actions.push("run")
     }
 
-    actions.iter().map(|x| x.to_string()).collect()
+    actions
 }
 
 fn main() {
@@ -106,7 +106,7 @@ fn main() {
 
     let mut success: HashMap<String, i32> = HashMap::new();
     let mut failures: HashMap<String, Vec<PathBuf>> = HashMap::new();
-    let actions = get_actions(&args);
+    let actions = get_actions(&args).iter().map(|x| x.to_string()).collect();
 
     cargo_on_all(
         &mut success,
