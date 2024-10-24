@@ -192,11 +192,23 @@
 {i: split}
 {i: contains_key}
 {i: insert}
-
+{i: or_insert}
+{i: push}
 
 ![](examples/hashes/hash-of-vectors/src/main.rs)
 
 ![](examples/hashes/hash-of-vectors/out.out)
+
+## Add items to a hash of vectors using a function
+{id: hash-of-vectors-in-a-function}
+{i: split}
+{i: or_insert}
+{i: push}
+
+![](examples/hashes/hash-of-vectors-in-a-function/src/main.rs)
+
+![](examples/hashes/hash-of-vectors-in-a-function/out.out)
+
 
 ## Integers as keys of a HashMap
 {id: integers-as-keys-of-a-hashmap}

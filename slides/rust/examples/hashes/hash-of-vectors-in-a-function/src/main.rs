@@ -15,22 +15,7 @@ fn main() {
         String::from("Joe Doe,mobile,+1-1234-567"),
         String::from("Foo Bar,mobile,+42-1234567"),
     ] {
-        let parts = text.split(',').collect::<Vec<&str>>();
-        let name = parts[0].to_owned();
-        let atype = parts[1].to_owned();
-        let phone = parts[2].to_owned();
-
-        let address = Address { atype, phone };
-
-        if !addresses.contains_key(&name) {
-            addresses.insert(name.clone(), vec![]);
-        }
-        addresses
-            .entry(name)
-            .and_modify(|value| value.push(address));
-
-        // instead ot the above 4 lines we could also write:
-        // addresses.entry(String::from(name)).or_insert(vec![]).push(address);
+        add_address(&mut addresses, text);
     }
 
     println!("{:#?}", addresses);
@@ -58,4 +43,18 @@ fn main() {
     ]);
 
     assert_eq!(addresses, expected);
+}
+
+fn add_address(addresses: &mut HashMap<String, Vec<Address>>, text: String) {
+    let parts: Vec<&str> = text.split(',').collect();
+    let name = parts[0];
+    let atype = parts[1];
+    let phone = parts[2];
+
+    let address = Address {
+        atype: String::from(atype),
+        phone: String::from(phone),
+    };
+
+    addresses.entry(String::from(name)).or_insert(vec![]).push(address);
 }
