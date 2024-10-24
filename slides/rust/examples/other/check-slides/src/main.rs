@@ -540,6 +540,12 @@ fn skip(name: &str) -> &'static [&'static str] {
         "examples/rocket/static-files",
         "examples/rocket/userid-in-path",
         "examples/rocket/use-tera-filter",
+        // skip the egui examples as they are not working in the CI
+        "examples/egui/egui-app",
+        "examples/egui/egui-heading",
+        "examples/egui/egui-label",
+        "examples/egui/egui-label-and-button",
+        "examples/egui/egui-window",
     ];
 
     let skip_test = &[
