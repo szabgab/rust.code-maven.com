@@ -234,6 +234,8 @@ fn cargo_on_all(
         pool.execute(move || {
             let res =
                 cargo_actions_on_single(&crate_folder, &actions, cleanup, ix + 1, number_of_crates);
+            log::debug!("sending res {res:?}");
+
             mytx.send((res, crate_folder)).unwrap();
         });
     }
@@ -242,11 +244,15 @@ fn cargo_on_all(
     for received in rx {
         for action in &actions {
             if received.0[action] {
+                log::debug!("success {action}");
                 *success.entry(action.clone()).or_insert(0) += 1;
             } else {
+                log::debug!("received failures {:?}", received.1.clone());
                 failures
                     .entry(action.clone())
-                    .and_modify(|value| value.push(received.1.clone()));
+                    .or_insert(vec![])
+                    .push(received.1.clone());
+                log::debug!("all failures {:?}", failures);
             }
         }
     }
@@ -274,7 +280,6 @@ fn cargo_actions_on_single(
     if cleanup {
         std::fs::remove_dir_all(crate_folder.join("target")).unwrap();
     }
-
     let end = Utc::now();
     log::info!(
         "Actions on {crate_folder:?} DONE {ix}/{total} Elapsed: {}",
