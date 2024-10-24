@@ -53,25 +53,25 @@ struct Cli {
     examples: Vec<String>,
 }
 
-fn get_actions(args: &Cli) -> Vec<&'static str> {
-    let mut actions: Vec<&str> = vec![];
+fn get_actions(args: &Cli) -> Vec<String> {
+    let mut actions: Vec<String> = vec![];
     if args.update {
-        actions.push("update");
+        actions.push(String::from("update"));
     }
     if args.fmt {
-        actions.push("fmt")
+        actions.push(String::from("fmt"))
     }
     if args.fmt_check {
-        actions.push("fmt_check")
+        actions.push(String::from("fmt_check"))
     }
     if args.clippy {
-        actions.push("clippy")
+        actions.push(String::from("clippy"))
     }
     if args.test {
-        actions.push("test")
+        actions.push(String::from("test"))
     }
     if args.run {
-        actions.push("run")
+        actions.push(String::from("run"))
     }
 
     actions
@@ -100,13 +100,11 @@ fn main() {
 
     let unused_examples = check_use_of_example_files(args.use_examples);
 
-    let mut success: HashMap<&str, i32> = HashMap::new();
-    let mut failures: HashMap<&str, Vec<PathBuf>> = HashMap::new();
+    let mut success: HashMap<String, i32> = HashMap::new();
+    let mut failures: HashMap<String, Vec<PathBuf>> = HashMap::new();
     let actions = get_actions(&args);
 
-    for action in actions {
-        cargo_on_all(&mut success, &mut failures, &examples, action);
-    }
+    cargo_on_all(&mut success, &mut failures, &examples, actions);
 
     let mut failures_total = 0;
     for action in ACTIONS {
@@ -197,12 +195,12 @@ fn check_use_of_example_files(use_examples: bool) -> i32 {
 }
 
 fn cargo_on_all(
-    success: &mut HashMap<&str, i32>,
-    failures: &mut HashMap<&str, Vec<PathBuf>>,
+    success: &mut HashMap<String, i32>,
+    failures: &mut HashMap<String, Vec<PathBuf>>,
     crates: &[PathBuf],
-    action: &'static str,
+    actions: Vec<String>,
 ) {
-    log::info!("cargo_on_all {action} START");
+    //log::info!("cargo_on_all {actions:?} START");
     let number_of_crates = crates.len();
 
     // We want run max_threads at once, when one is finished we start a new one
@@ -214,9 +212,10 @@ fn cargo_on_all(
     for (ix, crate_folder) in crates.iter().cloned().enumerate() {
         log::info!("crate: {}/{number_of_crates}, {crate_folder:?}", ix + 1);
         let mytx = tx.clone();
+        let actions = actions.clone();
 
         pool.execute(move || {
-            let res = cargo_on_single(&crate_folder, action);
+            let res = cargo_actions_on_single(&crate_folder, &actions);
             mytx.send((res, crate_folder)).unwrap();
         });
     }
@@ -224,20 +223,32 @@ fn cargo_on_all(
 
     for received in rx {
         //println!("received {thread_count}");
-        if received.0 {
-            *success.entry(action).or_insert(0) += 1;
-        } else {
-            failures
-                .entry(action)
-                .and_modify(|value| value.push(received.1));
+        for action in &actions {
+            if received.0[action] {
+                *success.entry(action.clone()).or_insert(0) += 1;
+            } else {
+                failures
+                    .entry(action.clone())
+                    .and_modify(|value| value.push(received.1.clone()));
+            }
         }
     }
 
-    log::info!("cargo_on_all {action} DONE");
+    //log::info!("cargo_on_all {actions:?} DONE");
+}
+
+fn cargo_actions_on_single(crate_folder: &PathBuf, actions: &[String]) -> HashMap<String, bool> {
+    log::info!("Actions on {crate_folder:?} START");
+    let mut res = HashMap::new();
+    for action in actions {
+        res.insert(action.clone(), cargo_on_single(crate_folder, action));
+    }
+    log::info!("Actions on {crate_folder:?} DONE");
+    res
 }
 
 fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
-    log::info!("{action} on {crate_path:?}");
+    log::info!("{action} on {crate_path:?} START");
 
     let args = get_args(action);
     let skip = skip(action);
@@ -256,6 +267,7 @@ fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
 
     let result = cmd.current_dir(crate_path).output().expect(&error);
 
+    log::info!("{action} on {crate_path:?} DONE");
     if !result.status.success() {
         log::error!("Cannot execute {args:?} on crate: {crate_path:?}");
         return false;
