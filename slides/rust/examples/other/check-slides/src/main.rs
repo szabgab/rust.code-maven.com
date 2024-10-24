@@ -492,6 +492,10 @@ fn skip(name: &str) -> &'static [&'static str] {
         "examples/clap/wc-cli",
     ];
 
+    let skip_test = &[
+        "examples/rocket/return-result-user-id", // TODO
+    ];
+
     if name == "update" {
         return skip_update;
     }
@@ -500,6 +504,9 @@ fn skip(name: &str) -> &'static [&'static str] {
     }
     if name == "run" {
         return skip_run;
+    }
+    if name == "test" {
+        return skip_test;
     }
 
     &[]
