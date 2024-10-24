@@ -26,10 +26,13 @@ const ACTIONS: [&str; 6] = ["update", "fmt", "fmt_check", "clippy", "test", "run
 
 #[derive(Parser)]
 struct Cli {
-    #[arg(long)]
+    #[arg(long, help = "Print debug information")]
     verbose: bool,
 
-    #[arg(long)]
+    #[arg(long, help = "Cleanup the target directory")]
+    cleanup: bool,
+
+    #[arg(long, help = "Check if all the examples are used in the md files")]
     use_examples: bool,
 
     #[arg(long)]
@@ -50,6 +53,7 @@ struct Cli {
     #[arg(long)]
     run: bool,
 
+    #[arg(help = "List of examples to run. e.g examples/other/check-slides/")]
     examples: Vec<String>,
 }
 
@@ -104,7 +108,13 @@ fn main() {
     let mut failures: HashMap<String, Vec<PathBuf>> = HashMap::new();
     let actions = get_actions(&args);
 
-    cargo_on_all(&mut success, &mut failures, &examples, actions);
+    cargo_on_all(
+        &mut success,
+        &mut failures,
+        &examples,
+        actions,
+        args.cleanup,
+    );
 
     let mut failures_total = 0;
     for action in ACTIONS {
@@ -199,6 +209,7 @@ fn cargo_on_all(
     failures: &mut HashMap<String, Vec<PathBuf>>,
     crates: &[PathBuf],
     actions: Vec<String>,
+    cleanup: bool,
 ) {
     //log::info!("cargo_on_all {actions:?} START");
     let number_of_crates = crates.len();
@@ -215,7 +226,7 @@ fn cargo_on_all(
         let actions = actions.clone();
 
         pool.execute(move || {
-            let res = cargo_actions_on_single(&crate_folder, &actions);
+            let res = cargo_actions_on_single(&crate_folder, &actions, cleanup);
             mytx.send((res, crate_folder)).unwrap();
         });
     }
@@ -237,11 +248,18 @@ fn cargo_on_all(
     //log::info!("cargo_on_all {actions:?} DONE");
 }
 
-fn cargo_actions_on_single(crate_folder: &PathBuf, actions: &[String]) -> HashMap<String, bool> {
+fn cargo_actions_on_single(
+    crate_folder: &PathBuf,
+    actions: &[String],
+    cleanup: bool,
+) -> HashMap<String, bool> {
     log::info!("Actions on {crate_folder:?} START");
     let mut res = HashMap::new();
     for action in actions {
         res.insert(action.clone(), cargo_on_single(crate_folder, action));
+    }
+    if cleanup {
+        std::fs::remove_dir_all(crate_folder.join("target")).unwrap();
     }
     log::info!("Actions on {crate_folder:?} DONE");
     res
