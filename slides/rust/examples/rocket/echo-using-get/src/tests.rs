@@ -29,3 +29,20 @@ fn echo_page() {
         Some("You typed in <b>Foo Bar</b>".into())
     );
 }
+
+#[test]
+fn echo_missing_text_param() {
+    let client = Client::tracked(super::rocket()).unwrap();
+    let response = client.get("/echo").dispatch();
+
+    assert_eq!(response.status(), Status::UnprocessableEntity);
+    assert_eq!(
+        response.headers().get_one("Content-Type").unwrap(),
+        "text/html; charset=utf-8"
+    );
+
+    assert!(response
+        .into_string()
+        .unwrap()
+        .contains("<h1>422: Unprocessable Entity</h1>"));
+}
