@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 #[allow(dead_code)]
 struct Address {
     atype: String,
@@ -30,4 +30,28 @@ fn main() {
     }
 
     println!("{:#?}", addresses);
+    let expected = HashMap::from([
+        (
+            String::from("Foo Bar"),
+            vec![
+                Address {
+                    atype: String::from("home"),
+                    phone: String::from("+03-1234567"),
+                },
+                Address {
+                    atype: String::from("mobile"),
+                    phone: String::from("+42-1234567"),
+                },
+            ],
+        ),
+        (
+            String::from("Joe Doe"),
+            vec![Address {
+                atype: String::from("mobile"),
+                phone: String::from("+1-1234-567"),
+            }],
+        ),
+    ]);
+
+    assert_eq!(addresses, expected);
 }
