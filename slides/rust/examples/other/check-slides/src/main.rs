@@ -58,27 +58,27 @@ struct Cli {
 }
 
 fn get_actions(args: &Cli) -> Vec<String> {
-    let mut actions: Vec<String> = vec![];
+    let mut actions: Vec<&str> = vec![];
     if args.update {
-        actions.push(String::from("update"));
+        actions.push("update");
     }
     if args.fmt {
-        actions.push(String::from("fmt"))
+        actions.push("fmt")
     }
     if args.fmt_check {
-        actions.push(String::from("fmt_check"))
+        actions.push("fmt_check")
     }
     if args.clippy {
-        actions.push(String::from("clippy"))
+        actions.push("clippy")
     }
     if args.test {
-        actions.push(String::from("test"))
+        actions.push("test")
     }
     if args.run {
-        actions.push(String::from("run"))
+        actions.push("run")
     }
 
-    actions
+    actions.iter().map(|x| x.to_string()).collect()
 }
 
 fn main() {
