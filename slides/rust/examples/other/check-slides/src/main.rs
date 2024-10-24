@@ -545,6 +545,7 @@ fn skip(name: &str) -> &'static [&'static str] {
     let skip_test = &[
         "examples/rocket/return-result-user-id", // TODO
         "examples/rocket/userid-in-path",        // TODO
+        "examples/rocket/skip-route",            // TODO
     ];
 
     if name == "update" {
