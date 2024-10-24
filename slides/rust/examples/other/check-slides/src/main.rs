@@ -106,13 +106,13 @@ fn main() {
 
     let mut success: HashMap<String, i32> = HashMap::new();
     let mut failures: HashMap<String, Vec<PathBuf>> = HashMap::new();
-    let actions = get_actions(&args).iter().map(|x| x.to_string()).collect();
+    let actions = get_actions(&args);
 
     cargo_on_all(
         &mut success,
         &mut failures,
         &examples,
-        actions,
+        actions.iter().map(|x| x.to_string()).collect(),
         args.cleanup,
     );
 
