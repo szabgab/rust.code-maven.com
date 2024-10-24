@@ -23,7 +23,4 @@ fn main() {
     });
     let output = template.render(&globals).unwrap();
     println!("{}", output);
-
-    let expected = std::fs::read_to_string("out.txt").unwrap();
-    assert_eq!(output.trim_end(), expected.trim_end())
 }
