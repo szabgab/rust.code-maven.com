@@ -56,5 +56,8 @@ fn add_address(addresses: &mut HashMap<String, Vec<Address>>, text: String) {
         phone: String::from(phone),
     };
 
-    addresses.entry(String::from(name)).or_insert(vec![]).push(address);
+    addresses
+        .entry(String::from(name))
+        .or_default()
+        .push(address);
 }
