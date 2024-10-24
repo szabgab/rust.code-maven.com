@@ -450,6 +450,34 @@ fn skip(name: &str) -> &'static [&'static str] {
 
     let skip_run = &[
         "examples/surrealdb/connect-to-server", // needs a SurrealDB server to run
+        // clap examples are expecting command line parameters
+        "examples/clap/clap-complete-shell",
+        "examples/clap/clap-example",
+        "examples/clap/default-value-if-equals",
+        "examples/clap/default-value-if-equals-multiple-values",
+        "examples/clap/default-value-if-ispresent",
+        "examples/clap/enumerated",
+        "examples/clap/environment-variable",
+        "examples/clap/even-number",
+        "examples/clap/help-with-arguments",
+        "examples/clap/limit-number-of-args",
+        "examples/clap/mutually-exclusive-group",
+        "examples/clap/mutually-exclusive-or",
+        "examples/clap/number-string-bool",
+        "examples/clap/repeat-the-same-argument",
+        "examples/clap/several-positional-arguments",
+        "examples/clap/short-arguments",
+        "examples/clap/show-description",
+        "examples/clap/show-description-from-code",
+        "examples/clap/show-generated-description",
+        "examples/clap/show-version-number",
+        "examples/clap/single-long-argument",
+        "examples/clap/single-positional-argument",
+        "examples/clap/subcommands",
+        "examples/clap/validate-number-range",
+        "examples/clap/value-name",
+        "examples/clap/value-parser-fixed-list",
+        "examples/clap/wc-cli",
     ];
 
     if name == "update" {
