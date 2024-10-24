@@ -250,7 +250,7 @@ fn cargo_on_all(
                 log::debug!("received failures {:?}", received.1.clone());
                 failures
                     .entry(action.clone())
-                    .or_insert(vec![])
+                    .or_default()
                     .push(received.1.clone());
                 log::debug!("all failures {:?}", failures);
             }
