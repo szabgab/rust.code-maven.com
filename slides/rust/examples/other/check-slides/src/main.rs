@@ -298,7 +298,8 @@ fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
 
     log::info!("{action} on {crate_path:?} DONE");
     if !result.status.success() {
-        log::error!("Cannot execute {args:?} on crate: {crate_path:?}");
+        let code = result.status.code().unwrap();
+        log::error!("Cannot execute {args:?} on crate: {crate_path:?} exit code: {code} stdout: {} stderr: {}", std::str::from_utf8(&result.stdout).unwrap(), std::str::from_utf8(&result.stderr).unwrap());
         return false;
     }
     true
