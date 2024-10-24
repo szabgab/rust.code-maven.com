@@ -46,3 +46,19 @@ fn echo_missing_text_param() {
         .unwrap()
         .contains("<h1>422: Unprocessable Entity</h1>"));
 }
+
+#[test]
+fn echo_additional_field_does_not_matter() {
+    let client = Client::tracked(super::rocket()).unwrap();
+    let response = client.get("/echo?text=Foo&other=value").dispatch();
+
+    assert_eq!(response.status(), Status::Ok);
+    assert_eq!(
+        response.headers().get_one("Content-Type").unwrap(),
+        "text/html; charset=utf-8"
+    );
+    assert_eq!(
+        response.into_string(),
+        Some("You typed in <b>Foo</b>".into())
+    );
+}
