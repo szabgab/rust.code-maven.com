@@ -53,7 +53,7 @@ struct Cli {
     #[arg(long)]
     run: bool,
 
-    #[arg(long)]
+    #[arg(long, help = "Run all the checks on the selected examples")]
     check: bool,
 
     #[arg(help = "List of examples to run. e.g examples/other/check-slides/")]
@@ -464,7 +464,7 @@ struct Skip {
 // TODO read this file only once
 // TODO compute the path to the file in a simpler way
 // TODO change the lookup to be an O(1) operation (instead of returning a vector return a hashmap)
-fn skip(name: &str) -> Vec<String> {
+fn read_skips() -> HashMap<String, Vec<String>> {
     let path = std::env::current_exe().unwrap();
     let path = path
         .parent()
@@ -510,6 +510,12 @@ fn skip(name: &str) -> Vec<String> {
             Err(err) => println!("Error parsing csv {err}"),
         }
     }
+
+    skips
+}
+
+fn skip(name: &str) -> Vec<String> {
+    let skips = read_skips();
 
     if name == "update" {
         return skips[&String::from("update")].clone();
