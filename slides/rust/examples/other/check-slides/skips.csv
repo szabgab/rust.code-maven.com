@@ -84,7 +84,10 @@ examples/rocket/use-tera-filter,                         -,       -,     -,     
 examples/surrealdb/connect-to-server,                    -,       -,     -,      true,  needs a SurrealDB server to run
 examples/surrealdb/create-select,                        -,       true,  -,      true,  needs a SurrealDB server to run
 examples/surrealdb/insert-select,                        -,       true,  -,      true,  needs a SurrealDB server to run and argv
-examples/threads/map-with-threadx,                       true,    -,     -,      -,     error: no matching package named `threaded-map` found
+examples/sqlite/bank,                                    -,       -,     -,      true,  needs command line arguments to run
+examples/sqlite/groups-and-owner,                        -,       -,     -,      true,  needs command line arguments to run
+examples/sqlite/transaction,                             -,       -,     -,      true,  needs command line arguments to run
+examples/threads/map-with-thread,                        true,    -,     -,      -,     error: no matching package named `threaded-map` found
 examples/tuples/empty,                                   -,       -,     true,   -,     TODO
 examples/types/type-mismatch,                            -,       -,     true,   -,     TODO
 examples/variables/cannot-change-type,                   -,       -,     true,   -,     TODO
