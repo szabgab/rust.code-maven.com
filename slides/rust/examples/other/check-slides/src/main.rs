@@ -301,6 +301,7 @@ fn cargo_on_single(crate_path: &PathBuf, action: &str) -> bool {
     let folder = crate_path.clone().into_os_string().into_string().unwrap();
     let folders = skip.iter().map(|x| x.to_string()).collect::<String>();
     if folders.contains(&folder) {
+        log::info!("{action} on {crate_path:?} SKIPPED");
         return true;
     }
 
