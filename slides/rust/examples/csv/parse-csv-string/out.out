@@ -1,0 +1,17 @@
+StringRecord(["apple", "red", "no"])
+StringRecord(["banana", "yellow", "yes"])
+StringRecord(["mango", "green-yellow-red", "yes"])
+
+StringRecord(["apple", "red", "no"])
+StringRecord(["banana", "yellow", "yes"])
+StringRecord(["mango", "green-yellow-red", "yes"])
+Error parsing csv
+
+StringRecord(["apple", "red", "no"])
+StringRecord(["banana", "yellow", "yes"])
+StringRecord(["mango", "green-yellow-red", "yes"])
+Error parsing csv CSV error: record 4 (line: 6, byte: 76): found record with 2 fields, but the previous record has 3 fields
+
+Fruit { fruit: "apple", color: "red", peal: "no" }
+Fruit { fruit: "banana", color: "yellow", peal: "yes" }
+Fruit { fruit: "mango", color: "green-yellow-red", peal: "yes" }

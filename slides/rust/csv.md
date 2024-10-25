@@ -1,6 +1,20 @@
 # CSV
 {id: csv}
 
+
+## Parse in-memory CSV string into StringRecords and structs
+{id: parse-in-memory-csv-string-into-string-records}
+{i: csv}
+{i: Reader}
+{i: from_reader}
+{i: flatten}
+{i: serde}
+
+![](examples/csv/parse-csv-string/src/main.rs)
+![](examples/csv/parse-csv-string/Cargo.toml)
+![](examples/csv/parse-csv-string/out.out)
+
+
 ## Read CSV file as a vector of StringRecords
 {id: read-csv-file-as-a-vector-of-stringrecords}
 {i: csv}
