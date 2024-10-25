@@ -507,7 +507,7 @@ fn read_skips() -> HashMap<String, Vec<String>> {
                     skips.get_mut("run").unwrap().push(record.example);
                 }
             }
-            Err(err) => println!("Error parsing csv {err}"),
+            Err(err) => panic!("Error parsing csv {err}"),
         }
     }
 
