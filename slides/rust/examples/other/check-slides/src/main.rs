@@ -349,6 +349,7 @@ fn get_crates_recoursive(path: &Path) -> Vec<PathBuf> {
 
 // TODO: go deeper than 2 levels to also handle examples/*/src/main.rs
 // TODO: but exclude examples/*/target/
+// TODO: move the exclude lists to external files
 fn get_all_the_examples() -> Vec<String> {
     log::info!("get_all_the_examples");
 
@@ -459,6 +460,9 @@ struct Skip {
     comment: String,
 }
 
+// TODO read this file only once
+// TODO compute the path to the file in a simpler way
+// TODO change the lookup to be an O(1) operation (instead of returning a vector return a hashmap)
 fn skip(name: &str) -> Vec<String> {
     let path = std::env::current_exe().unwrap();
     let path = path
