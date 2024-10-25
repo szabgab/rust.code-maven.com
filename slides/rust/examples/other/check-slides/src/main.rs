@@ -445,7 +445,7 @@ fn get_md_files() -> Vec<PathBuf> {
     md_files
 }
 
-fn skip(name: &str) -> &'static [&'static str] {
+fn skip(name: &str) -> Vec<&'static str> {
     let skip_update = &[
         "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
     ];
@@ -555,19 +555,19 @@ fn skip(name: &str) -> &'static [&'static str] {
     ];
 
     if name == "update" {
-        return skip_update;
+        return skip_update.to_vec();
     }
     if name == "clippy" {
-        return skip_clippy;
+        return skip_clippy.to_vec();
     }
     if name == "run" {
-        return skip_run;
+        return skip_run.to_vec();
     }
     if name == "test" {
-        return skip_test;
+        return skip_test.to_vec();
     }
 
-    &[]
+    vec![]
 }
 
 fn get_args(action: &str) -> &'static [&'static str] {
