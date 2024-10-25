@@ -464,6 +464,8 @@ struct Skip {
 // TODO read this file only once
 // TODO compute the path to the file in a simpler way
 // TODO change the lookup to be an O(1) operation (instead of returning a vector return a hashmap)
+// TODO verify that every example listed in the csv file is still present in the examples directory
+// TODO mark examples that should fail compilation and then check that they do fail
 fn read_skips() -> HashMap<String, Vec<String>> {
     let path = std::env::current_exe().unwrap();
     let path = path
