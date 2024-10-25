@@ -53,6 +53,9 @@ struct Cli {
     #[arg(long)]
     run: bool,
 
+    #[arg(long)]
+    check: bool,
+
     #[arg(help = "List of examples to run. e.g examples/other/check-slides/")]
     examples: Vec<String>,
 }
@@ -65,16 +68,16 @@ fn get_actions(args: &Cli) -> Vec<&str> {
     if args.fmt {
         actions.push("fmt")
     }
-    if args.fmt_check {
+    if args.check || args.fmt_check {
         actions.push("fmt_check")
     }
-    if args.clippy {
+    if args.check || args.clippy {
         actions.push("clippy")
     }
-    if args.test {
+    if args.check || args.test {
         actions.push("test")
     }
-    if args.run {
+    if args.check || args.run {
         actions.push("run")
     }
 
