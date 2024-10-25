@@ -1,7 +1,6 @@
 example,                                                 update,  test,  clippy, run,   comment
-examples/advanced-functions/calculator,                  -,       -,     true,   -,     TODO
-examples/arrays/numbers-change,                          -,       -,     true,   -,     TODO
-examples/booleans/other,                                 -,       -,     true,   -,     TODO
+examples/arrays/numbers-change,                          -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/booleans/other,                                 -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/clap/clap-complete-shell,                       -,       -,     -,      true,  clap examples are expecting command line parameters
 examples/clap/clap-example,                              -,       -,     -,      true,  clap
 examples/clap/default-value-if-equals-multiple-values,   -,       -,     -,      true,  clap
@@ -34,16 +33,11 @@ examples/egui/egui-heading,                              -,       -,     -,     
 examples/egui/egui-label-and-button,                     -,       -,     -,      true,  egui
 examples/egui/egui-label,                                -,       -,     -,      true,  egui
 examples/egui/egui-window,                               -,       -,     -,      true,  egui
-examples/errors/div-by-zero-hard-coded,                  -,       -,     true,   -,     TODO
-examples/errors/out-of-bounds-array,                     -,       -,     true,   -,     TODO
-examples/files/list-tree,                                -,       -,     true,   -,     TODO
-examples/files/open-file-handling,                       -,       -,     true,   -,     TODO
-examples/functions/declare-twice,                        -,       -,     true,   -,     TODO
-examples/intro/formatting-required,                      -,       -,     true,   -,     TODO
-examples/intro/print,                                    -,       -,     true,   -,     TODO
-examples/numbers/rounding-float,                         -,       -,     true,   -,     TODO
-examples/numbers/small-integers-unfit-in-i8,             -,       -,     true,   -,     TODO
-examples/ownership/mutable-string-in-immutable-variable, -,       -,     true,   -,     TODO
+examples/errors/out-of-bounds-array,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/functions/declare-twice,                        -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/intro/formatting-required,                      -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/numbers/small-integers-unfit-in-i8,             -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/ownership/mutable-string-in-immutable-variable, -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/rocket/blog-with-fromparam,                     -,       -,     -,      true,  rocket examples are all running a server without stopping so we can't run them in the CI
 examples/rocket/blog-with-guard,                         -,       -,     -,      true,  rocket
 examples/rocket/calculator-with-get,                     -,       -,     -,      true,  rocket
@@ -88,8 +82,6 @@ examples/sqlite/bank,                                    -,       -,     -,     
 examples/sqlite/groups-and-owner,                        -,       -,     -,      true,  needs command line arguments to run
 examples/sqlite/transaction,                             -,       -,     -,      true,  needs command line arguments to run
 examples/threads/map-with-thread,                        true,    -,     -,      -,     error: no matching package named `threaded-map` found
-examples/tuples/empty,                                   -,       -,     true,   -,     TODO
-examples/types/type-mismatch,                            -,       -,     true,   -,     TODO
 examples/variables/cannot-change-type,                   -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/change-literal-string,                -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/immutable-number,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
