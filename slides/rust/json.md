@@ -139,7 +139,7 @@ cargo run ../person.json
 ![](examples/json/avoid-extra-fields/out.out)
 
 
-## Alias some fields in JSON (handle dash in JSON kesy)
+## Alias some fields in JSON (handle dash in JSON keys)
 {id: alias-some-fields-in-json}
 {i: alias}
 
