@@ -66,7 +66,7 @@ examples/rocket/logging-with-log4rs-to-file,             -,       -,     -,     
 examples/rocket/multi-counter-using-cookies,             -,       -,     -,      true,  rocket
 examples/rocket/multi-counter-using-encrypted-cookies,   -,       -,     -,      true,  rocket
 examples/rocket/path-parameters,                         -,       -,     -,      true,  rocket
-examples/rocket/people-and-groups,                       -,       -,     -,      true,  rocket
+examples/rocket/people-and-groups,                       -,       true,  -,      true,  rocket; test uses a real database server that we don't have on the CI server
 examples/rocket/redirect-to-fixed-url,                   -,       -,     -,      true,  rocket
 examples/rocket/redirect-with-parameters,                -,       -,     -,      true,  rocket
 examples/rocket/request-guard,                           -,       -,     -,      true,  rocket
