@@ -1,6 +1,5 @@
 use serde::{Deserialize, Serialize};
-use surrealdb::engine::remote::ws::Ws;
-use surrealdb::opt::auth::Root;
+use surrealdb::engine::local::Mem;
 use surrealdb::opt::Resource;
 use surrealdb::sql::{Datetime, Id, Thing};
 use surrealdb::Surreal;
@@ -42,17 +41,8 @@ struct StudentClasses {
 
 #[tokio::main]
 async fn main() -> surrealdb::Result<()> {
-    // Connect to the database server
-    let db = Surreal::new::<Ws>("localhost:8000").await?;
+    let db = Surreal::new::<Mem>(()).await?;
 
-    // Sign in into the server
-    db.signin(Root {
-        username: "root",
-        password: "root",
-    })
-    .await?;
-
-    // Select the namespace and database to use
     db.use_ns("namespace").use_db("database").await?;
 
     // Create a dance class and store the result
