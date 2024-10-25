@@ -199,6 +199,7 @@ fn check_use_of_example_files(use_examples: bool) -> Vec<String> {
                 "examples/ownership/concatenate-content-of-files/dog.txt",
                 "examples/ownership/concatenate-content-of-files/cat.txt",
                 "examples/ownership/read-file-and-trim-newline/cat.txt",
+                "examples/other/check-slides/skips.csv",
             ]
             .into_iter()
             .map(|name| name.to_owned())
@@ -448,32 +449,54 @@ fn get_md_files() -> Vec<PathBuf> {
     md_files
 }
 
-fn skip(name: &str) -> Vec<&'static str> {
-    let skip_update = &[
-        "examples/threads/map-with-thread", // error: no matching package named `threaded-map` found
-    ];
+#[derive(Debug, serde::Deserialize, serde::Serialize)]
+struct Skip {
+    example: String,
+    update: String,
+    test: String,
+    clippy: String,
+    comment: String,
+}
 
-    let skip_clippy = &[
-        "examples/intro/formatting-required",
-        "examples/intro/print",
-        "examples/functions/declare-twice",
-        "examples/variables/change-literal-string",
-        "examples/variables/immutable-string",
-        "examples/variables/immutable-number",
-        "examples/variables/cannot-change-type",
-        "examples/tuples/empty",
-        "examples/numbers/small-integers-unfit-in-i8",
-        "examples/numbers/rounding-float",
-        "examples/booleans/other",
-        "examples/ownership/mutable-string-in-immutable-variable",
-        "examples/files/list-tree",          // TODO
-        "examples/files/open-file-handling", // TODO
-        "examples/arrays/numbers-change",
-        "examples/types/type-mismatch",
-        "examples/errors/out-of-bounds-array",
-        "examples/errors/div-by-zero-hard-coded",
-        "examples/advanced-functions/calculator", // TODO
-    ];
+fn skip(name: &str) -> Vec<String> {
+    let path = std::env::current_exe().unwrap();
+    let path = path
+        .parent()
+        .unwrap()
+        .parent()
+        .unwrap()
+        .parent()
+        .unwrap()
+        .join("skips.csv");
+    let csv_text = std::fs::read_to_string(path).unwrap();
+    let mut skips: HashMap<String, Vec<String>> = HashMap::from([
+        (String::from("update"), vec![]),
+        (String::from("test"), vec![]),
+        (String::from("clippy"), vec![]),
+    ]);
+    let mut rdr = csv::ReaderBuilder::new()
+        .has_headers(true)
+        .trim(csv::Trim::All)
+        .from_reader(csv_text.as_bytes());
+    for result in rdr.deserialize::<Skip>() {
+        match result {
+            Ok(record) => {
+                if record.update == "true" {
+                    skips
+                        .get_mut("update")
+                        .unwrap()
+                        .push(record.example.clone());
+                }
+                if record.test == "true" {
+                    skips.get_mut("test").unwrap().push(record.example.clone());
+                }
+                if record.clippy == "true" {
+                    skips.get_mut("clippy").unwrap().push(record.example);
+                }
+            }
+            Err(err) => println!("Error parsing csv {err}"),
+        }
+    }
 
     let skip_run = &[
         "examples/surrealdb/connect-to-server", // needs a SurrealDB server to run
@@ -551,23 +574,17 @@ fn skip(name: &str) -> Vec<&'static str> {
         "examples/egui/egui-window",
     ];
 
-    let skip_test = &[
-        "examples/rocket/return-result-user-id", // TODO
-        "examples/rocket/userid-in-path",        // TODO
-        "examples/rocket/skip-route",            // TODO
-    ];
-
     if name == "update" {
-        return skip_update.to_vec();
+        return skips[&String::from("update")].clone();
     }
     if name == "clippy" {
-        return skip_clippy.to_vec();
+        return skips[&String::from("clippy")].clone();
     }
     if name == "run" {
-        return skip_run.to_vec();
+        return skip_run.iter().map(|x| x.to_string()).collect();
     }
     if name == "test" {
-        return skip_test.to_vec();
+        return skips[&String::from("test")].clone();
     }
 
     vec![]

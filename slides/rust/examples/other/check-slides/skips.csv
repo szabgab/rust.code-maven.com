@@ -1,0 +1,24 @@
+example,                                                 update,  test,  clippy, comment
+examples/threads/map-with-threadx,                       true,    -,     -,      error: no matching package named `threaded-map` found
+examples/rocket/return-result-user-id,                   -,       true,  -,      TODO
+examples/rocket/userid-in-path,                          -,       true,  -,      TODO
+examples/rocket/skip-route,                              -,       true,  -,      TODO
+examples/intro/formatting-required,                      -,       -,     true,   TODO
+examples/intro/print,                                    -,       -,     true,   TODO
+examples/functions/declare-twice,                        -,       -,     true,   TODO
+examples/variables/change-literal-string,                -,       -,     true,   TODO
+examples/variables/immutable-string,                     -,       -,     true,   TODO
+examples/variables/immutable-number,                     -,       -,     true,   TODO
+examples/variables/cannot-change-type,                   -,       -,     true,   TODO
+examples/tuples/empty,                                   -,       -,     true,   TODO
+examples/numbers/small-integers-unfit-in-i8,             -,       -,     true,   TODO
+examples/numbers/rounding-float,                         -,       -,     true,   TODO
+examples/booleans/other,                                 -,       -,     true,   TODO
+examples/ownership/mutable-string-in-immutable-variable, -,       -,     true,   TODO
+examples/files/list-tree,                                -,       -,     true,   TODO
+examples/files/open-file-handling,                       -,       -,     true,   TODO
+examples/arrays/numbers-change,                          -,       -,     true,   TODO
+examples/types/type-mismatch,                            -,       -,     true,   TODO
+examples/errors/out-of-bounds-array,                     -,       -,     true,   TODO
+examples/errors/div-by-zero-hard-coded,                  -,       -,     true,   TODO
+examples/advanced-functions/calculator,                  -,       -,     true,   TODO
