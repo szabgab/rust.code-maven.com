@@ -71,7 +71,9 @@ async fn main() -> surrealdb::Result<()> {
     }
     println!("---------");
 
-    let mut entries = dbh.query("SELECT * FROM entry").await?;
+    let mut entries = dbh
+        .query("SELECT * FROM entry ORDER BY number DESC")
+        .await?;
     let entries: Vec<EntryWithName> = entries.take(0)?;
     assert_eq!(entries.len(), 2);
     assert_eq!(entries[0].number, 42);
