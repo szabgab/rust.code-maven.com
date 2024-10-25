@@ -74,6 +74,7 @@
 {id: rust-array-not-mutable}
 
 * By default arrays are not mutable and thus we cannot change a value.
+* This example has a compilation error.
 
 ![](examples/arrays/numbers-change/src/main.rs)
 
