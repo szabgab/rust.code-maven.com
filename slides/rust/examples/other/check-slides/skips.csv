@@ -83,6 +83,7 @@ examples/rocket/userid-in-path,                          -,       true,  -,     
 examples/rocket/use-tera-filter,                         -,       -,     -,      true,  rocket
 examples/surrealdb/connect-to-server,                    -,       -,     -,      true,  needs a SurrealDB server to run
 examples/surrealdb/create-select,                        -,       true,  -,      true,  needs a SurrealDB server to run
+examples/surrealdb/insert-select,                        -,       true,  -,      true,  needs a SurrealDB server to run and argv
 examples/threads/map-with-threadx,                       true,    -,     -,      -,     error: no matching package named `threaded-map` found
 examples/tuples/empty,                                   -,       -,     true,   -,     TODO
 examples/types/type-mismatch,                            -,       -,     true,   -,     TODO
