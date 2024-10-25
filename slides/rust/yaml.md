@@ -1,10 +1,18 @@
 # YAML
 {id: yaml}
 
+## YAML in Rust
+{id: yaml-in-rust}
+{i: serde_yaml}
+{i: serde_yml}
+
+* [serde_yaml](https://crates.io/crates/serde_yaml) - deprecated
+* [serde_yml](https://crates.io/crates/serde_yml) - a fork of serde_yaml
+
 ## Read YAML file
 {id: read-yaml-file}
 {i: serde}
-{i: serde_yaml}
+{i: serde_yml}
 {i: from_reader}
 {i: as_i64}
 {i: as_str}

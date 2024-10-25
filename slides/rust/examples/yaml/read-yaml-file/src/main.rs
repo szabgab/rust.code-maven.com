@@ -18,8 +18,7 @@ fn read_any_yaml() {
     let filename = "data.yaml";
     match File::open(filename) {
         Ok(file) => {
-            let data: serde_yaml::Value =
-                serde_yaml::from_reader(file).expect("YAML parsing error");
+            let data: serde_yml::Value = serde_yml::from_reader(file).expect("YAML parsing error");
             dbg!(&data);
 
             let text = match data.get("text") {
@@ -48,10 +47,13 @@ fn read_struct_yaml() {
     let filename = "data.yaml";
     match File::open(filename) {
         Ok(file) => {
-            let data: Point = serde_yaml::from_reader(file).unwrap();
+            let data: Point = serde_yml::from_reader(file).unwrap();
             println!("data = {:?}", data);
             println!("{}", data.x + data.y);
             println!("{}", data.text);
+            assert_eq!(data.x, 1);
+            assert_eq!(data.y, 2);
+            assert_eq!(data.text, "Hello World!");
         }
         Err(error) => {
             println!("Error opening file {}: {}", filename, error);
