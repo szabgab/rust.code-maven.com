@@ -455,6 +455,7 @@ struct Skip {
     update: String,
     test: String,
     clippy: String,
+    run: String,
     comment: String,
 }
 
@@ -473,6 +474,7 @@ fn skip(name: &str) -> Vec<String> {
         (String::from("update"), vec![]),
         (String::from("test"), vec![]),
         (String::from("clippy"), vec![]),
+        (String::from("run"), vec![]),
     ]);
     let mut rdr = csv::ReaderBuilder::new()
         .has_headers(true)
@@ -491,88 +493,18 @@ fn skip(name: &str) -> Vec<String> {
                     skips.get_mut("test").unwrap().push(record.example.clone());
                 }
                 if record.clippy == "true" {
-                    skips.get_mut("clippy").unwrap().push(record.example);
+                    skips
+                        .get_mut("clippy")
+                        .unwrap()
+                        .push(record.example.clone());
+                }
+                if record.run == "true" {
+                    skips.get_mut("run").unwrap().push(record.example);
                 }
             }
             Err(err) => println!("Error parsing csv {err}"),
         }
     }
-
-    let skip_run = &[
-        "examples/surrealdb/connect-to-server", // needs a SurrealDB server to run
-        // clap examples are expecting command line parameters
-        "examples/clap/clap-complete-shell",
-        "examples/clap/clap-example",
-        "examples/clap/default-value-if-equals",
-        "examples/clap/default-value-if-equals-multiple-values",
-        "examples/clap/default-value-if-ispresent",
-        "examples/clap/enumerated",
-        "examples/clap/environment-variable",
-        "examples/clap/even-number",
-        "examples/clap/help-with-arguments",
-        "examples/clap/limit-number-of-args",
-        "examples/clap/mutually-exclusive-group",
-        "examples/clap/mutually-exclusive-or",
-        "examples/clap/number-string-bool",
-        "examples/clap/repeat-the-same-argument",
-        "examples/clap/several-positional-arguments",
-        "examples/clap/short-arguments",
-        "examples/clap/show-description",
-        "examples/clap/show-description-from-code",
-        "examples/clap/show-generated-description",
-        "examples/clap/show-version-number",
-        "examples/clap/single-long-argument",
-        "examples/clap/single-positional-argument",
-        "examples/clap/subcommands",
-        "examples/clap/validate-number-range",
-        "examples/clap/value-name",
-        "examples/clap/value-parser-fixed-list",
-        "examples/clap/wc-cli",
-        // rocket examples are all running a server without stopping so we can't run them in the CI
-        "examples/rocket/blog-with-fromparam",
-        "examples/rocket/blog-with-guard",
-        "examples/rocket/calculator-with-get",
-        "examples/rocket/catch-division-by-zero",
-        "examples/rocket/configuration",
-        "examples/rocket/config-with-tests",
-        "examples/rocket/create-tera-filter",
-        "examples/rocket/echo-using-get",
-        "examples/rocket/echo-using-post",
-        "examples/rocket/generated-rawhtml",
-        "examples/rocket/guards",
-        "examples/rocket/hello-world",
-        "examples/rocket/hello-world-external-test-file",
-        "examples/rocket/hello-world-html",
-        "examples/rocket/hello-world-tera-template",
-        "examples/rocket/http-404-page-with-static-content",
-        "examples/rocket/in-memory-counter",
-        "examples/rocket/logging",
-        "examples/rocket/logging-with-log4rs-to-file",
-        "examples/rocket/multi-counter-using-cookies",
-        "examples/rocket/multi-counter-using-encrypted-cookies",
-        "examples/rocket/path-parameters",
-        "examples/rocket/people-and-groups",
-        "examples/rocket/redirect-to-fixed-url",
-        "examples/rocket/redirect-with-parameters",
-        "examples/rocket/request-guard",
-        "examples/rocket/return-result",
-        "examples/rocket/return-result-user-id",
-        "examples/rocket/separate-files",
-        "examples/rocket/set-cookie",
-        "examples/rocket/simple-todo-with-surrealdb",
-        "examples/rocket/single-counter-in-text-file",
-        "examples/rocket/skip-route",
-        "examples/rocket/skip-route-using-guard",
-        "examples/rocket/static-files",
-        "examples/rocket/userid-in-path",
-        "examples/rocket/use-tera-filter",
-        // skip the egui examples as they are not working in the CI
-        "examples/egui/egui-app",
-        "examples/egui/egui-heading",
-        "examples/egui/egui-label",
-        "examples/egui/egui-label-and-button",
-        "examples/egui/egui-window",
-    ];
 
     if name == "update" {
         return skips[&String::from("update")].clone();
@@ -581,7 +513,7 @@ fn skip(name: &str) -> Vec<String> {
         return skips[&String::from("clippy")].clone();
     }
     if name == "run" {
-        return skip_run.iter().map(|x| x.to_string()).collect();
+        return skips[&String::from("run")].clone();
     }
     if name == "test" {
         return skips[&String::from("test")].clone();
