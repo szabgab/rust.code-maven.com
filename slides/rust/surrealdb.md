@@ -4,13 +4,21 @@
 ## What is SurrealDB
 {id: what-is-surrealdb}
 
-* [SurrealDB](https://surrealdb.com/)
+* [SurrealDB](https://surrealdb.com/) is a multi-model database written in Rust.
 
+* It has SDK for several languages. Here we'll learn about the Query language(s) of SurrealDB and how to use the database in Rust.
+
+* There are several ways to use the database:
 * We can use it embedded or as a separate server.
 * Embedded can work with in-memory databse (which is not persistent) or with on-disk backend.
 * When using as a separate server we can have one node or multiple nodes.
 
-* SurrealDB itself is written in Rust and can be used with multiple programming languages.
+* One SurrealDB can have multiple **namespaces** and each namespace can have multiple **databases**.
+* Each database has separate tables, indices, etc.
+
+* First we need to connect to the database.
+* Then we need to authenticate, if necessary.
+* then we select the `namespace` and the `database`.
 
 * [SurrealDB for SQL developers](https://surrealdb.com/docs/surrealdb/introduction/sql)
 * [SurrealDB for MongoDB developers](https://surrealdb.com/docs/surrealdb/introduction/mongo)
@@ -20,10 +28,12 @@
 {i: kv-mem}
 {i: Mem}
 
-Using the in-memory database can be very useful, especially in short-lived examples like we have
+Using the in-memory database can be very useful, especially in short-lived examples ike the ones we have here,
 but in other cases as well. It does not need any additional server component.
 
-In this example we only setup the database connection without doing anything.
+In this example we only setup the database connection, the namespace and the database without doing anything.
+
+For the in-memory database we don't need authentication as only our process can access it.
 
 ![](examples/surrealdb/in-memory-setup/Cargo.toml)
 
@@ -35,9 +45,14 @@ In this example we only setup the database connection without doing anything.
 {i: kv-rocksdb}
 {i: RocksDB}
 
-This version does not need an external database server either.
-The compilation time is longer as we also compile the database backend, but this can be used as
+* We can also use local database files (just like in sqlite).
+
+* This version does not need an external database server either.
+
+* The compilation time is longer as we also compile the database backend, but this can be used as
 an embedded, but already persistan database.
+
+* No need for authentication here either.
 
 ![](examples/surrealdb/embedded-rocksdb/Cargo.toml)
 
@@ -59,7 +74,7 @@ docker volume create my-surreal-db
 
 
 ```
-docker run --detach --restart always --name surrealdb -p 127.0.0.1:8000:8000 --user root -v$(pwd):/external -v my-surreal-db:/database surrealdb/surrealdb:v2.0.4 start --user local --pass secret --log trace file://database
+docker run --detach --restart always --name surrealdb -p 127.0.0.1:8000:8000 --user root -v$(pwd):/external -v my-surreal-db:/database surrealdb/surrealdb:v2.0.4 start --user root --pass root --log trace file://database
 ```
 
 For the current list of available docker tags check [SurrealDB on the Docker HUB](https://hub.docker.com/r/surrealdb/surrealdb/tags).
@@ -492,4 +507,13 @@ ns/db> SELECT * from person, planet
 
 ![](examples/surrealdb/columns-with-schema/Cargo.toml)
 ![](examples/surrealdb/columns-with-schema/src/main.rs)
+
+## SurrealDB TODO
+{id: surrealdb-todo}
+
+* Example where we can set the database connection externally (either hostname and port number or in-memory database)
+* Example for SELECT without using a struct
+* Example select into struct with id and without id in the struct
+
+
 
