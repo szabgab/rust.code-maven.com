@@ -49,8 +49,7 @@ For the in-memory database we don't need authentication as only our process can 
 
 * This version does not need an external database server either.
 
-* The compilation time is longer as we also compile the database backend, but this can be used as
-an embedded, but already persistan database.
+* The compilation time is longer as we also compile the database backend, but this can be used as an embedded, but already persistan database.
 
 * No need for authentication here either.
 
