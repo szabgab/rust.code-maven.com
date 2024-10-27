@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use surrealdb::engine::local::Db;
 use surrealdb::engine::local::Mem;
-use surrealdb::sql::Thing;
+use surrealdb::RecordId;
 use surrealdb::Surreal;
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -11,14 +11,14 @@ struct Message {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct MessageWithId {
-    id: Thing,
+    id: RecordId,
     text: String,
 }
 
 #[derive(Debug, Deserialize)]
 struct Record {
     #[allow(dead_code)]
-    id: Thing,
+    id: RecordId,
 }
 
 #[tokio::main]
