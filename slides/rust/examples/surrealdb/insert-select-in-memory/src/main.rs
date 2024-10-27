@@ -29,6 +29,7 @@ async fn main() -> surrealdb::Result<()> {
 
     create_a_new_message_with_random_id(&dbh, "Hello World").await?;
     create_a_new_message_with_random_id(&dbh, "Another message").await?;
+    println!();
 
     let messages = select_all_the_messages(&dbh).await?;
     for message in &messages {
@@ -73,7 +74,7 @@ async fn create_a_new_message_with_random_id(
             text: message.to_owned(),
         })
         .await?;
-    println!("{created:?}");
+    println!("created: {created:?}");
 
     Ok(())
 }
