@@ -85,3 +85,4 @@ examples/variables/cannot-change-type,                   -,       true,  true,  
 examples/variables/change-literal-string,                -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/immutable-number,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/immutable-string,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/other/send-mail-with-sendgrid,                  -,       -,     -,      true,  needs an API key
