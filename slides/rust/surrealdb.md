@@ -137,47 +137,6 @@ cargo run -q > out.out 2>&1
 ![](examples/surrealdb/in-memory-demo/out.out)
 
 
-## SurrealDB create INSERT SELECT
-{id: surrealdb-insert-select}
-{i: create}
-{i: use_db}
-{i: use_ns}
-
-![](examples/surrealdb/insert-select/Cargo.toml)
-![](examples/surrealdb/insert-select/src/main.rs)
-
-```
-$ cargo run -q "Hello World"
-[src/main.rs:34:9] created = [
-    Record {
-        id: Thing {
-            tb: "messages",
-            id: String(
-                "85d6tb5du6fsxp31wtnj",
-            ),
-        },
-    },
-]
-
-$ cargo run -q
-Hello World
-
-$ cargo run -q "Other message"
-[src/main.rs:34:9] created = [
-    Record {
-        id: Thing {
-            tb: "messages",
-            id: String(
-                "z17l4ylmkbyfj05iozqs",
-            ),
-        },
-    },
-]
-
-$ cargo run -q
-Hello World
-Other message
-```
 ## SurrealDB experiments
 {id: surrealdb-experiments}
 {i: TODO}
