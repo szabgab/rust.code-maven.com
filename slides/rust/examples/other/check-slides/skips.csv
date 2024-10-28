@@ -76,7 +76,6 @@ examples/rocket/static-files,                            -,       -,     -,     
 examples/rocket/userid-in-path,                          -,       true,  -,      true,  rocket and TODO fix test
 examples/rocket/use-tera-filter,                         -,       -,     -,      true,  rocket
 examples/surrealdb/connect-to-server,                    -,       -,     -,      true,  needs a SurrealDB server to run
-examples/surrealdb/create-select,                        -,       true,  -,      true,  needs a SurrealDB server to run
 examples/sqlite/bank,                                    -,       -,     -,      true,  needs command line arguments to run
 examples/sqlite/groups-and-owner,                        -,       -,     -,      true,  needs command line arguments to run
 examples/sqlite/transaction,                             -,       -,     -,      true,  needs command line arguments to run
