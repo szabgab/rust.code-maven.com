@@ -31,16 +31,18 @@ async fn main() -> surrealdb::Result<()> {
     add_message_using_struct_without_id_using_resource(&db, "B message").await?;
     add_message_using_struct_with_id(&db, "C message").await?;
     add_message_using_struct_with_optional_id(&db, "D message").await?;
+    add_message_using_query_without_id(&db, "E message").await?;
 
     let messages = get_all(&db).await?;
     for message in &messages {
         println!("{:?}", message);
     }
-    assert_eq!(messages.len(), 4);
+    assert_eq!(messages.len(), 5);
     assert_eq!(messages[0].text, "A message");
     assert_eq!(messages[1].text, "B message");
     assert_eq!(messages[2].text, "C message");
     assert_eq!(messages[3].text, "D message");
+    assert_eq!(messages[4].text, "E message");
 
     Ok(())
 }
@@ -115,6 +117,19 @@ async fn add_message_using_struct_with_optional_id(
     println!("{:?}", result);
     assert!(result.is_some());
     assert_eq!(result.unwrap().text, text);
+
+    Ok(())
+}
+
+async fn add_message_using_query_without_id(db: &Surreal<Db>, text: &str) -> surrealdb::Result<()> {
+    let response = db
+        .query("CREATE messages SET  text=$text")
+        .bind(("text", text.to_owned()))
+        .await?;
+
+    println!("{:?}", response);
+    // assert!(result.is_some());
+    // assert_eq!(result.unwrap().text, text);
 
     Ok(())
 }
