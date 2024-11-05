@@ -135,6 +135,17 @@
 
 ![](examples/files/du/src/main.rs)
 
+## Error handling in file operations
+{id: error-handling-in-file-operations}
+{i: unwrap}
+{i: expect}
+{i: match}
+{i: Ok}
+{i: Err}
+{i: panic!}
+
+![](examples/files/error-in-file-operation/src/main.rs)
+
 ## Exercise count digits in file
 {id: exercise-count-digits-in-file}
 
