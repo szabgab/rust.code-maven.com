@@ -77,9 +77,12 @@ examples/rocket/userid-in-path,                          -,       true,  -,     
 examples/rocket/use-tera-filter,                         -,       -,     -,      true,  rocket
 examples/surrealdb/connect-to-server,                    -,       -,     -,      true,  needs a SurrealDB server to run
 examples/sqlite/bank,                                    -,       -,     -,      true,  needs command line arguments to run
+examples/sqlite/counter,                                 -,       -,     -,      true,  needs command line arguments to run
 examples/sqlite/groups-and-owner,                        -,       -,     -,      true,  needs command line arguments to run
 examples/sqlite/transaction,                             -,       -,     -,      true,  needs command line arguments to run
 examples/threads/map-with-thread,                        true,    -,     -,      -,     error: no matching package named `threaded-map` found
+examples/threads/count-characters,                       -,       -,     -,      true,  needs command line arguments to run
+examples/threads/save-many-files,                        -,       -,     -,      true,  needs command line arguments to run
 examples/variables/cannot-change-type,                   -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/change-literal-string,                -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/immutable-number,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
