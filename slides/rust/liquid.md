@@ -341,6 +341,7 @@ We can use the **escape** filter on each field where we would like to avoid this
 
 ## Liquid create your own tag without parameters
 {id: liquid-create-your-own-tag-without-parameters}
+{i: expect_nothing}
 
 This is probably the simplest example of extending the Liquid syntax by new tags. I am not sure how usefule is this in the real world as I think the same could be done with the `include` tag, but this might help understanding how to create more complex tags.
 
@@ -359,6 +360,8 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 
 ## Liquid create your own tag with a single parameter
 {id: liquid-define-a-tag-with-a-single-parameter}
+{i: expect_next}
+{i: expect_identifier}
 
 
 * Convert this `{% youtube K6EvVvYnjrY %}` into a link to the video or maybe to an html section that embeds the video in the page.
@@ -366,6 +369,16 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/tag-with-single-value/Cargo.toml)
 ![](examples/liquid/tag-with-single-value/src/main.rs)
 ![](examples/liquid/tag-with-single-value/src/youtube_tag.rs)
+
+## Liquid create your own tag accepting two numbers
+{id: liquid-create-a-tag-accepting-two-numbers}
+{i: expect_literal}
+
+* After the tag we have two values that are expected to be literal values that ar i32 numbers
+
+![](examples/liquid/tag-with-two-numbers/Cargo.toml)
+![](examples/liquid/tag-with-two-numbers/src/add_tag.rs)
+![](examples/liquid/tag-with-two-numbers/src/main.rs)
 
 
 
