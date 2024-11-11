@@ -36,6 +36,13 @@ examples/egui/egui-window,                               -,       -,     -,     
 examples/errors/out-of-bounds-array,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/functions/declare-twice,                        -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/intro/formatting-required,                      -,       true,  true,   true,  demonstrating compilation error - this will never work
+examples/json/avoid-extra-fields,                        -,       -,     -,      true,  needs command line arguments to run
+examples/json/read-json-from-reader-manually,            -,       -,     -,      true,  needs command line arguments to run
+examples/json/read-json-from-reader-to-struct,           -,       -,     -,      true,  needs command line arguments to run
+examples/json/read-person,                               -,       -,     -,      true,  needs command line arguments to run
+examples/json/read-with-optional-field,                  -,       -,     -,      true,  needs command line arguments to run
+examples/macros/random-constant-macro,                   -,       -,     -,      true,  only lib
+examples/macros/test-failure-report,                     -,       -,     -,      true,  only lib
 examples/numbers/small-integers-unfit-in-i8,             -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/ownership/mutable-string-in-immutable-variable, -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/rocket/blog-with-fromparam,                     -,       -,     -,      true,  rocket examples are all running a server without stopping so we can't run them in the CI
