@@ -357,6 +357,18 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/single-tag/src/single_tag.rs)
 
 
+## Liquid create your own tag with a single parameter
+{id: liquid-define-a-tag-with-a-single-parameter}
+
+
+* Convert this `{% youtube K6EvVvYnjrY %}` into a link to the video or maybe to an html section that embeds the video in the page.
+
+![](examples/liquid/tag-with-single-value/Cargo.toml)
+![](examples/liquid/tag-with-single-value/src/main.rs)
+![](examples/liquid/tag-with-single-value/src/youtube_tag.rs)
+
+
+
 ## Liquid TODO
 {id: liquid-todo}
 
