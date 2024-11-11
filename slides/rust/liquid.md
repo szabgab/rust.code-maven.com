@@ -380,6 +380,12 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/tag-with-two-numbers/src/add_tag.rs)
 ![](examples/liquid/tag-with-two-numbers/src/main.rs)
 
+## Liquid create your own tag with attribute as key=value pair
+{id: liquid-create-a-tag-with-key-value-attribute}
+
+![](examples/liquid/tag-with-attribute-and-value/Cargo.toml)
+![](examples/liquid/tag-with-attribute-and-value/src/main.rs)
+![](examples/liquid/tag-with-attribute-and-value/src/youtube_tag.rs)
 
 
 ## Liquid TODO
