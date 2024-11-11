@@ -338,6 +338,25 @@ We can use the **escape** filter on each field where we would like to avoid this
 
 ![](examples/liquid/embed-html-tags/out.out)
 
+
+## Liquid create your own tag without parameters
+{id: liquid-create-your-own-tag-without-parameters}
+
+This is probably the simplest example of extending the Liquid syntax by new tags. I am not sure how usefule is this in the real world as I think the same could be done with the `include` tag, but this might help understanding how to create more complex tags.
+
+* We need both [liquid](https://crates.io/crates/liquid) and [liquid-core](https://crates.io/crates/liquid-core)
+
+![](examples/liquid/single-tag/Cargo.toml)
+
+* We need to add the struct implementing our tag (`single_tag::SingleTag`) to our parser using the `tag` method.
+* Then we can use the `{% single %}` tag in our template.
+
+![](examples/liquid/single-tag/src/main.rs)
+
+
+![](examples/liquid/single-tag/src/single_tag.rs)
+
+
 ## Liquid TODO
 {id: liquid-todo}
 
