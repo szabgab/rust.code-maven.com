@@ -339,6 +339,30 @@ We can use the **escape** filter on each field where we would like to avoid this
 ![](examples/liquid/embed-html-tags/out.out)
 
 
+## Liquid tags
+{id: liquid-tags}
+
+* `{% something %}` is called a tag in Liquid.
+* There are several built-in tags in Liquid: `if`, `else`, `endif`, `for`, `assign` etc.
+* You can also define your own tags. In the next few examples we are going to do that.
+
+* `{% tagname %}` just a tagname
+* `{% tagname value %}` tag with a single value
+* `{% tagname number number ... %}` tag with two numbers
+* `{% tagname key="value" %}` or `{% tagname key=42 %}` tag with single key-value pair
+
+
+* `{% latest limit=5 %}` tag with key-value where the value must be a `u8`
+* `{% latest limit=3 tag="programming"  %}`  tag with key-value (where the value is a u8) and an optional key-value pair.
+* `{% youtube id="K6EvVvYnjrY" filename="some_name.mp4" %}` tag with two key-value pairs
+* `{% include file="example/code.py" %}` override the built-in `include` tag.
+
+
+* TODO:
+* `{% tagname value value ... %}` tag with multiple values
+* `{% tagname key=value key=value %}` tag with multiple key-value pairs
+
+
 ## Liquid create your own tag without parameters
 {id: liquid-create-your-own-tag-without-parameters}
 {i: expect_nothing}
@@ -370,11 +394,20 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/tag-with-single-value/src/main.rs)
 ![](examples/liquid/tag-with-single-value/src/youtube_tag.rs)
 
+
+## Liquid create your own tag with many values
+{id: liquid-define-a-tag-with-many-values}
+
+![](examples/liquid/tag-with-many-values/Cargo.toml)
+![](examples/liquid/tag-with-many-values/src/main.rs)
+![](examples/liquid/tag-with-many-values/src/youtube_tag.rs)
+
+
 ## Liquid create your own tag accepting two numbers
 {id: liquid-create-a-tag-accepting-two-numbers}
 {i: expect_literal}
 
-* After the tag we have two values that are expected to be literal values that ar i32 numbers
+* After the tag we have two values that are expected to be literal values that ar i32 numbers: `{% add   19   23 %}`
 
 ![](examples/liquid/tag-with-two-numbers/Cargo.toml)
 ![](examples/liquid/tag-with-two-numbers/src/add_tag.rs)
@@ -382,6 +415,8 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 
 ## Liquid create your own tag with attribute as key=value pair
 {id: liquid-create-a-tag-with-key-value-attribute}
+
+* `{% youtube id = "R2_D2" %}`
 
 ![](examples/liquid/tag-with-attribute-and-value/Cargo.toml)
 ![](examples/liquid/tag-with-attribute-and-value/src/main.rs)
