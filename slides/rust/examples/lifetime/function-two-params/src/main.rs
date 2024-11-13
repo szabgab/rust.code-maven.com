@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 fn main() {
     let mut a = String::new();
     let mut b = String::new();
@@ -16,13 +18,21 @@ fn main() {
     println!("b {b}");
 }
 
-fn select<'a>(name1: &'a str, name2: &str) -> &'a str {
+fn select(name1: &str, name2: &str) -> String {
     if name1 > name2 {
-        name1
+        String::from("first")
     } else {
-        "ab"
+        String::from("second")
     }
 }
+
+// fn select<'a>(name1: &'a str, name2: &str) -> &'a str {
+//     if name1 > name2 {
+//         name1
+//     } else {
+//         "ab"
+//     }
+// }
 
 // fn select<'a>(name1: &str, name2: &str) -> &'a str {
 //     if name1 > name2 {
