@@ -1,0 +1,9 @@
+[package]
+name = "parse"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+liquid = "0.26.9"
+liquid-core = "0.26.9"
+serde = { version = "1.0.215", features = ["derive"] }
