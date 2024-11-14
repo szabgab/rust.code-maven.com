@@ -348,7 +348,8 @@ We can use the **escape** filter on each field where we would like to avoid this
 
 * `{% tagname %}` just a tagname
 * `{% tagname value %}` tag with a single value
-* `{% tagname number number ... %}` tag with two numbers
+* `{% tagname number number %}` tag with two numbers
+* `{% youtube apple banana peach %}` tag with one or more values
 * `{% tagname key="value" %}` or `{% tagname key=42 %}` tag with single key-value pair
 
 
@@ -356,6 +357,8 @@ We can use the **escape** filter on each field where we would like to avoid this
 * `{% latest limit=3 tag="programming"  %}`  tag with key-value (where the value is a u8) and an optional key-value pair.
 * `{% youtube id="K6EvVvYnjrY" filename="some_name.mp4" %}` tag with two key-value pairs
 * `{% include file="example/code.py" %}` override the built-in `include` tag.
+* Use scalar values passed to the render function
+
 
 
 * TODO:
@@ -421,6 +424,16 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/tag-with-attribute-and-value/Cargo.toml)
 ![](examples/liquid/tag-with-attribute-and-value/src/main.rs)
 ![](examples/liquid/tag-with-attribute-and-value/src/youtube_tag.rs)
+
+## Liquid create tag that uses scalar values passed to the render function
+{id: liquid-create-tag-that-uses-scalar-values-passed-to-th-render-function}
+
+* How to get the values passed by the caller to the render function inside the tag definition?
+
+
+![](examples/liquid/tag-use-scalar-value/Cargo.toml)
+![](examples/liquid/tag-use-scalar-value/src/main.rs)
+![](examples/liquid/tag-use-scalar-value/src/show_tag.rs)
 
 
 ## Liquid TODO
