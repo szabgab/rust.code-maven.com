@@ -30,7 +30,7 @@ If se supply the following YAML file, each field is filled.
 
 However if we provide the following file:
 
-{% include file="examples/yaml-default-values/nameless.yml" %}
+{% include file="examples/yaml-default-values/nameless.yaml" %}
 
 We will get an error message in the `err` variable:
 
