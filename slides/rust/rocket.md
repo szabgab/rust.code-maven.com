@@ -189,6 +189,7 @@ This is especially interesgint if we would like to make the pages indexable by s
 ## Rocket - Calculator with GET (passing multiple parameters) using enum
 {id: rocket-calculator-with-get-using-enum}
 {i: RawHtml}
+{i: TODO}
 
 ![](examples/rocket/calculator-with-get-and-enum/Rocket.toml)
 ![](examples/rocket/calculator-with-get-and-enum/src/main.rs)
