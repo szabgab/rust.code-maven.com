@@ -1,20 +1,10 @@
 #[macro_use]
 extern crate rocket;
 
-//use rocket::form::Form;
 use rocket::response::content;
-// TODO: This was added to Rocket on 2024.08.06 so it is not released yet https://github.com/rwf2/Rocket/issues/2826
-// TODO 0.5.1. was released on 2024.08.22 fix this example when a newer version is released
-
-enum Operation {
-    Add,
-    Subtract,
-    Multiply,
-    Divide,
-}
 
 #[get("/?<a>&<b>&<op>")]
-fn index(a: Option<i64>, b: Option<i64>, op: Option<Operation>) -> content::RawHtml<String> {
+fn index(a: Option<i64>, b: Option<i64>, op: Option<&str>) -> content::RawHtml<String> {
     let mut selected_add = "";
     let mut selected_multiply = "";
     let mut selected_subtract = "";
@@ -22,19 +12,19 @@ fn index(a: Option<i64>, b: Option<i64>, op: Option<Operation>) -> content::RawH
 
     let result = match (a, b, op) {
         (Some(a), Some(b), Some(op)) => match op {
-            Operation::Add => {
+            "add" => {
                 selected_add = r#"selected="selected""#;
                 (a + b).to_string()
             }
-            Operation::Subtract => {
+            "subtract" => {
                 selected_subtract = r#"selected="selected""#;
                 (a - b).to_string()
             }
-            Operation::Divide => {
+            "divide" => {
                 selected_divide = r#"selected="selected""#;
                 (a / b).to_string()
             }
-            Operation::Multiply => {
+            "multiply" => {
                 selected_multiply = r#"selected="selected""#;
                 (a * b).to_string()
             }
@@ -80,4 +70,57 @@ fn index(a: Option<i64>, b: Option<i64>, op: Option<Operation>) -> content::RawH
 #[launch]
 fn rocket() -> _ {
     rocket::build().mount("/", routes![index])
+}
+
+#[cfg(test)]
+mod test {
+    use super::rocket;
+
+    use rocket::http::Status;
+    use rocket::local::blocking::Client;
+
+    #[test]
+    fn test_no_input() {
+        let client = Client::tracked(rocket()).unwrap();
+        let response = client.get("/").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(!html.contains("result"));
+
+        assert!(html.contains(r#"<form>"#));
+        assert!(html.contains(r#"<input name="a" value="">"#));
+        assert!(html.contains(r#"<input name="b" value="">"#));
+        assert!(html.contains(r#"<select name="op">"#));
+        assert!(html.contains(r#"<option value="add" >+</option>"#));
+        assert!(html.contains(r#"<option value="multiply" >*</option>"#));
+        assert!(html.contains(r#"<option value="subtract" >-</option>"#));
+        assert!(html.contains(r#"<option value="divide" >/</option>"#));
+        assert!(html.contains(r#"</select>"#));
+        assert!(html.contains(r#"<input type="submit" value="Calculate">"#));
+    }
+
+    #[test]
+    fn test_add() {
+        let client = Client::tracked(rocket()).unwrap();
+        let response = client.get("/?a=23&b=19&op=add").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(html.contains("<hr>The result is 42"));
+        assert!(html.contains(r#"<input name="a" value="23">"#));
+        assert!(html.contains(r#"<input name="b" value="19">"#));
+    }
+
+    #[test]
+    fn test_missing_b() {
+        let client = Client::tracked(rocket()).unwrap();
+        let response = client.get("/?a=23&op=add").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        let html = response.into_string().unwrap();
+        assert!(!html.contains("result"));
+        assert!(html.contains(r#"<input name="a" value="23">"#));
+        assert!(html.contains(r#"<input name="b" value="">"#));
+
+        //assert_eq!(html, "");
+        // TODO: maybe this should report an error?
+    }
 }

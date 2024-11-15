@@ -185,6 +185,13 @@ This is especially interesgint if we would like to make the pages indexable by s
 
 ![](examples/rocket/calculator-with-get/src/main.rs)
 
+## Rocket - Calculator with GET (passing multiple parameters) using enum
+{id: rocket-calculator-with-get-using-enum}
+{i: RawHtml}
+
+![](examples/rocket/calculator-with-get-and-enum/src/main.rs)
+
+
 ## Rocket - In-memory counter using State
 {id: rocket-in-memory-counter}
 
