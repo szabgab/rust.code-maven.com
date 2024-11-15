@@ -47,7 +47,7 @@ examples/numbers/small-integers-unfit-in-i8,             -,       true,  true,  
 examples/ownership/mutable-string-in-immutable-variable, -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/rocket/blog-with-fromparam,                     -,       -,     -,      true,  rocket examples are all running a server without stopping so we can't run them in the CI
 examples/rocket/blog-with-guard,                         -,       -,     -,      true,  rocket
-examples/rocket/calculator-with-get,                     -,       -,     -,      true,  rocket
+examples/rocket/calculator-with-get,                     -,       true,  true,   true,  rocket - waiting for new release of Rocket to finish this example
 examples/rocket/catch-division-by-zero,                  -,       -,     -,      true,  rocket
 examples/rocket/configuration,                           -,       -,     -,      true,  rocket
 examples/rocket/config-with-tests,                       -,       -,     -,      true,  rocket

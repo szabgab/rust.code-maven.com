@@ -1,9 +1,10 @@
 #[macro_use]
 extern crate rocket;
 
-use rocket::form::Form;
+//use rocket::form::Form;
 use rocket::response::content;
 // TODO: This was added to Rocket on 2024.08.06 so it is not released yet https://github.com/rwf2/Rocket/issues/2826
+// TODO 0.5.1. was released on 2024.08.22 fix this example when a newer version is released
 
 enum Operation {
     Add,
