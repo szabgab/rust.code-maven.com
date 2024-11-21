@@ -523,3 +523,14 @@ This program will create an ever growing string. When it reaches the total size 
 
 ![](examples/other/early-return-on-none/src/lib.rs)
 
+## Pattern matching with guards on a number
+{id: pattern-matching-with-guards-on-a-number}
+
+Rust does not take in account the guard conditions when checking if the arms cover all the
+possible values.
+In other words Rust cannot see that our first 3 conditions are exhaustive and that the
+last condition will never be reached.
+Thus Rust requires the catch-all _ to be present in order to compile the code
+
+![](examples/other/match-numbers/src/main.rs)
+
