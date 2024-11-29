@@ -12,7 +12,7 @@ tags:
 
 | When       | event                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------- |
-| 2024.08.29 | [Rust Source Code Reading: The thousands crate](https://www.meetup.com/code-mavens/events/302391142/)            |
+| 2024.12.17 | [Rust Source Code Reading: The thousands crate](https://www.meetup.com/code-mavens/events/304824684/)            |
 
 ## Past events
 
