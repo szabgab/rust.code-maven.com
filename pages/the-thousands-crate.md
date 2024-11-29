@@ -1,5 +1,5 @@
 ---
-title: Rust Source Code Reading: The thousands crate
+title: "Rust Source Code Reading: The thousands crate"
 timestamp: 2024-11-29T09:30:01
 author: szabgab
 published: false
