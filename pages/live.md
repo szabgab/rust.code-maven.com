@@ -1,7 +1,7 @@
 ---
 title: Rust Maven Live presentations
 timestamp: 2024-06-21T10:30:01
-author: szabgab
+author:
 published: true
 description:
 tags:
