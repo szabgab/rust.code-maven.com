@@ -2,7 +2,7 @@
 title: Microdosing Rust to your organization
 timestamp: 2024-12-02T19:30:01
 author: aviram-hassan
-published: false
+published: true
 description:
 tags:
     - Rust
@@ -10,7 +10,6 @@ tags:
 
 You can start using Rust in your organization without refactoring or rewriting the whole system by leveraging extensions of widely used languages. [napi](https://napi.rs/) for Node and [PyO3](https://pyo3.rs/) for Python.
 
-* Date: January 7, 2025 20:00-21:00 ILT
 * Language: English
 * Location: Zoom
 
@@ -21,4 +20,4 @@ You can start using Rust in your organization without refactoring or rewriting t
 * [GitHub of Aviram](https://github.com/aviramha)
 
 
-
+<a class="button is-primary" href="https://www.meetup.com/code-mavens/events/304883841/">register</a>

@@ -16,6 +16,7 @@ Part of the [Code Maven live](https://live.code-maven.com/) events.
 | When       | event                                                                                                                 |  register |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | --------- |
 | 2024.12.17 | [Rust Source Code Reading: The thousands crate](/the-thousands-crate)                                                 | [register](https://www.meetup.com/code-mavens/events/304824684/)  |
+| 2025.01.07 | [Microdosing Rust to your organization with Aviram Hassan](/microdosing-rust-to-your-organization)                    | [register](https://www.meetup.com/code-mavens/events/304883841/)  |
 
 ## Past events
 
