@@ -4,8 +4,6 @@ timestamp: 2024-12-02T19:30:01
 author: aviram-hassan
 published: true
 description:
-tags:
-    - Rust
 ---
 
 You can start using Rust in your organization without refactoring or rewriting the whole system by leveraging extensions of widely used languages. [napi](https://napi.rs/) for Node and [PyO3](https://pyo3.rs/) for Python.
