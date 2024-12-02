@@ -10,8 +10,8 @@ tags:
 
 ## Planned events
 
-| When       | event                                                                                                            |
-| ---------- | ---------------------------------------------------------------------------------------------------------------- |
+| When       | event                                                                                                                 |  register |
+| ---------- | --------------------------------------------------------------------------------------------------------------------- | --------- |
 | 2024.12.17 | [Rust Source Code Reading: The thousands crate](/the-thousands-crate)                                                 | [register](https://www.meetup.com/code-mavens/events/304824684/)  |
 
 ## Past events
