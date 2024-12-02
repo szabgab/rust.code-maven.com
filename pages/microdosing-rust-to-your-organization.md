@@ -1,7 +1,7 @@
 ---
 title: Microdosing Rust to your organization
 timestamp: 2024-12-02T19:30:01
-author: szabgab
+author: aviram-hassan
 published: false
 description:
 tags:
