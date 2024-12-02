@@ -8,6 +8,9 @@ tags:
     - videos
 ---
 
+
+Part of the [Code Maven live](https://live.code-maven.com/) events.
+
 ## Planned events
 
 | When       | event                                                                                                                 |  register |
