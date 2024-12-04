@@ -34,3 +34,9 @@
 ![](examples/yaml/read-yaml-file/out.out)
 
 
+## Read YAML file where some field can have arbitrary values
+{id: yaml-where-some-fields-can-be-arbitrary-values}
+
+![](examples/yaml/deserialize-yaml-where-some-keys-are-arbitrary/data.yaml)
+![](examples/yaml/deserialize-yaml-where-some-keys-are-arbitrary/src/main.rs)
+
