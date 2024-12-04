@@ -20,14 +20,12 @@ fn run(mut terminal: DefaultTerminal) -> io::Result<()> {
     let mut text = String::new();
     loop {
         terminal.draw(|frame| {
-            let greeting = Paragraph::new(text.clone())
-                .white()
-                .on_blue();
+            let greeting = Paragraph::new(text.clone()).white().on_blue();
             frame.render_widget(greeting, frame.area());
         })?;
 
         if let event::Event::Key(key) = event::read()? {
-            if key.kind == KeyEventKind::Press {                 
+            if key.kind == KeyEventKind::Press {
                 // if key.code == KeyCode::Char('q') {
                 //     return Ok(());
                 // }
@@ -55,4 +53,3 @@ fn run(mut terminal: DefaultTerminal) -> io::Result<()> {
         }
     }
 }
-
