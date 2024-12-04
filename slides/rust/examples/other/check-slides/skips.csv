@@ -47,6 +47,7 @@ examples/numbers/small-integers-unfit-in-i8,             -,       true,  true,  
 examples/ownership/mutable-string-in-immutable-variable, -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/ratatui/handle-the-keyboard,                    -,       -,     -,      true,  needs terminal to run
 examples/ratatui/hello-world,                            -,       -,     -,      true,  needs terminal to run
+examples/ratatui/counter,                                -,       -,     -,      true,  needs terminal to run
 examples/rocket/blog-with-fromparam,                     -,       -,     -,      true,  rocket examples are all running a server without stopping so we can't run them in the CI
 examples/rocket/blog-with-guard,                         -,       -,     -,      true,  rocket
 examples/rocket/calculator-with-get,                     -,       -,     -,      true,  rocket
