@@ -426,7 +426,7 @@ fn get_imported_files(md_files: Vec<PathBuf>) -> Vec<String> {
         }
     }
     log::info!("get_imported_files done\n");
-    return Vec::from_iter(imported_files.iter().map(|s| s.to_string()));
+    Vec::from_iter(imported_files.iter().map(|s| s.to_string()))
 }
 
 fn get_md_files() -> Vec<PathBuf> {
