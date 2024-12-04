@@ -40,3 +40,13 @@ Taken from the [Hello world tutorial](https://ratatui.rs/tutorials/hello-world/)
 ![](examples/ratatui/handle-the-keyboard/src/main.rs)
 
 
+## Ratatui - counter
+{id: ratatui-counter}
+
+* A copy of the [counter app](https://ratatui.rs/tutorials/counter-app/)
+
+* Thre is a crash if the counter overflows or underflows!
+
+![](examples/ratatui/counter/Cargo.toml)
+![](examples/ratatui/counter/src/main.rs)
+
