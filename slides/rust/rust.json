@@ -76,6 +76,7 @@
         "rocket.md",
         "surrealdb.md",
         "sea-orm.md",
+        "ratatui.md",
         "other.md"
     ]
 }
