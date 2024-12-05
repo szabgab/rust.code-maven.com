@@ -48,6 +48,9 @@ examples/ownership/mutable-string-in-immutable-variable, -,       true,  true,  
 examples/ratatui/handle-the-keyboard,                    -,       -,     -,      true,  needs terminal to run
 examples/ratatui/hello-world,                            -,       -,     -,      true,  needs terminal to run
 examples/ratatui/counter,                                -,       -,     -,      true,  needs terminal to run
+examples/ratatui/counting-keyboard-events,               -,       -,     -,      true,  needs terminal to run
+examples/ratatui/handle-the-keyboard-state,              -,       -,     -,      true,  needs terminal to run
+examples/ratatui/stop-watch-counter,                     -,       -,     -,      true,  needs terminal to run
 examples/rocket/blog-with-fromparam,                     -,       -,     -,      true,  rocket examples are all running a server without stopping so we can't run them in the CI
 examples/rocket/blog-with-guard,                         -,       -,     -,      true,  rocket
 examples/rocket/calculator-with-get,                     -,       -,     -,      true,  rocket

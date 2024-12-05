@@ -60,13 +60,11 @@ Taken from the [Hello world tutorial](https://ratatui.rs/tutorials/hello-world/)
 
 ![](examples/ratatui/counting-keyboard-events/src/main.rs)
 
-## Ratatui - a stopwatch or automatic counter
+## Ratatui - a stopwatch or automatic counter - blocking vs. polling events
 {id: ratatui-a-stopwatch-or-automatic-counter}
 {i: TODO}
 
-## Ratatui - blocking vs. polling events
-{id: ratatui-blocking-vs-polling-events}
-
+![](examples/ratatui/stop-watch-counter/src/main.rs)
 
 ## Ratatui - counter
 {id: ratatui-counter}
