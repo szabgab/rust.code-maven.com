@@ -41,7 +41,7 @@ impl App {
                 _ => {
                     self.text = format!("{} - {}", key.modifiers, key.code);
                     self.counter += 1;
-                },
+                }
             }
         }
     }
