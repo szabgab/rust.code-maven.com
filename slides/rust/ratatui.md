@@ -1,8 +1,11 @@
 # Ratatui
 {id: ratatui}
 
-## What is rataTUI?
+## What is Ratatui?
 {id: what-is-ratatui}
+
+* TUI = Terminal User Interface
+* [Ratatui](https://ratatui.rs/)
 
 ## Ratatui - Hello World
 {id: ratatui-hello-world}
@@ -38,6 +41,31 @@ Taken from the [Hello world tutorial](https://ratatui.rs/tutorials/hello-world/)
 
 ![](examples/ratatui/handle-the-keyboard/Cargo.toml)
 ![](examples/ratatui/handle-the-keyboard/src/main.rs)
+
+
+## Ratatui - a more structured way to handle state
+{id: ratatui-a-more-structured-way-to-handle-state}
+
+* In this example we a struct, arbitrarily named `App` to repreent the state of the program. It will hold the text to be displayed and a flag indicating if we need to exit the program.
+* We also separated the `draw` and the `handle_key_event` methods and moved the `run` method into the struct.
+* We also implemented the `Widget`. Later we'll use a lot more widgets to improve the look of the application.
+
+![](examples/ratatui/handle-the-keyboard-state/Cargo.toml)
+![](examples/ratatui/handle-the-keyboard-state/src/main.rs)
+
+## Ratatui - counting keyboard events
+{id: ratatui-counting-keyboard-events}
+
+* We have another field in the struct. A number that will be increased on ever press of the keyboard.
+
+![](examples/ratatui/counting-keyboard-events/src/main.rs)
+
+## Ratatui - a stopwatch or automatic counter
+{id: ratatui-a-stopwatch-or-automatic-counter}
+{i: TODO}
+
+## Ratatui - blocking vs. polling events
+{id: ratatui-blocking-vs-polling-events}
 
 
 ## Ratatui - counter
