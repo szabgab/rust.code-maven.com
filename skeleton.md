@@ -14,3 +14,4 @@ todo:
 
 {% youtube id="" %}
 
+<a class="button is-primary" href="">register</a>
