@@ -3,6 +3,7 @@ title: Rust Maven Live presentations
 timestamp: 2024-06-21T10:30:01
 author:
 published: true
+show_related: false
 description:
 tags:
     - videos
