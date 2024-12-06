@@ -6,7 +6,7 @@ published: true
 description:
 ---
 
-In this virtual event [Ohad Dahan](https://www.linkedin.com/in/ohad-dahan-a31033266/), the author of [Block Mesh Network](https://github.com/block-mesh) will introduce us to the project.
+In this virtual event [Ohad Dahan](https://www.linkedin.com/in/ohad-dahan-a31033266/), the author of [BlockMesh Network](https://github.com/block-mesh) will introduce us to the project.
 
 This is part of the [Rust Maven live](/live) series.
 
