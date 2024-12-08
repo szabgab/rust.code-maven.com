@@ -39,4 +39,10 @@ fn main() {
     println!("y: {y}");
 
     println!("x+y = {}", x + y);
+
+    let f = match data.get("f") {
+        Some(val) => val.as_f64().unwrap(),
+        None => panic!("Field y does not exist"),
+    };
+    println!("f: {f}");
 }

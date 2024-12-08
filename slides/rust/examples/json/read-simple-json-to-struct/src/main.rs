@@ -4,6 +4,7 @@ use serde::Deserialize;
 struct Point {
     x: i32,
     y: i32,
+    f: f64,
     text: String,
 }
 
@@ -13,8 +14,9 @@ fn main() {
 
     let data: Point = serde_json::from_str(&content).unwrap();
     println!("data = {:?}", data);
-    println!("{}", data.x + data.y);
-    println!("{}", data.text);
+    println!("x+y:  {}", data.x + data.y);
+    println!("f:    {}", data.f);
+    println!("text: {}", data.text);
     println!();
 
     // Using the Turbofixh syntax

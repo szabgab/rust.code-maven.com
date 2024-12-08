@@ -1,5 +1,6 @@
-data: {"text":"Hello World!","x":1,"y":2}
+data: {"f":4.2,"text":"Hello World!","x":1,"y":2}
 
+"f"
 "text"
 "x"
 "y"
@@ -11,3 +12,4 @@ text: Hello World!
 x: 1
 y: 2
 x+y = 3
+f: 4.2
