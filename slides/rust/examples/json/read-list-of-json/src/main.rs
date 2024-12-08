@@ -18,4 +18,11 @@ fn main() {
         let data = serde_json::from_str::<Thing>(row).unwrap();
         println!("data: {data:#?}");
     }
+
+    // let mut content_as_bytes = std::fs::read(filename).unwrap();
+    // json_lines::from_bytes(&mut content_as_bytes)
+    //     .map(|thing: Thing| {
+    //         println!("thing: {thing:#?}");
+    //     })
+    //     .unwrap();
 }
