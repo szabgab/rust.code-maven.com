@@ -62,7 +62,11 @@ Taken from the [Hello world tutorial](https://ratatui.rs/tutorials/hello-world/)
 
 ## Ratatui - a stopwatch or automatic counter - blocking vs. polling events
 {id: ratatui-a-stopwatch-or-automatic-counter}
-{i: TODO}
+{i: poll}
+
+* At first it still counts every keyboard even as the reading from the keyboard is a blocking call.
+* We can use `event::poll` to check if there is anything to read at all. The `poll` has a timeout.
+* This way we can do work (count) in-between checking for events.
 
 ![](examples/ratatui/stop-watch-counter/src/main.rs)
 
@@ -75,4 +79,20 @@ Taken from the [Hello world tutorial](https://ratatui.rs/tutorials/hello-world/)
 
 ![](examples/ratatui/counter/Cargo.toml)
 ![](examples/ratatui/counter/src/main.rs)
+
+
+## Ratatui - confirmation popup to verify intent to exit
+{id: ratatui-confirmation-popup}
+{i: TODO}
+
+## Ratatui - widgets
+{id: ratatui-widgets}
+{i: TODO}
+
+Show various widgets and how to work with them.
+
+![](examples/ratatui/widgets/src/main.rs)
+
+
+
 
