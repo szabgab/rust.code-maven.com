@@ -17,6 +17,46 @@ cargo add serde_json
 cargo add serde -F derive
 ```
 
+## Read and deserialize key-value pair JSON into HashMap
+{id: read-and-deserialize-key-value-paor-json-into-hashmap}
+
+* If we have a JSON file with arbitrary key-value pairs were all the keys are the same type and all the values are the same type then we can read them into a HashMap.
+
+* In this case all the keys are strings and all the values are integers. (positive integers that can fit in `u16`).
+* [Centepide](https://en.wikipedia.org/wiki/Centipede) has between 15-191 pairs of leggs and the number of pairs is always odd. So there are no Centipedes with 100 leggs.
+
+![](examples/json/deserialize-to-hashmap/data.json)
+
+![](examples/json/deserialize-to-hashmap/out.out)
+
+![](examples/json/deserialize-to-hashmap/src/main.rs)
+
+
+## Serialize and deserialize HashMap to JSON in Rust
+{id: serialize-and-deserialize-hashmap-to-json}
+{i: json}
+{i: HashMap}
+
+* If we have a `HashMap` we can easily serialize it into a JSON string (which we can save to a file if we want to).
+* And we can deserialize back to HashMap and check that we get back the same data.
+
+![](examples/json/serialize-hashmap/Cargo.toml)
+
+![](examples/json/serialize-hashmap/src/main.rs)
+
+![](examples/json/serialize-hashmap/out.out)
+
+
+## Deserialize JSON array - a list of string into a Vector
+{id: deserialize-json-array-into-a-vector}
+
+![](examples/json/deserialize-to-vector/data.json)
+
+![](examples/json/deserialize-to-vector/out.out)
+
+![](examples/json/deserialize-to-vector/src/main.rs)
+
+
 ## Read Simple JSON file manually
 {id: read-simple-json-manually}
 {i: serde_json}
@@ -96,6 +136,18 @@ cargo run ../person.json
 
 ![](examples/json/read-person/out.out)
 
+## Read JSON avoid extra fields - deny_unknown_fields
+{id: read-json-avoid-extra-fields}
+{i: deny_unknown_fields}
+
+* What should happen if a new field is added to the JSON, but our code is not updated yet?
+* Should we let it slide, or should we report an error?
+
+![](examples/json/avoid-extra-fields/src/main.rs)
+
+![](examples/json/avoid-extra-fields/out.out)
+
+
 ## JSON files - missing fields
 {id: json-missing-fields}
 
@@ -114,29 +166,82 @@ cargo run ../person.json
 ![](examples/json/set-default-values/out.out)
 
 
-## Read JSON with Optional fields
+## Read JSON with optional fields: Option or default value?
 {id: read-json-with-optional-fields}
 {i: Option}
 
-![](examples/json/read-with-optional-field/just_name.json)
-![](examples/json/read-with-optional-field/no_name.json)
-![](examples/json/read-with-optional-field/married_no_language.json)
-![](examples/json/read-with-optional-field/married_with_python.json)
-![](examples/json/read-with-optional-field/single_with_python.json)
+* In this example we expect the JSON to have 3 fields: `name`, `language`, and `married`.
+* `name` is required field.
+* `language` is optional, if not provided we set a default value.
+* `married` is optional, if not provied we set `None`.
+
+The type of the values is not releavant for the example.
 
 ![](examples/json/read-with-optional-field/src/main.rs)
 
+![](examples/json/read-with-optional-field/just_name.json)
 
-## Read JSON avoid extra fields - deny_unknown_fields
-{id: read-json-avoid-extra-fields}
-{i: deny_unknown_fields}
+```
+$ cargo run -q just_name.json
+Person {
+    name: "Foo",
+    language: "Rust",
+    married: None,
+}
+We don't know if Foo is married or not
+```
 
-* What should happen if a new field is added to the JSON, but our code is not updated yet?
-* Should we let it slide, or should we report an error?
+![](examples/json/read-with-optional-field/no_name.json)
 
-![](examples/json/avoid-extra-fields/src/main.rs)
+```
+$ cargo run -q no_name.json
+thread 'main' panicked at src/main.rs:23:57:
+JSON parsing error: Error("missing field `name`", line: 4, column: 1)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+```
 
-![](examples/json/avoid-extra-fields/out.out)
+![](examples/json/read-with-optional-field/married_no_language.json)
+
+```
+$ cargo run -q married_no_language.json
+Person {
+    name: "Foo",
+    language: "Rust",
+    married: Some(
+        true,
+    ),
+}
+Marrige status: true
+```
+
+![](examples/json/read-with-optional-field/married_with_python.json)
+
+```
+$ cargo run -q married_with_python.json
+Person {
+    name: "Foo",
+    language: "Python",
+    married: Some(
+        true,
+    ),
+}
+Marrige status: true
+```
+
+
+![](examples/json/read-with-optional-field/single_with_python.json)
+
+```
+$ cargo run -q single_with_python.json
+Person {
+    name: "Foo",
+    language: "Python",
+    married: Some(
+        false,
+    ),
+}
+Marrige status: false
+```
 
 
 ## Alias some fields in JSON (handle dash in JSON keys)
@@ -169,18 +274,6 @@ cargo run ../person.json
 ![](examples/json/read-list-of-json/src/main.rs)
 
 ![](examples/json/read-list-of-json/out.out)
-
-
-## Serialize and deserialize HashMap to JSON in Rust
-{id: serialize-and-deserialize-hashmap-to-json}
-{i: json}
-{i: HashMap}
-
-![](examples/json/serialize-hashmap/Cargo.toml)
-
-![](examples/json/serialize-hashmap/src/main.rs)
-
-![](examples/json/serialize-hashmap/out.out)
 
 
 ## JSON serialize struct

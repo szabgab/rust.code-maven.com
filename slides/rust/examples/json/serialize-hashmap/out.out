@@ -1,4 +1,4 @@
-{"foo": 23, "bar": 42}
-{"foo":23,"bar":42}
-{"bar": 42, "foo": 23}
-{"foo": 23, "bar": 42}
+data_before:  {"foo": 23, "bar": 42}
+serialized:   {"foo":23,"bar":42}
+deserialized: {"foo": 23, "bar": 42}
+turbofish:    {"bar": 42, "foo": 23}

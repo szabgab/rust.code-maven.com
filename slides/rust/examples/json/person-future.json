@@ -1,0 +1,21 @@
+{
+    "fname": "Foo",
+    "lname": "Bar",
+    "year": 1992,
+    "height": 178.2,
+    "married": true,
+    "numbers": [23, 19, 42],
+    "children": [
+        {
+            "name": "Alpha",
+            "birthdate": 2020
+        },
+        {
+            "name": "Beta",
+            "birthdate": 2022
+        },
+        {
+            "name": "Future"
+        }
+    ]
+}

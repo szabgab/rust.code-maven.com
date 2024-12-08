@@ -1,0 +1,2 @@
+leggs:     {"ant": 6, "snake": 0, "centipede": 100, "spider": 8, "cat": 4, "chicken": 2}
+turbofish: {"spider": 8, "ant": 6, "centipede": 100, "chicken": 2, "snake": 0, "cat": 4}
