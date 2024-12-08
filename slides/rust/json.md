@@ -108,6 +108,8 @@ cargo run ../person.json
 
 ![](examples/json/person.json)
 
+![](examples/json/person-future.json)
+
 ![](examples/json/read-json-from-reader-manually/Cargo.toml)
 
 ![](examples/json/read-json-from-reader-manually/src/main.rs)
@@ -131,6 +133,7 @@ cargo run ../person.json
 
 ## Read complex JSON
 {id: read-complex-json}
+
 
 ![](examples/json/read-person/src/main.rs)
 
@@ -258,6 +261,7 @@ Marrige status: false
 {id: read-json-to-vector}
 
 * Sometimes the root of the JSON struct is a list that contains structures of key-value pairs. We can read that into a vector of structs.
+* We already saw this, but then the values were plain strings. Now they are parsed into a struct.
 
 ![](examples/json/read-json-to-vector/data.json)
 
@@ -265,9 +269,14 @@ Marrige status: false
 
 ![](examples/json/read-json-to-vector/out.out)
 
-## Read lists of JSON structures
+## Read lists of JSON structures JSON-lines
 {id: read-list-of-json-structures}
 {i: TODO}
+
+* [JSON lines](https://jsonlines.org/)
+
+* See also [jsonl](https://crates.io/crates/jsonl), [json-lines](https://crates.io/crates/json-lines)
+
 
 ![](examples/json/read-list-of-json/data.json)
 
