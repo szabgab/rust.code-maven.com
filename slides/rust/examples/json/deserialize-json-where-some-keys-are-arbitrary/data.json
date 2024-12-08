@@ -1,0 +1,12 @@
+{
+    "title": "Sample file",
+    "jobs": {
+        "test": {
+            "runs-on": "ubuntu"
+        },
+        "build": {
+            "runs-on": "windows"
+        }
+    }
+}
+

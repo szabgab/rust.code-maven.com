@@ -1,0 +1,29 @@
+Object {
+    "jobs": Object {
+        "build": Object {
+            "runs-on": String("windows"),
+        },
+        "test": Object {
+            "runs-on": String("ubuntu"),
+        },
+    },
+    "title": String("Sample file"),
+}
+--------
+title: Sample file
+{
+    "build": Object {
+        "runs-on": String("windows"),
+    },
+    "test": Object {
+        "runs-on": String("ubuntu"),
+    },
+}
+key: "build"  value: Object {"runs-on": String("windows")}
+key: "test"  value: Object {"runs-on": String("ubuntu")}
+--------
+data = Config { title: "Sample file", jobs: {"build": Job { runs_on: windows }, "test": Job { runs_on: ubuntu }} }
+title: Sample file
+["build", "test"]
+key: "build" Job { runs_on: windows }
+key: "test" Job { runs_on: ubuntu }

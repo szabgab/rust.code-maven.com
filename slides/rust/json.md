@@ -309,6 +309,20 @@ Marrige status: false
 ![](examples/json/serde-demo/Cargo.toml)
 ![](examples/json/serde-demo/src/main.rs)
 
+## Read and deserialize JSON file where some fields can have arbitrary values
+{id: read-and-deserialize-json-where-some-fields-can-have-arbitrary-values}
+
+* Defined fields: title, jobs, runs-on
+* Values selected from a well defined list: ubuntu, windows
+* User supplied values: test, build, "Sample file"
+
+![](examples/json/deserialize-json-where-some-keys-are-arbitrary/data.json)
+
+![](examples/json/deserialize-json-where-some-keys-are-arbitrary/out.out)
+
+![](examples/json/deserialize-json-where-some-keys-are-arbitrary/src/main.rs)
+
+
 
 ## JSON serialize examples
 {id: json-serialize-examples}
