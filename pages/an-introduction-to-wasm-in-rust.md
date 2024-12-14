@@ -10,7 +10,7 @@ In this virtual event [Márk Tolmács](https://marktolmacs.com/), the author of 
 
 This is part of the [Rust Maven live](/live) series.
 
-![](images/mark-tolmacs.jpeg)
+![Márk Tolmács](images/mark-tolmacs.jpeg)
 
 
 <a class="button is-primary" href="https://www.meetup.com/code-mavens/events/305064546/">register</a>

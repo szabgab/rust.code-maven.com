@@ -10,5 +10,6 @@ In this virtual event [Ohad Dahan](https://www.linkedin.com/in/ohad-dahan-a31033
 
 This is part of the [Rust Maven live](/live) series.
 
+![Ohad Dahan](images/ohad-dahan.jpeg)
 
 <a class="button is-primary" href="https://www.meetup.com/code-mavens/events/304951805/">register</a>

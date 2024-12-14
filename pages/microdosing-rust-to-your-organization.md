@@ -1,7 +1,7 @@
 ---
 title: Microdosing Rust to your organization
 timestamp: 2024-12-02T19:30:01
-author: aviram-hassan
+author: szabgab
 published: true
 description:
 ---
@@ -11,6 +11,7 @@ You can start using Rust in your organization without refactoring or rewriting t
 * Language: English
 * Location: Zoom
 
+![Aviram Hassan](images/aviram-hassan.jpeg)
 
 ## Speaker
 
