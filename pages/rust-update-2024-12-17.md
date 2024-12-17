@@ -8,6 +8,11 @@ tags:
     - popularity
 ---
 
+While the technical capabilities of a programming language are very important, the social acceptance of the language also has a huge
+impact on ecosystem around the language.
+
+It is also a good (or at least reasonable) measurement of the popularity of the language.
+
 The [Rust user groups](/user-groups) page was updated exactly 6 months ago so today, December 17 is the day I share the new report.
 
 The [report on 2024.06.17](/rust-update-2024-06-17).
@@ -15,15 +20,6 @@ The [report on 2024.06.17](/rust-update-2024-06-17).
 ## Rust User Groups
 
 There are mostly Meetup groups in [the list](/user-groups), though some use different platforms. In some cases the number of members cannot be determined.
-
-
-| action                                 | no. groups | members | commit |
-| -------------------------------------- | ---------- | ------- | ------ |
-| Before                                 | 116        | 68,126  |        |
-| Update members removed closed groups   | 107        | 71,116  | [commit](https://github.com/szabgab/rust.code-maven.com/commit/92815e1ac5f55a651acdde2a0ad191693976048f) |
-| Add group I did not know about earlier | 132        | 77,688  | [commit](https://github.com/szabgab/rust.code-maven.com/commit/32a557b02ff2d9b36f0b2ed3c4cc5536297479b5) |
-| Sort groups                            | | | [commit](https://github.com/szabgab/rust.code-maven.com/commit/4ef74d46ff015866226eb4cff462ec06b0b43bfb) |
-
 
 Overall:
 
@@ -34,7 +30,7 @@ Overall:
 | 2024.06.17 | 116        | 68,126  |  2,926 |
 | 2024.12.17 | 132        | 77,688  |  9,562 |
 
-In the last 6 month the number of mmers grew by 14%. Thats over 30% annually.
+In the last 6 monthes the number of members grew by 14%. Thats over 30% annually.
 
 In the previous 3 month the growth was 4.4% or roughly 20% annually.
 
@@ -49,6 +45,17 @@ I did not include it in the list.
 Since the previous report the **Rust in Israel** group I created gained 200 members, but then a few weeks ago I inherited the [Rust Tel Aviv](https://www.meetup.com/rust-tlv/) group with 950 and asked all the people to move over. It now has 1,011 members.
 
 For full details, see of [Rust User Groups](/user-groups).
+
+I update the figures in several commit that will allow someone to check the changes more easily. Here are the commits.
+
+| action                                 | no. groups | members | commit |
+| -------------------------------------- | ---------- | ------- | ------ |
+| Before                                 | 116        | 68,126  |        |
+| Update members removed closed groups   | 107        | 71,116  | [commit](https://github.com/szabgab/rust.code-maven.com/commit/92815e1ac5f55a651acdde2a0ad191693976048f) |
+| Add group I did not know about earlier | 132        | 77,688  | [commit](https://github.com/szabgab/rust.code-maven.com/commit/32a557b02ff2d9b36f0b2ed3c4cc5536297479b5) |
+| Sort groups                            | 132        | 77,688  | [commit](https://github.com/szabgab/rust.code-maven.com/commit/4ef74d46ff015866226eb4cff462ec06b0b43bfb) |
+
+
 
 ## Rust on LinkedIn
 
