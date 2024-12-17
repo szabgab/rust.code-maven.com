@@ -11,3 +11,6 @@ The [thousands](https://crates.io/crates/thousands) crate is a small crate that 
 During this even we go over the implementation of this crate.
 
 {% youtube id="ITTj7ByNStE" file="2024-12-17-rust-code-reading-the-thousands-crate-english.mp4" %}
+
+Part of the [live events](/live).
+
