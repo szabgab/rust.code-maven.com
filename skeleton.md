@@ -13,6 +13,6 @@ todo:
 
 {% include file="" %}
 
-{% youtube id="" %}
+{% youtube id="" file="" %}
 
 <a class="button is-primary" href="">register</a>
