@@ -5,11 +5,11 @@ use ratatui::{
     buffer::Buffer,
     crossterm::event::{self, KeyCode, KeyEventKind},
     layout::Rect,
-    style::Stylize,
-    widgets::{Block, Paragraph, Widget},
-    DefaultTerminal, Frame,
-    text::{Line, Text},
+    style::{Style, Stylize},
     symbols::border,
+    text::{Line, Text},
+    widgets::{Block, List, ListDirection, ListState, Paragraph, StatefulWidget, Widget},
+    DefaultTerminal, Frame,
 };
 
 #[derive(Debug, Default)]
@@ -63,15 +63,14 @@ impl Widget for &App {
                     "Centered Value: ".to_string().black().on_white(),
                     self.counter.to_string().red(),
                 ])]);
-        
+
                 Paragraph::new(text)
                     .centered()
                     .on_light_blue()
                     .render(area, buf);
-        
             },
 
-            0 => {
+            4 => {
                 let title = Line::from(" Counter App Tutorial ".bold());
                 let instructions = Line::from(vec![
                     " Decrement ".into(),
@@ -85,18 +84,41 @@ impl Widget for &App {
                     .title(title.centered())
                     .title_bottom(instructions.centered())
                     .border_set(border::THICK);
-        
+
                 let counter_text = Text::from(vec![Line::from(vec![
                     "Value: ".into(),
                     self.counter.to_string().yellow(),
                 ])]);
-        
+
                 Paragraph::new(counter_text)
                     .centered()
                     .block(block)
                     .render(area, buf);
-                
             },
+
+            5 => {
+                let items = ["Item 1", "Item 2", "Item 3"];
+                let list = List::new(items)
+                    .block(Block::bordered().title("List"))
+                    .style(Style::new().black())
+                    .highlight_style(Style::new().italic())
+                    .highlight_symbol(">>")
+                    .repeat_highlight_symbol(true)
+                    .direction(ListDirection::BottomToTop);
+                Widget::render(list, area, buf);
+            },
+
+            0 => {
+                let mut state = ListState::default();
+let items = ["Item 1", "Item 2", "Item 3"];
+let list = List::new(items)
+    .block(Block::bordered().title("List"))
+    .highlight_style(Style::new().reversed())
+    .highlight_symbol(">>")
+    .repeat_highlight_symbol(true);
+
+    StatefulWidget::render(list, area, buf, &mut state)
+            }
 
             _ => Paragraph::new(format!("Not implemented: {} Press the left and right arrows to cycle throught the examples.", self.counter))
                 .white()
@@ -113,4 +135,3 @@ fn main() -> io::Result<()> {
     ratatui::restore();
     app_result
 }
-
