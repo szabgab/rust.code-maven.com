@@ -18,6 +18,8 @@ Part of the [Code Maven live](https://live.code-maven.com/) events.
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | 2025.01.08 | [BlockMesh Network implemented in Rust with Ohad Dahan](/block-mesh-network)                                          | [register](https://www.meetup.com/code-mavens/events/304951805/) |
 | 2025.01.15 | [An introduction to WASM in Rust with Márk Tolmács](/an-introduction-to-wasm-in-rust)                                 | [register](https://www.meetup.com/code-mavens/events/305064546/) |
+| 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](/are-we-embedded-yet)     | [register](https://www.meetup.com/code-mavens/events/305382647/) |
+
 
 ## Call for Participation
 
