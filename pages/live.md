@@ -16,7 +16,6 @@ Part of the [Code Maven live](https://live.code-maven.com/) events.
 
 | When       | event                                                                                                                 |  register                                                        |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 2025.01.08 | [BlockMesh Network implemented in Rust with Ohad Dahan](/block-mesh-network)                                          | [register](https://www.meetup.com/code-mavens/events/304951805/) |
 | 2025.01.15 | [An introduction to WASM in Rust with Márk Tolmács](/an-introduction-to-wasm-in-rust)                                 | [register](https://www.meetup.com/code-mavens/events/305064546/) |
 | 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](/are-we-embedded-yet)     | [register](https://www.meetup.com/code-mavens/events/305382647/) |
 
@@ -43,5 +42,6 @@ I would like to invite you to be a guest on one of these live events. There are 
 | 2024.08.06 | [Web development in Rust using Rocket - part 2](/web-development-in-rust-using-rocket-building-a-job-board)           | [event](https://www.meetup.com/code-mavens/events/301736709/) |
 | 2024.08.28 | [Command Line Tools: Implementing wc in Rust](/implementing-wc-in-rust)                                               | [event](https://www.meetup.com/code-mavens/events/302151487/) |
 | 2024.12.17 | [Rust Source Code Reading: The thousands crate with Gabor Szabo](/the-thousands-crate)                                | [event](https://www.meetup.com/code-mavens/events/304824684/) |
+| 2025.01.08 | [BlockMesh Network implemented in Rust with Ohad Dahan](/block-mesh-network)                                          | [event](https://www.meetup.com/code-mavens/events/304951805/) |
 
 
