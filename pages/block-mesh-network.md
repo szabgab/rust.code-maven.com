@@ -16,6 +16,7 @@ Some projects that are used in BlockMesh or were mentione for some other reason.
 * [Diesel](https://diesel.rs/)
 * [Leptos](https://www.leptos.dev/)
 * [Cloudflare](https://www.cloudflare.com/)
+* [Bright Data](https://brightdata.com/)
 
 This is part of the [Rust Maven live](/live) series.
 
