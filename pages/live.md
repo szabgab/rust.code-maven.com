@@ -16,9 +16,9 @@ Part of the [Code Maven live](https://live.code-maven.com/) events.
 
 | When       | event                                                                                                                 |  register                                                        |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 2025.01.15 | [An introduction to WASM in Rust with Márk Tolmács](/an-introduction-to-wasm-in-rust)                                 | [register](https://www.meetup.com/code-mavens/events/305064546/) |
-| 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](/are-we-embedded-yet)     | [register](https://www.meetup.com/code-mavens/events/305382647/) |
-
+| 2025.01.15 | [An introduction to WASM in Rust with Márk Tolmács](https://rust.code-maven.com/an-introduction-to-wasm-in-rust)                                 | [register](https://www.meetup.com/code-mavens/events/305064546/) |
+| 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](https://rust.code-maven.com/are-we-embedded-yet)     | [register](https://www.meetup.com/code-mavens/events/305382647/) |
+| 2025.02.11 | [Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic](https://rust.code-maven.com/meet-elusion-mew-dataframe-library)   | [register](https://www.meetup.com/code-mavens/events/305513416/) |
 
 ## Call for Participation
 
