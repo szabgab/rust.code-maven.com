@@ -13,4 +13,4 @@ description:
 
 I will have a brief introduction about blockchain and it's components. For maybe 15 minutes. Then we move on to building our own blockchain from scratch with just Rust and some cryptography libraries. I think we can do that in 45 minutes.
 
-![Sourav Mishra](images/sourav-mishra.jpeg)
+![Sourav Mishra](images/sourav-mishra.png)
