@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Part of the [Code Maven live](https://live.code-maven.com/) events.
+Part of the [Code Maven live](https://live.code-maven.com/) events organized in the [Code Mavens](https://www.meetup.com/code-mavens/) Meetup group.
 
 ## Planned events
 
