@@ -1,6 +1,6 @@
 ---
 title: An introduction to WASM in Rust with Márk Tolmács
-timestamp: 2024-12-14T10:30:01
+timestamp: 2025-01-16T10:30:01
 author: szabgab
 published: true
 description:
@@ -18,4 +18,4 @@ Mark is a veteran IT professional who created complex software solutions for ove
 ![Márk Tolmács](images/mark-tolmacs.jpeg)
 
 
-<a class="button is-primary" href="https://www.meetup.com/code-mavens/events/305064546/">register</a>
+{% youtube id="kdHfOhBdv1E" file="2025-01-15-rust-english-wasm-with-mark-tolmacs.mp4" %}
