@@ -19,6 +19,7 @@ Mark is a veteran IT professional who created complex software solutions for ove
 
 * [A Gentle Introduction to WebAssembly in Rust (2025 Edition)](https://dev.to/marktolmacs/a-gentle-introduction-to-webassembly-in-rust-2025-edition-1iac)
 * [Vite](https://vite.dev/)
+* [The repository](https://github.com/szabgab/wasm-on-web-2025-01-15-with-mark-tolmacs)
 
 
 {% youtube id="kdHfOhBdv1E" file="2025-01-15-rust-english-wasm-with-mark-tolmacs.mp4" %}
