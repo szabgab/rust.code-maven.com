@@ -18,7 +18,8 @@ Part of the [Code Maven live](https://live.code-maven.com/) events organized in 
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](https://rust.code-maven.com/are-we-embedded-yet)   | [register](https://www.meetup.com/code-mavens/events/305382647/) |
 | 2025.02.11 | [Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic](https://rust.code-maven.com/meet-elusion-mew-dataframe-library) | [register](https://www.meetup.com/code-mavens/events/305513416/) |
-| 2025.03.09 | [Creating A Mock Blockchain in Rust with Sourav Mishra](https://rust.code-maven.com//creating-a-mock-blockchain-in-rust)                       | [register](https://www.meetup.com/code-mavens/events/305587087/) |
+| 2025.03.06 | [Ratatui - Terminal User Interface in Rust with Orhun Parmaksız](https://rust.code-maven.com/ratatui-tui-in-rust)                              | [register](https://www.meetup.com/code-mavens/events/305750365/) |
+| 2025.03.09 | [Creating A Mock Blockchain in Rust with Sourav Mishra](https://rust.code-maven.com/creating-a-mock-blockchain-in-rust)                        | [register](https://www.meetup.com/code-mavens/events/305587087/) |
 
 ## Call for Participation
 
