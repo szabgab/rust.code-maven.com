@@ -21,6 +21,8 @@ Part of the [Code Maven live](https://live.code-maven.com/) events organized in 
 | 2025.03.04 | [Parsing with Winnow in Rust with Kenny Flegal](https://rust.code-maven.com/parsing-with-winnow)                                               | [register](https://www.meetup.com/code-mavens/events/305793122/) |
 | 2025.03.06 | [Ratatui - Terminal User Interface in Rust with Orhun Parmaksız](https://rust.code-maven.com/ratatui-tui-in-rust)                              | [register](https://www.meetup.com/code-mavens/events/305750365/) |
 | 2025.03.09 | [Creating A Mock Blockchain in Rust with Sourav Mishra](https://rust.code-maven.com/creating-a-mock-blockchain-in-rust)                        | [register](https://www.meetup.com/code-mavens/events/305587087/) |
+| 2025.03.18 | [crum: Complex Numbers and Complex Matrices in Rust with Frans Slabber](https://rust.code-maven.com/crum)                                      | [register](https://www.meetup.com/code-mavens/events/305823397/) |
+
 
 ## Call for Participation
 
