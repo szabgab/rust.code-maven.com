@@ -17,3 +17,5 @@ It made the installation of 3rd party libraries a nightmare. In some cases we ha
 
 I wonder if there are any tools in Rust supporting such a development environment that would eliminate most of the manual work?
 
+Explore [panamax](https://github.com/panamax-rs/panamax)
+
