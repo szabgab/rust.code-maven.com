@@ -20,4 +20,5 @@ Currently a Digital Design Engineer at ARBE robotics Been doing embedded, board 
 
 ![Maor Malka](images/maor-malka.jpeg)
 
-<a class="button is-primary" href="https://www.meetup.com/code-mavens/events/305382647/">register</a>
+{% youtube id="NclcQcNcLI4" file="2025-01-30-are-we-embedded-yet-implementing-tiny-http-server-on-a-microcontroller.mp4" %}
+
