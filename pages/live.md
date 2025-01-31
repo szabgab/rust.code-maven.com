@@ -16,7 +16,6 @@ Part of the [Code Maven live](https://live.code-maven.com/) events organized in 
 
 | When       | event                                                                                                                 |  register                                                        |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](https://rust.code-maven.com/are-we-embedded-yet)   | [register](https://www.meetup.com/code-mavens/events/305382647/) |
 | 2025.02.11 | [Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic](https://rust.code-maven.com/meet-elusion-mew-dataframe-library) | [register](https://www.meetup.com/code-mavens/events/305513416/) |
 | 2025.03.04 | [Parsing with Winnow in Rust with Kenny Flegal](https://rust.code-maven.com/parsing-with-winnow)                                               | [register](https://www.meetup.com/code-mavens/events/305793122/) |
 | 2025.03.06 | [Ratatui - Terminal User Interface in Rust with Orhun Parmaksız](https://rust.code-maven.com/ratatui-tui-in-rust)                              | [register](https://www.meetup.com/code-mavens/events/305750365/) |
@@ -48,5 +47,6 @@ I would like to invite you to be a guest on one of these live events. There are 
 | 2024.12.17 | [Rust Source Code Reading: The thousands crate with Gabor Szabo](/the-thousands-crate)                                | [event](https://www.meetup.com/code-mavens/events/304824684/) |
 | 2025.01.08 | [BlockMesh Network implemented in Rust with Ohad Dahan](/block-mesh-network)                                          | [event](https://www.meetup.com/code-mavens/events/304951805/) |
 | 2025.01.15 | [An introduction to WASM in Rust with Márk Tolmács](https://rust.code-maven.com/an-introduction-to-wasm-in-rust)      | [event](https://www.meetup.com/code-mavens/events/305064546/) |
+| 2025.01.30 | [Are We Embedded Yet? - Implementing tiny HTTP server on a microcontroller with Maor Malka](https://rust.code-maven.com/are-we-embedded-yet)   | [event](https://www.meetup.com/code-mavens/events/305382647/) |
 
 
