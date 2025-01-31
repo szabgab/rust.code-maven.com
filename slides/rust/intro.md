@@ -95,6 +95,8 @@
 * [Zero To Production In Rust](https://www.zero2prod.com/)
 * [Rust Atomics and Locks](https://marabos.nl/atomics/) by Mara Bos
 
+* [Learn Rust in a month of lunches](https://www.manning.com/books/learn-rust-in-a-month-of-lunches)
+
 
 Publishers
 * [Manning](https://www.manning.com/)
