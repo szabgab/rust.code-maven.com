@@ -99,6 +99,7 @@ If the user supplies a value that cannot be converted to the appropriate type th
 For example here were provide 500 to the `small` parameter that is defined as `u8` that means it is expected to be between 0-255.
 
 
+```
 $ cargo run -- --host 127.0.0.1 --port 5000 --small 500 --float 3.14 --path .
 
 error: invalid value '500' for '--small <SMALL>': 500 is not in 0..=255

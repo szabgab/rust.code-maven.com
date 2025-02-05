@@ -75,8 +75,10 @@ Then using [map](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.m
 a comma (`,`) after each 3rd character. Actually, we add a comma **in-front** the character whose index is 1 modulo 3 (`ix % 3 == 1`).
 This way we can make sure that we convert `123456` to `123,456` and not to `,123,456`.
 
-The we call [collect](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect) and provide the type using the turbofish syntax:
-```::<String>`.
+Then we call [collect](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect) and provide the type using the turbofish syntax:
+```
+::<String>
+```
 
 The result is a string with all the commas.
 
