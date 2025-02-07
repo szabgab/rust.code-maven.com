@@ -162,3 +162,15 @@ TODO: show the constructor example without lifetimes
 TODO: Show ordering of simple enums and enums that can have different variants
 TODO: show enum where one of the variants have more than one values or a value which is complex (e.g. tuple or struct)
 
+## Iterate over the variants of an enum
+{id: iterate-over-variants-of-enum}
+
+Sometimes we need to go over all the variants of an enum and do something for each one of them.
+
+![](list-variants/Cargo.toml)
+
+![](list-variants/src/main.rs)
+
+![](list-variants/out.out)
+
+
