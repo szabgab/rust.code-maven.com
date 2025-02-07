@@ -229,6 +229,8 @@ liquid = "0.26.4"
 ## Liquid assign to variable in template
 {id: liquid-assign}
 {i: assign}
+{i: set}
+{i: let}
 
 ![](examples/liquid/liquid-assign/src/main.rs)
 
@@ -450,6 +452,15 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 ![](examples/liquid/tag-include/files/hello.txt)
 ![](examples/liquid/tag-include/src/include_tag.rs)
 ![](examples/liquid/tag-include/src/main.rs)
+
+## Liquid sort array or vector
+{id: liquid-sort-array}
+{i: sort}
+{i: assign}
+
+![](sorted-array/Cargo.toml)
+![](sorted-array/src/main.rs)
+![](sorted-array/out.out)
 
 
 ## Liquid TODO
