@@ -298,4 +298,10 @@ Adding them together should result in
 ![](examples/hashes/total-values-function/src/main.rs)
 ![](examples/hashes/total-values-function/out.out)
 
+## Convert HashMap to vector of tuples and sort by key or by value
+{id: convert-hashmap-to-vector-and-sort-by-key-or-by-value}
+
+![](examples/hashes/hash-to-vector-of-tuples/src/main.rs)
+![](examples/hashes/hash-to-vector-of-tuples/out.out)
+
 

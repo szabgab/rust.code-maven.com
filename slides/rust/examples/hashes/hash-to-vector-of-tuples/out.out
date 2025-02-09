@@ -1,0 +1,7 @@
+animals: {"dog": 3, "snake": 4, "cat": 2, "crab": 5}
+("dog", 3)
+("snake", 4)
+("cat", 2)
+("crab", 5)
+animals: [("cat", 2), ("crab", 5), ("dog", 3), ("snake", 4)]
+animals: [("cat", 2), ("dog", 3), ("snake", 4), ("crab", 5)]
