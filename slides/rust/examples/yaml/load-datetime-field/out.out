@@ -1,0 +1,4 @@
+Event1 { title: "Some title", start: "2025-02-08T10:00:00-08:00" }
+Event2 { title: "Some title", start: 2025-02-08T18:00:00Z }
+hour: 18
+timezone: UTC

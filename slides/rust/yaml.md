@@ -40,3 +40,13 @@
 ![](examples/yaml/deserialize-yaml-where-some-keys-are-arbitrary/data.yaml)
 ![](examples/yaml/deserialize-yaml-where-some-keys-are-arbitrary/src/main.rs)
 
+## Deserialize date in YAML
+{id: deserialize-date-in-yaml}
+
+![](examples/yaml/load-datetime-field/data.yaml)
+
+![](examples/yaml/load-datetime-field/Cargo.toml)
+![](examples/yaml/load-datetime-field/src/main.rs)
+
+![](examples/yaml/load-datetime-field/out.out)
+
