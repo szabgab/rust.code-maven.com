@@ -2,7 +2,7 @@ fn main() {
     let numbers: Vec<i32> = vec![-7, 0, 1, 2, 22, 23];
     println!("{:?}", &numbers);
 
-    let same_numbers: Vec<i32> = numbers.iter().filter(|_number| true).cloned().collect();
+    let same_numbers: Vec<i32> = numbers.into_iter().filter(|_number| true).collect();
     println!("{:?}", &same_numbers);
 
     // get vector of i32 references

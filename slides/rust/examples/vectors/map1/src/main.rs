@@ -1,9 +1,9 @@
 fn main() {
     let chars = vec!['a', 'b', 'c'];
-    let mut c = 0;
+    let mut cnt = 0;
     let pairs = chars.into_iter().map(|letter| {
-        c += 1;
-        (letter, c)
+        cnt += 1;
+        (letter, cnt)
     });
     for pair in pairs {
         println!("{pair:?}");
