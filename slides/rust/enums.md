@@ -167,10 +167,10 @@ TODO: show enum where one of the variants have more than one values or a value w
 
 Sometimes we need to go over all the variants of an enum and do something for each one of them.
 
-![](list-variants/Cargo.toml)
+![](examples/enums/list-variants/Cargo.toml)
 
-![](list-variants/src/main.rs)
+![](examples/enums/list-variants/src/main.rs)
 
-![](list-variants/out.out)
+![](examples/enums/list-variants/out.out)
 
 
