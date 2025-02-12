@@ -302,6 +302,7 @@ inside the `map`.
 ![](examples/vectors/map2/out.out)
 
 * If we first call `map` and only then `rev` we would expect that first the numbers are generated and then the wholething is reversed, but that's not the case.
+
 ```
 c 3
 b 2
