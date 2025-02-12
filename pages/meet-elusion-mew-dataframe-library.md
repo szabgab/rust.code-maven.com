@@ -14,7 +14,9 @@ Introducing [Elusion Library](https://github.com/databora/elusion), the brand-ne
 
 ![Borivoj Grujicic](images/borivoj-grujicic.jpeg)
 
+* [Borivoj Grujicic](https://www.linkedin.com/in/borivojgrujicic/)
 
+* [slides](/examples/meet-elusion-mew-dataframe-library.pptx)
 
 {% youtube id="H-GhJIFreHY" file="2025-02-11-meet-elusion-new-dataFrame-library-powered-by-rust.mp4" %}
 
