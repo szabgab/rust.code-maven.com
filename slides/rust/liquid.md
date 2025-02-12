@@ -458,9 +458,9 @@ This is probably the simplest example of extending the Liquid syntax by new tags
 {i: sort}
 {i: assign}
 
-![](sorted-array/Cargo.toml)
-![](sorted-array/src/main.rs)
-![](sorted-array/out.out)
+![](examples/liquid/sorted-array/Cargo.toml)
+![](examples/liquid/sorted-array/src/main.rs)
+![](examples/liquid/sorted-array/out.out)
 
 
 ## Liquid TODO
