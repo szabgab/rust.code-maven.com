@@ -21,3 +21,6 @@ examples/surrealdb/cli-multi-counter/db/
 slides/rust/examples/surrealdb/embedded-rocksdb/tempdb/
 slides/rust/examples/surrealdb/cli-multi-counter/db/
 slides/rust/examples/sea-orm/counter/counter.db
+
+/books/book/
+/books/*/book/
