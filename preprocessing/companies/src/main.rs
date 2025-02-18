@@ -88,6 +88,7 @@ fn companies() {
 
 fn generate_md_file(companies: &[Company]) {
     let mut text = String::from(include_str!("header.md"));
+    let footer = String::from(include_str!("footer.md"));
 
     for company in companies.iter() {
         text.push_str(format!("## [{}]({})\n\n", company.name, company.url,).as_str());
@@ -122,10 +123,7 @@ fn generate_md_file(companies: &[Company]) {
         text.push('\n');
     }
 
-    text.push_str(r#"
-    
-    For this page even the Markdown file is generated. See the `preprocessing/companies` in the [repository](https://github.com/szabgab/rust.code-maven.com/) and the YAML file.    
-    "#);
+    text.push_str(&footer);
 
     let filename = "../../pages/companies.md";
     if let Err(err) = std::fs::write(filename, text) {
