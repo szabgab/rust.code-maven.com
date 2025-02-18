@@ -5,6 +5,16 @@
       city: Herzliya
     - country: USA
   proofs:
+    - url: https://www.youtube.com/watch?v=VknbaTPQgC0
+      title: Don't panic! - Our journey to error handling in Rust
+      description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate. Rewrite part of a C# project in Rust."
+      from: "C#"
+      ptype: youtube
+      language: English
+      date: 2024.12.13
+      people:
+        - name: Tomer Cohen
+          url: https://www.tomercode.com/
     - url: https://www.youtube.com/watch?v=Fi--zxTU-8w
       title: Don't panic! - Our journey to error handling in Rust
       description: "After initially using unwrap a lot and getting panics whenever something went wrong, this team at Microsoft learned a lot more about Rust and introduced much more robust error handling to their project using the anyhow crate. Rewrite part of a C# project in Rust."
@@ -169,6 +179,7 @@
   proofs:
     - url: https://discord.com/blog/why-discord-is-switching-from-go-to-rust
       title: Why Discord is switching from go to Rust
+      from: Go
       ptype: article
       language: English
       date: 2020.02.04
