@@ -41,7 +41,7 @@ You have to be a lot more aware of anything that can go wrong in your applicatio
 ## Social and business validation
 
 Great technology and the prospect of economic benefits are a must, but most of us would not want to be the sole users of some technology. Knowing who else uses it can help.
-Especially if we personally know that other person or if it is a well-known organization.
+Especially if we personally know that other person or if it is a well-known organization. There are many [companies using Rust](/companies).
 
 ## Community related aspects
 
