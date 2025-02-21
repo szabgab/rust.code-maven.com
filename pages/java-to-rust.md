@@ -1,6 +1,6 @@
 ---
 title: Moving from Java to Rust
-timestamp: 2025-02-18T09:30:01
+timestamp: 2025-02-18T09:30:02
 author: szabgab
 published: false
 show_related: true
