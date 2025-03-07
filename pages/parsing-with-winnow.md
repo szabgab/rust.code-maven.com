@@ -9,8 +9,7 @@ tags:
 todo:
 ---
 
-
-On 2025.03.04
+Unfortunately this event was cancelled.
 
 Speaker: [Kenny Flegal](https://www.linkedin.com/in/kflegal/)
 
