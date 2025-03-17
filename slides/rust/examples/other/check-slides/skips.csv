@@ -102,3 +102,4 @@ examples/variables/change-literal-string,                -,       true,  true,  
 examples/variables/immutable-number,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/variables/immutable-string,                     -,       true,  true,   true,  demonstrating compilation error - this will never work
 examples/other/send-mail-with-sendgrid,                  -,       -,     -,      true,  needs an API key
+examples/tracing/demo-lib,                               -,       -,     -,      true,  it is a library
