@@ -1,0 +1,9 @@
+[package]
+name = "demo-application"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+demo-lib = { version = "0.1.0", path = "../demo-lib" }
+tracing = "0.1"
+tracing-subscriber = "0.3.0"
