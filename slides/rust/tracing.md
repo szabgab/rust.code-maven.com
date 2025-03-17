@@ -28,4 +28,10 @@
 ![](examples/tracing/demo-application/Cargo.toml)
 ![](examples/tracing/demo-application/src/main.rs)
 
+## Simple tracing configuration with RUST_LOG environment variable
+{id: tracing-simple-configuration-with-rust-log}
+
+
+![](examples/tracing/demo-rust-log-env/Cargo.toml)
+![](examples/tracing/demo-rust-log-env/src/main.rs)
 
