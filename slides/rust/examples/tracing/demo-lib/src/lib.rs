@@ -15,5 +15,3 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
-
-

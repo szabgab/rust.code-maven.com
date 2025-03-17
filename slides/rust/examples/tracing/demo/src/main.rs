@@ -1,4 +1,4 @@
-use tracing::{debug, info, Level};
+use tracing::{Level, debug, info};
 use tracing_subscriber::FmtSubscriber;
 
 fn main() {
@@ -6,9 +6,7 @@ fn main() {
     let subscriber = FmtSubscriber::builder()
         .with_max_level(Level::TRACE)
         .finish();
-    tracing::subscriber::set_global_default(subscriber)
-        .expect("setting default subscriber failed");
-
+    tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     // Emit some log messages.
     info!("hello world");
