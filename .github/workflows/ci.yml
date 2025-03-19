@@ -59,14 +59,42 @@ jobs:
           cp -r all-slides/static    slides/
           cp all-slides/generate_slides.py slides/
 
-          mkdir _site/books
-          mdbook build books/why-rust/
-          mv books/why-rust/book _site/books/why-rust
-
           cd slides
           ./generate_slides.py --hostname https://rust.code-maven.com rust
           mv html ../_site/slides
 
+      - name: Download mdBook
+        env:
+          MDBOOK_VERSION: 0.4.44
+          EMBEDIFY_VERSION: 0.2.11
+          ALERTS_VERSION: 0.7.0
+        run: |
+          set -x
+          wget https://github.com/rust-lang/mdBook/releases/download/v${MDBOOK_VERSION}/mdbook-v${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz
+
+          wget https://github.com/MR-Addict/mdbook-embedify/releases/download/${EMBEDIFY_VERSION}/mdbook-embedify-${EMBEDIFY_VERSION}-x86_64-unknown-linux-gnu.zip
+          unzip mdbook-embedify-${EMBEDIFY_VERSION}-x86_64-unknown-linux-gnu.zip
+          mv mdbook-embedify-${EMBEDIFY_VERSION}-x86_64-unknown-linux-gnu/mdbook-embedify .
+
+          wget https://github.com/lambdalisue/rs-mdbook-alerts/releases/download/v${ALERTS_VERSION}/mdbook-alerts-x86_64-unknown-linux-gnu
+          mv mdbook-alerts-x86_64-unknown-linux-gnu mdbook-alerts
+          chmod +x mdbook-alerts
+
+      - name: Generate mdbooks
+        run: |
+          mkdir _site/books
+
+          export BOOK=why-rust
+
+          export PATH=$PATH:.
+          ./mdbook build books/$BOOK
+          perl -i -p -e 's{href="index.html"}{href="."}g'           books/${BOOK}/book/toc.js
+          perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g' books/${BOOK}/book/toc.js
+          find books/${BOOK}/book/ -name *.html | xargs perl -i -p -e 's{href="index.html"}{href="."}g'
+          find books/${BOOK}/book/ -name *.html | xargs perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g'
+
+          mv books/${BOOK}/book _site/books/$BOOK
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
