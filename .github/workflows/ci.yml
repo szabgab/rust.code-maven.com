@@ -60,6 +60,10 @@ jobs:
           cp all-slides/generate_slides.py slides/
           cd slides
           ./generate_slides.py --hostname https://rust.code-maven.com rust
+
+          mkdir ../_site/books
+          mdbook build books/why-rust/
+          mv books/why-rust/book ../_site/books/why-rust
           mv html ../_site/slides
 
       - name: Upload artifact

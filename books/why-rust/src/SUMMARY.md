@@ -1,0 +1,15 @@
+# Summary
+
+- [Why Rust?](./why-rust.md)
+    - [Technical features](./technical-features.md)
+    - [Performance](./performance.md)
+    - [Reliability](./reliability.md)
+    - [Productivity](./productivity.md)
+    - [Corporate Support / Acceptance](./corporate-support.md)
+    - [Community Support / Acceptance](./community-support.md)
+    - [Crates (Libraries)](./crates.md)
+    - [Drawbacks](./drawbacks.md)
+- [Python Projects](./python.md)
+    - [uv](./uv.md)
+    - [Ruff](./ruff.md)
+- [Thank you](./thank-you.md)

@@ -1,0 +1,13 @@
+[book]
+authors = ["Gabor Szabo"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Why Rust?"
+
+# Handle Youtube video embedding and the footer
+[preprocessor.embedify]
+footer.enable = true
+footer.message = "Copyright © 2025 • Created with ❤️  by [Gábor Szabó](https://szabgab.com/)"
+
+
