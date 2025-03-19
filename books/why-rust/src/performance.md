@@ -8,4 +8,5 @@
 * Benchmark, [speed of programming languages](https://benchmarksgame-team.pages.debian.net/benchmarksgame/box-plot-summary-charts.html)
 * [Size of integer in Python](https://python.code-maven.com/size-of-integer-in-python). (28 bytes)
 * [Energy efficiency of programming languages](https://thenewstack.io/which-programming-languages-use-the-least-electricity/).
+* Zero-cost Abstractions: High-level features without runtime overhead.
 

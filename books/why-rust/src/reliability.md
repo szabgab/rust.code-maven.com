@@ -4,6 +4,9 @@
 * Extensive and expressive type-system. (e.g. mapping of external APIs).
 * Very strict compiler - fixing bugs during compilation.
 * Compiler has very good error messages.
-* Integrated package manager, build system, linter etc. [Cargo](https://doc.rust-lang.org/cargo/)
+* Integrated package manager, build system, etc. [Cargo](https://doc.rust-lang.org/cargo/).
+* Code formatter.
+* [linter](https://doc.rust-lang.org/stable/clippy/)
+* IDE support by [rust-analyzer](https://rust-analyzer.github.io/).
 
 
