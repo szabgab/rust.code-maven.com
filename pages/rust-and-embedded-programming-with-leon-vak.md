@@ -15,6 +15,8 @@ In this online session [Leon Vak](https://www.linkedin.com/in/leon-vak-24445922/
 
 ![Leon Vak](images/leon-vak.jpeg)
 
+* [Debian Benchmark](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html)
+* [Source code](https://github.com/l-0-l/rust-examples-microbit-2024)
 
 ## Transcript
 
