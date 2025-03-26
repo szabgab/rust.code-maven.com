@@ -372,3 +372,12 @@ Marrige status: false
 ![](examples/json/deserialize-to-internal-struct/data.json)
 ![](examples/json/deserialize-to-internal-struct/src/main.rs)
 
+## JSON deserialize custom internal struct using "deserialize-with"
+{id: json-deserialize-custom-internal-struct-using-function}
+{i: deserialize_with}
+
+
+![](examples/json/deserialize-to-internal-struct-using-function/Cargo.toml)
+![](examples/json/deserialize-to-internal-struct-using-function/data.json)
+![](examples/json/deserialize-to-internal-struct-using-function/src/main.rs)
+
