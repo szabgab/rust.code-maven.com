@@ -361,4 +361,14 @@ Marrige status: false
 * Deserialize into struct
 * Read multi-json files (the result of a json-based logger)
 
+## JSON deserialize custom internal struct using "with"
+{id: json-deserialize-custom-internal-struct-using-with}
+{i: with}
+
+* What if the JSON contains phone numbers with area code as a single string, but we would like to represent the phone number as a struct with two fields "area" and "number"?
+* We can tell serde to deserialize this field with a custom function using the `with` attribute.
+
+![](examples/json/deserialize-to-internal-struct/Cargo.toml)
+![](examples/json/deserialize-to-internal-struct/data.json)
+![](examples/json/deserialize-to-internal-struct/src/main.rs)
 
