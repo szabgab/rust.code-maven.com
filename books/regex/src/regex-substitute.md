@@ -8,12 +8,12 @@
 ## Cargo.toml
 
 ```toml
-{{#include examples/regex/regex-substitute/Cargo.toml }}
+{{#include examples/regex-substitute/Cargo.toml }}
 ```
 
 ## main.rs
 
 ```rust
-{{#include examples/regex/regex-substitute/src/main.rs }}
+{{#include examples/regex-substitute/src/main.rs }}
 ```
 
