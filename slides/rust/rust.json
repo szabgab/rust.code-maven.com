@@ -51,7 +51,6 @@
         "threaded-map.md",
         "rayon.md",
         "async.md",
-        "regex.md",
         "sets.md",
         "clap.md",
         "json.md",
