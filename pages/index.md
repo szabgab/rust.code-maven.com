@@ -42,6 +42,9 @@ There are a number of series of articles on the site in the following topics:
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
 * [Community](/meetups)
 
+* [Why Rust](/why-rust/) Slides from a presentation.
+* [Regex](/regex/) using Rust
+
 ## Rust language topics
 
 * [Loops](/loops)
