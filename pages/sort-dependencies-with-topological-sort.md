@@ -32,8 +32,8 @@ Here we don't know if we'll need the Egg or the Chick firts. We have a circular 
 
 ## Examples in code
 
-![](examples/try-toplogical-sort/src/main.rs)
+{% include file="examples/try-toplogical-sort/src/main.rs" %}
 
 
-![](examples/try-toplogical-sort/Cargo.toml)
+{% include file="examples/try-toplogical-sort/Cargo.toml" %}
 
