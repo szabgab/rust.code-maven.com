@@ -7,6 +7,8 @@ fn main() {
     complex_dependencies();
     circular_dependencies();
     pop_circular_dependencies();
+
+    many_circular_dependencies();
 }
 
 // First < Second < Third
@@ -42,6 +44,8 @@ fn independent_things() {
     ts.insert("B");
     ts.insert("C");
     assert_eq!(ts.len(), 3);
+    // println!("{:?}", ts);
+
 
     // The order of insertion does not matter, we get the items in arbitrary order
     let all = ts.pop_all();
@@ -109,6 +113,7 @@ fn circular_dependencies() {
     let mut ts = TopologicalSort::<&str>::new();
     ts.add_dependency("Chicken", "Egg");
     ts.add_dependency("Egg", "Chicken");
+    // println!("{:?}", ts);
 
     // if pop_all returned an empty vector and there are still elements in the TS
     // that means the dependencies are circular
@@ -126,10 +131,28 @@ fn pop_circular_dependencies() {
     ts.add_dependency("Egg", "Chicken");
     ts.add_dependency("Shakshuka", "Egg");
     ts.add_dependency("Chicken", "Qqrq");
+    // println!("{:?}", ts);
 
     let elem = ts.pop();
     assert_eq!(elem, Some("Shakshuka"));
 
     let elem = ts.pop();
     assert_eq!(elem, None);
+}
+
+
+fn many_circular_dependencies() {
+    let mut ts = TopologicalSort::<&str>::new();
+    ts.add_dependency("Chicken", "Egg");
+    ts.add_dependency("Egg", "Chicken");
+
+    ts.add_dependency("Egg", "Omlet");
+    // ts.add_dependency("A", "Egg");
+    // ts.add_dependency("B", "Omlet");
+    // ts.add_dependency("A", "B");
+    // ts.add_dependency("B", "A");
+
+
+    println!("{:?}", ts);
+    assert_eq!(ts.pop(), None);
 }
