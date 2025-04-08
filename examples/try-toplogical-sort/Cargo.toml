@@ -1,0 +1,7 @@
+[package]
+name = "try-toplogical-sort"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+topological-sort = "0.2.2"
