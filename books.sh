@@ -2,7 +2,7 @@
 
 mkdir _site/books
 
-for book in why-rust regex json yaml
+for book in why-rust regex json yaml sqlite
 do
     echo Book $book
 
