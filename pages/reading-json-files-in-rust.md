@@ -13,5 +13,5 @@ tags:
 
 {% youtube id="Zgs1KR7OEGw" %}
 
-* [JSON slides](https://rust.code-maven.com/slides/rust/json)
+* [JSON slides](/json)
 

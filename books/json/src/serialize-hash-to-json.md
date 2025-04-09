@@ -1,24 +1,18 @@
----
-title: Serialize and deserialize HashMap to JSON in Rust
-timestamp: 2023-12-29T09:30:01
-author: szabgab
-published: true
-description: Serialize a HashMap to JSON and deserialize JSON to a HashMap in Rust using serde_json.
-tags:
-    - HashMap
-    - serialize
-    - deserialize
-    - serde_json
-    - serde
-    - to_string
-    - from_str
-    - JSON
-    - assert_eq!
-todo:
-    - TODO
----
+# Serialize and deserialize HashMap to JSON in Rust
 
-In most of the other articles about [JSON and Rust](/json) we deal with data that can be represented by a `struct` where the keys are fixed and known up-front.
+Serialize a HashMap to JSON and deserialize JSON to a HashMap in Rust using serde_json.
+
+- HashMap
+- serialize
+- deserialize
+- serde_json
+- serde
+- to_string
+- from_str
+- JSON
+- assert_eq!
+
+In most of the other articles about [JSON and Rust](./json.md) we deal with data that can be represented by a `struct` where the keys are fixed and known up-front.
 
 There are, however, cases when the keys can be arbitrary values of some type. E.g. arbitrary strings. For example if we want to count how many times a word
 appears in a text, the best representation might be a HashMap where we won't know up-front which words are in a text and thus won't know up-front what will be the keys.
@@ -50,11 +44,15 @@ After both deserialization we used the **assert_eq!** macro to compare the resul
 
 We need [serde_json](https://crates.io/crates/serde_json) for this.
 
-{% include file="examples/hash-to-json/Cargo.toml" %}
+```toml
+{{#include examples/hash-to-json/Cargo.toml }}
+```
 
 ## The code
 
-{% include file="examples/hash-to-json/src/main.rs" %}
+```rust
+{{#include examples/hash-to-json/src/main.rs }}
+```
 
 
 ## Running the example

@@ -1,23 +1,18 @@
----
-title: Read arbitrary JSON without much preparation
-timestamp: 2023-11-30T15:00:01
-author: szabgab
-published: true
-description: A simple way to get started using data that arrives in JSON format.
-tags:
-    - serde_json
-    - from_reader
-    - Value
-    - JSON
-    - as_str
-    - unwrap
-    - as_f64
-    - as_u64
-    - as_array
-    - assert_eq!
-todo:
-    - Read JSON with struct
----
+# Read arbitrary JSON without much preparation
+
+A simple way to get started using data that arrives in JSON format.
+
+- serde_json
+- from_reader
+- Value
+- JSON
+- as_str
+- unwrap
+- as_f64
+- as_u64
+- as_array
+- assert_eq!
+
 
 In order to read a JSON file, probably the best approach is to define a struct that will hold the content of the JSON file.
 Unfortunately it can be time consuming, so  to get started you might want to read in the content of the JSON file and
@@ -26,15 +21,23 @@ use the hand-picked values from the data.
 In order to do this we'll use [serde_json](https://docs.rs/serde_json/latest/serde_json/) as you can see in the `Cargo.toml`
 file:
 
-{% include file="examples/read-arbitrary-json/Cargo.toml" %}
+## Cargo.toml
+
+```toml
+{{#include examples/read-arbitrary-json/Cargo.toml }}
+```
 
 This is the data file we use. It does not have any real meaning, it just contains all kinds of data types.
 
-{% include file="examples/read-arbitrary-json/data.json" %}
+```json
+{{#include examples/read-arbitrary-json/data.json }}
+```
 
 ## The code:
 
-{% include file="examples/read-arbitrary-json/src/main.rs" %}
+```rust
+{{#include examples/read-arbitrary-json/src/main.rs }}
+```
 
 
 The program expects the name of the JSON file on the command line. We have a function called `get_filename` that will
@@ -75,7 +78,7 @@ cargo run data.json
 
 will produce this output:
 
-```
+```rust
 [src/main.rs:17] &data = Object {
     "children": Array [
         Object {

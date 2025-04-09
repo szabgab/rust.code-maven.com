@@ -1,29 +1,25 @@
----
-title: Read simple JSON and deserialize into a struct
-timestamp: 2023-12-01T11:30:01
-author: szabgab
-published: true
-description: Deserializing a JSON string is not too hard especially if the JSON is simple and if we don't need all the fields.
-tags:
-    - JSON
-    - Deserialize
-    - serde
-    - serde_json
-    - Debug
-    - dbg!
-    - assert!
-    - assert_eq!
-todo:
-    - TODO look at the bottom of this page.
----
+# Read simple JSON and deserialize into a struct
 
-In another post we saw how to [process arbitrary JSON string](/read-arbitrary-json) without defining anything about it and without creating a struct.
+Deserializing a JSON string is not too hard especially if the JSON is simple and if we don't need all the fields.
+
+- JSON
+- Deserialize
+- serde
+- serde_json
+- Debug
+- dbg!
+- assert!
+- assert_eq!
+
+In another post we saw how to [process arbitrary JSON string](./read-arbitrary-json.md) without defining anything about it and without creating a struct.
 It can be a good idea when we start experimenting with a new JSON structure, but eventually we will want to create a struct and deserialize the
 JSON string into this struct.
 
 In this example we start on that journey for a simple JSON File that looks like this:
 
-{% include file="examples/read-simple-json/data.json" %}
+```json
+{{#include examples/read-simple-json/data.json }}
+```
 
 
 ## We need both serde and serde_json
@@ -31,12 +27,16 @@ In this example we start on that journey for a simple JSON File that looks like 
 For this we'll need both [serde_json](https://crates.io/crates/serde_json)
 and [serde](https://crates.io/crates/serde) with the derive feature.
 
-{% include file="examples/read-simple-json/Cargo.toml" %}
+```toml
+{{#include examples/read-simple-json/Cargo.toml }}
+```
 
 
 ## The code
 
-{% include file="examples/read-simple-json/src/main.rs" %}
+```rust
+{{#include examples/read-simple-json/src/main.rs }}
+```
 
 We need to create a struct to represent the data where we define the expected fields and their type.
 
@@ -93,7 +93,5 @@ There are, however many more aspect of JSON we need to deal with.
 * How can we make sure we mapped all the fields?
 * What to do if a field we added to the struct is missing from the JSON?
 * What to do if there is a typo in the fields of the JSON?
-
-
 
 

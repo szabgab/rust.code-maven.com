@@ -2,7 +2,7 @@
 
 mkdir _site/books
 
-for book in why-rust regex
+for book in why-rust regex json
 do
     echo Book $book
 
