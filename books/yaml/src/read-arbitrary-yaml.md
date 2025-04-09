@@ -1,24 +1,18 @@
----
-title: Read arbitrary YAML files in Rust
-timestamp: 2023-11-28T14:30:01
-author: szabgab
-published: true
-description: Read a YAML files without knowing up-front its structure?
-tags:
-    - YAML
-    - serde
-    - serde_yaml
-    - as_str
-    - as_u64
-    - as_f64
-    - as_bool
-    - as_sequence
-    - get
-    - assert_eq!
-    - assert!
-todo:
-    - show defining a struct
----
+# Read arbitrary YAML files in Rust
+
+Read a YAML files without knowing up-front its structure?
+
+- YAML
+- serde
+- serde_yaml
+- as_str
+- as_u64
+- as_f64
+- as_bool
+- as_sequence
+- get
+- assert_eq!
+- assert!
 
 When we need to read a YAML file in Rust ideally we would define a struct that maps the fields of the YAML file.
 That would help with data validation and later with the handling of the data. However, we can't always do that
@@ -28,7 +22,9 @@ In this example we'll see how to do this.
 
 We are using [serde_yaml](https://crates.io/crates/serde_yaml) for this:
 
-{% include file="examples/read-arbitrary-yaml/Cargo.toml" %}
+```toml
+{{#include examples/read-arbitrary-yaml/Cargo.toml }}
+```
 
 We have two YAML files.
 
@@ -36,7 +32,9 @@ We have two YAML files.
 
 One of them has invalid YAML format, just to show what happens when the YAML parsing fails.
 
-{% include file="examples/read-arbitrary-yaml/broken.yaml" %}
+```yaml
+{{#include examples/read-arbitrary-yaml/broken.yaml }}
+```
 
 If we run our code on this file we get an error message.
 
@@ -51,14 +49,18 @@ There was an error parsing the YAML file did not find expected key at line 2 col
 
 We also have a good YAML file with some fields an values.
 
-{% include file="examples/read-arbitrary-yaml/data.yaml" %}
+```yaml
+{{#include examples/read-arbitrary-yaml/data.yaml }}
+```
 
 
 ## The code
 
 This is the code:
 
-{% include file="examples/read-arbitrary-yaml/src/main.rs" %}
+```rust
+{{#include examples/read-arbitrary-yaml/src/main.rs }}
+```
 
 In the first few lines we are just [accepting a filename on the command line](/expect-one-command-line-parameter).
 
@@ -158,7 +160,9 @@ birthdate: 2022
 
 In some cases the YAML file is not a mapping, but a sequence at its root as in this example:
 
-{% include file="examples/read-yaml-sequence/data.yaml" %}
+```yaml
+{{#include examples/read-yaml-sequence/data.yaml }}
+```
 
 We can use the same method here as well. In this case we even see how we can access the first `data[0]`,
 the second `data[1]`, and any other element in the sequence based on its location. We also see a field that
@@ -166,8 +170,9 @@ contains a boolean value and we use the `as_bool` function to conver it to a rea
 We use `assert_eq!` to compare strings and numbers to expected values and we use `assert!` to check if a boolean
 value is indeed `true`.
 
-{% include file="examples/read-yaml-sequence/src/main.rs" %}
-
+```rust
+{{#include examples/read-yaml-sequence/src/main.rs }}
+```
 
 ## Conclusion
 

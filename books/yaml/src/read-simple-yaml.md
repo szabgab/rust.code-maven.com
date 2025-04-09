@@ -1,34 +1,34 @@
----
-title: Read a simple YAML file into a struct
-timestamp: 2023-11-28T20:30:01
-author: szabgab
-published: true
-description: You can define a struct that represents the fields of a YAML file to get automatic data conversion.
-tags:
-    - YAML
-    - struct
-    - serde
-    - Deserialize
----
+# Read a simple YAML file into a struct
 
-In an earlier article we saw how to [read an arbitrary YAML file](/read-arbitrary-yaml) and then access the individual fields.
+You can define a struct that represents the fields of a YAML file to get automatic data conversion.
+
+- struct
+- serde
+- Deserialize
+
+In an earlier article we saw how to [read an arbitrary YAML file](./read-arbitrary-yaml.md) and then access the individual fields.
 
 A more time consuming, but more robust way is to define a `struct` mapping all the fields of the YAML file. We'll see several such examples.
 
 For all of them we'll need both [serde_yaml](https://crates.io/crates/serde_yaml) and [serde](https://crates.io/crates/serde) as you can see in the `Cargo.toml` file:
 
-{% include file="examples/read-simple-yaml/Cargo.toml" %}
-
+```toml
+{{#include examples/read-simple-yaml/Cargo.toml }}
+```
 
 ## Data
 
 Let's see this simple YAML file:
 
-{% include file="examples/read-simple-yaml/data.yaml" %}
+```yaml
+{{#include examples/read-simple-yaml/data.yaml }}
+```
 
 ## The code
 
-{% include file="examples/read-simple-yaml/src/main.rs" %}
+```rust
+{{#include examples/read-simple-yaml/src/main.rs }}
+```
 
 Before getting to the `main` function we define a `struct` with the fields of the YAML file and the type of values the YAML file has.
 We add the [Deserialize](https://docs.rs/serde/latest/serde/trait.Deserialize.html) **trait** to it.
@@ -69,7 +69,9 @@ What happens if there are extra fields in the YAML file that were not declared i
 
 In this file there is an extra field called `address` that was not defined in the struct.
 
-{% include file="examples/read-simple-yaml/more.yaml" %}
+```yaml
+{{#include examples/read-simple-yaml/more.yaml }}
+```
 
 By default the YAML parser of Serde will ignore these extra fields.
 This is great as it allows us start using the struct even before we manage to map out all the fields.
@@ -103,10 +105,8 @@ If we make that addition and run the program again with the YAML file that has t
 cargo run more.yaml
 ```
 
- we get a `panic!`:
+we get a `panic!`:
 
-```
-There was an error parsing the YAML file unknown field `address`, expected one of `fname`, `lname`, `year`, `height`, `married` at line 6 column 1
-```
+> There was an error parsing the YAML file unknown field `address`, expected one of `fname`, `lname`, `year`, `height`, `married` at line 6 column 1
 
 

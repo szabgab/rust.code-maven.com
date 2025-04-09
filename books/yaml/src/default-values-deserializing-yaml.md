@@ -1,16 +1,9 @@
----
-title: Set default values while deserializing YAML in Rust
-timestamp: 2023-12-18T15:15:01
-author: szabgab
-published: true
-description: Some YAML files might be missing some value. In some cases we might want to set default values in the deserialized struct.
-tags:
-    - YAML
-    - default
-    - serde
----
+# Set default values while deserializing YAML in Rust
 
-We saw how to [read a deserialize a simple YAML into a struct](/read-simple-yaml). What happens if some of the fields we are expecting in the YAML file are missing?
+Some YAML files might be missing some value. In some cases we might want to set default values in the deserialized struct.
+
+
+We saw how to [read a deserialize a simple YAML into a struct](./read-simple-yaml.md). What happens if some of the fields we are expecting in the YAML file are missing?
 
 For the following example we created a `struct` like this
 
@@ -26,11 +19,15 @@ struct Person {
 
 If se supply the following YAML file, each field is filled.
 
-{% include file="examples/yaml-default-values/all.yaml" %}
+```yaml
+{{#include examples/yaml-default-values/all.yaml }}
+```
 
 However if we provide the following file:
 
-{% include file="examples/yaml-default-values/nameless.yaml" %}
+```yaml
+{{#include examples/yaml-default-values/nameless.yaml }}
+```
 
 We will get an error message in the `err` variable:
 
@@ -40,7 +37,9 @@ missing field `name`
 
 We get a similar error if more than one field is missing:
 
-{% include file="examples/yaml-default-values/data.yaml" %}
+```yaml
+{{#include examples/yaml-default-values/data.yaml }}
+```
 
 ## Set the default values
 
@@ -79,7 +78,9 @@ fn get_default_married() -> bool {
 
 ## The full example
 
-{% include file="examples/yaml-default-values/src/main.rs" %}
+```rust
+{{#include examples/yaml-default-values/src/main.rs }}
+```
 
 In this example we have a function called `get_filename` that gets the name of the file from the command line.
 
@@ -88,7 +89,9 @@ In this example we have a function called `get_filename` that gets the name of t
 
 What if this is the YAML file
 
-{% include file="examples/yaml-default-values/typo.yaml" %}
+```yaml
+{{#include examples/yaml-default-values/typo.yaml }}
+```
 
 Have you noticed the typo I made in one of the fields? I typed in "maried" instead of "married", but I could have mixed up the field called "color" and typed in "colour",
 if there indeed was such a field.
@@ -100,7 +103,10 @@ That's not ideal.
 
 ## Dependencies
 
-See the `Cargo`.toml` we had:
+See the `Cargo.toml` we had:
 
-{% include file="examples/yaml-default-values/Cargo.toml" %}
+```toml
+{{#include examples/yaml-default-values/Cargo.toml }}
+```
+
 

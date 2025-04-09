@@ -53,7 +53,6 @@
         "async.md",
         "sets.md",
         "clap.md",
-        "yaml.md",
         "toml.md",
         "lifetime.md",
         "iterators.md",

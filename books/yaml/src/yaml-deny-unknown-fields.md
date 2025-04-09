@@ -1,18 +1,11 @@
----
-title: Deserializing YAML - deny unknown fields
-timestamp: 2023-12-18T16:00:01
-author: szabgab
-published: true
-description: If we have default values or fields are optional then we might never catch if there is a typo in one of the fields.
-tags:
-    - YAML
-    - serde
-    - deny_unknown_fields
-todo:
-    - What if the API server adds a new field? The code suddenly stops working. Can we deal with this?
+# Deserializing YAML - deny unknown fields
+
+If we have default values or fields are optional then we might never catch if there is a typo in one of the fields.
+
+- deny_unknown_fields
 ---
 
-Defining [default values for fields in YAML](/default-values-deserializing-yaml) or making fields optional are very useful features,
+Defining [default values for fields in YAML](./default-values-deserializing-yaml.md) or making fields optional are very useful features,
 but if there is a typo in the YAML file we might never notice it. This is certainly a source for a lot of frustration.
 Luckily there is a solution. We can tell serde to `deny_unknown_fields`. That way if there is a typo in the names of one of the fields,
 the parser will return an error.
@@ -38,7 +31,9 @@ In this `struct` we expect two fields, `name` is required, but if there is no `m
 
 This works well when the YAML file has all the fields:
 
-{% include file="examples/yaml-deny-unknown-fields/all.yaml" %}
+```yaml
+{{#include examples/yaml-deny-unknown-fields/all.yaml }}
+```
 
 ```
 name: Foo Bar
@@ -47,7 +42,9 @@ married: true
 
 or when the `married` field is missing:
 
-{% include file="examples/yaml-deny-unknown-fields/missing.yaml" %}
+```yaml
+{{#include examples/yaml-deny-unknown-fields/missing.yaml }}
+```
 
 ```
 name: Foo Bar
@@ -56,7 +53,9 @@ married: false
 
 However if there is a typo and we have `maried` instead of `married`:
 
-{% include file="examples/yaml-deny-unknown-fields/typo.yaml" %}
+```yaml
+{{#include examples/yaml-deny-unknown-fields/typo.yaml }}
+```
 
 Then without the `deny_unknown_fields` we get:
 
@@ -73,11 +72,15 @@ Could not parse YAML file: unknown field `maried`, expected `name` or `married` 
 
 ## Full example
 
-{% include file="examples/yaml-deny-unknown-fields/src/main.rs" %}
+```rust
+{{#include examples/yaml-deny-unknown-fields/src/main.rs }}
+```
 
 ## Dependencies in Cargo.toml
 
-{% include file="examples/yaml-deny-unknown-fields/Cargo.toml" %}
+```toml
+{{#include examples/yaml-deny-unknown-fields/Cargo.toml }}
+```
 
 ## A potential problem
 

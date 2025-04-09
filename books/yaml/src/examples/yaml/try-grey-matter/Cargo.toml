@@ -1,0 +1,8 @@
+[package]
+name = "try-grey-matter"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gray_matter = "0.2.8"
+serde = { version = "1.0.219", features = ["derive"] }
