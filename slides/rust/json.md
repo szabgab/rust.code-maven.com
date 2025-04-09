@@ -3,60 +3,8 @@
 
 
 
-## Serialize and deserialize HashMap to JSON in Rust
-{id: serialize-and-deserialize-hashmap-to-json}
-{i: json}
-{i: HashMap}
-
-* If we have a `HashMap` we can easily serialize it into a JSON string (which we can save to a file if we want to).
-* And we can deserialize back to HashMap and check that we get back the same data.
-
-![](examples/json/serialize-hashmap/Cargo.toml)
-
-![](examples/json/serialize-hashmap/src/main.rs)
-
-![](examples/json/serialize-hashmap/out.out)
 
 
-## Deserialize JSON array - a list of string into a Vector
-{id: deserialize-json-array-into-a-vector}
-
-![](examples/json/deserialize-to-vector/data.json)
-
-![](examples/json/deserialize-to-vector/out.out)
-
-![](examples/json/deserialize-to-vector/src/main.rs)
-
-
-## Read Simple JSON file manually
-{id: read-simple-json-manually}
-{i: serde_json}
-{i: from_str}
-{i: Value}
-{i: as_object}
-{i: as_str}
-{i: as_i64}
-
-* We would like to read the following simple JSON file:
-
-![](examples/json/read-simple-json-manually/data.json)
-
-* We need [serde](https://serde.rs/) and [serde_json](https://docs.rs/serde_json/latest/serde_json/)
-
-```
-cargo add serde_json
-cargo add serde -F derive
-```
-
-![](examples/json/read-simple-json-manually/Cargo.toml)
-
-* We first open the file and read the content of the file.
-* Then we parse the string as some generic JSON data into a generic `serde::Value` structure. [serde::Value](https://docs.rs/serde_json/latest/serde_json/value/enum.Value.html) is an `enum` that can hold any value.
-* In this case we need to extract and convert the values.
-
-![](examples/json/read-simple-json-manually/src/main.rs)
-
-![](examples/json/read-simple-json-manually/out.out)
 
 ## Read Simple JSON file into a struct
 {id: read-simple-json-to-struct}

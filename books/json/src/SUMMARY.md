@@ -7,4 +7,7 @@
 - [Slides](./slides.md)
   - [Serde for JSON](./serde-json.md)
   - [Read and deserialize key-value pair JSON into HashMap](./read-and-deserialize-key-value-paor-json-into-hashmap.md)
+  - [Serialize and deserialize HashMap to JSON in Rust](./serialize-and-deserialize-hashmap-to-json.md)
+  - [Deserialize JSON array - a list of string into a Vector](./deserialize-json-array-into-a-vector.md)
+  - [Read Simple JSON file manually](./read-simple-json-manually.md)
 
