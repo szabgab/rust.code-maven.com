@@ -1,35 +1,6 @@
 # JSON
 {id: json}
 
-## Serde for JSON
-{id: serde-json}
-
-* [serde](https://serde.rs/) is a framework for SERializing and DEserializing Rust data structures.
-
-* [serde](https://crates.io/crates/serde)
-* [serde_json](https://crates.io/crates/serde_json)
-
-
-Adding dependencies:
-
-```
-cargo add serde_json
-cargo add serde -F derive
-```
-
-## Read and deserialize key-value pair JSON into HashMap
-{id: read-and-deserialize-key-value-paor-json-into-hashmap}
-
-* If we have a JSON file with arbitrary key-value pairs were all the keys are the same type and all the values are the same type then we can read them into a HashMap.
-
-* In this case all the keys are strings and all the values are integers. (positive integers that can fit in `u16`).
-* [Centepide](https://en.wikipedia.org/wiki/Centipede) has between 15-191 pairs of leggs and the number of pairs is always odd. So there are no Centipedes with 100 leggs.
-
-![](examples/json/deserialize-to-hashmap/data.json)
-
-![](examples/json/deserialize-to-hashmap/out.out)
-
-![](examples/json/deserialize-to-hashmap/src/main.rs)
 
 
 ## Serialize and deserialize HashMap to JSON in Rust
