@@ -21,11 +21,13 @@ Something else? Some place more specific to your country? Please share your link
 
 * [RustJobs.com](https://www.rustjobs.com/)
 * [RustJobs.dev](https://rustjobs.dev/) they are also on [LinkedIn](https://www.linkedin.com/company/rustjobs-dev/) and on [Twitter](https://x.com/rustjobs_dev).
+* [Rustjobs fyi](https://www.rustjobs.fyi/) It does not seem to be maintained any more. See [issue](https://github.com/NicholasLYang/rustjobs.fyi/issues/11)
+<!--
 * [Rust-Jobs.com](https://rust-jobs.com/)
 * [Rust Jobs](https://rust.jobs/)
 * [Rust Careers](https://rust.careers/)
 * [Rust Career](https://rust.career/)
-* [Rustjobs fyi](https://www.rustjobs.fyi/) It does not seem to be maintained any more. See [issue](https://github.com/NicholasLYang/rustjobs.fyi/issues/11)
+-->
 
 ## Generic
 
