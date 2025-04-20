@@ -5,3 +5,4 @@
   - [Regex match numbers - capture using parentheses](./regex-match-numbers.md)
   - [Regex capture all the numbers - multiple match](./regex-capture-all-the-numbers.md)
   - [Substitute](./regex-substitute.md)
+  - [Compile once](./compile-once.md)
