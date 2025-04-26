@@ -6,6 +6,7 @@
   - [Simple Logger init](./simple-logger-init.md)
   - [Simple Logger level](./simple-logger-level.md)
   - [Logging with log4rs](./logging-with-log4rs.md)
+  - [Simple use of env_logger](./env-logger-demo.md)
 - [Tracing](./tracing.md)
   - [Tracing demo](./tracing-demo.md)
   - [Tracing in a library](./tracing-in-a-library.md)
