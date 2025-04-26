@@ -1,6 +1,7 @@
 # Summary
 
 - [Logging](./index.md)
+  - [Getting started with logging in Rust](./getting-started-with-logging.md)
   - [Simple Logger new](./simple-logger-new.md)
   - [Simple Logger init](./simple-logger-init.md)
   - [Simple Logger level](./simple-logger-level.md)

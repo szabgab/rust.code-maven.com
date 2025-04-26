@@ -1,21 +1,15 @@
----
-title: Getting started with logging in Rust
-timestamp: 2023-12-04T11:30:01
-author: szabgab
-published: true
-description: Mastering logging can help you save a lot of time both during development and later when there are problems in production.
-tags:
-    - log
-    - trace!
-    - debug!
-    - info!
-    - warn!
-    - error!
-    - simple_logger
-    - init_with_env
-todo:
-    - redirect stdout and stderr
----
+# Getting started with logging in Rust
+
+Mastering logging can help you save a lot of time both during development and later when there are problems in production.
+
+- log
+- trace!
+- debug!
+- info!
+- warn!
+- error!
+- simple_logger
+- init_with_env
 
 One of the ancient debugging techniques is adding print-statements to the code, running the code and observing which part of the code is
 executed and what are the values of various variables. The big problem with this is that once the issue was fixed we need to remove, or
@@ -109,9 +103,9 @@ on the page about the [log](https://crates.io/crates/log) crate.
 
 ## The code with log only
 
-{% include file="examples/log-demo/Cargo.toml" %}
+{% embed include file="src/examples/logging/log-demo/Cargo.toml" %}
 
-{% include file="examples/log-demo/src/main.rs" %}
+{% embed include file="src/examples/logging/log-demo/src/main.rs" %}
 
 
 ## Simple logger
@@ -287,9 +281,9 @@ How to implement something similar with [clap](https://crates.io/crates/clap) is
 
 ## The code with several cases
 
-{% include file="examples/simple-log-demo/Cargo.toml" %}
+{% embed include file="src/examples/logging/simple-log-demo/Cargo.toml" %}
 
-{% include file="examples/simple-log-demo/src/main.rs" %}
+{% embed include file="src/examples/logging/simple-log-demo/src/main.rs" %}
 
 ## Conclusion
 
