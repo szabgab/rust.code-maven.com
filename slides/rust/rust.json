@@ -59,8 +59,6 @@
         "advanced-functions.md",
         "image.md",
         "http.md",
-        "logging.md",
-        "tracing.md",
         "external.md",
         "macros.md",
         "declarative-macros.md",
