@@ -12,4 +12,5 @@
 - [Python Projects](./python.md)
     - [uv](./uv.md)
     - [Ruff](./ruff.md)
+- [JavaScript Projects](./javascript.md)
 - [Thank you](./thank-you.md)
