@@ -1,5 +1,5 @@
 ---
-title: Rust at Work a conversation with Ran Reichman Co-Founder & CEO of Flarion
+title: Rust at Work a conversation with Ran Reichman Co-Founder and CEO of Flarion
 timestamp: 2025-05-15T07:00:01
 author: szabgab
 published: true
