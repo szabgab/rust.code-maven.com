@@ -16,7 +16,10 @@ Part of the [Code Maven live](https://live.code-maven.com/) events organized in 
 
 | When       | event                                                                                                                    |  who             | register                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------------- |
-| 2025.03.20 | [Rust and embedded programming](https://rust.code-maven.com/rust-and-embedded-programming-with-leon-vak)                 | Leon Vak         | [register](https://www.meetup.com/code-mavens/events/306357728/) |
+| 2025.05.20 | [Rust at Work at Flarion](https://rust.code-maven.com/rust-at-work-flarion)                                              | Ran Reichman   | [register](https://www.meetup.com/code-mavens/events/307635734/) |
+
+
+
 
 ## Call for Participation
 
@@ -48,5 +51,6 @@ I would like to invite you to be a guest on one of these live events. There are 
 | 2025.03.06 | [Ratatui - Terminal User Interface in Rust](https://rust.code-maven.com/ratatui-tui-in-rust)                                  | Orhun Parmaksız  | [event](https://www.meetup.com/code-mavens/events/305750365/) |
 | 2025.03.09 | [Creating A Mock Blockchain in Rust](https://rust.code-maven.com/creating-a-mock-blockchain-in-rust)                          | Sourav Mishra    | [event](https://www.meetup.com/code-mavens/events/305587087/) |
 | 2025.03.18 | [crum: Complex Numbers and Complex Matrices in Rust](https://rust.code-maven.com/crum)                                        | Frans Slabber    | [event](https://www.meetup.com/code-mavens/events/305823397/) |
+| 2025.03.20 | [Rust and embedded programming](https://rust.code-maven.com/rust-and-embedded-programming-with-leon-vak)                      | Leon Vak         | [register](https://www.meetup.com/code-mavens/events/306357728/) |
 
 
