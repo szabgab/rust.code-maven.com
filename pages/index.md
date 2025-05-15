@@ -26,6 +26,7 @@ There are a number of series of articles on the site in the following topics:
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
 * [TOML](/toml) - Dealing with TOML files in Rust.
+* [CSV](/csv) - Comma Separated Values and Rust.
 * [Image](/image) - Creating and changing images in Rust.
 * [Testing](/testing) - Various forms of functional and non-functional tests in Rust.
 * [Logging and Tracing](/logging) - Various ways to add logging to our application.
