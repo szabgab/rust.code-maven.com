@@ -5,8 +5,6 @@ author: szabgab
 published: true
 show_related: true
 description:
-tags:
-    - live
 ---
 
 <a class="button is-primary" href="https://www.meetup.com/code-mavens/events/307635734/">register</a>
