@@ -8,42 +8,42 @@ fn main() {
     //let rows = ("a b c d e f g h i j k l m n o p q r s t u v w x y z").split_whitespace().collect::<Vec<_>>();
     println!("Total words: {}", rows.len());
 
-    // disregard empty strings
-    let mut first_letter: HashMap<String, usize> = HashMap::new();
-    for row in &rows {
-        if row.len() < 1 {
-            continue;
+    measure(&rows, |row| {
+        if row.is_empty() {
+            String::new()
+        } else {
+            row.chars().next().unwrap().to_string()
         }
-        let first = row.chars().next().unwrap().to_string();
-        let count = first_letter.entry(first).or_insert(0);
+    });
+
+    measure(&rows, |row| {
+        if row.is_empty() {
+            String::new()
+        } else if row.len() == 1 {
+            row.chars().next().unwrap().to_string()
+        } else {
+            let mut chars = row.chars();
+            let first = chars.next().unwrap();
+            let second = chars.next().unwrap();
+            format!("{}{}", first, second)
+        }
+    });
+}
+
+fn measure<F>(rows: &Vec<&str>, key_extractor: F)
+where
+    F: Fn(&str) -> String,
+{
+    let mut counts: HashMap<String, usize> = HashMap::new();
+    for row in rows {
+        let key = key_extractor(row);
+        let count = counts.entry(key).or_insert(0);
         *count += 1;
     }
-    //println!("First letter count: {:?}", first_letter);
-    //println!("First letter keys: {:?}", first_letter.keys());
-    let bucket_count = first_letter.keys().len();
+    let bucket_count = counts.keys().len();
     println!("Number of buckets: {}", bucket_count);
     let expected = rows.len() as f64 / bucket_count as f64;
-    println!("chi_square: {}", chi_square(&first_letter, expected));
-
-    // disregard any string that has only one letter
-    let mut two_letters: HashMap<String, usize> = HashMap::new();
-    for row in &rows {
-        if row.len() < 2 {
-            continue;
-        }
-        let mut chars = row.chars();
-        let first = chars.next().unwrap();
-        let second = chars.next().unwrap();
-        let key = format!("{}{}", first, second);
-        let count = two_letters.entry(key).or_insert(0);
-        *count += 1;
-    }
-
-    //println!("Two letters count: {:?}", two_letters);
-    let bucket_count = two_letters.keys().len();
-    println!("Number of buckets: {}", bucket_count);
-    let expected = rows.len() as f64 / bucket_count as f64;
-    println!("chi_square: {}", chi_square(&two_letters, expected));
+    println!("chi_square: {}", chi_square(&counts, expected));
 }
 
 fn chi_square(observed: &HashMap<String, usize>, expected: f64) -> f64 {
