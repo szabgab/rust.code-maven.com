@@ -5,9 +5,12 @@ fn main() {
     let filename = "/usr/share/dict/american-english";
     let content = std::fs::read_to_string(filename).unwrap();
     let rows = content.lines().collect::<Vec<_>>();
-    //let rows = ("a b c d e f g h i j k l m n o p q r s t u v w x y z").split_whitespace().collect::<Vec<_>>();
     println!("Total words: {}", rows.len());
 
+    println!("---\nOriginal:");
+    measure(&rows, |row| row.to_string());
+
+    println!("---\nFirst character:");
     measure(&rows, |row| {
         if row.is_empty() {
             String::new()
@@ -16,6 +19,7 @@ fn main() {
         }
     });
 
+    println!("---\nFirst two characters:");
     measure(&rows, |row| {
         if row.is_empty() {
             String::new()
@@ -27,6 +31,34 @@ fn main() {
             let second = chars.next().unwrap();
             format!("{}{}", first, second)
         }
+    });
+
+    println!("---\nFirst three characters:");
+    measure(&rows, |row| {
+        if row.is_empty() {
+            return String::new();
+        }
+
+        let mut chars = row.chars();
+        let first = chars.next().unwrap();
+
+        if row.len() == 1 {
+            return first.to_string();
+        }
+
+        let second = chars.next().unwrap();
+        if row.len() == 2 {
+            return format!("{}{}", first, second);
+        }
+
+        let third = chars.next().unwrap();
+        format!("{}{}{}", first, second, third)
+    });
+
+    println!("---\nmd5:");
+    measure(&rows, |row| {
+        let digest = md5::compute(row);
+        format!("{:x}", digest)
     });
 }
 
