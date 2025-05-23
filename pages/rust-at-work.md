@@ -21,7 +21,7 @@ Trying to understand how people use Rust at their companies.
 
 ## Process
 
-* We schedule an event and let anyone register and attend the online event.
+* We schedule an event (in the [Code-Mavens Meetup group](https://www.meetup.com/code-mavens/)) and let anyone register and attend the online event.
 * During the event the audience can ask questions in the chat room that can enhance the whole conversation.
 
 
