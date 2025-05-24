@@ -15,9 +15,13 @@ Trying to understand how people use Rust at their companies.
 
 | When       | event                                                                                                                    |  who             | register                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------------- |
-| 2025.05.20 | [Rust at Work at Flarion](https://rust.code-maven.com/rust-at-work-flarion)                                              | Ran Reichman   | [register](https://www.meetup.com/code-mavens/events/307635734/) |
 | 2025.05.27 | [Rust at Work at Eureka Labs](https://rust.code-maven.com/rust-at-work-eureka-labs)                                      | Eli Shalom & Igal Tabachnik | [register](https://www.meetup.com/code-mavens/events/307673680/) |
 
+## Previous recordings
+
+| When       | event                                                                                                                    |  who             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| 2025.05.20 | [Rust at Work at Flarion](https://rust.code-maven.com/rust-at-work-flarion)                                              | Ran Reichman     |
 
 ## Process
 
@@ -69,6 +73,5 @@ Trying to understand how people use Rust at their companies.
 * How do you evaluate the decision to switch to / use Rust?
 * What are the parts of the Rust ecosystem that you found less than perfect? What do you miss from the language or from the ecosystem?
 * What is your experience using AI tools to write Rust code? How do you think will impact the market share of programming languages?
-
 
 
