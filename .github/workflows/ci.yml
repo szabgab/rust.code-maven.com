@@ -83,7 +83,7 @@ jobs:
 
       - name: Generate mdbooks
         run: |
-          export PATH=$PATH:.
+          export PATH=$PATH:$(pwd)
           ./books.sh
 
       - name: Upload artifact
