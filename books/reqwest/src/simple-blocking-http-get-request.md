@@ -1,31 +1,20 @@
----
-title: Simple blocking HTTP GET request in Rust
-timestamp: 2023-10-03T17:30:01
-author: szabgab
-published: true
-description:
-tags:
-    - reqwest
-    - blocking
-    - HTTP
-    - GET
-todo:
-    - POST
-    - change header
-    - get JSON
-    - send JSON
----
+# Simple blocking HTTP GET request in Rust
+
+- reqwest
+- blocking
+- HTTP
+- GET
 
 The [reqwest](https://crates.io/crates/reqwest) crate provides functions for both asynchronous and blocking http requests.
 Although in most cases you'd probably want to use the asynch calls, using the blocking calls is simpler, so we start with that.
 
 This is what we add to the `Cargo.toml`
 
-{% include file="examples/simple-blocking-http-get-request/Cargo.toml" %}
+{% embed include file="src/examples/simple-blocking-http-get-request/Cargo.toml" %}
 
 And this is the code:
 
-{% include file="examples/simple-blocking-http-get-request/src/main.rs" %}
+{% embed include file="src/examples/simple-blocking-http-get-request/src/main.rs" %}
 
 This is the output (slightly reformatted to make it easier to read).
 

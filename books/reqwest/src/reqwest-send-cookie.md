@@ -1,15 +1,11 @@
----
-title: HTTP reqwest sending cookie
-timestamp: 2024-01-25T13:32:01
-author: szabgab
-published: true
-description: Sending a cookie back to the server using the reqwest crate.
-tags:
-    - reqwest
-    - header
-    - Cookie
-    - Client
----
+# HTTP reqwest sending cookie
+
+Sending a cookie back to the server using the reqwest crate.
+
+- reqwest
+- header
+- Cookie
+- Client
 
 
 ## The curl command
@@ -38,12 +34,12 @@ and the output:
 
 ## The dependencies
 
-{% include file="examples/simple-blocking-http-reqwest-sending-cookie/Cargo.toml" %}
+{% embed include file="src/examples/simple-blocking-http-reqwest-sending-cookie/Cargo.toml" %}
 
 
 ## The code
 
-{% include file="examples/simple-blocking-http-reqwest-sending-cookie/src/main.rs" %}
+{% embed include file="src/examples/simple-blocking-http-reqwest-sending-cookie/src/main.rs" %}
 
 ## The output
 

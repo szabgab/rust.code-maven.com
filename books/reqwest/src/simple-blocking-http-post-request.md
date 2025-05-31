@@ -1,15 +1,11 @@
----
-title: Simple blocking HTTP POST request using Rust
-timestamp: 2024-01-25T11:30:01
-author: szabgab
-published: true
-description: The reqwest crate provides all the capabilities to send HTTP requests.
-tags:
-    - reqwest
-    - HTTP
-    - POST
-    - form
----
+# Simple blocking HTTP POST request using Rust
+
+The reqwest crate provides all the capabilities to send HTTP requests.
+
+- reqwest
+- HTTP
+- POST
+- form
 
 In this example we are using the [reqwest](https://crates.io/crates/reqwest) crate to send an HTTP POST request to [https://httpbin.org/](https://httpbin.org/).
 
@@ -52,14 +48,14 @@ This is the result:
 
 In order to be able to send a `blocking` request we need to add that feature, and in order to be able to parse the returned [JSON](/json) data we had to add the `json` feature.
 
-{% include file="examples/simple-blocking-http-post-reqwest/Cargo.toml" %}
+{% embed include file="src/examples/simple-blocking-http-post-reqwest/Cargo.toml" %}
 
 
 ## The code
 
 We can pass the parameters in the `form` method as a bunch of key-value pairs from a HashMap.
 
-{% include file="examples/simple-blocking-http-post-reqwest/src/main.rs" %}
+{% embed include file="src/examples/simple-blocking-http-post-reqwest/src/main.rs" %}
 
 ## The result
 

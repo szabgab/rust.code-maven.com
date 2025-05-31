@@ -5,3 +5,6 @@
 - [Simple blocking http client with reqwest](./simple-blocking-http-clients.md)
 - [http-client async with reqwest](./http-client.md)
 - [Download many URLs in parallel (async)](./download-many-urls-async.md)
+- [Simple blocking HTTP GET request in Rust](./simple-blocking-http-get-request.md)
+- [Simple blocking HTTP POST request using Rust](./simple-blocking-http-post-request.md)
+- [HTTP reqwest sending cookie](./reqwest-send-cookie.md)
