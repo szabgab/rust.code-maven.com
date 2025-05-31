@@ -7,13 +7,9 @@
 
 ## Cargo.toml
 
-```toml
-{{#include examples/regex-substitute/Cargo.toml }}
-```
+{% embed include file="src/examples/regex-substitute/Cargo.toml" %}
 
 ## main.rs
 
-```rust
-{{#include examples/regex-substitute/src/main.rs }}
-```
+{% embed include file="src/examples/regex-substitute/src/main.rs" %}
 

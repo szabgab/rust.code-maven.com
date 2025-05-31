@@ -9,16 +9,11 @@ The multiple compilation can be avoided by using the [once_cell](https://crates.
 
 ## Cargo.toml
 
-
-```toml
-{{#include examples/regex-compile-once/Cargo.toml }}
-```
+{% embed include file="src/examples/regex-compile-once/Cargo.toml" %}
 
 ## Code
 
-```rust
-{{#include examples/regex-compile-once/src/main.rs }}
-```
+{% embed include file="src/examples/regex-compile-once/src/main.rs" %}
 
 In the output we can see that it was compiled only once.
 

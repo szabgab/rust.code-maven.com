@@ -18,15 +18,10 @@ than what you see here.
 
 This is the `Cargo.toml` in my example:
 
-```toml
-{{#include examples/case1/Cargo.toml}}
-```
+{% embed include file="src/examples/case1/Cargo.toml" %}
 
 
-
-```rust
-{{#include examples/case1/src/main.rs}}
-```
+{% embed include file="src/examples/case1/src/main.rs" %}
 
 ```
 $ cargo run -q
@@ -92,13 +87,11 @@ then we'll see the help of the cargo command itself. That was not our intention.
 
 ## Positional parameters
 
-{{#include examples/case2/src/main.rs}}
+{% embed include file="src/examples/case2/src/main.rs" %}
 
 
 ## Named parameter
 
-```rust
-{{#include examples/case3/src/main.rs}}
-```
+{% embed include file="src/examples/case3/src/main.rs" %}
 
 

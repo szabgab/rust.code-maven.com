@@ -18,15 +18,11 @@ So we create a `Regex` using the `cat` string as a regex and call the `captures`
 
 ## Cargo.toml
 
-```toml
-{{#include examples/regex-simple-match/Cargo.toml }}
-```
+{% embed include file="src/examples/regex-simple-match/Cargo.toml" %}
 
 ## main.rs
 
-```rust
-{{#include examples/regex-simple-match/src/main.rs }}
-```
+{% embed include file="src/examples/regex-simple-match/src/main.rs" %}
 
 ## Output
 
