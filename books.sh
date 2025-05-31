@@ -2,7 +2,7 @@
 
 mkdir _site/books
 
-for book in csv logging why-rust regex json yaml reqwest sqlite
+for book in csv json logging regex reqwest sqlite why-rust yaml
 do
     echo Book $book
 
