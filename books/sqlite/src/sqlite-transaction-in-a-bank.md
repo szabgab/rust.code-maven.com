@@ -1,12 +1,11 @@
 # SQLite transaction - bank
 
+## Cargo.toml
 
-```toml
-{{#include examples/sqlite/bank/Cargo.toml }}
-```
+{% embed include file="src/examples/sqlite/bank/Cargo.toml" %}
 
-```rust
-{{#include examples/sqlite/bank/src/main.rs }}
-```
+## Code
+
+{% embed include file="src/examples/sqlite/bank/src/main.rs" %}
 
 

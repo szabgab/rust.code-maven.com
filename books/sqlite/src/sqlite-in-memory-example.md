@@ -11,16 +11,10 @@
 
 * In general you won't have values embedded in the SQL statements, but in this first example we use that for simplicity.
 
-```toml
-{{#include examples/sqlite/in-memory-example/Cargo.toml }}
-```
+{% embed include file="src/examples/sqlite/in-memory-example/Cargo.toml" %}
 
-```rust
-{{#include examples/sqlite/in-memory-example/src/main.rs }}
-```
+{% embed include file="src/examples/sqlite/in-memory-example/src/main.rs" %}
 
-```
-{{#include examples/sqlite/in-memory-example/out.out }}
-```
+{% embed include file="src/examples/sqlite/in-memory-example/out.out" %}
 
 

@@ -6,12 +6,8 @@
 * When the values are in variables - which is almost always - then we should use placeholders and bind the variables to them.
 * We can use the `bind` method to bind them one-by-one.
 
-```rust
-{{#include examples/sqlite/in-memory-select-placeholders-bind/src/main.rs }}
-```
+{% embed include file="src/examples/sqlite/in-memory-select-placeholders-bind/src/main.rs" %}
 
-```
-{{#include examples/sqlite/in-memory-select-placeholders-bind/out.out }}
-```
+{% embed include file="src/examples/sqlite/in-memory-select-placeholders-bind/out.out" %}
 
 

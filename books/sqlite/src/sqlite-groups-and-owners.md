@@ -4,9 +4,12 @@ In order to make SQLite enforce FOREIGN KEY we need to turn on the [foreign_keys
 
 * There is also a compile-time option called [default_foreign_keys](https://sqlite.org/compile.html#default_foreign_keys) but I think we don't want to compile our own sqlite.
 
+## Cargo.toml
 
-```rust
-{{#include examples/sqlite/groups-and-owner/src/main.rs }}
-```
+{% embed include file="src/examples/sqlite/groups-and-owner/Cargo.toml" %}
+
+## Code
+
+{% embed include file="src/examples/sqlite/groups-and-owner/src/main.rs" %}
 
 

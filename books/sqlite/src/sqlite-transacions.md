@@ -15,13 +15,9 @@ The `BEGIN` statement turns off the autocommit mode and the `COMMIT` turns it on
 
 In this example we tried to imitate the issue.
 
-```toml
-{{#include examples/sqlite/transaction/Cargo.toml }}
-```
+{% embed include file="src/examples/sqlite/transaction/Cargo.toml" %}
 
-```rust
-{{#include examples/sqlite/transaction/src/main.rs }}
-```
+{% embed include file="src/examples/sqlite/transaction/src/main.rs" %}
 
 
 ```
