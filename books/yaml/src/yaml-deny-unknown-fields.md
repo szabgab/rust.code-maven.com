@@ -31,9 +31,7 @@ In this `struct` we expect two fields, `name` is required, but if there is no `m
 
 This works well when the YAML file has all the fields:
 
-```yaml
-{{#include examples/yaml-deny-unknown-fields/all.yaml }}
-```
+{% embed include file="src/examples/yaml-deny-unknown-fields/all.yaml" %}
 
 ```
 name: Foo Bar
@@ -42,9 +40,7 @@ married: true
 
 or when the `married` field is missing:
 
-```yaml
-{{#include examples/yaml-deny-unknown-fields/missing.yaml }}
-```
+{% embed include file="src/examples/yaml-deny-unknown-fields/missing.yaml" %}
 
 ```
 name: Foo Bar
@@ -53,9 +49,7 @@ married: false
 
 However if there is a typo and we have `maried` instead of `married`:
 
-```yaml
-{{#include examples/yaml-deny-unknown-fields/typo.yaml }}
-```
+{% embed include file="src/examples/yaml-deny-unknown-fields/typo.yaml" %}
 
 Then without the `deny_unknown_fields` we get:
 
@@ -72,15 +66,11 @@ Could not parse YAML file: unknown field `maried`, expected `name` or `married` 
 
 ## Full example
 
-```rust
-{{#include examples/yaml-deny-unknown-fields/src/main.rs }}
-```
+{% embed include file="src/examples/yaml-deny-unknown-fields/src/main.rs" %}
 
 ## Dependencies in Cargo.toml
 
-```toml
-{{#include examples/yaml-deny-unknown-fields/Cargo.toml }}
-```
+{% embed include file="src/examples/yaml-deny-unknown-fields/Cargo.toml" %}
 
 ## A potential problem
 

@@ -22,9 +22,7 @@ In this example we'll see how to do this.
 
 We are using [serde_yaml](https://crates.io/crates/serde_yaml) for this:
 
-```toml
-{{#include examples/read-arbitrary-yaml/Cargo.toml }}
-```
+{% embed include file="src/examples/read-arbitrary-yaml/Cargo.toml" %}
 
 We have two YAML files.
 
@@ -32,9 +30,7 @@ We have two YAML files.
 
 One of them has invalid YAML format, just to show what happens when the YAML parsing fails.
 
-```yaml
-{{#include examples/read-arbitrary-yaml/broken.yaml }}
-```
+{% embed include file="src/examples/read-arbitrary-yaml/broken.yaml" %}
 
 If we run our code on this file we get an error message.
 
@@ -49,18 +45,14 @@ There was an error parsing the YAML file did not find expected key at line 2 col
 
 We also have a good YAML file with some fields an values.
 
-```yaml
-{{#include examples/read-arbitrary-yaml/data.yaml }}
-```
+{% embed include file="src/examples/read-arbitrary-yaml/data.yaml" %}
 
 
 ## The code
 
 This is the code:
 
-```rust
-{{#include examples/read-arbitrary-yaml/src/main.rs }}
-```
+{% embed include file="src/examples/read-arbitrary-yaml/src/main.rs" %}
 
 In the first few lines we are just [accepting a filename on the command line](/expect-one-command-line-parameter).
 
@@ -161,7 +153,7 @@ birthdate: 2022
 In some cases the YAML file is not a mapping, but a sequence at its root as in this example:
 
 ```yaml
-{{#include examples/read-yaml-sequence/data.yaml }}
+{% embed include file="src/examples/read-yaml-sequence/data.yaml" %}
 ```
 
 We can use the same method here as well. In this case we even see how we can access the first `data[0]`,
@@ -171,7 +163,7 @@ We use `assert_eq!` to compare strings and numbers to expected values and we use
 value is indeed `true`.
 
 ```rust
-{{#include examples/read-yaml-sequence/src/main.rs }}
+{% embed include file="src/examples/read-yaml-sequence/src/main.rs" %}
 ```
 
 ## Conclusion

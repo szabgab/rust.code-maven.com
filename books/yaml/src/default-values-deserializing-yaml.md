@@ -19,15 +19,11 @@ struct Person {
 
 If se supply the following YAML file, each field is filled.
 
-```yaml
-{{#include examples/yaml-default-values/all.yaml }}
-```
+{% embed include file="src/examples/yaml-default-values/all.yaml" %}
 
 However if we provide the following file:
 
-```yaml
-{{#include examples/yaml-default-values/nameless.yaml }}
-```
+{% embed include file="src/examples/yaml-default-values/nameless.yaml" %}
 
 We will get an error message in the `err` variable:
 
@@ -37,9 +33,7 @@ missing field `name`
 
 We get a similar error if more than one field is missing:
 
-```yaml
-{{#include examples/yaml-default-values/data.yaml }}
-```
+{% embed include file="src/examples/yaml-default-values/data.yaml" %}
 
 ## Set the default values
 
@@ -78,9 +72,7 @@ fn get_default_married() -> bool {
 
 ## The full example
 
-```rust
-{{#include examples/yaml-default-values/src/main.rs }}
-```
+{% embed include file="src/examples/yaml-default-values/src/main.rs" %}
 
 In this example we have a function called `get_filename` that gets the name of the file from the command line.
 
@@ -89,9 +81,7 @@ In this example we have a function called `get_filename` that gets the name of t
 
 What if this is the YAML file
 
-```yaml
-{{#include examples/yaml-default-values/typo.yaml }}
-```
+{% embed include file="src/examples/yaml-default-values/typo.yaml" %}
 
 Have you noticed the typo I made in one of the fields? I typed in "maried" instead of "married", but I could have mixed up the field called "color" and typed in "colour",
 if there indeed was such a field.
@@ -105,8 +95,6 @@ That's not ideal.
 
 See the `Cargo.toml` we had:
 
-```toml
-{{#include examples/yaml-default-values/Cargo.toml }}
-```
+{% embed include file="src/examples/yaml-default-values/Cargo.toml" %}
 
 
