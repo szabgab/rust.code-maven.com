@@ -5,22 +5,20 @@
 * User supplied values: test, build, "Sample file"
 
 
-```json
-{{#include examples/json/deserialize-json-where-some-keys-are-arbitrary/data.json }}
-```
+{% embed include file="src/examples/json/deserialize-json-where-some-keys-are-arbitrary/data.json" %}
+
+## Cargo.toml
+
+{% embed include file="src/examples/json/deserialize-json-where-some-keys-are-arbitrary/Cargo.toml" %}
 
 ## Output
 
-```
-{{#include examples/json/deserialize-json-where-some-keys-are-arbitrary/out.out }}
-```
+{% embed include file="src/examples/json/deserialize-json-where-some-keys-are-arbitrary/out.out" %}
 
 
 ## The code
 
-```rust
-{{#include examples/json/deserialize-json-where-some-keys-are-arbitrary/src/main.rs }}
-```
+{% embed include file="src/examples/json/deserialize-json-where-some-keys-are-arbitrary/src/main.rs" %}
 
 
 

@@ -8,20 +8,16 @@
 * [serde_json](https://crates.io/crates/serde_json)
 * [chrono](https://crates.io/crates/chrono)
 
-```toml
-{{#include examples/json/json-serialize/Cargo.toml }}
-```
+## Cargo.toml
+
+{% embed include file="src/examples/json/json-serialize/Cargo.toml" %}
 
 ## Code
 
-```rust
-{{#include examples/json/json-serialize/src/main.rs }}
-```
+{% embed include file="src/examples/json/json-serialize/src/main.rs" %}
 
 ## Output
 
-```
-{{#include examples/json/json-serialize/out.out }}
-```
+{% embed include file="src/examples/json/json-serialize/out.out" %}
 
 

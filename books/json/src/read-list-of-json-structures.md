@@ -7,21 +7,18 @@ TODO
 * See also [jsonl](https://crates.io/crates/jsonl), [json-lines](https://crates.io/crates/json-lines)
 
 
-```json
-{{#include examples/json/read-list-of-json/data.json }}
-```
+{% embed include file="src/examples/json/read-list-of-json/data.json" %}
 
 ## Code
 
-
-```rust
-{{#include examples/json/read-list-of-json/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-list-of-json/src/main.rs" %}
 
 ## Output
 
-```
-{{#include examples/json/read-list-of-json/out.out }}
-```
+{% embed include file="src/examples/json/read-list-of-json/out.out" %}
+
+## Cargo.toml
+
+{% embed include file="src/examples/json/read-list-of-json/Cargo.toml" %}
 
 

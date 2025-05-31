@@ -6,11 +6,11 @@
 * from_string
 
 
-```toml
-{{#include examples/json/serde-demo/Cargo.toml }}
-```
+## Cargo.toml
 
-```rust
-{{#include examples/json/serde-demo/src/main.rs }}
-```
+{% embed include file="src/examples/json/serde-demo/Cargo.toml" %}
+
+## Code
+
+{% embed include file="src/examples/json/serde-demo/src/main.rs" %}
 

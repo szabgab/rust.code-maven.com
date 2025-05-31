@@ -3,14 +3,12 @@
 get_mut
 
 
-```toml
-{{#include examples/json/serde-manipulate-json/Cargo.toml }}
-```
+## Cargo.toml
+
+{% embed include file="src/examples/json/serde-manipulate-json/Cargo.toml" %}
 
 ## Code
 
-```rust
-{{#include examples/json/serde-manipulate-json/src/main.rs }}
-```
+{% embed include file="src/examples/json/serde-manipulate-json/src/main.rs" %}
 
 

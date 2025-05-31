@@ -9,13 +9,9 @@ Option
 
 The type of the values is not releavant for the example.
 
-```rust
-{{#include examples/json/read-with-optional-field/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/src/main.rs" %}
 
-```json
-{{#include examples/json/read-with-optional-field/just_name.json }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/just_name.json" %}
 
 ```
 $ cargo run -q just_name.json
@@ -27,9 +23,7 @@ Person {
 We don't know if Foo is married or not
 ```
 
-```json
-{{#include examples/json/read-with-optional-field/no_name.json }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/no_name.json" %}
 
 ```
 $ cargo run -q no_name.json
@@ -38,9 +32,7 @@ JSON parsing error: Error("missing field `name`", line: 4, column: 1)
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 
-```json
-{{#include examples/json/read-with-optional-field/married_no_language.json }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/married_no_language.json" %}
 
 
 ```
@@ -55,9 +47,7 @@ Person {
 Marrige status: true
 ```
 
-```json
-{{#include examples/json/read-with-optional-field/married_with_python.json }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/married_with_python.json" %}
 
 
 ```
@@ -73,9 +63,7 @@ Marrige status: true
 ```
 
 
-```
-{{#include examples/json/read-with-optional-field/single_with_python.json }}
-```
+{% embed include file="src/examples/json/read-with-optional-field/single_with_python.json" %}
 
 
 ```

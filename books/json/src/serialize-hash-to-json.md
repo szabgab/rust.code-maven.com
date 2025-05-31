@@ -44,15 +44,11 @@ After both deserialization we used the **assert_eq!** macro to compare the resul
 
 We need [serde_json](https://crates.io/crates/serde_json) for this.
 
-```toml
-{{#include examples/hash-to-json/Cargo.toml }}
-```
+{% embed include file="src/examples/hash-to-json/Cargo.toml" %}
 
 ## The code
 
-```rust
-{{#include examples/hash-to-json/src/main.rs }}
-```
+{% embed include file="examples/hash-to-json/src/main.rs" %}
 
 
 ## Running the example

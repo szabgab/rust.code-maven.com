@@ -7,20 +7,14 @@
 
 ## Cargo.toml
 
-```toml
-{{#include examples/json/deserialize-to-internal-struct/Cargo.toml }}
-```
+{% embed include file="src/examples/json/deserialize-to-internal-struct/Cargo.toml" %}
 
 ## Data
 
-```json
-{{#include examples/json/deserialize-to-internal-struct/data.json }}
-```
+{% embed include file="src/examples/json/deserialize-to-internal-struct/data.json" %}
 
 ## Code
 
-```rust
-{{#include examples/json/deserialize-to-internal-struct/src/main.rs }}
-```
+{% embed include file="src/examples/json/deserialize-to-internal-struct/src/main.rs" %}
 
 

@@ -3,18 +3,16 @@
 * [serde](https://crates.io/crates/serde)
 * [serde_json](https://crates.io/crates/serde_json)
 
+## Cargo.toml
 
-```toml
-{{#include examples/json/json-serialize-struct/Cargo.toml }}
-```
+{% embed include file="src/examples/json/json-serialize-struct/Cargo.toml" %}
 
-```rust
-{{#include examples/json/json-serialize-struct/src/main.rs }}
-```
+## Code
 
+{% embed include file="src/examples/json/json-serialize-struct/src/main.rs" %}
 
-```
-{{#include examples/json/json-serialize-struct/out.out }}
-```
+## Output
+
+{% embed include file="src/examples/json/json-serialize-struct/out.out" %}
 
 

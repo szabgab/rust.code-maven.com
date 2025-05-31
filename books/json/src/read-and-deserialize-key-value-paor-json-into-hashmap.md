@@ -5,20 +5,17 @@
 * In this case all the keys are strings and all the values are integers. (positive integers that can fit in `u16`).
 * [Centepide](https://en.wikipedia.org/wiki/Centipede) has between 15-191 pairs of leggs and the number of pairs is always odd. So there are no Centipedes with 100 leggs.
 
-```json
-{{#include examples/json/deserialize-to-hashmap/data.json }}
-```
+{% embed include file="src/examples/json/deserialize-to-hashmap/data.json" %}
 
 ## Output
 
-```
-{{#include examples/json/deserialize-to-hashmap/out.out }}
-```
+{% embed include file="src/examples/json/deserialize-to-hashmap/out.out" %}
 
 ## Code
 
-```rust
-{{#include examples/json/deserialize-to-hashmap/src/main.rs }}
-```
+{% embed include file="src/examples/json/deserialize-to-hashmap/src/main.rs" %}
 
+## Cargo.toml
+
+{% embed include file="src/examples/json/deserialize-to-hashmap/Cargo.toml" %}
 

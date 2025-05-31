@@ -9,9 +9,7 @@
 
 * We would like to read the following simple JSON file:
 
-```json
-{{#include examples/json/read-simple-json-manually/data.json }}
-```
+{% embed include file="src/examples/json/read-simple-json-manually/data.json" %}
 
 * We need [serde](https://serde.rs/) and [serde_json](https://docs.rs/serde_json/latest/serde_json/)
 
@@ -20,9 +18,7 @@ cargo add serde_json
 cargo add serde -F derive
 ```
 
-```toml
-{{#include examples/json/read-simple-json-manually/Cargo.toml }}
-```
+{% embed include file="src/examples/json/read-simple-json-manually/Cargo.toml" %}
 
 
 * We first open the file and read the content of the file.
@@ -32,14 +28,10 @@ cargo add serde -F derive
 
 ## Code
 
-```rust
-{{#include examples/json/read-simple-json-manually/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-simple-json-manually/src/main.rs" %}
 
 ## Output
 
-```
-{{#include examples/json/read-simple-json-manually/out.out }}
-```
+{% embed include file="src/examples/json/read-simple-json-manually/out.out" %}
 
 

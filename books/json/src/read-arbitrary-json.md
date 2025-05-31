@@ -23,21 +23,15 @@ file:
 
 ## Cargo.toml
 
-```toml
-{{#include examples/read-arbitrary-json/Cargo.toml }}
-```
+{% embed include file="src/examples/read-arbitrary-json/Cargo.toml" %}
 
 This is the data file we use. It does not have any real meaning, it just contains all kinds of data types.
 
-```json
-{{#include examples/read-arbitrary-json/data.json }}
-```
+{% embed include file="src/examples/read-arbitrary-json/data.json" %}
 
 ## The code:
 
-```rust
-{{#include examples/read-arbitrary-json/src/main.rs }}
-```
+{% embed include file="src/examples/read-arbitrary-json/src/main.rs" %}
 
 
 The program expects the name of the JSON file on the command line. We have a function called `get_filename` that will

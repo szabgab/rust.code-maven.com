@@ -4,17 +4,13 @@
 cargo run ../person.json
 ```
 
-```json
-{{#include examples/json/read-json-from-reader-to-struct/data.json }}
-```
+{% embed include file="src/examples/json/read-json-from-reader-to-struct/data.json" %}
 
-```rust
-{{#include examples/json/read-json-from-reader-to-struct/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-json-from-reader-to-struct/src/main.rs" %}
 
-```
-{{#include examples/json/read-json-from-reader-to-struct/out.out }}
-```
+{% embed include file="src/examples/json/read-json-from-reader-to-struct/out.out" %}
+
+{% embed include file="src/examples/json/read-json-from-reader-to-struct/Cargo.toml" %}
 
 
 

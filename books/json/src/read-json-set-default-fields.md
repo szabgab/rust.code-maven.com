@@ -2,12 +2,10 @@
 
 default
 
-```rust
-{{#include examples/json/set-default-values/src/main.rs }}
-```
+{% embed include file="src/examples/json/set-default-values/src/main.rs" %}
 
-```
-{{#include examples/json/set-default-values/out.out }}
-```
+{% embed include file="src/examples/json/set-default-values/out.out" %}
+
+{% embed include file="src/examples/json/set-default-values/Cargo.toml" %}
 
 

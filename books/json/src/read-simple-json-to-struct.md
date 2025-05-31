@@ -3,19 +3,17 @@
 - Deserialize
 - read_to_string
 
-```json
-{{#include examples/json/read-simple-json-to-struct/data.json }}
-```
+{% embed include file="src/examples/json/read-simple-json-to-struct/data.json" %}
 
 ## Code
 
-```rust
-{{#include examples/json/read-simple-json-to-struct/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-simple-json-to-struct/src/main.rs" %}
 
 ## Output
 
-```
-{{#include examples/json/read-simple-json-to-struct/out.out }}
-```
+{% embed include file="src/examples/json/read-simple-json-to-struct/out.out" %}
+
+## Cargo.toml
+
+{% embed include file="src/examples/json/read-simple-json-to-struct/Cargo.toml" %}
 

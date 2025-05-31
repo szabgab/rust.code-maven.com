@@ -4,24 +4,16 @@
 
 * Here are two JSON files, a good one with 2 fields and a bad one with an extra field.
 
-```json
-{{#include examples/json/warn-on-extra-fields/good.json }}
-```
+{% embed include file="src/examples/json/warn-on-extra-fields/good.json" %}
 
-```json
-{{#include examples/json/warn-on-extra-fields/bad.json }}
-```
+{% embed include file="src/examples/json/warn-on-extra-fields/bad.json" %}
 
 We defined the struct to be Deserialize-d just as we did earlier, but then we set up a deserializer
 and use that to deserialized the JSON string. We now have the list of all the extra fields.
 
-```rust
-{{#include examples/json/warn-on-extra-fields/src/main.rs }}
-```
+{% embed include file="src/examples/json/warn-on-extra-fields/src/main.rs" %}
 
-```toml
-{{#include examples/json/warn-on-extra-fields/Cargo.toml }}
-```
+{% embed include file="src/examples/json/warn-on-extra-fields/Cargo.toml" %}
 
 ```
 $ cargo run good.json

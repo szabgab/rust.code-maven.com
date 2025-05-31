@@ -2,23 +2,16 @@
 
 deserialize_with
 
-## Cargo.toml.
+## Cargo.toml
 
-```toml
-{{#include examples/json/deserialize-to-internal-struct-using-function/Cargo.toml }}
-```
+{% embed include file="src/examples/json/deserialize-to-internal-struct-using-function/Cargo.toml" %}
 
 ## Data
 
-```json
-{{#include examples/json/deserialize-to-internal-struct-using-function/data.json }}
-```
-
+{% embed include file="src/examples/json/deserialize-to-internal-struct-using-function/data.json" %}
 
 ## Code
 
-```rust
-{{#include examples/json/deserialize-to-internal-struct-using-function/src/main.rs }}
-```
+{% embed include file="src/examples/json/deserialize-to-internal-struct-using-function/src/main.rs" %}
 
 

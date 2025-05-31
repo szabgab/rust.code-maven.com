@@ -1,10 +1,8 @@
 # Read complex JSON
 
-```rust
-{{#include examples/json/read-person/src/main.rs }}
-```
+{% embed include file="src/examples/json/read-person/src/main.rs" %}
 
-```
-{{#include examples/json/read-person/out.out }}
-```
+{% embed include file="src/examples/json/read-person/out.out" %}
+
+{% embed include file="src/examples/json/read-person/Cargo.toml" %}
 
