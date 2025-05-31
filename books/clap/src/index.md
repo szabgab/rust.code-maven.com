@@ -1,4 +1,4 @@
-# Chapter 1
+# CLI - Command line Interface with clap
 
 In this book we are going to learn how to use Clap, the Command Line Argument Parser for Rust.
 

@@ -51,7 +51,6 @@
         "rayon.md",
         "async.md",
         "sets.md",
-        "clap.md",
         "toml.md",
         "lifetime.md",
         "iterators.md",
