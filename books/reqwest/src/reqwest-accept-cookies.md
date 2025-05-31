@@ -1,14 +1,6 @@
----
-title: Accept cookise in an HTTP request sent by the server
-timestamp: 2024-01-03T14:30:01
-author: szabgab
-published: false
-description:
-tags:
-    - Rust
-todo:
-    - TODO
----
+# DRAFT: Accept cookise in an HTTP request sent by the server
+
+This is a DARFT!
 
 ```
 curl -i "http://httpbin.org/cookies/set?name=Foo+Bar"
@@ -34,11 +26,11 @@ Access-Control-Allow-Credentials: true
 
 ## Dependencies
 
-{% include file="examples/reqwest-accept-cookies/Cargo.toml" %}
+{% embed include file="src/examples/reqwest-accept-cookies/Cargo.toml" %}
 
 ## The code
 
-{% include file="examples/reqwest-accept-cookies/src/main.rs" %}
+{% embed include file="src/examples/reqwest-accept-cookies/src/main.rs" %}
 
 ## The output
 

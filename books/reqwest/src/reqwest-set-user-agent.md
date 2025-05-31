@@ -1,23 +1,17 @@
----
-title: Set the User-Agent in a HTTP request using Rust reqwest
-timestamp: 2024-01-25T13:40:01
-author: szabgab
-published: true
-description:
-tags:
-    - User Agent
-    - reqwest
-    - header
----
+# Set the User-Agent in a HTTP request using Rust reqwest
+
+- User Agent
+- reqwest
+- header
 
 
 ## Dependencies
 
-{% include file="examples/reqwest-set-user-agent/Cargo.toml" %}
+{% embed include file="src/examples/reqwest-set-user-agent/Cargo.toml" %}
 
 ## The code
 
-{% include file="examples/reqwest-set-user-agent/src/main.rs" %}
+{% embed include file="src/examples/reqwest-set-user-agent/src/main.rs" %}
 
 ## The output
 
