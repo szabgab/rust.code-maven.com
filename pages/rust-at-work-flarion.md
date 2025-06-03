@@ -9,6 +9,10 @@ description:
 
 <a href="https://rustacean-station.org/episode/ran-reichman/">Listen to the recording</a>.
 
+
+{% youtube id="CVQ5Eve2G4c" file="2025-05-20-rust-at-work-with-ran-reichman-co-founder-ceo-of-flarion.mp4" %}
+
+
 * Guest: [Ran Reichman](https://www.linkedin.com/in/ran-reichman-740163b7/) Co-Founder & CEO of [Flarion](https://www.flarion.io/)
 * Host: [Gabor Szabo](https://szabgab.com/)
 * Language: English
