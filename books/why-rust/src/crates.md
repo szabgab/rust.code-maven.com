@@ -8,3 +8,7 @@
 * [Tauri](https://tauri.app/) - Cross-Platform desktop applications with web technologies.
 * [Ratatui](https://ratatui.rs/) - A Rust crate for cooking up Terminal User Interfaces.
 
+## Command line tools
+
+* [mdbook](https://rust-lang.github.io/mdBook/) - to create books like this.
+

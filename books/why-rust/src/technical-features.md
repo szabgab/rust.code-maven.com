@@ -1,10 +1,12 @@
 # Technical features
 
+* [Rust Programming Language](https://www.rust-lang.org/)
+
+----
 
 * Performance
 * Reliability
 * Productivity
 
-See [Rust Language](https://www.rust-lang.org/)
 
 
