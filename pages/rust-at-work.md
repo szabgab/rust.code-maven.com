@@ -15,13 +15,14 @@ Trying to understand how people use Rust at their companies.
 
 | When       | event                                                                                                                    |  who             | register                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------------- |
-| 2025.05.27 | [Rust at Work at Eureka Labs](https://rust.code-maven.com/rust-at-work-eureka-labs)                                      | Eli Shalom & Igal Tabachnik | [register](https://www.meetup.com/code-mavens/events/307673680/) |
+| 2025.06.11 | [Rust at Work at Ardan Labs & LibreQoS](https://rust.code-maven.com/rust-at-work-ardan-labs-libreqos.md)                 | Herbert Wolverson | [register](https://www.meetup.com/code-mavens/events/308234298/) |
 
 ## Previous recordings
 
 | When       | event                                                                                                                    |  who             |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- |
 | 2025.05.20 | [Rust at Work at Flarion](https://rust.code-maven.com/rust-at-work-flarion)                                              | Ran Reichman     |
+| 2025.05.27 | [Rust at Work at Eureka Labs](https://rust.code-maven.com/rust-at-work-eureka-labs)                                      | Eli Shalom & Igal Tabachnik |
 
 ## Process
 
