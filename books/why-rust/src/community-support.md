@@ -5,7 +5,8 @@
 * More than 130 [user groups](https://rust.code-maven.com/user-groups) and several conferences.
 * Growing popularity ([PYPL](https://pypl.github.io/PYPL.html), [Languish](https://tjpalmer.github.io/languish/), [TIOBE](https://www.tiobe.com/tiobe-index/)).
 * Most admired / loved language for several years [2024 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/).
-* Linus Torvalds admitted Rust into the Linux kernel.
+* Linus Torvalds admitted Rust into the [Linux kernel](https://docs.kernel.org/rust/index.html). See also the [Rust for Linux](https://rust-for-linux.com/) project.
+* [Oxidising Ubuntu](https://discourse.ubuntu.com/t/carefully-but-purposefully-oxidising-ubuntu/56995) - [coreutils](https://github.com/uutils/coreutils), etc.
 
 
 

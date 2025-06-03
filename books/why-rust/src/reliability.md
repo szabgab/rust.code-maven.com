@@ -6,8 +6,8 @@
 * No "null" or "none" values.
 * Compiler has very good error messages.
 * Integrated package manager, build system, etc. [Cargo](https://doc.rust-lang.org/cargo/).
-* Code formatter.
-* [linter](https://doc.rust-lang.org/stable/clippy/)
+* Code formatter [rustfmt](https://rust-lang.github.io/rustfmt/).
+* [Clippy, the linter](https://doc.rust-lang.org/stable/clippy/)
 * IDE support by [rust-analyzer](https://rust-analyzer.github.io/).
 
 
