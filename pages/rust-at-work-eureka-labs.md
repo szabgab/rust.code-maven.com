@@ -7,6 +7,10 @@ show_related: true
 description:
 ---
 
+
+{% youtube id="X4ka4Q1AHTs" file="2025-05-27-rust-at-work-conversation-with-eli-shalom-and-igal-tabachnik-of-eureka-labs.mp4" %}
+
+
 * Guests: [Eli Shalom](https://www.linkedin.com/in/elishalom/) & [Igal Tabachnik](https://www.linkedin.com/in/igaltabachnik/) of [Eureka Labs](https://eurekalabs.xyz/)
 * Host: [Gabor Szabo](https://szabgab.com/)
 * Language: English
