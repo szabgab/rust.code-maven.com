@@ -25,6 +25,14 @@ Eli and Igal will discuss how Rust has been instrumental in developing their hig
 If you have questions to Eli and Igal, please send it to [Gabor Szabo](https://szabgab.com/contact)
 
 
+1. Concepts from functional languages: immutability, green/virtual threads (tokio), lambdas, iterators, type classes (derive)
+2. Libraries: Clap (CLI parser), Reth (Ethereum protocol implemented in Rust)
+3. Inspirations: [Grayden Hoare's async/await retrospective](https://www.youtube.com/watch?v=1zOd52_tUWg), "[Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdw)" talk by Runar Bjarnason.
+4. Learning Rust: [The Rust Book](https://doc.rust-lang.org/book/) Live coding streams by [Jon Gjengset](https://www.youtube.com/c/JonGjengset) "[Rust for Rustaceans](https://rust-for-rustaceans.com/)" book by Jon Gjengset.
+5. AI tools: Claude Code, Amp by Sourcegraph
+
+
+
 ## Transcript
 
 1
