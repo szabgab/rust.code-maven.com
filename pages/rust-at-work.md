@@ -15,7 +15,7 @@ Trying to understand how people use Rust at their companies.
 
 | When       | event                                                                                                                    |  who             | register                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------------- |
-| 2025.06.11 | [Rust at Work at Ardan Labs & LibreQoS](https://rust.code-maven.com/rust-at-work-ardan-labs-libreqos.md)                 | Herbert Wolverson | [register](https://www.meetup.com/code-mavens/events/308234298/) |
+| 2025.06.11 | [Rust at Work at Ardan Labs & LibreQoS](https://rust.code-maven.com/rust-at-work-ardan-labs-libreqos)                    | Herbert Wolverson | [register](https://www.meetup.com/code-mavens/events/308234298/) |
 
 ## Previous recordings
 
