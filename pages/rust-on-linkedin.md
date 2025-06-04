@@ -44,7 +44,7 @@ Number of memebers on the given date
 
 | group                                                                                          | 2024.04.08 | 2024.06.17  | 2014.12.17 |
 | ---------------------------------------------------------------------------------------------- | ---------- | ----------- | ---------- |
-| [The Rust Way Germany](https://www.linkedin.com/groups/12783495/)                              | 232        | 232         |  ? |
+| [The Rust Way Germany](https://www.linkedin.com/groups/12783495/)                              | 232        | 232         | 232  |
 | [Germany's Rust developers community](https://www.linkedin.com/groups/12787409/)               |  66        |  89         | 87 |
 | [Perth Rust Community](https://www.linkedin.com/groups/7439562/)                               |  66        |  69         | 76 |
 | [Lithuanian Rust Developers](https://www.linkedin.com/groups/8205799/)                         |  57        |  59         | 58 |
