@@ -32,10 +32,10 @@ Number of memebers on the given date
 | [Rust Blockchain Developers (Solana, Terra, Cosmwasm, Cosmos SDK)](https://www.linkedin.com/groups/8541444/) |    149      |    150     |                  |   -         | |
 | [Embedded Rust](https://www.linkedin.com/groups/9377917/)                                                    |    140      |    159     |                  |   201       | |
 | [Rust Language](https://www.linkedin.com/groups/9272194/)                                                    |    102      |    120     |                  |   158       | |
-| [Rust language](https://www.linkedin.com/groups/8733663/)                                                    |     86      |     85     |                  |     ?       | |
+| [Rust language](https://www.linkedin.com/groups/8733663/)                                                    |     86      |     85     |                  |    85       | |
 | [Rust Programming Guild](https://www.linkedin.com/groups/9557754/)                                           |     66      |     95     |                  |   126       | |
 | [Rust Developer](https://www.linkedin.com/groups/9082241/)                                                   |     52      |     63     |                  |    87       | |
-| [Rust Programming Language ( Rustlang )](https://www.linkedin.com/groups/14028940/)                          |     39      |     39     |                  |     ?       | |
+| [Rust Programming Language ( Rustlang )](https://www.linkedin.com/groups/14028940/)                          |     39      |     39     |                  |    39       | |
 | [Let's RUST](https://www.linkedin.com/groups/12767039/)                                                      |     13      |     17     |                  |    20       | |
 | [Rust Developers Hub](https://www.linkedin.com/groups/14332092/)                                             |     12      |     13     |                  |    15       | |
 
