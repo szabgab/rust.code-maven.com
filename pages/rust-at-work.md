@@ -7,7 +7,7 @@ show_related: true
 description:
 ---
 
-Live online conversation about the use of Rust at Work.
+Live online conversation about the use of Rust at Work. The recordings are then published on [The Rustacean Station Podcast](https://rustacean-station.org/) as podcast.
 
 Trying to understand how people use Rust at their companies.
 
@@ -30,7 +30,9 @@ Trying to understand how people use Rust at their companies.
 * During the event the audience can ask questions in the chat room that can enhance the whole conversation.
 
 
-## Topics (not all of them might be relevant to you)
+## Topics
+
+(not all of them might be relevant to you, and we might cover more.)
 
 * Please introduce yourself.
 * Please introduce the company you work for. The products and services of your company.
