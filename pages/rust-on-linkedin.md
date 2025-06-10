@@ -91,3 +91,9 @@ followers
 
 * [Rust Jobs](https://www.linkedin.com/products/rustjobs-dev-hire-rust-engineers/)
 
+
+## To add:
+
+* [Rust Ararhus](https://www.linkedin.com/company/rustaarhus/)
+* [Rust Peru](https://www.linkedin.com/groups/13175332/)
+
