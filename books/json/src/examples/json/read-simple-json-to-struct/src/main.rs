@@ -19,7 +19,7 @@ fn main() {
     println!("text: {}", data.text);
     println!();
 
-    // Using the Turbofixh syntax
+    // Using the Turbofish syntax
     let other = serde_json::from_str::<Point>(&content).unwrap();
     println!("other = {:?}", other);
 }
