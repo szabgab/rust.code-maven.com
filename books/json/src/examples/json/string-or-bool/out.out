@@ -1,0 +1,2 @@
+Person { name: "Foo", readme: String("README.md") }
+Person { name: "Bar", readme: Bool(false) }
