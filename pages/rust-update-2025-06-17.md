@@ -35,6 +35,7 @@ Overall:
 In the last 6 months several groups closed down. Probably due to the price-hike of Meetup (the new price is 3 times of the old one). Some might use another platform, but I don't know where.
 If you do, please let me know!
 
+These are the groups that were closed:
 * Rust Chennai in Chennai, India. 1,204
 * Rust AKL in Auckland, New Zealand. 672
 * Finland Rust-lang Group in Helsinki, Finland. 602
