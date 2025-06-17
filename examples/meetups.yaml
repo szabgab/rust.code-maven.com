@@ -51,10 +51,6 @@
   url: https://www.meetup.com/bostonrust/
   members: 1321
   location: Boston, MA, USA
-- name: Rust Chennai (closed)
-  url: https://www.meetup.com/mad-rs/
-  members: 0
-  location: Chennai, India
 - name: Rust Linz
   url: https://www.meetup.com/de-DE/rust-linz/
   members: 1176
@@ -160,10 +156,6 @@
   url: https://www.meetup.com/ruststhlm/
   members: 673
   location: Stockholm, Sweden
-- name: Rust AKL (closed)
-  url: https://www.meetup.com/rust-akl/
-  members: 0
-  location: Auckland, New Zealand
 - name: Rust Toronto
   url: https://www.meetup.com/Rust-Toronto/
   members: 648
@@ -180,10 +172,6 @@
   url: https://www.meetup.com/Rust-Warsaw/
   members: 668
   location: Warsaw, Poland
-- name: Finland Rust-lang Group (closed)
-  url: https://www.meetup.com/Finland-Rust-Meetup/
-  members: 0
-  location: Helsinki, Finland
 - name: Rust Vienna
   url: https://www.meetup.com/rust-vienna/
   members: 619
@@ -244,10 +232,6 @@
   url: https://www.meetup.com/Cambridge-Rust-Meetup/
   members: 491
   location: Cambridge, C3, United Kingdom
-- name: Rust-Saar (closed)
-  url: https://www.meetup.com/Rust-Saar/
-  members: 0
-  location: Saarbrücken, Germany
 - name: Rust Roma
   url: https://www.meetup.com/it-IT/Rust-Roma/
   members: 425
@@ -388,18 +372,10 @@
   url: https://www.meetup.com/Rust-Hack-Learn-Karlsruhe/
   members: 233
   location: Karlsruhe, Germany
-- name: Rust Chinese Community (closed)
-  url: https://www.meetup.com/rust-chinese-group
-  members: 0
-  location: Beijing, China
 - name: Reading Rust Workshop
   url: https://www.meetup.com/reading-rust-workshop
   members: 200
   location: Reading, United Kingdom
-- name: Ottawa Rust Language Meetup (closed)
-  url: https://www.meetup.com/Ottawa-Rust-Language-Meetup/
-  members: 0
-  location: Ottawa, ON, Canada
 - name: Pasadena Thursday Go / Rust
   url: https://www.meetup.com/thursday-go/
   members: 165
@@ -436,10 +412,6 @@
   url: https://www.meetup.com/rust-colombia/
   members: 155
   location: Medellín, Colombia
-- name: Hack-away with Rust (closed)
-  url: https://www.meetup.com/hack-away-with-rust/
-  members: 0
-  location: Espoo, Finland
 - name: Rust Perth Meetup Group
   url: https://www.meetup.com/perth-rust-meetup-group/
   members: 128
@@ -460,30 +432,10 @@
   url: https://www.meetup.com/rust-canberra/
   members: 109
   location: Canberra, Australia
-- name: RustSchool Rotterdam (closed)
-  url: https://www.meetup.com/RustSchool-Rotterdam/
-  members: 0
-  location: Rotterdam, Netherlands
-- name: Rust Bordeaux (closed)
-  url: https://www.meetup.com/bordeaux-rust/
-  members: 0
-  location: Bordeaux, France
-- name: Rust Triangle (closed)
-  url: https://www.meetup.com/triangle-rust
-  members: 0
-  location: Durham, NC, USA
 - name: Rust, Getting Started
   url: https://www.meetup.com/rust-getting-started
   members: 87
   location: Tiel, Netherlands
-- name: Rust Bristol (closed)
-  url: https://www.meetup.com/rust-bristol
-  members: 0
-  location: Bristol, United Kingdom
-- name: Orange County Rust (closed)
-  url: https://www.meetup.com/oc-rust
-  members: 0
-  location: Irvine, CA, USA
 - name: Dutch Rust Meetup
   url: https://www.meetup.com/dutch-rust-meetup/
   members: 74
