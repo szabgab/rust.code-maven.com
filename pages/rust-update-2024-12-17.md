@@ -9,7 +9,7 @@ tags:
 ---
 
 While the technical capabilities of a programming language are very important, the social acceptance of the language also has a huge
-impact on ecosystem around the language.
+impact on the ecosystem around the language.
 
 It is also a good (or at least reasonable) measurement of the popularity of the language.
 
@@ -30,7 +30,7 @@ Overall:
 | 2024.06.17 | 116        | 68,126  |  2,926 |
 | 2024.12.17 | 132        | 77,688  |  9,562 |
 
-In the last 6 monthes the number of members grew by 14%. Thats over 30% annually.
+In the last 6 months the number of members grew by 14%. Thats over 30% annually.
 
 In the previous 3 month the growth was 4.4% or roughly 20% annually.
 
@@ -46,7 +46,7 @@ Since the previous report the **Rust in Israel** group I created gained 200 memb
 
 For full details, see of [Rust User Groups](/user-groups).
 
-I update the figures in several commit that will allow someone to check the changes more easily. Here are the commits.
+I updated the figures in several commit that will allow someone to check the changes more easily. Here are the commits.
 
 | action                                 | no. groups | members | commit |
 | -------------------------------------- | ---------- | ------- | ------ |
