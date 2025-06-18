@@ -12,9 +12,9 @@ tags:
 Everything about Rust in Spanish.
 
 
-## Rust en castellano, en todo de mundo:
+## Rust en Castellano, en todo de mundo:
 
-* [Rust LangEn Español](https://rustlang-es.org/)
+* [Rust Lang En Español](https://rustlang-es.org/)
 
 ---
 
