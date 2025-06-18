@@ -43,6 +43,6 @@ Counting followers
 | [**RustMaven**](https://x.com/RustMaven)         |     40      |
 
 * Orhun Parmaksız is the maintainer of [Ratatui.rs](https://ratatui.rs/).
-* Guillaume Gomez, rustdoc team leader, [mdbook](https://rust-lang.github.io/mdBook/) contribootor, Rust Paris organizer.
+* Guillaume Gomez, rustdoc team leader, [mdbook](https://rust-lang.github.io/mdBook/) contributor, Rust Paris organizer.
 
 
