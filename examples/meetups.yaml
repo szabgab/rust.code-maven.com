@@ -274,7 +274,6 @@
   members: 636
   location:
     city: Milano
-    state: MI
     country: Italy
 - name: Rust Vienna
   url: https://www.meetup.com/rust-vienna/
@@ -410,7 +409,6 @@
   members: 425
   location:
     city: Roma
-    state: RM
     country: Italy
 - name: WebAssembly and Rust Meetup (Wasm Empowering AI)
   url: https://www.meetup.com/wasm-rust-meetup
