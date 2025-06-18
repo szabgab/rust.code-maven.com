@@ -30,6 +30,12 @@
   location:
     city: Bangalore
     country: India
+- name: RustLang en Español
+  url: https://rustlang-es.org
+  members: 2305
+  location:
+    city: Online
+    country: Worldwide
 - name: Seattle Rust User Group
   url: https://www.meetup.com/seattle-rust-user-group/
   members: 1939
