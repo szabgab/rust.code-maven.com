@@ -5,8 +5,6 @@ author: szabgab
 published: true
 show_related: true
 description:
-tags:
-    - Spanish
 ---
 
 Everything about Rust in Spanish.
