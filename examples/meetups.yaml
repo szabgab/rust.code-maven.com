@@ -741,6 +741,12 @@
     city: Calgary
     state: AB
     country: Canada
+- name: Rust Poland
+  url: https://www.meetup.com/rust-poland-meetup/
+  members: 17
+  location:
+    city: Poznan
+    country: Poland
 - name: Rust Indonesia
   url: https://github.com/rustid/meetup
   members: 0
