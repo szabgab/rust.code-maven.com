@@ -29,15 +29,15 @@ Number of memebers on the given date
 | [rust-jobs](https://www.linkedin.com/groups/8854292/)                                                        |    915      |    965     |                  | 1,057       |                   |  1,156     |
 | [Unofficial Rust Programming Language Job Board](https://www.linkedin.com/groups/12495575/)                  |    590      |    639     |                  |   764       |                   |    840     |
 | [Rust programming](https://www.linkedin.com/groups/13967773/)                                                |    203      |    229     |                  |   276       |                   |    318     |
-| [Rust Blockchain Developers (Solana, Terra, Cosmwasm, Cosmos SDK)](https://www.linkedin.com/groups/8541444/) |    149      |    150     |                  |   -         |                   |  closed    |
 | [Embedded Rust](https://www.linkedin.com/groups/9377917/)                                                    |    140      |    159     |                  |   201       |                   |    246     |
 | [Rust Language](https://www.linkedin.com/groups/9272194/)                                                    |    102      |    120     |                  |   158       |                   |    195     |
-| [Rust language](https://www.linkedin.com/groups/8733663/)                                                    |     86      |     85     |                  |    85       |                   |     80     |
 | [Rust Programming Guild](https://www.linkedin.com/groups/9557754/)                                           |     66      |     95     |                  |   126       |                   |    145     |
 | [Rust Developer](https://www.linkedin.com/groups/9082241/)                                                   |     52      |     63     |                  |    87       |                   |    114     |
+| [Rust language](https://www.linkedin.com/groups/8733663/)                                                    |     86      |     85     |                  |    85       |                   |     80     |
 | [Rust Programming Language ( Rustlang )](https://www.linkedin.com/groups/14028940/)                          |     39      |     39     |                  |    39       |                   |     38     |
 | [Let's RUST](https://www.linkedin.com/groups/12767039/)                                                      |     13      |     17     |                  |    20       |                   |     21     |
 | [Rust Developers Hub](https://www.linkedin.com/groups/14332092/)                                             |     12      |     13     |                  |    15       |                   |     15     |
+| [Rust Blockchain Developers (Solana, Terra, Cosmwasm, Cosmos SDK)](https://www.linkedin.com/groups/8541444/) |    149      |    150     |                  |   -         |                   |  closed    |
 
 
 ## Local groups
@@ -45,36 +45,36 @@ Number of memebers on the given date
 | group                                                                                          | 2024.04.08 | 2024.06.17  | 2014.12.17 | 2025.06.17 |
 | ---------------------------------------------------------------------------------------------- | ---------- | ----------- | ---------- | ---------- |
 | [The Rust Way Germany](https://www.linkedin.com/groups/12783495/)                              | 232        | 232         | 232        |  253 |
+| [Rust in Israel](https://www.linkedin.com/groups/12915149/)                                    |  23        |  40         | 82         |  240 |
+| [Rust Munich](https://www.linkedin.com/groups/9802799/)                                        |  26        |  36         | 89         |  117 |
 | [Germany's Rust developers community](https://www.linkedin.com/groups/12787409/)               |  66        |  89         | 87         |   86 |
 | [Perth Rust Community](https://www.linkedin.com/groups/7439562/)                               |  66        |  69         | 76         |   82 |
 | [Lithuanian Rust Developers](https://www.linkedin.com/groups/8205799/)                         |  57        |  59         | 58         |   62 |
 | [Rust Pune Meetup Group](https://www.linkedin.com/groups/9514371/)                             |  55        |  57         | 58         |   59 |
-| [Malta Rust](https://www.linkedin.com/groups/9519240/)                                         |  31        |  31         | 32         |   33 |
-| [Rust Language Turkey](https://www.linkedin.com/groups/12742475/)                              |  31        |  31         | 31         |   31 |
-| [Rust User Group - Paris](https://www.linkedin.com/groups/12489231/)                           |  29        |  29         | 34         |   42 |
-| [Rust Enthusiasts India](https://www.linkedin.com/groups/13617212/)                            |  28        |  28         | 27         |   27 |
 | [Rust Programming Poland, Polska, Programiści](https://www.linkedin.com/groups/12699271/)      |  28        |  28         | 36         |   44 |
+| [Rust User Group - Paris](https://www.linkedin.com/groups/12489231/)                           |  29        |  29         | 34         |   42 |
 | [Rust USA](https://www.linkedin.com/groups/12501964/)                                          |  28        |  29         | 35         |   41 |
-| [Lenguaje de programación Rust](https://www.linkedin.com/groups/13979404/)                     |  27        |  27         | 27         |   26 |
-| [Rust Munich](https://www.linkedin.com/groups/9802799/)                                        |  26        |  36         | 89         |  117 |
-| [Rust in Israel](https://www.linkedin.com/groups/12915149/)                                    |  23        |  40         | 82         |  240 |
-| [RUST Jobs UK](https://www.linkedin.com/groups/9046953/)                                       |  22        |  22         | 27         |   33 |
-| [Rust Developers Group](https://www.linkedin.com/groups/8896423/)                              |  22        |  24         | 24         |   25 |
 | [Desenvolvedor Rust](https://www.linkedin.com/groups/13887084/)                                |  20        |  22         | 28         |   41 |
-| [Rust India](https://www.linkedin.com/groups/13982267/)                                        |  18        |  18         | 20         |   20 |
-| [Rust Brasil](https://www.linkedin.com/groups/8781783/)                                        |  17        |  17         | 20         |   24 |
-| [Arabian Rust Language Software Egineers](https://www.linkedin.com/groups/13949531/)           |  13        |  13         | 17         |   20 |
-| [Rust Developers India](https://www.linkedin.com/groups/12966595/)                             |  12        |  12         | 14         |   15 |
+| [Malta Rust](https://www.linkedin.com/groups/9519240/)                                         |  31        |  31         | 32         |   33 |
+| [RUST Jobs UK](https://www.linkedin.com/groups/9046953/)                                       |  22        |  22         | 27         |   33 |
+| [Rust Language Turkey](https://www.linkedin.com/groups/12742475/)                              |  31        |  31         | 31         |   31 |
+| [Rust Enthusiasts India](https://www.linkedin.com/groups/13617212/)                            |  28        |  28         | 27         |   27 |
+| [Lenguaje de programación Rust](https://www.linkedin.com/groups/13979404/)                     |  27        |  27         | 27         |   26 |
+| [Rust Developers Group](https://www.linkedin.com/groups/8896423/)                              |  22        |  24         | 24         |   25 |
 | [Rust Lang Brasil](https://www.linkedin.com/groups/9393397/)                                   |  10        |  12         | 21         |   25 |
+| [Rust Brasil](https://www.linkedin.com/groups/8781783/)                                        |  17        |  17         | 20         |   24 |
+| [Rust India](https://www.linkedin.com/groups/13982267/)                                        |  18        |  18         | 20         |   20 |
+| [Arabian Rust Language Software Egineers](https://www.linkedin.com/groups/13949531/)           |  13        |  13         | 17         |   20 |
+| [Rust Peru](https://www.linkedin.com/groups/13175332/)                                         |            |             |            |   16 |
+| [Rust Developers India](https://www.linkedin.com/groups/12966595/)                             |  12        |  12         | 14         |   15 |
+| [Rust Atlanta](https://www.linkedin.com/groups/12504849/)                                      |   7        |   7         | 10         |   12 |
+| [Rust Lang Azerbaijan](https://www.linkedin.com/groups/9581819/)                               |   7        |   8         |  8         |    9 |
 | [Magyar Rust fejlesztők / Hungarian Rust developers](https://www.linkedin.com/groups/9588003/) |   8        |   8         |  8         |    8 |
 | [Rust Georgia](https://www.linkedin.com/groups/8980532/)                                       |   8        |   8         |  8         |    8 |
 | [Rust Developers Balkan](https://www.linkedin.com/groups/13993997/)                            |   8        |   8         |  8         |    8 |
-| [Rust Lang Azerbaijan](https://www.linkedin.com/groups/9581819/)                               |   7        |   8         |  8         |    9 |
 | [Persian Rust Developers](https://www.linkedin.com/groups/9085811/)                            |   7        |   7         |  7         |    6 |
-| [Rust Atlanta](https://www.linkedin.com/groups/12504849/)                                      |   7        |   7         | 10         |   12 |
 | [Rust Venezuela](https://www.linkedin.com/groups/9809096/)                                     |   1        |   1         |  1         |    1 |
 | [Rust SriLanka](https://www.linkedin.com/groups/14426899/)                                     |   1        |   1         |  1         |    1 |
-| [Rust Peru](https://www.linkedin.com/groups/13175332/)                                         |            |             |            |   16 |
 
 
 ## Companies / Showcases / Pages
