@@ -24,7 +24,13 @@ Everything about Rust in Spanish.
 * [YouTube](https://www.youtube.com/@RustLangEnEspañol)
 * [Twitch](https://www.twitch.tv/rustlanges)
 
+## Libros
+
+* [El Lenguaje de Programación Rust](https://book.rustlang-es.org/)
+
 ## Grupos de Meetup
+
+* [Busca para los paises hispanohablantes](/user-groups-by-country)
 
 
 
