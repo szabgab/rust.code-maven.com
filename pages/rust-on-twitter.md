@@ -38,7 +38,7 @@ Counting followers
 | [euro_rust](https://x.com/euro_rust)             |  3,092      |
 | [Daily Rust](https://x.com/rustoftheday)         |  3,020      |
 | [RustLondon_](https://x.com/RustLondon_)         |  2,991      |
-| [Guillaume Gomez](https://x.com/imperioworld_)   | 2,774       |
+| [Guillaume Gomez](https://x.com/imperioworld_)   |  2,774      |
 | [ratatui_rs](https://x.com/ratatui_rs)           |  2,195      |
 | [**RustMaven**](https://x.com/RustMaven)         |     40      |
 
