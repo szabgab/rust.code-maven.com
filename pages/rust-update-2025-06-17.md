@@ -225,5 +225,5 @@ Also on TIOBE:
 * Perl jumped from 17 to 13 in 1 year
 * R jumped from 21 to 14 in 1 year
 
-Even if earlier you thought that TIOBE is real this can show you that it has some very serious flaws. (Oh and I am the editor of the [Perl Weekly newsletter](https://perlweekly.com/) so I think I have some undertanding about the popularity of Perl.
+Even if earlier you thought that TIOBE is real this can show you that it has some very serious flaws. I doubt ADA and R would jump that much in a year, but I know that nothing in the Perl world explains this surge in Perl. I think I can say that as I am the editor of the [Perl Weekly newsletter](https://perlweekly.com/) so I think I have some undertanding about the popularity of Perl.
 
