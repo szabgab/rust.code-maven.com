@@ -14,6 +14,10 @@ Everything about Rust in Spanish.
 
 ## Rust en castellano, en todo de mundo:
 
+* [Rust LangEn Español](https://rustlang-es.org/)
+
+---
+
 * [GitHub](https://github.com/RustLangES)
 * [LinkedIn](https://www.linkedin.com/company/rustlanges)
 * [Telegram](https://t.me/rust_es)
