@@ -2,11 +2,18 @@ use serde::Deserialize;
 use thousands::Separable;
 
 #[derive(Debug, Deserialize)]
+struct Location {
+    city: String,
+    state: Option<String>,
+    country: String,
+}
+
+#[derive(Debug, Deserialize)]
 struct Group {
     name: String,
     url: String,
     members: u32,
-    location: String,
+    location: Location,
     web: Option<String>,
 }
 
@@ -35,6 +42,13 @@ fn meetups() {
             Some(url) => format!("[web]({})", url),
             None => String::new(),
         };
+        let location = match &group.location.state {
+            Some(state) => format!(
+                "{}, {}, {}",
+                group.location.city, state, group.location.country
+            ),
+            None => format!("{}, {}", group.location.city, group.location.country),
+        };
         text.push_str(
             format!(
                 "| {} | [{}]({}) | {} | {} | {} |\n",
@@ -43,13 +57,13 @@ fn meetups() {
                 group.url,
                 web,
                 group.members,
-                group.location
+                location
             )
             .as_str(),
         );
     }
 
-    let footer  = include_str!("footer.md");
+    let footer = include_str!("footer.md");
     text.push_str(&footer);
 
     let filename = "../../pages/user-groups.md";
