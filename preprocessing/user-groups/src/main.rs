@@ -18,10 +18,11 @@ struct Group {
 }
 
 fn main() {
-    meetups();
+    let groups = load_groups();
+    user_groups(groups);
 }
 
-fn meetups() {
+fn load_groups() -> Vec<Group> {
     let filename = std::path::Path::new("../../examples/meetups.yaml");
     let yaml_string = std::fs::read_to_string(filename).unwrap();
     let mut groups: Vec<Group> = match serde_yaml::from_str(&yaml_string) {
@@ -31,12 +32,17 @@ fn meetups() {
             std::process::exit(1);
         }
     };
-    //println!("{:?}", data);
-
-    let total = groups.iter().map(|grp| grp.members).sum::<u32>();
-    let mut text = format!(include_str!("header.md"), total.separate_with_commas());
-
     groups.sort_by(|a, b| b.members.cmp(&a.members));
+    groups
+}
+
+fn user_groups(groups: Vec<Group>) {
+    let total = groups.iter().map(|grp| grp.members).sum::<u32>();
+    let mut text = format!(
+        include_str!("header-user-groups.md"),
+        total.separate_with_commas()
+    );
+
     for (ix, group) in groups.iter().enumerate() {
         let web = match &group.web {
             Some(url) => format!("[web]({})", url),
