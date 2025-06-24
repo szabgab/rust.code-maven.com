@@ -729,6 +729,12 @@
   location:
     city: Taipei
     country: Taiwan
+- name: Perú Rust User Group
+  url: https://www.meetup.com/peru-rust-user-group/
+  members: 58
+  location:
+    city: Lima
+    country: Peru
 - name: Rust Circle Kampala
   url: https://www.eventbrite.com/o/rust-circle-kampala-65249289033
   members: 53
