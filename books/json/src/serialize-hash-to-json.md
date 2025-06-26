@@ -48,7 +48,7 @@ We need [serde_json](https://crates.io/crates/serde_json) for this.
 
 ## The code
 
-{% embed include file="examples/hash-to-json/src/main.rs" %}
+{% embed include file="src/examples/hash-to-json/src/main.rs" %}
 
 
 ## Running the example
