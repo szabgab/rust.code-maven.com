@@ -9,6 +9,7 @@ title = "CSV in Rust"
 git-repository-url = "https://github.com/szabgab/rust.code-maven.com"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/szabgab/rust.code-maven.com/edit/main/books/csv/{path}"
+site-url = "/csv/"
 
 # Handle Youtube video embedding and the footer
 [preprocessor.embedify]
