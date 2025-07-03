@@ -15,12 +15,12 @@ Here is an example. I tried to simplify it, but it still feels a bit convoluted.
 
 ## The dependencies
 
-{% embed include file="examples/test-tempfile/Cargo.toml" %}
+{% embed include file="src/examples/test-tempfile/Cargo.toml" %}
 
 
 ## The code with the tests
 
-{% embed include file="examples/test-tempfile/src/main.rs" %}
+{% embed include file="src/examples/test-tempfile/src/main.rs" %}
 
 ## Running the tests
 
@@ -43,7 +43,7 @@ We could mention this in the README file, but can we really rely on people readi
 My [question on the users forum](https://users.rust-lang.org/t/how-to-configure-tests-in-cargo-toml-test-threads-1/105549) got a suggestion to
 include the setting in the `cargo/config.toml` file:
 
-{% embed include file="examples/test-tempfile/.cargo/config.toml" %}
+{% embed include file="src/examples/test-tempfile/.cargo/config.toml" %}
 
 Actually I include two suggestions.
 
