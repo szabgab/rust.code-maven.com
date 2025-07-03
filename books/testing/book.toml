@@ -2,13 +2,13 @@
 authors = ["Gabor Szabo"]
 language = "en"
 src = "src"
-title = "The Clap book"
+title = "Testing in Rust"
 
 # Add github icon to the menu
 [output.html]
 git-repository-url = "https://github.com/szabgab/rust.code-maven.com"
 git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/szabgab/rust.code-maven.com/edit/main/books/clap/{path}"
+edit-url-template = "https://github.com/szabgab/rust.code-maven.com/edit/main/books/testing/{path}"
 
 # Handle Youtube video embedding and the footer
 [preprocessor.embedify]
