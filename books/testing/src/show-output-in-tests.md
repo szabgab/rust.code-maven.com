@@ -1,17 +1,7 @@
----
-title: Show standard output and standard error in tests in Rust
-timestamp: 2023-12-30T18:30:01
-author: szabgab
-published: true
-description: Sometimes we would like to include print statements in the tests in Rust. How can we see them?
-tags:
-    - testing
-    - STDOUT
-    - STDERR
-    - --show-output
-todo:
-    - test capturing and validating the output in a function in an inline test
----
+# Show standard output and standard error in tests in Rust
+
+Sometimes we would like to include print statements in the tests in Rust. How can we see them?
+
 
 Sometimes our code prints to the screen, either to the standard output channel or the standard error channel.
 There are cases when we might want to verify the content of what was printed in other case we just would like to see.
@@ -24,14 +14,14 @@ run our code as an external program as we can also see in the article on [how to
 
 ## Code with inline tests
 
-{% include file="examples/show-output-in-tests/src/main.rs" %}
+{% embed include file="src/examples/show-output-in-tests/src/main.rs" %}
 
 ## External tests
 
 Running the program as a command line application we would probably check that the text printed to the STDOUT and STDERR **by the program**
 is what we expect. Still we have some text printed **by the test** that we would like to see.
 
-{% include file="examples/show-output-in-tests/tests/tests.rs" %}
+{% embed include file="src/examples/show-output-in-tests/tests/tests.rs" %}
 
 ## Regular test output
 
@@ -94,4 +84,12 @@ The `-q` is an option of `cargo`, but --show-output` is a parameter of the test 
 
 
 
+- tags:
+    - testing
+    - STDOUT
+    - STDERR
+    - --show-output
+
+- todo:
+    - test capturing and validating the output in a function in an inline test
 

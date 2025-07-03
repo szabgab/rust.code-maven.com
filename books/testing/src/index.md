@@ -1,13 +1,7 @@
----
-title: Testing in Rust
-timestamp: 2024-01-05T07:50:01
-author: szabgab
-published: true
-description: Writing unit, integration, acceptance, regression, performance, etc. tests in Rust.
-tags:
-    - testing
-    - tests
----
+# Testing
+
+
+Writing unit, integration, acceptance, regression, performance, etc. tests in Rust.
 
 Writing unit-, integration-, etc. tests should be an integral part of the development work, but in my experience in many organizations it is more like an afterthought. Sometimes relegated to a separate team or separate department.
 
@@ -17,12 +11,10 @@ Some people put a lot of emphasize on the separation between unit-, integration-
 
 In this series of articles we are going to cover how one could write tests in Rust.
 
-* In the series about the [Rocket web development framework](/rocket) each example in each article comes with its tests.
+* In the series about the [Rocket web development framework](https://rust.code-maven.com/rocket) each example in each article comes with its tests.
 
-* [Show standard output and standard error in tests](/show-output-in-tests)
-* [Test command line applications](/test-command-line-application)
+* [Show standard output and standard error in tests](./show-output-in-tests.md)
+* [Test command line applications](./test-command-line-application.md)
 
-
-* See the [tests tag](/tags/tests)
 
 * There is a nice collection of [types of testing](https://www.geeksforgeeks.org/types-software-testing/).
