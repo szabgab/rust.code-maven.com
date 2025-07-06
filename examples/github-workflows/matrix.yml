@@ -11,6 +11,7 @@ jobs:
           - beta
           - nightly
           - 1.78
+          - 1.88
     name: ${{matrix.rust}}
     runs-on: ubuntu-latest
     steps:
