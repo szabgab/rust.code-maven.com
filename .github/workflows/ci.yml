@@ -35,6 +35,9 @@ jobs:
       - name: Generate pages
         run: |
           ./generate.sh
+
+      - name: Code Maven
+        run: |
           ./code-maven web
 
       - name: Checkout slides
