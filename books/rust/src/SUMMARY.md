@@ -28,7 +28,21 @@
   - [Demo error handling with Result](./rust/introduction/demo-error-handling-with-result.md)
   - [Demo error handling with Result and question mark](./rust/introduction/demo-error-handling-with-pass-through.md)
 
-
-
+- [Hello World](./rust/hello-world/index.md)
+  - [Install Rust](./rust/hello-world/rust-installation.md)
+  - [Editor and IDE](./rust/hello-world/rust-editor-and-ide.md)
+  - [Hello World](./rust/hello-world/rust-hello-world.md)
+  - [Hello World with Cargo](./rust/hello-world/hello-world-with-cargo.md)
+  - [Cargo build](./rust/hello-world/cargo-build.md)
+  - [Run in release mode](./rust/hello-world/cargo-run-release.md)
+  - [Use of macros with parentheses, square brackets, or curly braces](./rust/hello-world/use-of-macros.md)
+  - [Rust and comments](./rust/hello-world/rust-comments.md)
+  - [Rust - Hello Foo](./rust/hello-world/hello-foo.md)
+  - [Interpolation](./rust/hello-world/string-interpolation.md)
+  - [Printing a string](./rust/hello-world/printing-a-string.md)
+  - [Printing a string fixed](./rust/hello-world/printing-a-string-fixed.md)
+  - [Debugging print](./rust/hello-world/debugging-print.md)
+  - [Rust and print](./rust/hello-world/rust-and-print.md)
+  - [Exercise: Hello World](./rust/hello-world/exercise-helo-world.md)
 
 
