@@ -127,3 +127,7 @@
   - [Exercise: Circle add tests](./rust/numbers/exercise-circle-add-tests.md)
   - [Solution: Rectangle ARGS with protection](./rust/numbers/solution-rectangle-args-with-protection.md)
 
+- [Constants](./rust/constants/index.md)
+  - [Rust constants](./rust/constants/rust-constants.md)
+  - [Constant shadowing](./rust/constants/constant-shadowing.md)
+
