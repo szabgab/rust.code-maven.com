@@ -350,14 +350,6 @@ cargo run
 cargo run --release
 ```
 
-## Add method to HashMap that sums the values
-{id: add-method-to-hashmap-that-sums-the-values}
-{i: HashMap}
-{i: TODO}
-
-![](examples/hashes/total-values-method/src/main.rs)
-![](examples/hashes/total-values-method/out.out)
-
 ## Passing string to function
 {id: passing-string-to-function}
 {i: TODO}
