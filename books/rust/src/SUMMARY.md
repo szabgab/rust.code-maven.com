@@ -71,4 +71,12 @@
   - [Solution: Circle ARGS](./rust/args-intro/solution-circle-args.md)
   - [Solution: basic math operations](./rust/args-intro/solution-basic-math-operations-args.md)
 
+- [Development tools](./rust/tools/index.md)
+  - [Code formatting](./rust/tools/code-formatting.md)
+  - [Clippy](./rust/tools/clippy.md)
+  - [Extreme Clippy](./rust/tools/extreme-clippy.md)
+  - [Cargo audit](./rust/tools/cargo-audit.md)
+  - [Cargo watch](./rust/tools/cargo-watch.md)
+  - [Pre-commit hook](./rust/tools/pre-commit.md)
+  - [Continuous Integration](./rust/tools/continuous-integration.md)
 
