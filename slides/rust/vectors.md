@@ -495,8 +495,8 @@ a 1
 * Second example: iterating over the indices and getting the value. This triggers a `needless_range_loop` suggesting the third solution:
 * Third example: Creating an iterator out of the vector and calling `enumerate` on it. This will allow us to iterate over the index-value pairs.
 
-![](examples/loops/enumerate/src/main.rs)
-![](examples/loops/enumerate/out.out)
+![](examples/vectors/enumerate/src/main.rs)
+![](examples/vectors/enumerate/out.out)
 
 ## Create vector of strings from array of str using from_iter
 {id: create-vector-of-strings}
