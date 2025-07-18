@@ -131,3 +131,6 @@
   - [Rust constants](./rust/constants/rust-constants.md)
   - [Constant shadowing](./rust/constants/constant-shadowing.md)
 
+- [Characters](./rust/chars/index.md)
+  - [Single character](./rust/chars/single-character.md)
+
