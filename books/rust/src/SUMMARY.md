@@ -151,3 +151,10 @@
   - [Solution STDIN rectangle](./rust/stdin/solution-stdin-rectangle.md)
   - [Solution: STDIN calculator](./rust/stdin/solution-stdin-calculator.md)
 
+- [Loops in Rust](./rust/loops/index.md)
+  - [Three types of loops in Rust](./rust/loops/three-types-of-loops.md)
+  - [While loop in Rust](./rust/loops/rust-while-loop.md)
+  - [Rust: loop with break](./rust/loops/rust-loop-with-break.md)
+  - [break returns value from loop](./rust/loops/break-retursn-value-from-loop.md)
+  - [for loop in Rust](./rust/loops/rust-for-loop.md)
+
