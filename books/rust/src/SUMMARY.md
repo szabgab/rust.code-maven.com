@@ -62,4 +62,13 @@
   - [Convert string to number after removing whitespaces](./rust/string-to-number/rust-convert-string-to-number-trim.md)
   - [Convert string to float](./rust/string-to-number/convert-string-to-float.md)
 
+- [Command line arguments - ARGS intro](./rust/args-intro/index.md)
+  - [Command line arguments - args](./rust/args-intro/command-line-arguments.md)
+  - [Exercise: Rectangle ARGS](./rust/args-intro/exercise-rectangle-args.md)
+  - [Exercise: Circle ARGS](./rust/args-intro/exercise-circle-args.md)
+  - [Exercise: basic math operations](./rust/args-intro/exercise-basic-math-operations-args.md)
+  - [Solution: Rectangle ARGS](./rust/args-intro/solution-rectangle-args.md)
+  - [Solution: Circle ARGS](./rust/args-intro/solution-circle-args.md)
+  - [Solution: basic math operations](./rust/args-intro/solution-basic-math-operations-args.md)
+
 
