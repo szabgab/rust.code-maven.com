@@ -254,5 +254,14 @@
   - [Default path - return PathBuf](./rust/args/return-pathbuf.md)
 
 
-
+- [Tuples in Rust](./rust/tuples/index.md)
+  - [Rust tuple - fixed-sizes, mixed, ordered collection](./rust/tuples/rust-tuple.md)
+  - [Define the types in the tuple](./rust/tuples/define-the-types-in-the-tuple.md)
+  - [Change tuple (mutable)](./rust/tuples/change-tuple.md)
+  - [Create tuple with types, but without values](./rust/tuples/create-tuple-with-types-but-without-values.md)
+  - [Destructuring tuple](./rust/tuples/destructuring-tuple.md)
+  - [The empty tuple is called the unit](./rust/tuples/empty-tuple-unit.md)
+  - [One element tuple](./rust/tuples/one-element-tuple.md)
+  - [Enumerate over vector uses tuples](./rust/tuples/enumerate-over-vector.md)
+  - [Return multiple values from a function](./rust/tuples/return-multiple-values-from-a-functions.md)
 
