@@ -177,3 +177,17 @@
   - [Exercise: one-dimensional space-fight](./rust/boolean/exercise-one-dimensional-space-fight.md)
   - [Solution: one-dimensional space-fight](./rust/boolean/solution-one-dimensional-space-fight.md)
 
+- [Arrays in Rust](./rust/arrays/index.md)
+  - [Arrays in Rust](./rust/arrays/arrays-in-rust.md)
+  - [Rust array of numbers, length of array](./rust/arrays/rust-array.md)
+  - [Array of strings - access element by index](./rust/arrays/array-of-strings.md)
+  - [Array of structs](./rust/arrays/array-of-structs.md)
+  - [Array iterate on elements](./rust/arrays/array-iterate.md)
+  - [Rust array iterate over idices](./rust/arrays/rust-array-iterate-indices.md)
+  - [Rust array iterate indices and elements with enumerate](./rust/arrays/rust-array-indices.md)
+  - [Rust arrays are not mutable](./rust/arrays/rust-array-not-mutable.md)
+  - [Make the Rust array mutable](./rust/arrays/rust-array-mutable.md)
+  - [Creating an array with the same value](./rust/arrays/creating-array-with-the-same-value.md)
+  - [Exercise: Count digits](./rust/arrays/exercise-count-digits.md)
+  - [Solution: Count digits](./rust/arrays/solution-count-digits.md)
+
