@@ -138,3 +138,16 @@
   - [Using 3rd party libraries](./rust/random/using-3rd-party-libraries.md)
   - [Random module](./rust/random/random-module.md)
 
+- [STDIN](./rust/stdin/index.md)
+  - [Rust - read input from STDIN](./rust/stdin/rust-hello-name.md)
+  - [Rust - read STDIN - remove trailing newline (trim, chomp)](./rust/stdin/rust-read-stdin-chomp.md)
+  - [Rust - flush STDOUT - read STDIN](./rust/stdin/rust-flush-stdout-read-stdin-chomp.md)
+  - [Get number from STDIN](./rust/stdin/get-number-from-stdin.md)
+  - [Get number from STDIN - same variable](./rust/stdin/get-number-from-stdin-same-variable.md)
+  - [Get number (i32) in using a function](./rust/stdin/get-number-using-function.md)
+  - [Exercise: STDIN rectangle](./rust/stdin/exercise-stdin-rectangle.md)
+  - [Exercise: STDIN circle](./rust/stdin/exercise-stdin-circle.md)
+  - [Exercise: STDIN calculator](./rust/stdin/exercise-stdin-calculator.md)
+  - [Solution STDIN rectangle](./rust/stdin/solution-stdin-rectangle.md)
+  - [Solution: STDIN calculator](./rust/stdin/solution-stdin-calculator.md)
+
