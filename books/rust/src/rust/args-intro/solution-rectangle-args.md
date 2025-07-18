@@ -1,6 +1,6 @@
 # Solution: Rectangle ARGS
 
-{% embed include file="src/examples/args/rectangle-args/src/main.rs" %}
+{% embed include file="src/examples/args-intro/rectangle-args/src/main.rs" %}
 
 ```
 cargo run
