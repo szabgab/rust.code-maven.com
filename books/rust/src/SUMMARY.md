@@ -158,3 +158,22 @@
   - [break returns value from loop](./rust/loops/break-retursn-value-from-loop.md)
   - [for loop in Rust](./rust/loops/rust-for-loop.md)
 
+
+- [Conditional operation and boolean values in Rust](./rust/boolean/index.md)
+  - [Conditional: if](./rust/boolean/rust-conditional-if.md)
+  - [Conditional: if - else](./rust/boolean/rust-conditional-if-else.md)
+  - [Conditional: else - if](./rust/boolean/rust-conditional-else-if.md)
+  - [Avoid the comparison chain using match](./rust/boolean/avoid-the-comparison-chain.md)
+  - [Rust: boolean values true and false](./rust/boolean/rust-boolean-values.md)
+  - [Assign result of conditional to variable](./rust/boolean/assign-result-to-variable.md)
+  - [Rust: other types don't have true/false values](./rust/boolean/rust-boolean-only.md)
+  - [Toggle](./rust/boolean/toggle.md)
+  - [if-else returns a value](./rust/boolean/if-else-returns-value.md)
+  - [Conditional (Ternary) operator](./rust/boolean/ternary-operator.md)
+  - [match](./rust/boolean/match.md)
+  - [match all the numbers of an integer type](./rust/boolean/match-all-the-numbers-of-an-integer-type.md)
+  - [match all the numbers of a float type](./rust/boolean/match-all-the-numbers-of-a-float-type.md)
+  - [match with conditions](./rust/boolean/match-with-conditions.md)
+  - [Exercise: one-dimensional space-fight](./rust/boolean/exercise-one-dimensional-space-fight.md)
+  - [Solution: one-dimensional space-fight](./rust/boolean/solution-one-dimensional-space-fight.md)
+
