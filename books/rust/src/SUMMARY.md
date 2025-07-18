@@ -304,6 +304,11 @@
   - [Converting between types: The From and Into traits](./rust/struct/from-and-into.md)
   - [From and Into for String and &str](./rust/struct/from-and-into-for-string.md)
   - [Implementing the From trait for 2D and 3D point structs](./rust/struct/implementing-the-from-trait-for-2d-and-3d-structs.md)
+  - [Other: Struct and type alias - Polygon](./rust/struct/struct-and-type-alias.md)
+  - [Other: Struct duplicate](./rust/struct/struct-duplicate.md)
+  - [Other: Multiple referene to a struct](./rust/struct/multiple-reference-to-a-struct.md)
+  - [Other: Print struct (Point)](./rust/struct/print-struct-point.md)
+  - [Other: Debug struct (Point)](./rust/struct/debug-struct-point.md)
 
 - [Vectors in Rust](./rust/vectors/index.md)
   - [Fixed vector of numbers](./rust/vectors/fixed-vector-of-numbers.md)

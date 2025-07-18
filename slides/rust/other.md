@@ -107,20 +107,6 @@ TODO
 ![](examples/other/type-alias/src/main.rs)
 ![](examples/other/type-alias/out.out)
 
-## Struct and type alias - Polygon
-{id: struct-and-type-alias}
-{i: struct}
-{i: type}
-
-* The simplest way to represent a polygon (a series of points) is a vector of `Point` instances.
-* We can even give it a name using the [type](https://doc.rust-lang.org/std/keyword.type.html) keyword.
-* Despite its name it does **not** create a new type, just an alias.
-* That's why we cannot use `impl` to add a method.
-
-![](examples/struct/polygon-type/src/main.rs)
-![](examples/struct/polygon-type/out.out)
-
-
 ## Solution: Age limit
 {id: solution-age-limit}
 
@@ -377,36 +363,6 @@ cargo run --release
 {i: TODO}
 
 ![](examples/other/passing-string-to-function/src/main.rs)
-
-## Struct duplicate
-{id: struct-duplicate}
-
-* This seems to be an old example showing that if we don't compose one struct from another then we have to implement everything in both cases.
-* In this case the `Circle` struct has its own x and y attribute and its own `mv` method.
-
-![](examples/struct/circle-duplicate/src/main.rs)
-![](examples/struct/circle-duplicate/out.out)
-
-## Multiple referene to a struct
-{id: multiple-reference-to-a-struct}
-
-![](examples/struct/multiple-referene-to-struct/src/main.rs)
-
-## Print struct (Point)
-{id: print-struct-point}
-{i: std::fmt::Display}
-{i: Display}
-
-![](examples/struct/print-point/src/main.rs)
-![](examples/struct/print-point/out.out)
-
-## Debug struct (Point)
-{id: debug-struct-point}
-{i: std::fmt::Debug}
-{i: Debug}
-
-![](examples/struct/debug-point/src/main.rs)
-![](examples/struct/debug-point/out.out)
 
 ## Num traits
 {id: num-traits}
