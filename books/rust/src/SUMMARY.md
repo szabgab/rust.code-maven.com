@@ -80,3 +80,11 @@
   - [Pre-commit hook](./rust/tools/pre-commit.md)
   - [Continuous Integration](./rust/tools/continuous-integration.md)
 
+- [Use libraries](./rust/use-libraries/use.md)
+  - [Using the Standard library](./rust/use-libraries/using-the-standard-library.md)
+  - [Using a single value from the Standard library](./rust/use-libraries/using-a-single-value-from-the-standard-library.md)
+  - [Use (import) a name higher up in the hierarchy](./rust/use-libraries/use-a-name-higher-up-in-the-hierachy.md)
+  - [Using a library with an alias](./rust/use-libraries/using-library-with-alias.md)
+  - [TODO: Crate library and use local library](./rust/use-libraries/use-local-library.md)
+
+

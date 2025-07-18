@@ -323,35 +323,6 @@ However using the [url](https://crates.io/crates/url) crate might be the best so
 ```
 
 
-## Crate library and use local library
-{id: use-local-library}
-{i: dependencies}
-{i: path}
-
-
-* Create a library:
-
-```
-cargo new add-lib --lib
-```
-
-The files created:
-
-![](examples/libraries/add-lib/Cargo.toml)
-![](examples/libraries/add-lib/src/lib.rs)
-
-* Create another crate that will use this library:
-
-```
-cargo new add-app
-cd add-app
-cargo add --path ../add-lib/
-```
-
-![](examples/libraries/add-app/Cargo.toml)
-![](examples/libraries/add-app/src/main.rs)
-
-
 ## Ordered floats
 {id: ordered-floats}
 {i: TODO}
