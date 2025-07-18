@@ -134,3 +134,7 @@
 - [Characters](./rust/chars/index.md)
   - [Single character](./rust/chars/single-character.md)
 
+- [Random](./rust/random/index.md)
+  - [Using 3rd party libraries](./rust/random/using-3rd-party-libraries.md)
+  - [Random module](./rust/random/random-module.md)
+
