@@ -56,3 +56,10 @@
   - [Redeclare immutable variable - Shadowing](./rust/variables/rust-redeclared-immutable-variable.md)
   - [Redeclare immutable variable and change type - Shadowing](./rust/variables/rust-redeclared-immutable-variable-change-type.md)
 
+- [Convert string to number](./rust/string-to-number/index.md)
+  - [Convert string to (integer) number - parse, turbofish](./rust/string-to-number/rust-convert-string-to-number.md)
+  - [Convert string to number that ends with newline](./rust/string-to-number/rust-convert-string-to-number-end-with-newline.md)
+  - [Convert string to number after removing whitespaces](./rust/string-to-number/rust-convert-string-to-number-trim.md)
+  - [Convert string to float](./rust/string-to-number/convert-string-to-float.md)
+
+
