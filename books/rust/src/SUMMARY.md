@@ -245,3 +245,14 @@
   - [Exercise: get first word](./rust/strings/exercise-get-first-word.md)
   - [Solution: Count digits from string](./rust/strings/solution-count-digits-from-string.md)
 
+- [Command line arguments - ARGS](./rust/args/index.md)
+  - [Command line arguments - print all args](./rust/args/command-line-arguments-print-all-args.md)
+  - [Command line program with a single file parameter](./rust/args/command-line-program.md)
+  - [Exercise: calucaltor args](./rust/args/exercise-calculator-args.md)
+  - [Solution: calucaltor args](./rust/args/solution-calculator-args.md)
+  - [Default value on the command line](./rust/args/default-value-for-args.md)
+  - [Default path - return PathBuf](./rust/args/return-pathbuf.md)
+
+
+
+
