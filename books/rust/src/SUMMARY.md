@@ -87,4 +87,9 @@
   - [Using a library with an alias](./rust/use-libraries/using-library-with-alias.md)
   - [TODO: Crate library and use local library](./rust/use-libraries/use-local-library.md)
 
+- [Rust types](./rust/types/index.md)
+  - [Rust Types](./rust/types/rust-types.md)
+  - [Rust infers the type of variables](./rust/types/infer-the-type-of-variable.md)
+  - [Showing type](./rust/types/showing-type.md)
+  - [Print type of variable](./rust/types/print-type-of-variable.md)
 
