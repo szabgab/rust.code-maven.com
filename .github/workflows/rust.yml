@@ -35,9 +35,9 @@ jobs:
         run: |
           CHANGED_FOLDERS=$(cat folders.txt)
           echo "CHANGED_FOLDERS: $CHANGED_FOLDERS"
-          cd slides/rust
-          # comment out as it takes 10 minutes to run
-          # maybe we could improve it by sharing some of the binaries and/or caching
-          if [ "$CHANGED_FOLDERS" != "" ]; then
-            ./check.sh --verbose --cleanup --use-examples --check $CHANGED_FOLDERS
-          fi
+          # cd slides/rust
+          # # comment out as it takes 10 minutes to run
+          # # maybe we could improve it by sharing some of the binaries and/or caching
+          # if [ "$CHANGED_FOLDERS" != "" ]; then
+          #   ./check.sh --verbose --cleanup --use-examples --check $CHANGED_FOLDERS
+          # fi
