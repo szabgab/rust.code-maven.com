@@ -191,3 +191,9 @@
   - [Exercise: Count digits](./rust/arrays/exercise-count-digits.md)
   - [Solution: Count digits](./rust/arrays/solution-count-digits.md)
 
+- [Option](./rust/option/index.md)
+  - [The Option enum](./rust/option/the-option-enum.md)
+  - [Create Option](./rust/option/create-option.md)
+  - [Checked rectangle](./rust/option/checked-rectangle.md)
+  - [Get language function returning Option](./rust/option/get-language-function.md)
+
