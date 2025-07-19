@@ -442,4 +442,17 @@
   - [Solution: count digits in file](./rust/files/solution-count-digits-in-file.md)
 
 
+- [Path](./rust/path/index.md)
+  - [Return vector of Path or PathBuf](./rust/path/return-vector-of-path.md)
+  - [Convert the PathBuf to String to compare](./rust/path/convert-pathbuf-to-string-to-compare.md)
+  - [get file extension](./rust/path/get-file-extension.md)
+  - [file extension](./rust/path/file-extension.md)
+  - [parent directory](./rust/path/parent-directory.md)
+  - [directory ancestors (parent directories)](./rust/path/directory-ancestors.md)
+  - [directory ancestor (n level)](./rust/path/directory-ancestor.md)
+  - [join pathes](./rust/path/join-pathes.md)
+  - [basename (file_name)](./rust/path/basename.md)
+  - [Relative and absolute path](./rust/path/relative-and-absolute-path.md)
+  - [List content of a directory - listdir](./rust/path/list-content-of-a-directory.md)
+  - [List dir recursively](./rust/path/list-dir-recursively.md)
 
