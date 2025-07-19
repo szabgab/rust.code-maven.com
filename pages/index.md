@@ -43,6 +43,7 @@ There are a number of series of articles on the site in the following topics:
 * Linting with [Clippy](/tags/clippy)
 * [reqwest](/reqwest) HTTP client for Rust.
 
+* [error handling](/error-handling)
 
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
 * [Community](/meetups)
