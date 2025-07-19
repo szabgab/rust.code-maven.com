@@ -398,4 +398,24 @@
   - [Convert HashMap to vector of tuples and sort by key or by value](./rust/hashmap/convert-hashmap-to-vector-and-sort-by-key-or-by-value.md)
   - [Other: Add method to HashMap that sums the values](./rust/hashmap/add-method-to-hashmap-that-sums-the-values.md)
 
+- [Enums](./rust/enums/index.md)
+  - [Why enums](./rust/enums/why-enums.md)
+  - [Enum to represent exit status](./rust/enums/enum-to-represent-exit-status.md)
+  - [Enum to represent exit code](./rust/enums/enum-to-represent-exit-code.md)
+  - [Enumeration of the 7 days of the week](./rust/enums/enumeration-of-days-of-week.md)
+  - [Enumeration with non-exhaustive patterns](./rust/enums/enumeration-non-exhaustive-match.md)
+  - [Enumeration and manual comparision](./rust/enums/enumeration-and-manual-comparision.md)
+  - [Enumeration and order](./rust/enums/enumeration-and-order.md)
+  - [Enumeration colors - functions and String](./rust/enums/enumeration-colors-with-functions-and-string.md)
+  - [Enumeration colors - functions and str](./rust/enums/enumeration-colors-with-functions-and-str.md)
+  - [Enumeration colors - with method](./rust/enums/enumeration-colors-with-method.md)
+  - [Enumeration colors - with constructor](./rust/enums/enumeration-colors-with-constructor.md)
+  - [Enumerate without PartialEq using match](./rust/enums/enumerat-with-match.md)
+  - [Struct using enum](./rust/enums/struct-using-enum.md)
+  - [Exercise: enum for programming languages](./rust/enums/exercise-enum-for-programming-languages.md)
+  - [Solution: enum for programming languages](./rust/enums/solution-enum-for-programming-languages.md)
+  - [The Result enum](./rust/enums/the-result-enum.md)
+  - [Iterate over the variants of an enum](./rust/enums/iterate-over-variants-of-enum.md)
+
+
 
