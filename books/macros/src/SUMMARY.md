@@ -1,0 +1,45 @@
+# Summary
+
+- [Rust Macros](./index.md)
+
+- [Macros](./rust/macros/index.md)
+  - [What are macros used for?](./rust/macros/what-are-macros-used-for.md)
+  - [Types of macros](./rust/macros/types-of-macros.md)
+  - [Greetings](./rust/macros/macros-greetings.md)
+
+- [Declarative macros](./rust/declarative-macros/index.md)
+  - [Examples of standard declarative macros](./rust/declarative-macros/examples-of-declarative-macros-in-std.md)
+  - [todo! for and if-condition](./rust/declarative-macros/macro-todo.md)
+  - [todo! for a match](./rust/declarative-macros/tod-for-a-match.md)
+  - [unimplemented](./rust/declarative-macros/unimplemented.md)
+  - [About Declarative macros](./rust/declarative-macros/about-declarative-macros.md)
+  - [Hello World macro](./rust/declarative-macros/macro-hello-world.md)
+  - [Macro with literal values](./rust/declarative-macros/macro-with-literal-values.md)
+  - [Macro with parameter to say hello](./rust/declarative-macros/macro-say-hello.md)
+  - [Fragment specifiers](./rust/declarative-macros/macro-fragment-specifiers.md)
+  - [Macro with literal](./rust/declarative-macros/macro-with-literal.md)
+  - [Macro with ident - create function](./rust/declarative-macros/macro-with-ident.md)
+  - [Macro with optional parameter to say hello](./rust/declarative-macros/macro-with-optional-parameter.md)
+  - [Macro with many parameters to say hello](./rust/declarative-macros/macro-say-hello-many-times.md)
+  - [Macro to create a HashMap to be a counter](./rust/declarative-macros/macro-to-crate-a-hashmap.md)
+  - [Macro prt! to explore memory allocation](./rust/declarative-macros/macro-prt-to-explore-memory-allocation.md)
+  - [Macro String::from](./rust/declarative-macros/macro-string-from.md)
+  - [Macro ok! to replace unwrap](./rust/declarative-macros/macro-ok.md)
+  - [Macro pair! to create tuple with Some](./rust/declarative-macros/macro-pair.md)
+  - [Optional function parameters using macros](./rust/declarative-macros/optional-function-parameters-using-macro.md)
+  - [Debugging macros using trace_macros](./rust/declarative-macros/debuging-macros-using-trace-macros.md)
+  - [Define a function using a macro](./rust/declarative-macros/define-a-function-using-a-macro.md)
+  - [Error logging](./rust/declarative-macros/macro-error-logging.md)
+  - [Some crates that provide macros](./rust/declarative-macros/crates-that-provide-macros.md)
+  - [HTML to string macro](./rust/declarative-macros/html-to-string-macro.md)
+  - [Using a helper macro vs helper function in tests](./rust/declarative-macros/using-helper-macro-in-tests.md)
+
+-  [Procedural macros](./rust/procedural-macros/index.md)
+  - [Procedural macros](./rust/procedural-macros/procedural-macros-intro.md)
+  - [Macro accepting a single string](./rust/procedural-macros/macro-accepting-a-single-string.md)
+  - [Accept list of values as a plain string in a macro](./rust/procedural-macros/accept-list-of-values-as-a-plain-string.md)
+  - [Compile random number in the code using macro](./rust/procedural-macros/compile-random-number-on-the-code.md)
+  - [SQLx - compile-time SQL queries](./rust/procedural-macros/sqlx-compile-time-sql-queries.md)
+
+
+

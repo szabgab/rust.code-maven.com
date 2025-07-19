@@ -1,8 +1,5 @@
-# Macros
-{id: macros}
+# What are macros used for?
 
-## What are macros used for?
-{id: what-are-macros-used-for}
 
 * Metaprogramming - a program that generate a program
 * DRY - Don't Repeate Yourself
@@ -14,17 +11,4 @@
 * [The Little book of Rust Macros](https://veykril.github.io/tlborm/)
 * [Macros tutorial](https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples/)
 
-## Types of macros
-{id: types-of-macros}
-{i: TODO}
 
-* **declarative** Somthing that looks like a function but ends with an exclamation point. e.g. `println!`
-* **procedural** e.g. `#[allow(dead_code)]` etc.
-
-## Greetings
-{id: macros-greetings}
-{i: TODO}
-
-TODO
-
-![](examples/macros/greetings/src/main.rs)
