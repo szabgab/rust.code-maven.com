@@ -33,7 +33,7 @@ There are a number of series of articles on the site in the following topics:
 * [Logging and Tracing](/logging) - Various ways to add logging to our application.
 * [Web development](/web)
     * [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
-    * [Rocket](/rocket) - web development framework for Rust.
+    * [Rocket](/rocket) - web development framework for Rust. [Rocket articles](/rocket-articles)
     * [Loco](/loco) - web development framework for Rust.
     * [Rouille](/rouille) - simple web development framework.
     * [axum](https://axum.code-maven.com/) - the most popular web framework in Rust
