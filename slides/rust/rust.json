@@ -9,7 +9,6 @@
     "version": "1.00",
     "files": [
         "error-handling.md",
-        "datetime.md",
         "chrono.md",
         "handlebars.md",
         "liquid.md",

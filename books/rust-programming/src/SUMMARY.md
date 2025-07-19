@@ -505,4 +505,10 @@
   - [Exercise: concatenate file content](./rust/ownership/exercise-concatenate-file-content.md)
   - [Pass vector to function](./rust/ownership/pass-vector-to-function.md)
 
+- [Date and Time](./rust/datetime/index.md)
+  - [Measure elapsed time](./rust/datetime/measure-elapsed-time.md)
+  - [Duration](./rust/datetime/duration.md)
+  - [Instant sleep Duration](./rust/datetime/instant-sleep-duration.md)
+  - [Handle time (using the time crate)](./rust/datetime/handle-time.md)
+
 
