@@ -368,7 +368,7 @@ cargo run --release
 {i: Mutex}
 {i: TODO}
 
-![](examples/threads/map-thread-suggested/src/main.rs)
+![](examples/other/map-thread-suggested/src/main.rs)
 
 ## Accessing envrionment variables
 {id: accessin-environment-variables}
@@ -415,13 +415,13 @@ This program will create an ever growing string. When it reaches the total size 
 ## Two leveles of modules
 {id: modules-two-levels-of-modules}
 
-![](examples/modules/two-levels-of-modules/src/main.rs)
+![](examples/other/two-levels-of-modules/src/main.rs)
 
 
 ## Try packages
 {id: try-packages}
 
-![](examples/modules/try-packages/src/main.rs)
+![](examples/other/try-packages/src/main.rs)
 
 ## release.toml
 {id: release-toml}
