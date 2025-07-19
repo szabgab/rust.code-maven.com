@@ -40,7 +40,7 @@ There are a number of series of articles on the site in the following topics:
     * [warp](https://warp.code-maven.com/)
     * [Liquid Template](/liquid/)
 * Databases
-    * [SurrealDB](/surrealdb)
+    * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * Linting with [Clippy](/tags/clippy)
 * [reqwest](/reqwest) HTTP client for Rust.
 
