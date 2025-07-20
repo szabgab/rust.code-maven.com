@@ -579,3 +579,14 @@
   - [Format DateTime](./rust/chrono/format-datetime.md)
   - [Parse string to datetime](./rust/chrono/parse-string-to-datetime.md)
 
+- [Testing](./rust/testing/index.md)
+  - [Testing a library crate](./rust/testing/testing-a-library-crate.md)
+  - [Test coverage report with tarpaulin](./rust/testing/test-coverage-with-tarpaulin.md)
+  - [Test a function in a crate](./rust/testing/test-a-function.md)
+  - [Show STDOUT and STDERR during testing](./rust/testing/show-stdout-and-stderr-during-testing.md)
+  - [Testing with temporary directory passed as an environment variable (test in a single thread RUST_TEST_THREADS)](./rust/testing/testing-with-temporary-directory-passed-as-en-environment-variable.md)
+  - [Testing with temorary directory passed in a thread-local variable](./rust/testing/testing-with-temporary-directory-passed-in-a-thread-local-variable.md)
+  - [Testing crates](./rust/testing/testing-crates.md)
+  - [Parametrization of tests](./rust/testing/parametrizations-of-tests.md)
+  - [Rust testing setup and teardown fixtures](./rust/testing/rust-testing-with-fixtures.md)
+
