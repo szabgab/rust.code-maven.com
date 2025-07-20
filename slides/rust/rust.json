@@ -31,7 +31,6 @@
         "unsafe.md",
         "tera.md",
         "sea-orm.md",
-        "ratatui.md",
         "embedded.md",
         "other.md"
     ]
