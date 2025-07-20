@@ -590,3 +590,14 @@
   - [Parametrization of tests](./rust/testing/parametrizations-of-tests.md)
   - [Rust testing setup and teardown fixtures](./rust/testing/rust-testing-with-fixtures.md)
 
+- [TOML](./rust/toml/index.md)
+  - [Reading a TOML file](./rust/toml/reading-toml-file.md)
+  - [Parsing TOML values](./rust/toml/parsing-toml-values.md)
+
+- [Execute and run external commands](./rust/external/index.md)
+  - [The external program we'll run](./rust/external/the-external-program.md)
+  - [Run external programs](./rust/external/run-external-programs.md)
+  - [Run external program combining parameters](./rust/external/run-external-prorgam-combining-parameter.md)
+  - [Run a command provided as a string](./rust/external/run-a-command-provided-as-a-string.md)
+  - [Run external command in another directory](./rust/external/run-external-program-in-another-directory.md)
+
