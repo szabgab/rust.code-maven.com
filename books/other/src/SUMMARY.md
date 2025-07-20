@@ -77,3 +77,12 @@
   - [Early return on None Option](./rust/other/earlyreturn-on-none.md)
   - [Pattern matching with guards on a number](./rust/other/pattern-matching-with-guards-on-a-number.md)
 
+- [egui](./rust/egui/index.md)
+  - [About eframe and egui](./rust/egui/about-eframe-and-egui.md)
+  - [eGUI Window](./rust/egui/egui-window.md)
+  - [eGUI heading](./rust/egui/egui-heading.md)
+  - [eGUI label](./rust/egui/egui-label.md)
+  - [eGUI counter with label and button](./rust/egui/egui-counter-with-label-and-button.md)
+  - [Egui demo app](./rust/egui/egui-demo-app.md)
+
+
