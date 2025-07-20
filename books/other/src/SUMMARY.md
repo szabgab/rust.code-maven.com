@@ -85,4 +85,15 @@
   - [eGUI counter with label and button](./rust/egui/egui-counter-with-label-and-button.md)
   - [Egui demo app](./rust/egui/egui-demo-app.md)
 
+- [images](./rust/images/index.md)
+  - [Draw some simple images](./rust/images/draw-some-simple-images.md)
+
+- [Binary](./rust/binary/index.md)
+  - [Read binary file into a vector of u8](./rust/binary/read-binary-file-into-vector.md)
+
+- [unsafe](./rust/unsafe/index.md)
+  - [unsafe keywords](./rust/unsafe/unsafe-keyword.md)
+  - [unsafe powers](./rust/unsafe/unsafe-powers.md)
+  - [Unsafe - core dump](./rust/unsafe/unsafe-core-dump.md)
+
 

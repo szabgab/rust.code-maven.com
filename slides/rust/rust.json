@@ -23,11 +23,8 @@
         "lifetime.md",
         "iterators.md",
         "advanced-functions.md",
-        "image.md",
         "external.md",
-        "binary.md",
         "learning-tasks.md",
-        "unsafe.md",
         "sea-orm.md",
         "embedded.md"
     ]
