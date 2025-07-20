@@ -518,3 +518,19 @@
   - [Modules and enums](./rust/modules/modules-and-enums.md)
   - [Modules and structs](./rust/modules/modules-and-structs.md)
 
+- [Crates](./rust/crates/index.md)
+  - [Create a crate](./rust/crates/crate-a-crate.md)
+
+- [Sets](./rust/sets/index.md)
+  - [HashSet](./rust/sets/hashset.md)
+  - [Basic Set operations in Rust](./rust/sets/basic-set-operations.md)
+  - [Union and bitor](./rust/sets/union.md)
+  - [Difference](./rust/sets/difference.md)
+
+- [Lifetime](./rust/lifetime/index.md)
+  - [Lifetime elision rules](./rust/lifetime/lifetime-elision-rules.md)
+  - [Function receiving and returning one reference](./rust/lifetime/function-receiving-and-returning-one-reference.md)
+  - [Function receiving two and returning one reference](./rust/lifetime/function-receiving-two-and-returning-one-reference.md)
+  - [Exercise: longest string](./rust/lifetime/exercise-lifetime-longest-string.md)
+  - [Exercise: lifetime](./rust/lifetime/exercise-lifetime-longer-or-static.md)
+
