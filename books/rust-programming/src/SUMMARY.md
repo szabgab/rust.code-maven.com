@@ -557,3 +557,17 @@
   - [Iter strings](./rust/iterators/iter-strings.md)
   - [Non-circular iterators](./rust/iterators/non-cicrucular-iterator.md)
 
+
+- [Advanced Functions](./rust/advanced-functions/index.md)
+  - [Pass function as argument - hello world](./rust/advanced-functions/pass-function-as-argument-hello-world.md)
+  - [Pass function with parameter as an argument](./rust/advanced-functions/pass-function-with-parameter-as-an-argument.md)
+  - [Dispatch table - Calculator](./rust/advanced-functions/dispatch-table.md)
+  - [Dispatch table - Calculator](./rust/advanced-functions/dispatch-table-take-2.md)
+  - [Generic functions to add numbers](./rust/advanced-functions/generic-functions.md)
+  - [Generic functions to add numbers using where clause](./rust/advanced-functions/generic-functions-where-clause.md)
+  - [Exercise: generic function](./rust/advanced-functions/exercise-generic-function.md)
+  - [Exercise: call the add function for two points](./rust/advanced-functions/exercise-call-the-add-function-for-two-points.md)
+  - [Exercise: Implement function to repeate a string](./rust/advanced-functions/exercise-repeate-string.md)
+  - [Solution: Implement function to repeate a string](./rust/advanced-functions/solution-repeate-string.md)
+  - [Solution: call the add function for two points](./rust/advanced-functions/solution-call-the-add-function-for-two-points.md)
+
