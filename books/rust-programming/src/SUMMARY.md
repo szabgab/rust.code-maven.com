@@ -571,3 +571,11 @@
   - [Solution: Implement function to repeate a string](./rust/advanced-functions/solution-repeate-string.md)
   - [Solution: call the add function for two points](./rust/advanced-functions/solution-call-the-add-function-for-two-points.md)
 
+- [DateTime with Chrono](./rust/chrono/index.md)
+  - [Chrono now](./rust/chrono/chrono-now.md)
+  - [Elapsed time](./rust/chrono/elapsed-time.md)
+  - [Date and time arithmetic](./rust/chrono/date-and-time-arithmetic.md)
+  - [Compare chrono dates](./rust/chrono/compare-chrono-dates.md)
+  - [Format DateTime](./rust/chrono/format-datetime.md)
+  - [Parse string to datetime](./rust/chrono/parse-string-to-datetime.md)
+
