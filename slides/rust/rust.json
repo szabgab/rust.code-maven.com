@@ -30,7 +30,6 @@
         "learning-tasks.md",
         "unsafe.md",
         "sea-orm.md",
-        "embedded.md",
-        "other.md"
+        "embedded.md"
     ]
 }
