@@ -9,7 +9,6 @@
     "version": "1.00",
     "files": [
         "chrono.md",
-        "modules.md",
         "crates.md",
         "testing.md",
         "threads.md",

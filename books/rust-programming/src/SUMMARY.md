@@ -511,4 +511,10 @@
   - [Instant sleep Duration](./rust/datetime/instant-sleep-duration.md)
   - [Handle time (using the time crate)](./rust/datetime/handle-time.md)
 
+- [Modules](./rust/modules/index.md)
+  - [Function in the main.rs file](./rust/modules/function-in-the-main-rs-file.md)
+  - [Module defined in the main.rs file](./rust/modules/module-defined-in-main-rs-file.md)
+  - [Module in other file](./rust/modules/module-in-other-file.md)
+  - [Modules and enums](./rust/modules/modules-and-enums.md)
+  - [Modules and structs](./rust/modules/modules-and-structs.md)
 
