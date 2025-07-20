@@ -39,6 +39,7 @@ There are a number of series of articles on the site in the following topics:
     * [axum](https://axum.code-maven.com/) - the most popular web framework in Rust
     * [warp](https://warp.code-maven.com/)
     * [Liquid Template](/liquid/)
+    * [Handlebars Template](/handlebars/)
 * Databases
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * Linting with [Clippy](/tags/clippy)

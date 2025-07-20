@@ -10,7 +10,6 @@
     "files": [
         "error-handling.md",
         "chrono.md",
-        "handlebars.md",
         "modules.md",
         "crates.md",
         "testing.md",
