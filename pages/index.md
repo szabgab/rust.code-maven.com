@@ -44,7 +44,7 @@ There are a number of series of articles on the site in the following topics:
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * Linting with [Clippy](/tags/clippy)
 * [reqwest](/reqwest) HTTP client for Rust.
-* [Other, Ratatui](/other/)
+* [Other, Ratatui, Tera](/other/)
 
 * [error handling](/error-handling)
 

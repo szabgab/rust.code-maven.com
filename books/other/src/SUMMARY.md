@@ -14,4 +14,10 @@
   - [TODO Ratatui - confirmation popup to verify intent to exit](./rust/ratatui/ratatui-confirmation-popup.md)
   - [TODO Ratatui - widgets](./rust/ratatui/ratatui-widgets.md)
 
+- [Tera](./rust/tera/index.md)
+  - [Tera Template system](./rust/tera/tera-template-system.md)
+  - [Tera Hello World](./rust/tera/tera-hello-world.md)
+  - [Tera - list templates](./rust/tera/tera-list-templates.md)
+  - [Tera - use built-in filters on strings](./rust/tera/tera-use-built-in-filters-on-strings.md)
+  - [Tera - create your own filter](./rust/tera/tera-create-your-own-filter.md)
 
