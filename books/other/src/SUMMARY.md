@@ -96,4 +96,10 @@
   - [unsafe powers](./rust/unsafe/unsafe-powers.md)
   - [Unsafe - core dump](./rust/unsafe/unsafe-core-dump.md)
 
+- [Sea ORM](./rust/sea-orm/index.md)
+  - [Counter with Sea-ORM](./rust/sea-orm/counter-with-sea-orm.md)
+
+- [Embedded](./rust/embedded/index.md)
+  - [Resaource about Rust on Embedded](./rust/embedded/embedded-resources.md)
+
 

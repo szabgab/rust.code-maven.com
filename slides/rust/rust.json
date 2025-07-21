@@ -13,8 +13,6 @@
         "threaded-map.md",
         "rayon.md",
         "async.md",
-        "learning-tasks.md",
-        "sea-orm.md",
-        "embedded.md"
+        "learning-tasks.md"
     ]
 }
