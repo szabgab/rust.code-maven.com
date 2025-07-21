@@ -6,7 +6,7 @@ fn main() {
     // ...
 
     // What if we try to print the answer here already? Isn't it undefined, or null?
-    // println!("The answer is {answer}");
+    println!("The answer is {answer}");
 
     answer = 42;
     println!("The answer is {answer}");
