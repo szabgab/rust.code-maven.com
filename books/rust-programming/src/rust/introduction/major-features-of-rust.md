@@ -1,12 +1,12 @@
 # Major features of Rust
 
-* Shift left programming (eliminate bugs earlier in the development process)
+* Shift left programming (eliminate bugs earlier in the development process).
 
-* Speed and Open Source community
+* Speed and Open Source community.
 
 * [Corporate support](https://foundation.rust-lang.org/members/), Linux kernel
 
-* Error handling: exceptions VS return values - returning Result
+* Error handling: exceptions VS return values VS returning Result in Rust.
 * Eliminate `null` issue.
 
 
