@@ -40,6 +40,7 @@ There are a number of series of articles on the site in the following topics:
     * [warp](https://warp.code-maven.com/)
     * [Liquid Template](/liquid/)
     * [Handlebars Template](/handlebars/)
+* [Rust in Paraellel](/rust-parallel/) (Async, threads, threadpool, rayon)
 * Databases
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * Linting with [Clippy](/tags/clippy)
