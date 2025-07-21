@@ -43,6 +43,21 @@
   - [Solution: count characters, words](./rust/threads/solution-count-characters.md)
   - [Solution: run several functions on the same text](./rust/threads/solution-run-several-functions-on-the-same-text.md)
 
+- [Threadpool](./rust/threadpool/index.md)
+  - [Use threadpool with messages](./rust/threadpool/use-threadpool-with-messages.md)
 
+- [Threaded map](./rust/threaded-map/index.md)
+  - [Deprecated: A threaded version of the map function](./rust/threaded-map/a-threaded-version-of-the-map-function.md)
+
+- [rayon](./rust/rayon/index.md)
+  - [What is rayon](./rust/rayon/what-is-rayon.md)
+  - [replace map with par_iter](./rust/rayon/replace-map-with-par-iter.md)
+  - [Tasks with different processing time](./rust/rayon/tasks-with-different-processing-time.md)
+  - [map with threads](./rust/rayon/map-with-threads.md)
+
+
+- [async](./rust/async/index.md)
+  - [tokio](./rust/async/tokio.md)
+  - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
 
 
