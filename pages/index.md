@@ -53,7 +53,10 @@ There are a number of series of articles on the site in the following topics:
 * [Community](/meetups)
 
 * [Why Rust](/why-rust/) Slides from a presentation.
+
 * [Regex](/regex/) using Rust
+
+* [Learning tasks](/learning-tasks/)
 
 ## Rust language topics
 
