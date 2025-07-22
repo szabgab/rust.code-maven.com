@@ -29,6 +29,7 @@
   - [Error handling](./rust/introduction/error-handling.md)
   - [Demo error handling with Result](./rust/introduction/demo-error-handling-with-result.md)
   - [Demo error handling with Result and question mark](./rust/introduction/demo-error-handling-with-pass-through.md)
+  - [Error handling](./rust/introduction/error-handling-demo.md)
 
 - [Hello World](./rust/hello-world/index.md)
   - [Install Rust](./rust/hello-world/rust-installation.md)
