@@ -1,4 +1,8 @@
 fn main() {
+    read_files();
+}
+
+fn read_files() {
     let result = std::fs::read_to_string("other.md"); // Result<String, Error>
 
     match result {
