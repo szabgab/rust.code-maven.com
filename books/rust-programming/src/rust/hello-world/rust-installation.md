@@ -26,16 +26,13 @@ rustc --version
 rustc 1.70.0 (90c541806 2023-05-31)
 ```
 
-
 ```
 $ rustc -vV
-rustc 1.79.0 (129f3b996 2024-06-10)
+rustc 1.88.0 (6b00bc388 2025-06-23)
 binary: rustc
-commit-hash: 129f3b9964af4d4a709d1383930ade12dfe7c081
-commit-date: 2024-06-10
+commit-hash: 6b00bc3880198600130e1cf62b8f8a93494488cc
+commit-date: 2025-06-23
 host: x86_64-unknown-linux-gnu
-release: 1.79.0
-LLVM version: 18.1.7
+release: 1.88.0
+LLVM version: 20.1.5
 ```
-
-

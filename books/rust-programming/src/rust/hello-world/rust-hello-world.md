@@ -23,10 +23,8 @@ We can take this platform and architecture dependent executable and run it on it
 ./main
 ```
 
-
+---
 
 * fn
 * main
 * println!
-
-

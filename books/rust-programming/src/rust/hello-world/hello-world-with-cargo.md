@@ -44,6 +44,8 @@ The compilation phase created a file called `Cargo.lock` and a folder called `ta
 * The `target` folder contains sub-folder called `debug` and that contains the compiled file and all the temporary files that Rust needed for the compilation.
 
 
+---
+
 * cargo
 
 
