@@ -36,4 +36,7 @@ $ cargo run hello
 The input is hello
 ```
 
+## Some extra notes
 
+* In this example we had to use the `mut` keyword to make the variable mutable.
+* In this case, because each **arm** of the `match` statement has only one statement (a `println!` in both cases) we could get-by without the curly braces.

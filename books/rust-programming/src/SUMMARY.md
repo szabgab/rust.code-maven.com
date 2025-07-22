@@ -26,6 +26,7 @@
   - [Demo None handling](./rust/introduction/demo-none-handling.md)
   - [Demo Option to handle None](./rust/introduction/demo-option-to-handle-none.md)
   - [Demo None handling with Option](./rust/introduction/demo-none-handling-with-option.md)
+  - [Error handling](./rust/introduction/error-handling.md)
   - [Demo error handling with Result](./rust/introduction/demo-error-handling-with-result.md)
   - [Demo error handling with Result and question mark](./rust/introduction/demo-error-handling-with-pass-through.md)
 
