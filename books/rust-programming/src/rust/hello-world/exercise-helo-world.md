@@ -1,7 +1,7 @@
 # Exercise: Hello World
 
 * Make sure you have Rust installed.
-* Try `rustc --version`
+* Try `rustc --version`.
 * Create a new project with Cargo.
 * Write a program that prints "Hello World".
 * run the program.

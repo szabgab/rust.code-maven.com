@@ -11,7 +11,7 @@ The error message:
 {% embed include file="src/examples/intro/formatting-required/out.out" %}
 
 Coming from languages such as Perl and Python I used do way too much debugging by sprinkling `print`-statements around the code.
-Even in those languages after a while, as the program grows I always swicth to logging, but still.
+Even in those languages after a while, as the program grows I always switch to logging, but still.
 
 Given that Rust is a compiled language where the compilation takes a lot longer than in Perl or Python, this strategy is less useful, but still, I'd like my simple printing for debugging back. Luckily Rust provides it.
 
