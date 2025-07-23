@@ -53,9 +53,9 @@
   - [Number in a mutable variable](./rust/variables/rust-number-in-a-mutable-variable.md)
   - [Literal strings in variables are immutable](./rust/variables/literal-strings-in-variables-are-immutable.md)
   - [Literal string in a mutable variable can be replaced](./rust/variables/a-literal-string-in-mutable-variable.md)
+  - [A really mutable string](./rust/variables/really-mutable-string.md)
   - [A literal string cannot be changed](./rust/variables/a-literal-string-cannot-be-changed.md)
-  - [Really mutable string](./rust/variables/really-mutable-string.md)
-  - [Cannot change variable type](./rust/variables/cannot-change-variable-type.md)
+  - [Cannot change the type of a variable](./rust/variables/cannot-change-variable-type.md)
   - [Redeclare immutable variable - Shadowing](./rust/variables/rust-redeclared-immutable-variable.md)
   - [Redeclare immutable variable and change type - Shadowing](./rust/variables/rust-redeclared-immutable-variable-change-type.md)
 
