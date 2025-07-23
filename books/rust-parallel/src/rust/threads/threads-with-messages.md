@@ -1,10 +1,5 @@
 # Threads with messages
 
-* channel
-* send
-* recv
-* move
-
 * We can facilitate communication between the main thread and the spawned thread.
 * In this example the spawned thread is sending a message to the main thread.
 * The `move` keyword tells Rust that the variables declared before spawning that are also used in the spawned code need to be moved. (`tx` in this case)
@@ -15,5 +10,12 @@
 
 {% embed include file="src/examples/threads/threads-messages/src/main.rs" %}
 {% embed include file="src/examples/threads/threads-messages/out.out" %}
+
+---
+
+* channel
+* send
+* recv
+* move
 
 

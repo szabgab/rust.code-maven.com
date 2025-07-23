@@ -1,7 +1,7 @@
 # Threads in Rust
 
 
-* [Fearless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) (The Rust book)
-* [std::thread](https://doc.rust-lang.org/std/thread/)
+I'd recommend you read about the [Fearless concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) in The Rust book
+and check out [std::thread](https://doc.rust-lang.org/std/thread/).
 
 
