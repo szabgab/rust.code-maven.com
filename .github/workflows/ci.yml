@@ -24,6 +24,12 @@ jobs:
       - name: Checkout site source
         uses: actions/checkout@v4
 
+      - name: Checkout slides
+        uses: actions/checkout@v4
+        with:
+          repository: 'szabgab/slides'
+          path: slides
+
       - name: Download processor
         run: |
           wget https://ssg.code-maven.com/code-maven
@@ -87,7 +93,9 @@ jobs:
       - name: Generate mdbooks
         run: |
           export PATH=$PATH:$(pwd)
-          ./books.sh
+          #./books.sh
+          perl slides/mdbooks.pl
+          mv html/* _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
