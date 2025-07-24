@@ -10,11 +10,11 @@ do
 
         cd books/$book
         mdbook build
+        perl -i -p -e 's{href="index.html"}{href="."}g'           book/toc.js
+        perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g' book/toc.js
+        find book/ -name *.html | xargs perl -i -p -e 's{href="index.html"}{href="."}g'
+        find book/ -name *.html | xargs perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g'
         cd ../..
-        perl -i -p -e 's{href="index.html"}{href="."}g'           books/${book}/book/toc.js
-        perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g' books/${book}/book/toc.js
-        find books/${book}/book/ -name *.html | xargs perl -i -p -e 's{href="index.html"}{href="."}g'
-        find books/${book}/book/ -name *.html | xargs perl -i -p -e 's{(href="[a-zA-Z0-9.][^"]+)\.html"}{$1"}g'
 
         mv books/${book}/book _site/$book
     fi
