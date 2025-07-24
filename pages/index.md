@@ -22,20 +22,20 @@ Or at least that's how I use it.
 There are a number of series of articles on the site in the following topics:
 
 * [Rust programming](/rust-programming) - course material.
-* [CLI](/cli) - Command Line Interface
-    * [Clap](/clap) Command Line Argument Parser for Rust. and [Articles about Clap](/clap-articles)
+* [CLI](/cli) - Command Line Interface <!-- convert -->
+* [Clap](/clap) Command Line Argument Parser for Rust. and [Articles about Clap](/clap-articles)
 * [JSON](/json) - Serializing and deserializing JSON in Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
-* [TOML](/toml) - Dealing with TOML files in Rust.
+* [TOML](/toml) - Dealing with TOML files in Rust. <!-- convert -->
 * [CSV](/csv) - Comma Separated Values and Rust.
-* [Image](/image) - Creating and changing images in Rust.
+* [Image](/image) - Creating and changing images in Rust. <!-- convert -->
 * [Testing](/testing) - Various forms of functional and non-functional tests in Rust.
 * [Logging and Tracing](/logging) - Various ways to add logging to our application.
-* [Web development](/web)
-    * [Tiny HTTP](/tiny-http) - low level web development tool for Rust.
+* [Web development](/web) <!-- convert ? -->
+    * [Tiny HTTP](/tiny-http) - low level web development tool for Rust. <!-- convert -->
     * [Rocket](/rocket) - web development framework for Rust. [Rocket articles](/rocket-articles)
-    * [Loco](/loco) - web development framework for Rust.
-    * [Rouille](/rouille) - simple web development framework.
+    * [Loco](/loco) - web development framework for Rust. <!-- convert -->
+    * [Rouille](/rouille) - simple web development framework. <!-- convert -->
     * [axum](https://axum.code-maven.com/) - the most popular web framework in Rust
     * [warp](https://warp.code-maven.com/)
     * [Liquid Template](/liquid/)
@@ -46,16 +46,11 @@ There are a number of series of articles on the site in the following topics:
 * Linting with [Clippy](/tags/clippy)
 * [reqwest](/reqwest) HTTP client for Rust.
 * [Other, Ratatui, Tera](/other/)
-
-* [error handling](/error-handling)
-
+* [Error handling](/error-handling)
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.
 * [Community](/meetups)
-
 * [Why Rust](/why-rust/) Slides from a presentation.
-
 * [Regex](/regex/) using Rust
-
 * [Learning tasks](/learning-tasks/)
 
 ## Rust language topics
