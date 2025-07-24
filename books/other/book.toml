@@ -10,6 +10,8 @@ git-repository-url = "https://github.com/szabgab/rust.code-maven.com"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/szabgab/rust.code-maven.com/edit/main/books/other/{path}"
 
+[output.markdown]
+
 # Handle Youtube video embedding and the footer
 [preprocessor.embedify]
 footer.enable = true

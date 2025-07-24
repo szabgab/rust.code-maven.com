@@ -11,6 +11,8 @@ git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/szabgab/rust.code-maven.com/edit/main/books/csv/{path}"
 site-url = "/csv/"
 
+[output.markdown]
+
 # Handle Youtube video embedding and the footer
 [preprocessor.embedify]
 footer.enable = true
