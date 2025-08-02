@@ -46,32 +46,6 @@ jobs:
         run: |
           ./code-maven web
 
-#      - name: Checkout slides
-#        uses: actions/checkout@v4
-#        with:
-#          repository: 'szabgab/slides'
-#          path: all-slides
-#
-#      - name: Checkout slides processor
-#        uses: actions/checkout@v4
-#        with:
-#          repository: 'szabgab/slider-py'
-#          path: slider-py
-#
-#      - name: Generate slides
-#        run: |
-#          python -V
-#          cd slider-py
-#          pip install -r requirements.txt -c constraints.txt
-#          cd ..
-#          cp -r all-slides/templates slides/
-#          cp -r all-slides/static    slides/
-#          cp all-slides/generate_slides.py slides/
-#
-#          cd slides
-#          ./generate_slides.py --hostname https://rust.code-maven.com rust
-#          mv html ../_site/slides
-
       - name: Download mdBook
         env:
           MDBOOK_VERSION: 0.4.51
