@@ -24,12 +24,6 @@ jobs:
       - name: Checkout site source
         uses: actions/checkout@v4
 
-      - name: Checkout slides
-        uses: actions/checkout@v4
-        with:
-          repository: 'szabgab/slides'
-          path: slides
-
       - name: Download processor
         run: |
           wget https://ssg.code-maven.com/code-maven
@@ -38,13 +32,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Generate pages
+      - name: Run preprocessors
         run: |
           ./generate.sh
 
       - name: Code Maven
         run: |
           ./code-maven web
+
+      - name: Checkout slides (for the mdbook.pl)
+        uses: actions/checkout@v4
+        with:
+          repository: 'szabgab/slides'
+          path: slides
 
       - name: Download mdBook
         env:
