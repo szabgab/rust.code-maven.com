@@ -25,3 +25,4 @@ slides/rust/examples/sea-orm/counter/counter.db
 
 /books/book/
 /books/*/book/
+/html/
