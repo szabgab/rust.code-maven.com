@@ -24,7 +24,7 @@ There are a number of series of articles on the site in the following topics:
 * [Rust programming](/rust-programming) - course material.
 * [CLI](/cli) - Command Line Interface <!-- convert -->
 * [Clap](/clap) Command Line Argument Parser for Rust. and [Articles about Clap](/clap-articles)
-* [JSON](/json) - Serializing and deserializing JSON in Rust.
+* [JSON](/rust-json/) - Serializing and deserializing JSON in Rust.
 * [YAML](/yaml) - Dealing with YAML files in Rust.
 * [TOML](/toml) - Dealing with TOML files in Rust. <!-- convert -->
 * [CSV](/csv) - Comma Separated Values and Rust.
