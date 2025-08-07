@@ -44,6 +44,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'szabgab/slides'
+          ref: mdbooks
           path: slides
 
       - name: Download mdBook
