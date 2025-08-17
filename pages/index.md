@@ -38,7 +38,7 @@ There are a number of series of articles on the site in the following topics:
     * [Rouille](/rouille) - simple web development framework. <!-- convert -->
     * [axum](https://axum.code-maven.com/) - the most popular web framework in Rust
     * [warp](https://warp.code-maven.com/)
-    * [Liquid Template](/liquid/)
+    * [Liquid Template](/rust-liquid/)
     * [Handlebars Template](/handlebars/)
 * [Rust in Parallel](/rust-parallel/) (Async, threads, threadpool, rayon)
 * Databases
