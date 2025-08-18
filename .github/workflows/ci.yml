@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download processor
         run: |
@@ -41,7 +41,7 @@ jobs:
           ./code-maven web
 
       - name: Checkout slides (for the mdbook.pl)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: 'szabgab/slides'
           ref: mdbooks
