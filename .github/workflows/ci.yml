@@ -40,7 +40,7 @@ jobs:
         run: |
           ./code-maven web
 
-      - name: Checkout slides (for the mdbook.pl)
+      - name: Checkout slides repository to get the mdbook.pl
         uses: actions/checkout@v5
         with:
           repository: 'szabgab/slides'
