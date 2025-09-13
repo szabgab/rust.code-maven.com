@@ -59,5 +59,6 @@
 - [async](./rust/async/index.md)
   - [tokio](./rust/async/tokio.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
+  - [async read file](./rust/async/tokio-read-file.md)
 
 
