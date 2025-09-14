@@ -29,7 +29,13 @@ fn read_urls_from_file(path: &str) -> Vec<String> {
 
 #[tokio::main]
 async fn main() {
-    let urls = read_urls_from_file("urls.txt");
+    let args = std::env::args().collect::<Vec<String>>();
+    if args.len() < 2 {
+        eprintln!("Usage: {} <urls_file>", args[0]);
+        std::process::exit(1);
+    }
+    let urls_file = &args[1];
+    let urls = read_urls_from_file(urls_file);
     println!("URLs: {:?}", urls);
 
     for url in &urls {

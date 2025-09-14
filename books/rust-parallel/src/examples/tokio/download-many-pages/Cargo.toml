@@ -3,9 +3,6 @@ name = "download-many-pages"
 version = "0.1.0"
 edition = "2024"
 
-reqwest = { version = "0.12.23", features = ["tokio"] }
-tokio = "1.47.1"
-
 [dependencies]
 reqwest = "0.12.23"
 tokio = { version = "1.47.1", features = ["full"] }
