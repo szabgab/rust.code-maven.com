@@ -62,5 +62,6 @@
   - [async read file](./rust/async/tokio-read-file.md)
   - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)
   - [Process and Ctrl-c](./rust/async/process-and-ctrl-c.md)
+  - [CPU heavy Fibonacci](./rust/async/cpu-heavy-fibonacci.md)
 
 
