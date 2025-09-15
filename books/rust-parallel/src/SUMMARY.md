@@ -60,5 +60,7 @@
   - [tokio](./rust/async/tokio.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
   - [async read file](./rust/async/tokio-read-file.md)
+  - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)
+  - [Process and Ctrl-c](./rust/async/process-and-ctrl-c.md)
 
 

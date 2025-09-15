@@ -29,6 +29,7 @@ fn read_urls_from_file(path: &str) -> Vec<String> {
 
 #[tokio::main]
 async fn main() {
+    let start = std::time::Instant::now();
     let args = std::env::args().collect::<Vec<String>>();
     if args.len() < 2 {
         eprintln!("Usage: {} <urls_file>", args[0]);
@@ -46,4 +47,6 @@ async fn main() {
             Err(e) => println!("Error downloading {}: {}", url, e),
         }
     }
+    let elapsed = start.elapsed();
+    println!("Elapsed time: {:.2?}", elapsed);
 }
