@@ -58,6 +58,7 @@
 
 - [async](./rust/async/index.md)
   - [tokio](./rust/async/tokio.md)
+  - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
   - [async read file](./rust/async/tokio-read-file.md)
   - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)

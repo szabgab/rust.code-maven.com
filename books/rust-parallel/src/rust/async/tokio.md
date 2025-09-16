@@ -1,8 +1,6 @@
 # tokio
 
-* TODO
-
-* [tokio](https://crates.io/crates/tokio)
+* [tokio crate](https://crates.io/crates/tokio)
 * [tokio web site](https://tokio.rs/)
 
 * See the http section for examples.
