@@ -1,0 +1,7 @@
+[package]
+name = "async-multi-tail"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["fs", "io-util", "macros", "rt-multi-thread", "time"] }

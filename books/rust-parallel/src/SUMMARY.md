@@ -64,8 +64,10 @@
   - [Process and Ctrl-c](./rust/async/process-and-ctrl-c.md)
   - [CPU heavy Fibonacci](./rust/async/cpu-heavy-fibonacci.md)
   - [Async tail -f](./rust/async/async-tail.md)
+  - [Async multi-tail -f](./rust/async/async-multi-tail.md)
   - [Async tail with notify](./rust/async/async-tail-with-notify.md)
   - [Join several tasks](./rust/async/join-several-tasks.md)
   - [Read STDIN Async](./rust/async/read-stdin-async.md)
+  - [Demo](./rust/async/demo.md)
 
 
