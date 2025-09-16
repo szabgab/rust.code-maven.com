@@ -65,6 +65,7 @@
   - [CPU heavy Fibonacci](./rust/async/cpu-heavy-fibonacci.md)
   - [Async tail -f](./rust/async/async-tail.md)
   - [Async tail with notify](./rust/async/async-tail-with-notify.md)
+  - [Join several tasks](./rust/async/join-several-tasks.md)
   - [Read STDIN Async](./rust/async/read-stdin-async.md)
 
 
