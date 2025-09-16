@@ -10,7 +10,10 @@ use tokio::time::sleep;
 #[tokio::main]
 async fn main() {
     let filename = get_filename();
+    tail_file(filename).await;
+}
 
+async fn tail_file(filename: PathBuf) {
     // Open file and seek to end
     let mut file = File::open(&filename).expect("Failed to open file");
     file.seek(SeekFrom::End(0)).expect("Failed to seek");
