@@ -1,0 +1,30 @@
+Task 0 setup for 36
+Task 1 setup for 8
+Task 0 starts
+Task 1 starts
+Task 2 setup for 5
+Task 3 setup for 18
+Task 2 starts
+Task 4 setup for 95
+Task 3 starts
+Task 5 setup for 52
+Task 5 starts
+Task 6 setup for 44
+Task 7 setup for 87
+Task 8 setup for 76
+Task 4 starts
+Task 8 starts
+Task 9 setup for 78
+Task 6 starts
+Task 9 starts
+Task 7 starts
+Task 2 is done
+Task 1 is done
+Task 3 is done
+Task 0 is done
+Task 6 is done
+Task 5 is done
+Task 8 is done
+Task 9 is done
+Task 7 is done
+Task 4 is done

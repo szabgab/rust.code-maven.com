@@ -36,10 +36,10 @@ async fn download_page(url: &str) -> Result<String, Error> {
 }
 
 async fn downlod_many_urls(urls: &[String]) {
-    let mut tasks = vec![];
+    let mut tasks = tokio::task::JoinSet::new();
     for url in urls {
         println!("Downloading: {url}");
-        tasks.push(tokio::spawn({
+        tasks.spawn({
             let url = url.clone();
             async move {
                 match download_page(&url).await {
@@ -49,13 +49,11 @@ async fn downlod_many_urls(urls: &[String]) {
                     Err(err) => println!("Error downloading {url}: {err}"),
                 }
             }
-        }));
+        });
     }
 
     println!("Started {} tasks. Waiting...", tasks.len());
-    for task in tasks {
-        let _r = tokio::join!(task);
-    }
+    tasks.join_all().await;
 }
 
 #[tokio::main]

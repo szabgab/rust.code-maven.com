@@ -19,6 +19,7 @@
   - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
   - [sync vs async manually](./rust/async/sync-vs-async-manually.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
+  - [JoinSet random order of completition](./rust/async/join-set-order.md)
   - [Download many pages http-reqwest](./rust/async/download-many-pages.md)
   - [Download many pages bad async](./rust/async/download-many-pages-bad-async.md)
   - [Download many pages async](./rust/async/download-many-pages-async.md)
