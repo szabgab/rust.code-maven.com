@@ -1,7 +1,7 @@
 Start
-Before block
+Before await
 Start to do something
 Start reading
-End   reading 801 bytes
+End   reading 761 bytes
 End   to do something
 End
