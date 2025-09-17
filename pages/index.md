@@ -40,7 +40,8 @@ There are a number of series of articles on the site in the following topics:
     * [warp](https://warp.code-maven.com/)
     * [Liquid Template](/rust-liquid/)
     * [Handlebars Template](/handlebars/)
-* [Rust in Parallel](/rust-parallel/) (Async, threads, threadpool, rayon)
+* [Rust in Parallel](/rust-parallel/) (threads, threadpool, rayon)
+* [Rust Async](/rust-async/) (async, tokio)
 * Databases
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * Linting with [Clippy](/tags/clippy)
