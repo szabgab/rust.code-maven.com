@@ -9,16 +9,16 @@ async fn main() {
     println!("---");
 
     let n = 3;
-    let mut jobs = tokio::task::JoinSet::new();
+    let mut tasks = tokio::task::JoinSet::new();
     for i in 0..n {
         let name = format!("x-{i}");
-        let job = wait_random_time(name);
-        let _ = jobs.spawn(job);
+        let task = wait_random_time(name);
+        let _ = tasks.spawn(task);
     }
-    while let Some(res) = jobs.join_next().await {
+    while let Some(res) = tasks.join_next().await {
         match res {
-            Ok(_) => {} //println!("Job finished successfully"),
-            Err(e) => println!("Job failed: {e}"),
+            Ok(_) => {} //println!("Task finished successfully"),
+            Err(e) => println!("Task failed: {e}"),
         }
     }
 }
