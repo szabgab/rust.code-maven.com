@@ -1,19 +1,22 @@
+Start
 Task long starts
-Task 0 setup for 80
-Task 1 setup for 20
-Task 2 setup for 60
-Task 0 starts
-Task 3 setup for 24
-Task 1 starts
-Task 4 setup for 3
-Task 3 starts
-Task 2 starts
+Long task started
+Task 0 setup for 7
+Task 1 setup for 49
+Task 2 setup for 69
+Task 3 setup for 54
+Task 4 setup for 39
 All tasks started
+Task 0 starts
+Task 1 starts
+Task 2 starts
+Task 3 starts
 Task 4 starts
+Task 0 is done
 Task 4 is done
 Task 1 is done
 Task 3 is done
 Task 2 is done
-Task 0 is done
 Wait done
 Task long is done
+End
