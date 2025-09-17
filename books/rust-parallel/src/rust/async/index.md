@@ -11,7 +11,11 @@
 
 * Accessing databases (via the network), which in reality is just accessing APIs over some protocol. (Which is probably not http.)
 
-* Cooperative multitasking vs Preemptive multitaksing
+
+* context switching
+
+* Cooperative multitasking vs Pre-emptive multitaksing (interleaving or time-slicing)
+    * Even in the pre-emptive case  a thread can give up control by waiting for some input (network) or by calling sleep.
 
 
 * Using async needs a runtime aka. main loop. There are several crates providing async runtime and tokio is the most popular one.

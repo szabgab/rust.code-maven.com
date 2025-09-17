@@ -58,7 +58,7 @@
 
 - [async](./rust/async/index.md)
   - [tokio](./rust/async/tokio.md)
-  - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
+  - [sync vs async](./rust/async/sync-vs-async.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
   - [async read file](./rust/async/tokio-read-file.md)
   - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)
@@ -70,5 +70,7 @@
   - [Join several tasks](./rust/async/join-several-tasks.md)
   - [Read STDIN Async](./rust/async/read-stdin-async.md)
   - [Demo](./rust/async/demo.md)
+  - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
+  - [Resources](./rust/async/resources.md)
 
 
