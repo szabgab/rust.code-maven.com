@@ -4,6 +4,7 @@
 
 - [async](./rust/async/index.md)
   - [tokio](./rust/async/tokio.md)
+  - [Hello World](./rust/async/hello-world.md)
   - [sync vs async](./rust/async/sync-vs-async.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
   - [async read file](./rust/async/tokio-read-file.md)
@@ -18,5 +19,6 @@
   - [Demo](./rust/async/demo.md)
   - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
   - [Resources](./rust/async/resources.md)
+  - [sync vs async manually](./rust/async/sync-vs-async-manually.md)
 
 

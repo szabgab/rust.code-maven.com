@@ -8,16 +8,17 @@ async fn async_func() -> u32 {
     42
 }
 
-#[tokio::main]
-async fn main() {
+fn main() {
     println!("Start");
+    let rt = tokio::runtime::Runtime::new().unwrap();
+
     let value = sync_func();
     println!("Value: {}", value);
 
     let future = async_func();
 
-    println!("Before await");
-    let res = future.await;
+    println!("Before block");
+    let res =rt.block_on(future);
     println!("Result: {}", res);
 
     println!("End");

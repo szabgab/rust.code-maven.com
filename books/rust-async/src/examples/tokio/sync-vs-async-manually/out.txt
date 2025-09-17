@@ -1,7 +1,7 @@
 Start
 sync_func called
 Value: 42
-Before await
+Before block
 async_func called
 Result: 42
 End

@@ -7,14 +7,4 @@
 
 * TODO: show an example of a computationally heavy task that I run in async (severeal in parallel) and how they hand back execution to the eventloop.
 
-```
-cargo add tokio -F full
-```
-
-```rust
-#[tokio::main]
-async fn main() {
-    ...
-}
-```
 
