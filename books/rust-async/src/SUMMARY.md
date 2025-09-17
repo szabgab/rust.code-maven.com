@@ -16,10 +16,13 @@
   - [Async tail with notify](./rust/async/async-tail-with-notify.md)
   - [Join several tasks](./rust/async/join-several-tasks.md)
   - [Read STDIN Async](./rust/async/read-stdin-async.md)
-  - [Demo](./rust/async/demo.md)
   - [Basic TCP echo server](./rust/async/basic-tcp-echo-server.md)
   - [sync vs async manually](./rust/async/sync-vs-async-manually.md)
   - [Simple async example with Tokio](./rust/async/tokio-simple-example.md)
+  - [Download many pages http-reqwest](./rust/async/download-many-pages.md)
+  - [Download many pages bad async](./rust/async/download-many-pages-bad-async.md)
+  - [Download many pages async](./rust/async/download-many-pages-async.md)
+- [Extra Demo](./rust/async/demo.md)
 - [Resources](./rust/async/resources.md)
 
 

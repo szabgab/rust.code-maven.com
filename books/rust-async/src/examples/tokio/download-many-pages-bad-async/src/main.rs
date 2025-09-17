@@ -4,9 +4,9 @@ use std::io::{BufRead, BufReader};
 
 use reqwest::Error;
 
-fn download_page(url: &str) -> Result<String, Error> {
-    let response = reqwest::blocking::get(url)?;
-    let content = response.text()?;
+async fn download_page(url: &str) -> Result<String, Error> {
+    let response = reqwest::get(url).await?;
+    let content = response.text().await?;
     Ok(content)
 }
 
@@ -27,7 +27,8 @@ fn read_urls_from_file(path: &str) -> Vec<String> {
 }
 
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let start = std::time::Instant::now();
     let args = std::env::args().collect::<Vec<String>>();
     if args.len() < 2 {
@@ -39,7 +40,7 @@ fn main() {
     println!("URLs: {:?}", urls);
 
     for url in &urls {
-        match download_page(url) {
+        match download_page(url).await {
             Ok(content) => {
                 println!("Downloaded {} bytes from {}", content.len(), url);
             }
