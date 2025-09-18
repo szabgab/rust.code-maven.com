@@ -5,6 +5,7 @@
 - [async](./rust/async/index.md)
   - [tokio](./rust/async/tokio.md)
   - [Hello World](./rust/async/hello-world.md)
+  - [Runt async functions](./rust/async/run-functions.md)
   - [sync vs async](./rust/async/sync-vs-async.md)
   - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)
   - [Process and Ctrl-c](./rust/async/process-and-ctrl-c.md)
