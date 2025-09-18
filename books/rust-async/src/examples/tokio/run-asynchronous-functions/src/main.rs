@@ -3,12 +3,10 @@ async fn hi() {
     println!("Hi!");
 }
 
-
 async fn hello() {
     tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
     println!("Hello!");
 }
-
 
 #[tokio::main]
 async fn main() {
@@ -18,19 +16,15 @@ async fn main() {
     // hello();
     // hi();
 
-
-
     // Run synchronously, first hello waits for 2 second then hi waits for 1 second
     // Total elapsed time is 3 seconds
     // hello().await;
     // hi().await;
 
-
     // Run concurrently, both functions start at the same time.
     // However, our program finished before thet can print anything.
     // tokio::spawn(hello());
     // tokio::spawn(hi());
-
 
     // Run concurrently, both functions start at the same time.
     // The main program waits long enough to see their output.
@@ -40,17 +34,22 @@ async fn main() {
     // tokio::spawn(hi());
     // tokio::time::sleep(tokio::time::Duration::from_secs(3)).await;
 
-
     // Run concurrently, both functions start at the same time.
     // hi finishes after 1 second, hello after 2 seconds
     // Total elapsed time is 2 seconds.
-    tokio::join!(
-        hello(),
-        hi(),
-    );
+    // The drawback is that we can do this only if we know all the tasks at compile time.
+    // tokio::join!(
+    //     hello(),
+    //     hi(),
+    // );
+
+    // We can spawn any number of tasks dynamically and wait for all of them to finish.
+    // Total elapsed time is 2 seconds.
+    let mut tasks = tokio::task::JoinSet::new();
+    tasks.spawn(hello());
+    tasks.spawn(hi());
+    tasks.join_all().await;
 
     let elapsed = start.elapsed();
     println!("Elapsed: {:.2?}", elapsed);
-
 }
-
