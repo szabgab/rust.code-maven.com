@@ -1,6 +1,6 @@
-# Runt async functions
+# Run async functions
 
-A few example on what happens (or not) when we call aynch functions.
+A few examples on what happens (or not) when we call aynch functions.
 
 {% embed include file="src/examples/tokio/run-asynchronous-functions/src/main.rs" %}
 
