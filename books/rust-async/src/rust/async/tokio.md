@@ -14,7 +14,7 @@ For both we have a sync and async version.
 
 * If we run the clients downloading many external pages we can observe the speed improvement from sync to async. In this case we don't really care how those servers handle the requests.
 
-* If we run the servers we either need our sync and async clients to demonstrate, or we can launc some other program to observer the results.
+* If we run the servers we either need our sync and async clients to demonstrate, or we can launch some other program to observer the results.
 
 
 

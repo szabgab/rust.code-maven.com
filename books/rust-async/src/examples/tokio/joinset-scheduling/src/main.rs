@@ -10,7 +10,7 @@ async fn main() {
     println!("start");
 
     let mut tasks = tokio::task::JoinSet::new();
-    tasks.spawn(say("Hello", 2));
+    tasks.spawn(say("Hello", 3));
     tasks.spawn(say("Hi", 1));
     println!("launched both");
 

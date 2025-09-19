@@ -119,3 +119,17 @@ In our case the total elapsed time is 2 seconds.
 
 
 {% embed include file="src/examples/tokio/run-asynchronous-functions/Cargo.toml" %}
+
+
+---
+
+* tokio::main
+* async
+* await
+* tokio::spawn
+* tokio::join!
+* tokio::task:JoinSet
+* JoinSet.spawn
+* JoinSet.join_all
+
+

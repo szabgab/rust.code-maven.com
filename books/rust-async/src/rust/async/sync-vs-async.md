@@ -2,9 +2,9 @@
 
 Before we continue down the rabbit whole of async, let's see the difference in the usage of regular (synchronous) and async functions.
 
-In this example we hav a regular (synchronous) function brilliantly named `sync_func` and and an async function called `async_func`.
+In this example we have a regular (synchronous) function brilliantly named `sync_func` and and an async function called `async_func`.
 You can observe that the only difference between these two functions in the `async` prefix on the async function.
-This won't be the case once we really startt to explore async, but for this example we want to have two functions that behave identically once they start to run.
+This won't be the case once we really start to explore async, but for this example we want to have two functions that behave identically once they start to run.
 
 The question what is the difference in the way we call these functions?
 
@@ -29,3 +29,9 @@ The expression with the `await` will terminate when the `async_func` ends and it
 
 {% embed include file="src/examples/tokio/sync-vs-async/Cargo.toml" %}
 
+---
+
+* tokio::main
+* async
+* await
+* Future

@@ -35,11 +35,8 @@ async fn join_set_say() {
     let mut tasks = tokio::task::JoinSet::new();
     tasks.spawn(say("Hello", 2));
     tasks.spawn(say("Hi", 1));
-    println!("launched");
     tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
-    println!("waited");
     tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
-    println!("done");
     tasks.join_all().await;
 }
 

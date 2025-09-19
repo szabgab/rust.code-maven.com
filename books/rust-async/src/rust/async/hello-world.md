@@ -2,6 +2,8 @@
 
 Let's see the standard "Hello World!" example using async.
 
+Just remember, in this example, although we have the async code it does not actually do anything asynchronous. It only shows the basic syntax, the basic mechanism.
+
 First we create a new crate called demo and change to its directory.
 
 ```
@@ -15,7 +17,7 @@ In order to write `async` code using the `tokio` crate we need to add it to our 
 cargo add tokio -F full
 ```
 
-Alternatively we can manually edit the `Carto.toml` file to add the dependency:
+Alternatively we can manually edit the `Cargo.toml` file to add the dependency:
 
 {% embed include file="src/examples/tokio/hello-world/Cargo.toml" %}
 
@@ -24,7 +26,7 @@ We use the `full` feature here as that makes it easy to use all the features.  L
 ## The code
 
 We prefix our async functions with the `async` keyword and we decorate the `main` function with `#[tokio::main]` to convert that function to be our runtime.
-Actually in reality the real main function cannot be `async` and using this small syntatic sugar tokio will wrap our main function with a real main function, but let's not worry about it now.
+Actually in reality the real main function cannot be `async` and using this small syntactic sugar tokio will wrap our main function with a real main function, but let's not worry about it now.
 
 There are other ways to use `tokio`, but this is probably the most common and also the easiest way as well.
 
@@ -32,7 +34,7 @@ We also need to add the `await` at the end of our async function calls to make t
 
 {% embed include file="src/examples/tokio/hello-world/src/main.rs" %}
 
-## Runing the code
+## Running the code
 
 There is nothing special in running the program we use the regular `cargo run` with the silencer:
 
@@ -42,3 +44,8 @@ Hello, world!
 Hello, async world!
 ```
 
+---
+
+* tokio::main
+* async
+* await
