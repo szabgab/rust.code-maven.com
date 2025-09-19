@@ -8,6 +8,7 @@
   - [sync vs async](./rust/async/sync-vs-async.md)
   - [Run async functions](./rust/async/run-functions.md)
   - [Count in parallel with random sleeep](./rust/async/count-in-parallel-with-random-sleep.md)
+  - [JoinSet scheduling](./rust/async/joinset-start-asap.md)
   - [Process and Ctrl-c](./rust/async/process-and-ctrl-c.md)
   - [CPU heavy Fibonacci](./rust/async/cpu-heavy-fibonacci.md)
   - [Fake async and CPU heavy task](./rust/async/fake-async-and-cpu-heavy-tasks.md)

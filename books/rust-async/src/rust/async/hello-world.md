@@ -9,7 +9,7 @@ cargo new demo
 cd demo
 ```
 
-In order to write `async` code using the `tokio` crate we need to add the `tokio` crate to our project:
+In order to write `async` code using the `tokio` crate we need to add it to our project:
 
 ```
 cargo add tokio -F full
@@ -19,8 +19,7 @@ Alternatively we can manually edit the `Carto.toml` file to add the dependency:
 
 {% embed include file="src/examples/tokio/hello-world/Cargo.toml" %}
 
-
-We use the `full` feature here as that makes it easy to use all the features.  Later you might fine-tune which features to include. `full` is a good start.
+We use the `full` feature here as that makes it easy to use all the features.  Later you might fine-tune which features to include. However, `full` is a good start.
 
 ## The code
 

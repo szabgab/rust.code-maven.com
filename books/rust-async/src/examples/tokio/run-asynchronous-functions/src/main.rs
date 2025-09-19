@@ -1,55 +1,100 @@
-async fn hi() {
-    tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
-    println!("Hi!");
+async fn say(text: &str, sec: u64) {
+    tokio::time::sleep(tokio::time::Duration::from_secs(sec)).await;
+    println!("{text}");
 }
 
-async fn hello() {
+async fn call_say() {
+    let _ = say("Hello", 2);
+    let _ = say("Hi", 1);
+}
+
+async fn await_say() {
+    say("Hello", 2).await;
+    say("Hi", 1).await;
+}
+
+async fn spawn_say() {
+    tokio::spawn(say("Hello", 2));
+    tokio::spawn(say("Hi", 1));
+}
+
+async fn wait_say() {
+    tokio::spawn(say("Hello", 2));
+    tokio::spawn(say("Hi", 1));
+    tokio::time::sleep(tokio::time::Duration::from_secs(4)).await;
+}
+
+async fn join_say() {
+    tokio::join!(
+        say("Hello", 2),
+        say("Hi", 1),
+    );
+}
+
+async fn join_set_say() {
+    let mut tasks = tokio::task::JoinSet::new();
+    tasks.spawn(say("Hello", 2));
+    tasks.spawn(say("Hi", 1));
+    println!("launched");
     tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
-    println!("Hello!");
+    println!("waited");
+    tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
+    println!("done");
+    tasks.join_all().await;
 }
 
 #[tokio::main]
 async fn main() {
+    let which = get_args();
     let start = std::time::Instant::now();
-    // As we don't await the functions, they don't run at all and Rust even warns us about it
-    // note: futures do nothing unless you `.await` or poll them
-    // hello();
-    // hi();
-
-    // Run synchronously, first hello waits for 2 second then hi waits for 1 second
-    // Total elapsed time is 3 seconds
-    // hello().await;
-    // hi().await;
-
-    // Run concurrently, both functions start at the same time.
-    // However, our program finished before thet can print anything.
-    // tokio::spawn(hello());
-    // tokio::spawn(hi());
-
-    // Run concurrently, both functions start at the same time.
-    // The main program waits long enough to see their output.
-    // Not ideal as we have to guess how long to wait.
-    // Total elapsed time is 3 seconds.
-    // tokio::spawn(hello());
-    // tokio::spawn(hi());
-    // tokio::time::sleep(tokio::time::Duration::from_secs(3)).await;
-
-    // Run concurrently, both functions start at the same time.
-    // hi finishes after 1 second, hello after 2 seconds
-    // Total elapsed time is 2 seconds.
-    // The drawback is that we can do this only if we know all the tasks at compile time.
-    // tokio::join!(
-    //     hello(),
-    //     hi(),
-    // );
-
-    // We can spawn any number of tasks dynamically and wait for all of them to finish.
-    // Total elapsed time is 2 seconds.
-    let mut tasks = tokio::task::JoinSet::new();
-    tasks.spawn(hello());
-    tasks.spawn(hi());
-    tasks.join_all().await;
+    match which {
+        Case::Call => call_say().await,
+        Case::Await => await_say().await,
+        Case::Spawn => spawn_say().await,
+        Case::Wait => wait_say().await,
+        Case::Join => join_say().await,
+        Case::JoinSet => join_set_say().await,
+    }
 
     let elapsed = start.elapsed();
     println!("Elapsed: {:.2?}", elapsed);
+}
+
+#[derive(Debug, PartialEq)]
+enum Case {
+    Call,
+    Await,
+    Spawn,
+    Wait,
+    Join,
+    JoinSet,
+}
+impl std::str::FromStr for Case {
+    type Err = String;
+
+    fn from_str(input: &str) -> Result<Self, Self::Err> {
+        match input {
+            "call" => Ok(Case::Call),
+            "await" => Ok(Case::Await),
+            "spawn" => Ok(Case::Spawn),
+            "wait" => Ok(Case::Wait),
+            "join" => Ok(Case::Join),
+            "join_set" => Ok(Case::JoinSet),
+            _ => Err(format!("Invalid case: {}", input)),
+        }
+    }
+}
+
+fn get_args() -> Case {
+    let args: Vec<String> = std::env::args().collect();
+    if args.len() < 2 {
+        eprintln!("Usage: {} <which>", args[0]);
+        std::process::exit(1);
+    }
+    let which = args[1].parse().unwrap_or_else(|err| {
+        eprintln!("Error: {}", err);
+        std::process::exit(1);
+    });
+
+    which
 }

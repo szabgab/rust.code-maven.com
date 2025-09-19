@@ -1,0 +1,8 @@
+start
+launched both
+Hi
+waited
+Hello
+waited again
+done
+Elapsed: 4.00s
