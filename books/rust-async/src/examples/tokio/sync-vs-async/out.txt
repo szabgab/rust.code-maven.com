@@ -1,6 +1,7 @@
 Start
 sync_func called
 Value: 42
+Before calling async_func
 Before await
 async_func called
 Result: 42
