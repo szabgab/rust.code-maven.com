@@ -4,6 +4,9 @@ language = "en"
 src = "src"
 title = "Rust Macros"
 
+[rust]
+edition = "2024"
+
 # Add github icon to the menu
 [output.html]
 git-repository-url = "https://github.com/szabgab/rust.code-maven.com"
