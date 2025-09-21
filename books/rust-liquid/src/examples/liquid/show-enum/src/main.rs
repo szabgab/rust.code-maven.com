@@ -13,15 +13,15 @@ pub struct TypeFilter;
 
 impl Filter for TypeFilter {
     fn evaluate(&self, input: &dyn ValueView, _runtime: &dyn Runtime) -> Result<Value> {
+        let keys = ["Presentation", "Break"];
         match input.as_object() {
-            Some(o) => {
-                if o.contains_key("Presentation") {
-                    Ok(Value::scalar(format!("Presentation",)))
-                } else if o.contains_key("Break") {
-                    Ok(Value::scalar(format!("Break")))
-                } else {
-                    Ok(Value::scalar("Unknown Item"))
+            Some(obj) => {
+                for key in keys {
+                    if obj.contains_key(key) {
+                        return Ok(Value::scalar(format!("{}", key)));
+                    }
                 }
+                return Ok(Value::scalar("Unknown Item"));
             }
             None => Ok(Value::scalar("Not an object")),
         }
