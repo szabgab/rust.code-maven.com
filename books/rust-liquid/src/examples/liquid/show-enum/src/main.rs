@@ -104,11 +104,23 @@ fn items_to_text(items: &Vec<Item>) -> String {
 }
 
 fn render(items: &Vec<Item>) -> String {
+    let template = "\
+<ul>
+{%- for item in items -%}
+    {%- assign it = item | type -%}
+    {%- if it == \"Presentation\" %}
+       <li>{{item.Presentation.title}} by {{item.Presentation.speaker}} - ({{item.Presentation.length}} minutes)</li>
+    {%- elsif it == \"Break\" %}
+       <li>Break ({{item.Break.length}} minutes)</li>
+    {%- endif -%}
+{% endfor %}
+</ul>";
+
     let template = liquid::ParserBuilder::with_stdlib()
         .filter(TypeStr)
         .build()
         .unwrap()
-        .parse_file("templates/page.html")
+        .parse(template)
         .unwrap();
 
     let globals = liquid::object!({

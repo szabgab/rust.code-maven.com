@@ -9,5 +9,3 @@ This is a solution that might be overengineered.
 
 {% embed include file="src/examples/liquid/show-enum/src/main.rs" %}
 
-{% embed include file="src/examples/liquid/show-enum/templates/page.html" %}
-
