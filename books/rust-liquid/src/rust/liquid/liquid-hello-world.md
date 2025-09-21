@@ -1,10 +1,5 @@
 # Liquid Hello World
 
-* parse
-* build
-* object!
-* render
-
 * Depened on the liquid crate
 
 {% embed include file="src/examples/liquid/liquid-hello-world/Cargo.toml" %}
@@ -18,5 +13,13 @@
 
 {% embed include file="src/examples/liquid/liquid-hello-world/src/main.rs" %}
 {% embed include file="src/examples/liquid/liquid-hello-world/out.out" %}
+
+
+---
+
+* parse
+* build
+* object!
+* render
 
 
