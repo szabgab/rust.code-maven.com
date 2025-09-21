@@ -35,6 +35,7 @@
   - [Liquid comma between every two elements (forloop.last)](./rust/liquid/liquid-forloop-last.md)
   - [Liquid: create your own filter: reverse a string](./rust/liquid/liquid-create-your-own-filter-reverse-a-string.md)
   - [Liquid: create your own filter: commafy](./rust/liquid/liquid-create-your-own-filter-commafy.md)
+  - [Handle variants of an enum](./rust/liquid/handle-variants-of-an-enum.md)
 - [Tags]()
   - [Liquid tags](./rust/liquid/liquid-tags.md)
   - [Liquid create your own tag without parameters](./rust/liquid/liquid-create-your-own-tag-without-parameters.md)

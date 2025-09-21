@@ -1,0 +1,10 @@
+<ul>
+{%- for item in items -%}
+    {%- assign it = item | type -%}
+    {%- if it == "Presentation" %}
+       <li>{{item.Presentation.title}} by {{item.Presentation.speaker}} - ({{item.Presentation.length}} minutes)</li>
+    {%- elsif it == "Break" %}
+       <li>Break ({{item.Break.length}} minutes)</li>
+    {%- endif -%}
+{% endfor %}
+</ul>

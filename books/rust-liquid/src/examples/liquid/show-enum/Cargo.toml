@@ -1,0 +1,9 @@
+[package]
+name = "show-enum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+liquid = "0.26.11"
+liquid-core = "0.26.11"
+serde = "1.0.226"
