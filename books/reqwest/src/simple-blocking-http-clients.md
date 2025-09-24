@@ -57,6 +57,25 @@ If the service does not work we'll see an error message:
 Error error sending request for url (https://httpbin.org/get)
 ```
 
+or you might get this output:
+
+```
+503
+Response {
+    url: "https://httpbin.org/get",
+    status: 503,
+    headers: {
+        "server": "awselb/2.0",
+        "date": "Wed, 24 Sep 2025 18:30:49 GMT",
+        "content-type": "text/html",
+        "content-length": "162",
+        "connection": "keep-alive"
+    }
+}
+```
+
+## Run httpbin locally
+
 In that case we can also run the httpbin service locally using Docker.
 
 Start as:
@@ -76,7 +95,6 @@ To stop the Docker container open another terminal and execute
 ```
 docker container stop -t0 httpbin
 ```
-
 
 
 ---
