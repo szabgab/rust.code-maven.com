@@ -1,10 +1,5 @@
 # Set the User-Agent in a HTTP request using Rust reqwest
 
-- User Agent
-- reqwest
-- header
-
-
 ## Dependencies
 
 {% embed include file="src/examples/reqwest-set-user-agent/Cargo.toml" %}
@@ -33,3 +28,12 @@
   }
 }
 ```
+
+---
+
+- User Agent
+- reqwest
+- header
+
+
+

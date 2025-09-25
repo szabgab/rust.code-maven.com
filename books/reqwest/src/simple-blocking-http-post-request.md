@@ -2,11 +2,6 @@
 
 The reqwest crate provides all the capabilities to send HTTP requests.
 
-- reqwest
-- HTTP
-- POST
-- form
-
 In this example we are using the [reqwest](https://crates.io/crates/reqwest) crate to send an HTTP POST request to [https://httpbin.org/](https://httpbin.org/).
 
 
@@ -81,3 +76,12 @@ Object {
     "url": String("http://httpbin.org/post"),
 }
 ```
+
+---
+
+- reqwest
+- HTTP
+- POST
+- form
+
+

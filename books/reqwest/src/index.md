@@ -1,14 +1,9 @@
-# Reqwest the HTTP client library of Rust
+# HTTP client in Rust
 
-Using the [reqwest](https://crates.io/crates/reqwest) crate.
+There are a number of Crates that can help us build HTTP requests. The most popular seems to be [reqwest](https://crates.io/crates/reqwest). We are going to take a look at it.
 
-Reqwest is a Rust crate to handle HTTP requests.
-
-* We use [httpbin](https://httpbin.org/) for checking examples.
+Herbert Wolverson commented that reqwest spawns a tokio thread even when working in blocking mode which is quite expensieve and hes suggested [ureq](https://crates.io/crates/ureq). We'll take a look at that as well.
 
 
-* [Simple blocking HTTP GET request in Rust](./simple-blocking-http-get-request.md) - `GET`.
-* [Simple blocking HTTP POST request using Rust ](./simple-blocking-http-post-request.md) - `POST`, `Client`.
-* [Set the User-Agent in a HTTP request using Rust reqwest](./reqwest-set-user-agent.md) - `header`.
-* [HTTP reqwest sending cookie](./reqwest-send-cookie.md) - `header`, `Cookie`.
+We'll use [httpbin](https://httpbin.org/) for checking examples.
 

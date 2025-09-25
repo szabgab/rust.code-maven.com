@@ -2,12 +2,6 @@
 
 Sending a cookie back to the server using the reqwest crate.
 
-- reqwest
-- header
-- Cookie
-- Client
-
-
 ## The curl command
 
 ```
@@ -56,3 +50,13 @@ Object {
     "url": String("https://httpbin.org/get"),
 }
 ```
+
+---
+
+- reqwest
+- header
+- Cookie
+- Client
+
+
+

@@ -1,10 +1,5 @@
 # Simple blocking HTTP GET request in Rust
 
-- reqwest
-- blocking
-- HTTP
-- GET
-
 The [reqwest](https://crates.io/crates/reqwest) crate provides functions for both asynchronous and blocking http requests.
 Although in most cases you'd probably want to use the asynch calls, using the blocking calls is simpler, so we start with that.
 
@@ -52,3 +47,12 @@ server: "gunicorn/19.9.0"
   "origin": "46.120.9.250"
 }
 ```
+
+---
+
+- reqwest
+- blocking
+- HTTP
+- GET
+
+

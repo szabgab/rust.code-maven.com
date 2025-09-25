@@ -1,4 +1,4 @@
-# DRAFT: Accept cookise in an HTTP request sent by the server
+# DRAFT: Accept cookies in an HTTP request sent by the server
 
 This is a DARFT!
 
