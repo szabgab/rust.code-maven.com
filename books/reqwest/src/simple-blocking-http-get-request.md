@@ -5,11 +5,11 @@ Although in most cases you'd probably want to use the asynch calls, using the bl
 
 This is what we add to the `Cargo.toml`
 
-{% embed include file="src/examples/simple-blocking-http-get-request/Cargo.toml" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-get-request/Cargo.toml" %}
 
 And this is the code:
 
-{% embed include file="src/examples/simple-blocking-http-get-request/src/main.rs" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-get-request/src/main.rs" %}
 
 This is the output (slightly reformatted to make it easier to read).
 

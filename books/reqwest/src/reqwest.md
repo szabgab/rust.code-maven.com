@@ -12,3 +12,12 @@ Reqwest is a Rust crate to handle HTTP requests.
 * [Set the User-Agent in a HTTP request using Rust reqwest](./reqwest-set-user-agent.md) - `header`.
 * [HTTP reqwest sending cookie](./reqwest-send-cookie.md) - `header`, `Cookie`.
 
+
+In order to handle secure HTTPS request I had to install the following packages on Ubuntu:
+
+```
+apt-get install pkg-config
+apt-get install libssl-dev
+```
+
+

@@ -43,14 +43,14 @@ This is the result:
 
 In order to be able to send a `blocking` request we need to add that feature, and in order to be able to parse the returned [JSON](/json) data we had to add the `json` feature.
 
-{% embed include file="src/examples/simple-blocking-http-post-reqwest/Cargo.toml" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-post-reqwest/Cargo.toml" %}
 
 
 ## The code
 
 We can pass the parameters in the `form` method as a bunch of key-value pairs from a HashMap.
 
-{% embed include file="src/examples/simple-blocking-http-post-reqwest/src/main.rs" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-post-reqwest/src/main.rs" %}
 
 ## The result
 

@@ -28,12 +28,12 @@ and the output:
 
 ## The dependencies
 
-{% embed include file="src/examples/simple-blocking-http-reqwest-sending-cookie/Cargo.toml" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-reqwest-sending-cookie/Cargo.toml" %}
 
 
 ## The code
 
-{% embed include file="src/examples/simple-blocking-http-reqwest-sending-cookie/src/main.rs" %}
+{% embed include file="src/examples/reqwest/simple-blocking-http-reqwest-sending-cookie/src/main.rs" %}
 
 ## The output
 

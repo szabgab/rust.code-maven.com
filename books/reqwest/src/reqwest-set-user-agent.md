@@ -2,11 +2,11 @@
 
 ## Dependencies
 
-{% embed include file="src/examples/reqwest-set-user-agent/Cargo.toml" %}
+{% embed include file="src/examples/reqwest/reqwest-set-user-agent/Cargo.toml" %}
 
 ## The code
 
-{% embed include file="src/examples/reqwest-set-user-agent/src/main.rs" %}
+{% embed include file="src/examples/reqwest/reqwest-set-user-agent/src/main.rs" %}
 
 ## The output
 
