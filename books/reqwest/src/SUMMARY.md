@@ -11,8 +11,9 @@
   - [HTTP reqwest sending cookie](./reqwest-send-cookie.md)
 - [Async reqwest]()
   - [http-client async with reqwest](./http-client.md)
-  - [Download many URLs in parallel (async)](./download-many-urls-async.md)
+  - [Async reqwest - get IP](./async-reqwest-get-ip.md)
   - [Async reqwest - set User Agent](./async-reqwest-set-user-agent.md)
+  - [Download many URLs in parallel (async)](./download-many-urls-async.md)
 - [TODO]()
   - [Accept cookies in an HTTP request sent by the server](./reqwest-accept-cookies.md)
 

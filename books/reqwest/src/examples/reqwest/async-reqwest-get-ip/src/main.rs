@@ -1,11 +1,18 @@
+use std::collections::HashMap;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let url = get_url("");
+    let url = get_url("ip");
 
-    let html = reqwest::get(url).await?.text().await?;
-    println!("{html}");
+    let resp = reqwest::get(url)
+        .await?
+        .json::<HashMap<String, String>>()
+        .await?;
+    println!("{:#?}", resp);
+    println!("{}", resp["origin"]);
     Ok(())
 }
+
 
 fn get_url(path: &str) -> String {
     let host = std::env::args().nth(1).unwrap_or("httpbin.org".into());

@@ -1,0 +1,8 @@
+[package]
+name = "async-reqwest-set-user-agent"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+reqwest = { version = "0.12.23", features = ["json"] }
+tokio = { version = "1.47.1", features = ["full"] }

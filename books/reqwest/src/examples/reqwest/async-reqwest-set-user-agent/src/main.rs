@@ -1,9 +1,14 @@
+use std::collections::HashMap;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let url = get_url("");
+    let url = get_url("headers");
 
-    let html = reqwest::get(url).await?.text().await?;
-    println!("{html}");
+    let resp = reqwest::get(url)
+        .await?
+        .json::<HashMap<String, String>>()
+        .await?;
+    println!("{:#?}", resp);
     Ok(())
 }
 
