@@ -11,9 +11,10 @@ We need both `liquid` and `serde` with the `derive` feature as dependencies:
 
 ## Code
 
-In this example too I used a template embedded in the Rust code. In a real appliation I'd put the templates in separate files, but in such an example it is easier to have just one file.
+In this example too I used a template embedded in the Rust code. In a real application I'd put the templates in separate files, but in such an example it is easier to have just one file.
 
-As you can see the `Color` `enum` has 3 variants, but the template only handle 2
+As you can see the `Color` `enum` has 3 variants (Red, Green, Blue), but the template only handle 2 (Blue and Green). We do handle "all other cases" with the `else` keyword, but that's actually not required.
+This example would work perfectly fine if we left out the `else` part. (Obviously the 3rd example would not print the text and the assert would fail.)
 
 {% embed include file="src/examples/liquid/liquid-case-on-type-name/src/main.rs" %}
 
@@ -22,3 +23,10 @@ As you can see the `Color` `enum` has 3 variants, but the template only handle 2
 
 {% embed include file="src/examples/liquid/liquid-case-on-type-name/out.out" %}
 
+
+---
+
+* enum
+* case
+* when
+* else
