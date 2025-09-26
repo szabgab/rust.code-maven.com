@@ -13,6 +13,7 @@
   - [Liquid flow control: if - else](./rust/liquid/liquid-flow-control-if-else.md)
   - [Liquid flow control: else if written as elsif](./rust/liquid/liquid-flow-control-elsif.md)
   - [Liquid flow control: case/when](./rust/liquid/liquid-flow-control-case-when.md)
+  - [case on type-name (match-like)](./rust/liquid/liquid-flow-control-case-on-type-name.md)
   - [Liquid passing more complex data](./rust/liquid/liquid-passing-more-complex-data.md)
   - [Liquid for loop passing a vector or an array](./rust/liquid/liquid-for-loop.md)
   - [Liquid vector of tuples](./rust/liquid/liquid-vector-of-tuples.md)
