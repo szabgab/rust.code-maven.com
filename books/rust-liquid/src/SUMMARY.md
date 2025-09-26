@@ -48,7 +48,9 @@
   - [Liquid create tag that uses array of values passed to the render function (latest, limit, tag)](./rust/liquid/liquid-create-tag-that-uses-array-of-values-passed-to-the-render-function.md)
   - [Liquid create include tag that overrides existing include tag](./rust/liquid/liquid-create-include-tag.md)
   - [Liquid sort array or vector](./rust/liquid/liquid-sort-array.md)
+- [TODO]()
   - [Liquid TODO](./rust/liquid/liquid-todo.md)
+  - [Sorted HashMap](./rust/liquid/liquid-sorted-hashmap.md)
 
 
 
