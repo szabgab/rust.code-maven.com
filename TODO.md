@@ -30,4 +30,8 @@ Uses:
 On Ubuntu the there is a list of English words /usr/share/dict/american-english that contains 104,334 words.
 
 
+## Template systems
+
+https://crates.io/crates/askama converts templates to Rust code.
+
 
