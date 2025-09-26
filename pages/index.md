@@ -44,6 +44,7 @@ There are a number of series of articles on the site in the following topics:
 * [Rust Async](/rust-async/) (async, tokio)
 * Databases
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
+* [Clippy](/clippy/)
 * Linting with [Clippy](/tags/clippy)
 * [reqwest](/reqwest) HTTP client for Rust.
 * [Other, Ratatui, Tera](/other/)
