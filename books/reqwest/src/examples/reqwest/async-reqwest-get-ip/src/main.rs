@@ -4,6 +4,9 @@ use std::collections::HashMap;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let url = get_url("ip");
 
+    let raw = reqwest::get(&url).await?.text().await?;
+    println!("{raw}");
+
     let resp = reqwest::get(url)
         .await?
         .json::<HashMap<String, String>>()
