@@ -1,4 +1,4 @@
-# Async reqwest - get IP
+# Async reqwest - get IP in a simple JSON structure
 
 In this example we are going to retrieve some data in JSON format. To make this process easy first we are going to retrieve a JSON structure that only has a single key-value pair. The IP address of the client.
 
@@ -65,4 +65,8 @@ cargo run
 47.131.10.23
 ```
 
+---
+
+* json
+* HashMap
 
