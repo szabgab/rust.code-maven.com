@@ -29,6 +29,10 @@ Everything about Rust in Spanish.
 ## Libros
 
 * [El Lenguaje de Programación Rust](https://book.rustlang-es.org/)
+* [Comprehensive Rust](https://google.github.io/comprehensive-rust/es/index.html)
+* [Rust en Embedidos](https://embedded-book.rustlang-es.org/)
+* [Rust para C#/.NET Developers](https://dotnet-book.rustlang-es.org/)
+* [Rust para Go Developers](https://go-book.rustlang-es.org/es/)
 
 ## Grupos de Meetup
 
