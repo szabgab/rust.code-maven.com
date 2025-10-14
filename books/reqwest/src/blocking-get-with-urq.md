@@ -16,7 +16,7 @@ In this example we'll see how to use it to send a simple GET request.
 We get a response that can be either a good response or an error. In case of a good response we can print the content of the response.
 
 
-Success
+## Success
 
 ```
 $ cargo run http://localhost/get
@@ -72,9 +72,6 @@ This will follow the redirect and thus it will print out the content of the targ
 ```
 $ cargo run "http://localhost/redirect-to?url=https://rust.code-maven.com/&status_code=301"
 ```
-
-```
-
 
 {% embed include file="src/examples/ureq/get/src/main.rs" %}
 
