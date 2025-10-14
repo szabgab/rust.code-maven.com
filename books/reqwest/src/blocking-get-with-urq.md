@@ -1,4 +1,4 @@
-# Blocking GET with ureq
+# Blocking HTTP GET request with ureq
 
 [ureq](https://crates.io/crates/ureq) was recommended as a better alternative to reqwest for blocking requests.
 
