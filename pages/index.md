@@ -46,7 +46,7 @@ There are a number of series of articles on the site in the following topics:
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * [Clippy](/clippy/)
 * Linting with [Clippy](/tags/clippy)
-* [reqwest](/reqwest) HTTP client for Rust.
+* [reqwest](/reqwest/) HTTP client for Rust. (reqwest, ureq)
 * [Other, Ratatui, Tera](/other/)
 * [Error handling](/error-handling)
 * [Open Source Applications written in Rust](/applications) it is primarily just a collection of links.

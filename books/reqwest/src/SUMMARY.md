@@ -14,6 +14,8 @@
   - [Async reqwest - get IP in a simple JSON structure](./async-reqwest-get-ip.md)
   - [Async reqwest - set User Agent](./async-reqwest-set-user-agent.md)
   - [Download many URLs in parallel (async)](./download-many-urls-async.md)
+- [ureq]()
+  - [Blocking GET with ureq](./blocking-get-with-urq.md)
 - [TODO]()
   - [Accept cookies in an HTTP request sent by the server](./reqwest-accept-cookies.md)
 

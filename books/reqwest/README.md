@@ -7,4 +7,5 @@
 - send JSON
 
 
-- Try [ureq](https://crates.io/crates/ureq)
+- ureq stop the automatic redirection
+- ureq make 404 errors regular responses.
