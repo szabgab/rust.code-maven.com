@@ -29,6 +29,7 @@
   - [Download many pages bad async](./rust/async/download-many-pages-bad-async.md)
   - [Download many pages async](./rust/async/download-many-pages-async.md)
   - [Crawler](./rust/async/crawler.md)
+- [DNS name resolving](./rust/async/dns-name-resolving.md)
 - [Extra Demo](./rust/async/demo.md)
 - [Resources](./rust/async/resources.md)
 
