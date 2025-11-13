@@ -1,0 +1,7 @@
+[package]
+name = "demo-rusty-paseto"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rusty_paseto = "0.7.2"
