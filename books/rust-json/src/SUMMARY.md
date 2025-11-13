@@ -31,4 +31,5 @@
   - [JSON deserialize custom internal struct using "with"](./json-deserialize-custom-internal-struct-using-with.md)
   - [JSON deserialize custom internal struct using "deserialize-with"](./json-deserialize-custom-internal-struct-using-function.md)
   - [Deserialze JSON where one of the fields can be either string or boolean](./deserialize-json-where-one-of-the-fields-can-be-either-string-or-boolean.md)
+  - [Deserializing enum varians](./deserializing-enum-varians.md)
 
