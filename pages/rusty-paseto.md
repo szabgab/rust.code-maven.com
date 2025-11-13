@@ -12,6 +12,8 @@ todo:
     - TODO
 ---
 
+[rusty_paseto](https://crates.io/crates/rusty_paseto)
+
 {% include file="examples/demo-rusty-paseto/Cargo.toml" %}
 
 {% include file="examples/demo-rusty-paseto/src/main.rs" %}
