@@ -1,0 +1,7 @@
+[package]
+name = "hash-password"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argon2 = { version = "0.5.3", features = ["std"] }
