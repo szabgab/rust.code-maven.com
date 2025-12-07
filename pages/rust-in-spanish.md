@@ -16,15 +16,16 @@ Everything about Rust in Spanish.
 
 ---
 
-* [GitHub](https://github.com/RustLangES)
-* [LinkedIn](https://www.linkedin.com/company/rustlanges)
-* [Telegram](https://t.me/rust_es)
-* [Reddit](https://reddit.com/r/rustlanges)
-* [Instagram](https://www.instagram.com/rustlanges/)
+* [GitHub: RustLang en Español - Comunidad de Rustlang en Español](https://github.com/RustLangES)
+* [LinkedIn company: Comunidad de RustLang en Español](https://www.linkedin.com/company/rustlanges)
+* [LinkedIn group: RustLang en Español](https://www.linkedin.com/groups/12917518/)
+* [Telegram: Programación Rust](https://t.me/rust_es)
+* [Reddit: r/rustlanges](https://reddit.com/r/rustlanges)
+* [Instagram: rustlanges](https://www.instagram.com/rustlanges/)
 * [X/Twitter](https://x.com/rust_lang_es)
 * [Mastodon](https://mastodon.social/@rustlanges)
-* [YouTube](https://www.youtube.com/@RustLangEnEspañol)
-* [Twitch](https://www.twitch.tv/rustlanges)
+* [YouTube: RustLang en Español](https://www.youtube.com/@RustLangEnEspañol)
+* [Twitch: RustLangES](https://www.twitch.tv/rustlanges)
 
 ## Libros
 
