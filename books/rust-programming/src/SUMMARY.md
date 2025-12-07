@@ -513,6 +513,7 @@
   - [Duration](./rust/datetime/duration.md)
   - [Instant sleep Duration](./rust/datetime/instant-sleep-duration.md)
   - [Handle time (using the time crate)](./rust/datetime/handle-time.md)
+  - [Next month charge date](./rust/datetime/next-month-charge-date.md)
 
 - [Modules](./rust/modules/index.md)
   - [Function in the main.rs file](./rust/modules/function-in-the-main-rs-file.md)
