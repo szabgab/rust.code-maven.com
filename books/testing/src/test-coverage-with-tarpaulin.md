@@ -50,3 +50,12 @@ I could get a coverage report of the database tests by running the following:
 cargo tarpaulin --out Html  --out Stdout -- test_db
 ```
 
+## ASLR disable failed: EPERM: Operation not permitted
+
+When running inside a Docker container you might get the above error message.
+
+Using the Llvm engine solved this problem for me.
+
+```
+--engine Llvm
+```
