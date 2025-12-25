@@ -36,3 +36,27 @@ This is what you can see in this similified example.
 
 {% include file="examples/testing-email-sending/src/main.rs" %}
 
+## Config test
+
+We can either use
+
+```rust
+#[cfg(test)]
+```
+
+and
+
+```rust
+#[cfg(not(test))]
+```
+
+or we can use
+
+```rust
+if cfg!(test) {
+    ...
+} else {
+    ...
+}
+```
+

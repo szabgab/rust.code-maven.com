@@ -38,16 +38,12 @@ fn register(admin_email: &str, user_email: &str) -> String {
         .body(body)
         .unwrap();
 
-    #[cfg(test)]
-    {
+    if cfg!(test) {
         let dirname = ".";
         let sender = FileTransport::new(dirname);
         let filename = sender.send(&email).unwrap();
         format!("{filename}.eml")
-    }
-
-    #[cfg(not(test))]
-    {
+    } else {
         println!("Sending email to {}", user_email);
         let sender = SendmailTransport::new();
         sender.send(&email).unwrap();
@@ -63,13 +59,14 @@ mod tests {
     fn test_register_creates_valid_email() {
         let filename = register("admin@example.com", "user@example.com");
         let content = std::fs::read_to_string(filename).unwrap();
-        //assert_eq!(content, "");
+
         assert!(content.contains("From: admin@example.com"));
         assert!(content.contains("To: user@example.com"));
         assert!(content.contains("Subject: Email sent to confirm registration"));
         assert!(content.contains("Welcome! Use this code"));
 
-        let code_start = content.find("Welcome! Use this code ").unwrap() + "Welcome! Use this code ".len();
+        let code_start =
+            content.find("Welcome! Use this code ").unwrap() + "Welcome! Use this code ".len();
         let code_end = content.find(" to verify your").unwrap();
         let _code = &content[code_start..code_end];
 
