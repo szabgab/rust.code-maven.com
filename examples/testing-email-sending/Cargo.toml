@@ -1,0 +1,10 @@
+[package]
+name = "mail-sender"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+clap = { version = "4.5.53", features = ["derive"] }
+lettre = { version = "0.11.19", features = ["file-transport", "sendmail-transport"] }
+uuid = "1.19.0"
