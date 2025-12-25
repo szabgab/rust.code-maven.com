@@ -1,5 +1,6 @@
 use clap::Parser;
 use lettre::{FileTransport, Message, SendmailTransport, Transport, message::header::ContentType};
+use std::io::Read;
 
 #[derive(Parser)]
 struct Cli {
@@ -18,13 +19,15 @@ struct Cli {
 
 fn main() {
     let args = Cli::parse();
+    let mut body = String::new();
+    std::io::stdin().read_to_string(&mut body).unwrap();
 
     let email = Message::builder()
         .from(args.from.parse().unwrap())
         .to(args.to.parse().unwrap())
         .subject(args.subject)
         .header(ContentType::TEXT_PLAIN)
-        .body(String::from("Body"))
+        .body(body)
         .unwrap();
 
     match args.dir {
