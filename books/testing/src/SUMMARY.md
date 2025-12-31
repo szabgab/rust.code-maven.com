@@ -2,6 +2,7 @@
 
 - [Testing in Rust](./index.md)
 - [Show standard output and standard error in tests](./show-output-in-tests.md)
+- [Capture and verify STDOUT and STDERR in tests](./verify-output-in-tests.md)
 - [Test command line applications](./test-command-line-application.md)
 - [Test coverage with Tarpaulin](./test-coverage-with-tarpaulin.md)
 - [Testing with tempfiles and environment variables](./testing-with-environment-variables.md)
