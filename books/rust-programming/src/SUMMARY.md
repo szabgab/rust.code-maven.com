@@ -299,6 +299,7 @@
   - [Compare structs for ordering (sorting) - Ord](./rust/struct/compare-structs-for-ordering.md)
   - [Compare structs for partial ordering (sorting) - PartialOrd](./rust/struct/compare-structs-for-partial-ordering.md)
   - [Manually implement ordering](./rust/struct/manually-implement-ordering.md)
+  - [Compare structs where some attributes are not comparable](./rust/struct/compare-structs-where-some-attributes-are-uncomparable.md)
   - [Copy attributes from struct instance](./rust/struct/copy-attributes-from-struct-insrance.md)
   - [Drop - destructor](./rust/struct/drop.md)
   - [Exercise - struct for contact info](./rust/struct/exercise-struct-for-contact-info.md)
