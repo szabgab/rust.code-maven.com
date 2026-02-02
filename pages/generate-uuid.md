@@ -29,7 +29,7 @@ That's where UUIDs help.
 
 A [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier)  is a 128-bit label that is going to be unique for practical purposes.
 
-In Rust the [uuid crate](https://crates.io/crates/uuid) makes it easy to generate one.
+In Rust the [uuid crate](https://crates.io/crates/uuid) makes it easy to generate a regular uuid and the [short_uuid crate](https://crates.io/crates/short_uuid) to create a short one.
 
 The README of the crate provides you with the basic usage. However I was surprised to see that there are many versions of UUID and this crate has all kinds of features.
 
@@ -48,9 +48,12 @@ It is not enough to add the uuid crate as dependency, we also need to add one or
 ## running the code
 
 ```
-cargo run -q
-
-uuid v4: 54993b26-ccd5-4fa3-9174-0f0c90cada27
+$ cargo run -q
+uuid v1: 90517f42-001c-11f1-a58e-010203040506
+uuid v3: c6db027c-615c-3b4d-959e-1a917747ca5a
+uuid v4: 9bab0227-b3b5-486d-b9d1-396b9018b9e5
+uuid v5: c66bbb60-d62e-5f17-a399-3a0bd237c503
+short_uuid: 7TCeS59JQCnxS8X8fA3oVj
 ```
 
 ## Conclusion
