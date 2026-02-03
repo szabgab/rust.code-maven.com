@@ -30,4 +30,5 @@ function createLink(node, file) {
     node.insertAdjacentElement("afterend", a);
 }
 
+console.log("add event listener");
 document.addEventListener("DOMContentLoaded", linkIncludeFiles);
