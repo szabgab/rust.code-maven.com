@@ -1,0 +1,10 @@
+[package]
+name = "embed-build-time-data"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[build-dependencies]
+built = { version = "0.8", features = ["cargo-lock", "dependency-tree", "chrono", "git2", "semver"] }
+
