@@ -5,7 +5,7 @@ mod built_info {
 fn main() {
     println!("TARGET                {:?}", built_info::TARGET);
     println!("PKG_VERSION           {:?}", built_info::PKG_VERSION);
-    println!("RISTC_VERSION         {:?}", built_info::RUSTC_VERSION);
+    println!("RUSTC_VERSION         {:?}", built_info::RUSTC_VERSION);
 
     println!("GIT_VERSION           {:?}", built_info::GIT_VERSION);
     println!("GIT_DIRTY             {:?}", built_info::GIT_DIRTY);

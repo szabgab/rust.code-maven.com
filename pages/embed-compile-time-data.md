@@ -39,7 +39,7 @@ $cargo run
 
 TARGET                "x86_64-unknown-linux-gnu"
 PKG_VERSION           "0.1.0"
-RISTC_VERSION         "rustc 1.93.0 (254b59607 2026-01-19)"
+RUSTC_VERSION         "rustc 1.93.0 (254b59607 2026-01-19)"
 GIT_VERSION           Some("9c6447a")
 GIT_DIRTY             Some(true)
 GIT_COMMIT_HASH       Some("9c6447a01046142ccf471a597f21d2c08c67c2cd")
