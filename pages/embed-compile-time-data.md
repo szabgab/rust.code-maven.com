@@ -1,6 +1,6 @@
 ---
 title: Embed time of compilation and other build-time information in a rust binary
-timestamp: 2025-02-06T09:30:01
+timestamp: 2026-02-06T09:30:01
 author: szabgab
 published: true
 show_related: true
