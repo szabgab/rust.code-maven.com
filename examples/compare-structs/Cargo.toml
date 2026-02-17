@@ -1,0 +1,11 @@
+[package]
+name = "compare-structs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+insta = "1.46.3"
+similar = "2.7.0"
+#daft = { version = "0.1.5", features = ["std", "derive"] }
+#structdiff = "0.7.3"
+#diff-struct = "0.5.3"
