@@ -1,4 +1,4 @@
-use tracing::{Level, debug, info};
+use tracing::{Level, debug, error, info, trace, warn};
 use tracing_subscriber::FmtSubscriber;
 
 fn main() {
@@ -9,8 +9,11 @@ fn main() {
     tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     // Emit some log messages.
-    info!("hello world");
+    trace!("trace level");
+    debug!("debug level");
 
-    let number_of_yaks = 3;
-    debug!(number_of_yaks, "preparing to shave yaks");
+    let answer = 42;
+    info!(answer, "info level");
+    warn!("warn level");
+    error!("error level");
 }
