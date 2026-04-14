@@ -4,4 +4,6 @@
 
 {% embed include file="src/examples/tracing/demo-lib/src/lib.rs" %}
 
+{% embed include file="src/examples/tracing/demo-lib/src/main.rs" %}
+
 

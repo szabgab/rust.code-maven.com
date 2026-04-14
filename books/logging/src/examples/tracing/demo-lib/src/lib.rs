@@ -1,7 +1,8 @@
-use tracing::debug;
+use tracing::{debug, info};
 
 pub fn add(left: u64, right: u64) -> u64 {
     debug!(left, right, "add");
+    info!(left, right, "add");
     left + right
 }
 
