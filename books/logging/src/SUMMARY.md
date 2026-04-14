@@ -15,5 +15,7 @@
   - [Tracing demo](./tracing-demo.md)
   - [Tracing in a library](./tracing-in-a-library.md)
   - [Tracing in an application](./tracing-in-an-application.md)
+  - [Tracing to a file](./tracing-to-a-file.md)
+  - [Tracing in other crates](./tracing-in-other-crates.md)
   - [Simple tracing configuration with RUST_LOG environment variable](./tracing-simple-configuration-with-rust-log.md)
 
