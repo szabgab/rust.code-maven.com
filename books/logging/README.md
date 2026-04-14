@@ -1,2 +1,1 @@
-
-todo:    - redirect stdout and stderr
+# Logging and Tracing in Rust
