@@ -12,16 +12,54 @@ updates:
       rust:
         patterns:
           - "*"
+
   - package-ecosystem: cargo
     directories:
-      - "/books/error-handling/src/examples/*"
-      - "/books/error-handling/src/examples/errors/*"
+      - "/books/clap/src/examples/**/*"
+    schedule:
+      interval: weekly
+    groups:
+      books-clap:
+        patterns:
+          - "*"
+  - package-ecosystem: cargo
+    directories:
+      - "/books/clippy/src/examples/**/*"
+    schedule:
+      interval: weekly
+    groups:
+      books-clippy:
+        patterns:
+          - "*"
+  - package-ecosystem: cargo
+    directories:
+      - "/books/csv/src/examples/**/*"
+    schedule:
+      interval: weekly
+    groups:
+      books-csv:
+        patterns:
+          - "*"
+  - package-ecosystem: cargo
+    directories:
+      - "/books/error-handling/src/examples/**/*"
     schedule:
       interval: weekly
     groups:
       books-error-handling:
         patterns:
           - "*"
+  - package-ecosystem: cargo
+    directories:
+      - "/books/handlebars/src/examples/**/*"
+    schedule:
+      interval: weekly
+    groups:
+      books-handlebars:
+        patterns:
+          - "*"
+
+
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
