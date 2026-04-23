@@ -12,6 +12,16 @@ updates:
       rust:
         patterns:
           - "*"
+  - package-ecosystem: cargo
+    directories:
+      - "/books/error-handling/src/examples/*"
+      - "/books/error-handling/src/examples/errors/*"
+    schedule:
+      interval: weekly
+    groups:
+      books-error-handling:
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
