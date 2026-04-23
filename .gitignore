@@ -26,4 +26,3 @@ slides/rust/examples/sea-orm/counter/counter.db
 /books/book/
 /books/*/book/
 /html/
-/books/rust-async/src/examples/tokio/*.log
