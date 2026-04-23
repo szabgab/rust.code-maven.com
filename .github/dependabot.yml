@@ -15,7 +15,7 @@ updates:
 
   - package-ecosystem: cargo
     directories:
-      - "/books/*/src/examples/**/*"
+      - "/books/**/*"
     schedule:
       interval: monthly
     groups:
