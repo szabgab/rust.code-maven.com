@@ -4,6 +4,8 @@ updates:
     directories:
       - "/"
       - "/examples/*"
+      - "/examples/*/*"
+      - "/examples/*/*/*"
     schedule:
       interval: weekly
     groups:
