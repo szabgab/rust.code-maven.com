@@ -6,5 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-memory-stats = { version = "1.1.0", features = ["always_use_statm"] }
+memory-stats = { version = "1.2.0", features = ["always_use_statm"] }
 thousands = "0.2.0"

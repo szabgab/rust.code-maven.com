@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 short-uuid = "0.2.1"
-uuid = { version = "1.20.0", features = ["v1", "v3", "v4", "v5", "v6"] }
+uuid = { version = "1.23.1", features = ["v1", "v3", "v4", "v5", "v6"] }
