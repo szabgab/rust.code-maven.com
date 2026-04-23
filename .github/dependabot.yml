@@ -1,7 +1,11 @@
 version: 2
 updates:
   - package-ecosystem: cargo
-    directory: "/"
+    directories:
+      - "/"
+      - "/examples/*"
+      - "/examples/*/*"
+      - "/examples/*/*/*"
     schedule:
       interval: weekly
     groups:
