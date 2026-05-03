@@ -43,6 +43,7 @@ There are a number of series of articles on the site in the following topics:
 * [Rust in Parallel](/rust-parallel/) (threads, threadpool, rayon)
 * [Rust Async](/rust-async/) (async, tokio)
 * Databases
+    * [SQLx](/sqlx/)
     * [SurrealDB](/surrealdb/) - [articles](/surrealdb-articles)
 * [Clippy](/clippy/)
 * Linting with [Clippy](/tags/clippy)
