@@ -20,9 +20,13 @@ enum Command {
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
-    let args = Args::parse();
     let database_file = env::var("DATABASE_FILE")
         .context("DATABASE_FILE is not set. Set it to the SQLite database file path, for example: DATABASE_FILE=todos.db")?;
+    run(database_file).await
+}
+
+async fn run(database_file: String) -> anyhow::Result<()> {
+    let args = Args::parse();
     let options = SqliteConnectOptions::new()
         .filename(database_file)
         .create_if_missing(true);
