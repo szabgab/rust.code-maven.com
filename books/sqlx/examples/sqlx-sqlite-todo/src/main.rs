@@ -20,13 +20,13 @@ enum Command {
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
+    let args = Args::parse();
     let database_file = env::var("DATABASE_FILE")
         .context("DATABASE_FILE is not set. Set it to the SQLite database file path, for example: DATABASE_FILE=todos.db")?;
-    run(database_file).await
+    run(args, database_file).await
 }
 
-async fn run(database_file: String) -> anyhow::Result<()> {
-    let args = Args::parse();
+async fn run(args: Args, database_file: String) -> anyhow::Result<()> {
     let options = SqliteConnectOptions::new()
         .filename(database_file)
         .create_if_missing(true);
@@ -54,6 +54,53 @@ async fn run(database_file: String) -> anyhow::Result<()> {
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Args, Command, run};
+    use sqlx::{Row, sqlite::SqlitePool};
+    use std::{
+        env,
+        path::PathBuf,
+        time::{SystemTime, UNIX_EPOCH},
+    };
+
+    #[tokio::test(flavor = "current_thread")]
+    async fn run_adds_a_todo() {
+        let database_file = unique_database_file("run-adds-a-todo");
+        let args = Args {
+            cmd: Some(Command::Add {
+                description: "buy milk".to_string(),
+            }),
+        };
+
+        run(args, database_file.to_string_lossy().into_owned())
+            .await
+            .unwrap();
+
+        let pool = SqlitePool::connect(&format!("sqlite://{}", database_file.display()))
+            .await
+            .unwrap();
+        let row = sqlx::query("SELECT description, done FROM todos WHERE id = 1")
+            .fetch_one(&pool)
+            .await
+            .unwrap();
+
+        assert_eq!(row.try_get::<String, _>("description").unwrap(), "buy milk");
+        assert!(!row.try_get::<bool, _>("done").unwrap());
+
+        std::fs::remove_file(database_file).unwrap();
+    }
+
+    fn unique_database_file(prefix: &str) -> PathBuf {
+        let unique_suffix = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
+
+        env::temp_dir().join(format!("sqlx-sqlite-todo-{prefix}-{unique_suffix}.db"))
+    }
 }
 
 async fn initialize_database(pool: &SqlitePool) -> anyhow::Result<()> {
