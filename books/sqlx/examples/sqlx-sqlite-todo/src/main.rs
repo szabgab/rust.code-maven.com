@@ -1,6 +1,9 @@
 use clap::{Parser, Subcommand};
-use sqlx::sqlite::SqlitePool;
-use std::env;
+use sqlx::{
+    Row,
+    sqlite::{SqliteConnectOptions, SqlitePool},
+};
+use std::{env, str::FromStr};
 
 #[derive(Parser)]
 struct Args {
@@ -17,7 +20,10 @@ enum Command {
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
     let args = Args::parse();
-    let pool = SqlitePool::connect(&env::var("DATABASE_URL")?).await?;
+    let database_url = env::var("DATABASE_URL").unwrap_or_else(|_| "sqlite://todos.db".to_string());
+    let options = SqliteConnectOptions::from_str(&database_url)?.create_if_missing(true);
+    let pool = SqlitePool::connect_with(options).await?;
+    initialize_database(&pool).await?;
 
     match args.cmd {
         Some(Command::Add { description }) => {
@@ -42,17 +48,33 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
+async fn initialize_database(pool: &SqlitePool) -> anyhow::Result<()> {
+    sqlx::query(
+        r#"
+CREATE TABLE IF NOT EXISTS todos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    description TEXT NOT NULL,
+    done BOOLEAN NOT NULL DEFAULT FALSE
+)
+        "#,
+    )
+    .execute(pool)
+    .await?;
+
+    Ok(())
+}
+
 async fn add_todo(pool: &SqlitePool, description: String) -> anyhow::Result<i64> {
     let mut conn = pool.acquire().await?;
 
     // Insert the task, then obtain the ID of this row
-    let id = sqlx::query!(
+    let id = sqlx::query(
         r#"
 INSERT INTO todos ( description )
 VALUES ( ?1 )
         "#,
-        description
     )
+    .bind(description)
     .execute(&mut *conn)
     .await?
     .last_insert_rowid();
@@ -61,14 +83,14 @@ VALUES ( ?1 )
 }
 
 async fn complete_todo(pool: &SqlitePool, id: i64) -> anyhow::Result<bool> {
-    let rows_affected = sqlx::query!(
+    let rows_affected = sqlx::query(
         r#"
 UPDATE todos
 SET done = TRUE
 WHERE id = ?1
         "#,
-        id
     )
+    .bind(id)
     .execute(pool)
     .await?
     .rows_affected();
@@ -77,25 +99,28 @@ WHERE id = ?1
 }
 
 async fn list_todos(pool: &SqlitePool) -> anyhow::Result<()> {
-    let recs = sqlx::query!(
+    let recs = sqlx::query(
         r#"
 SELECT id, description, done
 FROM todos
 ORDER BY id
-        "#
+        "#,
     )
     .fetch_all(pool)
     .await?;
 
     for rec in recs {
+        let id: i64 = rec.try_get("id")?;
+        let description: String = rec.try_get("description")?;
+        let done: bool = rec.try_get("done")?;
+
         println!(
             "- [{}] {}: {}",
-            if rec.done { "x" } else { " " },
-            rec.id,
-            &rec.description,
+            if done { "x" } else { " " },
+            id,
+            description,
         );
     }
 
     Ok(())
 }
-
