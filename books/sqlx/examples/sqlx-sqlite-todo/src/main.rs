@@ -1,9 +1,10 @@
+use anyhow::Context;
 use clap::{Parser, Subcommand};
 use sqlx::{
     Row,
     sqlite::{SqliteConnectOptions, SqlitePool},
 };
-use std::{env, str::FromStr};
+use std::env;
 
 #[derive(Parser)]
 struct Args {
@@ -20,8 +21,11 @@ enum Command {
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> anyhow::Result<()> {
     let args = Args::parse();
-    let database_url = env::var("DATABASE_URL").unwrap_or_else(|_| "sqlite://todos.db".to_string());
-    let options = SqliteConnectOptions::from_str(&database_url)?.create_if_missing(true);
+    let database_file = env::var("DATABASE_FILE")
+        .context("DATABASE_FILE is not set. Set it to the SQLite database file path, for example: DATABASE_FILE=todos.db")?;
+    let options = SqliteConnectOptions::new()
+        .filename(database_file)
+        .create_if_missing(true);
     let pool = SqlitePool::connect_with(options).await?;
     initialize_database(&pool).await?;
 
