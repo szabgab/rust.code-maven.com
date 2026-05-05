@@ -56,9 +56,6 @@ async fn run(args: Args, database_file: String) -> anyhow::Result<()> {
     Ok(())
 }
 
-#[cfg(test)]
-mod tests;
-
 async fn initialize_database(pool: &SqlitePool) -> anyhow::Result<()> {
     sqlx::query(
         r#"
@@ -135,3 +132,6 @@ ORDER BY id
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests;
