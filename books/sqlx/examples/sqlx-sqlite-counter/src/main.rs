@@ -25,8 +25,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         [] => list_counters(&pool).await?,
         [name] => increment_counter(&pool, name).await?,
         _ => {
-            eprintln!("Usage: cargo run [NAME]");
-            std::process::exit(1);
+            return Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Usage: cargo run [NAME]",
+            )
+            .into());
         }
     }
 
