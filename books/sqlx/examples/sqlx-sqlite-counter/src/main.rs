@@ -6,7 +6,8 @@ const DATABASE_URL: &str = "sqlite://counter.db";
 #[tokio::main]
 async fn main() {
     let args: Vec<String> = std::env::args().skip(1).collect();
-    if let Err(err) = run(args, DATABASE_URL).await {
+    let database_url = std::env::var("DATABASE_URL").unwrap_or_else(|_| DATABASE_URL.to_string());
+    if let Err(err) = run(args, &database_url).await {
         eprintln!("{err}");
         std::process::exit(1);
     }
