@@ -1,4 +1,4 @@
-use sqlx::{sqlite::SqliteConnectOptions, Row, SqlitePool};
+use sqlx::{Row, SqlitePool, sqlite::SqliteConnectOptions};
 use std::str::FromStr;
 
 const DATABASE_URL: &str = "sqlite://counter.db";
@@ -19,7 +19,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     )
     .execute(&pool)
     .await?;
-
 
     match args.as_slice() {
         [] => list_counters(&pool).await?,
