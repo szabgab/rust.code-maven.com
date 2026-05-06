@@ -1,4 +1,5 @@
-use std::{error::Error, fs};
+use sqlx::{SqlitePool, sqlite::SqliteConnectOptions};
+use std::{error::Error, fs, str::FromStr};
 
 #[derive(Debug, Clone)]
 struct GradeRecord {
@@ -50,9 +51,42 @@ fn read_grades_csv(path: &str) -> Result<Vec<GradeRecord>, Box<dyn Error>> {
     Ok(rows)
 }
 
-fn main() -> Result<(), Box<dyn Error>> {
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
     let grades = read_grades_csv("grades.csv")?;
-    println!("Loaded {} grade rows", grades.len());
-    println!("Loaded {:?}", grades);
+
+    let options = SqliteConnectOptions::from_str("sqlite://grades.db")?.create_if_missing(true);
+    let pool = SqlitePool::connect_with(options).await?;
+
+    sqlx::migrate!("./migrations").run(&pool).await?;
+
+    for grade in &grades {
+        sqlx::query(
+            "
+            INSERT INTO grades (student, math, chemistry, biology, physics, literature, sport, drawing)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(student) DO UPDATE SET
+                math = excluded.math,
+                chemistry = excluded.chemistry,
+                biology = excluded.biology,
+                physics = excluded.physics,
+                literature = excluded.literature,
+                sport = excluded.sport,
+                drawing = excluded.drawing
+            ",
+        )
+        .bind(&grade.student)
+        .bind(grade.math.map(i64::from))
+        .bind(grade.chemistry.map(i64::from))
+        .bind(grade.biology.map(i64::from))
+        .bind(grade.physics.map(i64::from))
+        .bind(grade.literature.map(i64::from))
+        .bind(grade.sport.map(i64::from))
+        .bind(grade.drawing.map(i64::from))
+        .execute(&pool)
+        .await?;
+    }
+
+    println!("Loaded {} grade rows into grades.db", grades.len());
     Ok(())
 }
