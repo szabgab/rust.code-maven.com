@@ -5,6 +5,10 @@ const DATABASE_URL: &str = "sqlite://counter.db";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    run().await
+}
+
+async fn run() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = std::env::args().skip(1).collect();
     let database_url = DATABASE_URL;
 
