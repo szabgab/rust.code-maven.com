@@ -5,7 +5,10 @@ const DATABASE_URL: &str = "sqlite://counter.db";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let options = SqliteConnectOptions::from_str(DATABASE_URL)?.create_if_missing(true);
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    let database_url = DATABASE_URL;
+
+    let options = SqliteConnectOptions::from_str(database_url)?.create_if_missing(true);
     let pool = SqlitePool::connect_with(options).await?;
 
     sqlx::query(
@@ -17,7 +20,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     .execute(&pool)
     .await?;
 
-    let args: Vec<String> = std::env::args().skip(1).collect();
 
     match args.as_slice() {
         [] => list_counters(&pool).await?,
