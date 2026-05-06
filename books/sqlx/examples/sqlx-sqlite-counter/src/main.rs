@@ -5,16 +5,14 @@ const DATABASE_URL: &str = "sqlite://counter.db";
 
 #[tokio::main]
 async fn main() {
-    if let Err(err) = run().await {
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    if let Err(err) = run(args, DATABASE_URL).await {
         eprintln!("{err}");
         std::process::exit(1);
     }
 }
 
-async fn run() -> Result<(), Box<dyn std::error::Error>> {
-    let args: Vec<String> = std::env::args().skip(1).collect();
-    let database_url = DATABASE_URL;
-
+async fn run(args: Vec<String>, database_url: &str) -> Result<(), Box<dyn std::error::Error>> {
     let options = SqliteConnectOptions::from_str(database_url)?.create_if_missing(true);
     let pool = SqlitePool::connect_with(options).await?;
 
