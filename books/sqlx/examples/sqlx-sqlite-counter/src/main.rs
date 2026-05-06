@@ -4,8 +4,11 @@ use std::str::FromStr;
 const DATABASE_URL: &str = "sqlite://counter.db";
 
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    run().await
+async fn main() {
+    if let Err(err) = run().await {
+        eprintln!("{err}");
+        std::process::exit(1);
+    }
 }
 
 async fn run() -> Result<(), Box<dyn std::error::Error>> {
