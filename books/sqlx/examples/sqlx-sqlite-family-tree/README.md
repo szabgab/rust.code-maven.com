@@ -1,12 +1,32 @@
+# sqlx-sqlite-family-tree
 
+## Overview
 
-A command line application written in Rust that stores a family tree in an SQLite database using the `sqlx` crate.
-Each person has a name, a father, and a moder. For some people we don't know the maother and/or the father.
+Rust CLI that stores people and parent relationships in an SQLite database using `sqlx`.
 
+## What This Example Demonstrates
 
-- Run `cargo run list` (or just `cargo run`) to list all known people.
-- Run `cargo run add NAME` to add a person.
-- Run `cargo run father-of CHILD FATHER` to set the father of a child.
-  - Both names must already exist in the database.
-- Run `cargo run mother-of CHILD MOTHER` to set the mother of a child.
-  - Both names must already exist in the database.
+- Schema creation with foreign key references.
+- Inserting people with uniqueness constraints.
+- Updating parent relationships with validation.
+- Listing relational data using SQL joins.
+
+## Run
+
+- `cargo run`
+- `cargo run -- list`
+  - Lists all known people and their parents.
+- `cargo run -- add Alice`
+  - Adds a person (or keeps existing person unchanged).
+- `cargo run -- father-of Bob John`
+- `cargo run -- mother-of Bob Mary`
+  - For parent commands, both child and parent names must already exist.
+
+## Configuration
+
+- Default database URL: `sqlite://family-tree.db`
+- Optional override: `DATABASE_URL=sqlite://my-family.db cargo run -- list`
+
+## Copilot Usage Hint
+
+When adding new commands, follow the current argument-dispatch style in `run(args, database_url)` and keep usage text synchronized with accepted command shapes.
