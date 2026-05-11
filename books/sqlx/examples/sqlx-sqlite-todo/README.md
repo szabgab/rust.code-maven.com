@@ -3,6 +3,7 @@
 ## Overview
 
 Rust CLI todo manager backed by SQLite using `sqlx` and `clap`.
+Using subcommands and environment-based database configuration.
 
 ## What This Example Demonstrates
 

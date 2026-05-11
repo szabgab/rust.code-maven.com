@@ -2,7 +2,7 @@
 
 ## Overview
 
-Rust CLI that stores people and parent relationships in an SQLite database using `sqlx`.
+Rust CLI that stores people and parent relationships in an SQLite database using `sqlx` with foreign keys and joins.
 
 ## What This Example Demonstrates
 

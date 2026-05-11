@@ -2,7 +2,7 @@
 
 ## Overview
 
-Small Rust CLI that stores named counters in SQLite using `sqlx`.
+Small Rust CLI that stores named counters in SQLite using upsert logic in `sqlx`.
 
 ## What This Example Demonstrates
 
