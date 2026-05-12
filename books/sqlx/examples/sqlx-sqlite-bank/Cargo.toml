@@ -1,0 +1,8 @@
+[package]
+name = "sqlx-sqlite-bank"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sqlx = { version = "0.8.6", features = ["sqlite", "runtime-tokio-rustls", "migrate"] }
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }
