@@ -1,0 +1,10 @@
+[package]
+name = "xserialize"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.58"
+sqlx = { git = "https://github.com/launchbadge/sqlx", version = "0.9.0-alpha.1", features = ["runtime-tokio", "sqlite", "sqlite-deserialize"] }
+#sqlx = { version = "0.8.6", features = ["sqlite", "sqlite-deserialize", "runtime-tokio"] }
+tokio = { version = "1.25.0", features = ["rt", "macros"] }
