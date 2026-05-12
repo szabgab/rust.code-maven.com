@@ -23,9 +23,10 @@ cargo run
 Expected output:
 
 ```text
-name | father | mother
----- | ------ | ------
-Alice | Bob | Carol
-Bob | - | -
-Carol | - | -
+name  | father | mother
+----- | ------ | ------
+Alice | Bob    | Carol
+Bob   | -      | -
+Carol | -      | -
 ```
+
