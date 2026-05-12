@@ -11,5 +11,6 @@
   - [SQLite todo example](./sqlx-sqlite-todo.md)
   - [SQLite original todos example](./sqlx-sqlite-todos.md)
   - [SQLite snapshot and restore](./sqlx-sqlite-snapshot.md)
-- [Postgres]()
+- [Postgres](./postgres.md)
+  - [Postgres original todos example](./sqlx-postgres-todos.md)
 
