@@ -1,0 +1,10 @@
+[package]
+name = "todos"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.58"
+clap = { version = "4.4.7", features = ["derive"] }
+sqlx = { version = "0.8.6", features = ["sqlite", "runtime-tokio", "tls-native-tls"] }
+tokio = { version = "1.25.0", features = ["rt", "macros"]}
