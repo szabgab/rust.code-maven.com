@@ -26,3 +26,11 @@ Copilot can use these examples as reference implementations for:
 - "Add input validation and better error messages to the counter app."
 - "Add a new column to grades and update migration plus import logic."
 
+
+link to https://crates.io/crates/sqlx
+change the counter example to use a struct
+
+family tree - don't use "DO NOTHING"
+    merge the set_father_of and set_mother_of functions
+    reuse the find_person_id in the ensure_person
+
