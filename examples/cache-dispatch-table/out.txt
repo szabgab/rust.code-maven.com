@@ -1,4 +1,6 @@
 get_dispatch called
+get_dispatch for locations called
+get_dispatch for locations called
 Processing: city
 Processing city of Seoul
 

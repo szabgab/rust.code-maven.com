@@ -1,10 +1,15 @@
-use std::collections::HashMap;
 use cached::macros::cached;
+
+mod locations;
+mod other;
+mod types;
+
+use crate::types::DispatchTable;
 
 fn main() {
     for name in &["city", "state", "country", "language"] {
         process(name);
-    }     
+    }
 }
 
 fn process(name: &str) {
@@ -14,34 +19,25 @@ fn process(name: &str) {
     if let Some(process_fn) = dispatch.get(name) {
         let result = process_fn();
         println!("{}", result);
-    }   
-    println!(); 
+    }
+    println!();
 }
-
-type Handler = fn() -> &'static str;
-type DispatchTable = HashMap<&'static str, Handler>;
-
 
 #[cached]
 fn get_dispatch() -> DispatchTable {
     println!("get_dispatch called");
 
     let mut config = DispatchTable::new();
-    config.insert("city", process_city);
-    config.insert("country", process_country);
-    config.insert("language", process_language);
+
+    let cfg = crate::locations::get_dispatch();
+    for (key, value) in cfg {
+        config.insert(key, value);
+    }
+
+    let cfg = crate::other::get_dispatch();
+    for (key, value) in cfg {
+        config.insert(key, value);
+    }
+
     config
-}
-
-
-fn process_city() -> &'static str {
-    "Processing city of Seoul"
-}
-
-fn process_country() -> &'static str {
-    "Processing country of Korea"
-}
-
-fn process_language() -> &'static str {
-    "Processing the Korean language"
 }
