@@ -1,0 +1,3 @@
+get_config called
+Config: {"country": "Korea", "city": "Seoul"}
+Config: {"country": "Korea", "city": "Seoul"}
