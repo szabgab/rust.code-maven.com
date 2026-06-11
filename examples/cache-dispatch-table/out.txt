@@ -1,0 +1,12 @@
+get_dispatch called
+Processing: city
+Processing city of Seoul
+
+Processing: state
+
+Processing: country
+Processing country of Korea
+
+Processing: language
+Processing the Korean language
+
