@@ -24,4 +24,5 @@ The 3rd and 4th tv_nsec values are the same as the value got cached after the fi
 {% include file="examples/cache-result-of-function/Cargo.toml" %}
 
 
+If you only want to store a timestamp then there are better solutions as well. For example check out [the starting time of the process](/fixed-start-time).
 
