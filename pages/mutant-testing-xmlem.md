@@ -28,9 +28,46 @@ HTML/XML and don't seem to verify the result (Lots of `println!` calls instead o
 I figured it would be an interesting thing to see the test coverage report and the mutation testing report.
 
 
+## SHA
+
+I cloned the repository and got this sha: `89b9f9fa2f729f6e95ec79638c977dfecc3b6ec1`.
+I keep it here so you can check it out too to reproduce this result.
+
+## Test coverage report
+
+Using [cargo-tarpaulin](https://crates.io/crates/cargo-tarpaulin)
+
+```
+cargo install cargo-tarpaulin
+```
+
+```
+$ cargo tarpaulin --out Html --out Stdout
+
+|| Uncovered Lines:
+|| src/display.rs: 45-47, 50-52, 55-57, 60-62, 65-67, 135, 139, 293-294, 298, 342-343, 347, 392, 492-495, 497, 537
+|| src/document.rs: 25, 49, 51-52, 57, 59-60, 73-74, 77-79, 82-84, 88-92, 99-107, 112-114, 118-125, 129, 175-177, 180, 182-190, 192-193, 197-198, 200-202, 204, 208-209, 214, 217-218, 220-224, 226, 228-229, 231, 234-237, 239, 242-244, 248-253, 257-258, 261-262, 265-269, 272-275, 281, 284-286, 294-297, 301, 318-321, 325-327, 357, 364, 369, 384, 422, 425, 431-433, 450-451, 466-468, 480, 487-489, 512, 527-529, 535-540, 542-544, 556, 563-564, 566-567, 569-570, 572, 574, 576-577, 601, 625-631, 633-634, 636-638, 645-650
+|| src/element.rs: 93, 96, 119, 163, 168, 170, 206, 211, 220, 279-282, 284-287, 289, 440, 486, 549-550, 554-555, 558-560, 564-565, 568, 575-576, 578-579, 581, 583, 585-586, 589, 592-593, 595-596, 598, 601-602, 604, 606-607, 610, 617-619, 633
+|| src/key.rs: 23-25, 33-35, 43-45, 68, 74-77, 88-91, 95-98, 102-105, 109-112, 116-123
+|| src/select.rs: 48, 54-55, 69, 73, 78-79, 104, 108, 139-140, 143-144, 150, 154-155, 158, 162-165, 171-174, 180, 188-189, 192-193, 205, 209-210, 217, 221, 229, 237, 241, 245, 250-252, 256, 261-262, 264-265, 269, 273, 276, 280-281, 284-285, 288-290, 293, 295, 299, 301, 305, 316, 322-323, 346, 355-360, 364-366
+|| src/value.rs: 27, 34, 41, 48, 52-55
+|| Tested/Total Lines:
+|| src/display.rs: 182/212
+|| src/document.rs: 145/325
+|| src/element.rs: 134/188
+|| src/key.rs: 14/52
+|| src/select.rs: 37/112
+|| src/value.rs: 12/20
+||
+57.65% coverage, 524/909 lines covered
+```
+
+
 ## Mutation testing
 
 Using [cargo-mutants](https://crates.io/crates/cargo-mutants)
+
+For documentation see the [mutants](https://mutants.rs/) web site.
 
 ```
 cargo install cargo-mutants
@@ -213,6 +250,11 @@ MISSED   src/value.rs:54:13: delete match arm NodeValue::DocumentType(e) in Node
 The 165 missed mutants indicate that there are lots of places the code could be changed and the test would not catch the regression.
 
 
+## Conclusion
 
+Given that the test coverage is "only" 57.65% this might not be such a great example showing that "high test coverage might not mean the code is really tested",
+but I should probably convert those `println!` macros to `assert_eq!` macros and then run both of these again.
 
+What would be really nice if the two reports could be combined and it would emphasize the statements that were covered by the test coverage,
+but still don't fail the tests if they are changed.
 
