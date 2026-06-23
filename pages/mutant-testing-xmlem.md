@@ -1,5 +1,5 @@
 ---
-title: Mutation testing the xmlem Rust carate
+title: Mutation testing the xmlem Rust crate
 timestamp: 2026-06-23T21:30:01
 author: szabgab
 published: true
