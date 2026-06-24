@@ -17,13 +17,14 @@ file are "too pretty". That is, every HTML element is on it own line. I wanted t
 to keep the result a bit tighter. So I opened an [issue](https://github.com/xmlem/xmlem/issues/14)
 and the author basically gave his (her?) blessing for someone to work on it.
 
-I though to give it a try, but first I had to make myself familiar with the code and with the tests.
+I thought to give it a try, but first I had to make myself familiar with the code and with the tests.
 
-Side note: by the time I started to write this blog post someone has already committed the required
-change. So maybe I won't have to do anything here.
+Side note: by the time I started to write this blog post someone has already committed the change.
+So maybe I won't have to do anything here. On the other hand I could contribute some of my expertise
+to the project (GitHub Actions, testing etc.)
 
-Anyway, as I looked at the tests I noticed that in many cases the tests seem to only print the generated
-HTML/XML and don't seem to verify the result (Lots of `println!` calls instead of `assert_eq!` calls.
+As I looked at the tests I noticed that in many cases the tests seem to only print the generated
+HTML/XML and don't seem to verify the result. There were several `println!` calls instead of `assert_eq!` calls.
 
 I figured it would be an interesting thing to see the test coverage report and the mutation testing report.
 
