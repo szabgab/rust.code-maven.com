@@ -15,11 +15,12 @@ As I am working on a project that generates HTML pages I wanted to prettify / be
 So far the best crate I found is the [xmlem](https://crates.io/crates/xmlem), however the generated
 file are "too pretty". That is, every HTML element is on it own line. I wanted to have an option
 to keep the result a bit tighter. So I opened an [issue](https://github.com/xmlem/xmlem/issues/14)
-and the author basically gave his (her?) blessing for someone to work on it.
+and [Ltrlg](https://github.com/Ltrlg) basically gave his (her?) blessing for someone to work on it.
 
 I thought to give it a try, but first I had to make myself familiar with the code and with the tests.
 
-Side note: by the time I started to write this blog post someone has already committed the change.
+Side note: by the time I started to write this blog post [Brendan Molloy](https://github.com/bbqsrc),
+who is apparently the original author of the crate, has already committed the change.
 So maybe I won't have to do anything here. On the other hand I could contribute some of my expertise
 to the project (GitHub Actions, testing etc.)
 
