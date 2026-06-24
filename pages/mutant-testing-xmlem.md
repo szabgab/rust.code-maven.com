@@ -261,11 +261,11 @@ This will ensure that changes to the code don't lead to unplanned changes in the
 
 Later someone who wants to manually verify the correctness of the tests can do so.
 
-Here is an example of the changes I made. (I'll link to them if they are merged into the code-base.)
+Here is an example of the changes I made. See the full [diff here](https://github.com/xmlem/xmlem/commit/4b002fd4fd42b89649ba7ef01d059b3fab89e0f1). It was merged into the code-base.
 
 ```
--        println!("{:#}", doc);
-+        assert_eq!("<root>\n  potato\n</root>\n", format!("{:#}", doc));
+-   println!("{:#}", doc);
++   assert_eq!("<root>\n  potato\n</root>\n", format!("{:#}", doc));
 ```
 
 ## Running mutation testing again
