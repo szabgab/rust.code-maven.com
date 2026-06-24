@@ -249,12 +249,43 @@ MISSED   src/value.rs:54:13: delete match arm NodeValue::DocumentType(e) in Node
 
 The 165 missed mutants indicate that there are lots of places the code could be changed and the test would not catch the regression.
 
+## Convert `println!` to `assert_eq!`
+
+As I mentioned, there were many test cases where at the end of the test the content of the generated document was printed,
+but not verified. So I changed all those cases. I don't know much about this crate so I could not personally verify
+the correctness of the results. So first I changed the `println` to compare the result to an empty string. This made the test
+fail printing the actual result. Then I took the current actual result and set it as the expected string.
+
+This will ensure that changes to the code don't lead to unplanned changes in the output.
+
+Later someone who wants to manually verify the correctness of the tests can do so.
+
+Here is an example of the changes I made. (I'll link to them if they are merged into the code-base.)
+
+```
+-        println!("{:#}", doc);
++        assert_eq!("<root>\n  potato\n</root>\n", format!("{:#}", doc));
+```
+
+## Running mutation testing again
+
+```
+cargo mutants
+...
+337 mutants tested in 5m: 141 missed, 142 caught, 53 unviable, 1 timeouts
+```
+
+There are still 141 missed cases, but that's already 24 less than what we had earlier.
+
 
 ## Conclusion
 
 Given that the test coverage is "only" 57.65% this might not be such a great example showing that "high test coverage might not mean the code is really tested",
-but I should probably convert those `println!` macros to `assert_eq!` macros and then run both of these again.
+but still converting those `println!` macros to `assert_eq!` macros reduced the missed cases by 24.
 
-What would be really nice if the two reports could be combined and it would emphasize the statements that were covered by the test coverage,
+We need to increase the test coverage in order to make sure the code does not accidently breaks in one place when some changes are introduced in another place.
+At the same time we also need to monitor the reports from the mutant tests to make sure the tests indeed verify the behavior.
+
+Unrelated note: What would be really nice if the two reports could be combined and it would emphasize the statements that were covered by the test coverage,
 but still don't fail the tests if they are changed.
 
