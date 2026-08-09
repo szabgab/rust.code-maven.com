@@ -724,7 +724,7 @@
     city: Nürnbert
     country: Germany
 - name: Rust Taiwan Community
-  url:  https://github.com/rust-tw/meetup
+  url: https://github.com/rust-tw/meetup
   members: 61
   location:
     city: Taipei
