@@ -1,7 +1,7 @@
 ---
 title: Solving Real-World Planning Problems in Rust with SolverForge
 timestamp: 2026-08-09T15:30:01
-author: szabgab
+author:
 published: true
 show_related: true
 description:

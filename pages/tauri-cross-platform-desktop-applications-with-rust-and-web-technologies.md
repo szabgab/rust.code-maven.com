@@ -1,7 +1,7 @@
 ---
 title: "Tauri: Cross-Platform desktop applications with Rust and web technologies"
 timestamp: 2026-08-11T13:30:01
-author: szabgab
+author:
 published: true
 show_related: true
 description:
