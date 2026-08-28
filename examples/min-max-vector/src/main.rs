@@ -7,6 +7,14 @@ fn main() {
     let max = numbers.iter().max().unwrap();
     println!("max: {}", max);
 
+    let (min, max) = numbers
+        .iter()
+        .fold((i32::MAX, i32::MIN), |(min, max), &val| {
+            (min.min(val), max.max(val))
+        });
+    println!("min: {}", min);
+    println!("max: {}", max);
+
     let other: Vec<i32> = vec![23];
     let empty: Vec<i32> = vec![];
 
