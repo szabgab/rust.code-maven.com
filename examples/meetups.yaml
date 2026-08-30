@@ -423,6 +423,7 @@
   location:
     city: Manchester
     country: United Kingdom
+  web: https://rustmanchester.co.uk/
 - name: Indy Rust
   url: https://www.meetup.com/indyrs/
   members: 403
