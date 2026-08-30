@@ -663,12 +663,6 @@
   location:
     city: Belfast, R3
     country: United Kingdom
-- name: Rust Frankfurt
-  url: https://www.meetup.com/rust-frankfurt
-  members: 117
-  location:
-    city: Frankfurt
-    country: Germany
 - name: Rust Rio
   url: https://www.meetup.com/Rust-Rio/
   members: 109
