@@ -188,12 +188,6 @@
     city: Dallas
     state: TX
     country: USA
-- name: Rust Sydney
-  url: https://www.meetup.com/Rust-Sydney/
-  members: 934
-  location:
-    city: Sydney
-    country: Australia
 - name: BcnRust
   url: https://www.meetup.com/bcnrust/
   members: 890
