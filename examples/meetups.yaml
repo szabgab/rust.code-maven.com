@@ -343,6 +343,7 @@
     city: Chicago
     state: IL
     country: USA
+  web: https://velfi.github.io/ChicagoRustMeetup/
 - name: San Diego Rust
   url: https://www.meetup.com/San-Diego-Rust/
   members: 493
