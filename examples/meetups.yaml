@@ -526,6 +526,7 @@
   location:
     city: London
     country: United Kingdom
+  web: https://www.notion.so/surrealdb/Women-in-Rust-Learning-Resources-ff83fd56ec4146d1b19b114490b953cb
 - name: Rust Gdansk
   url: https://www.meetup.com/rust-gdansk/
   members: 271
