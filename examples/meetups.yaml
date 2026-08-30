@@ -431,6 +431,7 @@
     city: Indianapolis
     state: IN
     country: USA
+  web: https://indy.rs/
 - name: Rust Atlanta
   url: https://www.meetup.com/Rust-ATL/
   members: 377
