@@ -226,12 +226,6 @@
     city: Portland
     state: OR
     country: USA
-- name: Tokyo Rust Meetup
-  url: https://www.meetup.com/tokyo-rust-meetup/
-  members: 801
-  location:
-    city: Tokyo
-    country: Japan
 - name: Rust Cologne
   url: https://www.meetup.com/rustcologne/
   members: 796
