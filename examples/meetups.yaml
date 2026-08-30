@@ -581,6 +581,7 @@
   location:
     city: Reading
     country: United Kingdom
+  web: https://rustworkshop.co/meetup/
 - name: Detroit Rust
   url: https://www.meetup.com/detroitrust/
   members: 187
