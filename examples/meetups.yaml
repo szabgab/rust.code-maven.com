@@ -200,12 +200,6 @@
   location:
     city: Barcelona
     country: Spain
-- name: Rust Wroclaw
-  url: https://www.meetup.com/rust-wroclaw
-  members: 887
-  location:
-    city: Wroclaw
-    country: Poland
 - name: Copenhagen Rust Community
   url: https://www.meetup.com/copenhagen-rust-community/
   members: 865
