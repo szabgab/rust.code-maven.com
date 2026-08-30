@@ -693,12 +693,6 @@
   location:
     city: Olomouc
     country: Czech Republic
-- name: Rust, Getting Started
-  url: https://www.meetup.com/rust-getting-started
-  members: 87
-  location:
-    city: Tiel
-    country: Netherlands
 - name: Dutch Rust Meetup
   url: https://www.meetup.com/dutch-rust-meetup/
   members: 74
