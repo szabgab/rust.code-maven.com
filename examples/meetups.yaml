@@ -263,13 +263,6 @@
   location:
     city: Warsaw
     country: Poland
-- name: Rust Toronto
-  url: https://www.meetup.com/Rust-Toronto/
-  members: 648
-  location:
-    city: Toronto
-    state: ON
-    country: Canada
 - name: Rust Language Milano
   url: https://www.meetup.com/Rust-lang-Milano/
   members: 636
