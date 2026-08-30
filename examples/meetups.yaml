@@ -115,11 +115,12 @@
     city: Linz
     country: Austria
 - name: Rust Melbourne
-  url: https://www.meetup.com/Rust-Melbourne/
+  url: https://luma.com/rustmelbourne
   members: 1170
   location:
     city: Melbourne
     country: Australia
+  web: https://rustmelbourne.com/
 - name: Rust and C++ Cardiff
   url: https://www.meetup.com/rust-and-c-plus-plus-in-cardiff/
   members: 1147
