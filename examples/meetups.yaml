@@ -600,13 +600,6 @@
   location:
     city: Christchurch
     country: New Zealand
-- name: Boulder Rust Meetup
-  url: https://www.meetup.com/boulder-rust-meetup/
-  members: 169
-  location:
-    city: Boulder
-    state: CO
-    country: USA
 - name: Rust - Modern Systems Programming in Leipzig
   url: https://www.meetup.com/rust-modern-systems-programming-in-leipzig/
   members: 168
