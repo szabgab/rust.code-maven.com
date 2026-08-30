@@ -82,6 +82,7 @@
     city: Vancouver
     state: BC
     country: Canada
+  web: https://vancouver-rs.github.io/
 - name: Rust TLV
   url: https://www.meetup.com/rust-tlv/
   members: 1343
