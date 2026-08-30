@@ -156,6 +156,7 @@
   location:
     city: Oslo
     country: Norway
+  web: https://rustoslo.github.io/
 - name: Stockholm Rust
   url: https://www.meetup.com/stockholm-rust/
   members: 1043
