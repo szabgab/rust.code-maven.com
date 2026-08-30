@@ -114,6 +114,7 @@
   location:
     city: Linz
     country: Austria
+  web: https://rust-linz.at/
 - name: Rust Melbourne
   url: https://luma.com/rustmelbourne
   members: 1170
