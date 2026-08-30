@@ -315,13 +315,6 @@
   location:
     city: Pune
     country: India
-- name: Columbus Rust Society
-  url: https://www.meetup.com/columbus-rs/
-  members: 559
-  location:
-    city: Columbus
-    state: OH
-    country: USA
 - name: Rust Los Angeles
   url: https://www.meetup.com/Rust-Los-Angeles/
   members: 546
