@@ -276,12 +276,6 @@
   location:
     city: Milano
     country: Italy
-- name: Rust Vienna
-  url: https://www.meetup.com/rust-vienna/
-  members: 619
-  location:
-    city: Vienna
-    country: Austria
 - name: San Francisco Rust Study Group
   url: https://www.meetup.com/san-francisco-rust-study-group/
   members: 601
