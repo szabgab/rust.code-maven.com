@@ -393,6 +393,7 @@
   location:
     city: Brisbane
     country: Australia
+  web: https://dominikwilkowski.github.io/rust_brisbane_site/
 - name: Rust Prague
   url: https://www.meetup.com/rust-prague/
   members: 448
