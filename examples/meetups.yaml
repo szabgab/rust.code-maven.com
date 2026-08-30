@@ -644,13 +644,6 @@
   location:
     city: Belgrade
     country: Serbia
-- name: Rust Silicon Valley Community
-  url: https://www.meetup.com/rust-breakfast-learn
-  members: 135
-  location:
-    city: San Jose
-    state: CA
-    country: USA
 - name: Rust Perth Meetup Group
   url: https://www.meetup.com/perth-rust-meetup-group/
   members: 128
