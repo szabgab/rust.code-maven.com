@@ -138,6 +138,7 @@
   location:
     city: Buenos Aires
     country: Argentina
+  web: https://rust-lang.ar/
 - name: Rust Language Hyderabad
   url: https://www.meetup.com/Rust-Hyderabad/
   members: 1106
