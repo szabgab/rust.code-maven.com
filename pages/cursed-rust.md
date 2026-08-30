@@ -1,7 +1,7 @@
 ---
 title: Cursed Rust
 timestamp: 2026-08-30T17:30:01
-author: szabgab
+author:
 published: true
 show_related: true
 description:
