@@ -28,7 +28,9 @@ We will do several steps. In each step:
 * I'll help you with any issues you might encounter.
 
 
-## Links
+## Links and Notes
+
+* We had some workshop elements in this session, but basically I ended up showing how to generate a test coverage report and a mutation testing report. Then I generated a test to cover some more lines of the code-base using Google Antigravity.
 
 * The [OSDC Rust](https://osdc.code-maven.com/rust) page where I collect the ideas how to select a project, what to contribute, and what did we do during the previous sessions.
 * The [Pull Request](https://github.com/xmlem/xmlem/pull/20)
