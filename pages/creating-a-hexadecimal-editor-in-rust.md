@@ -8,7 +8,6 @@ description:
 tags:
 ---
 
-<a class="button is-primary" href="https://luma.com/q8i3385k">register</a>
 
 ## Description
 
@@ -20,7 +19,9 @@ Next, I'll present the features my hex editor has and how it helps me (and hopef
 
 [Fernando Mercês](https://github.com/merces/) is a security researcher that spent more than 10 years analyzing malware and investigating cyberattacks and APTs. At [Binarly](https://binarly.io), he works with vulnerability detection in POSIX binaries as his primary focus, and broader ELF ecosystem support on the side. In his free time, he's a volunteer at [Mente Binária](https://mentebinaria.org.br/), the NPO that he founded with free educational programs in computing and security.
 
+## Length
+
+50 min
 
 
-
-
+<a class="button is-primary" href="https://luma.com/q8i3385k">register</a>

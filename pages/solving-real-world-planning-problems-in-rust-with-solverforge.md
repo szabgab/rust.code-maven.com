@@ -24,5 +24,9 @@ The emphasis will be on building a working planning application rather than expl
 * [solverforge.org](https://solverforge.org)
 * [Use cases](https://solverforge.ai/use-cases)
 
+## Length
+
+1.5 hours
+
 
 <a class="button is-primary" href="https://luma.com/rfbzk3ae">register</a>

@@ -16,5 +16,9 @@ The GPU can be one of the most powerful pieces of hardware in a device, and they
 
 [Liam Rust](https://www.linkedin.com/in/liam-rust/) is a recent masters graduate of computer science from Stevens Institute of Technology. Liam is currently an embedded software engineering intern at Persistent Systems. Liam has many interests, but include all things Rust, full-stack web development, free and open source software, and Linux. Outside of programming, Liam enjoys singing, music, design, urbanism, and modeling.
 
+## Length
+
+30 min
+
 
 <a class="button is-primary" href="https://luma.com/k1978ath">register</a>
