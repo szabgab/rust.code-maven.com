@@ -1,7 +1,7 @@
 ---
 title: "No Python was harmed: teaching a tiny MCU to learn as it goes"
 timestamp: 2026-09-08T07:30:01
-author: szabgab
+author:
 published: true
 description:
 tags:
