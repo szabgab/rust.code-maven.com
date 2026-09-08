@@ -31,5 +31,9 @@ Oh and throughout the presentation you will have a chance to win your very own F
 
 I'm a chill software engineer who spends too much time at his computer :). I started programming early, took a detour into mathematics, and now I work professionally in software engineering. My interests range from low-level engineering and distributed systems to reverse engineering and analyzing how things work under the hood. I’ve had the opportunity to build production-grade systems in Rust, and in my spare time I mentor high school students and early career engineers, sharing both technical depth and a love for problem-solving.
 
+## Length
+
+60 min
+
 
 <a class="button is-primary" href="https://luma.com/omlooqv8">register</a>
