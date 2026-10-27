@@ -20,6 +20,18 @@ The GPU can be one of the most powerful pieces of hardware in a device, and they
 
 30 min
 
+## Links
+
+* [cuda-rust](https://github.com/NVIDIA/cuda-rust)
+* [WebGPU on Wikipedia](https://en.wikipedia.org/wiki/WebGPU)
+* [wgpu.rs](https://wgpu.rs/)
+* [winit](https://docs.rs/winit/)
+* [wasm-pack](https://docs.rs/crate/wasm-pack/)
+* [egui](https://www.egui.rs/)
+* [learn-wgpu](https://sotrh.github.io/learn-wgpu/)
+* [Liam Rust](https://loim.dev/)
+
+
 
 {% youtube id="LnxuQKoxvFM" file="2026-10-22-rust-and-the-gpu-from-native-to-web-an-introduction-to-wgpu-by-liam-rust.mp4" %}
 
