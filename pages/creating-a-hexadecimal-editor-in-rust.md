@@ -25,6 +25,8 @@ Next, I'll present the features my hex editor has and how it helps me (and hopef
 
 ## Notes
 
+* [dz6](https://dz6.dev.br/)
+* [dz6 on GitHub](https://github.com/mentebinaria/dz6)
 * [x86 Software Reverse-Engineering, Cracking, and Counter-Measures](https://www.amazon.com/x86-Software-Reverse-Engineering-Cracking-Counter-Measures/dp/1394199880/)
 
 
