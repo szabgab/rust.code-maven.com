@@ -88,6 +88,14 @@ followers
 | [Rust Jobs](https://www.linkedin.com/company/rustjobs-dev/)                                       | Cheyenne, Wyoming |  7K | 10K | 12K |  15K |
 | [Amust (was Rust Developer)](https://www.linkedin.com/company/amust-ev/)                          | London, England   |  6K |  6K |  7K |   7K |
 | [Rust Ararhus](https://www.linkedin.com/company/rustaarhus/)                                      | Aarhus, Denmark   |     |     |     |  540 |
+| [RustNL](https://www.linkedin.com/company/rustnl/)                                                |                   |     |     |     |      |
+| [The Rust Programming Language](https://www.linkedin.com/company/rust-lang/)                      |                   |     |     |     |      |
+| [Rust India](https://www.linkedin.com/company/rust-india/)                                        |                   |     |     |     |      |
+| [Rust Maven](https://www.linkedin.com/showcase/rust-maven/)                                       |                   |     |     |     |      |
+| [Rust Language Milan](https://www.linkedin.com/company/rust-language-milan/)                      |                   |     |     |     |      |
+| [Rust Brasil](https://www.linkedin.com/showcase/rust-brasil/)                                     |                   |     |     |     |      |
+| [Rust Jobs in Switzerland](https://www.linkedin.com/showcase/rust-jobs-in-switzerland/)           |                   |     |     |     |      |
+
 
 ## Products
 
