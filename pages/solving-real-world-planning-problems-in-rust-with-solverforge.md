@@ -8,6 +8,8 @@ description:
 tags:
 ---
 
+This presentation was cancelled. I hope to re-schedule it soon. Follow the [Rust Maven](https://luma.com/rust-maven) to get notified.
+
 ## Abstract
 
 Scheduling, routing, allocation, and dispatch problems appear everywhere, but their real-world constraints and competing objectives can quickly overwhelm hand-written rules.
@@ -28,5 +30,7 @@ The emphasis will be on building a working planning application rather than expl
 
 1.5 hours
 
+<!--
 
 <a class="button is-primary" href="https://luma.com/rfbzk3ae">register</a>
+-->
