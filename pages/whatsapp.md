@@ -14,3 +14,4 @@ tags:
 * **Rust in Israel** (Hebrew) If you'd like to join, send a WhatsApp message to [Gabor Szabo](https://szabgab.com/contact) with your full name and a link to your LinkedIn and/or GitHub profile.
 
 
+There are also [Telegram](/telegram) channels.

@@ -14,3 +14,6 @@ tags:
 * [Rust in Israel Announcements](https://t.me/RustInIsrael) (Hebrew and English, announcements only)
 * Rust Milan (English), the Telegram channel of the [Rust Language Milan](https://www.meetup.com/rust-language-milan/) Meetup group.
 
+
+There are also [WhatsApp](/whatsapp) channels.
+
