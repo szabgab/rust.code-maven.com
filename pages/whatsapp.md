@@ -1,7 +1,7 @@
 ---
 title: Rust on WhatsApp
 timestamp: 2026-11-17T09:30:01
-author: szabgab
+author:
 published: false
 show_related: true
 description:
