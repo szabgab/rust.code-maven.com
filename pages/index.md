@@ -7,6 +7,9 @@ description: Welcome to the Rust Maven, the site that will help you programming 
 
 Welcome to the Rust Maven web site about, well, the Rust programming language!
 
+Check out the [Rust Maven live events](https://live.code-maven.com/rust) and the video recordings of the previous events.
+
+
 The first article, published on Aug 27, 2023, is about printing [Hello World](/hello-world). You can find all the other articles in the [archive](/archive) or you can look at the [tags](/tags).
 The site also includes the slides of my [Rust training courses](/training-course) in the form of mdbooks. See links bellow.
 
