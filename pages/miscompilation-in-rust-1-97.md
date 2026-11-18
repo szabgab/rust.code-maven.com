@@ -26,6 +26,10 @@ The issue: [segfault on Rust 1.97.0](https://github.com/rust-lang/rust/issues/15
 
 45 minutes
 
+## Slides
+
+* [Miscompilation in Rust 1.97](https://docs.google.com/presentation/d/1yoLmFF30WaOKEsJ0brBK089Bj_FbXKsqA13tUw9CBhI/edit?usp=sharing)
+
 ## Notes
 
 * [niche optimization](https://niche.rs/)
