@@ -21,6 +21,7 @@ tags:
 * [Rust Milan](https://t.me/rust_milan) (English), the Telegram channel of the [Rust Language Milan](https://www.meetup.com/rust-language-milan/) Meetup group.
 * [Rust Delhi](https://t.me/RustDelhi) (English), the Telegram channel of the [Rust Delhi](https://www.meetup.com/rustdelhi/) Meetup group. See also the [home page of Rust Delhi](https://rustdelhi.in/)
 * [Rust magyarul](https://t.me/RustMagyarul)  (Hungarian)
+* [Rust MX](https://t.me/RustMX) (Spanish), the Telegram channel of Rust Mexico. [Meetup](https://www.meetup.com/rust-mx/) - [Luma](https://luma.com/rustmx)
 
 
 There are also [WhatsApp](/whatsapp) channels.
